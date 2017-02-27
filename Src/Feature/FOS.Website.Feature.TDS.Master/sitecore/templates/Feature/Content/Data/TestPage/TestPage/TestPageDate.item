@@ -1,19 +1,33 @@
 ----item----
 version: 1
-id: {38F9B8C3-B494-4542-8F91-41B769AC0BC5}
+id: {7092C2C2-6AF6-46C7-826B-40D34A536CBA}
 database: master
-path: /sitecore/layout/Renderings/Feature/PropertySearch
-parent: {CD9B1C1B-70B6-4E77-9B3F-FA5DD5F27FEC}
-name: PropertySearch
+path: /sitecore/templates/Feature/Content/Data/TestPage/TestPage/TestPageDate
+parent: {ADE80F36-5F44-42CC-9450-46168EBC391D}
+name: TestPageDate
 master: {00000000-0000-0000-0000-000000000000}
-template: {7EE0975B-0698-493E-B3A2-0B2EF33D0522}
-templatekey: Rendering Folder
-created: 20170126T134544Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20170217T143246Z
 
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 4
+
+Date
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+500
 ----version----
 language: en
 version: 1
-revision: e74d8880-e3ec-4420-bf8d-233d04d85f87
+revision: 4837d56a-7fa0-441e-9809-bfea65c166de
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170126T134544Z
+20170217T143246Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e74d8880-e3ec-4420-bf8d-233d04d85f87
+4837d56a-7fa0-441e-9809-bfea65c166de
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170126T134544Z
+20170217T143246Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,33 +1,33 @@
 ----item----
 version: 1
-id: {0521C90A-FCB3-45D1-871B-8E869EC8EA30}
+id: {95BFEE1E-2B9F-4729-BF85-2AB5F82E6777}
 database: master
-path: /sitecore/layout/Renderings/Feature/PropertySearch/SpecificSearchCriteriaHeader
-parent: {38F9B8C3-B494-4542-8F91-41B769AC0BC5}
-name: SpecificSearchCriteriaHeader
+path: /sitecore/templates/Feature/Content/Data/TestPage/TestPage/TestPageRichText
+parent: {ADE80F36-5F44-42CC-9450-46168EBC391D}
+name: TestPageRichText
 master: {00000000-0000-0000-0000-000000000000}
-template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
-templatekey: Controller rendering
-created: 20170126T134633Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20170217T143246Z
 
 ----field----
-field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
-name: Controller
-key: controller
-content-length: 92
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 9
 
-FOS.Website.Feature.PropertySearch.Controllers.SearchCriteriaController, FOS.Website.Feature
+Rich Text
 ----field----
-field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
-name: Controller Action
-key: controller action
-content-length: 31
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
 
-GetSpecificSearchCriteriaHeader
+400
 ----version----
 language: en
 version: 1
-revision: 41440bff-1bdf-4fc1-a8e9-9e73e7dcc5c8
+revision: 07635817-1205-43e3-90f4-761d37809c6b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170126T134633Z
+20170217T143246Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-41440bff-1bdf-4fc1-a8e9-9e73e7dcc5c8
+07635817-1205-43e3-90f4-761d37809c6b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170216T153447Z
+20170217T143246Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

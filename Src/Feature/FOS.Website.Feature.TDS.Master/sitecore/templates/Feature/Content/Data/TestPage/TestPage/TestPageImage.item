@@ -1,40 +1,33 @@
 ----item----
 version: 1
-id: {1AE66893-9D4D-48C2-B29D-0C029B88A8C1}
+id: {3319C755-FC9E-4984-8DEE-3EB691293821}
 database: master
-path: /sitecore/layout/Renderings/Feature/Property/ProjectHeroTeaser
-parent: {0E75C364-3055-4978-8753-F779D85D7891}
-name: ProjectHeroTeaser
+path: /sitecore/templates/Feature/Content/Data/TestPage/TestPage/TestPageImage
+parent: {ADE80F36-5F44-42CC-9450-46168EBC391D}
+name: TestPageImage
 master: {00000000-0000-0000-0000-000000000000}
-template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
-templatekey: Controller rendering
-created: 20170111T101927Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20170217T143246Z
 
 ----field----
-field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
-name: Controller
-key: controller
-content-length: 80
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 5
 
-FOS.Website.Feature.Property.Controllers.PropertyController, FOS.Website.Feature
+Image
 ----field----
-field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
-name: Controller Action
-key: controller action
-content-length: 24
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
 
-GetProjectHeroTeaserView
-----field----
-field: {94069F66-609C-48B0-8281-521C30FB269D}
-name: Open Properties after Add
-key: open properties after add
-content-length: 0
-
-
+300
 ----version----
 language: en
 version: 1
-revision: 541af8fd-2c6b-4529-8893-5a51f3baae22
+revision: 20c753d5-c96f-4d22-b82a-d6d27ebbff1d
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170111T101927Z
+20170217T143246Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-541af8fd-2c6b-4529-8893-5a51f3baae22
+20c753d5-c96f-4d22-b82a-d6d27ebbff1d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170216T153306Z
+20170217T143246Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

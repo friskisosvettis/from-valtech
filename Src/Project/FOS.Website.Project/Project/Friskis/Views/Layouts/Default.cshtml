@@ -1,0 +1,37 @@
+﻿@using Sitecore.Mvc
+@using Valtech.Foundation
+@* @using Sitecore.Mvc.Analytics.Extensions *@
+@{
+    Layout = null;
+    string extraBodyClasses = "";
+    if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+    {
+        extraBodyClasses = "editMode";
+    }
+
+}
+<!DOCTYPE html>
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="ISO-8859-1" />
+    <meta name="author" content="Valtech - www.valtech.com" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>TODO: Title</title>
+    @* @Html.Sitecore().VisitorIdentification() *@
+
+    <link rel="stylesheet" href="@Valtech.Foundation.Assets.Fingerprint.Add("/assets/styles/style.css")" media="all" />
+</head>
+<body class="@extraBodyClasses">
+
+    @Html.Sitecore().Placeholder("main")
+
+    <script src="@Valtech.Foundation.Assets.Fingerprint.Add("/assets/scripts/bundle.js")"></script>
+</body>
+</html>

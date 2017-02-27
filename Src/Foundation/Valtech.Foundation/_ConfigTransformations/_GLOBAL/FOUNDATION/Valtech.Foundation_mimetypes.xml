@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <!-- Static Content setup - mimetypes -->
+        <!-- mp4 -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.mp4']" action="InsertIfMissing">
+          <remove fileExtension=".mp4"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.mp4']" action="InsertIfMissing">
+          <mimeMap fileExtension=".mp4" mimeType="video/mp4"/>
+        </Item>
+        <!-- m4v -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.m4v']" action="InsertIfMissing">
+          <remove fileExtension=".m4v"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.m4v']" action="InsertIfMissing">
+          <mimeMap fileExtension=".m4v" mimeType="video/m4v"/>
+        </Item>
+        <!-- ogg -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.ogg']" action="InsertIfMissing">
+          <remove fileExtension=".ogg"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.ogg']" action="InsertIfMissing">
+          <mimeMap fileExtension=".ogg" mimeType="video/ogg"/>
+        </Item>
+        <!-- ogv -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.ogv']" action="InsertIfMissing">
+          <remove fileExtension=".ogv"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.ogv']" action="InsertIfMissing">
+          <mimeMap fileExtension=".ogv" mimeType="video/ogg"/>
+        </Item>
+        <!-- webm -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.webm']" action="InsertIfMissing">
+          <remove fileExtension=".webm"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.webm']" action="InsertIfMissing">
+          <mimeMap fileExtension=".webm" mimeType="video/webm"/>
+        </Item>
+        <!-- oga -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.oga']" action="InsertIfMissing">
+          <remove fileExtension=".oga"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.oga']" action="InsertIfMissing">
+          <mimeMap fileExtension=".oga" mimeType="audio/ogg"/>
+        </Item>
+        <!-- spx -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.spx']" action="InsertIfMissing">
+          <remove fileExtension=".spx"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.spx']" action="InsertIfMissing">
+          <mimeMap fileExtension=".spx" mimeType="audio/ogg"/>
+        </Item>
+        <!-- svg -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.svg']" action="InsertIfMissing">
+          <remove fileExtension=".svg"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.svg']" action="InsertIfMissing">
+          <mimeMap fileExtension=".svg" mimeType="image/svg+xml"/>
+        </Item>
+        <!-- svgz -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.svgz']" action="InsertIfMissing">
+          <remove fileExtension=".svgz"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.svgz']" action="InsertIfMissing">
+          <mimeMap fileExtension=".svgz" mimeType="image/svg+xml"/>
+        </Item>
+        <!-- eot -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.eot']" action="InsertIfMissing">
+          <remove fileExtension=".eot"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.eot']" action="InsertIfMissing">
+          <mimeMap fileExtension=".eot" mimeType="application/vnd.ms-fontobject"/>
+        </Item>
+        <!-- otf -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.otf']" action="InsertIfMissing">
+          <remove fileExtension=".otf"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.otf']" action="InsertIfMissing">
+          <mimeMap fileExtension=".otf" mimeType="font/otf"/>
+        </Item>
+        <!-- woff -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.woff']" action="InsertIfMissing">
+          <remove fileExtension=".woff"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.woff']" action="InsertIfMissing">
+          <mimeMap fileExtension=".woff" mimeType="font/x-woff"/>
+        </Item>
+        <!-- woff2 -->
+        <Item path="configuration/system.webServer/staticContent//remove[@fileExtension='.woff2']" action="InsertIfMissing">
+          <remove fileExtension=".woff2"/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent//mimeMap[@fileExtension='.woff2']" action="InsertIfMissing">
+          <mimeMap fileExtension=".woff2" mimeType="application/font-woff2"/>
+        </Item>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Helpers
+@model CBY.Website.Feature.Content.Models.ImageCollageModel
+@{
+    Layout = null;
+    if (Model == null)
+    {
+        <div>Please configure this.</div>
+        return;
+    }
+}
+<div class="image-collage" style="width:100%;min-height: 100px;background-color:#f50">
+    <div class="collage">
+        <div class="first-image">
+            @Html.ImageFor(m => m.ImageCollageItem.Content_FirstImage, "OptionalCssClass")
+        </div>
+        <div class="second-image">
+            @Html.ImageFor(m => m.ImageCollageItem.Content_SecondImage, "OptionalCssClass")
+        </div>
+        <div class="third-image">
+            @Html.ImageFor(m => m.ImageCollageItem.Content_ThirdImage, "OptionalCssClass")
+        </div>
+    </div>
+</div>

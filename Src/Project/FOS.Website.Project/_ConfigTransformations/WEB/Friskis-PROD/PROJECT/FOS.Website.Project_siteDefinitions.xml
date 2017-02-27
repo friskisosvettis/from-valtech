@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="\App_Config\Include\Project\Carlsbergbyen\SiteDefinitions.config">
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="hostName" value="new.carlsbergbyen.dk" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

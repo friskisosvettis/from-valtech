@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="App_Config\connectionstrings.config">
+        <Item path="connectionStrings/add[@name='core']" action="Replace" key="connectionString" value="user id=SitecoreLogin;password=sl123;Data Source=CPH-V-SC-SQL01\SQL2014;Database=cby-website-qa_Sitecore_core" />
+        <Item path="connectionStrings/add[@name='master']" action="Replace" key="connectionString" value="user id=SitecoreLogin;password=sl123;Data Source=CPH-V-SC-SQL01\SQL2014;Database=cby-website-qa_sitecore_master" />
+        <Item path="connectionStrings/add[@name='web']" action="Replace" key="connectionString" value="user id=SitecoreLogin;password=sl123;Data Source=CPH-V-SC-SQL01\SQL2014;Database=cby-website-qa_sitecore_web" />
+        <Item path="connectionStrings/add[@name='analytics']" action="Replace" key="connectionString" value="mongodb://localhost:27017/cph-carlsby-qa_analytics" />
+        <Item path="connectionStrings/add[@name='tracking.live']" action="Replace" key="connectionString" value="mongodb://localhost:27017/cph-carlsby-qa_tracking_live" />
+        <Item path="connectionStrings/add[@name='tracking.history']" action="Replace" key="connectionString" value="mongodb://localhost:27017/cph-carlsby-qa_tracking_history" />
+        <Item path="connectionStrings/add[@name='tracking.contact']" action="Replace" key="connectionString" value="mongodb://localhost:27017/cph-carlsby-qa_tracking_contact" />
+        <Item path="connectionStrings/add[@name='reporting']" action="Replace" key="connectionString" value="user id=SitecoreLogin;password=sl123;Data Source=CPH-V-SC-SQL01\SQL2014;Database=cby-website-qa_Sitecore_analytics" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

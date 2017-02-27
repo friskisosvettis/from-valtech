@@ -1,0 +1,87 @@
+----item----
+version: 1
+id: {FD9D5019-DA87-42C8-AE51-053EF1201858}
+database: master
+path: /sitecore/content/Friskis/Frontpage/Ejendomme/Ottila hus/Sag123/DataSources/Teaser
+parent: {24550C3A-7DB9-473A-812A-3BAEE20210D8}
+name: Teaser
+master: {00000000-0000-0000-0000-000000000000}
+template: {08F66E6C-6469-48E6-B148-D91AEF863896}
+templatekey: Teaser
+created: 20170131T105258Z
+
+----version----
+language: da
+version: 1
+revision: 7b9d2488-3043-4fc9-9d9b-e6c4debfeb6d
+
+----field----
+field: {347444A6-CA4C-4327-9CAC-76277E22BDE0}
+name: Content_TeaserTextBold
+key: content_teasertextbold
+content-length: 17
+
+Lorem ipsum dolor
+----field----
+field: {872493C7-209A-45A7-A4C5-5ED4F44875FF}
+name: Content_TeaserTextNormal
+key: content_teasertextnormal
+content-length: 118
+
+sit amet. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
+----field----
+field: {160B08F0-B317-4862-B0D4-AAA2DB0DCC77}
+name: Content_TeaserLink
+key: content_teaserlink
+content-length: 112
+
+<link linktype="internal" text="Forside" querystring="" target="" id="{E25CB178-5CFA-4949-B9E3-EC717FCA34A1}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170131T105258Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7b9d2488-3043-4fc9-9d9b-e6c4debfeb6d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170131T110349Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

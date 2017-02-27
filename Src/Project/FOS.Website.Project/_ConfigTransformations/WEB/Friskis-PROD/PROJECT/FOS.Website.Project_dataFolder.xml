@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="App_Config\Sitecore.config">
+        <Item path="sitecore/sc.variable[@name='dataFolder']" action="Replace" key="value" value="E:\Web\FOS.Website\Data" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

@@ -1,0 +1,52 @@
+----item----
+version: 1
+id: {933F835F-295E-41DD-AEC3-2F45FAB764CE}
+database: master
+path: /sitecore/media library/FOSSettings
+parent: {3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}
+name: FOSSettings
+master: {00000000-0000-0000-0000-000000000000}
+template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
+templatekey: Media folder
+created: 20170110T100950Z
+
+----version----
+language: en
+version: 1
+revision: e9413b4e-593e-42ff-ac19-554ab4965d21
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170110T100950Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e9413b4e-593e-42ff-ac19-554ab4965d21
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170213T133720Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

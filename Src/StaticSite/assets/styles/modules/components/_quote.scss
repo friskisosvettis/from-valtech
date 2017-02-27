@@ -1,0 +1,91 @@
+.quote {
+	display: block;
+	padding: 40px 20px;
+
+	text-align: center;
+
+	&--left {
+		text-align: left;
+	}
+
+	&__content {
+		display: block;
+		padding: 0;
+		margin: 0 auto 30px;
+
+		color: $font-color-1;
+		font-size: rem(40px);
+		font-style: italic;
+
+		&:before {
+			display: block;
+			content: '“';
+
+			font-size: rem(200px);
+			line-height: rem(100px);
+
+			position: relative;
+			bottom: -50px;
+			z-index: -1;
+		}
+	}
+
+	&__cite {
+		display: block;
+		margin: 0 auto;
+
+		font-size: rem(18px);
+		color: $font-color-2;
+	}
+
+    &.quote--contained {
+    	padding-top: 0;
+        
+        text-align: right;
+
+        .quote__content{
+            width: 100%;
+
+		    font-size: rem(30px);
+			line-height: rem(42px);
+        }
+    }
+
+	@media screen and (min-width: $mq-desktop) {
+		&--large {
+			.quote__content {
+				width: col(10, 12);
+			}
+
+			.quote__cite {
+				width: col(10, 12);
+			}
+		}
+
+		&--left {
+			.quote__content {
+				width: col(10, 12);
+			}
+		}
+
+		&--medium {
+			.quote__content {
+				width: col(7, 12);
+			}
+
+			.quote__cite {
+				width: col(7, 12);
+			}
+		}
+
+		&__content {
+			width: col(10, 12);
+		}
+	}
+
+	@media screen and (min-width: $mq-desktop-xlarge) {
+		&__content {
+			width: col(8, 12);
+		}
+	}
+}

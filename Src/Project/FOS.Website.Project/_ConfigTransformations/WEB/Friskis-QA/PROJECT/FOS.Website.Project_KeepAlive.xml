@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="\App_Config\Include\Project\Carlsbergbyen\KeepAlive.config">
+        <Item path="/configuration/sitecore/scheduling/agent[@type='Sitecore.Tasks.UrlAgent']/param[@desc='url']" action="Remove" key="url" value="qa-cby-website.valtech.dk" />
+        <Item path="/configuration/sitecore/scheduling/agent[@type='Sitecore.Tasks.UrlAgent']/param[@desc='url']" action="InsertIfMissing">
+          <param desc="url">http://qa-cby-website.valtech.dk/sitecore/service/keepalive.aspx</param>
+        </Item>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

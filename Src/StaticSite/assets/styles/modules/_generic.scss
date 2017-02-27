@@ -1,0 +1,28 @@
+/**
+* Generic stuff
+*
+* @section framework
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+a:focus {
+	outline: none;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+
+	clear: both;
+}

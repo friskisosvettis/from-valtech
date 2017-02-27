@@ -1,0 +1,21 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Web.UI.WebControls
+@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.Content.Data.IHeadlineItem
+@{
+    Layout = null;
+    if (Model == null)
+    {
+        <div>Please configure this.</div>
+        return;
+    }
+}
+
+
+<div class="wrapper">
+    <h2 class="headline headline--sub headline--semi-narrow  ">
+        @Html.TextFor(m => m.Content_HeadlineText)
+    </h2>
+</div>

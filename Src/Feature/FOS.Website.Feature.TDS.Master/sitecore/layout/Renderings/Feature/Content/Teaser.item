@@ -1,0 +1,162 @@
+----item----
+version: 1
+id: {839502C9-3CBD-4885-B5C5-0E62648827DC}
+database: master
+path: /sitecore/layout/Renderings/Feature/Content/Teaser
+parent: {0D9ABF76-FD97-492D-BFF5-88578F4C0445}
+name: Teaser
+master: {00000000-0000-0000-0000-000000000000}
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20170126T130327Z
+
+----field----
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 78
+
+FOS.Website.Feature.Content.Controllers.ContentController, FOS.Website.Feature
+----field----
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 13
+
+GetTeaserView
+----field----
+field: {13F89250-AD6B-4548-882E-118A12C18094}
+name: Parameters Template
+key: parameters template
+content-length: 0
+
+
+----field----
+field: {94069F66-609C-48B0-8281-521C30FB269D}
+name: Open Properties after Add
+key: open properties after add
+content-length: 0
+
+
+----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 53
+
+./DataSources|[Website]/Frontpage/Global Data Sources
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 47
+
+/sitecore/templates/Feature/Content/Data/Teaser
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 162
+
+<image mediapath="" alt="Teaser" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{2A85F8CF-8914-40A9-9A38-BF32D784E562}" />
+----version----
+language: da
+version: 1
+revision: e508e26f-45ce-4a3c-b06b-03160572d158
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 6
+
+Teaser
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170112T120926Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e508e26f-45ce-4a3c-b06b-03160572d158
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170126T130545Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----version----
+language: en
+version: 1
+revision: ed2e6d6b-f36e-479f-a08d-64603725ef28
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170112T105736Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ed2e6d6b-f36e-479f-a08d-64603725ef28
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170216T153155Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

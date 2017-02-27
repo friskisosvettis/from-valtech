@@ -1,0 +1,76 @@
+// Typography
+
+body {
+	font-family: $font-serif;
+	font-size: rem($base-font-size);
+	line-height: rem(28px);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-sans-serif;
+	font-weight: normal;
+	color: $font-color-1;
+}
+
+.wysiwyg {
+}
+
+.paragraph {
+	font-size: rem($base-font-size);
+	line-height: rem(28px);
+
+	&--big {
+		font-size: rem(24px);
+		line-height: rem(34px);
+	}
+}
+
+.headline {
+	font-size: rem(50px);
+	line-height: rem(58px);
+	font-family: $font-sans-serif;
+	text-transform: uppercase;
+	color: $font-color-1;
+
+	&--sub {
+		font-size: rem(40px);
+		line-height: rem(48px);
+	}
+
+	&--small {
+		font-size: rem(34px);
+		line-height: rem(46px);
+	}
+
+	&--small-sub {
+		font-size: rem(30px);
+		line-height: rem(38px);
+		font-family: $font-sans-serif-light;
+	}
+
+	@media screen and (min-width: $mq-desktop) {
+		&--narrow {
+			padding-left: col(2, 12);
+			padding-right: col(2, 12);
+		}
+
+		&--semi-narrow {
+			padding-left: col(2, 12);
+			padding-right: col(5, 12);
+		}
+	}
+}
+
+blockquote,
+.blockquote {
+	font-size: rem(40px);
+	line-height: rem(48px);
+	font-family: $font-serif;
+}

@@ -1,0 +1,143 @@
+----item----
+version: 1
+id: {7FB23DBA-C872-4535-89DF-58D3B09E6F9B}
+database: master
+path: /sitecore/content/Friskis/Frontpage/VTestPage
+parent: {E25CB178-5CFA-4949-B9E3-EC717FCA34A1}
+name: VTestPage
+master: {00000000-0000-0000-0000-000000000000}
+template: {EABD78B9-DAAF-4E64-ABD3-3581AA015D4A}
+templatekey: VTestPage
+created: 20170228T121122Z
+
+----version----
+language: en
+version: 1
+revision: 1ed41369-9f62-40ec-a01b-228b7c526b90
+
+----field----
+field: {2426E7C6-EE09-4AAA-B2DC-37CE828F7CB4}
+name: Document_Title
+key: document_title
+content-length: 24
+
+Test Page Document Title
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170216T152541Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1ed41369-9f62-40ec-a01b-228b7c526b90
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170228T121130Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----version----
+language: sv-SE
+version: 1
+revision: 97d542f5-08bc-4c1d-a280-2a05089a8727
+
+----field----
+field: {2426E7C6-EE09-4AAA-B2DC-37CE828F7CB4}
+name: Document_Title
+key: document_title
+content-length: 24
+
+Test Page Document Title
+----field----
+field: {69C5D4B0-DB15-49E6-8094-EA24EE9D9BB7}
+name: TestPageText
+key: testpagetext
+content-length: 12
+
+TestPageText
+----field----
+field: {101DBFB5-A1BF-4EFC-B9FB-DAC71C668247}
+name: TestPageGeneralLink
+key: testpagegenerallink
+content-length: 154
+
+<link text="LinkDescription" anchor="" linktype="internal" class="" title="" target="_blank" querystring="" id="{E25CB178-5CFA-4949-B9E3-EC717FCA34A1}" />
+----field----
+field: {E2B047F6-9A06-455E-8830-4FFF7C720E4A}
+name: TestPageImage
+key: testpageimage
+content-length: 58
+
+<image mediaid="{094AED03-02E7-4868-80CB-19926661FB77}" />
+----field----
+field: {26226867-72DF-46D3-9EDD-B780AC89F3A1}
+name: TestPageRichText
+key: testpagerichtext
+content-length: 163
+
+<p>Test Page <em>Rich</em> Text<strong> ÆØÅ</strong></p>
+
+<p><strong><a href="~/link.aspx?_id=E25CB1785CFA4949B9E3EC717FCA34A1&amp;_z=z">Frontpage</a></strong></p>
+----field----
+field: {A61AE873-7F28-42CA-A039-12F59EDFD5D2}
+name: TestPageDate
+key: testpagedate
+content-length: 16
+
+20170216T230000Z
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170216T152613Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+97d542f5-08bc-4c1d-a280-2a05089a8727
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170220T135330Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

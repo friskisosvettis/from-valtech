@@ -19,6 +19,9 @@ namespace FOS.Website.Feature.Content
                 public const string Teaser = "/Feature/Content/Views/Teaser.cshtml";
                 public const string Media = "/Feature/Content/Views/Media.cshtml";
                 public const string TestPage = "/Feature/Content/Views/TestPage.cshtml";
+                public const string FTestPage = "/Feature/Content/Views/FTestPage.cshtml";
+                public const string VTestPage = "/Feature/Content/Views/VTestPage.cshtml";
+
             }
         }
     }

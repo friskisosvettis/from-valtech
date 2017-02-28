@@ -21,6 +21,19 @@ namespace FOS.Website.Feature.Content.Controllers
         {
             TestPageModel testPageModel = new TestPageModel(Sitecore.Context.Item);
             return View(Constants.Views.Paths.TestPage, testPageModel);
+
+        }
+
+        public ActionResult GetFTestPageView()
+        {
+            FTestPageModel testPageModel = new FTestPageModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.FTestPage, testPageModel);
+        }
+
+        public ActionResult GetVTestPageView()
+        {
+            VTestPageModel testPageModel = new VTestPageModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.VTestPage, testPageModel);
         }
 
     }

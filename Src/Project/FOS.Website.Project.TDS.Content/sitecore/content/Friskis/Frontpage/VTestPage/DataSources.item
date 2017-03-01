@@ -1,48 +1,41 @@
 ----item----
 version: 1
-id: {03F993F6-3DCD-4FA0-81DA-74260E0DDA27}
+id: {AB2EA945-8D9A-433A-A406-8918DE2E9F6B}
 database: master
-path: /sitecore/templates/Feature/Content/Data/VTestPage/TestPage
-parent: {1C6E3375-B866-4B6F-8D47-DF70B8BE2D75}
-name: TestPage
+path: /sitecore/content/Friskis/Frontpage/VTestPage/DataSources
+parent: {7FB23DBA-C872-4535-89DF-58D3B09E6F9B}
+name: DataSources
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
-created: 20170228T115937Z
+template: {F7B78574-8135-4A79-B5C3-C313ABA1B06E}
+templatekey: DataSourceFolder
+created: 20170228T145223Z
 
 ----version----
 language: en
 version: 1
-revision: bf73ca35-2893-497f-968b-706241d7516e
+revision: 09bfb317-85b2-44c3-a4d5-c58594a6c2f8
 
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170217T143246Z
+20170228T145223Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-bf73ca35-2893-497f-968b-706241d7516e
+09bfb317-85b2-44c3-a4d5-c58594a6c2f8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170217T143246Z
+20170228T145223Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

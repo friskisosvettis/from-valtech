@@ -17,10 +17,22 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
     public partial interface IDataSourceFolderItem : Synthesis.IStandardTemplateItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/PropertyFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{42A0D00F-CE10-4139-9D08-BE5854A2158C}", "txFq31ypqk+b9370Nao/tc0EWNI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IPropertyFolderItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/SettingsFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A00AC400-2525-4C8E-BDA9-092B3667D233}", "PDks4tuI7tOPVyeV4tBg5lVYvpQ=", "Valtech.Foundation.Synthesis")]
     public partial interface ISettingsFolderItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/VTestComponent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D14B2093-D2AE-42CD-924B-4D9E02B6D229}", "M8h/93kBif2UZVgp/60JY6KYDB4=", "Valtech.Foundation.Synthesis")]
+    public partial interface IVTestComponentItem : global::FOS.Website.Feature.Content.Data.IVTestComponentItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/WebsiteRoot template</summary>
@@ -44,6 +56,24 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     public partial interface IFrontpageItem : global::FOS.Website.Feature.Document.Data.IDocumentTitleItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Project template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{CC69043F-7802-424A-95BA-21055E22F207}", "KC1tGUkNxzA0hxA2pJgegLtW9ho=", "Valtech.Foundation.Synthesis")]
+    public partial interface IProjectItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Property template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{591AD5E1-ACAF-4BFA-868B-A189840C7582}", "mZLtT6seHOsv0TWKsQedHEDgx9Q=", "Valtech.Foundation.Synthesis")]
+    public partial interface IPropertyItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/PropertySearchPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{365D6230-9438-473B-ACF5-0E7A092F7FFA}", "5rnoRoTB1P4rCm9Ad8Y8JI20LZ4=", "Valtech.Foundation.Synthesis")]
+    public partial interface IPropertySearchPageItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/TestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{C36479A7-B5FB-4212-BC1A-D9822258C333}", "PXN++iY6ipuOIh47tMdUqkI+9Co=", "Valtech.Foundation.Synthesis")]
@@ -53,7 +83,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/VTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{EABD78B9-DAAF-4E64-ABD3-3581AA015D4A}", "ZMnSPFLhGv/1exC7LRodUTJQAzY=", "Valtech.Foundation.Synthesis")]
-    public partial interface IVTestPageItem : global::FOS.Website.Feature.Document.Data.IDocumentTitleItem, global::FOS.Website.Feature.Content.Data.IVTestPageItem {
+    public partial interface IVTestPageItem : global::FOS.Website.Feature.Document.Data.IDocumentTitleItem, global::FOS.Website.Feature.Content.Data.IVTestPageItem, global::FOS.Website.Feature.Content.Data.ITeaserItem {
     }
 }
 
@@ -122,6 +152,58 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/PropertyFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class PropertyFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IPropertyFolderItem {
+        
+        public PropertyFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public PropertyFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "PropertyFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{42A0D00F-CE10-4139-9D08-BE5854A2158C}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class PropertyFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{42A0D00F-CE10-4139-9D08-BE5854A2158C}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new PropertyFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new PropertyFolder(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/SettingsFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class SettingsFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.ISettingsFolderItem {
@@ -171,6 +253,97 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new SettingsFolder(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/VTestComponent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class VTestComponent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IVTestComponentItem {
+        
+        private Synthesis.FieldTypes.TextField _heading;
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        private Synthesis.FieldTypes.HyperlinkField _link;
+        
+        public VTestComponent(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public VTestComponent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "VTestComponent";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{D14B2093-D2AE-42CD-924B-4D9E02B6D229}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading {
+            get {
+                if (_heading == null) {
+                    _heading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C2FEBD0-D0E2-4B62-8899-43CBC51D18C6}"], "/sitecore/templates/Project/Friskis/Content Types/VTestComponent", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4B04AFB6-56EC-45DD-838A-D42BEEF455D4}"], "/sitecore/templates/Project/Friskis/Content Types/VTestComponent", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get {
+                if (_link == null) {
+                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{207F3A7B-037C-46FD-9D10-74C39A369652}"], "/sitecore/templates/Project/Friskis/Content Types/VTestComponent", "Link"), this.GetSearchFieldValue("link"));
+                }
+                return _link;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class VTestComponentInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{D14B2093-D2AE-42CD-924B-4D9E02B6D229}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new VTestComponent(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new VTestComponent(searchFields);
         }
     }
     
@@ -450,6 +623,162 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Project template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Project : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IProjectItem {
+        
+        public Project(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Project(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Project";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{CC69043F-7802-424A-95BA-21055E22F207}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ProjectInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{CC69043F-7802-424A-95BA-21055E22F207}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Project(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Project(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Property template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Property : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IPropertyItem {
+        
+        public Property(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Property(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Property";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{591AD5E1-ACAF-4BFA-868B-A189840C7582}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class PropertyInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{591AD5E1-ACAF-4BFA-868B-A189840C7582}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Property(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Property(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/PropertySearchPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class PropertySearchPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IPropertySearchPageItem {
+        
+        public PropertySearchPage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public PropertySearchPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "PropertySearchPage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{365D6230-9438-473B-ACF5-0E7A092F7FFA}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class PropertySearchPageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{365D6230-9438-473B-ACF5-0E7A092F7FFA}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new PropertySearchPage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new PropertySearchPage(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/TestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class TestPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.ITestPageItem {
@@ -584,17 +913,25 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class VTestPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IVTestPageItem {
         
+        private Synthesis.FieldTypes.TextField _content_TeaserTextBold;
+        
         private Synthesis.FieldTypes.TextField _document_Title;
         
         private Synthesis.FieldTypes.TextField _testPageText;
         
+        private Synthesis.FieldTypes.TextField _content_TeaserTextNormal;
+        
         private Synthesis.FieldTypes.HyperlinkField _testPageGeneralLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _content_TeaserLink;
         
         private Synthesis.FieldTypes.ImageField _testPageImage;
         
         private Synthesis.FieldTypes.RichTextField _testPageRichText;
         
         private Synthesis.FieldTypes.DateTimeField _testPageDate;
+        
+        private Synthesis.FieldTypes.TextField _testPageExtraText;
         
         public VTestPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -625,6 +962,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Content_TeaserTextBold field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("content_teasertextbold")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Content_TeaserTextBold {
+            get {
+                if (_content_TeaserTextBold == null) {
+                    _content_TeaserTextBold = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{347444A6-CA4C-4327-9CAC-76277E22BDE0}"], "/sitecore/templates/Project/Friskis/Page Types/VTestPage", "Content_TeaserTextBold"), this.GetSearchFieldValue("content_teasertextbold"));
+                }
+                return _content_TeaserTextBold;
+            }
+        }
+        
         /// <summary>Represents the Document_Title field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("document_title")]
         public Synthesis.FieldTypes.Interfaces.ITextField Document_Title {
@@ -647,6 +995,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Content_TeaserTextNormal field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("content_teasertextnormal")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Content_TeaserTextNormal {
+            get {
+                if (_content_TeaserTextNormal == null) {
+                    _content_TeaserTextNormal = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{872493C7-209A-45A7-A4C5-5ED4F44875FF}"], "/sitecore/templates/Project/Friskis/Page Types/VTestPage", "Content_TeaserTextNormal"), this.GetSearchFieldValue("content_teasertextnormal"));
+                }
+                return _content_TeaserTextNormal;
+            }
+        }
+        
         /// <summary>Represents the TestPageGeneralLink field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("testpagegenerallink")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField TestPageGeneralLink {
@@ -655,6 +1014,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _testPageGeneralLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{101DBFB5-A1BF-4EFC-B9FB-DAC71C668247}"], "/sitecore/templates/Project/Friskis/Page Types/VTestPage", "TestPageGeneralLink"), this.GetSearchFieldValue("testpagegenerallink"));
                 }
                 return _testPageGeneralLink;
+            }
+        }
+        
+        /// <summary>Represents the Content_TeaserLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("content_teaserlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Content_TeaserLink {
+            get {
+                if (_content_TeaserLink == null) {
+                    _content_TeaserLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{160B08F0-B317-4862-B0D4-AAA2DB0DCC77}"], "/sitecore/templates/Project/Friskis/Page Types/VTestPage", "Content_TeaserLink"), this.GetSearchFieldValue("content_teaserlink"));
+                }
+                return _content_TeaserLink;
             }
         }
         
@@ -688,6 +1058,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _testPageDate = new Synthesis.FieldTypes.DateTimeField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A61AE873-7F28-42CA-A039-12F59EDFD5D2}"], "/sitecore/templates/Project/Friskis/Page Types/VTestPage", "TestPageDate"), this.GetSearchFieldValue("testpagedate"));
                 }
                 return _testPageDate;
+            }
+        }
+        
+        /// <summary>Represents the TestPageExtraText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("testpageextratext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField TestPageExtraText {
+            get {
+                if (_testPageExtraText == null) {
+                    _testPageExtraText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{367C100F-2EE5-42D2-AE86-472570C8D28E}"], "/sitecore/templates/Project/Friskis/Page Types/VTestPage", "TestPageExtraText"), this.GetSearchFieldValue("testpageextratext"));
+                }
+                return _testPageExtraText;
             }
         }
     }

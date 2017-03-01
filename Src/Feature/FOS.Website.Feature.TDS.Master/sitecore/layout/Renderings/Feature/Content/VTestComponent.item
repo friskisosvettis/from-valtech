@@ -1,50 +1,33 @@
 ----item----
 version: 1
-id: {1C905DB7-3112-47A5-9EC0-8494A5D999FF}
+id: {5EF1DBB7-CBC9-4E1F-B03E-DC594BFDA662}
 database: master
-path: /sitecore/layout/Placeholder Settings/Project/CarlsbergByen/collage-top-left
-parent: {F180541D-1EB5-4CB1-A0C8-06D953434E4E}
-name: collage-top-left
+path: /sitecore/layout/Renderings/Feature/Content/VTestComponent
+parent: {0D9ABF76-FD97-492D-BFF5-88578F4C0445}
+name: VTestComponent
 master: {00000000-0000-0000-0000-000000000000}
-template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
-templatekey: Placeholder
-created: 20170126T082544Z
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20170228T154919Z
 
 ----field----
-field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
-name: Placeholder Key
-key: placeholder key
-content-length: 16
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 79
 
-collage-top-left
+FOS.Website.Feature.Content.Controllers.TestPageController, FOS.Website.Feature
 ----field----
-field: {E391B526-D0C5-439D-803E-17512EAE6222}
-name: Allowed Controls
-key: allowed controls
-content-length: 38
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 21
 
-{F04EC912-E8AB-44C3-985C-1624CE011D2D}
-----field----
-field: {F61C9B50-3BB9-42D5-BADE-3779F0B306FA}
-name: Allowed Controls Rules
-key: allowed controls rules
-content-length: 463
-
-<?xml version="1.0" encoding="utf-16"?>
-<ruleset>
-  <rule uid="{5F114D3E-DA95-49A2-A387-5D22DDC2CFF8}">
-    <conditions>
-      <condition id="{857BCC6C-DE9E-4130-8088-CDD4B3D0FBCF}" uid="E316112AD799458A98C0C78FA3F8F8C4" operatorid="{814EF7D0-1639-44FD-AEEF-735B5AC14425}" value="1" />
-    </conditions>
-    <actions>
-      <action id="{E6A29C3A-C89F-4FFD-9425-A5BC21152CDC}" uid="F09213ED89BA4158965452E9B712DC42" />
-    </actions>
-  </rule>
-</ruleset>
+GetVTestComponentView
 ----version----
-language: da
+language: en
 version: 1
-revision: d6214b6b-7f57-4225-b523-6d85ac105aa5
+revision: bc8cf7db-8696-4c7c-83db-62b440b98bff
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -59,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170125T154058Z
+20170228T155030Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -73,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d6214b6b-7f57-4225-b523-6d85ac105aa5
+bc8cf7db-8696-4c7c-83db-62b440b98bff
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170126T134711Z
+20170228T155114Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -89,9 +72,9 @@ content-length: 14
 
 sitecore\Admin
 ----version----
-language: en
+language: sv-SE
 version: 1
-revision: 52d0f1e0-f608-4632-9c39-a33a37199819
+revision: 3ac0f96e-2219-40e5-b660-f0d0c239e6cd
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -106,7 +89,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170110T094035Z
+20170228T154919Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -120,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-52d0f1e0-f608-4632-9c39-a33a37199819
+3ac0f96e-2219-40e5-b660-f0d0c239e6cd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170126T082647Z
+20170228T154919Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

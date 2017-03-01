@@ -36,5 +36,11 @@ namespace FOS.Website.Feature.Content.Controllers
             return View(Constants.Views.Paths.VTestPage, testPageModel);
         }
 
+        public ActionResult GetVTestComponentView()
+        {
+            VTestComponentModel testComponentModel = new VTestComponentModel();
+            return View(Constants.Views.Paths.VTestComponent, testComponentModel);
+        }
+
     }
 }

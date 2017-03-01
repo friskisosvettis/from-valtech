@@ -21,6 +21,7 @@ namespace FOS.Website.Feature.Content
                 public const string TestPage = "/Feature/Content/Views/TestPage.cshtml";
                 public const string FTestPage = "/Feature/Content/Views/FTestPage.cshtml";
                 public const string VTestPage = "/Feature/Content/Views/VTestPage.cshtml";
+                public const string VTestComponent = "/Feature/Content/Views/VTestComponent.cshtml";
 
             }
         }

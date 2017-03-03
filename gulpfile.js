@@ -55,7 +55,6 @@ var exec = require('child_process').exec;
 // Set production flag in gulp command
 config.isProduction = !!(argv.production);
 config.isStaticSite = !!(argv.staticsite);
-config.styleguide = !!(argv.styleguide);
 config.verbose = !!(argv.verbose);
 
 // Config for asset build

@@ -1021,7 +1021,6 @@
     <Content Include="Feature\Content\Views\Teaser.cshtml" />
     <Content Include="Feature\Content\Views\Media.cshtml" />
     <Content Include="Feature\Content\Views\FTestPage.cshtml" />
-    <Content Include="Feature\Content\Views\VTestComponent.cshtml" />
     <Content Include="Feature\Content\Views\VTestPage.cshtml" />
     <Content Include="Feature\Content\Views\FArticalPageView.cshtml" />
     <None Include="packages.config">
@@ -1041,7 +1040,6 @@
     <Compile Include="Feature\Content\Models\ImageCollageModel.cs" />
     <Compile Include="Feature\Content\Models\TestPageModel.cs" />
     <Compile Include="Feature\Content\Models\QuoteModel.cs" />
-    <Compile Include="Feature\Content\Models\VTestComponentModel.cs" />
     <Compile Include="Feature\Content\Models\VTestPageModel.cs" />
     <Compile Include="Feature\Document\Constants.cs" />
     <Compile Include="Feature\Document\Controllers\DocumentController.cs" />

@@ -1,0 +1,38 @@
+﻿@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.Content.Models.FArticalPageModel
+@{
+    Layout = null;
+}
+
+<h1>Hej!</h1>
+
+
+@if (Model.BasicItem != null)
+{
+    <div  style="width: 50%; float: left;">
+        <h2>@Html.TextFor(m => m.BasicItem.Header)</h2>
+        @Html.ImageFor(m => m.BasicItem.SellingImage)
+    </div>
+    <div  style="width: 50%; float: left; height: 200px;">
+        @Html.TextFor(m => m.BasicItem.Ingress)
+        @Model.sFormText
+    </div>
+}
+
+@using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreControllerName, FormMethod.Post))
+{
+    @Html.Sitecore().FormHandler("TestPageController", "FormTest")
+    @Html.EditorFor(x => x.sFormText)
+
+    <input type="submit" />
+}
+
+@if (Model.BasicBlob != null)
+{
+    <div>
+        Full Blown Article
+    </div>
+    <div>
+        @Html.TextFor(m => m.BasicBlob.TextBlob)
+    </div>
+}

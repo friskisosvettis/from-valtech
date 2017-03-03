@@ -24,6 +24,26 @@ namespace FOS.Website.Feature.Content.Controllers
 
         }
 
+        public ActionResult GetFArticalPageView()
+        {
+            FArticalPageModel testPageModel = new FArticalPageModel(Sitecore.Context.Item, false);
+            return View(Constants.Views.Paths.FTestArticalView, testPageModel);
+        }
+
+
+        public ActionResult GetBaseInfoPuffView()
+        {
+            FArticalPageModel testPageModel = new FArticalPageModel(RenderingContext.Current.Rendering.Item, true);
+            return View(Constants.Views.Paths.FTestArticalView, testPageModel);
+        }
+
+        [HttpPost]
+        public ActionResult FormTest(FArticalPageModel viewModel)
+        {
+
+            return View(Constants.Views.Paths.FTestArticalView, viewModel);
+        }
+
         public ActionResult GetFTestPageView()
         {
             FTestPageModel testPageModel = new FTestPageModel(Sitecore.Context.Item);

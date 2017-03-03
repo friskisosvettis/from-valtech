@@ -67,7 +67,7 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/FTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{FBD33BA4-41CE-48A5-A3DA-E30810200F86}", "lAu9ZV4HpRSraefnizFCTSl+m7k=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{FBD33BA4-41CE-48A5-A3DA-E30810200F86}", "A/rJuq8o5bb8HeAlFLYBHL8rUP4=", "Valtech.Foundation.Synthesis")]
     public partial interface IFTestPageItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the TestPageText field</summary>
@@ -97,6 +97,18 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the TestPageDate field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("testpagedate")]
         Synthesis.FieldTypes.Interfaces.IDateTimeField TestPageDate {
+            get;
+        }
+        
+        /// <summary>Represents the IncludeImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("includeimage")]
+        Synthesis.FieldTypes.Interfaces.ITextField IncludeImage {
+            get;
+        }
+        
+        /// <summary>Represents the qwerty field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("qwerty")]
+        Synthesis.FieldTypes.Interfaces.ITextField qwerty {
             get;
         }
     }
@@ -301,6 +313,42 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the TestPageExtraText field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("testpageextratext")]
         Synthesis.FieldTypes.Interfaces.ITextField TestPageExtraText {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/_FTestBasic template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{9228EFAF-8DCE-4540-A4DB-83E08ADF653E}", "eUfPSQhdPopJs0jUB3dpXAJitpA=", "Valtech.Foundation.Synthesis")]
+    public partial interface I_FTestBasicItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Header field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("header")]
+        Synthesis.FieldTypes.Interfaces.ITextField Header {
+            get;
+        }
+        
+        /// <summary>Represents the SellingImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("sellingimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField SellingImage {
+            get;
+        }
+        
+        /// <summary>Represents the Ingress field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("ingress")]
+        Synthesis.FieldTypes.Interfaces.IRichTextField Ingress {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/_FTestBlob template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08E1EECC-3DC4-4B76-858A-1E16438155A5}", "/YcRhVLPoQ1C1VPBu+2M/IDvVdM=", "Valtech.Foundation.Synthesis")]
+    public partial interface I_FTestBlobItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the TextBlob field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("textblob")]
+        Synthesis.FieldTypes.Interfaces.IRichTextField TextBlob {
             get;
         }
     }
@@ -750,6 +798,10 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.DateTimeField _testPageDate;
         
+        private Synthesis.FieldTypes.TextField _includeImage;
+        
+        private Synthesis.FieldTypes.TextField _qwerty;
+        
         public FTestPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -831,6 +883,28 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _testPageDate = new Synthesis.FieldTypes.DateTimeField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EAF2C39A-919B-4BCB-87C4-55C4B651E26A}"], "/sitecore/templates/Feature/Content/Data/FTestPage", "TestPageDate"), this.GetSearchFieldValue("testpagedate"));
                 }
                 return _testPageDate;
+            }
+        }
+        
+        /// <summary>Represents the IncludeImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("includeimage")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IncludeImage {
+            get {
+                if (_includeImage == null) {
+                    _includeImage = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BBF3A4F1-C1E5-43C6-810F-85C7C226264A}"], "/sitecore/templates/Feature/Content/Data/FTestPage", "IncludeImage"), this.GetSearchFieldValue("includeimage"));
+                }
+                return _includeImage;
+            }
+        }
+        
+        /// <summary>Represents the qwerty field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("qwerty")]
+        public Synthesis.FieldTypes.Interfaces.ITextField qwerty {
+            get {
+                if (_qwerty == null) {
+                    _qwerty = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{0D7729B1-3475-469F-8C40-0A35DC02732D}"], "/sitecore/templates/Feature/Content/Data/FTestPage", "qwerty"), this.GetSearchFieldValue("qwerty"));
+                }
+                return _qwerty;
             }
         }
     }
@@ -1604,6 +1678,162 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new VTestPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/_FTestBasic template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class _FTestBasic : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.I_FTestBasicItem {
+        
+        private Synthesis.FieldTypes.TextField _header;
+        
+        private Synthesis.FieldTypes.ImageField _sellingImage;
+        
+        private Synthesis.FieldTypes.RichTextField _ingress;
+        
+        public _FTestBasic(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public _FTestBasic(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "_FTestBasic";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{9228EFAF-8DCE-4540-A4DB-83E08ADF653E}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Header field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("header")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Header {
+            get {
+                if (_header == null) {
+                    _header = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2445F242-F3A3-4BE0-8B97-57C7BA9A01A8}"], "/sitecore/templates/Feature/Content/Data/_FTestBasic", "Header"), this.GetSearchFieldValue("header"));
+                }
+                return _header;
+            }
+        }
+        
+        /// <summary>Represents the SellingImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("sellingimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField SellingImage {
+            get {
+                if (_sellingImage == null) {
+                    _sellingImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A789977E-064D-4D6D-8FED-9C4EA6CDFABA}"], "/sitecore/templates/Feature/Content/Data/_FTestBasic", "SellingImage"), this.GetSearchFieldValue("sellingimage"));
+                }
+                return _sellingImage;
+            }
+        }
+        
+        /// <summary>Represents the Ingress field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("ingress")]
+        public Synthesis.FieldTypes.Interfaces.IRichTextField Ingress {
+            get {
+                if (_ingress == null) {
+                    _ingress = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F629379A-5E94-406B-BDD4-313C92A9DB4C}"], "/sitecore/templates/Feature/Content/Data/_FTestBasic", "Ingress"), this.GetSearchFieldValue("ingress"));
+                }
+                return _ingress;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class _FTestBasicInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{9228EFAF-8DCE-4540-A4DB-83E08ADF653E}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new _FTestBasic(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new _FTestBasic(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/_FTestBlob template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class _FTestBlob : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.I_FTestBlobItem {
+        
+        private Synthesis.FieldTypes.RichTextField _textBlob;
+        
+        public _FTestBlob(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public _FTestBlob(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "_FTestBlob";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{08E1EECC-3DC4-4B76-858A-1E16438155A5}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the TextBlob field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("textblob")]
+        public Synthesis.FieldTypes.Interfaces.IRichTextField TextBlob {
+            get {
+                if (_textBlob == null) {
+                    _textBlob = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{00135776-7424-4674-AAAD-B5D7FA821E43}"], "/sitecore/templates/Feature/Content/Data/_FTestBlob", "TextBlob"), this.GetSearchFieldValue("textblob"));
+                }
+                return _textBlob;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class _FTestBlobInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{08E1EECC-3DC4-4B76-858A-1E16438155A5}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new _FTestBlob(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new _FTestBlob(searchFields);
         }
     }
 }

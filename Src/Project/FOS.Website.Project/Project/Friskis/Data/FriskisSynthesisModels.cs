@@ -11,6 +11,12 @@
 namespace FOS.Website.Project.Friskis.ContentTypes {
     
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/CountryContainer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{29BBA25B-AABE-405E-9388-84381D582484}", "OtOPB7PSzIc/vFESXKtGCCmmAfQ=", "Valtech.Foundation.Synthesis")]
+    public partial interface ICountryContainerItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/DataSourceFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F7B78574-8135-4A79-B5C3-C313ABA1B06E}", "Cl7N8KX6dQzRdXteuIJNKrjILKE=", "Valtech.Foundation.Synthesis")]
@@ -32,6 +38,18 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
 namespace FOS.Website.Project.Friskis.PageTypes {
     
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationListPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{9A435B37-877A-4B12-B9EA-6DF7540698DD}", "CZQeE12N2Oru6x9NtRkoePLyV8s=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationListPageItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationPageItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D86BA794-7B80-4016-91AE-DD43A1EA9695}", "yAjH8Vo9kEhIoMDcRK+QzJxrQU0=", "Valtech.Foundation.Synthesis")]
@@ -42,6 +60,12 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B08553A1-4D24-411A-9AF4-0F076996FF45}", "st5H+gsFtLQPgW4Htzl4O6oVE2Q=", "Valtech.Foundation.Synthesis")]
     public partial interface IFrontpageItem : global::FOS.Website.Feature.Document.Data.IDocumentTitleItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}", "sjrxBCKJdQVAkMx8SjRWHMizVCc=", "Valtech.Foundation.Synthesis")]
+    public partial interface IGymPageItem : Synthesis.IStandardTemplateItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/TestPage template</summary>
@@ -69,6 +93,58 @@ namespace FOS.Website.Project.Friskis.PageTypes {
 
 namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
     
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/CountryContainer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class CountryContainer : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.ICountryContainerItem {
+        
+        public CountryContainer(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public CountryContainer(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "CountryContainer";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{29BBA25B-AABE-405E-9388-84381D582484}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class CountryContainerInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{29BBA25B-AABE-405E-9388-84381D582484}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new CountryContainer(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new CountryContainer(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/DataSourceFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -254,6 +330,110 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
 }
 namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
     
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationListPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AssociationListPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IAssociationListPageItem {
+        
+        public AssociationListPage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AssociationListPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "AssociationListPage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{9A435B37-877A-4B12-B9EA-6DF7540698DD}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AssociationListPageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{9A435B37-877A-4B12-B9EA-6DF7540698DD}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AssociationListPage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AssociationListPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AssociationPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IAssociationPageItem {
+        
+        public AssociationPage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AssociationPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "AssociationPage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AssociationPageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AssociationPage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AssociationPage(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -447,6 +627,58 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new Frontpage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class GymPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IGymPageItem {
+        
+        public GymPage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public GymPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "GymPage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class GymPageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new GymPage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new GymPage(searchFields);
         }
     }
     

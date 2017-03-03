@@ -14,9 +14,9 @@ created: 20170228T115711Z
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
 key: __renderings
-content-length: 264
+content-length: 375
 
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r ds="" id="{DCBBBB3B-949B-433A-B7BD-999E62E49DB5}" par="" ph="main" uid="{416C9EFB-B5D3-42B5-8BE7-2DDC3A4686F5}" /></d></r>
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r ds="" id="{DCBBBB3B-949B-433A-B7BD-999E62E49DB5}" par="" ph="main" uid="{416C9EFB-B5D3-42B5-8BE7-2DDC3A4686F5}" /><r id="{839502C9-3CBD-4885-B5C5-0E62648827DC}" ph="testcontent" uid="{6279CAB5-9ED8-4909-B446-67D081ECA5C8}" /></d></r>
 ----version----
 language: en
 version: 1
@@ -74,7 +74,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 7950d8cf-9f0f-4d7a-af4a-692d2b2692e5
+revision: 6e074a3d-44cf-46f0-92f3-728cbbd5fd3a
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -103,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7950d8cf-9f0f-4d7a-af4a-692d2b2692e5
+6e074a3d-44cf-46f0-92f3-728cbbd5fd3a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170228T120227Z
+20170301T095016Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

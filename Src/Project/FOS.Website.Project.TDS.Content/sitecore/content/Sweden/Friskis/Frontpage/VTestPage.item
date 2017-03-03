@@ -60,7 +60,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 135c65e5-fe19-4779-8204-4abeef241828
+revision: eedc17b6-28db-4af2-a090-f0dcdb8ffad0
 
 ----field----
 field: {2426E7C6-EE09-4AAA-B2DC-37CE828F7CB4}
@@ -69,6 +69,27 @@ key: document_title
 content-length: 24
 
 Test Page Document Title
+----field----
+field: {347444A6-CA4C-4327-9CAC-76277E22BDE0}
+name: Content_TeaserTextBold
+key: content_teasertextbold
+content-length: 19
+
+Teaser artivle bold
+----field----
+field: {872493C7-209A-45A7-A4C5-5ED4F44875FF}
+name: Content_TeaserTextNormal
+key: content_teasertextnormal
+content-length: 6
+
+Text  
+----field----
+field: {160B08F0-B317-4862-B0D4-AAA2DB0DCC77}
+name: Content_TeaserLink
+key: content_teaserlink
+content-length: 133
+
+<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7FB23DBA-C872-4535-89DF-58D3B09E6F9B}" />
 ----field----
 field: {69C5D4B0-DB15-49E6-8094-EA24EE9D9BB7}
 name: TestPageText
@@ -80,9 +101,9 @@ TestPageText
 field: {101DBFB5-A1BF-4EFC-B9FB-DAC71C668247}
 name: TestPageGeneralLink
 key: testpagegenerallink
-content-length: 186
+content-length: 126
 
-<link id="{E25CB178-5CFA-4949-B9E3-EC717FCA34A1}" querystring="" target="_blank" text="LinkDescription" anchor="" title="" class="" url="/Sweden/Friskis/Frontpage" linktype="internal" />
+<link linktype="internal" text="LinkDescription" querystring="" target="_blank" id="{7FB23DBA-C872-4535-89DF-58D3B09E6F9B}" />
 ----field----
 field: {E2B047F6-9A06-455E-8830-4FFF7C720E4A}
 name: TestPageImage
@@ -106,6 +127,27 @@ key: testpagedate
 content-length: 16
 
 20170216T230000Z
+----field----
+field: {367C100F-2EE5-42D2-AE86-472570C8D28E}
+name: TestPageExtraText
+key: testpageextratext
+content-length: 22
+
+Extra text by Veronika
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 14
+
+Veronikas page
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 610
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{8919CCC5-B92D-42A9-A957-FF7EEF339B3A}" p:before="*" s:ds="{00F1D2C4-8413-4E89-925C-8E4CEEA9E2DA}" s:id="{5EF1DBB7-CBC9-4E1F-B03E-DC594BFDA662}" s:par="" s:ph="/main/TestContent" /><r uid="{0554E371-5CDB-4AE7-B6DC-D9EF668B8D55}" p:after="r[@uid='{8919CCC5-B92D-42A9-A957-FF7EEF339B3A}']" s:ds="{47650DD6-F916-4771-BC0E-86512CB22C67}" s:id="{6F080712-199F-4A4D-AD1F-2D4BF6F21585}" s:ph="/main/TestContent" /><r uid="{6279CAB5-9ED8-4909-B446-67D081ECA5C8}" s:ds="{42CB162C-F8D1-4917-BEF4-8D8B3C3B1050}" s:par="" /></d></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -133,14 +175,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-135c65e5-fe19-4779-8204-4abeef241828
+eedc17b6-28db-4af2-a090-f0dcdb8ffad0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170302T105500Z
+20170301T095138Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -148,3 +190,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

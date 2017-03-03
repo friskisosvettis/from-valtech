@@ -239,9 +239,33 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/VTestComponent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B4D889A9-B29E-443A-8963-90DD8103D930}", "ODHFvc/rzJ2pEV7IAgdSOeIExb0=", "Valtech.Foundation.Synthesis")]
+    public partial interface IVTestComponentItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        Synthesis.FieldTypes.Interfaces.ITextField Heading {
+            get;
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/VTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C6E3375-B866-4B6F-8D47-DF70B8BE2D75}", "8W0IStwsfI4dKeUKTD7TtV0cm+o=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C6E3375-B866-4B6F-8D47-DF70B8BE2D75}", "XLbviSJkJ6HYOZNypYPh+PbGkE8=", "Valtech.Foundation.Synthesis")]
     public partial interface IVTestPageItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the TestPageText field</summary>
@@ -271,6 +295,12 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the TestPageDate field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("testpagedate")]
         Synthesis.FieldTypes.Interfaces.IDateTimeField TestPageDate {
+            get;
+        }
+        
+        /// <summary>Represents the TestPageExtraText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("testpageextratext")]
+        Synthesis.FieldTypes.Interfaces.ITextField TestPageExtraText {
             get;
         }
     }
@@ -1356,6 +1386,97 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/VTestComponent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class VTestComponent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IVTestComponentItem {
+        
+        private Synthesis.FieldTypes.TextField _heading;
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        private Synthesis.FieldTypes.HyperlinkField _link;
+        
+        public VTestComponent(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public VTestComponent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "VTestComponent";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B4D889A9-B29E-443A-8963-90DD8103D930}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading {
+            get {
+                if (_heading == null) {
+                    _heading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C2FEBD0-D0E2-4B62-8899-43CBC51D18C6}"], "/sitecore/templates/Feature/Content/Data/VTestComponent", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4B04AFB6-56EC-45DD-838A-D42BEEF455D4}"], "/sitecore/templates/Feature/Content/Data/VTestComponent", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get {
+                if (_link == null) {
+                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{207F3A7B-037C-46FD-9D10-74C39A369652}"], "/sitecore/templates/Feature/Content/Data/VTestComponent", "Link"), this.GetSearchFieldValue("link"));
+                }
+                return _link;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class VTestComponentInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B4D889A9-B29E-443A-8963-90DD8103D930}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new VTestComponent(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new VTestComponent(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/VTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class VTestPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IVTestPageItem {
@@ -1369,6 +1490,8 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         private Synthesis.FieldTypes.RichTextField _testPageRichText;
         
         private Synthesis.FieldTypes.DateTimeField _testPageDate;
+        
+        private Synthesis.FieldTypes.TextField _testPageExtraText;
         
         public VTestPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -1451,6 +1574,17 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _testPageDate = new Synthesis.FieldTypes.DateTimeField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A61AE873-7F28-42CA-A039-12F59EDFD5D2}"], "/sitecore/templates/Feature/Content/Data/VTestPage", "TestPageDate"), this.GetSearchFieldValue("testpagedate"));
                 }
                 return _testPageDate;
+            }
+        }
+        
+        /// <summary>Represents the TestPageExtraText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("testpageextratext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField TestPageExtraText {
+            get {
+                if (_testPageExtraText == null) {
+                    _testPageExtraText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{367C100F-2EE5-42D2-AE86-472570C8D28E}"], "/sitecore/templates/Feature/Content/Data/VTestPage", "TestPageExtraText"), this.GetSearchFieldValue("testpageextratext"));
+                }
+                return _testPageExtraText;
             }
         }
     }

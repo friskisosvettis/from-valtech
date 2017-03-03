@@ -1,0 +1,17 @@
+﻿
+@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.Content.Models.VTestComponentModel
+@{
+    Layout = null;
+
+}
+
+<h1>Test V component</h1>
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    using (Html.BeginHyperlinkFor(m => m.VTestComponentItem.Link))
+     {
+         @Html.ImageFor(m => m.VTestComponentItem.Image)
+         <p>@Html.TextFor(m => m.VTestComponentItem.Heading)</p>
+    }
+}

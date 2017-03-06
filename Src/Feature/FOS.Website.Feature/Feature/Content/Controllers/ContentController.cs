@@ -16,6 +16,12 @@ namespace FOS.Website.Feature.Content.Controllers
 {
     public class ContentController : Controller
     {
+        public ActionResult GetBasicContentView()
+        {
+            BasicContentModel model = new BasicContentModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.BasicContent, model);
+        }
+
         public ActionResult GetExpandableSectionView()
         {
             IExpandableSectionItem expandableItem = RenderingContext.Current.Rendering.Item.As<IExpandableSectionItem>();

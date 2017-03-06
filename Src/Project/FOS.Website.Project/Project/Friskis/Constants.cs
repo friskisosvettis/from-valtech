@@ -12,6 +12,7 @@ namespace FOS.Website.Project.Friskis
             public struct Paths
             {
                 public const string ContentRegion = "/Project/Friskis/Views/ContentRegion.cshtml";
+                public const string ArticlePage = "/Project/Friskis/Views/ArticlePage.cshtml";
             }
         }
     }

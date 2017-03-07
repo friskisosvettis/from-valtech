@@ -1,0 +1,15 @@
+﻿/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+footer {
+    min-height: 10em;
+    background-color: $color-gray-15;
+
+    > .container div {
+        @include span(12);
+    }
+}

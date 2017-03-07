@@ -1,3 +1,10 @@
+/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
 [data-gallery] {
 	cursor: pointer;
 }
@@ -219,4 +226,31 @@
 			}
 		}
 	}
+}
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------- New section Friskis ---------------------------*/
+/*---------------------------------------------------------------------------*/
+
+.gallery {
+    @include layout($grid-outer);
+    @include container();
+
+    figcaption {
+        padding: 1em;
+    }
+
+    &__item {
+        > img {
+        width: 100%;
+    }
+
+    @include small-up {
+        @include span(6);
+    }
+
+    @include medium-up {
+        @include span(3);
+    }
+  }
 }

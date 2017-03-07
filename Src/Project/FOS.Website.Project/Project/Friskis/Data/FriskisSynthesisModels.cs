@@ -53,7 +53,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/ArticlePage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}", "BqICc3r2SUb/il8iJIIqw3t1IoQ=", "Valtech.Foundation.Synthesis")]
-    public partial interface IArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicContentItem {
+    public partial interface IArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationListPage template</summary>
@@ -90,6 +90,12 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}", "sjrxBCKJdQVAkMx8SjRWHMizVCc=", "Valtech.Foundation.Synthesis")]
     public partial interface IGymPageItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/HeroPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{CBABDBBF-F826-4F61-AB85-2383356DACE5}", "i4IM80wvwZSzw6QMZ2r09wnDB5I=", "Valtech.Foundation.Synthesis")]
+    public partial interface IHeroPageItem : global::FOS.Website.Feature.Content.Data.IAdvancedHeadingItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Project template</summary>
@@ -522,10 +528,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _headline;
         
-        private Synthesis.FieldTypes.TextField _introduction;
-        
-        private Synthesis.FieldTypes.ImageField _image;
-        
         public ArticlePage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -560,31 +562,9 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         public Synthesis.FieldTypes.Interfaces.ITextField Headline {
             get {
                 if (_headline == null) {
-                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9B620F26-2D89-4490-90BA-B4A4C6C4C430}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "Headline"), this.GetSearchFieldValue("headline"));
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5735AC3D-6859-4F44-BF9E-5620237331CC}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "Headline"), this.GetSearchFieldValue("headline"));
                 }
                 return _headline;
-            }
-        }
-        
-        /// <summary>Represents the Introduction field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("introduction")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Introduction {
-            get {
-                if (_introduction == null) {
-                    _introduction = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{80BADE1F-C540-4ABB-BD25-551C43152D69}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "Introduction"), this.GetSearchFieldValue("introduction"));
-                }
-                return _introduction;
-            }
-        }
-        
-        /// <summary>Represents the Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField Image {
-            get {
-                if (_image == null) {
-                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{01638401-F4B5-42A0-A1C0-06AAA0C17493}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "Image"), this.GetSearchFieldValue("image"));
-                }
-                return _image;
             }
         }
     }
@@ -1085,6 +1065,84 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new GymPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/HeroPage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class HeroPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IHeroPageItem {
+        
+        private Synthesis.FieldTypes.TextField _headline;
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public HeroPage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public HeroPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "HeroPage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{CBABDBBF-F826-4F61-AB85-2383356DACE5}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get {
+                if (_headline == null) {
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2787E0AA-9275-47DE-B524-2AE187EEAE69}"], "/sitecore/templates/Project/Friskis/Page Types/HeroPage", "Headline"), this.GetSearchFieldValue("headline"));
+                }
+                return _headline;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}"], "/sitecore/templates/Project/Friskis/Page Types/HeroPage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class HeroPageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{CBABDBBF-F826-4F61-AB85-2383356DACE5}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new HeroPage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new HeroPage(searchFields);
         }
     }
     

@@ -1040,6 +1040,7 @@
     <Content Include="Project\Friskis\Views\ContentRegion.cshtml" />
     <Content Include="Project\Friskis\Views\Web.config" />
     <Content Include="Project\Friskis\Views\ArticlePage.cshtml" />
+    <Content Include="Project\Friskis\Views\HeroPage.cshtml" />
     <None Include="Properties\PublishProfiles\FOS.Website.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>

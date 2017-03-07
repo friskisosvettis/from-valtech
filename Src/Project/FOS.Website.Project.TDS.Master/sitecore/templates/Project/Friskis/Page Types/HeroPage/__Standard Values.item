@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {0D577B54-AEB3-4A37-B09A-84A0BE16A7FD}
+id: {AB21D096-7F8E-4A30-823F-772A7F651E22}
 database: master
-path: /sitecore/templates/Project/Friskis/Page Types/ArticlePage/__Standard Values
-parent: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
+path: /sitecore/templates/Project/Friskis/Page Types/HeroPage/__Standard Values
+parent: {CBABDBBF-F826-4F61-AB85-2383356DACE5}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
-templatekey: ArticlePage
-created: 20170306T103914Z
+template: {CBABDBBF-F826-4F61-AB85-2383356DACE5}
+templatekey: HeroPage
+created: 20170307T155002Z
 
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
@@ -16,11 +16,11 @@ name: __Renderings
 key: __renderings
 content-length: 362
 
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{22248DCD-9397-4B40-8A31-3362A44F4AC5}" ph="main" uid="{52DCBBF3-A8DE-465C-8E4A-A17C1FBDE4AB}" /><r id="{8B9678D5-94E1-4844-BA51-16F3993948A5}" ph="maincontent" uid="{1BEF0AEB-E450-4A94-9D85-6F6DD88EBFAC}" /></d></r>
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{0F1CB627-BD47-4649-88A0-297FF1873233}" ph="main" uid="{DF5FD053-BF7E-4AC7-AA99-1DE48A6D3CE3}" /><r id="{6C20FD44-D603-47D6-BBFC-5B6461187269}" ph="maincontent" uid="{BF819E71-661C-4CD0-9DC5-A312F47B683B}" /></d></r>
 ----version----
 language: en
 version: 1
-revision: 73f27191-a35d-4e84-a406-4700ddd6255c
+revision: e3a666f6-a6ca-403c-b5b7-8183061eb371
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-73f27191-a35d-4e84-a406-4700ddd6255c
+e3a666f6-a6ca-403c-b5b7-8183061eb371
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170307T171828Z
+20170307T164109Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -67,7 +67,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 42063476-05d4-4a61-b811-9a7de22944bd
+revision: 5f5f3177-0572-455e-8f53-d059de5e6104
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -96,14 +96,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-42063476-05d4-4a61-b811-9a7de22944bd
+5f5f3177-0572-455e-8f53-d059de5e6104
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170307T165812Z
+20170307T163928Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

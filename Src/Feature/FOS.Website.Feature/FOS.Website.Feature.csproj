@@ -1024,6 +1024,8 @@
     <Content Include="Feature\Content\Views\VTestPage.cshtml" />
     <Content Include="Feature\Content\Views\FArticalPageView.cshtml" />
     <Content Include="Feature\Content\Views\BasicContent.cshtml" />
+    <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
+    <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1035,6 +1037,8 @@
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
+    <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\BasicContentModel.cs" />
     <Compile Include="Feature\Content\Models\ExpandableSectionModel.cs" />
     <Compile Include="Feature\Content\Models\FArticalPageModel.cs" />

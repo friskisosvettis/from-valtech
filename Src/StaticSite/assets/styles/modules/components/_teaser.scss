@@ -1,0 +1,62 @@
+﻿/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+.teaser {
+    overflow: hidden;
+    width: 100%;
+    height: 8em;
+
+    @include xsmall-up {
+        height: 10em;
+    }
+    @include small-up {
+        height: 15em;
+    }
+    @include medium-up {
+        height: 20em;
+    }
+    @include large-up {
+        height: 25em;
+    }
+    @include xlarge-up {
+        height: 30em;
+    }
+
+    // Look into other image effects since this is expensive
+    > img {
+        width: 100%;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+
+        &:hover {
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(1.00);
+            transform: scale(1.00);
+        }
+    }
+
+    &--content {
+        @include layout($grid-outer);
+        @include container();
+        background-color: $color-gray-02;
+
+        figcaption {
+            padding: 1em;
+            //TODO: Add margin/padding variables
+        }
+        img, figcaption {
+            @include span(12);
+
+            @include medium-up {
+                @include span(6);
+            }
+        }
+    }
+}

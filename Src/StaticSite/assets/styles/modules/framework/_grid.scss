@@ -118,3 +118,118 @@
 		width: col(12, 12);
 	}
 }
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------- New section Friskis ---------------------------*/
+/*---------------------------------------------------------------------------*/
+
+// Import Susy
+@import "../../../../node_modules/susy/sass/susy";
+/*
+* Base variables and function definitions
+*
+* @section layout
+*/
+
+/*
+* Define breakpoints.
+*	They can be used elsewhere, but must be defined here for
+*	the sake of layout.
+*
+* Do not use the layout argument elsewhere.
+*/
+
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/*
+ * Spacing Defaults
+ */
+$space : 10px;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+$pad : 10px;
+$pad-and-half : $pad*1.5;
+$pad-double : $pad*2;
+$pad-half : $pad/2;
+$pad-quarter :$pad/4;
+
+
+/*------------------------------------*\
+    #CONTAINER WIDTHS
+\*------------------------------------*/
+$xl-max-width: 1140px;
+
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+
+// XXS	[0 <= x < 384px / 24em]
+// XS	[385px <= x < 480px / 30em]
+// S	[740 <= x < 800]
+// M	[950 <= x < 960]
+// L	[961px <= x < 1120px]
+// XL	[1121px <= x < 999999]
+// MAX WIDTH [1280px - 80em]
+
+
+$bp-xsmall : 340px;
+$bp-small : 576px;
+$bp-medium : 768px;
+$bp-large : 992px;
+$bp-xlarge : 1200px;
+
+
+// For xsmall and up
+@mixin xsmall-up {
+  @media screen and (min-width: $bp-xsmall) {
+    @content;
+  }
+}
+
+// For small and up
+@mixin small-up {
+  @media screen and (min-width: $bp-small) {
+    @content;
+  }
+}
+
+// For medium and up
+@mixin medium-up {
+  @media screen and (min-width: $bp-medium) {
+    @content;
+  }
+}
+
+// For large and up
+@mixin large-up {
+  @media screen and (min-width: $bp-large) {
+    @content;
+  }
+}
+
+// For xlarge and up
+@mixin xlarge-up {
+  @media screen and (min-width: $bp-xlarge) {
+    @content;
+  }
+}
+
+/* Outer grid used for dividing into columns */
+$grid-outer: (
+	container: $xl-max-width,
+	columns: 12,
+	column-width: 120px,
+	gutters: 20px/120px,
+	math: fluid,
+	last-flow: to,
+	gutter-position: inside-static,
+	global-box-sizing: border-box, // content-box | border-box (affects inside/inside-static)
+	debug: (
+		image: hide,
+	),
+);

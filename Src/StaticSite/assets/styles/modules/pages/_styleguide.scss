@@ -1,0 +1,56 @@
+﻿/**
+* OBS!! Move to styleguide stylesheet when it works to create css file from
+* Styleguide specific stylesheet 
+*
+* @section Pages
+* @author Veronika Jeppsson
+*/
+
+.container {
+    @include layout($grid-outer);
+    @include container();
+}
+
+.container-col-12 {
+    @include layout($grid-outer);
+    @include container();
+
+      > div {
+        background-color: grey;
+        @include pad(0.5em);
+        @include span(1);
+    }
+}
+
+.container-col-2 {
+    @include layout($grid-outer);
+    @include container();
+
+    > div {
+        background-color: grey;
+        @include pad(0.5em);
+        @include span(6);
+    }
+}
+
+.container-col-3 {
+    @include layout($grid-outer);
+    @include container();
+
+    > div {
+        background-color: grey;
+        @include pad(0.5em);
+        @include span(4);
+    }
+}
+
+.container-col-4 {
+    @include layout($grid-outer);
+    @include container();
+
+    > div {
+        background-color: grey;
+        @include pad(0.5em);
+        @include span(3);
+    }
+}

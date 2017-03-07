@@ -1,4 +1,4 @@
-.btn {
+/*.btn {
 	display: inline-block;
 	padding: 12px 60px;
 
@@ -121,4 +121,48 @@
 button,
 input[type="submit"] {
 	@extend .btn;
+}*/
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------- New section Friskis ---------------------------*/
+/*---------------------------------------------------------------------------*/
+
+@import '../base';
+
+@mixin button-settings($color) {
+    background-color: $color;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.8em 1em;
+    margin: 0.2em 0.5em;
+
+    &:focus {
+        // TODO: Remove this and add focus mixin
+        outline: none;
+        background-color: lighten($color, 40%);
+    }
+
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+    &:active {
+        background-color: darken($color, 30%);
+        padding: 0.9em 1em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &:disabled {
+        cursor: default;
+        background-color: $color-gray-15;
+    }
+}
+
+.btn {
+    color: $color-white;
+    @include button-settings($color-brand-red);
+
+    &--block {
+        display: block;
+    }
 }

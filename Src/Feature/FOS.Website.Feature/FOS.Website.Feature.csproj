@@ -1026,6 +1026,7 @@
     <Content Include="Feature\Content\Views\BasicContent.cshtml" />
     <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
     <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
+    <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1034,6 +1035,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Content\Constants.cs" />
+    <Compile Include="Feature\Content\Controllers\RowContentController.cs" />
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
@@ -1044,6 +1046,7 @@
     <Compile Include="Feature\Content\Models\FArticalPageModel.cs" />
     <Compile Include="Feature\Content\Models\FTestPageModel.cs" />
     <Compile Include="Feature\Content\Models\ImageCollageModel.cs" />
+    <Compile Include="Feature\Content\Models\RichTextContentModel.cs" />
     <Compile Include="Feature\Content\Models\TestPageModel.cs" />
     <Compile Include="Feature\Content\Models\QuoteModel.cs" />
     <Compile Include="Feature\Content\Models\VTestPageModel.cs" />

@@ -1041,11 +1041,13 @@
     <Content Include="Project\Friskis\Views\Web.config" />
     <Content Include="Project\Friskis\Views\ArticlePage.cshtml" />
     <Content Include="Project\Friskis\Views\HeroPage.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Column_1_1.cshtml" />
     <None Include="Properties\PublishProfiles\FOS.Website.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Project\Friskis\Constants.cs" />
+    <Compile Include="Project\Friskis\Controllers\RowPlaceholderController.cs" />
     <Compile Include="Project\Friskis\Controllers\BasicPageController.cs" />
     <Compile Include="Project\Friskis\Controllers\RegionController.cs" />
     <Compile Include="Project\Friskis\Data\FriskisSynthesisModels.cs" />

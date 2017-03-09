@@ -1,0 +1,120 @@
+----item----
+version: 1
+id: {01F48101-0992-4CD0-8B66-9AA8C4D53FD4}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/HeroYoga
+parent: {E25CB178-5CFA-4949-B9E3-EC717FCA34A1}
+name: HeroYoga
+master: {00000000-0000-0000-0000-000000000000}
+template: {CBABDBBF-F826-4F61-AB85-2383356DACE5}
+templatekey: HeroPage
+created: 20170307T170044Z
+
+----version----
+language: en
+version: 1
+revision: 97b1fa8f-f772-4186-b8b7-0f9d81487fe4
+
+----field----
+field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
+name: Headline
+key: headline
+content-length: 4
+
+Yoga
+----field----
+field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 425
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{51FF4C8C-D6E0-4B86-92E2-DA4F8A0CDDB5}" p:before="*" s:ds="{EE166889-9478-478B-9D08-5DA050BF37C4}" s:id="{498FDFEB-A073-4B9C-9EF5-1B1C856D32E3}" s:ph="/main/maincontent/content-50-right" /><r uid="{3257435E-134C-4A7E-BA63-8A3C8C9BAC40}" p:after="*[1=2]" s:id="{C294BF05-C6DC-41D2-A516-1969CF4FCF54}" s:ph="/main/maincontent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170307T170044Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+97b1fa8f-f772-4186-b8b7-0f9d81487fe4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T100239Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: sv-SE
+version: 1
+revision: 9b4d02c1-335b-4ffb-b579-1ed1fd358a66
+
+----field----
+field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
+name: Headline
+key: headline
+content-length: 4
+
+Yoga
+----field----
+field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170307T170132Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9b4d02c1-335b-4ffb-b579-1ed1fd358a66
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T095748Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

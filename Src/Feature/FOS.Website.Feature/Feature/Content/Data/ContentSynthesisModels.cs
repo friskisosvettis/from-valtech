@@ -245,6 +245,18 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/RichTextContent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}", "rWBL6Whx3bUzcYzbL4X3JpRZ2Es=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRichTextContentItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Text Content field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_content")]
+        Synthesis.FieldTypes.Interfaces.IRichTextField TextContent {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Teaser template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08F66E6C-6469-48E6-B148-D91AEF863896}", "ENw/FFoxcYMlxdepQYQusw0GzJo=", "Valtech.Foundation.Synthesis")]
@@ -1537,6 +1549,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new Quote(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/RichTextContent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class RichTextContent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem {
+        
+        private Synthesis.FieldTypes.RichTextField _textContent;
+        
+        public RichTextContent(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public RichTextContent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "RichTextContent";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Text Content field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_content")]
+        public Synthesis.FieldTypes.Interfaces.IRichTextField TextContent {
+            get {
+                if (_textContent == null) {
+                    _textContent = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5CE761C2-6467-4D85-80DB-E9C63B538B42}"], "/sitecore/templates/Feature/Content/Data/RichTextContent", "Text Content"), this.GetSearchFieldValue("text_content"));
+                }
+                return _textContent;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RichTextContentInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new RichTextContent(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new RichTextContent(searchFields);
         }
     }
     

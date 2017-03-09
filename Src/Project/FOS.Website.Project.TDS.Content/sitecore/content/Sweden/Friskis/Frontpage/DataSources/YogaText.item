@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {EE166889-9478-478B-9D08-5DA050BF37C4}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/YogaText
+parent: {692C4B23-D8FD-475E-AB49-482CEFE814BF}
+name: YogaText
+master: {00000000-0000-0000-0000-000000000000}
+template: {1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}
+templatekey: RichTextContent
+created: 20170309T100037Z
+
+----version----
+language: en
+version: 1
+revision: 42cd32e5-94f8-4925-b5b3-1fe638b0e622
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 3844
+
+<p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">Sanskritordet yoga har två olika möjliga språkliga rötter, dels i ordet för ”ok (dragok)”, eller mer bildligt "förening", "samling", dels i ett ord som betyder ”koncentration”.</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">I äldre indiska texter används ordet yoga i en bred mening. Ordet motsvarar svenska&nbsp;<i>okning</i>, ”anspänning av oxar eller hästar”, men vanligt förekommande betydelser av ordet är "att tillfoga", "att förena" eller "att fästa". Ordet används även i betydelsen "sysselsättning, användning, applikation, prestanda, att utnyttja, sätta något till nytta".</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">I sanskrit finns många sammansatta ord som innehåller&nbsp;<i>yoga</i>&nbsp;med betydelser som "förbindelse", "kontakt", ”kombinera”, "metod", "program", "tillägg", "prestation" m.m.</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">Alla försök att hitta en ursprungsbetydelse av ordet blir därför osäkra. Men vanliga tolkningar är:</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">dels att det syftar på förening mellan&nbsp;<a href="https://sv.wikipedia.org/wiki/Atman" title="Atman" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">atman</a>, den mänskliga själen och&nbsp;<a href="https://sv.wikipedia.org/wiki/Brahman" title="Brahman" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">brahman</a>, "världssjälen" såsom dessa begrepp konceptualiseras i hinduisk teologi - föreningen avser alltså inte den mellan kropp och själ som ofta refereras till inom mer västerländskt orienterad metafysik.</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">dels att det syftar på en ansamling av människans alla krafter, en koncentration av krafterna till en enda punkt, ”den till konstfärdighet upphöjda kontemplationen.”<sup id="cite_ref-4" class="reference" style="unicode-bidi: isolate; white-space: nowrap;"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-4" style="text-decoration: none; color: rgb(11, 0, 128); background: none;"><span class="cite-reference-link-bracket">[</span>4<span class="cite-reference-link-bracket">]</span></a></sup></p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">I den hinduiska filosofin används ordet yoga även som hänvisning till en av de sex ortodoxa skolorna i den indiska filosofin.</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; background-color: rgb(255, 255, 255);">Den som övar yoga eller följer yogafilosofin med engagemang kallas en&nbsp;<a href="https://sv.wikipedia.org/wiki/Yogi_(yoga)" class="mw-redirect" title="Yogi (yoga)" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">yogi</a>&nbsp;(man) eller&nbsp;<a href="https://sv.wikipedia.org/wiki/Yogini" title="Yogini" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">yogini</a>&nbsp;(kvinna).<sup id="cite_ref-5" class="reference" style="unicode-bidi: isolate; white-space: nowrap;"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-5" style="text-decoration: none; color: rgb(11, 0, 128); background: none;"><span class="cite-reference-link-bracket">[</span>5<span class="cite-reference-link-bracket">]</span></a></sup></p>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T100037Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+42cd32e5-94f8-4925-b5b3-1fe638b0e622
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T100100Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

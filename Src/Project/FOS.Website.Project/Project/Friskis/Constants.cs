@@ -14,6 +14,9 @@ namespace FOS.Website.Project.Friskis
                 public const string ArticlePage = "/Project/Friskis/Views/ArticlePage.cshtml";
                 public const string ContentRegion = "/Project/Friskis/Views/ContentRegion.cshtml";
                 public const string HeroPage = "/Project/Friskis/Views/HeroPage.cshtml";
+
+                // Column Placeholder layouts
+                public const string Column_1_1 = "/Project/Friskis/Views/ContentRow/Column_1_1.cshtml";
             }
         }
     }

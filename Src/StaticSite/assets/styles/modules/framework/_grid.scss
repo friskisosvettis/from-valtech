@@ -186,8 +186,8 @@ $bp-xlarge : 1200px;
 
 // For xsmall and up
 @mixin xsmall-up {
-  @media screen and (min-width: $bp-xsmall) {
-    @content;
+    @media screen and (min-width: $bp-xsmall) {
+      @content;
   }
 }
 
@@ -214,22 +214,55 @@ $bp-xlarge : 1200px;
 
 // For xlarge and up
 @mixin xlarge-up {
-  @media screen and (min-width: $bp-xlarge) {
-    @content;
-  }
+    @media screen and (min-width: $bp-xlarge) {
+        @content;
+    }
 }
 
 /* Outer grid used for dividing into columns */
 $grid-outer: (
-	container: $xl-max-width,
-	columns: 12,
-	column-width: 120px,
-	gutters: 20px/120px,
-	math: fluid,
-	last-flow: to,
-	gutter-position: inside-static,
-	global-box-sizing: border-box, // content-box | border-box (affects inside/inside-static)
-	debug: (
-		image: hide,
-	),
+    container: $xl-max-width,
+    columns: 12,
+    column-width: 120px,
+    gutters: 20px/120px,
+    math: fluid,
+    last-flow: to,
+    gutter-position: inside-static,
+    global-box-sizing: border-box, // content-box | border-box (affects inside/inside-static)
+    debug: (
+        image: hide,
+    ),
 );
+
+
+.container {
+    @include layout($grid-outer);
+    @include container();
+}
+
+.container--12 {
+    @include span(12);
+}
+
+.container--6 {
+    @include span(12);
+
+    @include small-up {
+        @include span(6);
+    }
+}
+
+.container--8 {
+    @include span(12);
+
+    @include small-up {
+        @include span(8);
+    }
+}
+.container--4 {
+    @include span(12);
+
+    @include small-up {
+        @include span(4);
+    }
+}

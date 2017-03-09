@@ -1041,7 +1041,12 @@
     <Content Include="Project\Friskis\Views\Web.config" />
     <Content Include="Project\Friskis\Views\ArticlePage.cshtml" />
     <Content Include="Project\Friskis\Views\HeroPage.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Column_1_1.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Layout_half.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Layout_one_two.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Layout_two_one.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Layout_one.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Layout_full_width.cshtml" />
+    <Content Include="Project\Friskis\Views\ContentRow\Layout_thirds.cshtml" />
     <None Include="Properties\PublishProfiles\FOS.Website.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>

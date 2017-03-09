@@ -1,0 +1,11 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@{
+    Layout = null;
+}
+<div style="width: 10%; float: left;"></div>
+<div style="width: 80%; text-align: center; float: left;">
+    @Html.Sitecore().DynamicPlaceholder("content-100")
+</div>
+<div style="width: 10%; float: left; height: 600px;"></div>

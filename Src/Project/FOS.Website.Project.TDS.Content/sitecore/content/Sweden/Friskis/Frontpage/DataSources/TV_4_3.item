@@ -1,0 +1,132 @@
+----item----
+version: 1
+id: {DD040037-0C8E-4C91-A2E3-CC5208631036}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/TV_4_3
+parent: {692C4B23-D8FD-475E-AB49-482CEFE814BF}
+name: TV_4_3
+master: {00000000-0000-0000-0000-000000000000}
+template: {1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}
+templatekey: RichTextContent
+created: 20170309T163713Z
+
+----version----
+language: en
+version: 1
+revision: 9c32c04e-d218-40e1-bfeb-231a879f61cd
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 8141
+
+<p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; text-align: start; background-color: rgb(255, 255, 255);">The original screen ratio for television broadcasts was 4:3 (1.33:1). When preparing a film that was originally intended to be displayed in widescreen for television broadcast the material was often edited with the sides truncated, using techniques such as Center cut or&nbsp;<a href="https://en.wikipedia.org/wiki/Pan_and_scan" title="Pan and scan" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">pan and scan</a>. Sometimes, in the case of Super 35, the full film negative was shown unmasked on TV (i.e., with the&nbsp;<a href="https://en.wikipedia.org/wiki/Matte_(filmmaking)#Mattes_and_widescreen_filming" title="Matte (filmmaking)" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">hard matte</a>&nbsp;removed), however this causes the 4:3 image not to be what the director intended the audience to see—and sometimes boom mikes, edited out of the shot when the picture is matted, can be visible. Modern widescreen televisions feature a 16:9 (and occasionally 16:10) aspect ratio, allowing them to display a 16:9 widescreen picture without letterboxing (or with a minimal letterbox in the case of 16:10).</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; text-align: start; background-color: rgb(255, 255, 255);">In Europe, the&nbsp;<a href="https://en.wikipedia.org/wiki/PAL" title="PAL" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">PAL</a>&nbsp;TV format, with its higher resolution than&nbsp;<a href="https://en.wikipedia.org/wiki/NTSC" title="NTSC" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">NTSC</a>&nbsp;format, meant the quality issues of letterboxed or matted movies on TV was not as severe.<sup class="noprint Inline-Template Template-Fact" style="line-height: 1; font-size: 11.2px; white-space: nowrap;">[<i><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed" style="text-decoration: none; color: rgb(11, 0, 128); background: none;"><span title="This claim needs references to reliable sources. (October 2011)">citation needed</span></a></i>]</sup>&nbsp;There is also an extension to PAL, called&nbsp;<a href="https://en.wikipedia.org/wiki/PALplus" title="PALplus" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">PALplus</a>, which allows specially equipped receivers to receive a PAL picture as true 16:9 with a full 576 lines of vertical resolution, provided the station employs the same system. Standard PAL receivers will receive such a broadcast as a 16:9 image letterboxed to 4:3, with a small amount of color noise in the black bars; this "noise" is actually the additional lines which are hidden inside the color signal. This system has no equivalent in analog NTSC broadcasting.</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; text-align: start; background-color: rgb(255, 255, 255);">Despite the existence of PALplus and support for widescreen in the&nbsp;<a href="https://en.wikipedia.org/wiki/Digital_Video_Broadcasting" title="Digital Video Broadcasting" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">DVB</a>-based digital satellite, terrestrial and cable broadcasts in use across Europe, only&nbsp;<a href="https://en.wikipedia.org/wiki/Belgium" title="Belgium" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Belgium</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Ireland</a>, the&nbsp;<a href="https://en.wikipedia.org/wiki/Netherlands" title="Netherlands" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Netherlands</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Austria" title="Austria" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Austria</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Germany" title="Germany" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Germany</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Scandinavia" title="Scandinavia" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Scandinavia</a>&nbsp;and the&nbsp;<a href="https://en.wikipedia.org/wiki/UK" class="mw-redirect" title="UK" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">UK</a>&nbsp;have adopted widescreen on a large scale, with over half of all widescreen channels available by satellite in Europe targeting those areas. The UK, in particular, began moving to widescreen with the advent of&nbsp;<a href="https://en.wikipedia.org/wiki/Digital_terrestrial_television" title="Digital terrestrial television" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">digital terrestrial television</a>&nbsp;in the late 1990s, and commercials were required to be delivered to broadcasters in widescreen as of 1 July 2000, on their widescreen "<a href="https://en.wikipedia.org/wiki/C-Day" title="C-Day" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">C-Day</a>".</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; text-align: start; background-color: rgb(255, 255, 255);">Widescreen televisions are typically used in conjunction with&nbsp;<a href="https://en.wikipedia.org/wiki/Digital_data" title="Digital data" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Digital</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/High-Definition_Television" class="mw-redirect" title="High-Definition Television" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">High-Definition Television</a>&nbsp;(<a href="https://en.wikipedia.org/wiki/HDTV" class="mw-redirect" title="HDTV" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">HDTV</a>) receivers, or Standard-Definition (SD)&nbsp;<a href="https://en.wikipedia.org/wiki/DVD" title="DVD" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">DVD</a>&nbsp;players and other digital television sources. Digital material is provided to widescreen TVs either in high-definition format, which is natively 16:9 (1.78:1), or as an&nbsp;<a href="https://en.wikipedia.org/wiki/Anamorphic_widescreen" title="Anamorphic widescreen" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">anamorphically-compressed</a>&nbsp;standard-definition picture. Typically, devices decoding Digital Standard-Definition pictures can be programmed to provide anamorphic widescreen formatting, for 16:9 sets, and formatting for 4:3 sets. Pan-and-scan mode can be used on 4:3 if the producers of the material have included the necessary panning data; if this data is absent, letterboxing or centre cut-out is used.</p><p style="margin: 0.5em 0px; line-height: inherit; color: rgb(37, 37, 37); font-size: 14px; text-align: start; background-color: rgb(255, 255, 255);"><a href="https://en.wikipedia.org/wiki/HD_DVD" title="HD DVD" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">HD DVD</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/Blu-ray_disc" class="mw-redirect" title="Blu-ray disc" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Blu-ray disc</a>&nbsp;players were introduced in 2006.&nbsp;<a href="https://en.wikipedia.org/wiki/Toshiba" title="Toshiba" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">Toshiba</a>&nbsp;ceased production of&nbsp;<a href="https://en.wikipedia.org/wiki/HD_DVD" title="HD DVD" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">HD DVD</a>&nbsp;players in early 2008. Consumer camcorders are also available in the HD-video format at fairly low prices. These developments will result in more options for viewing widescreen images on television monitors.</p>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T163713Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9c32c04e-d218-40e1-bfeb-231a879f61cd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T163947Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: sv-SE
+version: 1
+revision: f60e508a-7652-4b5a-87a3-55e2e8c6a15c
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 6862
+
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">The original screen ratio for television broadcasts was 4:3 (1.33:1). When preparing a film that was originally intended to be displayed in widescreen for television broadcast the material was often edited with the sides truncated, using techniques such as Center cut or&nbsp;<a href="https://en.wikipedia.org/wiki/Pan_and_scan" title="Pan and scan" style="color: #0b0080; background: none;">pan and scan</a>. Sometimes, in the case of Super 35, the full film negative was shown unmasked on TV (i.e., with the&nbsp;<a href="https://en.wikipedia.org/wiki/Matte_(filmmaking)#Mattes_and_widescreen_filming" title="Matte (filmmaking)" style="color: #0b0080; background: none;">hard matte</a>&nbsp;removed), however this causes the 4:3 image not to be what the director intended the audience to see&mdash;and sometimes boom mikes, edited out of the shot when the picture is matted, can be visible. Modern widescreen televisions feature a 16:9 (and occasionally 16:10) aspect ratio, allowing them to display a 16:9 widescreen picture without letterboxing (or with a minimal letterbox in the case of 16:10).</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">In Europe, the&nbsp;<a href="https://en.wikipedia.org/wiki/PAL" title="PAL" style="color: #0b0080; background: none;">PAL</a>&nbsp;TV format, with its higher resolution than&nbsp;<a href="https://en.wikipedia.org/wiki/NTSC" title="NTSC" style="color: #0b0080; background: none;">NTSC</a>&nbsp;format, meant the quality issues of letterboxed or matted movies on TV was not as severe.<sup class="noprint Inline-Template Template-Fact">[<em><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed" style="color: #0b0080; background: none;">citation needed</a></em>]</sup>&nbsp;There is also an extension to PAL, called&nbsp;<a href="https://en.wikipedia.org/wiki/PALplus" title="PALplus" style="color: #0b0080; background: none;">PALplus</a>, which allows specially equipped receivers to receive a PAL picture as true 16:9 with a full 576 lines of vertical resolution, provided the station employs the same system. Standard PAL receivers will receive such a broadcast as a 16:9 image letterboxed to 4:3, with a small amount of color noise in the black bars; this "noise" is actually the additional lines which are hidden inside the color signal. This system has no equivalent in analog NTSC broadcasting.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Despite the existence of PALplus and support for widescreen in the&nbsp;<a href="https://en.wikipedia.org/wiki/Digital_Video_Broadcasting" title="Digital Video Broadcasting" style="color: #0b0080; background: none;">DVB</a>-based digital satellite, terrestrial and cable broadcasts in use across Europe, only&nbsp;<a href="https://en.wikipedia.org/wiki/Belgium" title="Belgium" style="color: #0b0080; background: none;">Belgium</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland" style="color: #0b0080; background: none;">Ireland</a>, the&nbsp;<a href="https://en.wikipedia.org/wiki/Netherlands" title="Netherlands" style="color: #0b0080; background: none;">Netherlands</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Austria" title="Austria" style="color: #0b0080; background: none;">Austria</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Germany" title="Germany" style="color: #0b0080; background: none;">Germany</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/Scandinavia" title="Scandinavia" style="color: #0b0080; background: none;">Scandinavia</a>&nbsp;and the&nbsp;<a href="https://en.wikipedia.org/wiki/UK" class="mw-redirect" title="UK" style="color: #0b0080; background: none;">UK</a>&nbsp;have adopted widescreen on a large scale, with over half of all widescreen channels available by satellite in Europe targeting those areas. The UK, in particular, began moving to widescreen with the advent of&nbsp;<a href="https://en.wikipedia.org/wiki/Digital_terrestrial_television" title="Digital terrestrial television" style="color: #0b0080; background: none;">digital terrestrial television</a>&nbsp;in the late 1990s, and commercials were required to be delivered to broadcasters in widescreen as of 1 July 2000, on their widescreen "<a href="https://en.wikipedia.org/wiki/C-Day" title="C-Day" style="color: #0b0080; background: none;">C-Day</a>".</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Widescreen televisions are typically used in conjunction with&nbsp;<a href="https://en.wikipedia.org/wiki/Digital_data" title="Digital data" style="color: #0b0080; background: none;">Digital</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/High-Definition_Television" class="mw-redirect" title="High-Definition Television" style="color: #0b0080; background: none;">High-Definition Television</a>&nbsp;(<a href="https://en.wikipedia.org/wiki/HDTV" class="mw-redirect" title="HDTV" style="color: #0b0080; background: none;">HDTV</a>) receivers, or Standard-Definition (SD)&nbsp;<a href="https://en.wikipedia.org/wiki/DVD" title="DVD" style="color: #0b0080; background: none;">DVD</a>&nbsp;players and other digital television sources. Digital material is provided to widescreen TVs either in high-definition format, which is natively 16:9 (1.78:1), or as an&nbsp;<a href="https://en.wikipedia.org/wiki/Anamorphic_widescreen" title="Anamorphic widescreen" style="color: #0b0080; background: none;">anamorphically-compressed</a>&nbsp;standard-definition picture. Typically, devices decoding Digital Standard-Definition pictures can be programmed to provide anamorphic widescreen formatting, for 16:9 sets, and formatting for 4:3 sets. Pan-and-scan mode can be used on 4:3 if the producers of the material have included the necessary panning data; if this data is absent, letterboxing or centre cut-out is used.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;"><a href="https://en.wikipedia.org/wiki/HD_DVD" title="HD DVD" style="color: #0b0080; background: none;">HD DVD</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/Blu-ray_disc" class="mw-redirect" title="Blu-ray disc" style="color: #0b0080; background: none;">Blu-ray disc</a>&nbsp;players were introduced in 2006.&nbsp;<a href="https://en.wikipedia.org/wiki/Toshiba" title="Toshiba" style="color: #0b0080; background: none;">Toshiba</a>&nbsp;ceased production of&nbsp;<a href="https://en.wikipedia.org/wiki/HD_DVD" title="HD DVD" style="color: #0b0080; background: none;">HD DVD</a>&nbsp;players in early 2008. Consumer camcorders are also available in the HD-video format at fairly low prices. These developments will result in more options for viewing widescreen images on television monitors.</p>
+<div>&nbsp;</div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T171908Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f60e508a-7652-4b5a-87a3-55e2e8c6a15c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T171923Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

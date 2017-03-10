@@ -4,11 +4,12 @@
 @{
     Layout = null;
 }
-<div style="width: 10%; float: left;"></div>
-<div style="width: 57%; float: left;">
-    @Html.Sitecore().DynamicPlaceholder("content-67")
+
+<div class="container">
+    <div class="container--8">
+        @Html.Sitecore().DynamicPlaceholder("content-67")
+    </div>
+    <div class="container--4">
+        @Html.Sitecore().DynamicPlaceholder("content-33")
+    </div>
 </div>
-<div style="width: 23%; float: left;">
-    @Html.Sitecore().DynamicPlaceholder("content-33")
-</div>
-<div style="width: 10%; float: left; height: 600px;"></div>

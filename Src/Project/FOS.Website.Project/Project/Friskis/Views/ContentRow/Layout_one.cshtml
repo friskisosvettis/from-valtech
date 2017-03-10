@@ -4,8 +4,8 @@
 @{
     Layout = null;
 }
-<div style="width: 10%; float: left;"></div>
-<div style="width: 80%; text-align: center; float: left;">
-    @Html.Sitecore().DynamicPlaceholder("content-100")
+<div class="container">
+    <div class="container--12">
+        @Html.Sitecore().DynamicPlaceholder("content-100")
+    </div>
 </div>
-<div style="width: 10%; float: left; height: 600px;"></div>

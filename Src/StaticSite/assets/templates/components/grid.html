@@ -1,43 +1,26 @@
 ﻿<!-- Basic grid example -->
-
-<h1>Grid system</h1>
-<p>
-    The grid is a 12 column grid created with <a href="http://susy.oddbird.net/">susy</a>. How many columns an element
-    should span over is set in the css and the classes displayed down here is only ment to illustrate the grid as an example.
-    <!-- TODO: add real exmaple with code of how to use the grid and set span over columns -->
-</p>
-<main>
-    <h3>Grid with 12 columns</h3>
-    <div class="container-col-12">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
+<div class="container">
+    <div class="container--12">
+        <h3>Grid system</h3>
+        <p>
+            The grid is a 12 column grid created with <a href="http://susy.oddbird.net/">susy</a>.
+            We use the grid in two different ways ($grid-outer) to create the grid. It's a fluid grid with a fixed padding as gutter.
+            How many columns an element should span over is set in the css there are 4 classes that is used to compose the column layout for pages. These are:
+            <ul>
+                <li>.container--12  - to span over the whole content width</li>
+                <li>.container--6   - to span over half the content width</li>
+                <li>.container--4   - to span over a third of the content width</li>
+            </ul>
+            To create columns inside a component the inside grid is used. It's also a fluid grid with the gutter as a fixed padding. Set how many columns you want the content to span over with:
+<pre>
+.content-parent {
+    @include layout($grid-inner);
+    @include container();
+}
+.content-child {
+    @include span(12);
+}
+</pre>
+        </p>
     </div>
-    <h3>Grid with 4 columns</h3>
-    <div class="container-col-4">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-    </div>
-    <h3>Grid with 3 columns</h3>
-    <div class="container-col-3">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-    </div>
-    <h3>Grid with 2 columns</h3>
-    <div class="container-col-2">
-        <div>1</div>
-        <div>2</div>
-    </div>
-</main>
+</div>

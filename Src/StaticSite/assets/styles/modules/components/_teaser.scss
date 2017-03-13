@@ -45,7 +45,7 @@
     &--content {
         @include layout($grid-outer);
         @include container();
-        background-color: $color-gray-02;
+        background-color: $color-black-10;
 
         figcaption {
             padding: 1em;

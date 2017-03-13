@@ -238,14 +238,18 @@ $grid-outer: (
 .container {
     @include layout($grid-outer);
     @include container();
+    padding: 0 $space;
 }
 
 .container--12 {
     @include span(12);
+    margin-bottom: $space;
+
 }
 
 .container--6 {
     @include span(12);
+    margin-bottom: $space;
 
     @include small-up {
         @include span(6);
@@ -254,13 +258,16 @@ $grid-outer: (
 
 .container--8 {
     @include span(12);
+    margin-bottom: $space;
 
     @include small-up {
         @include span(8);
     }
 }
+
 .container--4 {
     @include span(12);
+    margin-bottom: $space;
 
     @include small-up {
         @include span(4);

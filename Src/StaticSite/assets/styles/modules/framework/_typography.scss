@@ -1,5 +1,63 @@
 // Typography
 
+body {
+    font-family: $font-secondary;
+    line-height: 1.5rem;
+    font-size: $base-font-size;
+    color: $color-text;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $font;
+}
+
+h1 {
+    font-size: rem(64px);
+    line-height: rem(78px);
+}
+
+h2 {
+    font-size: rem(48px);
+    line-height: rem(58px);
+}
+
+h3 {
+    font-size: rem(32px);
+    line-height: rem(40px);
+}
+
+h4 {
+    font-size: rem(24px);
+    line-height: rem(30px);
+}
+
+h5 {
+    font-size: rem(20px);
+    line-height: rem(25px);
+}
+
+h6 {
+    font-size: rem(16px);
+    line-height: rem(19px);
+}
+
+.intro {
+    font-size: rem(22px);
+    line-height: rem(34px);
+}
+
+blockquote {
+	font-size: rem(40px);
+	line-height: rem(48px);
+}
+
+a {
+    color: $secondary-color;
+}
+
 /*body {
 	font-family: $font-serif;
 	font-size: rem($base-font-size);
@@ -11,18 +69,16 @@
 
 h1 {
 	text-transform: uppercase;
-}
+}*/
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
 	font-family: $font-sans-serif;
 	font-weight: normal;
 	color: $font-color-1;
-}
+}*/
 
-.wysiwyg {
-}
 
-.paragraph {
+/*.paragraph {
 	font-size: rem($base-font-size);
 	line-height: rem(28px);
 

@@ -29,7 +29,7 @@ $font-color-2: #777879; // Typography light
 // ---------------------------------------------------------------------------
 // Base variables
 
-$base-font-size: 18px;
+$base-font-size: 16px;
 
 
 // ---------------------------------------------------------------------------
@@ -70,8 +70,10 @@ $font-sans-serif-light: 'Ministry-Light', sans-serif;
 /*
  * Brand Colors
  */
-$color-brand-red: #d0273a;
-$color-brand-red-dark: #4a1416;
+$primary-color: #E31836;        // Friskis Red
+$primary-color-light: #FCE7E9;  // Light red
+$secondary-color: #48A1DA;      // Blue
+$cta-color: #0EC55A;            // Green
 
 /*
  * Neutral Colors
@@ -80,14 +82,9 @@ $color-brand-red-dark: #4a1416;
  *    read https://medium.com/eightshapes-llc/color-in-design-systems-a1c80f65fa3#.brevrq67p
  */
 $color-white: #fff;
-$color-gray-02: #f7f9f9;
-$color-gray-15: #d9d9d9;
-$color-gray-35: #a5a5a5;
-$color-gray-50: #808080;
-$color-gray-65: #595959;
-$color-gray-73: #444444;
-$color-gray-87: #222222;
-$color-black: #000;
+$color-black-10: #F5F5F5;
+$color-black-30: #CCCCCC;
+$color-black-90: #383232;
 
 $color-dim-50: rgba(0,0,0,0.5);
 $color-dim-70: rgba(0,0,0,0.7);
@@ -97,57 +94,58 @@ $color-dim-70: rgba(0,0,0,0.7);
  * 1) Utility colors are colors used to provide feedback, such as alert messages,
  * form validation, etc.
  */
-$color-utility-positive: #03804d;
+/*$color-utility-positive: #03804d;
 $color-utility-postitive-subtle: #d4f3e6;
 $color-utility-caution: #a59b15;
 $color-utility-caution-subtle: #fffecf;
 $color-utility-negative: #b12a0b;
 $color-utility-negative-subtle: #fdded8;
 $color-utility-neutral: #0192d0;
-$color-utility-neutral-subtle: #d3f2ff;
+$color-utility-neutral-subtle: #d3f2ff;*/
 
 /*
  * Text Colors
  * 1) These are non-linked text colors, such as body copy.
  */
-$color-text: $color-black;
-$color-text-subtle: $color-gray-50;
+$color-text: $color-black-90;
+/*$color-text-subtle: $color-gray-50;*/
 
 /*
  * Heading Colors
  * 1) These are non-linked heading colors, such as h2, h3, etc.
  */
-$color-heading: $color-black;
-$color-heading-accent: $color-gray-87;
+$color-heading: $color-black-90;
+/*$color-heading-accent: $color-gray-87;*/
 
 /*
  * Text Link Colors
  * 1) These are for linked text, such as a link found within an article,
  *    navigation link, footer link, etc.
  */
-$color-text-link: $color-gray-87;
+/*$color-text-link: $color-gray-87;
 $color-text-link-hover: $color-gray-73;
 $color-text-link-visited: $color-black;
 $color-text-link-active: $color-gray-87;
 
 $color-text-link-light: $color-white;
 $color-text-link-light-hover: $color-white;
-$color-text-link-light-visited: $color-white;
+$color-text-link-light-visited: $color-white;*/
 
 /*
  * Border Colors
  * 1) Border colors are used as decoration or dividers, such as as a seperator
  *    for navigation items, block borders, etc.
  */
-$color-border: $color-gray-50;
+/*$color-border: $color-gray-50;*/
 
 
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
-
-$font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary : Georgia, Times, "Times New Roman", serif;
+$font : "BellGothic", "Helvetica", "Arial", sans-serif;
+$font-secondary : "Raleway", sans-serif;
+$font-secondary-medium : "Raleway-Medium", sans-serif;
+$font-secondary-bold : "Raleway-Bold", sans-serif;
 
 $font-size-small : 0.75rem;
 $font-size-small-2 : 0.875rem;
@@ -186,5 +184,3 @@ $anim-speed-quick: 0.2s;
  * Animation Easing
  */
 $anim-ease: ease;
-
-

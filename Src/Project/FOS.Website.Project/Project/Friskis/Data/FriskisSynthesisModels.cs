@@ -59,7 +59,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/ArticlePage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}", "BqICc3r2SUb/il8iJIIqw3t1IoQ=", "Valtech.Foundation.Synthesis")]
-    public partial interface IArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem {
+    public partial interface IArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationListPage template</summary>
@@ -599,6 +599,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _headline;
         
+        private Synthesis.FieldTypes.RichTextField _textContent;
+        
         public ArticlePage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -636,6 +638,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5735AC3D-6859-4F44-BF9E-5620237331CC}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "Headline"), this.GetSearchFieldValue("headline"));
                 }
                 return _headline;
+            }
+        }
+        
+        /// <summary>Represents the Text Content field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_content")]
+        public Synthesis.FieldTypes.Interfaces.IRichTextField TextContent {
+            get {
+                if (_textContent == null) {
+                    _textContent = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5CE761C2-6467-4D85-80DB-E9C63B538B42}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "Text Content"), this.GetSearchFieldValue("text_content"));
+                }
+                return _textContent;
             }
         }
     }

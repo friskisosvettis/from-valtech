@@ -605,8 +605,8 @@ gulp.task('z_publish-template-index', function () {
             .pipe(index({
                 'prepend-to-output': () => '<head><link rel="stylesheet" type="text/css" href="./assets/index.css"></head><body><div class="wrapper">',
                 'append-to-output': () => '</div></body>',
-                'title': 'Georg Jensen',
-                'title-template': (title) =>'<h1 class="index__title">Carlsberg Byen</h1>',
+                'title': 'Friskis & Svettis',
+                'title-template': (title) =>'<h1 class="index__title">Friskis & Svettis Styleguide</h1>',
                 'pathDepth': 7,
                 'section-template': (sectionContent) => '<section class="index__section">' + sectionContent + '</section>',
                 'section-heading-template': (heading) => '<h2 class="index__section-heading" style="text-transform: capitalize;">' + heading.replace('../../Dist/assets/templates/sections/', '') + '</h2>',

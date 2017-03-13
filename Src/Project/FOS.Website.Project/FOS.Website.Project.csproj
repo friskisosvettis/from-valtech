@@ -1047,11 +1047,14 @@
     <Content Include="Project\Friskis\Views\ContentRow\Layout_one.cshtml" />
     <Content Include="Project\Friskis\Views\ContentRow\Layout_full_width.cshtml" />
     <Content Include="Project\Friskis\Views\ContentRow\Layout_thirds.cshtml" />
+    <Content Include="Project\Friskis\Views\StaticContentRow\Static_full_width.cshtml" />
+    <Content Include="Project\Friskis\Views\StaticContentRow\Static_one.cshtml" />
     <None Include="Properties\PublishProfiles\FOS.Website.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Project\Friskis\Constants.cs" />
+    <Compile Include="Project\Friskis\Controllers\StaticRowPlaceholderController.cs" />
     <Compile Include="Project\Friskis\Controllers\RowPlaceholderController.cs" />
     <Compile Include="Project\Friskis\Controllers\BasicPageController.cs" />
     <Compile Include="Project\Friskis\Controllers\RegionController.cs" />

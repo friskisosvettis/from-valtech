@@ -74,12 +74,6 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     public partial interface IAssociationPageItem : Synthesis.IStandardTemplateItem {
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestArtical template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{6415C96C-3EA7-47FF-BA36-02DC055DBEE9}", "lkWdPtp5N4fEX8zFHufqPXgnVSo=", "Valtech.Foundation.Synthesis")]
-    public partial interface IFTestArticalItem : global::FOS.Website.Feature.Content.Data.I_FTestBasicItem, global::FOS.Website.Feature.Content.Data.I_FTestBlobItem {
-    }
-    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D86BA794-7B80-4016-91AE-DD43A1EA9695}", "yAjH8Vo9kEhIoMDcRK+QzJxrQU0=", "Valtech.Foundation.Synthesis")]
@@ -772,110 +766,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new AssociationPage(searchFields);
-        }
-    }
-    
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestArtical template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class FTestArtical : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IFTestArticalItem {
-        
-        private Synthesis.FieldTypes.TextField _header;
-        
-        private Synthesis.FieldTypes.RichTextField _textBlob;
-        
-        private Synthesis.FieldTypes.ImageField _sellingImage;
-        
-        private Synthesis.FieldTypes.RichTextField _ingress;
-        
-        public FTestArtical(Sitecore.Data.Items.Item innerItem) : 
-                base(innerItem) {
-        }
-        
-        public FTestArtical(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
-                base(searchFields) {
-        }
-        
-        /// <summary>The name of the Sitecore Template that this class represents</summary>
-        public static string TemplateName {
-            get {
-                return "FTestArtical";
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public static Sitecore.Data.ID ItemTemplateId {
-            get {
-                return new Sitecore.Data.ID("{6415C96C-3EA7-47FF-BA36-02DC055DBEE9}");
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public override Sitecore.Data.ID TemplateId {
-            get {
-                return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the Header field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("header")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Header {
-            get {
-                if (_header == null) {
-                    _header = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2445F242-F3A3-4BE0-8B97-57C7BA9A01A8}"], "/sitecore/templates/Project/Friskis/Page Types/FTestArtical", "Header"), this.GetSearchFieldValue("header"));
-                }
-                return _header;
-            }
-        }
-        
-        /// <summary>Represents the TextBlob field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("textblob")]
-        public Synthesis.FieldTypes.Interfaces.IRichTextField TextBlob {
-            get {
-                if (_textBlob == null) {
-                    _textBlob = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{00135776-7424-4674-AAAD-B5D7FA821E43}"], "/sitecore/templates/Project/Friskis/Page Types/FTestArtical", "TextBlob"), this.GetSearchFieldValue("textblob"));
-                }
-                return _textBlob;
-            }
-        }
-        
-        /// <summary>Represents the SellingImage field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("sellingimage")]
-        public Synthesis.FieldTypes.Interfaces.IImageField SellingImage {
-            get {
-                if (_sellingImage == null) {
-                    _sellingImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A789977E-064D-4D6D-8FED-9C4EA6CDFABA}"], "/sitecore/templates/Project/Friskis/Page Types/FTestArtical", "SellingImage"), this.GetSearchFieldValue("sellingimage"));
-                }
-                return _sellingImage;
-            }
-        }
-        
-        /// <summary>Represents the Ingress field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("ingress")]
-        public Synthesis.FieldTypes.Interfaces.IRichTextField Ingress {
-            get {
-                if (_ingress == null) {
-                    _ingress = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F629379A-5E94-406B-BDD4-313C92A9DB4C}"], "/sitecore/templates/Project/Friskis/Page Types/FTestArtical", "Ingress"), this.GetSearchFieldValue("ingress"));
-                }
-                return _ingress;
-            }
-        }
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class FTestArticalInitializer : Synthesis.Initializers.ITemplateInitializer {
-        
-        public Sitecore.Data.ID InitializesTemplateId {
-            get {
-                return new Sitecore.Data.ID("{6415C96C-3EA7-47FF-BA36-02DC055DBEE9}");
-            }
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new FTestArtical(innerItem);
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new FTestArtical(searchFields);
         }
     }
     

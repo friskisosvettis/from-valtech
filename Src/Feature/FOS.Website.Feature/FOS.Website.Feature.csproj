@@ -1023,7 +1023,6 @@
     <Content Include="Feature\Content\Views\FTestPage.cshtml" />
     <Content Include="Feature\Content\Views\VTestPage.cshtml" />
     <Content Include="Feature\Content\Views\FArticalPageView.cshtml" />
-    <Content Include="Feature\Content\Views\BasicContent.cshtml" />
     <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
     <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
@@ -1041,9 +1040,7 @@
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
     <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />
-    <Compile Include="Feature\Content\Models\BasicContentModel.cs" />
     <Compile Include="Feature\Content\Models\ExpandableSectionModel.cs" />
-    <Compile Include="Feature\Content\Models\FArticalPageModel.cs" />
     <Compile Include="Feature\Content\Models\FTestPageModel.cs" />
     <Compile Include="Feature\Content\Models\ImageCollageModel.cs" />
     <Compile Include="Feature\Content\Models\RichTextContentModel.cs" />

@@ -370,6 +370,18 @@ namespace FOS.Website.Feature.Content.Data {
             get;
         }
     }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/WideImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}", "pHZxmVmbqiUC25isYj/s9plv68Q=", "Valtech.Foundation.Synthesis")]
+    public partial interface IWideImageItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+    }
 }
 namespace FOS.Website.Feature.Content.PresentationData {
     
@@ -1969,6 +1981,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new VTestPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/WideImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class WideImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IWideImageItem {
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public WideImage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public WideImage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "WideImage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{54EA1478-6310-4784-AAF1-134BBB1DCE7D}"], "/sitecore/templates/Feature/Content/Data/WideImage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class WideImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new WideImage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new WideImage(searchFields);
         }
     }
 }

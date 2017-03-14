@@ -58,6 +58,12 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{7184FCA8-1AF5-456F-B3CE-993C68DDE071}", "3+ilLtr4yy6Zrf5GW8Zkwwn+OD8=", "Valtech.Foundation.Synthesis")]
     public partial interface IWebsiteRootItem : global::FOS.Website.Foundation.Dictionary.Data.IDictionarySelectorItem, global::FOS.Website.Foundation.Settings.ISettingsSelectorItem {
     }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/WideImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{5F418B66-74CF-438D-9573-E10A9FE23611}", "hui/ZXftnD5Y5qxuiTErWYgb9BI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IWideImageItem : global::FOS.Website.Feature.Content.Data.IWideImageItem {
+    }
 }
 namespace FOS.Website.Project.Friskis.PageTypes {
     
@@ -652,6 +658,71 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new WebsiteRoot(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/WideImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class WideImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IWideImageItem {
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public WideImage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public WideImage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "WideImage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{5F418B66-74CF-438D-9573-E10A9FE23611}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{54EA1478-6310-4784-AAF1-134BBB1DCE7D}"], "/sitecore/templates/Project/Friskis/Content Types/WideImage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class WideImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{5F418B66-74CF-438D-9573-E10A9FE23611}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new WideImage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new WideImage(searchFields);
         }
     }
 }

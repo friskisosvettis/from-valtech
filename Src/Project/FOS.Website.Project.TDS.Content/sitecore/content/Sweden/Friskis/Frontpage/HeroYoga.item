@@ -74,7 +74,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 2bb47003-a0a9-493d-97c6-e66983f431a6
+revision: f5895733-fcce-4939-8d4a-0c7515eb27a0
 
 ----field----
 field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
@@ -94,9 +94,9 @@ content-length: 58
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 772
+content-length: 1234
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{10A94018-B1EA-455C-AD6A-3151338D240D}" p:before="*" s:ds="{114031D5-A642-40D6-87DD-F13FD85D2ADE}" s:id="{159E8E9F-4B95-4693-970B-4A96780FC7E6}" s:ph="/main/maincontent/content-67_bdb4eb46-3d80-4159-aeb6-0660c5c4df9c" /><r uid="{DE8375D2-B446-4C06-93BA-4AA71EB0F794}" p:after="r[@uid='{10A94018-B1EA-455C-AD6A-3151338D240D}']" s:ds="{DE4CC5E3-6C8E-4759-BC3A-0D6973FCE526}" s:id="{159E8E9F-4B95-4693-970B-4A96780FC7E6}" s:ph="/main/maincontent/content-33_bdb4eb46-3d80-4159-aeb6-0660c5c4df9c" /><r uid="{BDB4EB46-3D80-4159-AEB6-0660C5C4DF9C}" p:after="r[@uid='{DE8375D2-B446-4C06-93BA-4AA71EB0F794}']" s:id="{BBB87977-A348-4630-87E2-F5D734CF86A4}" s:ph="/main/maincontent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{39A9EDD8-AB0A-45BF-8B5F-06ABC496515C}" p:before="*" s:ds="{3CFF94D7-AF33-4D0A-A6E3-9C1093CA2BD0}" s:id="{715D20E7-43F3-4E0F-BA8B-4BE1B6704C45}" s:ph="/main/maincontent/content-full-width_aba43564-90e1-4af2-a67b-79c6649e5b7f" /><r uid="{10A94018-B1EA-455C-AD6A-3151338D240D}" p:after="r[@uid='{39A9EDD8-AB0A-45BF-8B5F-06ABC496515C}']" s:ds="{114031D5-A642-40D6-87DD-F13FD85D2ADE}" s:id="{159E8E9F-4B95-4693-970B-4A96780FC7E6}" s:ph="/main/maincontent/content-67_bdb4eb46-3d80-4159-aeb6-0660c5c4df9c" /><r uid="{DE8375D2-B446-4C06-93BA-4AA71EB0F794}" p:after="r[@uid='{10A94018-B1EA-455C-AD6A-3151338D240D}']" s:ds="{DE4CC5E3-6C8E-4759-BC3A-0D6973FCE526}" s:id="{159E8E9F-4B95-4693-970B-4A96780FC7E6}" s:ph="/main/maincontent/content-33_bdb4eb46-3d80-4159-aeb6-0660c5c4df9c" /><r uid="{BDB4EB46-3D80-4159-AEB6-0660C5C4DF9C}" p:after="r[@uid='{DE8375D2-B446-4C06-93BA-4AA71EB0F794}']" s:id="{BBB87977-A348-4630-87E2-F5D734CF86A4}" s:ph="/main/maincontent" /><r uid="{ABA43564-90E1-4AF2-A67B-79C6649E5B7F}" p:after="r[@uid='{BDB4EB46-3D80-4159-AEB6-0660C5C4DF9C}']" s:id="{0B96BF8F-AD3C-46E0-914B-D029F6B75A2D}" s:ph="/main/maincontent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -110,14 +110,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2bb47003-a0a9-493d-97c6-e66983f431a6
+f5895733-fcce-4939-8d4a-0c7515eb27a0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T141226Z
+20170314T144252Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

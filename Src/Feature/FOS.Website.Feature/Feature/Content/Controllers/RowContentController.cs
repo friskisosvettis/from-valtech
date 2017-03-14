@@ -27,5 +27,11 @@ namespace FOS.Website.Feature.Content.Controllers
             BasicImageModel model = new BasicImageModel();
             return View(Constants.Views.Paths.BasicImage, model);
         }
+
+        public ActionResult GetWideImageView()
+        {
+            WideImageModel model = new WideImageModel();
+            return View(Constants.Views.Paths.WideImage, model);
+        }
     }
 }

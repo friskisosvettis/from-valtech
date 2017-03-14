@@ -1,27 +1,27 @@
 ----item----
 version: 1
-id: {DE4CC5E3-6C8E-4759-BC3A-0D6973FCE526}
+id: {3CFF94D7-AF33-4D0A-A6E3-9C1093CA2BD0}
 database: master
-path: /sitecore/content/Sweden/Friskis/Frontpage/ImageComponentFolder/Yoga33
+path: /sitecore/content/Sweden/Friskis/Frontpage/ImageComponentFolder/BigYogaImage
 parent: {585D580F-D878-45C2-9B85-C037EAF330F7}
-name: Yoga33
+name: BigYogaImage
 master: {00000000-0000-0000-0000-000000000000}
-template: {498B6925-E022-456B-8242-341F39B4983E}
-templatekey: BasicImage
-created: 20170314T141118Z
+template: {00C556ED-F3FD-4D27-8870-7CF2DF44A49B}
+templatekey: WideImage
+created: 20170314T144151Z
 
 ----version----
 language: sv-SE
 version: 1
-revision: 822fd5d5-c0cc-49a4-a741-06010cc14d04
+revision: e2244961-ae99-4735-8684-aad9e674c953
 
 ----field----
-field: {E8DDA2E7-E4D1-44F8-B2B4-28B2C36D20F7}
+field: {54EA1478-6310-4784-AAF1-134BBB1DCE7D}
 name: Image
 key: image
-content-length: 111
+content-length: 65
 
-<image mediaid="{16036FE1-FC68-4D36-B25D-7911895347FA}" height="" hspace="" width="" alt="" vspace="" ></image>
+<image mediaid="{78D11CF4-F059-47F6-88C0-560B9E9BC1B2}" ></image>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170314T141119Z
+20170314T144151Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,7 +49,7 @@ name: __Revision
 key: __revision
 content-length: 36
 
-822fd5d5-c0cc-49a4-a741-06010cc14d04
+e2244961-ae99-4735-8684-aad9e674c953
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated

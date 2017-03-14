@@ -21,5 +21,11 @@ namespace FOS.Website.Feature.Content.Controllers
             RichTextContentModel model = new RichTextContentModel();
             return View(Constants.Views.Paths.RichTextContent, model);
         }
+
+        public ActionResult GetBasicImageView()
+        {
+            BasicImageModel model = new BasicImageModel();
+            return View(Constants.Views.Paths.BasicImage, model);
+        }
     }
 }

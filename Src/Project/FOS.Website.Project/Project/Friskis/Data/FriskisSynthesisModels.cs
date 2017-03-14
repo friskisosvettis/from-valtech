@@ -11,6 +11,12 @@
 namespace FOS.Website.Project.Friskis.ContentTypes {
     
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/BasicImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{976C1946-8F3F-4DDA-989D-542A239561B3}", "k3tpUZRNqhxyQpJ/05freLEkKrM=", "Valtech.Foundation.Synthesis")]
+    public partial interface IBasicImageItem : global::FOS.Website.Feature.Content.Data.IBasicImageItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/CountryContainer template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{29BBA25B-AABE-405E-9388-84381D582484}", "OtOPB7PSzIc/vFESXKtGCCmmAfQ=", "Valtech.Foundation.Synthesis")]
@@ -141,6 +147,71 @@ namespace FOS.Website.Project.Friskis.PageTypes {
 
 namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
     
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/BasicImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class BasicImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IBasicImageItem {
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public BasicImage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public BasicImage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "BasicImage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{976C1946-8F3F-4DDA-989D-542A239561B3}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E8DDA2E7-E4D1-44F8-B2B4-28B2C36D20F7}"], "/sitecore/templates/Project/Friskis/Content Types/BasicImage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class BasicImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{976C1946-8F3F-4DDA-989D-542A239561B3}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new BasicImage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new BasicImage(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/CountryContainer template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]

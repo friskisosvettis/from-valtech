@@ -1026,6 +1026,7 @@
     <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
     <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
+    <Content Include="Feature\Content\Views\BasicImage.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1039,6 +1040,7 @@
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
     <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
+    <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\ExpandableSectionModel.cs" />
     <Compile Include="Feature\Content\Models\FTestPageModel.cs" />

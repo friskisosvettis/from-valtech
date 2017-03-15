@@ -12,46 +12,106 @@ body {
 
 h1, h2, h3, h4, h5 {
     font-family: $font;
+	line-height: 1.25;
 }
 
 h1 {
-    font-size: rem(64px);
-    line-height: rem(78px);
+    font-size: rem(28px);
+
+    @include small-up {
+        font-size: rem(54px);
+    }
+
+    @include medium-up {
+        font-size: rem(64px);
+    }
 }
 
 h2 {
-    font-size: rem(48px);
-    line-height: rem(58px);
+	font-size: 22px;
+
+	@include small-up {
+        font-size: rem(42px);
+    }
+
+    @include medium-up {
+		font-size: rem(48px);
+		line-height: rem(58px);
+	}
 }
 
 h3 {
-    font-size: rem(32px);
-    line-height: rem(40px);
+	font-size: 20px;
+
+	@include small-up {
+        font-size: rem(36px);
+    }
+
+    @include medium-up {
+		font-size: rem(32px);
+		line-height: rem(40px);
+	}
 }
 
 h4 {
-    font-size: rem(24px);
-    line-height: rem(30px);
+	font-size: 18px;
+
+	@include small-up {
+        font-size: rem(20px);
+    }
+
+    @include medium-up {
+		font-size: rem(24px);
+		line-height: rem(30px);
+	}
 }
 
 h5 {
-    font-size: rem(20px);
-    line-height: rem(25px);
+	font-size: 16px;
+
+	@include small-up {
+        font-size: rem(18px);
+    }
+
+    @include medium-up {
+		font-size: rem(20px);
+		line-height: rem(25px);
+	}
 }
 
 h6 {
     font-size: rem(16px);
-    line-height: rem(19px);
+	line-height: 1;
+
+	@include small-up {
+        line-height: rem(19px);
+    }
 }
 
 .intro {
-    font-size: rem(22px);
-    line-height: rem(34px);
+    font-size: rem(18px);
+
+	@include small-up {
+        font-size: rem(20px);
+    }
+
+    @include medium-up {
+		font-size: rem(22px);
+		line-height: rem(34px);
+	}
 }
 
 blockquote {
-	font-size: rem(40px);
-	line-height: rem(48px);
+	font-size: rem(26px);
+
+	@include small-up {
+        font-size: rem(32px);
+    }
+
+    @include medium-up {
+		font-size: rem(40px);
+		line-height: rem(48px);
+	}
 }
 
 a {

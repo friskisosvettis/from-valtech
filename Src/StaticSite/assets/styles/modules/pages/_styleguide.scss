@@ -1,6 +1,6 @@
 ﻿/**
 * OBS!! Move to styleguide stylesheet when it works to create css file from
-* Styleguide specific stylesheet 
+* Styleguide specific stylesheet
 *
 * @section Pages
 * @author Veronika Jeppsson
@@ -20,6 +20,8 @@
     height: 100px;
     text-align: center;
     padding-top: 2rem;
+    border-top: 2px dashed $color-white;
+    border-right: 2px dashed $color-white;
 }
 
 .styleguide--primary {

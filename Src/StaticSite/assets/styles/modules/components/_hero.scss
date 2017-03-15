@@ -6,24 +6,99 @@
 */
 
 .hero {
-  max-height: 25em;
-  overflow: hidden;
-  position: relative;
+    // APPROACH WITH IMG & OBJECT-FIT (OBS NEEDS POLYFILL)
+    overflow: hidden;
+    position: relative;
 
-  > img {
-    width: 100%;
-    height: auto;
-  }
+    &__img {
+        position: fixed;
+        overflow: hidden;
+        height: 14em;
+        z-index: -1;
 
-  &__content {
-    color: $white;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 1.5em;
+        @include small-up {
+            height: 22em;
+        }
+        @include medium-up {
+            height: 26em;
+        }
+        @include large-up {
+            height: 30em;
+        }
+        @include xlarge-up {
+            height: 40em;
+        }
+        @include xxlarge-up {
+            height: 44em;
+        }
 
-    h1 {
-        text-shadow: 0 2px 25px rgba(0,0,0,0.30);
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
     }
-  }
+
+    // APPROACH WITH BACKGROUND IMAGE
+    //   background: url(/assets/images/friskis-running.jpg) no-repeat top center fixed;
+    //   -webkit-background-size: cover;
+    //   -moz-background-size: cover;
+    //   background-size: cover;
+      height: 14em;
+
+      @include small-up {
+          height: 22em;
+      }
+      @include medium-up {
+          height: 26em;
+      }
+      @include large-up {
+          height: 30em;
+      }
+      @include xlarge-up {
+          height: 40em;
+      }
+      @include xxlarge-up {
+          height: 44em;
+      }
+    &__content {
+        color: $white;
+        position: relative;
+        width: 100%;
+        height: 7em;
+        text-align: center;
+        top: 7em;
+        background-image: linear-gradient(0deg,rgba(0,0,0,0.50) 0%, rgba(255,255,255,0.00) 100%);
+        display: table;
+
+
+        @include small-up {
+            height: 11em;
+            top: 11em;
+        }
+        @include medium-up {
+            height: 13em;
+            top: 13em;
+        }
+        @include large-up {
+            height: 15em;
+            top: 15em;
+        }
+        @include xlarge-up {
+            height: 20em;
+            top: 20em;
+        }
+        @include xxlarge-up {
+            height: 22em;
+            top: 22em;
+        }
+        h1 {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-shadow: 0 2px 25px rgba(0,0,0,0.30);
+            padding-bottom: $space;
+        }
+    }
 }

@@ -3,6 +3,4 @@
 @using Synthesis.Mvc.Helpers
 @model BasicImageModel
 
-<div>
-    @Html.ImageFor(m => m.BasicImageItem.Image)
-</div>
+@Html.ImageFor(m => m.BasicImageItem.Image, "image--wide")

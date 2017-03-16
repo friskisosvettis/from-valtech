@@ -27,10 +27,10 @@
             height: 30em;
         }
         @include xlarge-up {
-            height: 40em;
+            height: 32em;
         }
         @include xxlarge-up {
-            height: 44em;
+            height: 40em;
         }
 
         > img {
@@ -58,10 +58,10 @@
           height: 30em;
       }
       @include xlarge-up {
-          height: 40em;
+          height: 32em;
       }
       @include xxlarge-up {
-          height: 44em;
+          height: 40em;
       }
     &__content {
         color: $white;
@@ -87,12 +87,12 @@
             top: 15em;
         }
         @include xlarge-up {
-            height: 20em;
-            top: 20em;
+            height: 16em;
+            top: 16em;
         }
         @include xxlarge-up {
-            height: 22em;
-            top: 22em;
+            height: 20em;
+            top: 20em;
         }
         h1 {
             position: absolute;

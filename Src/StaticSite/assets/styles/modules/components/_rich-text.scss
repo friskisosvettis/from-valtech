@@ -8,15 +8,24 @@
 .rich-text {
     overflow: hidden;
     max-width: 35em;
-    margin: $space-double $space;
+    margin: $space-double 0;
 
+    @include small-up {
+        margin: $space-double $space-double*2;
+    }
     /*&--centered {
         margin: 0 auto;
     }*/
+    h2, h3, h4 {
+        margin-bottom: 0.25em !important;
+    }
+    p {
+        margin-bottom: $space !important;
+    }
 }
 /* TODO: Remove this and include a class if added to a specific placeholder*/
 .container--12 {
     .rich-text {
-        margin: 0 auto;
+        margin: $space-double auto;
     }
 }

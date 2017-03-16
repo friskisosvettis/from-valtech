@@ -1,0 +1,68 @@
+----item----
+version: 1
+id: {65CF20F2-6A97-40B5-BB20-583D953E1899}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/LimitedEdition/3_LimEd17_FlowRide
+parent: {575D8CEA-F4E1-4414-9780-925DD18ACF03}
+name: 3_LimEd17_FlowRide
+master: {00000000-0000-0000-0000-000000000000}
+template: {523342F4-95C8-4796-A0C5-28FAE1DDEF58}
+templatekey: RichText
+created: 20170316T074829Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 81d990c6-6f9f-4385-a10e-57be2b7d8bb5
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 590
+
+<div>LimEd17: FlowRide</div>
+<div>Jympaupplevelse med en twist</div>
+<div>V&auml;lkommen p&aring; en &aring;ktur: Limited Edition 2017 FlowRide &auml;r en Jympa-upplevelse med en twist. Lekfull och funktionell tr&auml;ning med s&ouml;ml&ouml;sa v&auml;xlingar och kontraster i b&aring;de musik och r&ouml;relser. H&ouml;g tillsammansk&auml;nsla och n&auml;ra till leendet. Precis som p&aring; Jympa tr&auml;nar du hela kroppen; styrka, kondition och r&ouml;rlighet. &Aring;kturen bjuder dig p&aring; power, flyt och en och annan &ouml;verraskning. G&ouml;r dig redo, nu &aring;ker vi!</div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170316T074730Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+81d990c6-6f9f-4385-a10e-57be2b7d8bb5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170316T075815Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

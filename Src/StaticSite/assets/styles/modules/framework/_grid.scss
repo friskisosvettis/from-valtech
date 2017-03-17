@@ -227,6 +227,7 @@ $bp-xxlarge : 1500px;
         @content;
     }
 }
+
 /* Outer grid used for dividing into columns */
 $grid-outer: (
     container: $xl-max-width,
@@ -250,7 +251,6 @@ $grid-outer: (
 
 .container--12 {
     @include span(12);
-
 }
 
 .container--6 {

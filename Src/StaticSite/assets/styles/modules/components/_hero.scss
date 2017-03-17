@@ -6,9 +6,27 @@
 */
 
 .hero {
-    // APPROACH WITH IMG & OBJECT-FIT (OBS NEEDS POLYFILL)
+    // APPROACH WITH IMG & OBJECT-FIT (OBS, uses polyfill for non supported browsers (IE)
+    // wich makes the image as a background with cover
+
     overflow: hidden;
-    position: relative;
+    height: 14em;
+
+    @include small-up {
+        height: 22em;
+    }
+    @include medium-up {
+        height: 26em;
+    }
+    @include large-up {
+        height: 30em;
+    }
+    @include xlarge-up {
+        height: 32em;
+    }
+    @include xxlarge-up {
+        height: 40em;
+    }
 
     &__img {
         position: fixed;
@@ -38,31 +56,10 @@
             height: 100%;
             object-fit: cover;
             object-position: top;
+            font-family: "object-fit: cover; object-position: top";
         }
     }
 
-    // APPROACH WITH BACKGROUND IMAGE
-    //   background: url(/assets/images/friskis-running.jpg) no-repeat top center fixed;
-    //   -webkit-background-size: cover;
-    //   -moz-background-size: cover;
-    //   background-size: cover;
-      height: 14em;
-
-      @include small-up {
-          height: 22em;
-      }
-      @include medium-up {
-          height: 26em;
-      }
-      @include large-up {
-          height: 30em;
-      }
-      @include xlarge-up {
-          height: 32em;
-      }
-      @include xxlarge-up {
-          height: 40em;
-      }
     &__content {
         color: $white;
         position: relative;
@@ -94,6 +91,7 @@
             height: 20em;
             top: 20em;
         }
+
         h1 {
             position: absolute;
             width: 100%;

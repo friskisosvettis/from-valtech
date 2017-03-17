@@ -23,13 +23,15 @@ var $ = require('jquery'),
 var fixedRibbon = require('./modules/fixed-ribbon'),
 	visualHero = require('./modules/visual-hero'),
 	foldExpand = require('./modules/fold-expand'),
-	loadSvg = require('./modules/load-svg');
+	loadSvg = require('./modules/load-svg'),
+    fitImages = require('./modules/object-fit-images');
 
 $(function () {
 	fixedRibbon.init();
 	foldExpand.init();
 	loadSvg.loadSvg();
 	visualHero.init();
+	fitImages.init();
 
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

@@ -3,7 +3,8 @@
 @using Synthesis.Mvc.Helpers
 @model FOS.Website.Feature.Content.Models.RichTextContentModel
 
-
-<div class="rich-text">
-    @Html.TextFor(m => m.RichTextContentItem.TextContent)
-</div>
+@if (Model.RichTextContentItem.TextContent.HasValue) {
+    <div class="rich-text">
+        @Html.TextFor(m => m.RichTextContentItem.TextContent)
+    </div>
+}

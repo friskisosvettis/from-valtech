@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: rem(28px);
-    padding: 0 $space;
 
     @include small-up {
         font-size: rem(54px);
@@ -25,7 +24,6 @@ h1 {
 
     @include medium-up {
         font-size: rem(64px);
-        padding: 0 $space-quad;
     }
 }
 

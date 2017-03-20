@@ -152,11 +152,6 @@ $space-and-half : $space*1.5;
 $space-double : $space*2;
 $space-quad : $space*4;
 $space-half : $space/2;
-$pad : 10px;
-$pad-and-half : $pad*1.5;
-$pad-double : $pad*2;
-$pad-half : $pad/2;
-$pad-quarter :$pad/4;
 
 
 /*------------------------------------*\
@@ -256,7 +251,7 @@ $grid-outer: (
 .container--6 {
     @include span(12);
 
-    @include small-up {
+    @include medium-up {
         @include span(6);
     }
 }

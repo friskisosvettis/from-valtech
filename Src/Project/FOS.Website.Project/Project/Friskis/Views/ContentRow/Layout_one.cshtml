@@ -1,0 +1,11 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@{
+    Layout = null;
+}
+<div class="container">
+    <div class="container--12">
+        @Html.Sitecore().DynamicPlaceholder("content-100")
+    </div>
+</div>

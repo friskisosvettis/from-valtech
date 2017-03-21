@@ -152,11 +152,6 @@ $space-and-half : $space*1.5;
 $space-double : $space*2;
 $space-quad : $space*4;
 $space-half : $space/2;
-$pad : 10px;
-$pad-and-half : $pad*1.5;
-$pad-double : $pad*2;
-$pad-half : $pad/2;
-$pad-quarter :$pad/4;
 
 
 /*------------------------------------*\
@@ -182,6 +177,7 @@ $bp-small : 576px;
 $bp-medium : 768px;
 $bp-large : 992px;
 $bp-xlarge : 1200px;
+$bp-xxlarge : 1500px;
 
 
 // For xsmall and up
@@ -219,12 +215,19 @@ $bp-xlarge : 1200px;
     }
 }
 
+
+// For xxlarge and up
+@mixin xxlarge-up {
+    @media screen and (min-width: $bp-xxlarge) {
+        @content;
+    }
+}
+
 /* Outer grid used for dividing into columns */
 $grid-outer: (
     container: $xl-max-width,
     columns: 12,
-    column-width: 120px,
-    gutters: 20px/120px,
+    gutters: 0,
     math: fluid,
     last-flow: to,
     gutter-position: inside-static,
@@ -238,6 +241,7 @@ $grid-outer: (
 .container {
     @include layout($grid-outer);
     @include container();
+    padding: 0 $space;
 }
 
 .container--12 {
@@ -247,7 +251,7 @@ $grid-outer: (
 .container--6 {
     @include span(12);
 
-    @include small-up {
+    @include medium-up {
         @include span(6);
     }
 }
@@ -259,6 +263,7 @@ $grid-outer: (
         @include span(8);
     }
 }
+
 .container--4 {
     @include span(12);
 

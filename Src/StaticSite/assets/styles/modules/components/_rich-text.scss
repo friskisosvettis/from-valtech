@@ -1,0 +1,25 @@
+﻿/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+.rich-text {
+    overflow: hidden;
+    max-width: 35em;
+    margin: $space-double 0;
+
+    @include medium-up {
+        padding: 0 $space-quad;
+        margin: $space-double auto;
+    }
+
+    h2, h3, h4 {
+        margin-bottom: 0.25em !important;
+    }
+
+    p {
+        margin-bottom: $space !important;
+    }
+}

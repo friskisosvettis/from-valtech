@@ -1,0 +1,75 @@
+----item----
+version: 1
+id: {8CC92E7E-6837-47A5-AEDA-01A8981A56E9}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/LimitedEdition/2_LimEd17_CirklegymGo
+parent: {575D8CEA-F4E1-4414-9780-925DD18ACF03}
+name: 2_LimEd17_CirklegymGo
+master: {00000000-0000-0000-0000-000000000000}
+template: {523342F4-95C8-4796-A0C5-28FAE1DDEF58}
+templatekey: RichText
+created: 20170316T074808Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 69ccca64-c27a-4880-807c-72cceb5b8dca
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 446
+
+<div>LimEd17: Cirkelgym Go</div>
+<div>cirkelträning med extra allt och taggade team</div>
+<div>Med fullt ös och glimten i ögat är Limited Edition 2017 Cirkelgym Go rejäl träning utan krusiduller. Passet körs ett varv i två cirklar. En med tunga, långsamma styrkeövningar i maskiner. En med konditionsövningar i högt tempo utan redskap. Gruppen delas in i två team som taggar varandra till max. Rak och skön träning med extra allt. Let´s go!</div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170316T074730Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+69ccca64-c27a-4880-807c-72cceb5b8dca
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170316T083031Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

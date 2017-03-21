@@ -11,6 +11,72 @@
 namespace FOS.Website.Feature.Content.Data {
     
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AdvancedHeading template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{205EF50E-C945-4982-A3DB-5404A3F026DA}", "OKe4XdZnCe287xPDfW3Yl+m/7Ss=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAdvancedHeadingItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get;
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicContent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{5BB747DB-5FA2-4020-B516-982B09F8B86B}", "3gg45vmbCsRO0nCu20s3QA/YuzQ=", "Valtech.Foundation.Synthesis")]
+    public partial interface IBasicContentItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get;
+        }
+        
+        /// <summary>Represents the Introduction field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introduction")]
+        Synthesis.FieldTypes.Interfaces.ITextField Introduction {
+            get;
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicHeading template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3050DAD3-3B96-4E48-B547-D55A2C567F1C}", "tRApBBrkh4apwzTFIKbMhL6Qhsc=", "Valtech.Foundation.Synthesis")]
+    public partial interface IBasicHeadingItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{498B6925-E022-456B-8242-341F39B4983E}", "aBCs3MFILNPwpnfOKfDC6MOcWMA=", "Valtech.Foundation.Synthesis")]
+    public partial interface IBasicImageItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ContentAlignmentFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{CB8F5008-7F7F-44ED-8DF0-7B941FC29756}", "+Gs09E846QKMoUzP8n4HyuapTSk=", "Valtech.Foundation.Synthesis")]
@@ -191,6 +257,18 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/RichTextContent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}", "rWBL6Whx3bUzcYzbL4X3JpRZ2Es=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRichTextContentItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Text Content field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_content")]
+        Synthesis.FieldTypes.Interfaces.IRichTextField TextContent {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Teaser template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08F66E6C-6469-48E6-B148-D91AEF863896}", "ENw/FFoxcYMlxdepQYQusw0GzJo=", "Valtech.Foundation.Synthesis")]
@@ -317,6 +395,18 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/WideImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}", "pHZxmVmbqiUC25isYj/s9plv68Q=", "Valtech.Foundation.Synthesis")]
+    public partial interface IWideImageItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/_FTestBasic template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{9228EFAF-8DCE-4540-A4DB-83E08ADF653E}", "eUfPSQhdPopJs0jUB3dpXAJitpA=", "Valtech.Foundation.Synthesis")]
@@ -432,6 +522,305 @@ namespace FOS.Website.System.Layout.RenderingParameters {
 
 namespace FOS.Website.Concrete.Feature.Content.Data {
     
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AdvancedHeading template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AdvancedHeading : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAdvancedHeadingItem {
+        
+        private Synthesis.FieldTypes.TextField _headline;
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public AdvancedHeading(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AdvancedHeading(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "AdvancedHeading";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{205EF50E-C945-4982-A3DB-5404A3F026DA}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get {
+                if (_headline == null) {
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2787E0AA-9275-47DE-B524-2AE187EEAE69}"], "/sitecore/templates/Feature/Content/Data/AdvancedHeading", "Headline"), this.GetSearchFieldValue("headline"));
+                }
+                return _headline;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}"], "/sitecore/templates/Feature/Content/Data/AdvancedHeading", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AdvancedHeadingInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{205EF50E-C945-4982-A3DB-5404A3F026DA}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AdvancedHeading(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AdvancedHeading(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicContent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class BasicContent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IBasicContentItem {
+        
+        private Synthesis.FieldTypes.TextField _headline;
+        
+        private Synthesis.FieldTypes.TextField _introduction;
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public BasicContent(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public BasicContent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "BasicContent";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{5BB747DB-5FA2-4020-B516-982B09F8B86B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get {
+                if (_headline == null) {
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9B620F26-2D89-4490-90BA-B4A4C6C4C430}"], "/sitecore/templates/Feature/Content/Data/BasicContent", "Headline"), this.GetSearchFieldValue("headline"));
+                }
+                return _headline;
+            }
+        }
+        
+        /// <summary>Represents the Introduction field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introduction")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Introduction {
+            get {
+                if (_introduction == null) {
+                    _introduction = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{80BADE1F-C540-4ABB-BD25-551C43152D69}"], "/sitecore/templates/Feature/Content/Data/BasicContent", "Introduction"), this.GetSearchFieldValue("introduction"));
+                }
+                return _introduction;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{01638401-F4B5-42A0-A1C0-06AAA0C17493}"], "/sitecore/templates/Feature/Content/Data/BasicContent", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class BasicContentInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{5BB747DB-5FA2-4020-B516-982B09F8B86B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new BasicContent(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new BasicContent(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicHeading template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class BasicHeading : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IBasicHeadingItem {
+        
+        private Synthesis.FieldTypes.TextField _headline;
+        
+        public BasicHeading(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public BasicHeading(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "BasicHeading";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{3050DAD3-3B96-4E48-B547-D55A2C567F1C}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get {
+                if (_headline == null) {
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5735AC3D-6859-4F44-BF9E-5620237331CC}"], "/sitecore/templates/Feature/Content/Data/BasicHeading", "Headline"), this.GetSearchFieldValue("headline"));
+                }
+                return _headline;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class BasicHeadingInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{3050DAD3-3B96-4E48-B547-D55A2C567F1C}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new BasicHeading(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new BasicHeading(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class BasicImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IBasicImageItem {
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public BasicImage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public BasicImage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "BasicImage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{498B6925-E022-456B-8242-341F39B4983E}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E8DDA2E7-E4D1-44F8-B2B4-28B2C36D20F7}"], "/sitecore/templates/Feature/Content/Data/BasicImage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class BasicImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{498B6925-E022-456B-8242-341F39B4983E}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new BasicImage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new BasicImage(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ContentAlignment template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -1252,6 +1641,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/RichTextContent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class RichTextContent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem {
+        
+        private Synthesis.FieldTypes.RichTextField _textContent;
+        
+        public RichTextContent(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public RichTextContent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "RichTextContent";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Text Content field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_content")]
+        public Synthesis.FieldTypes.Interfaces.IRichTextField TextContent {
+            get {
+                if (_textContent == null) {
+                    _textContent = new Synthesis.FieldTypes.RichTextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5CE761C2-6467-4D85-80DB-E9C63B538B42}"], "/sitecore/templates/Feature/Content/Data/RichTextContent", "Text Content"), this.GetSearchFieldValue("text_content"));
+                }
+                return _textContent;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RichTextContentInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new RichTextContent(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new RichTextContent(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Teaser template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class Teaser : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.ITeaserItem {
@@ -1678,6 +2132,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new VTestPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/WideImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class WideImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IWideImageItem {
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        public WideImage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public WideImage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "WideImage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{54EA1478-6310-4784-AAF1-134BBB1DCE7D}"], "/sitecore/templates/Feature/Content/Data/WideImage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class WideImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new WideImage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new WideImage(searchFields);
         }
     }
     

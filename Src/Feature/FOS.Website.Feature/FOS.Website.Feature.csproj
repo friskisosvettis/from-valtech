@@ -1023,6 +1023,11 @@
     <Content Include="Feature\Content\Views\FTestPage.cshtml" />
     <Content Include="Feature\Content\Views\VTestPage.cshtml" />
     <Content Include="Feature\Content\Views\FArticalPageView.cshtml" />
+    <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
+    <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
+    <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
+    <Content Include="Feature\Content\Views\BasicImage.cshtml" />
+    <Content Include="Feature\Content\Views\WideImage.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1031,13 +1036,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Content\Constants.cs" />
+    <Compile Include="Feature\Content\Controllers\RowContentController.cs" />
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
+    <Compile Include="Feature\Content\Models\WideImageModel.cs" />
+    <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
+    <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\ExpandableSectionModel.cs" />
-    <Compile Include="Feature\Content\Models\FArticalPageModel.cs" />
     <Compile Include="Feature\Content\Models\FTestPageModel.cs" />
     <Compile Include="Feature\Content\Models\ImageCollageModel.cs" />
+    <Compile Include="Feature\Content\Models\RichTextContentModel.cs" />
     <Compile Include="Feature\Content\Models\TestPageModel.cs" />
     <Compile Include="Feature\Content\Models\QuoteModel.cs" />
     <Compile Include="Feature\Content\Models\VTestPageModel.cs" />

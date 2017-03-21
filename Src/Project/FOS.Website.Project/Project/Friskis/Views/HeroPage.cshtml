@@ -1,0 +1,10 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@{
+    Layout = null;
+}
+@Html.Sitecore().Placeholder("topcontent")
+<main role="main">
+    @Html.Sitecore().Placeholder("maincontent")
+</main>

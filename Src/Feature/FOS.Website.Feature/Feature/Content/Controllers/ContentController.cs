@@ -16,6 +16,18 @@ namespace FOS.Website.Feature.Content.Controllers
 {
     public class ContentController : Controller
     {
+        public ActionResult GetBasicHeadingView()
+        {
+            BasicHeadingModel model = new BasicHeadingModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.BasicHeading, model);
+        }
+
+        public ActionResult GetAdvancedHeadingView()
+        {
+            AdvancedHeadingModel model = new AdvancedHeadingModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.AdvancedHeading, model);
+        }
+
         public ActionResult GetExpandableSectionView()
         {
             IExpandableSectionItem expandableItem = RenderingContext.Current.Rendering.Item.As<IExpandableSectionItem>();

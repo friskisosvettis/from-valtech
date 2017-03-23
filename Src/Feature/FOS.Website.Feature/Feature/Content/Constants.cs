@@ -11,6 +11,7 @@ namespace FOS.Website.Feature.Content
         {
             public struct Paths
             {
+                public const string AssociationTopBar = "/Feature/Content/Views/AssociationTopBar.cshtml";
                 public const string AdvancedHeading = "/Feature/Content/Views/AdvancedHeading.cshtml";
                 public const string BasicHeading = "/Feature/Content/Views/BasicHeading.cshtml";
                 public const string BasicImage = "/Feature/Content/Views/BasicImage.cshtml";

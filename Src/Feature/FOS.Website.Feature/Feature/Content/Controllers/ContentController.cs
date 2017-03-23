@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Synthesis;
 using FOS.Website.Feature.Content.Models;
+using Sitecore.Buckets.Extensions;
 using Valtech.Foundation.SitecoreExtensions;
 using Valtech.Foundation.Synthesis;
 using Sitecore.Data.Items;
@@ -16,6 +17,12 @@ namespace FOS.Website.Feature.Content.Controllers
 {
     public class ContentController : Controller
     {
+        public ActionResult GetAssociationTopBarView()
+        {
+            AssociationTopBarModel model = new AssociationTopBarModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.AssociationTopBar, model);
+        }
+
         public ActionResult GetBasicHeadingView()
         {
             BasicHeadingModel model = new BasicHeadingModel(Sitecore.Context.Item);

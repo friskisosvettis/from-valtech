@@ -1,5 +1,6 @@
 ﻿@using Sitecore.Mvc
 @using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Links
 @using Sitecore.Mvc.Presentation
 @using Sitecore.Services.Core.ComponentModel
 @using Sitecore.Web.UI.WebControls
@@ -28,6 +29,16 @@
     <div><strong>TestPageDate:&nbsp;</strong></div>
     @Html.DateTimeFor(m => m.TestPageItem.TestPageDate,"yyyy/MMMM - hh-mm-ss")
 </div>
+
+<br/>
+<div>
+    @foreach (var thing in Model.TestLinks)
+    {
+        <a href="@LinkManager.GetItemUrl(@thing)">@thing.DisplayName</a>
+        <br/>
+    }
+</div>
+<br/>
 
 <div>
     <br />

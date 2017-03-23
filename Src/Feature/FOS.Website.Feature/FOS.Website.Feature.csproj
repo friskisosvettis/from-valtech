@@ -1028,6 +1028,7 @@
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
     <Content Include="Feature\Content\Views\BasicImage.cshtml" />
     <Content Include="Feature\Content\Views\WideImage.cshtml" />
+    <Content Include="Feature\Content\Views\AssociationTopBar.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1041,6 +1042,7 @@
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
     <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
+    <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />

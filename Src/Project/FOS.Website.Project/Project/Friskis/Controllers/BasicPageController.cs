@@ -13,6 +13,11 @@ namespace FOS.Website.Project.Friskis.Controllers
             return View(Constants.Views.Paths.ArticlePage);
         }
 
+        public ActionResult GetAssociationPageView()
+        {
+            return View(Constants.Views.Paths.AssociationPage);
+        }
+
         public ActionResult GetHeroPageView()
         {
             return View(Constants.Views.Paths.HeroPage);

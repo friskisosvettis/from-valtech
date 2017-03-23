@@ -1017,6 +1017,7 @@
     <Compile Include="ModularModelRegistration.cs" />
     <Compile Include="Configuration\ModuleConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructureAssosiatedItemConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />

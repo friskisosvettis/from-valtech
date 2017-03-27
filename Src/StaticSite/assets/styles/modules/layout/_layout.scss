@@ -7,3 +7,9 @@
 main {
     background-color: $color-white;
 }
+
+// In order to be able to have a fixed image in the hero area that
+// is possible to scroll over
+.container--relative {
+    position: relative;
+}

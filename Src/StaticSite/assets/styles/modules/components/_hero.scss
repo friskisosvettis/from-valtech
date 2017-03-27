@@ -9,6 +9,7 @@
     // APPROACH WITH IMG & OBJECT-FIT (OBS, uses polyfill for non supported browsers (IE)
     // wich makes the image as a background with cover
 
+    position: relative;
     overflow: hidden;
     height: 14em;
 
@@ -28,6 +29,7 @@
         height: 40em;
     }
 
+    // ONLY USED ON HEROPAGE
     &__img {
         position: fixed;
         width: 100%;
@@ -50,34 +52,39 @@
         @include xxlarge-up {
             height: 40em;
         }
-
-        > img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            font-family: "object-fit: cover; object-position: top";
-        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        font-family: "object-fit: cover; object-position: top";
     }
 
     &__container {
-        position: relative;
+        position: absolute;
         top: 0em;
         width: 100%;
         height: 100%;
         display: table;
         text-align: center;
-        background: linear-gradient(0deg,rgba(0,0,0,0.50) 0%, rgba(255,255,255,0.00) 50%);
+        background: linear-gradient(0deg, $color-dim-50 0%, $color-dim-00 50%);
     }
 
     &__content {
-        color: $white;
         position: absolute;
-        width: 100%;
         bottom: 0;
+        width: 100%;
+        padding-bottom: $space;
+        color: $white;
+        text-shadow: 0 $border-med 25px $color-dim-30;
 
-        h1 {
-            text-shadow: 0 2px 25px rgba(0,0,0,0.30);
+        @include medium-up {
+            padding-bottom: $space-quad;
+        }
+
+        h2 {
+            margin-bottom: 0;
         }
     }
 }

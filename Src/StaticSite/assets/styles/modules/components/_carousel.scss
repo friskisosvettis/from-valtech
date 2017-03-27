@@ -1,0 +1,199 @@
+/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+//CAROUSEL
+$touch-width: 44px;
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 14em;
+
+    @include small-up {
+        height: 22em;
+    }
+    @include medium-up {
+        height: 26em;
+    }
+    @include large-up {
+        height: 30em;
+    }
+    @include xlarge-up {
+        height: 32em;
+    }
+    @include xxlarge-up {
+        height: 40em;
+    }
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &--fixed {
+        position: fixed;
+        width: 100%;
+    }
+
+    @include medium-up {
+        &__btn {
+            width: 10%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+
+            button {
+                position: absolute;
+                top: 50%;
+                width: $touch-width;
+                height: $touch-width;
+                color: $color-dim-00;
+                background-color:  $color-dim-30;
+                border: none;
+                border-radius: 50%;
+
+                &:before {
+                    content: "";
+                }
+                &:focus {
+                    @include focus-outline;
+                }
+                &:hover {
+                    background-color:  $color-dim-50;
+                }
+            }
+
+            &--prev{
+                left: 0;
+            }
+
+            &--next{
+                right: 0;
+            }
+
+            &:hover {
+                opacity: 1;
+                transition: 0.5 ease-in-out;
+            }
+        }
+    }
+    
+}
+
+
+// SLICK SLIDER
+
+// Arrows in carousel
+.slick-next, .slick-prev {
+    display: none;
+}
+@include medium-up {
+    .slick-next {
+        right: $space;
+    }
+    .slick-prev {
+        left: $space;
+    }
+
+    .slick-next:before, .slick-prev:before {
+        position: absolute;
+        overflow: hidden;
+        display: inline-block;
+        font-size: 14px; /*set the size for arrow*/
+        width: 14px;
+        height: 14px;
+        margin-top: 0;
+        top: 15px;
+    }
+
+    .slick-prev:before {
+        border-top: 1px solid $white;
+        border-left: 1px solid $white;
+        transform: rotate(-45deg);
+        left: 17px;
+    }
+
+    .slick-next:before {
+        border-top: 1px solid $white;
+        border-right: 1px solid $white;
+        transform: rotate(45deg);
+        right: 17px;
+    }
+}
+
+// Dots/lines in carousel for changing images
+.slick-dotted {
+    margin-bottom: 0 !important;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+
+    @include medium-up {
+        bottom: 1em;
+    }
+
+    li {
+        display: inline-block;
+
+        button {
+            color: transparent;
+            background-color: transparent;
+            border: none;
+            margin: 0 $space-half;
+            width: $touch-width;
+            position: relative;
+
+            &:before {
+                content: "";
+                top: 50%;
+                left: 0;
+                position: absolute;
+                height: 2px;
+                width: $touch-width;
+                background-color: $white;
+                opacity: 0.3;
+            }
+
+            &:focus {
+                outline: none;
+
+                &:before {
+                    @include focus-outline;
+                }
+            }
+        }
+        &.slick-active {
+            button:before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Creates the effect that the content slides in a little bit after the
+// image in the carousel
+.slick-slide[aria-hidden="true"] {
+    .hero__content--effect {
+        transform: translate(-15px, 0); //for slide in from the right
+        opacity: 0;
+    }
+}
+.slick-slide[aria-hidden="false"] {
+    .hero__content--effect {
+        opacity: 1;
+        transition: all 0.5s ease-in;
+    }
+}

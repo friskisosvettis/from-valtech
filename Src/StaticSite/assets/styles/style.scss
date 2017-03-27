@@ -4,9 +4,14 @@
 * @section Setup
 * @author <fill-me>
 */
+
+// ---------------------------------------------------------------------------
+// Vendor
+@import "../../../../node_modules/slick-browserify-js/slick/slick.scss";
+
 // ---------------------------------------------------------------------------
 // Fonts
-@import "../fonts/bellgothic";
+@import "../fonts/apercu";
 @import "../fonts/raleway";
 @import "../fonts/ministry";
 

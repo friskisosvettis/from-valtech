@@ -88,6 +88,8 @@ $color-black-30: #CCCCCC;
 $color-black-90: #383232;
 $color-black: #000;
 
+$color-dim-00: rgba(0,0,0,0);
+$color-dim-30: rgba(0,0,0,0.3);
 $color-dim-50: rgba(0,0,0,0.5);
 $color-dim-70: rgba(0,0,0,0.7);
 
@@ -146,7 +148,7 @@ $color-text-link-light-visited: $color-white;*/
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
-$font : "BellGothic", "Helvetica", "Arial", sans-serif;
+$font : "Apercu", "Helvetica", "Arial", sans-serif;
 $font-secondary : "Raleway", sans-serif;
 $font-secondary-medium : "Raleway-Medium", sans-serif;
 $font-secondary-bold : "Raleway-Bold", sans-serif;
@@ -166,7 +168,7 @@ $font-size-large : 1.4375rem;
 /**
  * Border Width
  */
-$border-med: 3px;
+$border-med: 2px;
 $border-thick: 7px;
 
 /**
@@ -188,3 +190,16 @@ $anim-speed-quick: 0.2s;
  * Animation Easing
  */
 $anim-ease: ease;
+
+
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+/**
+ * FOCUS mixin
+ */
+ @mixin focus-outline {
+    outline: none; // Important for WCAG - remove only if replaced with other visual focus mark.
+    box-shadow: 0 0 $border-med 3px $cta-color;
+ }

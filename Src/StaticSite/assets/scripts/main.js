@@ -24,7 +24,8 @@ var fixedRibbon = require('./modules/fixed-ribbon'),
 	visualHero = require('./modules/visual-hero'),
 	foldExpand = require('./modules/fold-expand'),
 	loadSvg = require('./modules/load-svg'),
-    fitImages = require('./modules/object-fit-images');
+    fitImages = require('./modules/object-fit-images'),
+	slickSlider = require('./modules/carousel');
 
 $(function () {
 	fixedRibbon.init();
@@ -32,6 +33,7 @@ $(function () {
 	loadSvg.loadSvg();
 	visualHero.init();
 	fitImages.init();
+	slickSlider.init();
 
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

@@ -20,7 +20,6 @@
     "optional": "0.1.2",
     "path": "^0.12.7",
     "run-sequence": "^1.1.4",
-    "sass-loader": "^6.0.2",
     "slick-browserify-js": "^1.6.1",
     "susy": "^2.2.12",
     "yargs": "^6.5.0"

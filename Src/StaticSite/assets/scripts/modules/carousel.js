@@ -16,7 +16,7 @@ var slickSlider = {
 
 	// Initialize script
     init: function () {
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.carousel__slider').slick({
                 arrows: true,
                 dots: true,
@@ -25,10 +25,10 @@ var slickSlider = {
                 fade: true,
                 speed: 1000,
                 autoplaySpeed: 5000,
-                prevArrow:'<div class="carousel__btn carousel__btn--prev"><button type="button" class="slick-prev">Previous</button></div>',
-                nextArrow:'<div class="carousel__btn carousel__btn--next"><button type="button" class="slick-next">Next</button></div>',
+                prevArrow: '<div class="carousel__btn carousel__btn--prev"><button type="button" class="slick-prev">Previous</button></div>',
+                nextArrow: '<div class="carousel__btn carousel__btn--next"><button type="button" class="slick-next">Next</button></div>',
             });
-        })
+        });
     }
 }
 

@@ -10,21 +10,21 @@
     return;
 }
 
-@{ string linkstring = (String.IsNullOrEmpty(Model.HeroObjectImageItem.Link.Href) ? "" : "href=" + @Model.HeroObjectImageItem.Link.Href); }
-<div style="border: 4px solid red">
-    <a @linkstring>
-        <div>
+<div>
+    <div class="hero">
+        @using (Html.BeginHyperlinkFor(m => m.HeroObjectImageItem.Link, "hero__link"))
+        {
             @Html.ImageFor(m => m.HeroObjectImageItem.HeroImage)
-        </div>
-        <div>
-            <div>
-                <div class="container">
-                    <div class="container--12">
-                        <h1>@Html.TextFor(m => m.HeroObjectImageItem.Title)</h1>
-                        <p>@Html.TextFor(m => m.HeroObjectImageItem.Description)</p>
+            <div class="hero__container">
+                <div class="hero__content hero__content--effect">
+                    <div class="container">
+                        <div class="container--12">
+                            <h2>@Html.TextFor(m => m.HeroObjectImageItem.Title)</h2>
+                            <p>@Html.TextFor(m => m.HeroObjectImageItem.Description)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </a>
+        }
+    </div>
 </div>

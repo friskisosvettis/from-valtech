@@ -1,0 +1,87 @@
+----item----
+version: 1
+id: {6AC27C8F-3142-44B4-8518-8E8D5CD6B0A8}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestAssociationPage/HeroStuff/TestHero1
+parent: {477150E6-C31E-4EC4-83FB-6C3E1DD61EFC}
+name: TestHero1
+master: {00000000-0000-0000-0000-000000000000}
+template: {4E7CED41-68AC-4A40-8DD9-D0CDC4187579}
+templatekey: Hero Object Image
+created: 20170324T161535Z
+
+----version----
+language: sv-SE
+version: 1
+revision: caa06864-1ac5-45eb-88b7-62b2c381cdcc
+
+----field----
+field: {E887C4B0-9EAF-4BDC-8AEF-D968316401BB}
+name: Title
+key: title
+content-length: 11
+
+Hero Pryl 1
+----field----
+field: {81B56E2F-0405-4179-BA0C-1081DC2A58DE}
+name: Description
+key: description
+content-length: 9
+
+Fett Nice
+----field----
+field: {E0A7C103-D10D-4713-A87F-29F8470E1EDC}
+name: HeroImage
+key: heroimage
+content-length: 65
+
+<image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" ></image>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170324T161535Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+caa06864-1ac5-45eb-88b7-62b2c381cdcc
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170324T162118Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

@@ -1029,6 +1029,8 @@
     <Content Include="Feature\Content\Views\BasicImage.cshtml" />
     <Content Include="Feature\Content\Views\WideImage.cshtml" />
     <Content Include="Feature\Content\Views\AssociationTopBar.cshtml" />
+    <Content Include="Feature\Content\Views\HeroObjectImage.cshtml" />
+    <Content Include="Feature\Content\Views\HeroArea.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1037,10 +1039,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Content\Constants.cs" />
+    <Compile Include="Feature\Content\Controllers\HeroAreaController.cs" />
     <Compile Include="Feature\Content\Controllers\RowContentController.cs" />
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
+    <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
     <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />

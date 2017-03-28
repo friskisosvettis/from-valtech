@@ -1,34 +1,34 @@
 ----item----
 version: 1
-id: {56B4EDCA-EB39-4888-A117-DF3FD32A39E9}
+id: {7591AEC6-60A3-42B0-A76B-1CB6317B10A9}
 database: master
-path: /sitecore/templates/Project/Friskis/Page Types/AssociationPage/__Standard Values
-parent: {ED6742D6-FC75-4FCF-B245-4F89EEF2824D}
-name: __Standard Values
+path: /sitecore/layout/Placeholder Settings/Feature/Content/heroarea
+parent: {6C04AF65-1B2B-4BDF-82A2-83297B9B0801}
+name: heroarea
 master: {00000000-0000-0000-0000-000000000000}
-template: {ED6742D6-FC75-4FCF-B245-4F89EEF2824D}
-templatekey: AssociationPage
-created: 20170323T145042Z
+template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
+templatekey: Placeholder
+created: 20170324T135106Z
 
 ----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 471
+field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
+name: Placeholder Key
+key: placeholder key
+content-length: 8
 
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{B03CB7E4-CE92-4BD9-8B41-94A015D17E14}" ph="main" uid="{0956B3E7-5B66-43D9-A4EC-19293A5528BD}" /><r id="{44AC9829-6BE5-44A2-829E-739332577769}" ph="topcontent" uid="{0BB0EA6B-EDB3-4B69-92C7-72CDCC920493}" /><r id="{183E63BE-3167-4E28-8C2F-207F3158DE80}" ph="topcontent" uid="{964344BD-6EAC-46E2-B5FA-EA12F3F73C74}" /></d></r>
+heroarea
+----field----
+field: {E391B526-D0C5-439D-803E-17512EAE6222}
+name: Allowed Controls
+key: allowed controls
+content-length: 38
+
+{06257D00-C6A6-4C45-BE01-E4D0802A4B25}
 ----version----
 language: en
 version: 1
-revision: d911cd02-9c6a-4a20-b02c-d983c43ec3e5
+revision: 022af5d0-d2f9-47fd-a41d-20185ab6bf16
 
-----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 5
-
-$name
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170323T145103Z
+20170324T135106Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d911cd02-9c6a-4a20-b02c-d983c43ec3e5
+022af5d0-d2f9-47fd-a41d-20185ab6bf16
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170328T075855Z
+20170324T135133Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -74,15 +74,8 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 160f5e0d-f45b-4bcc-b825-5ce2ad7aa093
+revision: 76ef350b-8a6d-4be0-857b-e44ba36b23f8
 
-----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 5
-
-$name
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -96,7 +89,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170323T145042Z
+20170324T135138Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -110,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-160f5e0d-f45b-4bcc-b825-5ce2ad7aa093
+76ef350b-8a6d-4be0-857b-e44ba36b23f8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170323T145223Z
+20170324T151807Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

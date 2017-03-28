@@ -1,0 +1,16 @@
+﻿@using Sitecore.Mvc
+@using FOS.Website.Feature.Content.Models
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@model HeroAreaModel
+
+@if(Model.NrOfHeroObjects == 0)
+{
+    return;
+}
+
+<div style="border: 4px solid green">
+    Hero Area <br/>
+    Hero Objects in Placeholder @Model.NrOfHeroObjects <br />
+    @Html.Sitecore().Placeholder(@Model.PlaceholderName)
+</div>

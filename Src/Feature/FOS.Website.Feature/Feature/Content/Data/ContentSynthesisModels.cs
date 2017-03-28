@@ -179,6 +179,36 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeroObjectImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F258FFB8-F406-43D9-B01F-4C05C9C86690}", "b2GPN97kJoh/9+6bruM7eqZ1XMk=", "Valtech.Foundation.Synthesis")]
+    public partial interface IHeroObjectImageItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
+        Synthesis.FieldTypes.Interfaces.ITextField Title {
+            get;
+        }
+        
+        /// <summary>Represents the Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
+        Synthesis.FieldTypes.Interfaces.ITextField Description {
+            get;
+        }
+        
+        /// <summary>Represents the HeroImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heroimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField HeroImage {
+            get;
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ImageCollage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4CAC3AFC-F41F-445B-8BA7-13B4C9D4C528}", "ZqrRmeWiU36weUb/qgfG8mdYDyo=", "Valtech.Foundation.Synthesis")]
@@ -1304,6 +1334,110 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new Headline(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeroObjectImage template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class HeroObjectImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IHeroObjectImageItem {
+        
+        private Synthesis.FieldTypes.TextField _title;
+        
+        private Synthesis.FieldTypes.TextField _description;
+        
+        private Synthesis.FieldTypes.ImageField _heroImage;
+        
+        private Synthesis.FieldTypes.HyperlinkField _link;
+        
+        public HeroObjectImage(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public HeroObjectImage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "HeroObjectImage";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{F258FFB8-F406-43D9-B01F-4C05C9C86690}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Title {
+            get {
+                if (_title == null) {
+                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Title"), this.GetSearchFieldValue("title"));
+                }
+                return _title;
+            }
+        }
+        
+        /// <summary>Represents the Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Description {
+            get {
+                if (_description == null) {
+                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Description"), this.GetSearchFieldValue("description"));
+                }
+                return _description;
+            }
+        }
+        
+        /// <summary>Represents the HeroImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heroimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField HeroImage {
+            get {
+                if (_heroImage == null) {
+                    _heroImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E0A7C103-D10D-4713-A87F-29F8470E1EDC}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "HeroImage"), this.GetSearchFieldValue("heroimage"));
+                }
+                return _heroImage;
+            }
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get {
+                if (_link == null) {
+                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{32D97D63-B497-4E9E-95D6-F178DE9C7C1D}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Link"), this.GetSearchFieldValue("link"));
+                }
+                return _link;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class HeroObjectImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{F258FFB8-F406-43D9-B01F-4C05C9C86690}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new HeroObjectImage(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new HeroObjectImage(searchFields);
         }
     }
     

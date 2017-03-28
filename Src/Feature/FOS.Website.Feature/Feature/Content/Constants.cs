@@ -28,6 +28,10 @@ namespace FOS.Website.Feature.Content
                 public const string VTestPage = "/Feature/Content/Views/VTestPage.cshtml";
                 public const string VTestComponent = "/Feature/Content/Views/VTestComponent.cshtml";
                 public const string WideImage = "/Feature/Content/Views/WideImage.cshtml";
+
+                // Hero carousel views HeroArea
+                public const string HeroArea = "/Feature/Content/Views/HeroArea.cshtml";
+                public const string HeroObjectImage = "/Feature/Content/Views/HeroObjectImage.cshtml";
             }
         }
     }

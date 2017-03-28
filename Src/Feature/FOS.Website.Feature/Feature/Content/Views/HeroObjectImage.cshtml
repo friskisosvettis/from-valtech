@@ -1,0 +1,30 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Sitecore.ContentSearch.Linq.Extensions
+@using Sitecore.Links
+@using Synthesis.Mvc.Helpers
+@model HeroObjectImageModel
+    
+@if (Model.HeroObjectImageItem == null)
+{
+    return;
+}
+
+@{ string linkstring = (String.IsNullOrEmpty(Model.HeroObjectImageItem.Link.Href) ? "" : "href=" + @Model.HeroObjectImageItem.Link.Href); }
+<div style="border: 4px solid red">
+    <a @linkstring>
+        <div>
+            @Html.ImageFor(m => m.HeroObjectImageItem.HeroImage)
+        </div>
+        <div>
+            <div>
+                <div class="container">
+                    <div class="container--12">
+                        <h1>@Html.TextFor(m => m.HeroObjectImageItem.Title)</h1>
+                        <p>@Html.TextFor(m => m.HeroObjectImageItem.Description)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

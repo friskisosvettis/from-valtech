@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {1DA3CA41-D099-4641-BC3A-477DFE8000F8}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestAssociationPage
+parent: {E25CB178-5CFA-4949-B9E3-EC717FCA34A1}
+name: TestAssociationPage
+master: {00000000-0000-0000-0000-000000000000}
+template: {ED6742D6-FC75-4FCF-B245-4F89EEF2824D}
+templatekey: AssociationPage
+created: 20170323T151022Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 0d200244-5561-4f90-a063-c61020a0c0a2
+
+----field----
+field: {3C952386-D9DC-444F-8C73-77CD265192BD}
+name: Association Name
+key: association name
+content-length: 21
+
+Test Association Page
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 746
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{BB8D172E-4184-48DF-AD32-E8C35F15922E}" p:before="*" s:ds="{6AC27C8F-3142-44B4-8518-8E8D5CD6B0A8}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /><r uid="{3C65FDC5-E393-410E-BBF5-2712A2DC707E}" p:after="r[@uid='{BB8D172E-4184-48DF-AD32-E8C35F15922E}']" s:ds="{64945011-6FCC-44B9-900C-B73E729D1DC2}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /><r uid="{D0F8B3E4-C183-4484-BCB6-2B920CF96308}" p:after="r[@uid='{3C65FDC5-E393-410E-BBF5-2712A2DC707E}']" s:ds="{E070EC4D-8507-4525-99B4-105E81E67B53}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170323T151022Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0d200244-5561-4f90-a063-c61020a0c0a2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170327T112123Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

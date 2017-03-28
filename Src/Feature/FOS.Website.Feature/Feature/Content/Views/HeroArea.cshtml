@@ -4,24 +4,17 @@
 @using Sitecore.Mvc.Presentation
 @model HeroAreaModel
 
-@if (Model.NrOfHeroObjects <= 1)
+@if (Sitecore.Context.PageMode.IsExperienceEditor || Model.NrOfHeroObjects == 1)
 {
     @Html.Sitecore().Placeholder(@Model.PlaceholderName)
 }
 else
 {
-    if (Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        @Html.Sitecore().Placeholder(@Model.PlaceholderName)
-    }
-    else
-    {
-        <div class="carousel">
-            <div class="carousel--fixed">
-                <div class="carousel__slider">
-                    @Html.Sitecore().Placeholder(@Model.PlaceholderName)
-                </div>
+    <div class="carousel">
+        <div class="carousel--fixed">
+            <div class="carousel__slider">
+                @Html.Sitecore().Placeholder(@Model.PlaceholderName)
             </div>
         </div>
-    }
+    </div>
 }

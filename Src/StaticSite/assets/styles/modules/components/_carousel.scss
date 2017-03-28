@@ -48,6 +48,7 @@ $touch-width: 44px;
             opacity: 0;
 
             button {
+                display: inline-block;
                 position: absolute;
                 top: 50%;
                 width: $touch-width;

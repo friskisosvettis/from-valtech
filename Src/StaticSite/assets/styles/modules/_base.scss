@@ -201,5 +201,5 @@ $anim-ease: ease;
  */
  @mixin focus-outline {
     outline: none; // Important for WCAG - remove only if replaced with other visual focus mark.
-    box-shadow: 0 0 $border-med 3px $cta-color;
+    box-shadow: 0 0 $border-med 3px $color-black-90;
  }

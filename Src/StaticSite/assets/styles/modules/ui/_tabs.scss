@@ -1,0 +1,31 @@
+/**
+* UI
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+.tabs {
+    padding: 0;
+    margin: 0;
+
+    .tab__title {
+        display: inline-block;
+        padding: $space;
+        margin: $space 0 0 $space;
+        vertical-align: top;
+        background-color: $color-black-10;
+        border-bottom: 1px solid $color-black-10;
+        cursor: pointer;
+
+        &.active {
+            background-color: $white;
+            border: 1px solid $color-black-10;
+            border-bottom: none;
+        }
+
+        @include medium-up {
+            display: none;
+        }
+    }
+}

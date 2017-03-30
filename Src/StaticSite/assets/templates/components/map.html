@@ -1,0 +1,56 @@
+
+<div class="map__container">
+    <!--TABS - hidden-medium-up -->
+    <ul  class="tabs" data-tab="map">
+        <li class="tab__title active"><a href="#panel1">Lista</a></label>
+        <li class="tab__title"><a href="#panel2">Karta</a></label>
+    </ul>
+
+    <!--MAP - VISIBLE ALL THE TIME -->
+    <div class="tab__content hidden-small" id="panel2" data-tab-map>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Fzwhnxu8K80A--t1OTriXGNhU5o6dkE"></script>
+        <div id="map"></div>
+    </div>
+
+    <!--MAP-LIST - VISIBLE ALL THE TIME -->
+    <div class="tab__content map__content" id="panel1" data-tab-map>
+        <div class="map__list">
+            <h3>Här finns vi - 17 anläggningar</h3>
+            <ul>
+                <li data-i="0">
+                    <h4>City</h4>
+                    <button class="map__list--show">Visa på karta</button>
+                    <address>Regeringsgatan 38</address>
+                </li>
+                <li data-i="1">
+                    <h4>Södermalm</h4>
+                    <button class="map__list--show">Visa på karta</button>
+                    <address>Regeringsgatan 38</address>
+                </li>
+                <li data-i="2">
+                    <h4>Kungsholmen</h4>
+                    <button class="map__list--show">Visa på karta</button>
+                    <address>Regeringsgatan 38</address>
+                </li>
+                <li data-i="3" class="hidden">
+                    <h4>Sveavägen</h4>
+                    <button class="map__list--show">Visa på karta</button>
+                    <address>Regeringsgatan 38</address>
+                </li>
+                <li data-i="4" class="hidden">
+                    <h4>Ringvägen</h4>
+                    <button class="map__list--show">Visa på karta</button>
+                    <address>Regeringsgatan 38</address>
+                </li>
+                <li data-i="5" class="hidden">
+                    <h4>Kungsholmen</h4>
+                    <button class="map__list--show">Visa på karta</button>
+                    <address>Regeringsgatan 38</address>
+                </li>
+            </ul>
+            <button class="map__btn">Visa mer</button>
+        </div>
+    </div>
+</div>
+
+

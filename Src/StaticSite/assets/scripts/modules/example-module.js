@@ -30,6 +30,7 @@ var exampleModule = {
     	$('.decrement-button').on('click', function () {
     		console.log(this.decrement());
     	}.bind(this));
+
     }
 }
 

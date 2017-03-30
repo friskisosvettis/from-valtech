@@ -1,0 +1,65 @@
+#map {
+    height: 100%;
+    min-height: 400px;
+}
+.map__container {
+    position: relative;
+}
+
+.map__content {
+    @include container();
+
+    @include medium-up {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+}
+
+.map__list {
+    > h3 {
+        margin: $space-double;
+        font-size: rem(16px);
+        text-transform: uppercase;
+    }
+    > ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        > li {
+            background-color: $white;
+            margin: $space-half 0;
+            padding: $space-double;
+
+            > h4 {
+                margin: 0;
+            }
+            > button {
+                color: $primary-color;
+                background-color: transparent;
+                border: none;
+                float: right;
+            }
+        }
+    }
+    @include medium-up {
+        @include span(6);
+        height: 100%;
+        background-color: rgba(255,255,255,0.85); // TODO Variable with opacity
+        pointer-events: auto;
+    }
+}
+
+.map__btn {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+
+    &:before {
+        content: "+";
+        padding: $space;
+    }
+}

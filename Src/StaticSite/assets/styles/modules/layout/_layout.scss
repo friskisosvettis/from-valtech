@@ -13,3 +13,16 @@ main {
 .container--relative {
     position: relative;
 }
+
+// ------------ VISABILITY - modifiers ----------- //
+
+.hidden-small {
+    display: none;
+
+    @include medium-up {
+        display: block;
+    }
+}
+.hidden {
+    display: none;
+}

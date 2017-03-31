@@ -1,0 +1,161 @@
+.introduction {
+    background-color: $color-black-10;
+
+    &__container {
+        @include container();
+
+        @include medium-up {
+            height: 25em;
+            padding: $space-quad 0;
+        }
+
+        > div {
+            padding: $space-double;
+            @include span(12);
+            height: 100%;
+
+            @include small-up {
+                padding: $space-quad $space-double;
+            }
+
+            @include medium-up {
+                @include span(4);
+            }
+
+            @include large-up {
+                padding: $space-double $space-quad;
+            }
+        }
+    }
+
+    &__pitch {
+        text-align: center;
+
+        h1 {
+            font-size: rem(36px);
+            margin: 0 0 $space 0;
+
+            > span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            display: none;
+
+            @include large-up {
+                display: block;
+            }
+        }
+    }
+
+    &__member {
+        background: url('/assets/images/bg_pattern.jpg') repeat;;
+        background-size: cover;
+        color: $white;
+        text-align: center;
+
+        img {
+            max-width: 35%;
+            height: auto;
+
+            @include small-up {
+                max-width: 15%;
+            }
+            @include medium-up {
+                max-width: 80%;
+            }
+            @include large-up {
+                max-width: 60%;
+            } 
+
+        }
+        h2 {
+            font-size: rem(20px);
+            line-height: 1.25;
+            margin: 0;
+
+        }
+        h3 {
+            font-size: rem(20px);
+            line-height: 1.25;
+            margin: 0;
+
+            @include large-up {
+                font-size: rem(30px);
+            }
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__goto {
+        text-align: center;
+
+        a{
+            @include span(6);
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            text-decoration: none;
+            color: $color-black-90;
+            margin-bottom: $space;
+
+        @include small-up {
+            @include span(3);
+            width: 25%;
+            height: 25%;
+        }
+        @include medium-up {
+            @include span(6);
+            width: 50%;
+            height: 50%;
+        }
+            span {
+                width: 5em;
+                height: 5em;
+                margin: 0 auto $space auto;
+                background-color: $white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-right: $space;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 46px 46px;
+
+        &--training-classes {
+            background-image: url('/assets/images/icon_training.svg');
+        }
+
+        &--traning-center {
+            background-image: url('/assets/images/icon_association.svg');
+        }
+
+        &--prices {
+            background-image: url('/assets/images/icon_prices.svg');
+        }
+
+        &--schedule {
+            background-image: url('/assets/images/icon_schedule.svg');
+        }
+    }
+}

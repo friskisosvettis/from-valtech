@@ -75,12 +75,12 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        padding-bottom: $space;
+        padding-bottom: $space-quad;
         color: $white;
         text-shadow: 0 $border-med 25px $color-dim-30;
 
         @include medium-up {
-            padding-bottom: $space-quad;
+            padding-bottom: $space-quad*2;
         }
 
         h2 {

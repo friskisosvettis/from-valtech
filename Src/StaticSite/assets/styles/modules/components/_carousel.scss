@@ -134,7 +134,7 @@ $touch-width: 44px;
 
 .slick-dots {
     position: absolute;
-    bottom: 0;
+    bottom: $space-double;;
     display: block;
     width: 100%;
     padding: 0;
@@ -143,7 +143,7 @@ $touch-width: 44px;
     list-style: none;
 
     @include medium-up {
-        bottom: 1em;
+        bottom: $space-quad;
     }
 
     li {

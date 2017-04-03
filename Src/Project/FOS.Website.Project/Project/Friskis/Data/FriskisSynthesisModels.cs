@@ -89,7 +89,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestPage template</summary>
@@ -975,6 +975,24 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _associationName;
         
+        private Synthesis.FieldTypes.TextField _introTitle;
+        
+        private Synthesis.FieldTypes.TextField _introBody;
+        
+        private Synthesis.FieldTypes.HyperlinkField _introLink;
+        
+        private Synthesis.FieldTypes.TextField _introLinkLabel;
+        
+        private Synthesis.FieldTypes.HyperlinkField _trainingSelectionLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _gymsLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _scheduleLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeMemberLink;
+        
+        private Synthesis.FieldTypes.TextField _becomeMemberKickerBody;
+        
         public AssociationPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1012,6 +1030,105 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _associationName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C952386-D9DC-444F-8C73-77CD265192BD}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Association Name"), this.GetSearchFieldValue("association_name"));
                 }
                 return _associationName;
+            }
+        }
+        
+        /// <summary>Represents the IntroTitle field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introtitle")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IntroTitle {
+            get {
+                if (_introTitle == null) {
+                    _introTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroTitle"), this.GetSearchFieldValue("introtitle"));
+                }
+                return _introTitle;
+            }
+        }
+        
+        /// <summary>Represents the IntroBody field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introbody")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IntroBody {
+            get {
+                if (_introBody == null) {
+                    _introBody = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4E4AD4A8-7DCE-4395-9CCD-E371F0FE3F51}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroBody"), this.GetSearchFieldValue("introbody"));
+                }
+                return _introBody;
+            }
+        }
+        
+        /// <summary>Represents the IntroLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField IntroLink {
+            get {
+                if (_introLink == null) {
+                    _introLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{85CE7C75-699A-418E-9437-BCA9F2CABA14}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroLink"), this.GetSearchFieldValue("introlink"));
+                }
+                return _introLink;
+            }
+        }
+        
+        /// <summary>Represents the IntroLinkLabel field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introlinklabel")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IntroLinkLabel {
+            get {
+                if (_introLinkLabel == null) {
+                    _introLinkLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{AC36FE21-630A-48FF-BA2D-97C803E1A2F3}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroLinkLabel"), this.GetSearchFieldValue("introlinklabel"));
+                }
+                return _introLinkLabel;
+            }
+        }
+        
+        /// <summary>Represents the TrainingSelectionLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("trainingselectionlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TrainingSelectionLink {
+            get {
+                if (_trainingSelectionLink == null) {
+                    _trainingSelectionLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A93C40DE-3A8F-4E46-8EEB-B5E2447EFF98}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "TrainingSelectionLink"), this.GetSearchFieldValue("trainingselectionlink"));
+                }
+                return _trainingSelectionLink;
+            }
+        }
+        
+        /// <summary>Represents the GymsLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("gymslink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField GymsLink {
+            get {
+                if (_gymsLink == null) {
+                    _gymsLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EF56B9E5-3904-4BD0-97ED-3BA21D52BAAC}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "GymsLink"), this.GetSearchFieldValue("gymslink"));
+                }
+                return _gymsLink;
+            }
+        }
+        
+        /// <summary>Represents the ScheduleLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("schedulelink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ScheduleLink {
+            get {
+                if (_scheduleLink == null) {
+                    _scheduleLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{7CA6BB4C-F840-4242-9BF8-A98F8030170F}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "ScheduleLink"), this.GetSearchFieldValue("schedulelink"));
+                }
+                return _scheduleLink;
+            }
+        }
+        
+        /// <summary>Represents the BecomeMemberLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("becomememberlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeMemberLink {
+            get {
+                if (_becomeMemberLink == null) {
+                    _becomeMemberLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C197EB8E-8261-41D2-BCA2-9F45F41D2114}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "BecomeMemberLink"), this.GetSearchFieldValue("becomememberlink"));
+                }
+                return _becomeMemberLink;
+            }
+        }
+        
+        /// <summary>Represents the BecomeMemberKickerBody field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("becomememberkickerbody")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeMemberKickerBody {
+            get {
+                if (_becomeMemberKickerBody == null) {
+                    _becomeMemberKickerBody = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E90CCD7C-D0C1-4906-B76B-004506C1428D}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "BecomeMemberKickerBody"), this.GetSearchFieldValue("becomememberkickerbody"));
+                }
+                return _becomeMemberKickerBody;
             }
         }
     }

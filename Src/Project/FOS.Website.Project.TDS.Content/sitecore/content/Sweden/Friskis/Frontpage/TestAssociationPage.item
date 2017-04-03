@@ -13,15 +13,43 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: 0d200244-5561-4f90-a063-c61020a0c0a2
+revision: 9d9172a7-a206-421a-b752-a5310b6055b2
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
 name: Association Name
 key: association name
+content-length: 7
+
+Fredrik
+----field----
+field: {C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}
+name: IntroTitle
+key: introtitle
 content-length: 21
 
-Test Association Page
+Längta till träningen
+----field----
+field: {4E4AD4A8-7DCE-4395-9CCD-E371F0FE3F51}
+name: IntroBody
+key: introbody
+content-length: 264
+
+Om det är kul att träna vill du göra det igen. Då kan du längta till nästa gång. Det kan gå så långt att du står där och ler medan du är mitt uppe i något helt annat i vardagen. Du är nöjd med dig själv. Du känner din kropp och gillar den. Du mår bra, helt enkelt.
+----field----
+field: {AC36FE21-630A-48FF-BA2D-97C803E1A2F3}
+name: IntroLinkLabel
+key: introlinklabel
+content-length: 19
+
+Här hittar du den >
+----field----
+field: {E90CCD7C-D0C1-4906-B76B-004506C1428D}
+name: BecomeMemberKickerBody
+key: becomememberkickerbody
+content-length: 15
+
+Hetaste i Solna
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -42,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0d200244-5561-4f90-a063-c61020a0c0a2
+9d9172a7-a206-421a-b752-a5310b6055b2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170327T112123Z
+20170403T164646Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

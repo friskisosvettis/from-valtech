@@ -1,0 +1,33 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@model AssociationIntroductionModuleModel
+
+@if (Model.AssociationIntroductionModuleItem == null)
+{
+    return;
+}
+<div class="container--relative">
+    <div class="introduction">
+        <div class="introduction__container">
+            <div class="introduction__pitch">
+                <h1>@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroTitle)</h1>
+                <p>@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroBody)</p>
+                <a href="@Model.AssociationIntroductionModuleItem"> @Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroLinkLabel) </a>
+            </div>
+            <div class="introduction__goto">
+                <a href="@Model.AssociationIntroductionModuleItem.TrainingSelectionLink"><span class="introduction__icon introduction__icon--training-classes"></span>Träningsutbud</a>
+                <a href="@Model.AssociationIntroductionModuleItem.GymsLink"><span class="introduction__icon introduction__icon--traning-center"></span>Anläggningar</a>
+                <a href="@Model.AssociationIntroductionModuleItem.BecomeMemberLink"><span class="introduction__icon introduction__icon--prices"></span>Priser</a>
+                <a href="@Model.AssociationIntroductionModuleItem.ScheduleLink"><span class="introduction__icon introduction__icon--schedule"></span>Schema</a>
+            </div>
+            <div class="introduction__member">
+                <a href="@Model.AssociationIntroductionModuleItem.BecomeMemberLink">
+                    <h2>Friskis @Model.AssociationName</h2>
+                    <img src="/assets/images/icon_card.svg" alt="image of Friskis & Svettis training card" />
+                    <h3>@Html.TextFor(m => m.AssociationIntroductionModuleItem.BecomeMemberKickerBody)</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

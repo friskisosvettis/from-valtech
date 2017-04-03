@@ -6,19 +6,17 @@
 @model TrainingCenterCollectionMapModel
 <div style="background-color: green; color: white">
     @foreach (var mapNode in Model.MapNodes)
-        {
-        <div>
-            <h3>@mapNode.MapHeadline</h3>
+    {
+        <h3>@mapNode.MapHeadline</h3>
+        <p>
+            @mapNode.Street @mapNode.StreetNr <br />
+            @mapNode.ZipCode @mapNode.City
+            @mapNode.Country
+        </p>
             <p>
-                @mapNode.Street @mapNode.StreetNr <br />
-                @mapNode.ZipCode @mapNode.City
-                @mapNode.Country
-            </p>
-            <p>
-                Longitude: @mapNode.Longitude <br/>
+                Longitude: @mapNode.Longitude <br />
                 Latitude: @mapNode.Latitude
             </p>
-        </div>
     }
 </div>
 

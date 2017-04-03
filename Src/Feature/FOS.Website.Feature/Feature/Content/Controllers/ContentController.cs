@@ -17,6 +17,16 @@ namespace FOS.Website.Feature.Content.Controllers
 {
     public class ContentController : Controller
     {
+        public ActionResult GeAssociationIntroductionModuleView()
+        {
+            var topBarItem = Sitecore.Context.Item.As<IAssociationTopBarItem>();
+            var model = new AssociationIntroductionModuleModel(Sitecore.Context.Item)
+            {
+                AssociationName = ((topBarItem == null || !topBarItem.AssociationName.HasTextValue) ? Sitecore.Context.Item.DisplayName:topBarItem.AssociationName.RawValue)
+            };
+            return View(Constants.Views.Paths.AssociationIntroductionModule, model);
+        }
+
         public ActionResult GetAssociationTopBarView()
         {
             AssociationTopBarModel model = new AssociationTopBarModel(Sitecore.Context.Item);

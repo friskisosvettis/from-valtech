@@ -26,7 +26,7 @@ var fixedRibbon = require('./modules/fixed-ribbon'),
 	loadSvg = require('./modules/load-svg'),
     fitImages = require('./modules/object-fit-images'),
 	slickSlider = require('./modules/carousel'),
-	maps = require('./modules/maps'),
+	//maps = require('./modules/maps'),
 	tabs = require('./modules/tabs');
 
 $(function () {
@@ -36,7 +36,7 @@ $(function () {
 	visualHero.init();
 	fitImages.init();
 	slickSlider.init();
-	maps.init();
+	//maps.init();
 	tabs.init();
 
 	$('a[href*="#"]:not([href="#"])').click(function() {

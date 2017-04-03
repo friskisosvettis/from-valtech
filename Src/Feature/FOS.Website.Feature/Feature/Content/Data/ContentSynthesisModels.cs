@@ -29,6 +29,66 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationIntroductionModule template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B130EBBE-39A6-4F57-8319-93153149F798}", "r0cJAJRQm4ezIfyI8y0UXi5js1M=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationIntroductionModuleItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the IntroTitle field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introtitle")]
+        Synthesis.FieldTypes.Interfaces.ITextField IntroTitle {
+            get;
+        }
+        
+        /// <summary>Represents the IntroBody field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introbody")]
+        Synthesis.FieldTypes.Interfaces.ITextField IntroBody {
+            get;
+        }
+        
+        /// <summary>Represents the IntroLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introlink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField IntroLink {
+            get;
+        }
+        
+        /// <summary>Represents the IntroLinkLabel field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introlinklabel")]
+        Synthesis.FieldTypes.Interfaces.ITextField IntroLinkLabel {
+            get;
+        }
+        
+        /// <summary>Represents the TrainingSelectionLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("trainingselectionlink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField TrainingSelectionLink {
+            get;
+        }
+        
+        /// <summary>Represents the GymsLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("gymslink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField GymsLink {
+            get;
+        }
+        
+        /// <summary>Represents the ScheduleLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("schedulelink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField ScheduleLink {
+            get;
+        }
+        
+        /// <summary>Represents the BecomeMemberLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("becomememberlink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeMemberLink {
+            get;
+        }
+        
+        /// <summary>Represents the BecomeMemberKickerBody field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("becomememberkickerbody")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeMemberKickerBody {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationTopBar template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{67886500-F92C-4DB4-8909-D36EF7884BD2}", "/1bTSXsNRYUdvDHVT1lJr7LudIE=", "Valtech.Foundation.Synthesis")]
@@ -634,6 +694,175 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new AdvancedHeading(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationIntroductionModule template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AssociationIntroductionModule : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem {
+        
+        private Synthesis.FieldTypes.TextField _introTitle;
+        
+        private Synthesis.FieldTypes.TextField _introBody;
+        
+        private Synthesis.FieldTypes.HyperlinkField _introLink;
+        
+        private Synthesis.FieldTypes.TextField _introLinkLabel;
+        
+        private Synthesis.FieldTypes.HyperlinkField _trainingSelectionLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _gymsLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _scheduleLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeMemberLink;
+        
+        private Synthesis.FieldTypes.TextField _becomeMemberKickerBody;
+        
+        public AssociationIntroductionModule(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AssociationIntroductionModule(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "AssociationIntroductionModule";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B130EBBE-39A6-4F57-8319-93153149F798}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the IntroTitle field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introtitle")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IntroTitle {
+            get {
+                if (_introTitle == null) {
+                    _introTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "IntroTitle"), this.GetSearchFieldValue("introtitle"));
+                }
+                return _introTitle;
+            }
+        }
+        
+        /// <summary>Represents the IntroBody field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introbody")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IntroBody {
+            get {
+                if (_introBody == null) {
+                    _introBody = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4E4AD4A8-7DCE-4395-9CCD-E371F0FE3F51}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "IntroBody"), this.GetSearchFieldValue("introbody"));
+                }
+                return _introBody;
+            }
+        }
+        
+        /// <summary>Represents the IntroLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField IntroLink {
+            get {
+                if (_introLink == null) {
+                    _introLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{85CE7C75-699A-418E-9437-BCA9F2CABA14}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "IntroLink"), this.GetSearchFieldValue("introlink"));
+                }
+                return _introLink;
+            }
+        }
+        
+        /// <summary>Represents the IntroLinkLabel field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introlinklabel")]
+        public Synthesis.FieldTypes.Interfaces.ITextField IntroLinkLabel {
+            get {
+                if (_introLinkLabel == null) {
+                    _introLinkLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{AC36FE21-630A-48FF-BA2D-97C803E1A2F3}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "IntroLinkLabel"), this.GetSearchFieldValue("introlinklabel"));
+                }
+                return _introLinkLabel;
+            }
+        }
+        
+        /// <summary>Represents the TrainingSelectionLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("trainingselectionlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TrainingSelectionLink {
+            get {
+                if (_trainingSelectionLink == null) {
+                    _trainingSelectionLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A93C40DE-3A8F-4E46-8EEB-B5E2447EFF98}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "TrainingSelectionLink"), this.GetSearchFieldValue("trainingselectionlink"));
+                }
+                return _trainingSelectionLink;
+            }
+        }
+        
+        /// <summary>Represents the GymsLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("gymslink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField GymsLink {
+            get {
+                if (_gymsLink == null) {
+                    _gymsLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EF56B9E5-3904-4BD0-97ED-3BA21D52BAAC}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "GymsLink"), this.GetSearchFieldValue("gymslink"));
+                }
+                return _gymsLink;
+            }
+        }
+        
+        /// <summary>Represents the ScheduleLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("schedulelink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ScheduleLink {
+            get {
+                if (_scheduleLink == null) {
+                    _scheduleLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{7CA6BB4C-F840-4242-9BF8-A98F8030170F}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "ScheduleLink"), this.GetSearchFieldValue("schedulelink"));
+                }
+                return _scheduleLink;
+            }
+        }
+        
+        /// <summary>Represents the BecomeMemberLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("becomememberlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeMemberLink {
+            get {
+                if (_becomeMemberLink == null) {
+                    _becomeMemberLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C197EB8E-8261-41D2-BCA2-9F45F41D2114}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "BecomeMemberLink"), this.GetSearchFieldValue("becomememberlink"));
+                }
+                return _becomeMemberLink;
+            }
+        }
+        
+        /// <summary>Represents the BecomeMemberKickerBody field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("becomememberkickerbody")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeMemberKickerBody {
+            get {
+                if (_becomeMemberKickerBody == null) {
+                    _becomeMemberKickerBody = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E90CCD7C-D0C1-4906-B76B-004506C1428D}"], "/sitecore/templates/Feature/Content/Data/AssociationIntroductionModule", "BecomeMemberKickerBody"), this.GetSearchFieldValue("becomememberkickerbody"));
+                }
+                return _becomeMemberKickerBody;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AssociationIntroductionModuleInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B130EBBE-39A6-4F57-8319-93153149F798}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AssociationIntroductionModule(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AssociationIntroductionModule(searchFields);
         }
     }
     

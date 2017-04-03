@@ -916,6 +916,7 @@
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Extensions.Compression.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\System.Net.Http.Extensions.Compression.Core.dll</HintPath>
       <Private>True</Private>
@@ -1031,6 +1032,7 @@
     <Content Include="Feature\Content\Views\AssociationTopBar.cshtml" />
     <Content Include="Feature\Content\Views\HeroObjectImage.cshtml" />
     <Content Include="Feature\Content\Views\HeroArea.cshtml" />
+    <Content Include="Feature\Content\Views\TrainingCenterCollectionMap.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1039,11 +1041,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Content\Constants.cs" />
+    <Compile Include="Feature\Content\Controllers\TrainingCenterCollectionMapController.cs" />
     <Compile Include="Feature\Content\Controllers\HeroAreaController.cs" />
     <Compile Include="Feature\Content\Controllers\RowContentController.cs" />
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\TrainingCenterCollectionMapModel.cs" />
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
     <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />

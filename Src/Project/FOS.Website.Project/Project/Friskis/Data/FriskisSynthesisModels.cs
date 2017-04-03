@@ -107,7 +107,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}", "sjrxBCKJdQVAkMx8SjRWHMizVCc=", "Valtech.Foundation.Synthesis")]
-    public partial interface IGymPageItem : Synthesis.IStandardTemplateItem {
+    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IMapNodeItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/HeroPage template</summary>
@@ -1259,6 +1259,22 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class GymPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IGymPageItem {
         
+        private Synthesis.FieldTypes.TextField _mapHeadline;
+        
+        private Synthesis.FieldTypes.TextField _street;
+        
+        private Synthesis.FieldTypes.TextField _streetNr;
+        
+        private Synthesis.FieldTypes.TextField _zipCode;
+        
+        private Synthesis.FieldTypes.TextField _city;
+        
+        private Synthesis.FieldTypes.TextField _country;
+        
+        private Synthesis.FieldTypes.TextField _longitude;
+        
+        private Synthesis.FieldTypes.TextField _latitude;
+        
         public GymPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1285,6 +1301,94 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         public override Sitecore.Data.ID TemplateId {
             get {
                 return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the MapHeadline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mapheadline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MapHeadline {
+            get {
+                if (_mapHeadline == null) {
+                    _mapHeadline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "MapHeadline"), this.GetSearchFieldValue("mapheadline"));
+                }
+                return _mapHeadline;
+            }
+        }
+        
+        /// <summary>Represents the Street field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("street")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Street {
+            get {
+                if (_street == null) {
+                    _street = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A06F1733-C89A-4C0B-8B0D-DB891D03F087}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Street"), this.GetSearchFieldValue("street"));
+                }
+                return _street;
+            }
+        }
+        
+        /// <summary>Represents the StreetNr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("streetnr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField StreetNr {
+            get {
+                if (_streetNr == null) {
+                    _streetNr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{345DB907-4D46-4BB8-A6C3-AAC05DF1DB6D}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "StreetNr"), this.GetSearchFieldValue("streetnr"));
+                }
+                return _streetNr;
+            }
+        }
+        
+        /// <summary>Represents the ZipCode field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("zipcode")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ZipCode {
+            get {
+                if (_zipCode == null) {
+                    _zipCode = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C29F6554-AA6F-4FF5-B603-CF4C8093BBC7}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "ZipCode"), this.GetSearchFieldValue("zipcode"));
+                }
+                return _zipCode;
+            }
+        }
+        
+        /// <summary>Represents the City field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("city")]
+        public Synthesis.FieldTypes.Interfaces.ITextField City {
+            get {
+                if (_city == null) {
+                    _city = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9F6C2E78-A0AE-446F-8426-C87367B26EFE}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "City"), this.GetSearchFieldValue("city"));
+                }
+                return _city;
+            }
+        }
+        
+        /// <summary>Represents the Country field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("country")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Country {
+            get {
+                if (_country == null) {
+                    _country = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{243161A1-958B-4A58-AF6E-456AE453E502}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Country"), this.GetSearchFieldValue("country"));
+                }
+                return _country;
+            }
+        }
+        
+        /// <summary>Represents the Longitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitude")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Longitude {
+            get {
+                if (_longitude == null) {
+                    _longitude = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Longitude"), this.GetSearchFieldValue("longitude"));
+                }
+                return _longitude;
+            }
+        }
+        
+        /// <summary>Represents the Latitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitude")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Latitude {
+            get {
+                if (_latitude == null) {
+                    _latitude = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Latitude"), this.GetSearchFieldValue("latitude"));
+                }
+                return _latitude;
             }
         }
     }

@@ -32,6 +32,9 @@ namespace FOS.Website.Feature.Content
                 // Hero carousel views HeroArea
                 public const string HeroArea = "/Feature/Content/Views/HeroArea.cshtml";
                 public const string HeroObjectImage = "/Feature/Content/Views/HeroObjectImage.cshtml";
+
+                // Training center collection map
+                public const string TrainingCenterCollectionMap = "/Feature/Content/Views/TrainingCenterCollectionMap.cshtml";
             }
         }
     }

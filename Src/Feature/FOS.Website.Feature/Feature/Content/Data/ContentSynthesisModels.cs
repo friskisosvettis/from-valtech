@@ -233,6 +233,60 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/MapNode template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08AEE5ED-BD95-438D-8936-2A59091A882B}", "zRGQuluTSb6PDOEZL+YfWv0PHhg=", "Valtech.Foundation.Synthesis")]
+    public partial interface IMapNodeItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the MapHeadline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mapheadline")]
+        Synthesis.FieldTypes.Interfaces.ITextField MapHeadline {
+            get;
+        }
+        
+        /// <summary>Represents the Street field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("street")]
+        Synthesis.FieldTypes.Interfaces.ITextField Street {
+            get;
+        }
+        
+        /// <summary>Represents the StreetNr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("streetnr")]
+        Synthesis.FieldTypes.Interfaces.ITextField StreetNr {
+            get;
+        }
+        
+        /// <summary>Represents the ZipCode field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("zipcode")]
+        Synthesis.FieldTypes.Interfaces.ITextField ZipCode {
+            get;
+        }
+        
+        /// <summary>Represents the City field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("city")]
+        Synthesis.FieldTypes.Interfaces.ITextField City {
+            get;
+        }
+        
+        /// <summary>Represents the Country field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("country")]
+        Synthesis.FieldTypes.Interfaces.ITextField Country {
+            get;
+        }
+        
+        /// <summary>Represents the Longitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitude")]
+        Synthesis.FieldTypes.Interfaces.ITextField Longitude {
+            get;
+        }
+        
+        /// <summary>Represents the Latitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitude")]
+        Synthesis.FieldTypes.Interfaces.ITextField Latitude {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Media template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{923315D0-494B-4BEE-AD9D-438EF601C3B0}", "JK4HkGktQcBz5oDkpYpR//qbK30=", "Valtech.Foundation.Synthesis")]
@@ -1529,6 +1583,162 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new ImageCollage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/MapNode template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class MapNode : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem {
+        
+        private Synthesis.FieldTypes.TextField _mapHeadline;
+        
+        private Synthesis.FieldTypes.TextField _street;
+        
+        private Synthesis.FieldTypes.TextField _streetNr;
+        
+        private Synthesis.FieldTypes.TextField _zipCode;
+        
+        private Synthesis.FieldTypes.TextField _city;
+        
+        private Synthesis.FieldTypes.TextField _country;
+        
+        private Synthesis.FieldTypes.TextField _longitude;
+        
+        private Synthesis.FieldTypes.TextField _latitude;
+        
+        public MapNode(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public MapNode(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "MapNode";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{08AEE5ED-BD95-438D-8936-2A59091A882B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the MapHeadline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mapheadline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MapHeadline {
+            get {
+                if (_mapHeadline == null) {
+                    _mapHeadline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}"], "/sitecore/templates/Feature/Content/Data/MapNode", "MapHeadline"), this.GetSearchFieldValue("mapheadline"));
+                }
+                return _mapHeadline;
+            }
+        }
+        
+        /// <summary>Represents the Street field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("street")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Street {
+            get {
+                if (_street == null) {
+                    _street = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A06F1733-C89A-4C0B-8B0D-DB891D03F087}"], "/sitecore/templates/Feature/Content/Data/MapNode", "Street"), this.GetSearchFieldValue("street"));
+                }
+                return _street;
+            }
+        }
+        
+        /// <summary>Represents the StreetNr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("streetnr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField StreetNr {
+            get {
+                if (_streetNr == null) {
+                    _streetNr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{345DB907-4D46-4BB8-A6C3-AAC05DF1DB6D}"], "/sitecore/templates/Feature/Content/Data/MapNode", "StreetNr"), this.GetSearchFieldValue("streetnr"));
+                }
+                return _streetNr;
+            }
+        }
+        
+        /// <summary>Represents the ZipCode field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("zipcode")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ZipCode {
+            get {
+                if (_zipCode == null) {
+                    _zipCode = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C29F6554-AA6F-4FF5-B603-CF4C8093BBC7}"], "/sitecore/templates/Feature/Content/Data/MapNode", "ZipCode"), this.GetSearchFieldValue("zipcode"));
+                }
+                return _zipCode;
+            }
+        }
+        
+        /// <summary>Represents the City field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("city")]
+        public Synthesis.FieldTypes.Interfaces.ITextField City {
+            get {
+                if (_city == null) {
+                    _city = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9F6C2E78-A0AE-446F-8426-C87367B26EFE}"], "/sitecore/templates/Feature/Content/Data/MapNode", "City"), this.GetSearchFieldValue("city"));
+                }
+                return _city;
+            }
+        }
+        
+        /// <summary>Represents the Country field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("country")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Country {
+            get {
+                if (_country == null) {
+                    _country = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{243161A1-958B-4A58-AF6E-456AE453E502}"], "/sitecore/templates/Feature/Content/Data/MapNode", "Country"), this.GetSearchFieldValue("country"));
+                }
+                return _country;
+            }
+        }
+        
+        /// <summary>Represents the Longitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitude")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Longitude {
+            get {
+                if (_longitude == null) {
+                    _longitude = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Feature/Content/Data/MapNode", "Longitude"), this.GetSearchFieldValue("longitude"));
+                }
+                return _longitude;
+            }
+        }
+        
+        /// <summary>Represents the Latitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitude")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Latitude {
+            get {
+                if (_latitude == null) {
+                    _latitude = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Feature/Content/Data/MapNode", "Latitude"), this.GetSearchFieldValue("latitude"));
+                }
+                return _latitude;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class MapNodeInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{08AEE5ED-BD95-438D-8936-2A59091A882B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new MapNode(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new MapNode(searchFields);
         }
     }
     

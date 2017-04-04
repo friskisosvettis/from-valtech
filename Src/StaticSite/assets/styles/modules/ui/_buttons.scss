@@ -4,9 +4,10 @@
 * @section Setup
 * @author Veronika Jeppsson
 */
+// TODO: Refactor this file
 
-@mixin button-settings($cta-color) {
-    background-color: $cta-color;
+@mixin button-settings($color) {
+    background-color: $color;
     border: none;
     border-radius: 0.5em;
     padding: 0.8em 1em;
@@ -15,14 +16,15 @@
     &:focus {
         // TODO: Remove this and add focus mixin
         outline: none;
-        background-color: lighten($cta-color, 40%);
+        background-color: lighten($color, 40%);
     }
 
     &:hover {
-        background-color: darken($cta-color, 10%);
+        background-color: darken($color, 10%);
     }
+
     &:active {
-        background-color: darken($cta-color, 30%);
+        background-color: darken($color, 30%);
         padding: 0.9em 1em;
         margin-top: 0;
         margin-bottom: 0;
@@ -36,9 +38,25 @@
 
 .btn {
     color: $color-white;
-    @include button-settings($cta-color);
+    @include button-settings($primary-color);
 
     &--block {
         display: block;
+    }
+
+    &--icon {
+        line-height: 1;
+        height: rem(44px);
+        border-radius: rem(44px);
+
+        background-position: $space 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-left: rem(44px) !important;
+
+        &.btn--book {
+            background-image: url('/assets/images/icon_book.svg');
+            background-size: rem(30px) rem(30px);
+        }
     }
 }

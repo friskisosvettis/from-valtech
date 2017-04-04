@@ -54,21 +54,38 @@
         background-size: cover;
         color: $white;
         text-align: center;
+        @include medium-up {
+            transition: scale 0.3s ease-in-out;
+        }
+
+
+        &:hover {
+            background: url('/assets/images/bg_pattern_hover.jpg') repeat;
+            background-size: cover;
+
+            @include medium-up {
+                transition: 0.3s ease-in-out;
+                transform: scale(1.02);
+                text-align: center;
+                img {
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
 
         img {
-            max-width: 35%;
+            margin: $space 0;
+            width: 35%;
             height: auto;
+            transition: 0.3s ease-in-out;
 
             @include small-up {
-                max-width: 15%;
+                width: 25%;
             }
             @include medium-up {
-                max-width: 80%;
+                width: 60%;
             }
-            @include large-up {
-                max-width: 60%;
-            } 
-
         }
         h2 {
             font-size: rem(20px);
@@ -88,15 +105,6 @@
         a {
             color: $white;
             text-decoration: none;
-
-            &:hover {
-                img {
-                    transform: scale(1.1);
-                }
-                h3 {
-                    text-decoration: underline;
-                }
-            }
         }
     }
 

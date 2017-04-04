@@ -17,10 +17,17 @@ main {
 // ------------ VISABILITY - modifiers ----------- //
 
 .hidden-small {
-    display: none;
+    display: none !important;
 
     @include medium-up {
-        display: block;
+        display: inline-block !important;
+    }
+}
+.hidden-small--block {
+    display: none !important;
+
+    @include medium-up {
+        display: block !important;
     }
 }
 .hidden {

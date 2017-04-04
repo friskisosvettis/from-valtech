@@ -1,0 +1,244 @@
+// TODO: Refactor this file
+
+$menu-height: 5em;
+
+.navigation {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: $menu-height;
+
+    @include medium-up {
+        display: block;
+    }
+    &__container {
+        width: 100%;
+        position: fixed;
+        z-index: 1000000;
+
+        @include medium-up {
+            height: $menu-height;
+            background-color: rgba(0,0,0,0.0);
+            // TODO: Add a class when user scrolls down and fade in the
+            // darker transparent background
+        }
+    }
+
+    &__logo {
+        width: $menu-height;
+        height: $menu-height;
+    }
+    &__btn {
+        color: $white;
+        border: none;
+        background: transparent;
+
+        @include medium-up {
+            color: $color-text;
+            outline: none;
+            height: 100%;
+            width: 100%;
+
+            &:hover {
+                color: $color-text-link;
+            }
+            &:active {
+                font-weight: 700;
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+
+        &--close {
+            display: none;
+            z-index: 10000;
+            position: fixed; //TODO Look into other solution - fixed in fixed not good
+            top: $space-double;
+            right: $space;
+            color: $white;
+
+            @include medium-up {
+                top: $menu-height + 1em;
+            }
+        }
+    }
+
+    &__list {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(221,82,94,0.98);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        padding-top: 5em;
+
+        @include medium-up {
+            display: block !important;
+            left: auto;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            padding-top: 0;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        width: 100%;
+        vertical-align: top;
+
+        @include medium-up {
+            width: 7em;
+            height: $menu-height;
+            display: inline-block;
+        }
+
+        &.hide {
+            display: none;
+
+            @include medium-up {
+                display: inline-block;
+            }
+        }
+        a {
+            display: block;
+            color: $white;
+            text-decoration: none;
+            height: 100%;
+            padding: $space;
+
+            // Add class active on the page we are on
+            &:active, .active {
+                font-weight: 700;
+            }
+
+            @include medium-up {
+                padding-top: 2em;
+                line-height: 1;
+            }
+        }
+        > a {
+            @include medium-up {
+                color: $color-text;
+
+                &:hover {
+                    color: $color-text-link;
+                }
+                &:active {
+                    color: $color-text-link;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &:first-of-type {
+            > a {
+                padding-top: 0;
+            }
+        }
+        button {
+            outline: none;
+            padding: $space;
+            width: 100%;
+        }
+
+        ul {
+            display: none;
+            height: 100%;
+            padding: 0;
+            text-align: center;
+            list-style-type: none;
+            overflow-y: scroll;
+
+            @include medium-up {
+                &.open {
+                    position: fixed;
+                    background-color: rgba(221,82,94,0.98);
+                    top: $menu-height;
+                    width: 100%;
+                    left: 0;
+                    z-index: 9;
+                }
+            }
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    // This version is only visible on smaller screens than medium
+    &--small {
+        position: fixed;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        @include container();
+
+        > li {
+            height: 100%;
+
+            a {
+                text-decoration: none;
+            }
+        }
+        li:first-of-type {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-left: $space;
+        }
+        li:last-of-type {
+            width: 75%;
+            text-align: right;
+            float: right;
+
+            // TODO: Remove this wierd calculation of positon
+            a {
+                position: absolute;
+                top: $space-double;
+                right: rem(44px*2);
+            }
+            button {
+                margin-top: $space-double;
+                margin-right: $space;
+            }
+        }
+
+        @include medium-up {
+            display: none;
+        }
+    }
+}
+[data-menu-more] {
+    &:after {
+        content: "";
+        background-image: url('/assets/images/icon_arrow.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+        width: rem(22px);
+        height: rem(22px);
+        transform: rotate(90deg);
+        -webkit-transition: all 300ms 0s ease-in-out;
+        transition: all 300ms 0s ease-in-out;
+
+        @include medium-up {
+            //TODO: Look into chnge color instead
+            background-image: url('/assets/images/icon_arrow-dark.svg');
+        }
+    }
+    &.open {
+        font-weight: 700;
+
+        &:after {
+            transform: rotate(270deg);
+        }
+    }
+}

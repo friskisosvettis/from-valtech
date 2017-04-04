@@ -36,6 +36,7 @@ $touch-width: 44px;
     &--fixed {
         position: fixed;
         width: 100%;
+        top: 0;
     }
 
     @include medium-up {

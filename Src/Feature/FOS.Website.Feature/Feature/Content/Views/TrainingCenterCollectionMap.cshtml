@@ -1,9 +1,16 @@
 ﻿@using Sitecore.Mvc
 @using FOS.Website.Feature.Content.Models
 @using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Configuration
+@using Sitecore.Links
 @using Sitecore.Mvc.Presentation
 @using Synthesis.Mvc.Helpers
 @model TrainingCenterCollectionMapModel
+
+@if(!@Model.MapNodes.Any())
+{
+    return;
+}
 
 <div class="map__container">
     <!--TABS - hidden-medium-up -->
@@ -19,17 +26,17 @@
     <!--MAP-LIST - VISIBLE ALL THE TIME -->
     <div class="tab__content map__content" id="panel1" data-tab-map>
         <div class="map__list">
-            @* TODO Add real field for Här finns vi - 17 anläggningar *@
-            <h3>Här finns vi - 17 anläggningar</h3>
+            
+            <h3>@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
             <ul>
                 @{
                     int i = 0;
                     foreach (var mapNode in Model.MapNodes)
                     {
-                        <li data-i="@i" data-map-title="@mapNode.MapHeadline" data-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-map-url="#url" data-map-lat="@mapNode.Latitude" data-map-lng="@mapNode.Longitude">
+                        <li data-i="@i" data-map-title="@mapNode.MapHeadline" data-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-map-lat="@mapNode.Latitude" data-map-lng="@mapNode.Longitude">
                             @* TODO - remove hardcoded text for Lista & Karta *@
                             <button class="map__list--show">Visa på karta</button>
-                            <a href="#url">
+                            <a href="@LinkManager.GetItemUrl(mapNode.InnerItem)">
                                 <h4>@mapNode.MapHeadline</h4>
                                 <address>@mapNode.Street @mapNode.StreetNr, @mapNode.City</address>
                             </a>

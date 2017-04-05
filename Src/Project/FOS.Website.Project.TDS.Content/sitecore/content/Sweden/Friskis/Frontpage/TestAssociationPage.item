@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: 9d9172a7-a206-421a-b752-a5310b6055b2
+revision: 4e557a21-b8cc-4412-a361-3a6be557ddcc
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -51,6 +51,13 @@ content-length: 15
 
 Hetaste i Solna
 ----field----
+field: {651A385F-DC08-42C1-BA26-515D5B0D4C47}
+name: Map Title
+key: map title
+content-length: 14
+
+Ny rubrik pryl
+----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
@@ -70,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9d9172a7-a206-421a-b752-a5310b6055b2
+4e557a21-b8cc-4412-a361-3a6be557ddcc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170403T164646Z
+20170405T134930Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

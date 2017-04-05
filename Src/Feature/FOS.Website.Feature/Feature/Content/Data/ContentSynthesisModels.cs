@@ -29,6 +29,12 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationFlagTemplate template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{C31EE96F-98DD-46B1-908A-201446DFD394}", "UX7neFAarfaLP0oEz0lrLMUtykE=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationFlagTemplateItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationIntroductionModule template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B130EBBE-39A6-4F57-8319-93153149F798}", "r0cJAJRQm4ezIfyI8y0UXi5js1M=", "Valtech.Foundation.Synthesis")]
@@ -343,6 +349,18 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the Latitude field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("latitude")]
         Synthesis.FieldTypes.Interfaces.ITextField Latitude {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/MapWidgetGyms template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4ED14818-306E-472F-9BE4-06FA373CC59A}", "WoMj7I1rzqey7d1/Agadzxg6e7Y=", "Valtech.Foundation.Synthesis")]
+    public partial interface IMapWidgetGymsItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Map Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("map_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField MapTitle {
             get;
         }
     }
@@ -694,6 +712,58 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new AdvancedHeading(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationFlagTemplate template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AssociationFlagTemplate : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem {
+        
+        public AssociationFlagTemplate(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AssociationFlagTemplate(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "AssociationFlagTemplate";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{C31EE96F-98DD-46B1-908A-201446DFD394}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AssociationFlagTemplateInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{C31EE96F-98DD-46B1-908A-201446DFD394}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AssociationFlagTemplate(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AssociationFlagTemplate(searchFields);
         }
     }
     
@@ -1968,6 +2038,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new MapNode(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/MapWidgetGyms template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class MapWidgetGyms : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IMapWidgetGymsItem {
+        
+        private Synthesis.FieldTypes.TextField _mapTitle;
+        
+        public MapWidgetGyms(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public MapWidgetGyms(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "MapWidgetGyms";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4ED14818-306E-472F-9BE4-06FA373CC59A}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Map Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("map_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MapTitle {
+            get {
+                if (_mapTitle == null) {
+                    _mapTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{651A385F-DC08-42C1-BA26-515D5B0D4C47}"], "/sitecore/templates/Feature/Content/Data/MapWidgetGyms", "Map Title"), this.GetSearchFieldValue("map_title"));
+                }
+                return _mapTitle;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class MapWidgetGymsInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4ED14818-306E-472F-9BE4-06FA373CC59A}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new MapWidgetGyms(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new MapWidgetGyms(searchFields);
         }
     }
     

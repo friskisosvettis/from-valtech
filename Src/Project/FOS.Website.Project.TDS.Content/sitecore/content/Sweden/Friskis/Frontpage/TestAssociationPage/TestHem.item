@@ -13,7 +13,7 @@ created: 20170403T105434Z
 ----version----
 language: sv-SE
 version: 1
-revision: b3b81518-ca65-4915-a095-2f05ba4d4ac0
+revision: 71b90d91-6409-4eb8-a16d-dbfa3d53b3cd
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -58,6 +58,20 @@ content-length: 6
 
 Sweden
 ----field----
+field: {8342753A-30D9-4093-BFC1-97C83F34D1CC}
+name: Longitude
+key: longitude
+content-length: 9
+
+18.007871
+----field----
+field: {6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}
+name: Latitude
+key: latitude
+content-length: 9
+
+59.358645
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -84,14 +98,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b3b81518-ca65-4915-a095-2f05ba4d4ac0
+71b90d91-6409-4eb8-a16d-dbfa3d53b3cd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170403T105532Z
+20170405T140106Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -41,16 +41,37 @@ namespace FOS.Website.Feature.Content.Controllers
             }
         }
 
+        private IEnumerable<TTemplate> GetAllOfType<TTemplate>(Item item)
+            where TTemplate : class, IStandardTemplateItem
+        {
+            using (var context = ContentSearchManager.CreateSearchContext(new SitecoreIndexableItem(item)))
+            {
+                var result = context.GetSynthesisQueryable<TTemplate>()
+                    .ToList();
+
+                return result;
+            }
+        }
+
         public ActionResult GetTrainingCenterCollectionMapView()
         {
             List<IMapNodeItem> listOfGyms = new List<IMapNodeItem>();
             if (Sitecore.Context.Item.As<IMapNodeItem>() != null)
             {
                 listOfGyms.Add(Sitecore.Context.Item.As<IMapNodeItem>());
-
             }
-
-            listOfGyms = GetAllDescendentsOfType<IMapNodeItem>(Sitecore.Context.Item).ToList();
+            else
+            {
+                var assosiationItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationFlagTemplateItem>();
+                if (assosiationItem != null)
+                {
+                    listOfGyms = GetAllDescendentsOfType<IMapNodeItem>(assosiationItem.InnerItem).ToList();
+                }
+                else
+                {
+                    listOfGyms = GetAllOfType<IMapNodeItem>(Sitecore.Context.Item).ToList();
+                }
+            }
 
             var model = new TrainingCenterCollectionMapModel()
             {

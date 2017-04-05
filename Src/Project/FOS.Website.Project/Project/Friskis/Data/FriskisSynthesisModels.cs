@@ -89,7 +89,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.Data.IMapWidgetGymsItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestPage template</summary>
@@ -1018,6 +1018,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _introTitle;
         
+        private Synthesis.FieldTypes.TextField _mapTitle;
+        
         private Synthesis.FieldTypes.TextField _introBody;
         
         private Synthesis.FieldTypes.HyperlinkField _introLink;
@@ -1093,6 +1095,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _introTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroTitle"), this.GetSearchFieldValue("introtitle"));
                 }
                 return _introTitle;
+            }
+        }
+        
+        /// <summary>Represents the Map Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("map_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MapTitle {
+            get {
+                if (_mapTitle == null) {
+                    _mapTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{651A385F-DC08-42C1-BA26-515D5B0D4C47}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Map Title"), this.GetSearchFieldValue("map_title"));
+                }
+                return _mapTitle;
             }
         }
         

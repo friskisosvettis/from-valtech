@@ -18,11 +18,10 @@ var _mapObject = $('#map');
 var maps = {
 
 	// Initialize script and bind events
-   init: function () {
+    init: function () {
 		if(_mapObject.length > 0) {
 			// Hide all elements except the threee first
 			$('.map__list').find('li:gt(2)').addClass('hidden');
-
 			if ($(window).width() > _mediumBreakpoint) {
 				loadGoogleMaps();
 			} 
@@ -391,18 +390,20 @@ var maps = {
 
 			var map;
 			//Constructor creates a map - only center and zoom is required
-			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 59.3361193,lng: 18.0341168},
-				zoom: 12,
-				maxZoom: 18,
-				minZoom: 2,
-				styles: styles,
-			})
+		    map = new google.maps.Map(document.getElementById('map'), {
+		        //center: { lat: 59.3361193, lng: 18.0341168 }, //TODO LOOK AT THIS! WHY CENTRT
+		        zoom: 12,
+		        maxZoom: 18,
+		        minZoom: 2,
+		        styles: styles
+		    });
 
 			// Get all centers that should be shown on map
 			var mapList = $('.map__list ul > li');
 			var mapListLength = mapList.length;
-
+			if (mapListLength > 3) {
+			    $('.map__list ul').append('<button class="map__btn" data-alt-text="Visa färre">Visa mer</button>');
+			}
 			createMarkers(mapList, mapListLength);
 
 			var largeInfowindow = new google.maps.InfoWindow();
@@ -438,11 +439,15 @@ var maps = {
 					populateInfoWindow(this, largeInfowindow);
 				});
 				bounds.extend(markers[i].position);
-			}			
+			}
 
 			// Extend the boundaries of the map for each marker
 			map.fitBounds(bounds);
-
+		    //var width = ($(window).width() / 2);
+		    //map.panBy(-width, 0);
+		    //console.log(map.getZoom(), (map.getZoom() -2 ));
+		    //var newZoom = map.getZoom() - 2;
+			//map.setZoom(newZoom);
 			_initialized = true;
 
 			// This function populates the infowindow when the marker is clicked. We'll only allow
@@ -500,7 +505,7 @@ var maps = {
 				loadGoogleMaps(index);
 			} else {
 				//TODO: Look into why it not works to click on two list items on mobile
-				showPin(index)
+			    showPin(index);
 			}
 
 			// google.maps.event.trigger(map, "resize");

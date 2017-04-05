@@ -4,21 +4,41 @@
 @using Sitecore.Mvc.Presentation
 @using Synthesis.Mvc.Helpers
 @model TrainingCenterCollectionMapModel
-<div style="background-color: green; color: white">
-    @foreach (var mapNode in Model.MapNodes)
-    {
-        <h3>@mapNode.MapHeadline</h3>
-        <p>
-            @mapNode.Street @mapNode.StreetNr <br />
-            @mapNode.ZipCode @mapNode.City
-            @mapNode.Country
-        </p>
-            <p>
-                Longitude: @mapNode.Longitude <br />
-                Latitude: @mapNode.Latitude
-            </p>
-    }
+
+<div class="map__container">
+    <!--TABS - hidden-medium-up -->
+    <ul class="tabs" data-tab="map">
+        @* TODO - remove hardcoded text for Lista & Karta *@
+        <li class="tab__title active"><a href="#panel1">Lista</a></li>
+        <li class="tab__title"><a href="#panel2" id="map-tab">Karta</a></li>
+    </ul>
+    <!--MAP - VISIBLE ALL THE TIME -->
+    <div class="tab__content hidden-small--block" id="panel2" data-tab-map>
+        <div id="map"></div>
+    </div>
+    <!--MAP-LIST - VISIBLE ALL THE TIME -->
+    <div class="tab__content map__content" id="panel1" data-tab-map>
+        <div class="map__list">
+            @* TODO Add real field for Här finns vi - 17 anläggningar *@
+            <h3>Här finns vi - 17 anläggningar</h3>
+            <ul>
+                @{
+                    int i = 0;
+                    foreach (var mapNode in Model.MapNodes)
+                    {
+                        <li data-i="@i" data-map-title="@mapNode.MapHeadline" data-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-map-url="#url" data-map-lat="@mapNode.Latitude" data-map-lng="@mapNode.Longitude">
+                            @* TODO - remove hardcoded text for Lista & Karta *@
+                            <button class="map__list--show">Visa på karta</button>
+                            <a href="#url">
+                                <h4>@mapNode.MapHeadline</h4>
+                                <address>@mapNode.Street @mapNode.StreetNr, @mapNode.City</address>
+                            </a>
+                        </li>
+                        i = i + 1;
+                    }
+                }
+            </ul>
+        </div>
+    </div>
 </div>
-
-
 

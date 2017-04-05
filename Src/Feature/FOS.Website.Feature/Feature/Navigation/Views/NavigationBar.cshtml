@@ -72,7 +72,7 @@
                 }
                 @if (Model.BookingLink.HasValue)
                 {
-                    <li>
+                    <li class="navigation__item">
                         @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
                     </li>
                 }

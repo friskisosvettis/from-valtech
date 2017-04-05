@@ -27,7 +27,6 @@ var navigationModule = {
         $(_navigationContentClose).on('click', function () {
             $(_navigationContent).toggle();
             $(_navigationContentClose).toggle();
-            $('.navigation--overlay').toggle();
 
             // Close more option if open
              if($(_moreContent).hasClass('open')) {
@@ -40,15 +39,18 @@ var navigationModule = {
         $(_navigation).on('click', function () {
             $(_navigationContent).toggle();
             $(_navigationContentClose).toggle();
-            $('.navigation--overlay').toggle();
         }.bind(this));
 
         $(_more).on('click', function () {
             $(_moreContent).toggle().toggleClass('open');
             $(_more).toggleClass('open');
+            $('.navigation__container').toggleClass('open');
             $('.navigation__item').not($(_more).parent('.navigation__item')).toggleClass('hide');
-            if($('.navigation--overlay').length < 1) {
-                $('.navigation--overlay').toggle();
+        }.bind(this));
+
+        $(window).on('scroll', function() {
+            if($('.navigation__container').length) {
+                $('.navigation__container').addClass('scroll');
             }
         }.bind(this));
 

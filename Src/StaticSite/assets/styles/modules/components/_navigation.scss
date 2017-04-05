@@ -1,6 +1,6 @@
 // TODO: Refactor this file
 
-$menu-height: 5em;
+$menu-height: 6em;
 
 .navigation {
     display: none;
@@ -16,36 +16,44 @@ $menu-height: 5em;
         width: 100%;
         position: fixed;
         z-index: 1000000;
+        height: $menu-height;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
 
         @include medium-up {
-            height: $menu-height;
-            background-color: rgba(0,0,0,0.0);
+            &.open {
+                background: $color-menu-98;
+            }
+            height: 50%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+
             // TODO: Add a class when user scrolls down and fade in the
             // darker transparent background
+            &.scroll {
+                height: $menu-height;
+            }
         }
     }
 
     &__logo {
         width: $menu-height;
         height: $menu-height;
+        padding: $space;
     }
     &__btn {
         color: $white;
+        font-weight: 700;
         border: none;
         background: transparent;
 
         @include medium-up {
-            color: $color-text;
             outline: none;
             height: 100%;
             width: 100%;
 
             &:hover {
-                color: $color-text-link;
+                text-decoration: underline;
             }
             &:active {
-                font-weight: 700;
-                color: $primary-color;
                 text-decoration: underline;
             }
         }
@@ -67,7 +75,7 @@ $menu-height: 5em;
     &__list {
         width: 100%;
         height: 100%;
-        background-color: rgba(221,82,94,0.98);
+        background-color: $color-menu-98;
         position: fixed;
         top: 0;
         left: 0;
@@ -92,7 +100,7 @@ $menu-height: 5em;
         vertical-align: top;
 
         @include medium-up {
-            width: 7em;
+            width: 8em;
             height: $menu-height;
             display: inline-block;
         }
@@ -117,13 +125,13 @@ $menu-height: 5em;
             }
 
             @include medium-up {
-                padding-top: 2em;
+                font-weight: 700;
+                padding-top: 2.5em;
                 line-height: 1;
             }
         }
         > a {
             @include medium-up {
-                color: $color-text;
 
                 &:hover {
                     color: $color-text-link;
@@ -156,7 +164,7 @@ $menu-height: 5em;
             @include medium-up {
                 &.open {
                     position: fixed;
-                    background-color: rgba(221,82,94,0.98);
+                    background-color: $color-menu-98;
                     top: $menu-height;
                     width: 100%;
                     left: 0;
@@ -223,22 +231,17 @@ $menu-height: 5em;
         background-size: contain;
         display: inline-block;
         vertical-align: middle;
-        width: rem(22px);
-        height: rem(22px);
-        transform: rotate(90deg);
+        width: rem(16px);
+        height: rem(16px);
+        margin-left: $space;
         -webkit-transition: all 300ms 0s ease-in-out;
         transition: all 300ms 0s ease-in-out;
-
-        @include medium-up {
-            //TODO: Look into chnge color instead
-            background-image: url('/assets/images/icon_arrow-dark.svg');
-        }
     }
     &.open {
         font-weight: 700;
 
         &:after {
-            transform: rotate(270deg);
+            transform: rotate(180deg);
         }
     }
 }

@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="62px" height="62px" viewBox="0 0 62 62" enable-background="new 0 0 62 62" xml:space="preserve">
-	<g id="arrow">
-		<line fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="25.7" y1="41.6" x2="36.3" y2="31"/>
-		<line fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="25.7" y1="20.4" x2="36.3" y2="31"/>
-	</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="10px" viewBox="0 0 15 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Navigation-(header)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MacBook-Pro-15&quot;-Copy-6" transform="translate(-1293.000000, -127.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Group-10" transform="translate(449.000000, 110.000000)">
+                <g id="Group-4" transform="translate(773.000000, 0.000000)">
+                    <polygon id="Path-2" points="72.5629077 17.9244857 71.1486941 19.3386993 78.4102318 26.6002369 85.5794459 19.4310228 84.1652323 18.0168092 78.4102318 23.7718098"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

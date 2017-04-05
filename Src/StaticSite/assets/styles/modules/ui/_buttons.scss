@@ -38,7 +38,7 @@
 
 .btn {
     color: $color-white;
-    @include button-settings($primary-color);
+    @include button-settings($color-menu);
 
     &--block {
         display: block;

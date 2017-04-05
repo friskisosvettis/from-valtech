@@ -12,7 +12,7 @@
     return;
 }
 
-@{ var ACTIVE_ITEM_CLASS_STRING = " class=ThisThink";}
+@{ var ACTIVE_ITEM_CLASS_STRING = "class=active";}
 
 <!--TODO: Hide text close for accessibility -->
 <div class="navigation__container">
@@ -53,19 +53,23 @@
                 @foreach (var pageItem in Model.PrimaryMenuItems)
                 {
                     var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
-                    <li><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
+                    <li class="navigation__item"><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
                 }
-                <li class="navigation__item">
-                    <button class="navigation__btn" data-menu-more>Mer</button>
-                    <ul data-menu-more-content>
-                        <!--More Menu items -->
-                        @foreach (var pageItem in Model.MoreMenuItems)
-                        {
-                            var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
-                            <li><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
-                        }
-                    </ul>
-                </li>
+                @if (Model.MoreMenuItems.Any())
+                {
+                    <li class="navigation__item">
+                        @* TODO: Add translatation for "Mer" *@
+                        <button class="navigation__btn" data-menu-more>Mer</button>
+                        <ul data-menu-more-content>
+                            <!--More Menu items -->
+                            @foreach (var pageItem in Model.MoreMenuItems)
+                            {
+                                var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
+                                <li><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
+                            }
+                        </ul>
+                    </li>
+                }
                 @if (Model.BookingLink.HasValue)
                 {
                     <li>

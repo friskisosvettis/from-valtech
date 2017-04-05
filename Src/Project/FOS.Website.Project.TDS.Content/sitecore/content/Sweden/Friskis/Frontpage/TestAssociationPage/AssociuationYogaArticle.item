@@ -13,7 +13,7 @@ created: 20170323T151044Z
 ----version----
 language: sv-SE
 version: 1
-revision: 6e4d6410-2d70-4822-b4dc-c94576766b2b
+revision: 390c3ee5-9ebc-4afd-a6e6-2c3d581c137e
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
@@ -23,12 +23,26 @@ content-length: 4
 
 Yoga
 ----field----
+field: {F60E9BBE-8B37-4EB3-A293-A072E18C67D5}
+name: Navigation_ShowInMenu
+key: navigation_showinmenu
+content-length: 1
+
+1
+----field----
 field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
 name: Text Content
 key: text content
 content-length: 24
 
 Orginal richtext on Yoga
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Yoga
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -49,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6e4d6410-2d70-4822-b4dc-c94576766b2b
+390c3ee5-9ebc-4afd-a6e6-2c3d581c137e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170323T151225Z
+20170404T140847Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

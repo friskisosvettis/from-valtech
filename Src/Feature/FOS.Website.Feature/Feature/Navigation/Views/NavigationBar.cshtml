@@ -1,0 +1,78 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@using FOS.Website.Feature.Navigation.Models
+@using Sitecore.Data.Items
+@using Sitecore.Links
+@using Synthesis.Mvc.Helpers
+@model NavigationBarModel
+
+@if (Model == null)
+{
+    return;
+}
+
+@{ var ACTIVE_ITEM_CLASS_STRING = " class=ThisThink";}
+
+<!--TODO: Hide text close for accessibility -->
+<div class="navigation__container">
+    <div class="container">
+        <div class="container--12">
+            <ul class="navigation navigation--small">
+                <!-- Mobile -->
+                <!--TODO: ADD hidden text logo for accessibility -->
+                <li>
+                    <a href="@LinkManager.GetItemUrl(@Model.HomeItem)">
+                        <img class="navigation__logo" src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo">
+                    </a>
+                </li>
+                <!--TODO: ADD hidden text boka for accessibility on click -->
+
+                <li>
+                    @if (Model.BookingLink.HasValue)
+                    {
+                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
+                    }
+                    <button class="navigation__btn" href="#uou2" data-menu>
+                        <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
+                    </button>
+                </li>
+            </ul>
+            <!--TODO: Add hidden accessibility text for close icon -->
+            <button class="navigation__btn navigation__btn--close" data-menu-close>
+                <img class="icon" src="/assets/images/icon_close.svg" alt="Close icon" />
+            </button>
+            <ul class="navigation navigation__list" data-menu-content>
+                <!--TODO: Add hidden accessibility text for logo -->
+                <li class="navigation__item hidden-small">
+                    <a href="@LinkManager.GetItemUrl(@Model.HomeItem)">
+                        <!--Logo -->
+                        <img class="navigation__logo" src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo">
+                    </a>
+                </li> <!--Primär -->
+                @foreach (var pageItem in Model.PrimaryMenuItems)
+                {
+                    var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
+                    <li><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
+                }
+                <li class="navigation__item">
+                    <button class="navigation__btn" data-menu-more>Mer</button>
+                    <ul data-menu-more-content>
+                        <!--More Menu items -->
+                        @foreach (var pageItem in Model.MoreMenuItems)
+                        {
+                            var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
+                            <li><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
+                        }
+                    </ul>
+                </li>
+                @if (Model.BookingLink.HasValue)
+                {
+                    <li>
+                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

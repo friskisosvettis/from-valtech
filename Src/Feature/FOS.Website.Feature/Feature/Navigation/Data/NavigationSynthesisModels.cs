@@ -11,9 +11,21 @@
 namespace FOS.Website.Feature.Navigation.Data {
     
     
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationBarRoot template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{695108BE-03A4-4177-AEF7-3A92F30C48AE}", "TYZm3qwNXByuVa4S+ylr/GABTgc=", "Valtech.Foundation.Synthesis")]
+    public partial interface INavigationBarRootItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the BookingLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationData template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A2B8D74F-1F5A-4A8D-BB21-599CBC277098}", "211ow3WkQ8RZJth8G98+cLCkzbw=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A2B8D74F-1F5A-4A8D-BB21-599CBC277098}", "i0d6PaNeV1bRoqud4wh7YzljVcI=", "Valtech.Foundation.Synthesis")]
     public partial interface INavigationDataItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Navigation_NavigationTitle field</summary>
@@ -25,6 +37,12 @@ namespace FOS.Website.Feature.Navigation.Data {
         /// <summary>Represents the Navigation_ShowInMenu field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("navigation_showinmenu")]
         Synthesis.FieldTypes.Interfaces.IBooleanField Navigation_ShowInMenu {
+            get;
+        }
+        
+        /// <summary>Represents the Navigation_IsSecondary field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("navigation_issecondary")]
+        Synthesis.FieldTypes.Interfaces.IBooleanField Navigation_IsSecondary {
             get;
         }
     }
@@ -43,6 +61,71 @@ namespace FOS.Website.Feature.Navigation.Data {
 namespace FOS.Website.Concrete.Feature.Navigation.Data {
     
     
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationBarRoot template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class NavigationBarRoot : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem {
+        
+        private Synthesis.FieldTypes.HyperlinkField _bookingLink;
+        
+        public NavigationBarRoot(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public NavigationBarRoot(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "NavigationBarRoot";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{695108BE-03A4-4177-AEF7-3A92F30C48AE}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the BookingLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
+            get {
+                if (_bookingLink == null) {
+                    _bookingLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A26B0801-FAED-4426-8F97-4D06670FFBEF}"], "/sitecore/templates/Feature/Navigation/Data/NavigationBarRoot", "BookingLink"), this.GetSearchFieldValue("bookinglink"));
+                }
+                return _bookingLink;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class NavigationBarRootInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{695108BE-03A4-4177-AEF7-3A92F30C48AE}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new NavigationBarRoot(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new NavigationBarRoot(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationData template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class NavigationData : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem {
@@ -50,6 +133,8 @@ namespace FOS.Website.Concrete.Feature.Navigation.Data {
         private Synthesis.FieldTypes.TextField _navigation_NavigationTitle;
         
         private Synthesis.FieldTypes.BooleanField _navigation_ShowInMenu;
+        
+        private Synthesis.FieldTypes.BooleanField _navigation_IsSecondary;
         
         public NavigationData(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -99,6 +184,17 @@ namespace FOS.Website.Concrete.Feature.Navigation.Data {
                     _navigation_ShowInMenu = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F60E9BBE-8B37-4EB3-A293-A072E18C67D5}"], "/sitecore/templates/Feature/Navigation/Data/NavigationData", "Navigation_ShowInMenu"), this.GetSearchFieldValue("navigation_showinmenu"));
                 }
                 return _navigation_ShowInMenu;
+            }
+        }
+        
+        /// <summary>Represents the Navigation_IsSecondary field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("navigation_issecondary")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField Navigation_IsSecondary {
+            get {
+                if (_navigation_IsSecondary == null) {
+                    _navigation_IsSecondary = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5C94595C-5289-4053-911B-C89E461920F4}"], "/sitecore/templates/Feature/Navigation/Data/NavigationData", "Navigation_IsSecondary"), this.GetSearchFieldValue("navigation_issecondary"));
+                }
+                return _navigation_IsSecondary;
             }
         }
     }

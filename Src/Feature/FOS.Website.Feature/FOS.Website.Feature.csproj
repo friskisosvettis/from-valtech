@@ -1034,6 +1034,10 @@
     <Content Include="Feature\Content\Views\HeroArea.cshtml" />
     <Content Include="Feature\Content\Views\TrainingCenterCollectionMap.cshtml" />
     <Content Include="Feature\Content\Views\AssociationIntroductionModule.cshtml" />
+    <Content Include="Feature\Navigation\Views\NavigationBar.cshtml" />
+    <Content Include="Feature\Navigation\Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1069,7 +1073,10 @@
     <Compile Include="Feature\Document\Data\DocumentSynthesisModels.cs" />
     <Compile Include="Feature\Identity\Constants.cs" />
     <Compile Include="Feature\Identity\Controllers\FooterController.cs" />
+    <Compile Include="Feature\Navigation\Constants.cs" />
+    <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -450,14 +450,11 @@ var maps = {
 			if ($(window).width() > 769) {
 				var width = ($(window).width() / 2);
 				map.panBy(-width, 0);
-				zoomChangeBoundsListener = 
-					google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-						if (this.getZoom()){
-							this.setZoom(this.getZoom() -1);
-						}
+				google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+					if (this.getZoom()){
+						this.setZoom(this.getZoom() -1);
+					}
 				});
-				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
-
 			}
 			_initialized = true;
 

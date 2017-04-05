@@ -21,7 +21,7 @@ var tabs = {
 					$(tabs).find($('.tab__title')).removeClass('active');
 					$(this).parent('li').addClass('active');
 					var tabsFor = $(tabs).data('tab');
-					$('*[data-tab-'+tabsFor+']').toggleClass('hidden-small');
+					$('*[data-tab-'+tabsFor+']').toggleClass('hidden-small--block');
 				}
 			});
 		});

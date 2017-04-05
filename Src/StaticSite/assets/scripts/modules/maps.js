@@ -368,15 +368,24 @@ var maps = {
 
 		// Create an empty array for our markers
 		var markers = [];
+		var locations = [];
 
+		// // Example with more than one marker should come from the database
+		// var locations = [
+		// 	{title: 'Friskis & Svettis Kungsholmen', address: "Sankt Eriksgatan 54, Stockholm",  url: "www.google.com", location: {lat: 59.3361193,lng: 18.0341168}},
+		// 	{title: 'Friskis & Svettis Gärdet', address: "Furusundsagatan 21, Stockholm",  url: "www.valtech.com", location: {lat: 59.347710,lng: 18.108242}},
+		// 	{title: 'Friskis & Svettis Ringen', address: "Ringvägen 32, Stockholm",  url: "www.valtech.se", location: {lat: 59.307722,lng: 18.074342}},
+		// 	{title: 'Friskis & Svettis Sveavägen', address: "Sveavägen 2, Stockholm", url: "www.instagram.com",  location: {lat: 59.341158,lng: 18.057744}}
+		// ];
 
-		// Example with more than one marker should come from the database
-		var locations = [
-			{title: 'Friskis & Svettis Kungsholmen', address: "Sankt Eriksgatan 54, Stockholm",  url: "www.google.com", location: {lat: 59.3361193,lng: 18.0341168}},
-			{title: 'Friskis & Svettis Gärdet', address: "Furusundsagatan 21, Stockholm",  url: "www.valtech.com", location: {lat: 59.347710,lng: 18.108242}},
-			{title: 'Friskis & Svettis Ringen', address: "Ringvägen 32, Stockholm",  url: "www.valtech.se", location: {lat: 59.307722,lng: 18.074342}},
-			{title: 'Friskis & Svettis Sveavägen', address: "Sveavägen 2, Stockholm", url: "www.instagram.com",  location: {lat: 59.341158,lng: 18.057744}}
-		];
+		// Get all centers that should be shown on map
+		var mapList = $('.map__list ul > li');
+		var mapListLength = mapList.length;
+
+		// Hide all elements except the threee first
+		$('.map__list').find('li:gt(2)').addClass('hidden');
+
+		createMarkers(mapList, mapListLength);
 
 		var largeInfowindow = new google.maps.InfoWindow();
 		var bounds = new google.maps.LatLngBounds();
@@ -429,7 +438,21 @@ var maps = {
 				});
 			}
 		}
-		// $('#panel2').on('click', function () {
+
+		function createMarkers(mapList, mapListLength) {
+			// Each item in locations array
+			for (var i = 0; i < mapListLength; i ++) {
+				var mapTitle = $(mapList[i]).attr('data-map-title');
+				var mapAddress = $(mapList[i]).attr('data-map-address');
+				var mapUrl = $(mapList[i]).attr('data-map-url');
+				var mapLat = parseFloat($(mapList[i]).attr('data-map-lat'));
+				var mapLng = parseFloat($(mapList[i]).attr('data-map-lng'));
+				locations.push({title: mapTitle, address: mapAddress, url: mapUrl, location: {lat: mapLat, lng: mapLng}});
+			}
+		};
+
+		// When user clicks on "Map" tab
+		$('#panel2').on('click', function () {
 		// 					console.log('step2');
 
 		// 	if(!$(this).parent('li').hasClass('active')) {
@@ -440,9 +463,10 @@ var maps = {
 		// 		var tabsFor = $(tabs).data('tab');
 		// 		$('*[data-tab-'+tabsFor+']').toggleClass('hidden-small');
 		// 	}
-		// 	google.maps.event.trigger(map, "resize");
-		// });
-		$('button.map__list--show').on('click', function () {
+			google.maps.event.trigger(map, "resize");
+		});
+		$('button.map__list--show').on('click', function (e) {
+			e.preventDefault();
 			var index = $(this).closest('li').attr('data-i');
 			google.maps.event.trigger(markers[index], 'click');
 			// google.maps.event.trigger(map, "resize");

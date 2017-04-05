@@ -152,7 +152,16 @@ $menu-height: 6em;
             padding: $space;
             width: 100%;
         }
-
+        //TODO: Look at book button
+        &:last-of-type {
+            width: 12em;
+            > a {
+                padding: 1em;
+                margin: 1.5em;
+                height: 3em;
+                color: $color-white !important;
+            }
+        }
         ul {
             display: none;
             height: 100%;

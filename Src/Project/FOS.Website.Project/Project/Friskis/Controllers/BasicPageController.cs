@@ -22,5 +22,10 @@ namespace FOS.Website.Project.Friskis.Controllers
         {
             return View(Constants.Views.Paths.HeroPage);
         }
+
+        public ActionResult GetTrainingCenterPageView()
+        {
+            return View(Constants.Views.Paths.TrainingCenterPage);
+        }
     }
 }

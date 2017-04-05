@@ -1050,6 +1050,7 @@
     <Content Include="Project\Friskis\Views\StaticContentRow\Static_full_width.cshtml" />
     <Content Include="Project\Friskis\Views\StaticContentRow\Static_one.cshtml" />
     <Content Include="Project\Friskis\Views\AssociationPage.cshtml" />
+    <Content Include="Project\Friskis\Views\TrainingCenterPage.cshtml" />
     <None Include="Properties\PublishProfiles\FOS.Website.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>

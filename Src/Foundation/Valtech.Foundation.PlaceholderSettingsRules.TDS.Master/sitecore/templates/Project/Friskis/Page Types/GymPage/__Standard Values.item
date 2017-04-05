@@ -1,40 +1,26 @@
 ----item----
 version: 1
-id: {C67B875A-29DC-4B49-8B9A-F2661ADCA7C6}
+id: {726CD98C-9CA2-437A-B3C0-A8C011D4C5C9}
 database: master
-path: /sitecore/layout/Renderings/Project/Friskis/ContentRegion
-parent: {A4905D43-AC76-4A89-AEC7-AF4B34C0729D}
-name: ContentRegion
+path: /sitecore/templates/Project/Friskis/Page Types/GymPage/__Standard Values
+parent: {11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
-templatekey: Controller rendering
-created: 20170110T092432Z
+template: {11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}
+templatekey: GymPage
+created: 20170405T154822Z
 
 ----field----
-field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
-name: Controller
-key: controller
-content-length: 77
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 361
 
-FOS.Website.Project.Friskis.Controllers.RegionController, FOS.Website.Project
-----field----
-field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
-name: Controller Action
-key: controller action
-content-length: 20
-
-GetContentRegionView
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-300
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{202CB65F-F5DE-4668-A063-047B606C1C02}" ph="main" uid="{5F417EE8-B389-4ACD-9F8C-7091C4D7DD7D}" /><r id="{3B7AC140-D428-46A5-82FF-84D1C42143EC}" ph="topcontent" uid="{F039D861-2D7A-4161-964E-02961CCEC766}" /></d></r>
 ----version----
 language: en
 version: 1
-revision: 48abc7b4-9fd1-4627-8cfc-6cf39d060218
+revision: 1a5ab162-5346-41c4-ad42-bb08b038a04e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170110T092432Z
+20170405T154822Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-48abc7b4-9fd1-4627-8cfc-6cf39d060218
+1a5ab162-5346-41c4-ad42-bb08b038a04e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170405T152844Z
+20170405T154921Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

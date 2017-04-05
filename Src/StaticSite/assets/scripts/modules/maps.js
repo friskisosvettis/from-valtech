@@ -12,7 +12,7 @@
 var $ = require('jquery');
 
 var _mediumBreakpoint = 769;
-var _initalized = false;
+var _initialized = false;
 var _mapObject = $('#map');
 // maps object contains the public variable/functions that is exported (module.export = maps)
 var maps = {
@@ -20,13 +20,36 @@ var maps = {
 	// Initialize script and bind events
    init: function () {
 		if(_mapObject.length > 0) {
-			console.log('!');
+			// Hide all elements except the threee first
+			$('.map__list').find('li:gt(2)').addClass('hidden');
+
 			if ($(window).width() > _mediumBreakpoint) {
-				initalizeMap();
+				loadGoogleMaps();
 			} 
 		}
 
-		function initalizeMap() {
+		function loadScripts(showThisPin) {
+			$.getScript(
+				'https://maps.googleapis.com/maps/api/js?' +
+				'key=AIzaSyD3Fzwhnxu8K80A--t1OTriXGNhU5o6dkE'
+			).done(function( script, textStatus ) {
+				initializeMap(showThisPin);
+			});
+		}
+
+		function loadGoogleMaps(showThisPin) {
+			if(_initialized){
+				return;
+			} else {
+				loadScripts(showThisPin);
+			}
+		}
+
+		// Create an empty array for our markers
+		var markers = [];
+		var locations = [];
+
+		function initializeMap(showThisPin) {
 			var styles = [
 				{
 					"featureType": "administrative",
@@ -373,27 +396,12 @@ var maps = {
 				zoom: 12,
 				maxZoom: 18,
 				minZoom: 2,
-				styles: styles
+				styles: styles,
 			})
-
-			// Create an empty array for our markers
-			var markers = [];
-			var locations = [];
-
-			// // Example with more than one marker should come from the database
-			// var locations = [
-			// 	{title: 'Friskis & Svettis Kungsholmen', address: "Sankt Eriksgatan 54, Stockholm",  url: "www.google.com", location: {lat: 59.3361193,lng: 18.0341168}},
-			// 	{title: 'Friskis & Svettis Gärdet', address: "Furusundsagatan 21, Stockholm",  url: "www.valtech.com", location: {lat: 59.347710,lng: 18.108242}},
-			// 	{title: 'Friskis & Svettis Ringen', address: "Ringvägen 32, Stockholm",  url: "www.valtech.se", location: {lat: 59.307722,lng: 18.074342}},
-			// 	{title: 'Friskis & Svettis Sveavägen', address: "Sveavägen 2, Stockholm", url: "www.instagram.com",  location: {lat: 59.341158,lng: 18.057744}}
-			// ];
 
 			// Get all centers that should be shown on map
 			var mapList = $('.map__list ul > li');
 			var mapListLength = mapList.length;
-
-			// Hide all elements except the threee first
-			$('.map__list').find('li:gt(2)').addClass('hidden');
 
 			createMarkers(mapList, mapListLength);
 
@@ -424,16 +432,18 @@ var maps = {
 				});
 				// Push the marker to our array of markers.
 				markers.push(marker);
+
 				// Create an onclick event to open an infowindow at each marker.
 				marker.addListener('click', function() {
 					populateInfoWindow(this, largeInfowindow);
 				});
 				bounds.extend(markers[i].position);
-			}
+			}			
+
 			// Extend the boundaries of the map for each marker
 			map.fitBounds(bounds);
 
-			_initalized = true;
+			_initialized = true;
 
 			// This function populates the infowindow when the marker is clicked. We'll only allow
 			// one infowindow which will open at the marker that is clicked, and populate based
@@ -462,22 +472,37 @@ var maps = {
 					locations.push({title: mapTitle, address: mapAddress, url: mapUrl, location: {lat: mapLat, lng: mapLng}});
 				}
 			};
+
+			// //If the user have clicked on a list item and want that pin showed 
+			if(showThisPin) {
+				showPin(showThisPin);
+			}
+		}
+		function showPin(index) {
+			$('#map-tab').trigger('click');
+			google.maps.event.trigger(markers[index], 'click');
 		}
 
 		// When user clicks on "Map" tab
 		$('#map-tab').on('click', function () {
-			if(!_initalized) {
-				initalizeMap();
+			if(!_initialized) {
+				loadGoogleMaps();
 			} else {
-				google.maps.event.trigger(map, "resize");			
+				google.maps.event.trigger(map, "resize");	
 			}
 		});
 
 
 		$('button.map__list--show').on('click', function (e) {
 			e.preventDefault();
-			var index = $(this).closest('li').attr('data-i');
-			google.maps.event.trigger(markers[index], 'click');
+			var index = $(this).closest('li').attr('data-i');			
+			if(!_initialized) {
+				loadGoogleMaps(index);
+			} else {
+				//TODO: Look into why it not works to click on two list items on mobile
+				showPin(index)
+			}
+
 			// google.maps.event.trigger(map, "resize");
 			// if ($(window).width() < 769) {
 			// 	// Smaller than medium:

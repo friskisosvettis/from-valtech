@@ -20,8 +20,17 @@ var maps = {
 	// Initialize script and bind events
     init: function () {
 		if(_mapObject.length > 0) {
+			
+			// Get all centers that should be shown on map
+			var mapList = $('.map__list ul > li');
+			var mapListLength = mapList.length;
+			if (mapListLength > 3) {
+			    $('.map__list').append('<button class="map__btn" data-alt-text="Visa färre">Visa mer</button>');
+			}
+
 			// Hide all elements except the threee first
 			$('.map__list').find('li:gt(2)').addClass('hidden');
+
 			if ($(window).width() > _mediumBreakpoint) {
 				loadGoogleMaps();
 			} 
@@ -398,12 +407,6 @@ var maps = {
 		        styles: styles
 		    });
 
-			// Get all centers that should be shown on map
-			var mapList = $('.map__list ul > li');
-			var mapListLength = mapList.length;
-			if (mapListLength > 3) {
-			    $('.map__list ul').append('<button class="map__btn" data-alt-text="Visa färre">Visa mer</button>');
-			}
 			createMarkers(mapList, mapListLength);
 
 			var largeInfowindow = new google.maps.InfoWindow();
@@ -443,11 +446,19 @@ var maps = {
 
 			// Extend the boundaries of the map for each marker
 			map.fitBounds(bounds);
-		    //var width = ($(window).width() / 2);
-		    //map.panBy(-width, 0);
-		    //console.log(map.getZoom(), (map.getZoom() -2 ));
-		    //var newZoom = map.getZoom() - 2;
-			//map.setZoom(newZoom);
+
+			if ($(window).width() > 769) {
+				var width = ($(window).width() / 2);
+				map.panBy(-width, 0);
+				zoomChangeBoundsListener = 
+					google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+						if (this.getZoom()){
+							this.setZoom(this.getZoom() -1);
+						}
+				});
+				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+
+			}
 			_initialized = true;
 
 			// This function populates the infowindow when the marker is clicked. We'll only allow

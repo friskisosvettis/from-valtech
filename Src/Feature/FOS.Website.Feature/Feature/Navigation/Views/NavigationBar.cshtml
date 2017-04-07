@@ -17,14 +17,15 @@
 {
     var pageItem = linkItem.InnerItem;
     var activeClassString = (pageItem.ID == Model.ActiveItemID) ? "class=active" : "";
+    var linkClassString = (linkItem.Navigation_IsSecondary.Value) ? "" : "class=navigation__item";
     if (Sitecore.Context.PageMode.IsExperienceEditor)
     {
-        <li class="navigation__item"><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@Html.TextFor(model => linkItem.Navigation_NavigationTitle) </a></li>
+        <li @linkClassString><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@Html.TextFor(model => linkItem.Navigation_NavigationTitle) </a></li>
     }
     else
     {
         var menuLabel = linkItem.Navigation_NavigationTitle.HasValue ? linkItem.Navigation_NavigationTitle.RawValue : pageItem.DisplayName;
-        <li class="navigation__item"><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@menuLabel</a></li>
+        <li @linkClassString><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@menuLabel</a></li>
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿@using Sitecore.Mvc
 @using DynamicPlaceholders.Mvc.Extensions
+@using FOS.Website.Feature.Navigation.Data
 @using Sitecore.Mvc.Presentation
 @using FOS.Website.Feature.Navigation.Models
 @using Sitecore.Data.Items
@@ -12,22 +13,36 @@
     return;
 }
 
-@{ var ACTIVE_ITEM_CLASS_STRING = "class=active";}
+@helper AddLinkLine(INavigationDataItem linkItem)
+{
+    var pageItem = linkItem.InnerItem;
+    var activeClassString = (pageItem.ID == Model.ActiveItemID) ? "class=active" : "";
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <li class="navigation__item"><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@Html.TextFor(model => linkItem.Navigation_NavigationTitle) </a></li>
+    }
+    else
+    {
+        var menuLabel = linkItem.Navigation_NavigationTitle.HasValue ? linkItem.Navigation_NavigationTitle.RawValue : pageItem.DisplayName;
+        <li class="navigation__item"><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@menuLabel</a></li>
+    }
+}
 
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
-    <style>
-        .navigation__SITECORE {
-            position: static !important;
-            height: 6em !important;
-        }
-    </style>
+<style>
+    .navigation__SITECORE {
+        position: static !important;
+        height: 6em !important;
+    }
+</style>
 }
+
 <!--TODO: Hide text close for accessibility -->
 <div class="navigation__container navigation__SITECORE">
     <div class="container">
         <div class="container--12">
-            <ul class="navigation navigation--small navigation__SITECORE">
+            <ul class="navigation navigation--small  navigation__SITECORE">
                 <!-- Mobile -->
                 <!--TODO: ADD hidden text logo for accessibility -->
                 <li>
@@ -36,14 +51,13 @@
                     </a>
                 </li>
                 <!--TODO: ADD hidden text boka for accessibility on click -->
-
                 <li>
                     @if (Model.BookingLink.HasValue)
                     {
                         @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
                     }
                     <button class="navigation__btn" href="#uou2" data-menu>
-                        <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
+                        <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu" />
                     </button>
                 </li>
             </ul>
@@ -59,10 +73,9 @@
                         <img class="navigation__logo" src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo">
                     </a>
                 </li> <!--Primär -->
-                @foreach (var pageItem in Model.PrimaryMenuItems)
+                @foreach (var navigationDataItem in Model.PrimaryMenuItems)
                 {
-                    var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
-                    <li class="navigation__item"><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
+                    @AddLinkLine(navigationDataItem)
                 }
                 @if (Model.MoreMenuItems.Any())
                 {
@@ -71,10 +84,9 @@
                         <button class="navigation__btn" data-menu-more>Mer</button>
                         <ul data-menu-more-content>
                             <!--More Menu items -->
-                            @foreach (var pageItem in Model.MoreMenuItems)
+                            @foreach (var navigationDataItem in Model.MoreMenuItems)
                             {
-                                var activeClassString = (pageItem.ID == Model.ActiveItemID) ? ACTIVE_ITEM_CLASS_STRING : "";
-                                <li><a href="@LinkManager.GetItemUrl(@pageItem)" @activeClassString>@pageItem.DisplayName</a></li>
+                                @AddLinkLine(navigationDataItem)
                             }
                         </ul>
                     </li>

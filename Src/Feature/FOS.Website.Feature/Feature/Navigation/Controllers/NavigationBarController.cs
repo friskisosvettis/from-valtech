@@ -24,21 +24,21 @@ namespace FOS.Website.Feature.Navigation.Controllers
             var menuBarItem = activeItem.ClosestAscendantItemOfType<INavigationBarRootItem>();
             if (menuBarItem != null)
             {
-                List<Item> mainMenuItems = new List<Item>();
-                List<Item> moreMenuItems = new List<Item>();
+                List<INavigationDataItem> mainMenuItems = new List<INavigationDataItem>();
+                List<INavigationDataItem> moreMenuItems = new List<INavigationDataItem>();
                 
                 foreach (Item childItem in menuBarItem.InnerItem.Children)
                 {
                     var child = childItem.As<INavigationDataItem>();
-                    if (child != null)
+                    if (child != null && child.Navigation_ShowInMenu.Value)
                     {
                         if (child.Navigation_IsSecondary.Value)
                         {
-                            moreMenuItems.Add(childItem);
+                            moreMenuItems.Add(child);
                         }
                         else
                         {
-                            mainMenuItems.Add(childItem);
+                            mainMenuItems.Add(child);
                         }
                     }
                 }

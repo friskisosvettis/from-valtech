@@ -34,7 +34,7 @@ namespace FOS.Website.Feature.Content.Controllers
             using (var context = ContentSearchManager.CreateSearchContext(new SitecoreIndexableItem(item)))
             {
                 var result = context.GetSynthesisQueryable<TTemplate>()
-                    .Where(i => i.Path.StartsWith(item.Paths.Path))
+                    .Where(i => i.Path.StartsWith(item.Paths.Path + "/"))
                     .ToList();
 
                 return result;

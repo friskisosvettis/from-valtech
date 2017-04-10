@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: 4e557a21-b8cc-4412-a361-3a6be557ddcc
+revision: e512c6b4-c9e2-4bd6-a399-c7270bf838f5
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -51,19 +51,12 @@ content-length: 15
 
 Hetaste i Solna
 ----field----
-field: {651A385F-DC08-42C1-BA26-515D5B0D4C47}
-name: Map Title
-key: map title
-content-length: 14
-
-Ny rubrik pryl
-----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 746
+content-length: 1208
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{BB8D172E-4184-48DF-AD32-E8C35F15922E}" p:before="*" s:ds="{6AC27C8F-3142-44B4-8518-8E8D5CD6B0A8}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /><r uid="{3C65FDC5-E393-410E-BBF5-2712A2DC707E}" p:after="r[@uid='{BB8D172E-4184-48DF-AD32-E8C35F15922E}']" s:ds="{64945011-6FCC-44B9-900C-B73E729D1DC2}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /><r uid="{D0F8B3E4-C183-4484-BCB6-2B920CF96308}" p:after="r[@uid='{3C65FDC5-E393-410E-BBF5-2712A2DC707E}']" s:ds="{E070EC4D-8507-4525-99B4-105E81E67B53}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{1D9B9E2A-5B6C-4244-90CD-C638970AE04E}" p:before="*" s:ds="{6838A30A-1151-4121-906E-6822E40F0F61}" s:id="{27B84146-6E73-4A86-9D7E-F7DCBCD22056}" s:ph="/main/maincontent/content-full-width_af3ca59e-883e-426a-8ae3-59c785ee09ba" /><r uid="{AF3CA59E-883E-426A-8AE3-59C785EE09BA}" p:after="r[@uid='{1D9B9E2A-5B6C-4244-90CD-C638970AE04E}']" s:id="{0B96BF8F-AD3C-46E0-914B-D029F6B75A2D}" s:ph="/main/maincontent" /><r uid="{BB8D172E-4184-48DF-AD32-E8C35F15922E}" p:after="r[@uid='{AF3CA59E-883E-426A-8AE3-59C785EE09BA}']" s:ds="{6AC27C8F-3142-44B4-8518-8E8D5CD6B0A8}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /><r uid="{3C65FDC5-E393-410E-BBF5-2712A2DC707E}" p:after="r[@uid='{BB8D172E-4184-48DF-AD32-E8C35F15922E}']" s:ds="{64945011-6FCC-44B9-900C-B73E729D1DC2}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /><r uid="{D0F8B3E4-C183-4484-BCB6-2B920CF96308}" p:after="r[@uid='{3C65FDC5-E393-410E-BBF5-2712A2DC707E}']" s:ds="{E070EC4D-8507-4525-99B4-105E81E67B53}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -77,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4e557a21-b8cc-4412-a361-3a6be557ddcc
+e512c6b4-c9e2-4bd6-a399-c7270bf838f5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170405T134930Z
+20170410T104917Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

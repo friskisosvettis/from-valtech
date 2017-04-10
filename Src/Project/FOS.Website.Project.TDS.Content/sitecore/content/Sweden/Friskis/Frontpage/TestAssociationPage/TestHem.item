@@ -11,9 +11,63 @@ templatekey: GymPage
 created: 20170403T105434Z
 
 ----version----
+language: en
+version: 1
+revision: e02fe9a9-656e-4c50-b177-1b3588da3e21
+
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 506
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{F324EB13-B731-44BC-8284-0D43A286A62F}" p:before="*" s:ds="{ECFD5287-0B78-4236-9BD5-A5A4DB5F2D7F}" s:id="{27B84146-6E73-4A86-9D7E-F7DCBCD22056}" s:ph="/main/maincontent/content-full-width_c074c9b7-0615-42ff-9976-358c71d071bc" /><r uid="{C074C9B7-0615-42FF-9976-358C71D071BC}" p:after="r[@uid='{F324EB13-B731-44BC-8284-0D43A286A62F}']" s:id="{0B96BF8F-AD3C-46E0-914B-D029F6B75A2D}" s:ph="/main/maincontent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170410T084006Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e02fe9a9-656e-4c50-b177-1b3588da3e21
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170410T084006Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
 language: sv-SE
 version: 1
-revision: 71b90d91-6409-4eb8-a16d-dbfa3d53b3cd
+revision: edfa11d9-733b-411a-9a4e-819bbf72804b
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -72,6 +126,13 @@ content-length: 9
 
 59.358645
 ----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 506
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{1ED47241-88A2-41B2-8A0E-DF0E0EADEE97}" p:before="*" s:ds="{ACEBD61D-5BDE-46BD-9A96-4BD9419328F0}" s:id="{27B84146-6E73-4A86-9D7E-F7DCBCD22056}" s:ph="/main/maincontent/content-full-width_241de112-0d11-4c61-bd63-b70a47606189" /><r uid="{241DE112-0D11-4C61-BD63-B70A47606189}" p:after="r[@uid='{1ED47241-88A2-41B2-8A0E-DF0E0EADEE97}']" s:id="{0B96BF8F-AD3C-46E0-914B-D029F6B75A2D}" s:ph="/main/maincontent" /></d></r>
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -98,14 +159,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-71b90d91-6409-4eb8-a16d-dbfa3d53b3cd
+edfa11d9-733b-411a-9a4e-819bbf72804b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170405T140106Z
+20170410T085920Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -113,3 +174,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

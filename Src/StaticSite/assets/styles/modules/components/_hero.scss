@@ -68,7 +68,7 @@
         height: 100%;
         display: table;
         text-align: center;
-        background: linear-gradient(0deg, $color-dim-50 0%, $color-dim-00 50%);
+        background: linear-gradient(to bottom,  $color-dim-50 ,  $color-dim-00 50%, $color-dim-50);
     }
 
     &__content {

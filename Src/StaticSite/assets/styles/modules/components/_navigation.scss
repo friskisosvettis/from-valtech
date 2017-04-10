@@ -12,24 +12,20 @@ $menu-height: 6em;
     @include large-up {
         display: block;
     }
+
     &__container {
         width: 100%;
         position: fixed;
         z-index: 1000000;
         height: $menu-height;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+
+        &.scroll {
+            background: $color-dim-50;
+        }
 
         @include large-up {
             &.open {
-                background: $color-menu-98;
-            }
-            height: 50%;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-
-            // TODO: Add a class when user scrolls down and fade in the
-            // darker transparent background
-            &.scroll {
-                height: $menu-height;
+                background: $color-menu-98 !important;
             }
         }
     }
@@ -118,11 +114,6 @@ $menu-height: 6em;
             text-decoration: none;
             height: 100%;
             padding: $space;
-
-            // Add class active on the page we are on
-            &:active, .active {
-                font-weight: 700;
-            }
 
             @include large-up {
                 font-weight: 700;

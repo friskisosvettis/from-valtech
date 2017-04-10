@@ -514,8 +514,7 @@ var maps = {
             // Show more options in list
             $(this).closest('.map__list').find('li:gt(2)').toggleClass('hidden');
 
-            if ($(window).width() > 769) {
-                // Larger than medium:
+            if ($(window).width() > _mediumBreakpoint) {
                 // Update the height of the container and map in order to show/hide list elements
                 var newHeight = $(this).closest('.map__container').find('.map__list').outerHeight();
                 $(this).closest('.map__container').css('height', newHeight);

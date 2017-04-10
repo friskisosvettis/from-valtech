@@ -23,7 +23,6 @@ var navigationModule = {
 
 	// Initialize script and bind events
     init: function () {
-        // Bind click event and bind this (exampleModule object) to the event to pass the functions/variables from the exampleModule object
         $(_navigationContentClose).on('click', function () {
             $(_navigationContent).toggle();
             $(_navigationContentClose).toggle();
@@ -31,8 +30,7 @@ var navigationModule = {
             // Close more option if open
              if($(_moreContent).hasClass('open')) {
                 $('.navigation__item').removeClass('hide');
-                $(_moreContent).removeClass('open');
-                $(_moreContent).hide();
+                $(_more).trigger('click');
             }
         }.bind(this));
 

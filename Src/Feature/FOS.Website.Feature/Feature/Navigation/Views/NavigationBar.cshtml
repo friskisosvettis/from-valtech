@@ -16,6 +16,7 @@
 @helper AddLinkLine(INavigationDataItem linkItem)
 {
     var pageItem = linkItem.InnerItem;
+@* TODO: Add styling for this class - It does not exist currently *@
     var activeClassString = (pageItem.ID == Model.ActiveItemID) ? "class=active" : "";
     var linkClassString = (linkItem.Navigation_IsSecondary.Value) ? "" : "class=navigation__item";
     if (Sitecore.Context.PageMode.IsExperienceEditor)

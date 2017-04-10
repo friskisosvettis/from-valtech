@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5 {
     line-height: 1.25;
 }
 
-h1 {
+h1, .heading-1 {
     font-size: rem(28px);
 
     @include small-up {
@@ -27,7 +27,7 @@ h1 {
     }
 }
 
-h2 {
+h2, .heading-2 {
     font-size: rem(22px);
 
     @include small-up {
@@ -40,7 +40,7 @@ h2 {
     }
 }
 
-h3, .rich-text h2 {
+h3, .heading-3, .rich-text h2 {
     font-size: rem(20px);
 
     @include small-up {
@@ -53,7 +53,7 @@ h3, .rich-text h2 {
     }
 }
 
-h4, .rich-text h3 {
+h4,.heading-4, .rich-text h3 {
     font-size: rem(18px);
 
     @include small-up {
@@ -66,7 +66,7 @@ h4, .rich-text h3 {
     }
 }
 
-h5, .rich-text h4 {
+h5, .heading-5, .rich-text h4 {
     font-size: rem(16px);
 
     @include small-up {
@@ -79,7 +79,7 @@ h5, .rich-text h4 {
     }
 }
 
-h6 {
+h6, .heading-6 {
     font-size: rem(16px);
     line-height: 1;
 

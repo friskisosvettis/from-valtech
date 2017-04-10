@@ -31,13 +31,8 @@
     &__pitch {
         text-align: center;
 
-        h1 {
-            font-size: rem(36px);
+        h2 {
             margin: 0 0 $space 0;
-
-            > span {
-                color: $primary-color;
-            }
         }
 
         p {
@@ -87,20 +82,8 @@
                 width: 60%;
             }
         }
-        h2 {
-            font-size: rem(20px);
-            line-height: 1.25;
+        h1, h2 {
             margin: 0;
-
-        }
-        h3 {
-            font-size: rem(20px);
-            line-height: 1.25;
-            margin: 0;
-
-            @include large-up {
-                font-size: rem(30px);
-            }
         }
         a {
             color: $white;

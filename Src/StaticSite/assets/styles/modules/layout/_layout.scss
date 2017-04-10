@@ -16,14 +16,22 @@ main {
 
 // ------------ VISABILITY - modifiers ----------- //
 
-.hidden-small {
+.visible-medium-up {
     display: none !important;
 
     @include medium-up {
         display: inline-block !important;
     }
 }
-.hidden-small--block {
+
+.visible-large-up {
+    display: none !important;
+
+    @include large-up {
+        display: inline-block !important;
+    }
+}
+.visible-medium-up--block {
     display: none !important;
 
     @include medium-up {
@@ -32,4 +40,11 @@ main {
 }
 .hidden {
     display: none;
+}
+
+.hidden-large-up {
+    @include large-up {
+        display: none !important;
+    }
+
 }

@@ -9,7 +9,7 @@ $menu-height: 6em;
     padding: 0;
     height: $menu-height;
 
-    @include medium-up {
+    @include large-up {
         display: block;
     }
     &__container {
@@ -19,7 +19,7 @@ $menu-height: 6em;
         height: $menu-height;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
 
-        @include medium-up {
+        @include large-up {
             &.open {
                 background: $color-menu-98;
             }
@@ -45,7 +45,7 @@ $menu-height: 6em;
         border: none;
         background: transparent;
 
-        @include medium-up {
+        @include large-up {
             outline: none;
             height: 100%;
             width: 100%;
@@ -66,7 +66,7 @@ $menu-height: 6em;
             right: $space;
             color: $white;
 
-            @include medium-up {
+            @include large-up {
                 top: $menu-height + 1em;
             }
         }
@@ -83,7 +83,7 @@ $menu-height: 6em;
 
         padding-top: 5em;
 
-        @include medium-up {
+        @include large-up {
             display: block !important;
             left: auto;
             width: auto;
@@ -99,7 +99,7 @@ $menu-height: 6em;
         width: 100%;
         vertical-align: top;
 
-        @include medium-up {
+        @include large-up {
             width: 8em;
             height: $menu-height;
             display: inline-block;
@@ -108,7 +108,7 @@ $menu-height: 6em;
         &.hide {
             display: none;
 
-            @include medium-up {
+            @include large-up {
                 display: inline-block;
             }
         }
@@ -124,14 +124,14 @@ $menu-height: 6em;
                 font-weight: 700;
             }
 
-            @include medium-up {
+            @include large-up {
                 font-weight: 700;
                 padding-top: 2.5em;
                 line-height: 1;
             }
         }
         > a {
-            @include medium-up {
+            @include large-up {
 
                 &:hover {
                     color: $color-text-link;
@@ -152,14 +152,16 @@ $menu-height: 6em;
             padding: $space;
             width: 100%;
         }
-        //TODO: Look at book button
-        &:last-of-type {
-            width: 12em;
-            > a {
-                padding: 1em;
-                margin: 1.5em;
-                height: 3em;
-                color: $color-white !important;
+         @include large-up {
+            &:last-of-type {
+                //TODO: Look at book button
+                width: 12em;
+                > a {
+                    padding: 1em;
+                    margin: 1.5em;
+                    height: 3em;
+                    color: $color-white !important;
+                }
             }
         }
         ul {
@@ -168,9 +170,8 @@ $menu-height: 6em;
             padding: 0;
             text-align: center;
             list-style-type: none;
-            overflow-y: scroll;
 
-            @include medium-up {
+            @include large-up {
                 &.open {
                     position: fixed;
                     background-color: $color-menu-98;
@@ -186,8 +187,8 @@ $menu-height: 6em;
         }
     }
 
-    // This version is only visible on smaller screens than medium
-    &--small {
+    // This version is only visible on smaller screens than large
+    &--medium {
         position: fixed;
         z-index: 2;
         display: block;
@@ -226,7 +227,7 @@ $menu-height: 6em;
             }
         }
 
-        @include medium-up {
+        @include large-up {
             display: none;
         }
     }

@@ -29,8 +29,7 @@ var navigationModule = {
             $(_navigationContentClose).toggle();
 
             // Close more option if open
-             if($(_moreContent).hasClass('open')) {
-                $('.navigation__item').removeClass('hide');
+            if($(_more).hasClass('open')) {
                 $(_more).trigger('click');
             }
         }.bind(this));

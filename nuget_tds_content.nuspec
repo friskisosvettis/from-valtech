@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>CBY.Website_TDS_Content</id>
+    <id>FOS.Website_TDS_Content</id>
     <title>Sitecore TDS content update packages</title>
     <version>1.0.0.0</version>
-    <authors>Valtech A/S</authors>
-    <owners>Valtech A/S</owners>
-    <licenseUrl>http://www.valtech.com</licenseUrl>
-    <projectUrl>http://www.valtech.com</projectUrl>
+    <authors>Valtech</authors>
+    <owners>Valtech</owners>
+    <licenseUrl>https://valtech.se</licenseUrl>
+    <projectUrl>https://valtech.se</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Sitecore TDS content update packages</description>
     <releaseNotes>Sitecore TDS content update packages</releaseNotes>

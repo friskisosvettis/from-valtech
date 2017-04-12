@@ -1,8 +1,8 @@
 <!--TODO: Hide text close for accessibility -->
-<div class="navigation__container">
+<div class="navigation__container" data-js-menu-container>
     <div class="container">
         <div class="container--12">
-            <ul class="navigation navigation--medium">
+            <ul class="navigation navigation--medium hidden-large-up">
                 <!--TODO: ADD hidden text logo for accessibility -->
                 <li>
                     <a href="#uou1">
@@ -12,16 +12,16 @@
                 <!--TODO: ADD hidden text boka for accessibility on click -->
                 <li>
                     <a class="btn btn--book btn--icon" href="#pagebooking">Boka pass</a>
-                    <button class="navigation__btn" href="#uou2" data-menu>
+                    <button class="navigation__btn" data-js-menu>
                         <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
                     </button>
                 </li>
             </ul>
             <!--TODO: Add hidden accessibility text for close icon -->
-            <button class="navigation__btn navigation__btn--close" data-menu-close>
+            <button class="navigation__btn navigation__btn--close hidden-large-up" data-js-menu-close>
                 <img class="icon" src="/assets/images/icon_close.svg" alt="Close icon"/>
             </button>
-            <ul class="navigation navigation__list" data-menu-content>
+            <ul class="navigation navigation__list" data-js-menu-content>
                 <!--TODO: Add hidden accessibility text for logo -->
                 <li class="navigation__item visible-large-up">
                     <a href="#uou3">
@@ -32,8 +32,8 @@
                 <li class="navigation__item"><a href="#uo5">Vår träning</a></li>
                 <li class="navigation__item"><a href="#uou6">Bli medlem</a></li>
                 <li class="navigation__item"><a href="#uou7">Funktionär</a></li>
-                <li class="navigation__item"><button class="navigation__btn" data-menu-more>Mer</button>
-                    <ul data-menu-more-content>
+                <li class="navigation__item"><button class="navigation__btn" data-js-menu-more>Mer</button>
+                    <ul data-js-menu-more-content>
                         <li><a href="#uou4">Idé</a></li>
                         <li><a href="#uou7">Historia</a></li>
                         <li><a href="#uou7">Värderingar</a></li>

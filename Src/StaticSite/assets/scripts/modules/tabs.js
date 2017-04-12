@@ -1,5 +1,5 @@
 /**
-* Example Module
+* Tabs Module
 *
 * @author veronika jeppsson
 */
@@ -13,18 +13,18 @@ var $ = require('jquery');
 
 var tabs = {
     init: function () {
-		$(document).ready(function(){
-			$('.tab__title > a').on('click', function (e) {
-				e.preventDefault();
-				if(!$(this).parent('li').hasClass('active')) {
-					var tabs = $(this).closest('ul');
-					$(tabs).find($('.tab__title')).removeClass('active');
-					$(this).parent('li').addClass('active');
-					var tabsFor = $(tabs).data('tab');
-					$('*[data-tab-'+tabsFor+']').toggleClass('visible-medium-up--block');
-				}
-			});
-		});
+        $(document).ready(function(){
+            $('.tabs__title > a').on('click', function (e) {
+                e.preventDefault();
+                if(!$(this).parent('li').hasClass('active')) {
+                    var tab = $(this).closest('ul');
+                    $(tab).find($('li')).removeClass('active');
+                    $(this).parent('li').addClass('active');
+                    var tabsFor = $(tab).data('js-tabs');
+                    $('*[data-js-tabs-'+tabsFor+']').toggleClass('visible-medium-up--block');
+                }
+            });
+        });
     }
 }
 

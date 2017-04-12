@@ -41,11 +41,10 @@
 }
 
 <!--TODO: Hide text close for accessibility -->
-<div class="navigation__container navigation__SITECORE">
+<div class="navigation__container navigation__SITECORE" data-js-menu-container>
     <div class="container">
         <div class="container--12">
-            <ul class="navigation navigation--medium navigation__SITECORE">
-                <!-- Mobile -->
+            <ul class="navigation navigation--medium hidden-large-up navigation__SITECORE">
                 <!--TODO: ADD hidden text logo for accessibility -->
                 <li>
                     <a href="@LinkManager.GetItemUrl(@Model.HomeItem)">
@@ -53,29 +52,28 @@
                     </a>
                 </li>
                 <!--TODO: ADD hidden text boka for accessibility on click -->
-
                 <li>
                     @if (Model.BookingLink.HasValue)
                     {
                         @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
                     }
-                    <button class="navigation__btn" href="#uou2" data-menu>
+                    <button class="navigation__btn" href="#uou2" data-js-menu>
                         <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
                     </button>
                 </li>
             </ul>
             <!--TODO: Add hidden accessibility text for close icon -->
-            <button class="navigation__btn navigation__btn--close hidden-large-up" data-menu-close>
+            <button class="navigation__btn navigation__btn--close hidden-large-up" data-js-menu-close>
                 <img class="icon" src="/assets/images/icon_close.svg" alt="Close icon" />
             </button>
-            <ul class="navigation navigation__list navigation__SITECORE" data-menu-content>
+            <ul class="navigation navigation__list navigation__SITECORE" data-js-menu-content>
                 <!--TODO: Add hidden accessibility text for logo -->
                 <li class="navigation__item visible-large-up">
                     <a href="@LinkManager.GetItemUrl(@Model.HomeItem)">
-                        <!--Logo -->
                         <img class="navigation__logo" src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo">
                     </a>
-                </li> <!--Primär -->
+                </li>
+                <!--Primary menu items -->
                 @foreach (var navigationDataItem in Model.PrimaryMenuItems)
                 {
                     @AddLinkLine(navigationDataItem)
@@ -84,8 +82,8 @@
                 {
                     <li class="navigation__item">
                         @* TODO: Add translatation for "Mer" *@
-                        <button class="navigation__btn" data-menu-more>Mer</button>
-                        <ul data-menu-more-content>
+                        <button class="navigation__btn" data-js-menu-more>Mer</button>
+                        <ul data-js-menu-more-content>
                             <!--More Menu items -->
                             @foreach (var navigationDataItem in Model.MoreMenuItems)
                             {

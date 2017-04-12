@@ -163,16 +163,18 @@ $xl-max-width: 1140px;
     #BREAKPOINTS
 \*------------------------------------*/
 
-// XXS	[0 <= x < 384px / 24em]
-// XS	[385px <= x < 480px / 30em]
-// S	[740 <= x < 800]
-// M	[950 <= x < 960]
-// L	[961px <= x < 1120px]
-// XL	[1121px <= x < 999999]
-// MAX WIDTH [1280px - 80em]
+// XXS	[0 <= x < 380px]
+// XS	[381px <= x < 576px]
+// S	[577 <= x < 769]
+// M	[770 <= x < 992]
+// L	[993px <= x < 1200px]
+// XL	[1201px <= x < 1500px]
+// XL	[1500px <= x < 999999]
+
+// MAX WIDTH [1140px]
 
 
-$bp-xsmall : 340px;
+$bp-xsmall : 380px;
 $bp-small : 576px;
 $bp-medium : 769px;
 $bp-large : 992px;

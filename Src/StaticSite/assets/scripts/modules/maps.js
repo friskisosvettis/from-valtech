@@ -14,6 +14,7 @@ var $ = require('jquery');
 var _mediumBreakpoint = 768;
 var _initialized = false;
 var _mapObject = $('#map');
+
 // maps object contains the public variable/functions that is exported (module.export = maps)
 var maps = {
 
@@ -27,7 +28,7 @@ var maps = {
             var mapListLength = mapList.length;
             $('.map__list').find('li:gt(2)').addClass('hidden');
             if (mapListLength > 3) {
-                $('.map__list').append('<button class="map__btn" data-alt-text="Visa färre">Visa mer</button>');
+                $('.map__list').append('<button class="map__btn" data-js-map-list-btn data-js-alt-text="Visa färre">Visa mer</button>');
             }
 
             if ($(window).width() > _mediumBreakpoint) {
@@ -39,7 +40,7 @@ var maps = {
             $.getScript(
                 'https://maps.googleapis.com/maps/api/js?' +
                 'key=AIzaSyD3Fzwhnxu8K80A--t1OTriXGNhU5o6dkE'
-            ).done(function( script, textStatus ) {
+            ).done(function() {
                 initializeMap(showThisPin);
             });
         }
@@ -476,11 +477,11 @@ var maps = {
             function createMarkers(mapList, mapListLength) {
                 // Add each traning center to the locations array
                 for (var i = 0; i < mapListLength; i ++) {
-                    var mapTitle = $(mapList[i]).attr('data-map-title');
-                    var mapAddress = $(mapList[i]).attr('data-map-address');
-                    var mapUrl = $(mapList[i]).attr('data-map-url');
-                    var mapLat = parseFloat($(mapList[i]).attr('data-map-lat'));
-                    var mapLng = parseFloat($(mapList[i]).attr('data-map-lng'));
+                    var mapTitle = $(mapList[i]).attr('data-js-map-title');
+                    var mapAddress = $(mapList[i]).attr('data-js-map-address');
+                    var mapUrl = $(mapList[i]).attr('data-js-map-url');
+                    var mapLat = parseFloat($(mapList[i]).attr('data-js-map-lat'));
+                    var mapLng = parseFloat($(mapList[i]).attr('data-js-map-lng'));
                     locations.push({title: mapTitle, address: mapAddress, url: mapUrl, location: {lat: mapLat, lng: mapLng}});
                 }
             };
@@ -494,7 +495,7 @@ var maps = {
         // Show pin when user clicks on Show on map
         $('button.map__list--show').on('click', function (e) {
             e.preventDefault();
-            var index = $(this).closest('li').attr('data-i');
+            var index = $(this).closest('li').attr('data-js-map-i');
             if(!_initialized) {
                 loadGoogleMaps(index);
             } else {
@@ -504,13 +505,13 @@ var maps = {
 
 
         // When user clicks on "Map" tab
-        $('#map-tab').on('click', function () {
+        $('*[data-js-map-show]').on('click', function () {
             if (!_initialized) {
                 loadGoogleMaps();
             }
         });
 
-        $('.map__btn').on('click', function () {
+        $('*[data-js-map-list-btn]').on('click', function () {
             // Show more options in list
             $(this).closest('.map__list').find('li:gt(2)').toggleClass('hidden');
 
@@ -524,18 +525,18 @@ var maps = {
         });
 
         // Show more/less text on button
-        $('*[data-alt-text]').on('click', function () {
+        $('*[data-js-alt-text]').on('click', function () {
             // Get new and old text for button
             var oldText = $(this).text();
-            var newText = $(this).attr('data-alt-text');
+            var newText = $(this).attr('data-js-alt-text');
 
             // Update with the new text & save the old
             $(this).text(newText);
-            $(this).attr('data-alt-text', oldText);
+            $(this).attr('data-js-alt-text', oldText);
         });
 
         function showPin(index) {
-            $('#map-tab').trigger('click');
+            $('*[data-js-map-show]').trigger('click');
             google.maps.event.trigger(markers[index], 'click');
         }
     }

@@ -17,7 +17,7 @@ var slickSlider = {
 	// Initialize script
     init: function () {
         $(document).ready(function() {
-            $('.carousel__slider').slick({
+            $('*[data-js-slider]').slick({
                 arrows: true,
                 dots: true,
                 autoplay: true,

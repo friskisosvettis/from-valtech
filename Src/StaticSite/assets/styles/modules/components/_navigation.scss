@@ -217,13 +217,9 @@ $menu-height: 6em;
                 margin-right: $space;
             }
         }
-
-        @include large-up {
-            display: none;
-        }
     }
 }
-[data-menu-more] {
+[data-js-menu-more] {
     &:after {
         content: "";
         background-image: url('/assets/images/icon_arrow.svg');

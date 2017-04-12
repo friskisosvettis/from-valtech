@@ -1,5 +1,5 @@
 ﻿/**
-* Example Module
+* Fit images Module
 *
 * @author Veronika Jeppsson
 */

@@ -13,18 +13,18 @@
 }
 
 <div class="map__container">
-    <!--TABS - visible-large-up-up -->
-    <ul class="tabs" data-tab="map">
+    <!--TABS - VISIABLE LARGE UP -->
+    <ul class="tabs" data-js-tabs="map">
         @* TODO - remove hardcoded text for Lista & Karta *@
-        <li class="tab__title active"><a href="#panel1">Lista</a></li>
-        <li class="tab__title"><a href="#panel2" id="map-tab">Karta</a></li>
+        <li class="tabs__title active"><a href="#panel1">Lista</a></li>
+        <li class="tabs__title"><a href="#panel2" data-js-map-show>Karta</a></li>
     </ul>
     <!--MAP - VISIBLE ALL THE TIME -->
-    <div class="tab__content visible-medium-up--block" id="panel2" data-tab-map>
+    <div class="tabs__content visible-medium-up--block" id="panel2" data-js-tabs-map>
         <div id="map"></div>
     </div>
     <!--MAP-LIST - VISIBLE ALL THE TIME -->
-    <div class="tab__content map__content" id="panel1" data-tab-map>
+    <div class="tabs__content map__content" id="panel1" data-js-tabs-map>
         <div class="map__list">
             
             <h3>@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
@@ -33,7 +33,7 @@
                     int i = 0;
                     foreach (var mapNode in Model.MapNodes)
                     {
-                        <li data-i="@i" data-map-title="@mapNode.MapHeadline" data-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-map-lat="@mapNode.Latitude" data-map-lng="@mapNode.Longitude">
+                        <li data-js-map-i="@i" data-js-map-title="@mapNode.MapHeadline" data-js-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-js-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-js-map-lat="@mapNode.Latitude" data-js-map-lng="@mapNode.Longitude">
                             @* TODO - remove hardcoded text for Lista & Karta *@
                             <button class="map__list--show">Visa på karta</button>
                             <a href="@LinkManager.GetItemUrl(mapNode.InnerItem)">

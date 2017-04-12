@@ -9,9 +9,8 @@
     padding: 0;
     margin: 0;
 
-    .tab__title {
+    &__title {
         display: inline-block;
-        padding: $space;
         margin: $space 0 0 $space;
         vertical-align: top;
         background-color: $color-black-10;
@@ -22,6 +21,11 @@
             background-color: $white;
             border: 1px solid $color-black-10;
             border-bottom: none;
+        }
+
+        > a {
+            padding: $space;
+            display: block;
         }
 
         @include medium-up {

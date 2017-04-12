@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FOS.Website_Gulp_Scripts</id>
+    <title>Gulp to update server thing</title>
+    <version>0.0.0.1</version>
+    <authors>Valtech</authors>
+    <owners>Valtech</owners>
+    <licenseUrl>https://valtech.se</licenseUrl>
+    <projectUrl>https://valtech.se</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Get Java scripts to server</description>
+    <releaseNotes>Get Java scripts to server</releaseNotes>
+  </metadata>
+  <files>
+    <file src="*.js" target="" />
+	<file src="*.json" target="" />
+  </files>
+</package>

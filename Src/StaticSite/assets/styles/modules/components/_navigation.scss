@@ -56,15 +56,12 @@ $menu-height: 6em;
 
         &--close {
             display: none;
+            padding: 0 $space;;
             z-index: 10000;
             position: fixed; //TODO Look into other solution - fixed in fixed not good
             top: $space-double;
             right: $space;
             color: $white;
-
-            @include large-up {
-                top: $menu-height + 1em;
-            }
         }
     }
 
@@ -145,13 +142,11 @@ $menu-height: 6em;
         }
          @include large-up {
             &:last-of-type {
-                //TODO: Look at book button
                 width: 12em;
+                padding-top: 2em;
+
                 > a {
-                    padding: 1em;
-                    margin: 1.5em;
-                    height: 3em;
-                    color: $color-white !important;
+                    display: inline;
                 }
             }
         }
@@ -199,23 +194,23 @@ $menu-height: 6em;
             position: absolute;
             top: 0;
             left: 0;
-            padding-left: $space;
+            padding-left: $space-double;
         }
         li:last-of-type {
             width: 75%;
             text-align: right;
             float: right;
 
-            // TODO: Remove this wierd calculation of positon
-            a {
-                position: absolute;
-                top: $space-double;
-                right: rem(44px*2);
+            .navigation__btn {
+                padding-top: $space-double;
+                padding-right: $space-double;
             }
-            button {
+            .btn--book {
                 margin-top: $space-double;
-                margin-right: $space;
+                display: inline-block;
+                vertical-align: top;
             }
+
         }
     }
 }

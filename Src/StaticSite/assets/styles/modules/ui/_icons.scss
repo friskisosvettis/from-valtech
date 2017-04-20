@@ -1,6 +1,29 @@
-$icon-size: rem(44px);
-
 .icon {
     width: $icon-size;
     height: $icon-size;
+}
+
+.icon__link {
+    &:before {
+    content: "";
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: $icon-size;
+    width: $icon-size;
+    margin: 0 auto;
+    display: block;
+
+        @include medium-up {
+            display: inline-block;
+            padding: 0 $space;
+            vertical-align: middle;
+        }
+    }
+
+    &--find {
+        &:before {
+            background-image: url('/assets/images/icon_pin_find.svg');
+        }
+    }
 }

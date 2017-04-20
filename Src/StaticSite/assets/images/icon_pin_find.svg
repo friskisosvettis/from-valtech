@@ -1,0 +1,23 @@
+
+<svg width="53px" height="52px" viewBox="0 0 53 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="26" cy="25.8039216" rx="26" ry="25.8039216"></ellipse>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Search-start---Desktop-(Large-monitor)-Copy-6" transform="translate(-209.000000, -761.000000)">
+            <g id="Group-8" transform="translate(209.000000, 761.000000)">
+                <g id="Group-4" transform="translate(0.500000, 0.000000)">
+                    <g id="Skärmklipp-2017-04-05-17.57.06" transform="translate(0.000000, 0.392157)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M33.7545577,13.9466714 C31.6835408,11.8755379 28.9298087,10.7347562 26.0011095,10.7347562 C23.0718384,10.7347562 20.3186782,11.8755379 18.2476613,13.9466714 C14.4149649,17.7790117 13.9386653,24.989667 17.2161553,29.3583749 L26.0011095,42.0459259 L34.7729125,29.3761013 C38.0635537,24.989667 37.5872541,17.7790117 33.7545577,13.9466714 Z M26.102316,25.6020866 C23.8957853,25.6020866 22.0997985,23.8059988 22.0997985,21.5993438 C22.0997985,19.3926889 23.8957853,17.596601 26.102316,17.596601 C28.3088467,17.596601 30.1048335,19.3926889 30.1048335,21.5993438 C30.1048335,23.8059988 28.3088467,25.6020866 26.102316,25.6020866 Z" id="Shape" fill="#E75460" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

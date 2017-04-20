@@ -12,7 +12,7 @@
     text-decoration: none;
     border: none;
     border-radius: rem(44px);
-    padding: $space + $space-half !important;
+    padding: $space;
     margin: $space $space-double;
 
     &:focus {
@@ -41,6 +41,12 @@
 .btn {
     @include button-settings($color-menu, $color-white);
 
+    &__link {
+        // This is a class added to an a tag in order for make it behave as a btn
+        white-space: nowrap;
+        display: inline-block;
+    }
+
     &--block {
         display: block;
     }
@@ -51,6 +57,7 @@
         background-position: $space 50%;
         background-repeat: no-repeat;
         background-size: contain;
+        padding: $space + $space-half !important;
         padding-left: rem(44px + $space-half) !important;
 
         &.btn--book {

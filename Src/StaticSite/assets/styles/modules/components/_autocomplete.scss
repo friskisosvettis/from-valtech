@@ -1,0 +1,218 @@
+.autocomplete {
+    background: $color-black-10;
+
+    &--container {
+        @include container;
+    }
+    &--content {
+        @include span(12);
+        padding: 0 $space;
+        text-align: center;
+    }
+    &__input {
+        width: 100%;
+        background-image: url('/assets/images/icon_find.svg');
+        background-repeat: no-repeat;
+        background-position: $space 50%;
+        background-size: $icon-size-small $icon-size-small;
+        padding-left: $space-quad;
+        margin-top: $space-quad;
+        margin-bottom: 0;
+        border: none;
+        @include box-shadow(1px, -1px, 74px, 0, rgba(0,0,0,0.10));
+        outline: none; // OBS Add focus visible
+    }
+    &-suggestions {
+        position: static !important;
+        margin: 0 auto;
+        overflow: auto;
+        strong {
+            font-weight: normal;
+            color: $primary-color;
+        }
+    }
+    &-container {
+        $section-height: 250px; 
+        @include container;
+        background: $color-white;
+        border-radius: $border-med;
+        text-align: left;
+        margin-top: $border-thick;
+ 
+        &[data-autocomplete-category="Förening"]{
+             .autocomplete-group {
+                @include span(12);
+                padding: $space-quad;
+                font-weight: bold;
+                background: url('/assets/images/icon_card_shadow.svg');
+                background-position: 90% top;
+                background-size: 150px 150px;
+                background-repeat: no-repeat;
+                height: $section-height;
+                font-size: 2em;
+                position: relative;
+
+
+                @include medium-up {
+                    @include span(6);
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -$space;
+                    width: 0px;
+                    height: 0px;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 10px solid $color-white;
+                }
+            }
+            .autocomplete-suggestion-container {
+                display: none;
+
+                @include medium-up {
+                    display: inline-block;
+
+                    @include span(6);
+                        background: $color-menu;
+                        color: $color-white;
+                        padding: $space-quad;
+                        height: $section-height;
+                        border-radius: 0 $border-med $border-med 0;
+                    }
+                    .autocomplete-suggestion {
+                        &:before{
+                            //TODO Move to icon file and don't repeat the same code
+                            content: "";
+                            background: url('/assets/images/icon_map_white.svg');
+                            background-size: 20px 20px;
+                            background-repeat: no-repeat;
+                            height: 20px;
+                            margin-right: 10px;
+                            width: 20px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        > strong {
+                            color: $color-text;
+                        }
+                    }
+                }
+            }
+        &[data-autocomplete-category="Område"]{
+            padding: $space-double $space-quad $space $space-quad;
+
+            .autocomplete-group {
+                @include span(12);
+                font-weight: bold;
+            }
+            .autocomplete-suggestion-container {
+                @include span(12);
+                margin-top: $space;
+                border-top: 1px solid $color-black-10;
+                border-radius: 0 $border-med $border-med 0;
+            }
+            .autocomplete-suggestion {
+                display: block;
+
+                @include medium-up {
+                    display: inline-block;
+                }
+                &:before{
+                    //TODO Move to icon file and don't repeat the same code
+                    content: "";
+                    padding-right: $space;
+                    background: url('/assets/images/icon_card.svg');
+                    background-size: 42px 42px; // TODO USE ICON SIZE VARIABLE
+                    height: 42px;
+                    width: 42px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+        &[data-autocomplete-category="Träningscenter"]{
+            padding: $space-double $space-quad;
+
+            @include medium-up {
+                padding: $space-double $space-quad $space $space-quad;
+            }
+
+            .autocomplete-group {
+                display: none; //TODO HIDE IN ANOTHER WAY
+            }
+            .autocomplete-suggestion-container {
+                @include span(12);
+            }
+            .autocomplete-suggestion {
+                display: block;
+                padding: $space 0;
+                border-bottom: 1px solid $color-black-10;
+                @include container;
+  
+                &:last-child {
+                    border: none;
+                }
+
+                address {
+                    display: inline-block;
+                }
+                &__name {
+                    @include span(12);
+                    @include medium-up {
+                        @include span(6);
+                    }
+
+                    &:before{
+                        //TODO Move to icon file and don't repeat the same code
+                        content: "";
+                        background: url('/assets/images/icon_map.svg');
+                        background-size: 20px 20px;
+                        background-repeat: no-repeat;
+                        height: 20px;
+                        margin-right: 10px;
+                        width: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                &__address {
+                    @include span(12);
+                    font-size: smaller;
+
+                    @include medium-up {
+                        font-size: normal;
+                        text-align: right;
+                        @include span(6);
+
+                        span {
+                           padding-left: $space;
+                        }
+                    }
+                }
+                &__association {
+                    font-weight: 700;
+                    display: block;
+                    text-align: left;
+
+                    @include medium-up {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    &-suggestion {
+        cursor: pointer;
+        padding: $space-half;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+    }
+    &-selected {
+        font-weight: 700;
+    }
+}

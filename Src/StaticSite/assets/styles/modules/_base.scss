@@ -96,20 +96,6 @@ $color-dim-40: rgba(0,0,0,0.4);
 $color-dim-50: rgba(0,0,0,0.5);
 $color-dim-70: rgba(0,0,0,0.7);
 
-/**
- * Utility Colors
- * 1) Utility colors are colors used to provide feedback, such as alert messages,
- * form validation, etc.
- */
-/*$color-utility-positive: #03804d;
-$color-utility-postitive-subtle: #d4f3e6;
-$color-utility-caution: #a59b15;
-$color-utility-caution-subtle: #fffecf;
-$color-utility-negative: #b12a0b;
-$color-utility-negative-subtle: #fdded8;
-$color-utility-neutral: #0192d0;
-$color-utility-neutral-subtle: #d3f2ff;*/
-
 /*
  * Text Colors
  * 1) These are non-linked text colors, such as body copy.
@@ -131,14 +117,6 @@ $color-heading: $color-black-90;
  */
 
  $color-text-link: $primary-color;
-/*$color-text-link: $color-gray-87;
-$color-text-link-hover: $color-gray-73;
-$color-text-link-visited: $color-black;
-$color-text-link-active: $color-gray-87;
-
-$color-text-link-light: $color-white;
-$color-text-link-light-hover: $color-white;
-$color-text-link-light-visited: $color-white;*/
 
 /*
  * Border Colors
@@ -147,8 +125,6 @@ $color-text-link-light-visited: $color-white;*/
  */
 
 /*$color-border: $color-gray-50;*/
-
-
 
 /*------------------------------------*\
     #TYPOGRAPHY
@@ -220,3 +196,4 @@ $border-radius: 6px;
 \*------------------------------------*/
 
 $icon-size: rem(44px);
+$icon-size-small: rem(24px);

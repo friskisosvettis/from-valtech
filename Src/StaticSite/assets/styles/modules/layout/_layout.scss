@@ -67,3 +67,13 @@ main {
         display: none !important;
     }
 }
+
+// ----------- MARGINS ----------- //
+.margin-bottom--none {
+    margin-bottom: 0;
+}
+
+// ----------- COLORS ----------- //
+.color--menu {
+    color: $color-menu;
+}

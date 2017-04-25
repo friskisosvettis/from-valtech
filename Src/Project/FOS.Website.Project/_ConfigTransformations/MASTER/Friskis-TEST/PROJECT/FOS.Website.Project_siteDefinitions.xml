@@ -4,8 +4,8 @@
     <ReplaceXml>
       <File name="\App_Config\Include\Project\Friskis\SiteDefinitions.config">
         <Item path="/configuration/sitecore/sites/site" action="Replace" key="hostName" value="fos-cm.valtech.se" />
-        <Item path="/configuration/sitecore/sites/site" action="Replace" key="rootPath" value="/sitecore" />
-        <Item path="/configuration/sitecore/sites/site" action="Replace" key="startItem" value="/shell" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="rootPath" value="/sitecore/content/sweden/friskis" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="startItem" value="/frontpage" />
         <Item path="/configuration/sitecore/sites/site" action="Replace" key="database" value="master" />
         <Item path="/configuration/sitecore/sites/site" action="Replace" key="language" value="sv-se" />
       </File>

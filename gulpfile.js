@@ -162,7 +162,7 @@ function padDigits(number, digits) {
 gulp.task('Full-Publish', function () {
     config.runCleanBuilds = true;
 
-    runSequence('z_config-set-build-folders', 'z_nuget-restore', 'z_clean-config-transformations', 'Publish-Csharp', 'z_apply-config-transformations', 'Publish-Tds', 'z_clean-assets', 'z_publish-sass', 'z_copy-assets-fonts', 'z_publish-javascript');
+    runSequence('z_config-set-build-folders', 'z_nuget-restore', 'z_clean-config-transformations', 'Publish-Csharp', 'z_apply-config-transformations', 'Publish-Tds', 'z_clean-assets', 'z_publish-sass', 'z_copy-assets-fonts', 'z_publish-javascript', 'z_copy-assets-images');
 });
 
 gulp.task('z_nuget-restore', ['z_config-set-build-folders'], function () {

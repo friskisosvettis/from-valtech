@@ -389,6 +389,30 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Proximity template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4A16CB2A-5046-4553-AED8-C7486ED883C6}", "PB8oDY3/2pya5LsduGgfb583DEg=", "Valtech.Foundation.Synthesis")]
+    public partial interface IProximityItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Close To You Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("close_to_you_label")]
+        Synthesis.FieldTypes.Interfaces.ITextField CloseToYouLabel {
+            get;
+        }
+        
+        /// <summary>Represents the Show All Association Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("show_all_association_label")]
+        Synthesis.FieldTypes.Interfaces.ITextField ShowAllAssociationLabel {
+            get;
+        }
+        
+        /// <summary>Represents the Show All Button Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("show_all_button_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField ShowAllButtonLink {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Quote template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{EF3EBE04-694C-4C5A-B9FF-32B89D9ACB11}", "F4RFfjBAPbZpbzPLX8INakMW1Ac=", "Valtech.Foundation.Synthesis")]
@@ -2194,6 +2218,97 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new Media(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Proximity template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Proximity : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IProximityItem {
+        
+        private Synthesis.FieldTypes.TextField _closeToYouLabel;
+        
+        private Synthesis.FieldTypes.TextField _showAllAssociationLabel;
+        
+        private Synthesis.FieldTypes.HyperlinkField _showAllButtonLink;
+        
+        public Proximity(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Proximity(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Proximity";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4A16CB2A-5046-4553-AED8-C7486ED883C6}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Close To You Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("close_to_you_label")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CloseToYouLabel {
+            get {
+                if (_closeToYouLabel == null) {
+                    _closeToYouLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{CA1ED9D7-5876-4E20-8D3D-14948A8B4EE4}"], "/sitecore/templates/Feature/Content/Data/Proximity", "Close To You Label"), this.GetSearchFieldValue("close_to_you_label"));
+                }
+                return _closeToYouLabel;
+            }
+        }
+        
+        /// <summary>Represents the Show All Association Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("show_all_association_label")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ShowAllAssociationLabel {
+            get {
+                if (_showAllAssociationLabel == null) {
+                    _showAllAssociationLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{410D8387-A013-4C5B-8A2A-E1711F46BDCD}"], "/sitecore/templates/Feature/Content/Data/Proximity", "Show All Association Label"), this.GetSearchFieldValue("show_all_association_label"));
+                }
+                return _showAllAssociationLabel;
+            }
+        }
+        
+        /// <summary>Represents the Show All Button Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("show_all_button_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ShowAllButtonLink {
+            get {
+                if (_showAllButtonLink == null) {
+                    _showAllButtonLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{520218B1-CEA1-4EC7-8CDE-6D754918BC22}"], "/sitecore/templates/Feature/Content/Data/Proximity", "Show All Button Link"), this.GetSearchFieldValue("show_all_button_link"));
+                }
+                return _showAllButtonLink;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ProximityInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4A16CB2A-5046-4553-AED8-C7486ED883C6}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Proximity(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Proximity(searchFields);
         }
     }
     

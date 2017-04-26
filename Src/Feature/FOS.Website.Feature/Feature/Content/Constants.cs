@@ -36,6 +36,9 @@ namespace FOS.Website.Feature.Content
 
                 // Training center collection map
                 public const string TrainingCenterCollectionMap = "/Feature/Content/Views/TrainingCenterCollectionMap.cshtml";
+
+                //ProximityView
+                public const string ProximityView = "/Feature/Content/Views/ProximityView.cshtml";
             }
         }
     }

@@ -1038,6 +1038,7 @@
     <Content Include="Feature\Navigation\Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Feature\Content\Views\ProximityView.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1046,12 +1047,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Content\Constants.cs" />
+    <Compile Include="Feature\Content\Controllers\LocationIP.cs" />
+    <Compile Include="Feature\Content\Controllers\ProximityController.cs" />
     <Compile Include="Feature\Content\Controllers\TrainingCenterCollectionMapController.cs" />
     <Compile Include="Feature\Content\Controllers\HeroAreaController.cs" />
     <Compile Include="Feature\Content\Controllers\RowContentController.cs" />
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\ProximityModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationIntroductionModuleModel.cs" />
     <Compile Include="Feature\Content\Models\TrainingCenterCollectionMapModel.cs" />
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />

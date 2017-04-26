@@ -984,6 +984,9 @@
     <Content Include="_ConfigTransformations\LOCAL\_ENVIRONMENT\FOUNDATION\Valtech.Foundation_debug.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\FOUNDATION\Valtech.Foundation.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\FOUNDATION\Valtech.Foundation.xml">
       <SubType>Designer</SubType>
     </Content>

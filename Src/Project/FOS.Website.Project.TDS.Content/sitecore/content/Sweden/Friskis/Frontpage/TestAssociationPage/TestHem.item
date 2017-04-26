@@ -67,7 +67,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: edfa11d9-733b-411a-9a4e-819bbf72804b
+revision: 1cdcaca2-7ca5-4e25-872f-2e3dd1cfc9c2
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -115,16 +115,16 @@ Sweden
 field: {8342753A-30D9-4093-BFC1-97C83F34D1CC}
 name: Longitude
 key: longitude
-content-length: 9
+content-length: 11
 
-18.007871
+-157.835698
 ----field----
 field: {6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}
 name: Latitude
 key: latitude
 content-length: 9
 
-59.358645
+21.285002
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -159,14 +159,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-edfa11d9-733b-411a-9a4e-819bbf72804b
+1cdcaca2-7ca5-4e25-872f-2e3dd1cfc9c2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170410T085920Z
+20170426T155530Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

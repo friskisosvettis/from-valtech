@@ -37,6 +37,10 @@ namespace FOS.Website.Feature.Content.Controllers
 {
     public class ProximityController : Controller
     {
+        private readonly int NR_OFF_ASSOCIATIONS_IN_ANSWER = 3;
+        private readonly double VALTECH_LAT = 59.3277143;
+        private readonly double VALTECH_LONG = 18.050467;
+
         private static IPAddress GetIpAddressFromTracker()
         {
             return Tracker.Current?.Interaction?.Ip != null
@@ -59,6 +63,12 @@ namespace FOS.Website.Feature.Content.Controllers
 
                 LocationIP.GetCoords(userIp, out tempLat, out tempLong);
                 //LocationIP.GetCoords("89.107.211.196", out tempLat, out tempLong);
+                if (!tempLat.HasValue || !tempLong.HasValue) // For Demo
+                {
+                    latitude = VALTECH_LAT;
+                    longitude = VALTECH_LONG;
+                    return true;
+                }
 
                 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -91,12 +101,14 @@ namespace FOS.Website.Feature.Content.Controllers
             {
                 var result = context.GetSynthesisQueryable<IMapNodeItem>()
                     .ToList()
+                    .Where(n => n.Longitude.HasTextValue && n.Latitude.HasTextValue)
                     .OrderBy(
-                        n =>
-                            OptimizedDistance(Convert.ToDouble(n.Latitude.RawValue.Replace('.',',')),
-                                Convert.ToDouble(n.Longitude.RawValue.Replace('.', ',')), latitude, longitude))
+                        n => OptimizedDistance( Convert.ToDouble(n.Latitude.RawValue.Replace('.',',')) 
+                                              , Convert.ToDouble(n.Longitude.RawValue.Replace('.', ','))
+                                              , latitude, longitude))
                     .Select(GetAssociationItem)
-                    .DistinctBy(a => a.DisplayName).ToList();
+                    .DistinctBy(a => a.DisplayName)
+                    .Take(NR_OFF_ASSOCIATIONS_IN_ANSWER).ToList();
 
                 return result;
             }

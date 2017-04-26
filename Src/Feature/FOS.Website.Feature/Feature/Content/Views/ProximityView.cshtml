@@ -17,11 +17,11 @@
         <div class="find__introduction">
             <h3 class="heading-4">@Html.TextFor(m => m.ProximityItem.CloseToYouLabel)</h3>
             @{
-                var NrVisibleInMobile = 2;
-                var AssociationsAdded = 0;
+                var nrVisibleInMobile = 2;
+                var associationsAdded = 0;
                 foreach (var asscociation in Model.AssociationsItems)
                 {
-                    if (AssociationsAdded++ < NrVisibleInMobile)
+                    if (associationsAdded++ < nrVisibleInMobile)
                     {
                         <a class="find__action icon__link icon__link--find" href="@LinkManager.GetItemUrl(asscociation)">@asscociation.DisplayName</a>
                     }

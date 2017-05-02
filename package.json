@@ -3,7 +3,7 @@
   "name": "FOS.Website",
   "private": true,
   "devDependencies": {
-    "browserify-shim": "^3.8.3",
+    "browserify-shim": "^3.8.14",
     "glob": "^7.1.1",
     "gulp": "^3.9.0",
     "gulp-changed": "^1.3.2",
@@ -50,11 +50,13 @@
   },
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.js",
-    "_": "./bower_components/lodash/dist/lodash.js"
+    "_": "./bower_components/lodash/dist/lodash.js",
+    "autocomplete": "./node_modules/devbridge-autocomplete/dist/jquery.autocomplete.js"
   },
   "browserify-shim": {
     "jquery": "$",
-    "_": "_"
+    "_": "_",
+    "autocomplete": "autocomplete"
   },
   "scripts": {
     "postinstall": "bower install"

@@ -10,7 +10,7 @@
 
 // Require dependencies for this module
 var $ = require('jquery');
-
+var autocomplete = require('autocomplete');
 // autocompleteModule object for autocomplete functionality for find association/training centre
 var autocompleteModule = {
 

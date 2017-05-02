@@ -17,8 +17,7 @@
 
 // Vendors
 var $ = require('jquery'),
-	_ = require('_'),
-	autocomplete = require('devbridge-autocomplete');
+	_ = require('_');
 
 // Modules
 var fixedRibbon = require('./modules/fixed-ribbon'),

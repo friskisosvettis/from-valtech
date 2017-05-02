@@ -30,6 +30,14 @@
             color: $primary-color;
         }
     }
+    &-no-suggestion {
+        padding: $space-double;
+        @include container;
+        background: $color-white;
+        border-radius: $border-med;
+        text-align: left;
+        margin-top: $border-thick;
+    }
     &-container {
         $section-height: 250px;
         @include container;
@@ -45,55 +53,66 @@
             .autocomplete-suggestion {
                 font-weight: bold;
                 font-size: 2em;
-                &__btn {
-                    @include medium-up {
-                        display: block;
-                    }
+                line-height: 1.25;
 
-                    > .btn {
-                        margin-left: 0;
-                        margin-right: 0;
-                        @include medium-up {
-                            margin-top: $section-height/3;
-                        }
-                    }
+                p {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+                &:before {
+                    content: "F&S";
+                    background: url('/assets/images/icon_arrow-round.svg');
+                    background-size: 40px 40px;
+                    background-repeat: no-repeat;
+                    height: 40px;
+                    padding-left: $space + 40px;
+                    margin-right: $space;
+                    width: 40px;
+                    display: block;
                 }
             }
             .autocomplete-suggestion-container {
-                padding: 130px $space-double $space-double $space-double;
+                padding: 30px $space-double $space-double $space-double;
 
                 @include span(12);
                 background: url('/assets/images/icon_card_shadow.svg');
-                background-position: 90% top;
-                background-size: 150px 150px;
+                background-position: 95% top;
+                background-size: 70px 70px;
                 background-repeat: no-repeat;
-                height: $section-height;
                 position: relative;
 
                 @include small-up {
                     padding: $space-quad;
                 }
                 @include medium-up {
+                    height: $section-height;
+                    background-size: 150px 150px;
+                    background-position: 90% top;
                     @include span(6);
-                }
 
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    right: -$space;
-                    width: 0px;
-                    height: 0px;
-                    border-top: 10px solid transparent;
-                    border-bottom: 10px solid transparent;
-                    border-left: 10px solid $color-white;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: -$space;
+                        width: 0px;
+                        height: 0px;
+                        z-index: 1;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid $color-white;
+                    }
                 }
             }
             .autocomplete-suggestion-results {
                 display: none;
+                list-style: none;
+                margin: 0;
+
 
                 @include medium-up {
                     display: inline-block;
+                    position: relative;
 
                     @include span(6);
                         background: $color-menu;
@@ -102,37 +121,52 @@
                         height: $section-height;
                         border-radius: 0 $border-med $border-med 0;
                     }
-                    > a {
-                        color: $color-white;
-                        text-decoration: none;
-                        margin-right: $space;
-                        display: inline-block;
+                    > li {
+                        margin: $space-half 0;
+                        &.autocomplete-suggestion-show-all {
+                            position: absolute;
+                            right : $space-double;
+                            bottom: $space-double;
 
-                        &:hover {
-                            text-decoration: underline;
+                            > a:before {
+                                background: url('/assets/images/icon_arrow-right.svg');
+                                background-repeat: no-repeat;
+                                margin-right: 0;
+                            }
                         }
-
-                        &:before{
-                            //TODO Move to icon file and don't repeat the same code
-                            content: "";
-                            background: url('/assets/images/icon_map_white.svg');
-                            background-size: 20px 20px;
-                            background-repeat: no-repeat;
-                            height: 20px;
-                            margin-right: 10px;
-                            width: 20px;
+                        > a {
+                            color: $color-white;
+                            text-decoration: none;
+                            margin-right: $space;
                             display: inline-block;
-                            vertical-align: middle;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                            &:before{
+                                //TODO Move to icon file and don't repeat the same code
+                                content: "";
+                                background: url('/assets/images/icon_map_white.svg');
+                                background-size: 20px 20px;
+                                background-repeat: no-repeat;
+                                height: 20px;
+                                margin-right: 10px;
+                                width: 20px;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            > strong {
+                                color: $color-white;
+                            }
                         }
-                        > strong {
-                            color: $color-text;
-                        }
+
                     }
                 }
             }
         &[data-autocomplete-category="Område"]{
             padding: $space-double;
-            
+
             @include small-up {
                 padding: $space-double $space-quad;
             }
@@ -140,38 +174,53 @@
             .autocomplete-group {
                 display: none; // TODO HIDE IN ANOTHER WAY
             }
+
             .autocomplete-suggestion {
                 margin: 0;
+                &.autocomplete-selected {
+                    background: none;
+                    font-weight: 500;
+                    cursor: auto;
+                }
             }
             .autocomplete-suggestion-results {
                 @include span(12);
                 border-top: 1px solid $color-black-10;
                 border-radius: 0 $border-med $border-med 0;
-            }
-            a {
-                display: block;
-                color: $color-text;
-                text-decoration: none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
 
-                &:hover {
-                    text-decoration: underline;
-                }
+                > li {
+                    @include medium-up {
+                        @include span(3);
+                    }
 
-                @include medium-up {
-                    display: inline-block;
-                    padding-left: $space;
-                }
-                &:before{
-                    //TODO Move to icon file and don't repeat the same code
-                    content: "";
-                    padding-right: $space;
-                    background: url('/assets/images/icon_card.svg');
-                    background-repeat: no-repeat;
-                    background-size: 42px 42px; // TODO USE ICON SIZE VARIABLE
-                    height: 42px;
-                    width: 42px;
-                    display: inline-block;
-                    vertical-align: middle;
+                    > a {
+                        color: $color-text;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        @include medium-up {
+                            display: inline-block;
+                            padding-left: $space;
+                        }
+                        &:before{
+                            //TODO Move to icon file and don't repeat the same code
+                            content: "";
+                            padding-right: $space;
+                            background: url('/assets/images/icon_card.svg');
+                            background-repeat: no-repeat;
+                            background-size: 42px 42px; // TODO USE ICON SIZE VARIABLE
+                            height: 42px;
+                            width: 42px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
                 }
             }
         }

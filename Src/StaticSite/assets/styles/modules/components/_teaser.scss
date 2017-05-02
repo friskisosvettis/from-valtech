@@ -117,26 +117,17 @@
     &__list {
         text-align: left;
         padding: 0;
-
-        li {
-            @include container;
-        }
         h3 {
             margin: 0;
         }
 
         .date {
-            color: $color-black-30;
+            color: $color-black-60;
             margin-bottom: 0;
         }
         .teaser__content {
-            @include span(12);
             color: $color-black;
             padding: $space;
-
-            @include medium-up {
-                @include span(6);
-            }
         }
     }
 }

@@ -24,6 +24,7 @@ var fixedRibbon = require('./modules/fixed-ribbon'),
 	visualHero = require('./modules/visual-hero'),
 	foldExpand = require('./modules/fold-expand'),
 	loadSvg = require('./modules/load-svg'),
+	devbridgeAutocomplete = require('./modules/autocomplete'),
     fitImages = require('./modules/object-fit-images'),
 	slickSlider = require('./modules/carousel'),
 	maps = require('./modules/maps'),
@@ -40,6 +41,7 @@ $(function () {
 	maps.init();
 	tabs.init();
 	navigation.init();
+	devbridgeAutocomplete.init();
 
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

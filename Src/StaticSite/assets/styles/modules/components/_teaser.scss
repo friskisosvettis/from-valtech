@@ -7,52 +7,110 @@
 
 .teaser {
     overflow: hidden;
-    width: 100%;
-    height: 8em;
+    text-align: center;
+    padding: $space-half 0;
 
     @include small-up {
-        height: 15em;
-    }
-    @include medium-up {
-        height: 20em;
-    }
-    @include large-up {
-        height: 25em;
-    }
-    @include xlarge-up {
-        height: 30em;
+        padding: $space;
     }
 
     // Look into other image effects since this is expensive
-    > img {
+    img {
         width: 100%;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        -webkit-transform: scale(1.00);
+        transform: scale(1.00);
 
         &:hover {
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
             transition: opacity 0.35s, transform 0.35s;
-            -webkit-transform: scale(1.00);
-            transform: scale(1.00);
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
         }
     }
+    a {
+        text-decoration: none;
+    }
+    h2 {
+        color: $color-text;
+    }
 
-    &--content {
-        @include layout($grid-outer);
-        @include container();
-        background-color: $color-black-10;
+    &--overlay {
+        position: relative; // Should ot be possible to have an overlay without a link?
+        max-height: 8em;
+        overflow: hidden;
 
-        figcaption {
-            padding: 1em;
-            //TODO: Add margin/padding variables
+        @include small-up {
+            max-height: 12em;
         }
-        img, figcaption {
+
+        @include medium-up {
+            max-height: none;
+        }
+
+        h2 {
+            color: $color-white;
+            margin: $space 0;
+            line-height: 1.25;
+
+            @include small-up {
+                font-size: 1.25rem;
+            }
+            @include medium-up {
+                font-size: 2rem;
+            }
+            @include large-up {
+                font-size: 2.5rem;
+            }
+        }
+        img {
+            filter: blur(2px);
+        }
+
+        > .teaser__content {
+            padding: $space-double;
+            color: $color-white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(221,82,94,0.9);
+            transition: background 0.35s, transform 0.35s;
+            -webkit-transition: background 0.35s, -webkit-transform 0.35s;
+
+            @include large-up {
+                padding: $space-quad*2 $space-quad;
+            }
+            &:hover {
+                background: rgba(221,82,94,0.6);
+                transition: background 0.35s, transform 0.35s;
+                -webkit-transition: background 0.35s, -webkit-transform 0.35s;
+            }
+        }
+    }
+    &--full {
+        img {
             @include span(12);
 
-            @include medium-up {
+            @include small-up {
                 @include span(6);
+            }
+        }
+        .teaser__content {
+            @include span(12);
+            @include small-up {
+                @include span(6);
+            }
+            padding: 0 $space-double;
+            text-align: left;
+
+           @include large-up {
+                padding: $space-quad;
+           }
+            p {
+                color: $color-text;
             }
         }
     }

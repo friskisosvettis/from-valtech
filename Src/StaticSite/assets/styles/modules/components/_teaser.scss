@@ -81,7 +81,7 @@
             -webkit-transition: background 0.35s, -webkit-transform 0.35s;
 
             @include large-up {
-                padding: $space-quad*2 $space-quad;
+                padding: $space-quad*1.5 $space-quad;
             }
             &:hover {
                 background: rgba(221,82,94,0.6);
@@ -111,6 +111,31 @@
            }
             p {
                 color: $color-text;
+            }
+        }
+    }
+    &__list {
+        text-align: left;
+        padding: 0;
+
+        li {
+            @include container;
+        }
+        h3 {
+            margin: 0;
+        }
+
+        .date {
+            color: $color-black-30;
+            margin-bottom: 0;
+        }
+        .teaser__content {
+            @include span(12);
+            color: $color-black;
+            padding: $space;
+
+            @include medium-up {
+                @include span(6);
             }
         }
     }

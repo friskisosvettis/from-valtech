@@ -5,48 +5,65 @@
 * @author Veronika Jeppsson
 */
 
+$base-height: 36px;
+$teaser-height: rem(3 * $base-height);
+$teaser-height-small: rem(5 * $base-height);
+$teaser-height-medium: rem(7 * $base-height);
+$teaser-height-large: rem(10 * $base-height);
+
 .teaser {
     overflow: hidden;
     text-align: center;
     padding: $space-half 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.00);
+    transform: scale(1.00);
+
+    &:hover {
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(1.015);
+        transform: scale(1.015);
+    }
 
     @include small-up {
         padding: $space;
     }
 
-    // Look into other image effects since this is expensive
-    img {
-        width: 100%;
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: scale(1.00);
-        transform: scale(1.00);
-
-        &:hover {
-            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-            transition: opacity 0.35s, transform 0.35s;
-            -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-        }
-    }
     a {
         text-decoration: none;
     }
+
     h2 {
         color: $color-text;
     }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        // This is in order to make object-fit cover work in IE
+        font-family: "object-fit: cover; object-position: top";
+        height: $teaser-height-small;
 
+        @include medium-up {
+            height: $teaser-height-medium;
+        }
+    }
+
+    /*--------------OVERLAY TEASER --------------*/
     &--overlay {
         position: relative; // Should ot be possible to have an overlay without a link?
-        max-height: 8em;
         overflow: hidden;
+        height: $teaser-height;
 
         @include small-up {
-            max-height: 12em;
+            height: $teaser-height-small;
         }
 
         @include medium-up {
-            max-height: none;
+            height: $teaser-height-medium;
         }
 
         h2 {
@@ -64,59 +81,122 @@
                 font-size: 2.5rem;
             }
         }
+
         img {
             filter: blur(2px);
         }
 
-        > .teaser__content {
-            padding: $space-double;
-            color: $color-white;
+        > .teaser__overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            display: table;
+            width: 100%;
+            height: 100%;
             background: rgba(221,82,94,0.9);
             transition: background 0.35s, transform 0.35s;
             -webkit-transition: background 0.35s, -webkit-transform 0.35s;
 
-            @include large-up {
-                padding: $space-quad*1.5 $space-quad;
-            }
             &:hover {
-                background: rgba(221,82,94,0.6);
+                background: $primary-color-dim-80;
                 transition: background 0.35s, transform 0.35s;
                 -webkit-transition: background 0.35s, -webkit-transform 0.35s;
             }
+
+            > .teaser__content {
+                display: table-cell;
+                vertical-align: middle;
+                color: $color-white;
+                padding: 0 $space-double;
+
+                @include medium-up {
+                    padding: 0 $space-quad;
+                }
+            }
         }
     }
+
+    &--enhanced {
+        height: $teaser-height-small;
+
+        @include small-up {
+            height: $teaser-height-medium;
+        }
+
+        @include medium-up {
+            height: $teaser-height-large;
+        }
+
+        img {
+            height: $teaser-height-small;
+
+            @include small-up {
+                height: $teaser-height-medium;
+            }
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
+        }
+    }
+
+    /*----------------- Full width teaser -----------------*/
+
     &--full {
+        @include medium-up {
+            max-height: $teaser-height-large;
+        }
         img {
             @include span(12);
 
             @include small-up {
                 @include span(6);
+                float: none;
+                margin: 0 auto;
+            }
+
+            @include medium-up {
+                @include span(6);
             }
         }
         .teaser__content {
-            @include span(12);
-            @include small-up {
-                @include span(6);
-            }
             padding: 0 $space-double;
             text-align: left;
+            @include span(12);
 
-           @include large-up {
-                padding: $space-quad;
-           }
+            @include medium-up {
+                @include span(6);
+            }
             p {
                 color: $color-text;
             }
         }
     }
+
+    /*----------------- List of teaser elements -----------------*/
     &__list {
         text-align: left;
         padding: 0;
+
+        &:hover{
+            transform: scale(1.00);
+        }
+        li {
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(1.00);
+            transform: scale(1.00);
+
+            &:hover {
+                -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                transition: opacity 0.35s, transform 0.35s;
+                -webkit-transform: scale(1.015);
+                transform: scale(1.015);
+            }
+        }
+
         h3 {
             margin: 0;
         }

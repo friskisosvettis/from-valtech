@@ -121,6 +121,10 @@ blockquote {
 a {
     color: $color-text-link;
     cursor: pointer;
+
+    &.link--inverted {
+        color: $color-white;
+    }
 }
 
 address {

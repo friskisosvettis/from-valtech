@@ -51,18 +51,30 @@
         display: block;
     }
 
-    &--icon {
+    &__icon {
         line-height: 1;
-
-        background-position: $space 50%;
         background-repeat: no-repeat;
         background-size: contain;
         padding: $space + $space-half !important;
-        padding-left: rem(44px + $space-half) !important;
+
+        &--left {
+            padding-left: rem(44px + $space-half) !important;
+        }
+
+        &--right {
+            padding-right: rem(44px + $space-half) !important;
+        }
 
         &.btn--book {
             background-image: url('/assets/images/icon_book.svg');
             background-size: rem(30px) rem(30px);
+            background-position: left $space top 50%;
+        }
+
+        &.btn--external-link {
+            background-image: url('/assets/images/icon_external-link.svg');
+            background-size: rem(15px) rem(15px);
+            background-position: right $space-double bottom 50%;
         }
     }
 }

@@ -55,7 +55,7 @@
                 <li>
                     @if (Model.BookingLink.HasValue)
                     {
-                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
+                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn__icon btn__icon--left")
                     }
                     <button class="navigation__btn" href="#uou2" data-js-menu>
                         <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
@@ -95,7 +95,7 @@
                 @if (Model.BookingLink.HasValue)
                 {
                     <li class="navigation__item visible-large-up">
-                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn--icon")
+                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn__icon btn__icon--left")
                     </li>
                 }
             </ul>

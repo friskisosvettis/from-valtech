@@ -192,6 +192,18 @@ $border-radius: 6px;
 @mixin box-shadow-inset($offset-h, $offset-v, $radius-blur, $radius-spread, $color ) {
     box-shadow: inset $offset-h $offset-v $radius-blur $radius-spread $color ;
  }
+
+/**
+ * TRANSITION SCALE mixin
+ */
+ @mixin transform-scale($scale) {
+    -webkit-transform: scale($scale);
+    transform: scale($scale);
+}
+@mixin transition($this, $time) {
+    -webkit-transition: $this $time, -webkit-transform $time;
+    transition: $this $time, transform $time;
+}
 /*------------------------------------*\
     #ICONS
 \*------------------------------------*/

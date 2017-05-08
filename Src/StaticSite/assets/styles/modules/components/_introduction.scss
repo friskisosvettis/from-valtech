@@ -6,7 +6,7 @@
 
         @include medium-up {
             height: 25em;
-            padding: $space-quad 0;
+            padding: $space-quad $space;
         }
 
         > div {
@@ -49,6 +49,7 @@
         background-size: cover;
         color: $white;
         text-align: center;
+
         @include medium-up {
             transition: scale 0.3s ease-in-out;
         }

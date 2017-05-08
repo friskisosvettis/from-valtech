@@ -15,16 +15,12 @@ $teaser-height-large: rem(10 * $base-height);
     overflow: hidden;
     text-align: center;
     padding: $space-half 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(1.00);
-    transform: scale(1.00);
+    @include transform-scale(1.00);
+    @include transition(opacity ,0.35s);
 
     &:hover {
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: scale(1.015);
-        transform: scale(1.015);
+        @include transform-scale(1.015);
+        @include transition(opacity ,0.35s);
     }
 
     @include small-up {
@@ -45,99 +41,36 @@ $teaser-height-large: rem(10 * $base-height);
         object-position: top;
         // This is in order to make object-fit cover work in IE
         font-family: "object-fit: cover; object-position: top";
-        height: $teaser-height-small;
-
-        @include medium-up {
-            height: $teaser-height-medium;
-        }
     }
 
-    /*--------------OVERLAY TEASER --------------*/
-    &--overlay {
-        position: relative; // Should ot be possible to have an overlay without a link?
-        overflow: hidden;
-        height: $teaser-height;
+    /*--------------SMALL VERSION TEASER --------------*/
+    &--small {
+        img {
+            @include span(3);
+            height: rem($base-height*2);
 
-        @include small-up {
-            height: $teaser-height-small;
-        }
-
-        @include medium-up {
-            height: $teaser-height-medium;
-        }
-
-        h2 {
-            color: $color-white;
-            margin: $space 0;
-            line-height: 1.25;
+            @include xsmall-up {
+                height: $teaser-height;
+            }
 
             @include small-up {
-                font-size: 1.25rem;
+                @include span(12);
+                height: $teaser-height-small;
             }
+
             @include medium-up {
-                font-size: 2rem;
-            }
-            @include large-up {
-                font-size: 2.5rem;
-            }
-        }
-
-        img {
-            filter: blur(2px);
-        }
-
-        > .teaser__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: table;
-            width: 100%;
-            height: 100%;
-            background: rgba(221,82,94,0.9);
-            transition: background 0.35s, transform 0.35s;
-            -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-
-            &:hover {
-                background: $primary-color-dim-80;
-                transition: background 0.35s, transform 0.35s;
-                -webkit-transition: background 0.35s, -webkit-transform 0.35s;
-            }
-
-            > .teaser__content {
-                display: table-cell;
-                vertical-align: middle;
-                color: $color-white;
-                padding: 0 $space-double;
-
-                @include medium-up {
-                    padding: 0 $space-quad;
-                }
-            }
-        }
-    }
-
-    &--enhanced {
-        height: $teaser-height-small;
-
-        @include small-up {
-            height: $teaser-height-medium;
-        }
-
-        @include medium-up {
-            height: $teaser-height-large;
-        }
-
-        img {
-            height: $teaser-height-small;
-
-            @include small-up {
                 height: $teaser-height-medium;
             }
+        }
+        .teaser__content {
+            @include span(9);
+            text-align: left;
+            padding-left: $space;
 
-            @include medium-up {
-                height: $teaser-height-large;
+            @include small-up {
+                @include span(12);
+                text-align: center;
+                padding-left: 0;
             }
         }
     }
@@ -150,6 +83,7 @@ $teaser-height-large: rem(10 * $base-height);
         }
         img {
             @include span(12);
+            height: $teaser-height-small;
 
             @include small-up {
                 @include span(6);
@@ -160,13 +94,17 @@ $teaser-height-large: rem(10 * $base-height);
             @include medium-up {
                 @include span(6);
             }
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
         }
         .teaser__content {
-            padding: 0 $space-double;
             text-align: left;
             @include span(12);
 
             @include medium-up {
+                padding: 0 $space-double;
                 @include span(6);
             }
             p {
@@ -183,20 +121,11 @@ $teaser-height-large: rem(10 * $base-height);
         &:hover{
             transform: scale(1.00);
         }
-        li {
-            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-            transition: opacity 0.35s, transform 0.35s;
-            -webkit-transform: scale(1.00);
-            transform: scale(1.00);
-
-            &:hover {
-                -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-                transition: opacity 0.35s, transform 0.35s;
-                -webkit-transform: scale(1.015);
-                transform: scale(1.015);
+        li:hover {
+            h3 {
+                text-decoration: underline;
             }
         }
-
         h3 {
             margin: 0;
         }
@@ -207,7 +136,79 @@ $teaser-height-large: rem(10 * $base-height);
         }
         .teaser__content {
             color: $color-black;
-            padding: $space;
+        }
+    }
+
+    /*--------------OVERLAY TEASER --------------*/
+    &--overlay {
+        position: relative; // Should ot be possible to have an overlay without a link?
+        overflow: hidden;
+        height: $teaser-height-small;
+
+        @include xsmall-up {
+            height: $teaser-height-medium;
+        }
+
+        @include medium-up {
+            height: $teaser-height-medium;
+        }
+
+        h2 {
+            color: $color-white;
+            margin: $space 0;
+        }
+
+        img {
+            filter: blur(2px);
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: table;
+        width: 100%;
+        height: 100%;
+        background: rgba(221,82,94,0.9);
+        @include transition(background ,0.35s);
+
+        &:hover {
+            background: $primary-color-dim-80;
+            @include transition(background ,0.35s);
+        }
+
+        > .teaser__content {
+            display: table-cell;
+            vertical-align: middle;
+            color: $color-white;
+            padding: 0 $space-double;
+
+            @include large-up {
+                padding: 0 $space-quad;
+            }
+        }
+    }
+    &--enhanced {
+        height: $teaser-height-medium;
+
+        @include small-up {
+            > .teaser__overlay > .teaser__content {
+                padding: 0 $space-quad;
+            }
+        }
+
+        @include medium-up {
+            height: $teaser-height-large;
+        }
+
+        img {
+            height: $teaser-height-medium;
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
         }
     }
 }

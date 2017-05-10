@@ -5,22 +5,27 @@
 
 param (
 	[string]$type = "local",
+	[string]$search="solr",
   [string]$computername = "",
   [string]$websiteName = "",
   [string]$webRootPath = "")
  
+
   try{
 
   
  Set-Location -Path "$PSScriptRoot" -PassThru
  Write-Host "Script path is set to $(Get-Location)"
-
+ 
  #Include common functions
- . .\Common.ps1 
+ . .\Common.ps1
+ . .\ChangeToSolrSearch.ps1 
+
  
  #Init 
  Initialize
-
+	Write-Host "search = " $search
+	Write-Host "webRootPath = " $webRootPath
 
    if($type -eq 'local' -and $computername -eq "")
     {
@@ -65,10 +70,11 @@ Write-Host "ConfigFolder = " $configFolder
 Write-Host "GlobalFolder = " $globalFolder
 Write-Host "EnvironmentFolder = " $environmentFolder
 Write-Host "ServerFolder = " $serverfolder
+Write-Host "Search = " $search
 Write-Host "" 
 Write-Host "**********************************************"
 Write-Host ""
-
+ 
  
  #Transform in Global folder
  GetFoldersAndTransform -folder $globalFolder -webRootPath $webRootPath
@@ -79,7 +85,14 @@ Write-Host ""
  #Transform in Server folder
  GetFoldersAndTransform -folder $serverFolder -webRootPath $webRootPath
     
-  }Catch{
+ if($search -eq 'solr')
+ {
+ 	ActivateSolrConfigFiles -webRootPath $webRootPath
+ 	DeActivateLuceneConfigFiles -webRootPath $webRootPath
+	UpdateGlobalAsax -webRootPath $webRootPath
+ } 
+	
+ }Catch{
       Write-Host ""
       Write-Host "*** ALERT ******* ALERT ******* ALERT ******* ALERT ****"
       Write-Host ""

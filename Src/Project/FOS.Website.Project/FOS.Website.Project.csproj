@@ -877,8 +877,8 @@
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Synthesis, Version=8.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Synthesis.Core.8.2.4\lib\net452\Synthesis.dll</HintPath>
+    <Reference Include="Synthesis, Version=8.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Synthesis.Core.8.2.6\lib\net452\Synthesis.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
@@ -982,6 +982,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Project\Friskis\DefaultIndex.Solr.Patch.config.disabled">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\PROJECT\FOS.Website.Project_connectionStrings.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1015,6 +1018,9 @@
     <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_siteDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_solr.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\WEB\Friskis-PROD\PROJECT\FOS.Website.Project_connectionStrings.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1036,6 +1042,9 @@
     <Content Include="_ConfigTransformations\WEB\Friskis-TEST\PROJECT\FOS.Website.Project_dataFolder.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\WEB\Friskis-TEST\PROJECT\FOS.Website.Project_solr.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\WEB\Friskis-TEST\PROJECT\FOS.Website.Project_siteDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1051,17 +1060,17 @@
     <None Include="App_Config\Include\DynamicPlaceholders\DynamicPlaceholders.config" />
     <Content Include="App_Config\Include\Project\Friskis\RegisterCustomRoutes.config" />
     <Content Include="App_Config\Include\Project\Friskis\KeepAlive.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <None Include="packages.config" />
     <Content Include="App_Config\Include\Project\Friskis\SiteDefinitions.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
     <Content Include="App_Config\Include\zzz\ProjectSynthesisModules.config" />
     <Content Include="Project\Friskis\Views\Layouts\Default.cshtml" />
     <Content Include="Project\Friskis\Views\Layouts\Web.config" />

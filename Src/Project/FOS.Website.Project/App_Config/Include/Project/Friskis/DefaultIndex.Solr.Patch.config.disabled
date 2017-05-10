@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <contentSearch>
+      <indexConfigurations>
+        <defaultSolrIndexConfiguration>
+          <documentOptions>
+            <fields hint="raw:AddComputedIndexField">
+              <field fieldName="_links" storageType="yes"
+                indexType="untokenized">Sitecore.ContentSearch.ComputedFields.ItemLinks, Sitecore.ContentSearch</field>
+              <field fieldName="_templates" storageType="yes"
+                indexType="untokenized">Sitecore.ContentSearch.ComputedFields.AllTemplates, Sitecore.ContentSearch</field>
+            </fields>
+          </documentOptions>
+        </defaultSolrIndexConfiguration>
+      </indexConfigurations> 
+    </contentSearch>  
+    <settings>
+      <setting name="ContentSearch.Solr.ServiceBaseAddress" value="http://localhost:8983/solr" patch:instead="/configuration/sitecore/settings/setting[@name='ContentSearch.Solr.ServiceBaseAddress']"/>
+      <setting name="ContentSearch.Solr.EnableHttpCache" value="false" patch:instead="/configuration/sitecore/settings/setting[@name='ContentSearch.Solr.EnableHttpCache']"/>
+    </settings>
+  </sitecore>
+</configuration>

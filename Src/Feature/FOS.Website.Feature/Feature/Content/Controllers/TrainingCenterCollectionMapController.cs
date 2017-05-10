@@ -23,33 +23,49 @@ using Sitecore.Data.Items;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Sitecore.Analytics.Rules.Conditions;
+using Sitecore.ContentSearch.Linq;
+using Sitecore.ContentSearch.Linq.Solr;
+
 
 namespace FOS.Website.Feature.Content.Controllers
 {
     public class TrainingCenterCollectionMapController : Controller
     {
-        private IEnumerable<TTemplate> GetAllDescendentsOfType<TTemplate>(Item item)
-            where TTemplate : class, IStandardTemplateItem
+        private IEnumerable<IMapNodeItem> GetAllMapNodes(Item item)
         {
-            using (var context = ContentSearchManager.CreateSearchContext(new SitecoreIndexableItem(item)))
+            string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
+            using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
             {
-                var result = context.GetSynthesisQueryable<TTemplate>()
-                    .Where(i => i.Path.StartsWith(item.Paths.Path + "/"))
-                    .ToList();
 
-                return result;
+                string templateID = MapNode.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
+
+                var query = context.GetQueryable<SearchResultItem>()
+                    .Where(i => i["_latestversion"].Equals("1"))
+                    .Where(i => i.Language.Equals(item.Language.Name))
+                    .Where(i => i["_templates"].Contains(templateID));
+
+                var result = query.GetResults();
+
+                return result.Hits.Select(i => i.Document.GetItem().As<IMapNodeItem>()).Where(n => n != null);
+
             }
         }
 
-        private IEnumerable<TTemplate> GetAllOfType<TTemplate>(Item item)
-            where TTemplate : class, IStandardTemplateItem
+        private IEnumerable<IMapNodeItem> GetAllDecendentMapNodes(Item item)
         {
-            using (var context = ContentSearchManager.CreateSearchContext(new SitecoreIndexableItem(item)))
+            string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
+            using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
             {
-                var result = context.GetSynthesisQueryable<TTemplate>()
-                    .ToList();
+                string templateID = MapNode.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
+                var query = context.GetQueryable<SearchResultItem>()
+                    .Where(i => i["_latestversion"].Equals("1"))
+                    .Where(i => i.Language.Equals(item.Language.Name))
+                    .Where(i => i.Paths.Contains(item.ID))
+                    .Where(i => i["_templates"].Contains(templateID));
 
-                return result;
+                var result = query.GetResults();
+
+                return result.Hits.Select(i => i.Document.GetItem().As<IMapNodeItem>()).Where(n => n != null);
             }
         }
 
@@ -65,11 +81,11 @@ namespace FOS.Website.Feature.Content.Controllers
                 var assosiationItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationFlagTemplateItem>();
                 if (assosiationItem != null)
                 {
-                    listOfGyms = GetAllDescendentsOfType<IMapNodeItem>(assosiationItem.InnerItem).ToList();
+                    listOfGyms = GetAllDecendentMapNodes(assosiationItem.InnerItem).ToList();
                 }
                 else
                 {
-                    listOfGyms = GetAllOfType<IMapNodeItem>(Sitecore.Context.Item).ToList();
+                    listOfGyms = GetAllMapNodes(Sitecore.Context.Item).ToList();
                 }
             }
 

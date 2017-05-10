@@ -165,6 +165,12 @@ gulp.task('Full-Publish', function () {
     runSequence('z_config-set-build-folders', 'z_nuget-restore', 'z_clean-config-transformations', 'Publish-Csharp', 'z_apply-config-transformations', 'Publish-Tds', 'z_clean-assets', 'z_publish-sass', 'z_copy-assets-fonts', 'z_publish-javascript', 'z_copy-assets-images');
 });
 
+gulp.task('Full-Publish-Solr', function () {
+    config.runCleanBuilds = true;
+
+    runSequence('z_config-set-build-folders', 'z_nuget-restore', 'z_clean-config-transformations', 'Publish-Csharp', 'z_apply-config-transformations-solr', 'Publish-Tds', 'z_clean-assets', 'z_publish-sass', 'z_copy-assets-fonts', 'z_publish-javascript', 'z_copy-assets-images');
+});
+
 gulp.task('z_nuget-restore', ['z_config-set-build-folders'], function () {
     var solution = './' + config.paths.solutionName + '.sln';
     if (config.verbose)
@@ -190,6 +196,20 @@ gulp.task('z_apply-config-transformations', ['z_config-set-webroot'], function (
     });
 });
 
+gulp.task('z_apply-config-transformations-solr', ['z_config-set-webroot'], function (callback) {
+    var configTransformationScriptPath = "./" + config.paths.configTransformationDir + "\\Default.ps1",
+    webRootPath = config.paths.websiteRoot;
+
+    if (config.verbose) {
+        gutil.log("Script path: " + configTransformationScriptPath);
+        gutil.log("Webroot Path: " + webRootPath);
+    }
+
+    exec("Powershell.exe  -executionpolicy remotesigned -File " + configTransformationScriptPath + " -webRootPath \"" + webRootPath + "\"" + " -search \"solr\"", function (err, stdout, stderr) {
+        console.log(stdout);
+        callback(err);
+    });
+});
 
 
 

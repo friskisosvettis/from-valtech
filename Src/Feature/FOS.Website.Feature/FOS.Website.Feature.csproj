@@ -904,12 +904,12 @@
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Synthesis, Version=8.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Synthesis.Core.8.2.4\lib\net452\Synthesis.dll</HintPath>
+    <Reference Include="Synthesis, Version=8.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Synthesis.Core.8.2.6\lib\net452\Synthesis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Synthesis.Mvc, Version=8.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Synthesis.Mvc.Core.8.2.4\lib\net452\Synthesis.Mvc.dll</HintPath>
+    <Reference Include="Synthesis.Mvc, Version=8.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Synthesis.Mvc.Core.8.2.6\lib\net452\Synthesis.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -1039,6 +1039,12 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Feature\Content\Views\ProximityView.cshtml" />
+    <Content Include="App_Config\Include\aaaSearchIndexConfigs\aaaSitecore.ContentSearch.DisableAllLuceneIndexes.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1091,25 +1097,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Config\Include\DynamicPlaceholders\DynamicPlaceholders.config" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
     <Content Include="Feature\Identity\Views\Web.config" />
     <Content Include="Feature\Content\Views\ExpandableSection.cshtml" />
     <Content Include="Feature\Content\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\zzz\FeatureSynthesisModules.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Config\Include\Synthesis\Synthesis.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Feature\Identity\Views\Footer.cshtml" />

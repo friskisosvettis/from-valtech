@@ -868,8 +868,8 @@
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Synthesis, Version=8.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Synthesis.Core.8.2.4\lib\net452\Synthesis.dll</HintPath>
+    <Reference Include="Synthesis, Version=8.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Synthesis.Core.8.2.6\lib\net452\Synthesis.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -974,12 +974,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <None Include="packages.config" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.config" />
-    <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <Content Include="App_Config\Include\zzz\DictionarySynthesisModules.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1008,7 +1008,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8644</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

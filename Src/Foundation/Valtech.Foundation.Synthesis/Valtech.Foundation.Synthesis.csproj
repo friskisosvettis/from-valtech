@@ -896,8 +896,8 @@
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Synthesis, Version=8.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Synthesis.Core.8.2.4\lib\net452\Synthesis.dll</HintPath>
+    <Reference Include="Synthesis, Version=8.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Synthesis.Core.8.2.6\lib\net452\Synthesis.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -1002,6 +1002,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
+    <Content Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <None Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1020,11 +1024,7 @@
     <Compile Include="StructureAssosiatedItemConverter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
-    <Content Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config" />
-    <Content Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
-    <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Synthesis\Synthesis.config">

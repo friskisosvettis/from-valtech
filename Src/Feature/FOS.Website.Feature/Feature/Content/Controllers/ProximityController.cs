@@ -29,6 +29,7 @@ using Sitecore.Analytics;
 using Sitecore.Analytics.Lookups;
 using Sitecore.Analytics.Rules.Conditions;
 using Sitecore.CES.GeoIp;
+using Sitecore.ContentSearch.Linq;
 using Sitecore.Pipelines.Save;
 using Stimulsoft.Base.Context;
 using Telerik.Web.Data.Extensions;
@@ -87,7 +88,7 @@ namespace FOS.Website.Feature.Content.Controllers
         {
             var dX = oX - pX;
             var dY = oY - pY;
-            return dX*dX + dY*dY;
+            return dX * dX + dY * dY;
         }
 
         private Item GetAssociationItem(IMapNodeItem gymItem)
@@ -95,22 +96,31 @@ namespace FOS.Website.Feature.Content.Controllers
             return gymItem.InnerItem.ClosestAscendantItemOfType<IAssociationFlagTemplateItem>()?.InnerItem;
         }
 
+        // Add some extra parameters so the list of Mapnodes to sort is reduced
         private IEnumerable<Item> GetAllAssociations(Item item, double latitude, double longitude)
         {
-            using (var context = ContentSearchManager.CreateSearchContext(new SitecoreIndexableItem(item)))
+            string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
+            using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
             {
-                var result = context.GetSynthesisQueryable<IMapNodeItem>()
-                    .ToList()
+                string templateID = MapNode.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
+                var query = context.GetQueryable<SearchResultItem>()
+                    .Where(i => i["_latestversion"].Equals("1"))
+                    .Where(i => i.Language.Equals(item.Language.Name))
+                    .Where(i => i["_templates"].Contains(templateID));
+
+                var result = query.GetResults();
+
+                return result.Hits
+                    .Select(i => i.Document.GetItem().As<IMapNodeItem>())
+                    .Where(n => n != null)
                     .Where(n => n.Longitude.HasTextValue && n.Latitude.HasTextValue)
                     .OrderBy(
-                        n => OptimizedDistance( Convert.ToDouble(n.Latitude.RawValue.Replace('.',',')) 
+                        n => OptimizedDistance(Convert.ToDouble(n.Latitude.RawValue.Replace('.', ','))
                                               , Convert.ToDouble(n.Longitude.RawValue.Replace('.', ','))
                                               , latitude, longitude))
                     .Select(GetAssociationItem)
                     .DistinctBy(a => a.DisplayName)
                     .Take(NR_OFF_ASSOCIATIONS_IN_ANSWER).ToList();
-
-                return result;
             }
         }
 
@@ -120,12 +130,10 @@ namespace FOS.Website.Feature.Content.Controllers
             ProximityModel model = null;
             if (GotUserLocation(out userLat, out userLong))
             {
-                var listOfAssociations = GetAllAssociations(Sitecore.Context.Item, userLat, userLong);
-
                 model = new ProximityModel()
                 {
-                    AssociationsItems = listOfAssociations
-                };
+                    AssociationsItems = GetAllAssociations(Sitecore.Context.Item, userLat, userLong)
+            };
             }
 
             return View(Constants.Views.Paths.ProximityView, model);

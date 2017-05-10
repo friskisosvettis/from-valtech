@@ -52,6 +52,21 @@ function ActivateSolrConfigFiles{
 		ActivateConfigureFile $config
 	}
 }
+
+function DeActivateSolrMasterConfigFiles{
+	param([string]$webRootPath)
+	
+	Write-Host "DeActivateLuceneConfigFiles WebRoot:" $webRootPath
+	if($webRootPath -eq ""){
+		exit
+	}
+	
+	$configFileListSolrMaster = Get-ChildItem -Path $webRootPath -Recurse -Include *.Solr.*.Master*config
+	foreach ($config in $configFileListSolrMaster)
+	{
+		DeActivateConfigureFile $config
+	}
+}
  
 function DeActivateLuceneConfigFiles{
 	param([string]$webRootPath)

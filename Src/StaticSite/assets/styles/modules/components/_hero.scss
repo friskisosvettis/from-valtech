@@ -126,7 +126,7 @@
                 a:after {
                     content: "";
                     background-repeat: no-repeat;
-                    background-size: $icon-size-small $icon-size-small;
+                    background-size: contain;
                     margin: 0 $space-half 0 0;
                     height: $icon-size-small;
                     width: $icon-size-small;

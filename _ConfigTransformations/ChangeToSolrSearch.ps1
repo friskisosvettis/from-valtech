@@ -62,10 +62,22 @@ function DeActivateSolrMasterConfigFiles{
 	}
 	
 	$configFileListSolrMaster = Get-ChildItem -Path $webRootPath -Recurse -Include *.Solr.*.Master*config
+
 	foreach ($config in $configFileListSolrMaster)
 	{
 		DeActivateConfigureFile $config
 	}
+	
+	# List of others Solr configs that does not need to be on CD
+	$ContentTestingSolr = join-path $webRootPath "App_Config/Include/ListManagement/Sitecore.ContentTesting.Solr.IndexConfiguration.config"
+	$FxmSolr = join-path $webRootPath "App_Config/Include/FXM/Sitecore.FXM.Solr.Index.DomainsSearch.config"
+	$ListManagerIndexListSolr = join-path $webRootPath "App_Config/Include/ListManagement/Sitecore.ListManagement.Solr.Index.List.config"
+	$ListManagerIndexConfigurationSolr = join-path $webRootPath "App_Config/Include/ListManagement/Sitecore.ListManagement.Solr.IndexConfiguration.config"
+	
+	DeActivateConfigureFile $ContentTestingSolr
+	DeActivateConfigureFile $FxmSolr
+	DeActivateConfigureFile $ListManagerIndexListSolr
+	DeActivateConfigureFile $ListManagerIndexConfigurationSolr
 }
  
 function DeActivateLuceneConfigFiles{

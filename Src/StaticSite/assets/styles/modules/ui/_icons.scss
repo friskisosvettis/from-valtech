@@ -1,7 +1,68 @@
 .icon {
     width: $icon-size;
     height: $icon-size;
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - ICONS AS BEFORE/AFTER ELEMENTS- - - - - */
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+    &--small, &--medium {
+        &:before {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin-right: $space;
+            vertical-align: middle;
+        }
+    }
+
+    &--small {
+        &:before {
+            background-size: $icon-size-small $icon-size-small;
+            height: $icon-size-small;
+            width: $icon-size-small;
+        }
+    }
+    &--medium {
+        &:before {
+            background-size: $icon-size-medium $icon-size-medium;
+            height: $icon-size-medium;
+            width: $icon-size-medium;
+        }
+    }
+
+    &__phone {
+        &:before {
+            background-image: url('/assets/images/icon_phone.svg');
+        }
+    }
+
+    &__mail {
+        &:before {
+            background-image: url('/assets/images/icon_mail.svg');
+        }
+    }
+
+    &__schedule {
+        &:before {
+            background-image: url('/assets/images/icon_schedule-small.svg');
+        }
+    }
+
+    &__clock {
+        &:before {
+            background-image: url('/assets/images/icon_schedule-small.svg');
+        }
+    }
+
+    &__pin {
+        &:before {
+            background-image: url('/assets/images/icon_map_white.svg');
+        }
+    }
+
 }
+
 
 .icon__link {
     &:before {

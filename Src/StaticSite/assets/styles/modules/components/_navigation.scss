@@ -194,7 +194,6 @@ $menu-height: 6em;
             position: absolute;
             top: 0;
             left: 0;
-            padding-left: $space-double;
         }
         li:last-of-type {
             width: 75%;
@@ -206,7 +205,7 @@ $menu-height: 6em;
                 padding-right: $space-double;
             }
             .btn--book {
-                margin-top: $space-double;
+                margin: $space-double 0 0 0;
                 display: inline-block;
                 vertical-align: top;
             }

@@ -11,17 +11,8 @@ $touch-width: 44px;
 .carousel {
     position: relative;
     overflow: hidden;
-    height: 14em;
+    height: 30em;
 
-    @include small-up {
-        height: 22em;
-    }
-    @include medium-up {
-        height: 26em;
-    }
-    @include large-up {
-        height: 30em;
-    }
     @include xlarge-up {
         height: 32em;
     }

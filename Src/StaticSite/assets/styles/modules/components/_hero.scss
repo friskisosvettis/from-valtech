@@ -11,17 +11,8 @@
 
     position: relative;
     overflow: hidden;
-    height: 14em;
+    height: 30em;
 
-    @include small-up {
-        height: 22em;
-    }
-    @include medium-up {
-        height: 26em;
-    }
-    @include large-up {
-        height: 30em;
-    }
     @include xlarge-up {
         height: 32em;
     }
@@ -29,23 +20,14 @@
         height: 40em;
     }
 
-    // ONLY USED ON HEROPAGE
+    /* USED ON HERO PAGE */
     &__img {
         position: fixed;
         width: 100%;
         overflow: hidden;
-        height: 14em;
+        height: 30em;
         z-index: -1;
 
-        @include small-up {
-            height: 22em;
-        }
-        @include medium-up {
-            height: 26em;
-        }
-        @include large-up {
-            height: 30em;
-        }
         @include xlarge-up {
             height: 32em;
         }
@@ -58,6 +40,7 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
+        // This is in order to make object-fit cover work in IE
         font-family: "object-fit: cover; object-position: top";
     }
 
@@ -85,6 +68,103 @@
 
         h2 {
             margin-bottom: 0;
+        }
+    }
+
+    /* USED ON TRAINING CENTER PAGE */
+    &--overlay {
+        overflow: visible;
+        word-wrap: break-word;
+
+        img {
+            filter: blur(14px);
+        }
+        h1 {
+            margin-bottom: 0;
+            text-align: center;
+            @include small-up {
+                text-align: left;
+            }
+        }
+        .address {
+            color: $color-white;
+            text-align: center;
+            @include small-up {
+                text-align: left;
+            }
+        }
+        .hero__container {
+            text-align: left;
+            background: $overlay-color-dim-60;
+        }
+        .hero__content {
+            bottom: - $space-quad;
+            padding-bottom: 0;
+            z-index: 1;
+
+            @include small-up {
+                padding-bottom: $space-quad;
+                bottom: 0;
+            }
+        }
+    }
+
+    /* USED ON TRAINING CENTER PAGE */
+    &__infobox {
+        background-color: $color-white;
+        padding: 0;
+        list-style-type: none;
+        box-shadow: 0 0 1px $color-dim-30;
+
+        li {
+            position: relative;
+
+            &:first-of-type, &:nth-of-type(2) {
+                border-bottom: 1px solid $color-black-30;
+                font-weight: 700;
+
+                a:after {
+                    content: "";
+                    background-repeat: no-repeat;
+                    background-size: $icon-size-small $icon-size-small;
+                    margin: 0 $space-half 0 0;
+                    height: $icon-size-small;
+                    width: $icon-size-small;
+                    background-image: url('/assets/images/icon_arrow-right-red.svg');
+                    position: absolute;
+                    right: $space;
+                    top: $space-double + $space-half;
+                    @include transition(margin-right, 0.35s);
+                }
+                a:hover {
+                    &:after {
+                        margin-right: 0;
+                        @include transition(margin-right, 0.35s);
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                a {
+                    color: $color-text;
+                    padding-bottom: $space;
+                    word-break: break-all;
+                }
+            }
+            &:last-of-type {
+                a {
+                    color: $color-text;
+                    padding-top: $space;
+                }
+            }
+            a {
+                text-shadow: none;
+                text-decoration: none;
+                padding: $space-double;
+                display: block;
+                word-wrap:break-word;
+                overflow: hidden;
+            }
         }
     }
 }

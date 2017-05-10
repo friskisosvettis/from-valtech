@@ -1,0 +1,7 @@
+.trainingcenter-page {
+    padding-top: $space-quad;
+
+    @include small-up {
+        padding-top: 0;
+    }
+}

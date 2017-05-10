@@ -9,6 +9,7 @@ $teaser-height: rem(3 * $base-height);
 $teaser-height-small: rem(5 * $base-height);
 $teaser-height-medium: rem(7 * $base-height);
 $teaser-height-large: rem(10 * $base-height);
+$teaser-height-xlarge: rem(14.5 * $base-height);
 
 .teaser {
     overflow: hidden;
@@ -207,6 +208,20 @@ $teaser-height-large: rem(10 * $base-height);
 
             @include medium-up {
                 height: $teaser-height-large;
+            }
+        }
+    }
+}
+
+
+/* CONTAINER SPECIFIC CHANGES FOR TEASER */
+
+@include small-up {
+    .container--8, .container--12 {
+        .teaser--overlay {
+            height: $teaser-height-xlarge;
+            img {
+                height: $teaser-height-xlarge;
             }
         }
     }

@@ -1,0 +1,33 @@
+﻿/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+$teaser-height: rem(3 * $base-height);
+$teaser-height-small: rem(5 * $base-height);
+$teaser-height-medium: rem(7 * $base-height);
+$teaser-height-large: rem(10 * $base-height);
+$teaser-height-xlarge: rem(14.5 * $base-height);
+
+.video {
+    max-width: 100%;
+    width: 100%;
+}
+
+.container--12 {
+    height: $teaser-height-xlarge;
+}
+
+.container--8 {
+    height: $teaser-height-xlarge;
+}
+
+.container--6 {
+    height: $teaser-height-large;
+}
+
+.container--4 {
+    height: $teaser-height-medium;
+}

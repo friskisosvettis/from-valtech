@@ -75,10 +75,10 @@ $primary-color-light: #FCE7E9;  // Light red
 $secondary-color: #48A1DA;      // Blue
 $cta-color: #0EC55A;            // Green
 
-$color-menu: #e45563;
-$color-menu-98: rgba(221,82,94,0.98);
+$primary-color-98: #e45563;
 $primary-color-dim-80: rgba(221,82,94,0.8);
 $primary-color-dim-90: rgba(221,82,94,0.9);
+$primary-color-dim-98: rgba(221,82,94,0.98);
 
 $overlay-color-dim-60: rgba(41, 48, 66, 0.6); // TODO - change to another color? 
 /*
@@ -120,7 +120,7 @@ $color-heading: $color-black-90;
  *    navigation link, footer link, etc.
  */
 
- $color-text-link: $primary-color;
+ $color-text-link: $primary-color-98;
 
 /*
  * Border Colors
@@ -212,4 +212,5 @@ $border-radius: 6px;
 \*------------------------------------*/
 
 $icon-size: rem(44px);
-$icon-size-small: rem(24px);
+$icon-size-medium: rem(28px);
+$icon-size-small: rem(20px);

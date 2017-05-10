@@ -39,7 +39,7 @@
 }
 
 .btn {
-    @include button-settings($color-menu, $color-white);
+    @include button-settings($primary-color-98, $color-white);
 
     &__link {
         // This is a class added to an a tag in order for make it behave as a btn

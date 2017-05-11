@@ -3,7 +3,7 @@
   <Website>
     <ReplaceXml>
       <File name="\App_Config\Include\Project\Friskis\DefaultIndex.Solr.Patch.config.disabled">
-        <Item path="/configuration/sitecore/settings/setting[@name='ContentSearch.Solr.ServiceBaseAddress']" action="Replace" key="value" value="http://sdev-fsweb02:81/solr" />
+        <Item path="/configuration/sitecore/settings/setting[@name='ContentSearch.Solr.ServiceBaseAddress']" action="Replace" key="value" value="http://sdev-fsweb02:8983/solr" />
       </File>
     </ReplaceXml>
   </Website>

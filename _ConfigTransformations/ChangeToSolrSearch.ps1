@@ -70,12 +70,10 @@ function DeActivateSolrMasterConfigFiles{
 	
 	# List of others Solr configs that does not need to be on CD
 	$ContentTestingSolr = join-path $webRootPath "App_Config/Include/ContentTesting/Sitecore.ContentTesting.Solr.IndexConfiguration.config"
-	$FxmSolr = join-path $webRootPath "App_Config/Include/FXM/Sitecore.FXM.Solr.DomainsSearch.DefaultIndexConfiguration.config"
 	$ListManagerIndexListSolr = join-path $webRootPath "App_Config/Include/ListManagement/Sitecore.ListManagement.Solr.Index.List.config"
 	$ListManagerIndexConfigurationSolr = join-path $webRootPath "App_Config/Include/ListManagement/Sitecore.ListManagement.Solr.IndexConfiguration.config"
 	
 	DeActivateConfigureFile $ContentTestingSolr
-	DeActivateConfigureFile $FxmSolr
 	DeActivateConfigureFile $ListManagerIndexListSolr
 	DeActivateConfigureFile $ListManagerIndexConfigurationSolr
 }

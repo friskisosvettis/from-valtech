@@ -24,8 +24,6 @@ param (
  
  #Init 
  Initialize
-	Write-Host "search = " $search
-	Write-Host "webRootPath = " $webRootPath
 
    if($type -eq 'local' -and $computername -eq "")
     {

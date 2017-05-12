@@ -974,10 +974,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
-    <Content Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
-    <Content Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
-    <Content Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
+    <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
+    <None Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
+    <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
+    <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <None Include="packages.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.config" />
     <Content Include="App_Config\Include\zzz\DictionarySynthesisModules.config" />
@@ -1008,7 +1008,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8644</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -28,20 +28,20 @@ GetBasicImageView
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
 key: datasource location
-content-length: 63
+content-length: 17
 
-/sitecore/content/Sweden/Friskis/Frontpage/ImageComponentFolder
+/sitecore/content
 ----field----
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
 key: datasource template
-content-length: 51
+content-length: 60
 
-/sitecore/templates/Feature/Content/Data/BasicImage
+/sitecore/templates/Project/Friskis/Content Types/BasicImage
 ----version----
 language: sv-SE
 version: 1
-revision: e3e4301e-c564-4fe1-b7e0-c5f442c4b3bc
+revision: 1936ae58-059c-4772-81fd-8588eac3f1e2
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -70,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e3e4301e-c564-4fe1-b7e0-c5f442c4b3bc
+1936ae58-059c-4772-81fd-8588eac3f1e2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T140608Z
+20170512T082145Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

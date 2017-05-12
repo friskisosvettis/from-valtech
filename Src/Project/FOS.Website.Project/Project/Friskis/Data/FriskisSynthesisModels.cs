@@ -29,6 +29,12 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
     public partial interface IDataSourceFolderItem : Synthesis.IStandardTemplateItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Gym Map template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{93BCB0F5-8DDD-4DE6-A3C1-066E154BF14A}", "4aWrfzgHG01plj2FNVxnI9hCcnE=", "Valtech.Foundation.Synthesis")]
+    public partial interface IGymMapItem : global::FOS.Website.Feature.Content.Data.IMapWidgetGymsItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Hero Object Image template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4E7CED41-68AC-4A40-8DD9-D0CDC4187579}", "QiqeSrRRE7vTVGhrAYEHEbC/AXU=", "Valtech.Foundation.Synthesis")]
@@ -326,6 +332,71 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new DataSourceFolder(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Gym Map template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class GymMap : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IGymMapItem {
+        
+        private Synthesis.FieldTypes.TextField _mapTitle;
+        
+        public GymMap(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public GymMap(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Gym Map";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{93BCB0F5-8DDD-4DE6-A3C1-066E154BF14A}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Map Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("map_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MapTitle {
+            get {
+                if (_mapTitle == null) {
+                    _mapTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{651A385F-DC08-42C1-BA26-515D5B0D4C47}"], "/sitecore/templates/Project/Friskis/Content Types/Gym Map", "Map Title"), this.GetSearchFieldValue("map_title"));
+                }
+                return _mapTitle;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class GymMapInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{93BCB0F5-8DDD-4DE6-A3C1-066E154BF14A}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new GymMap(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new GymMap(searchFields);
         }
     }
     

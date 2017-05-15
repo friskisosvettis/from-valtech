@@ -1047,6 +1047,7 @@
     <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
+    <Content Include="Feature\Content\Views\Video.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1070,6 +1071,7 @@
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
     <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
+    <Compile Include="Feature\Content\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />

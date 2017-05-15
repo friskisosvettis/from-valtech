@@ -1,0 +1,13 @@
+﻿@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@model VideoModel
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <p>@Html.TextFor(m=> m.VideoItem.YoutubeID)</p>
+}
+
+<div class="media-container media-container--16x9 media-container__youtube media-container__video" data-js-youtube="@Model.VideoItem.YoutubeID">
+    <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Play button</span></div>
+</div>
+

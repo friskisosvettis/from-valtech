@@ -33,5 +33,10 @@ namespace FOS.Website.Feature.Content.Controllers
             WideImageModel model = new WideImageModel();
             return View(Constants.Views.Paths.WideImage, model);
         }
+        public ActionResult GetVideoView()
+        {
+            VideoModel model = new VideoModel();
+            return View(Constants.Views.Paths.Video, model);
+        }
     }
 }

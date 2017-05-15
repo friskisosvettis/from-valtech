@@ -59,10 +59,10 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
     public partial interface ISettingsFolderItem : Synthesis.IStandardTemplateItem {
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/VTestComponent template</summary>
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Video template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D14B2093-D2AE-42CD-924B-4D9E02B6D229}", "M8h/93kBif2UZVgp/60JY6KYDB4=", "Valtech.Foundation.Synthesis")]
-    public partial interface IVTestComponentItem : global::FOS.Website.Feature.Content.Data.IVTestComponentItem {
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3FCDE34C-3E06-4BB6-BDC7-C2076B1DC9F3}", "IrQFg7/hZ9DpPfmAm9HzXrnvGVg=", "Valtech.Foundation.Synthesis")]
+    public partial interface IVideoItem : global::FOS.Website.Feature.Content.Data.IVideoItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/WebsiteRoot template</summary>
@@ -673,35 +673,31 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/VTestComponent template</summary>
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Video template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class VTestComponent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IVTestComponentItem {
+    public partial class Video : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IVideoItem {
         
-        private Synthesis.FieldTypes.TextField _heading;
+        private Synthesis.FieldTypes.TextField _youtubeID;
         
-        private Synthesis.FieldTypes.ImageField _image;
-        
-        private Synthesis.FieldTypes.HyperlinkField _link;
-        
-        public VTestComponent(Sitecore.Data.Items.Item innerItem) : 
+        public Video(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
         
-        public VTestComponent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+        public Video(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
                 base(searchFields) {
         }
         
         /// <summary>The name of the Sitecore Template that this class represents</summary>
         public static string TemplateName {
             get {
-                return "VTestComponent";
+                return "Video";
             }
         }
         
         /// <summary>The ID of the Sitecore Template that this class represents</summary>
         public static Sitecore.Data.ID ItemTemplateId {
             get {
-                return new Sitecore.Data.ID("{D14B2093-D2AE-42CD-924B-4D9E02B6D229}");
+                return new Sitecore.Data.ID("{3FCDE34C-3E06-4BB6-BDC7-C2076B1DC9F3}");
             }
         }
         
@@ -712,55 +708,33 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
             }
         }
         
-        /// <summary>Represents the Heading field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Heading {
+        /// <summary>Represents the Youtube ID field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("youtube_id")]
+        public Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
             get {
-                if (_heading == null) {
-                    _heading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C2FEBD0-D0E2-4B62-8899-43CBC51D18C6}"], "/sitecore/templates/Project/Friskis/Content Types/VTestComponent", "Heading"), this.GetSearchFieldValue("heading"));
+                if (_youtubeID == null) {
+                    _youtubeID = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4AD217F6-D385-40C4-ABD0-E0AD97F514A3}"], "/sitecore/templates/Project/Friskis/Content Types/Video", "Youtube ID"), this.GetSearchFieldValue("youtube_id"));
                 }
-                return _heading;
-            }
-        }
-        
-        /// <summary>Represents the Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField Image {
-            get {
-                if (_image == null) {
-                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4B04AFB6-56EC-45DD-838A-D42BEEF455D4}"], "/sitecore/templates/Project/Friskis/Content Types/VTestComponent", "Image"), this.GetSearchFieldValue("image"));
-                }
-                return _image;
-            }
-        }
-        
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
-            get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{207F3A7B-037C-46FD-9D10-74C39A369652}"], "/sitecore/templates/Project/Friskis/Content Types/VTestComponent", "Link"), this.GetSearchFieldValue("link"));
-                }
-                return _link;
+                return _youtubeID;
             }
         }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class VTestComponentInitializer : Synthesis.Initializers.ITemplateInitializer {
+    public class VideoInitializer : Synthesis.Initializers.ITemplateInitializer {
         
         public Sitecore.Data.ID InitializesTemplateId {
             get {
-                return new Sitecore.Data.ID("{D14B2093-D2AE-42CD-924B-4D9E02B6D229}");
+                return new Sitecore.Data.ID("{3FCDE34C-3E06-4BB6-BDC7-C2076B1DC9F3}");
             }
         }
         
         public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new VTestComponent(innerItem);
+            return new Video(innerItem);
         }
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new VTestComponent(searchFields);
+            return new Video(searchFields);
         }
     }
     

@@ -29,6 +29,7 @@ namespace FOS.Website.Feature.Content
                 public const string VTestPage = "/Feature/Content/Views/VTestPage.cshtml";
                 public const string VTestComponent = "/Feature/Content/Views/VTestComponent.cshtml";
                 public const string WideImage = "/Feature/Content/Views/WideImage.cshtml";
+                public const string Video = "/Feature/Content/Views/Video.cshtml";
 
                 // Hero carousel views HeroArea
                 public const string HeroArea = "/Feature/Content/Views/HeroArea.cshtml";

@@ -112,7 +112,7 @@
     /* USED ON TRAINING CENTER PAGE */
     &__infobox {
         background-color: $color-white;
-        padding: 0;
+        padding: 0 0 $space 0;
         list-style-type: none;
         box-shadow: 0 0 1px $color-dim-30;
 
@@ -132,9 +132,13 @@
                     width: $icon-size-small;
                     background-image: url('/assets/images/icon_arrow-right-red.svg');
                     position: absolute;
-                    right: $space;
                     top: $space-double + $space-half;
                     @include transition(margin-right, 0.35s);
+                    right: 0;
+
+                    @include medium-up {
+                        right: $space;
+                    }
                 }
                 a:hover {
                     &:after {
@@ -144,26 +148,25 @@
                 }
             }
 
-            &:nth-of-type(3) {
+            &:nth-of-type(3), &:last-of-type {
                 a {
                     color: $color-text;
                     padding-bottom: $space;
-                    word-break: break-all;
-                }
-            }
-            &:last-of-type {
-                a {
-                    color: $color-text;
                     padding-top: $space;
+                    word-break: break-all;
                 }
             }
             a {
                 text-shadow: none;
                 text-decoration: none;
-                padding: $space-double;
+                padding: $space-double $space $space-double ($space-quad + $space);
                 display: block;
                 word-wrap:break-word;
                 overflow: hidden;
+
+                @include medium-up {
+                    padding-left: ($space-quad + $space-double);
+                }
             }
         }
     }

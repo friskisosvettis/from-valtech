@@ -3,6 +3,39 @@
     height: $icon-size;
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - ICONS AS BACKGROUND ON ELEMENTS - - - - */
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+    &__background {
+        background-size: $icon-size-small $icon-size-small;
+        background-position: $space 50%;
+        background-repeat: no-repeat;
+        @include medium-up {
+            background-position: $space-double 50%;
+        }
+
+        &--medium {
+            background-size: $icon-size-medium $icon-size-medium;
+        }
+    }
+
+    &__phone {
+        background-image: url('/assets/images/icon_phone.svg');
+    }
+
+    &__mail {
+            background-image: url('/assets/images/icon_mail.svg');
+}
+
+    &__schedule {
+        background-image: url('/assets/images/icon_schedule-small.svg');
+    }
+
+    &__clock {
+        background-image: url('/assets/images/icon_schedule-small.svg');
+    }
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - ICONS AS BEFORE/AFTER ELEMENTS- - - - - */
     /* - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -37,31 +70,6 @@
             width: $icon-size;
         }
     }
-
-    &__phone {
-        &:before {
-            background-image: url('/assets/images/icon_phone.svg');
-        }
-    }
-
-    &__mail {
-        &:before {
-            background-image: url('/assets/images/icon_mail.svg');
-        }
-    }
-
-    &__schedule {
-        &:before {
-            background-image: url('/assets/images/icon_schedule-small.svg');
-        }
-    }
-
-    &__clock {
-        &:before {
-            background-image: url('/assets/images/icon_schedule-small.svg');
-        }
-    }
-
     &__pin {
         &:before {
             background-image: url('/assets/images/icon_map_white.svg');

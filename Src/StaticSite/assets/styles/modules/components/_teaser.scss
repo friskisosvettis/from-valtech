@@ -19,7 +19,7 @@ $teaser-height-xlarge: rem(14.5 * $base-height);
     @include transition(opacity ,0.35s);
 
     &:hover {
-        @include transform-scale(1.015);
+        @include transform-scale(1.05);
         @include transition(opacity ,0.35s);
     }
 
@@ -48,10 +48,6 @@ $teaser-height-xlarge: rem(14.5 * $base-height);
         img {
             @include span(3);
             height: rem($base-height*2);
-
-            @include xsmall-up {
-                height: $teaser-height;
-            }
 
             @include small-up {
                 @include span(12);
@@ -157,10 +153,6 @@ $teaser-height-xlarge: rem(14.5 * $base-height);
             color: $color-white;
             margin: $space 0;
         }
-
-        img {
-            filter: blur(2px);
-        }
     }
     &__overlay {
         position: absolute;
@@ -173,11 +165,6 @@ $teaser-height-xlarge: rem(14.5 * $base-height);
         height: 100%;
         background:  $primary-color-dim-90;
         @include transition(background ,0.35s);
-
-        &:hover {
-            background: $primary-color-dim-80;
-            @include transition(background ,0.35s);
-        }
 
         > .teaser__content {
             display: table-cell;

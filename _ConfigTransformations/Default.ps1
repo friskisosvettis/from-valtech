@@ -20,7 +20,7 @@ param (
  #Include common functions
  . .\Common.ps1
  . .\ChangeToSolrSearch.ps1 
-
+ . .\ConfigFileActivationSwitch.ps1
  
  #Init 
  Initialize
@@ -90,8 +90,14 @@ Write-Host ""
 	UpdateGlobalAsax -webRootPath $webRootPath
 	if($type -eq 'WEB')
 	{
-		DeActivateSolrMasterConfigFiles  -webRootPath $webRootPath
+		DeActivateSolrMasterConfigFiles -webRootPath $webRootPath
 	}
+ }
+
+ if($type -eq 'WEB')
+ {
+ 	$SwitchMasterToWeb = join-path $webRootPath "\App_Config\Include\Z.SwitchMasterToWeb\SwitchMasterToWeb.config.example"
+	ActivateConfigureFile $SwitchMasterToWeb
  } 
 	
  }Catch{

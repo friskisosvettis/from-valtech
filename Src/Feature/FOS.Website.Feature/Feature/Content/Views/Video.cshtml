@@ -7,7 +7,16 @@
     <p>@Html.TextFor(m=> m.VideoItem.YoutubeID)</p>
 }
 
+@{
+    var highres = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/maxresdefault.jpg";
+    var lowres = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/sddefault.jpg";
+    var videoUrl = lowres;
+
+    /// TODO: Check if highres exists (show that if it exists)
+}
 <div class="media-container media-container--16x9 media-container__youtube media-container__video" data-js-youtube="@Model.VideoItem.YoutubeID">
-    <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Play button</span></div>
+    <img class="media-container__media" src="@videoUrl"/>
+    <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Spela video</span></div>
 </div>
 
+@* TODO: Add translation to "Spela Video" *@

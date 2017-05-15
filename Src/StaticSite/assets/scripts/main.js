@@ -29,7 +29,8 @@ var fixedRibbon = require('./modules/fixed-ribbon'),
 	slickSlider = require('./modules/carousel'),
 	maps = require('./modules/maps'),
 	tabs = require('./modules/tabs'),
-	navigation = require('./modules/navigation');
+	navigation = require('./modules/navigation'),
+	video = require('./modules/video');
 
 $(function () {
 	fixedRibbon.init();
@@ -42,6 +43,7 @@ $(function () {
 	tabs.init();
 	navigation.init();
 	devbridgeAutocomplete.init();
+	video.init();
 
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

@@ -93,7 +93,9 @@ p {
 }
 
 .intro {
+    margin: $base-height*2 0 $base-height 0;
     font-size: rem(18px);
+    font-weight: 700;
 
     @include small-up {
         font-size: rem(20px);
@@ -101,7 +103,19 @@ p {
 
     @include medium-up {
         font-size: rem(22px);
-        line-height: rem(34px);
+        line-height: 1.4;
+    }
+}
+
+.note {
+    color: $primary-color-98;
+    font-size: 0.9rem; // TODO CHECK THIS
+
+    &:before {
+        content:'*';
+        font-size: 1.1rem;
+        vertical-align: middle;
+        display: inline-block;
     }
 }
 
@@ -124,5 +138,70 @@ a {
 
     &.link--inverted {
         color: $color-white;
+    }
+}
+
+/*-------------------------------------------------*/
+/*------------------ L I S T S --------------------*/
+/*-------------------------------------------------*/
+
+ol {
+    padding: 0;
+    margin: 0 0 $base-height*1.5 0;
+
+    counter-reset: item;
+    
+    li {
+        list-style-type: none;
+        counter-increment: item;
+        margin: 0 0 $space 0;
+        line-height: 1;
+
+        &:before {
+            display: inline-block;
+            width: 1em;
+            padding-right: $space-double;
+            font-weight: bold;
+            text-align: right;
+            content: counter(item) ".";
+            vertical-align: middle;
+        }
+    }
+}
+
+
+.rich-text ul {
+    padding: 0;
+    margin: 0 0 $base-height*1.5 0;
+    
+    li {
+        list-style-type: none;
+        margin: 0 0 $space 0;
+        background-image: url('/assets/images/icon_bullet.svg');
+        background-size: 1rem 1rem;
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        padding-left: 2rem;
+    }
+
+    &.list--tick {
+        li {
+            background-image: url('/assets/images/icon_tick.svg');
+        }
+    }
+    &.list--goto {
+        li {
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+        }
+    }
+
+    &.list__box {
+        background-color: $primary-color-light;
+        background-color: #FDF8F8;
+        padding: $base-height*1.5;
+
+        a {
+            color: $color-text;
+        }
     }
 }

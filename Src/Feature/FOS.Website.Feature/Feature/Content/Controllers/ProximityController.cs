@@ -39,8 +39,8 @@ namespace FOS.Website.Feature.Content.Controllers
     public class ProximityController : Controller
     {
         private readonly int NR_OFF_ASSOCIATIONS_IN_ANSWER = 3;
-        private readonly double VALTECH_LAT = 59.3277143;
-        private readonly double VALTECH_LONG = 18.050467;
+        private readonly decimal VALTECH_LAT = 59.3277143m;
+        private readonly decimal VALTECH_LONG = 18.050467m;
 
         private static IPAddress GetIpAddressFromTracker()
         {
@@ -48,14 +48,14 @@ namespace FOS.Website.Feature.Content.Controllers
                 ? new IPAddress(Tracker.Current.Interaction.Ip) : IPAddress.Parse("89.107.211.196");
         }
 
-        private bool GotUserLocation(out double latitude, out double longitude)
+        private bool GotUserLocation(out decimal latitude, out decimal longitude)
         {
-            latitude = 0.0;
-            longitude = 0.0;
+            latitude = 0.0m;
+            longitude = 0.0m;
             var userIp = GetIpAddressFromTracker();
             if (userIp != null)
             {
-                double? tempLat, tempLong;
+                decimal? tempLat, tempLong;
                 // 
                 // LocationIP.GetCoordsSiteCore(userIp, out tempLat, out tempLong);
                 //
@@ -84,7 +84,7 @@ namespace FOS.Website.Feature.Content.Controllers
             return false;
         }
 
-        private double OptimizedDistance(double oX, double oY, double pX, double pY)
+        private decimal OptimizedDistance(decimal oX, decimal oY, decimal pX, decimal pY )
         {
             var dX = oX - pX;
             var dY = oY - pY;
@@ -97,7 +97,7 @@ namespace FOS.Website.Feature.Content.Controllers
         }
 
         // Add some extra parameters so the list of Mapnodes to sort is reduced
-        private IEnumerable<Item> GetAllAssociations(Item item, double latitude, double longitude)
+        private IEnumerable<Item> GetAllAssociations(Item item, decimal latitude, decimal longitude)
         {
             string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
             using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
@@ -112,12 +112,10 @@ namespace FOS.Website.Feature.Content.Controllers
 
                 return result.Hits
                     .Select(i => i.Document.GetItem().As<IMapNodeItem>())
-                    .Where(n => n != null)
-                    .Where(n => n.Longitude.HasTextValue && n.Latitude.HasTextValue)
+                    .Where(n => n != null )
+                    .Where(n => !decimal.Equals(n.Latitude.Value, 0) && !decimal.Equals(n.Longitude.Value, 0))
                     .OrderBy(
-                        n => OptimizedDistance(Convert.ToDouble(n.Latitude.RawValue.Replace('.', ','))
-                                              , Convert.ToDouble(n.Longitude.RawValue.Replace('.', ','))
-                                              , latitude, longitude))
+                        n => OptimizedDistance(n.Latitude.Value, n.Longitude.Value, latitude, longitude))
                     .Select(GetAssociationItem)
                     .DistinctBy(a => a.DisplayName)
                     .Take(NR_OFF_ASSOCIATIONS_IN_ANSWER).ToList();
@@ -126,7 +124,7 @@ namespace FOS.Website.Feature.Content.Controllers
 
         public ActionResult GetProximityView()
         {
-            double userLat, userLong;
+            decimal userLat, userLong;
             ProximityModel model = null;
             if (GotUserLocation(out userLat, out userLong))
             {

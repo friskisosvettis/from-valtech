@@ -4,6 +4,7 @@
 @using Sitecore.Configuration
 @using Sitecore.Links
 @using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model ProximityModel
 
@@ -31,7 +32,8 @@
                     }
                 }
             }
-            <a class="btn btn__link" href="@Model.ProximityItem.ShowAllButtonLink">@Html.TextFor(m => m.ProximityItem.ShowAllAssociationLabel)</a>
+            
+            @Model.ProximityItem.ShowAllButtonLink.Render(Model.ProximityItem.ShowAllAssociationLabel.RawValue, "btn btn__link")
         </div>
     </div>
 </div>

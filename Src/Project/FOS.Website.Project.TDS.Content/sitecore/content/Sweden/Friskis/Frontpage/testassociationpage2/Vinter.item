@@ -13,7 +13,7 @@ created: 20170410T095717Z
 ----version----
 language: sv-SE
 version: 1
-revision: cfc30528-c769-4054-9848-12f7348b228c
+revision: 1bafb658-2bfc-4ddc-bb1f-d9937256fbff
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -59,18 +59,32 @@ content-length: 6
 Sweden
 ----field----
 field: {8342753A-30D9-4093-BFC1-97C83F34D1CC}
-name: Longitude
-key: longitude
+name: LongitudeStr
+key: longitudestr
 content-length: 11
 
 -118.321548
 ----field----
 field: {6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}
+name: LatitudeStr
+key: latitudestr
+content-length: 9
+
+34.134115
+----field----
+field: {D8AE139D-9B68-4F8E-BBE8-0EB5DBEB25AF}
 name: Latitude
 key: latitude
 content-length: 9
 
 34.134115
+----field----
+field: {284921BE-56D6-4737-B5EF-DCCC1C4AD326}
+name: Longitude
+key: longitude
+content-length: 11
+
+-118.321548
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -98,14 +112,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cfc30528-c769-4054-9848-12f7348b228c
+1bafb658-2bfc-4ddc-bb1f-d9937256fbff
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170426T160054Z
+20170516T113245Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

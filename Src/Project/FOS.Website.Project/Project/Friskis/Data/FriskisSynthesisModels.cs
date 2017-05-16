@@ -1485,9 +1485,13 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _country;
         
-        private Synthesis.FieldTypes.TextField _longitude;
+        private Synthesis.FieldTypes.TextField _longitudeStr;
         
-        private Synthesis.FieldTypes.TextField _latitude;
+        private Synthesis.FieldTypes.TextField _latitudeStr;
+        
+        private Synthesis.FieldTypes.NumericField _latitude;
+        
+        private Synthesis.FieldTypes.NumericField _longitude;
         
         public GymPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -1584,25 +1588,47 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Longitude field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("longitude")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Longitude {
+        /// <summary>Represents the LongitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
             get {
-                if (_longitude == null) {
-                    _longitude = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Longitude"), this.GetSearchFieldValue("longitude"));
+                if (_longitudeStr == null) {
+                    _longitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "LongitudeStr"), this.GetSearchFieldValue("longitudestr"));
                 }
-                return _longitude;
+                return _longitudeStr;
+            }
+        }
+        
+        /// <summary>Represents the LatitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
+            get {
+                if (_latitudeStr == null) {
+                    _latitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "LatitudeStr"), this.GetSearchFieldValue("latitudestr"));
+                }
+                return _latitudeStr;
             }
         }
         
         /// <summary>Represents the Latitude field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("latitude")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Latitude {
+        public Synthesis.FieldTypes.Interfaces.INumericField Latitude {
             get {
                 if (_latitude == null) {
-                    _latitude = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Latitude"), this.GetSearchFieldValue("latitude"));
+                    _latitude = new Synthesis.FieldTypes.NumericField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D8AE139D-9B68-4F8E-BBE8-0EB5DBEB25AF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Latitude"), this.GetSearchFieldValue("latitude"));
                 }
                 return _latitude;
+            }
+        }
+        
+        /// <summary>Represents the Longitude field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitude")]
+        public Synthesis.FieldTypes.Interfaces.INumericField Longitude {
+            get {
+                if (_longitude == null) {
+                    _longitude = new Synthesis.FieldTypes.NumericField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{284921BE-56D6-4737-B5EF-DCCC1C4AD326}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Longitude"), this.GetSearchFieldValue("longitude"));
+                }
+                return _longitude;
             }
         }
     }

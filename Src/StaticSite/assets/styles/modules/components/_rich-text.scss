@@ -7,7 +7,7 @@
 
 .rich-text {
     overflow: hidden;
-    max-width: 35em;
+    max-width: $text-max-width;
     margin: $space-double 0;
 
     @include medium-up {

@@ -73,15 +73,7 @@ var autocompleteModule = {
                 appendTo: '.autocomplete--content',
                 maxHeight: 1400,
 				onSelect: function (suggestion) {
-					// direct user to the selected association or training center page
-                    console.log(suggestion);
-                    if(suggestion.data.category != "Område") {
-                        // TODO: HANTERA ATT OMRÅDE INTE KOMMER ATT KUNNA VARA KLICKBART ELLER KAN DET VARA DET?
-                        window.location = suggestion.data.url;
-                        // REMOVE INTRA INDEX
-                    } else {
-                        console.log('område');
-                    }
+                    window.location = suggestion.data.url;
                 },
 				lookupFilter: function (suggestion, query, queryLowerCase) {
 					var result;
@@ -152,6 +144,7 @@ var autocompleteModule = {
                             $(suggestion).wrapInner('<div class="autocomplete-suggestion__name"></div>');
                             $(suggestion).append('<div class="autocomplete-suggestion__address"></address>'+ suggestions[i].data.address + '<span class="visible-medium-up">|</span></address><span class="autocomplete-suggestion__association">'+ suggestions[i].data.association  +'</span> </div>')
                         }
+
                     });
 				},
 			});

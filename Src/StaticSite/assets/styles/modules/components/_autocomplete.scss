@@ -47,7 +47,7 @@
         margin-top: $border-thick;
 
         &[data-autocomplete-category="Förening"]{
-             .autocomplete-group {
+            .autocomplete-group {
                 display: none; // TODO OTHER APPROACH
             }
             .autocomplete-suggestion {
@@ -307,7 +307,8 @@
         display: inline-block;
     }
     &-selected {
-        font-weight: 700;
-        background: $primary-color-light;
+        @include transform-scale(1.05);
+        @include transition(scale, 0.35s);
+        text-shadow: 2px 2px 2px $color-black-30;
     }
 }

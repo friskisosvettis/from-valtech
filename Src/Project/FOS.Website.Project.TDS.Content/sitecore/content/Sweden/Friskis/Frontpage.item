@@ -20,15 +20,8 @@ content-length: 1
 ----version----
 language: da
 version: 1
-revision: f0b4207f-a95e-498d-ae3e-847fe175e86b
+revision: 780e82ac-f847-42f3-b3ba-52eafc985c36
 
-----field----
-field: {2426E7C6-EE09-4AAA-B2DC-37CE828F7CB4}
-name: Document_Title
-key: document_title
-content-length: 4
-
-test
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -63,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f0b4207f-a95e-498d-ae3e-847fe175e86b
+780e82ac-f847-42f3-b3ba-52eafc985c36
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170130T154608Z
+20170516T130538Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -88,22 +81,8 @@ content-length: 5
 ----version----
 language: en
 version: 1
-revision: b0ef95c6-f7d2-44dc-b831-1bb8593589e3
+revision: 38709dfa-404c-436d-87dd-884dc9f26754
 
-----field----
-field: {2426E7C6-EE09-4AAA-B2DC-37CE828F7CB4}
-name: Document_Title
-key: document_title
-content-length: 7
-
-Forside
-----field----
-field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
-name: __Final Renderings
-key: __final renderings
-content-length: 177
-
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{5B83222B-EA86-4EBE-B98A-9EA110569F82}" s:ds="" s:par=""><p:da name="ph" /></r></d></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -131,14 +110,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b0ef95c6-f7d2-44dc-b831-1bb8593589e3
+38709dfa-404c-436d-87dd-884dc9f26754
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170228T102721Z
+20170516T133144Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -149,15 +128,29 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 4551a896-c0ef-478f-b611-5ee01ef34a27
+revision: 69d9267a-5ad5-42f8-b74c-579d5f5b63e3
 
 ----field----
-field: {2426E7C6-EE09-4AAA-B2DC-37CE828F7CB4}
-name: Document_Title
-key: document_title
-content-length: 17
+field: {CA1ED9D7-5876-4E20-8D3D-14948A8B4EE4}
+name: Close To You Label
+key: close to you label
+content-length: 19
 
-Friskis & Svettis
+Föreningar nära dig
+----field----
+field: {7E35007F-1840-4A9E-B155-410325E8A43C}
+name: Headline
+key: headline
+content-length: 23
+
+Hitta din träningslust!
+----field----
+field: {95C9FEB4-16A1-4C8F-A2FB-D4064DC5650C}
+name: Introduction
+key: introduction
+content-length: 64
+
+Vi finns på mer än 30 orter och har fler än 500 träningsställen.
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -192,14 +185,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4551a896-c0ef-478f-b611-5ee01ef34a27
+69d9267a-5ad5-42f8-b74c-579d5f5b63e3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170410T110748Z
+20170517T115803Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

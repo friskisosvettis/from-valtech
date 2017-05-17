@@ -14,6 +14,7 @@ namespace FOS.Website.Project.Friskis
                 public const string ArticlePage = "/Project/Friskis/Views/ArticlePage.cshtml";
                 public const string AssociationPage = "/Project/Friskis/Views/AssociationPage.cshtml";
                 public const string ContentRegion = "/Project/Friskis/Views/ContentRegion.cshtml";
+                public const string FrontPage = "/Project/Friskis/Views/FrontPage.cshtml";
                 public const string HeroPage = "/Project/Friskis/Views/HeroPage.cshtml";
                 public const string TrainingCenterPage = "/Project/Friskis/Views/TrainingCenterPage.cshtml";
 

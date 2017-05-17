@@ -1048,6 +1048,7 @@
     <None Include="App_Config\Include\Synthesis\Synthesis.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <Content Include="Feature\Content\Views\Video.cshtml" />
+    <Content Include="Feature\Content\Views\AutoCompleteModuleView.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1057,6 +1058,7 @@
   <ItemGroup>
     <Compile Include="Feature\Content\Constants.cs" />
     <Compile Include="Feature\Content\Controllers\LocationIP.cs" />
+    <Compile Include="Feature\Content\Controllers\AutoCompleteModuleController.cs" />
     <Compile Include="Feature\Content\Controllers\ProximityController.cs" />
     <Compile Include="Feature\Content\Controllers\TrainingCenterCollectionMapController.cs" />
     <Compile Include="Feature\Content\Controllers\HeroAreaController.cs" />
@@ -1064,6 +1066,7 @@
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\AutoCompleteModuleModel.cs" />
     <Compile Include="Feature\Content\Models\ProximityModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationIntroductionModuleModel.cs" />
     <Compile Include="Feature\Content\Models\TrainingCenterCollectionMapModel.cs" />

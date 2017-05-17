@@ -107,6 +107,24 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Auto Complete Module template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{9D304BED-0D6B-461A-AC1A-2BD9712AE351}", "ZN7D8tkenPkaxrV971PVA1/E6U8=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAutoCompleteModuleItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get;
+        }
+        
+        /// <summary>Represents the Introduction field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introduction")]
+        Synthesis.FieldTypes.Interfaces.ITextField Introduction {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/BasicHeading template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3050DAD3-3B96-4E48-B547-D55A2C567F1C}", "tRApBBrkh4apwzTFIKbMhL6Qhsc=", "Valtech.Foundation.Synthesis")]
@@ -1046,6 +1064,84 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new AssociationTopBar(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Auto Complete Module template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AutoCompleteModule : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem {
+        
+        private Synthesis.FieldTypes.TextField _headline;
+        
+        private Synthesis.FieldTypes.TextField _introduction;
+        
+        public AutoCompleteModule(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AutoCompleteModule(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Auto Complete Module";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{9D304BED-0D6B-461A-AC1A-2BD9712AE351}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get {
+                if (_headline == null) {
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{7E35007F-1840-4A9E-B155-410325E8A43C}"], "/sitecore/templates/Feature/Content/Data/Auto Complete Module", "Headline"), this.GetSearchFieldValue("headline"));
+                }
+                return _headline;
+            }
+        }
+        
+        /// <summary>Represents the Introduction field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("introduction")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Introduction {
+            get {
+                if (_introduction == null) {
+                    _introduction = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{95C9FEB4-16A1-4C8F-A2FB-D4064DC5650C}"], "/sitecore/templates/Feature/Content/Data/Auto Complete Module", "Introduction"), this.GetSearchFieldValue("introduction"));
+                }
+                return _introduction;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AutoCompleteModuleInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{9D304BED-0D6B-461A-AC1A-2BD9712AE351}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AutoCompleteModule(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AutoCompleteModule(searchFields);
         }
     }
     

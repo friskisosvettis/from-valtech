@@ -1,0 +1,27 @@
+﻿@using Sitecore.Mvc
+@using FOS.Website.Feature.Content.Models
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Configuration
+@using Sitecore.Links
+@using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model AutoCompleteModuleModel
+
+@if (@Model == null)
+{
+    return;
+}
+
+<div class="autocomplete">
+    <div class="autocomplete--container">
+        <div class="autocomplete--content">
+            <h2 class="color--primary-98 margin-bottom--none">@Model.AutoCompleteModuleItem.Headline.Render()</h2>
+            <p>@Model.AutoCompleteModuleItem.Introduction.Render()</p>
+            <label class="hidden--accessible" for="find-association">Hitta din träningslust</label>
+            <input class="autocomplete__input" type="text" name="find-association" placeholder="Sök efter område, förening eller anläggning" data-js-autocomplete />
+        </div>
+    </div>
+</div>
+
+

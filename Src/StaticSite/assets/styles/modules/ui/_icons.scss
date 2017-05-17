@@ -27,12 +27,8 @@
             background-image: url('/assets/images/icon_mail.svg');
 }
 
-    &__schedule {
-        background-image: url('/assets/images/icon_schedule-small.svg');
-    }
-
     &__clock {
-        background-image: url('/assets/images/icon_schedule-small.svg');
+        background-image: url('/assets/images/icon_clock.svg');
     }
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -80,9 +76,35 @@
             background-image: url('/assets/images/icon_play.svg');
         }
     }
+
+    &__list {
+        &:before {
+            background-image: url('/assets/images/icon_list-inactive.svg');
+        }
+    }
+
+    &__pin-map {
+        &:before {
+            background-image: url('/assets/images/icon_pin-map-inactive.svg');
+        }
+    }
 }
 
+.active {
+    .icon {
+        &__list {
+            &:before {
+                background-image: url('/assets/images/icon_list.svg');
+            }
+        }
 
+        &__pin-map {
+            &:before {
+                background-image: url('/assets/images/icon_pin-map.svg');
+            }
+        }
+    }
+}
 .icon__link {
     &:before {
     content: "";

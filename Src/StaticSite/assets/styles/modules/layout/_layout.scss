@@ -61,6 +61,11 @@ main {
         border: 0;
     }
 }
+.hidden-medium-up {
+    @include medium-up {
+        display: none !important;
+    }
+}
 
 .hidden-large-up {
     @include large-up {

@@ -3,7 +3,7 @@
   <Website>
     <ReplaceXml>
       <File name="App_Config\Sitecore.config">
-        <Item path="sitecore/sc.variable[@name='dataFolder']" action="Replace" key="value" value="C:\Websites\fos-stage-cm\Data" />
+        <Item path="sitecore/sc.variable[@name='dataFolder']" action="Replace" key="value" value="C:\Websites\fos-prod-cm\Data" />
       </File>
     </ReplaceXml>
   </Website>

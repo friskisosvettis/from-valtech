@@ -13,21 +13,24 @@
 }
 
 <div class="map__container">
+    <div class="map--intro hidden-medium-up">
+        <h3 class="hidden-medium-up heading-4">@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
+    </div>
     <!--TABS - VISIABLE LARGE UP -->
     <ul class="tabs" data-js-tabs="map">
         @* TODO - remove hardcoded text for Lista & Karta *@
-        <li class="tabs__title active"><a href="#panel1">Lista</a></li>
-        <li class="tabs__title"><a href="#panel2" data-js-map-show>Karta</a></li>
+        <li class="tabs__title active"><a class="icon--medium icon__list" href="#panel1">Lista</a></li>
+        <li class="tabs__title"><a class="icon--medium icon__pin-map" href="#panel2" data-js-map-show>Karta</a></li>
     </ul>
     <!--MAP - VISIBLE ALL THE TIME -->
-    <div class="tabs__content visible-medium-up--block" id="panel2" data-js-tabs-map>
+    <div class="tabs__content visible-medium-up--block map--overlay" id="panel2" data-js-tabs-map>
         <div id="map"></div>
     </div>
     <!--MAP-LIST - VISIBLE ALL THE TIME -->
     <div class="tabs__content map__content" id="panel1" data-js-tabs-map>
         <div class="map__list">
-            
-            <h3>@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
+
+            <h3 class="visible-medium-up">@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
             <ul>
                 @{
                     int i = 0;

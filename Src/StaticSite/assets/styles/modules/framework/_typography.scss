@@ -177,7 +177,7 @@ ol {
 
 .rich-text ul {
     padding: 0;
-    margin: 0 0 $base-height*1.5 0;
+    margin: 0 0 rem($base-height*1.5) 0;
     
     li {
         list-style-type: none;
@@ -203,7 +203,8 @@ ol {
     &.list__box {
         background-color: $primary-color-light;
         background-color: #FDF8F8;
-        padding: $base-height*1.5;
+        padding: rem($base-height*1.5);
+        margin-bottom: rem($base-height);
 
         a {
             color: $color-text;

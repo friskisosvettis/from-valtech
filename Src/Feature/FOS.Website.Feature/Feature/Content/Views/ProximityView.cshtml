@@ -33,7 +33,7 @@
                 }
             }
             
-            if(@Model.ProximityItem.ShowAllButtonLink.HasValue)
+            @if(Model.ProximityItem.ShowAllButtonLink.HasValue)
             {
                 <a class="btn btn__link" href="@Model.ProximityItem.ShowAllButtonLink">@Html.TextFor(m => m.ProximityItem.ShowAllAssociationLabel)</a>
             }

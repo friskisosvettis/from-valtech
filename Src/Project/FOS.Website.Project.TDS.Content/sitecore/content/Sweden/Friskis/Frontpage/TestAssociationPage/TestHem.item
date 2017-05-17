@@ -13,8 +13,36 @@ created: 20170403T105434Z
 ----version----
 language: en
 version: 1
-revision: e02fe9a9-656e-4c50-b177-1b3588da3e21
+revision: 14f52875-f84a-445c-93ec-b01a22dc8484
 
+----field----
+field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
+----field----
+field: {121CC763-40E1-45A1-B40F-961BE8CA10FF}
+name: Opening Hours
+key: opening hours
+content-length: 28
+
+<link linktype="internal" />
+----field----
+field: {D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}
+name: Contact Email
+key: contact email
+content-length: 14
+
+dude@place.com
+----field----
+field: {40A4F97B-6312-4034-955D-E05E9BB1E844}
+name: Phone Number
+key: phone number
+content-length: 8
+
+555-1234
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -42,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e02fe9a9-656e-4c50-b177-1b3588da3e21
+14f52875-f84a-445c-93ec-b01a22dc8484
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170410T084006Z
+20170517T133155Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -67,8 +95,36 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 84190511-bd1e-4495-93c2-a3adae960d71
+revision: 7787acb2-f3be-41fd-8647-298156d4cedf
 
+----field----
+field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
+----field----
+field: {121CC763-40E1-45A1-B40F-961BE8CA10FF}
+name: Opening Hours
+key: opening hours
+content-length: 133
+
+<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{4DEF8BAE-5F40-421A-AF68-E0401E98E8CC}" />
+----field----
+field: {D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}
+name: Contact Email
+key: contact email
+content-length: 14
+
+dude@place.com
+----field----
+field: {40A4F97B-6312-4034-955D-E05E9BB1E844}
+name: Phone Number
+key: phone number
+content-length: 8
+
+555-3605
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
 name: MapHeadline
@@ -140,6 +196,13 @@ content-length: 11
 
 -157.835698
 ----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 3
+
+Hem
+----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
@@ -173,14 +236,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-84190511-bd1e-4495-93c2-a3adae960d71
+7787acb2-f3be-41fd-8647-298156d4cedf
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170516T113202Z
+20170517T141850Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

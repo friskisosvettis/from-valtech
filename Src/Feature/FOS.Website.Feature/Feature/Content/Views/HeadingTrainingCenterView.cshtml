@@ -1,0 +1,42 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model HeadingTrainingCenterModel
+
+@if (Model.HeadingTrainingCenterItem == null)
+{
+    return;
+}
+
+<div class="hero hero--overlay">
+    <div class="hero__img">
+        @Model.HeadingTrainingCenterItem.Image.Render()
+    </div>
+    <div class="hero__container">
+        <div class="hero__content">
+            <div class="container">
+                <div class="container--8">
+                    <h1>@Model.TrainingCenterName</h1>
+                    <p class="address icon--small icon__pin">@Model.TrainingCenterAddress</p>
+                </div>
+                <div class="container--4">
+                    <ul class="hero__infobox">
+                        @if (Model.HeadingTrainingCenterItem.OpeningHours.HasValue)
+                        {
+                              <li>@Model.HeadingTrainingCenterItem.OpeningHours.Render("Våra öppettider", "icon__background icon__background--medium icon__clock")</li>
+                        }
+                        @if (Model.HeadingTrainingCenterItem.ContactEmail.HasValue)
+                        {
+                            <li><a class="icon__background icon__background--medium icon__mail" href="mailto:@Model.HeadingTrainingCenterItem.ContactEmail.RawValue">@Model.HeadingTrainingCenterItem.ContactEmail.Render(false)</a></li>
+                        }
+                        @if (Model.HeadingTrainingCenterItem.PhoneNumber.HasValue)
+                        {
+                            <li><a class="icon__background icon__background--medium icon__phone" href="tel:mailto:@Model.HeadingTrainingCenterItem.PhoneNumber.RawValue">@Model.HeadingTrainingCenterItem.PhoneNumber.Render(false)</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

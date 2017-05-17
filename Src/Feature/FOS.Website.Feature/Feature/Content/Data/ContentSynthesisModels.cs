@@ -251,6 +251,36 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "aE1uCuKUiqQFhB9jrJd4Af8+Qzc=", "Valtech.Foundation.Synthesis")]
+    public partial interface IHeadingTrainingCenterItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+        
+        /// <summary>Represents the Opening Hours field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours {
+            get;
+        }
+        
+        /// <summary>Represents the Contact Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
+        Synthesis.FieldTypes.Interfaces.ITextField ContactEmail {
+            get;
+        }
+        
+        /// <summary>Represents the Phone Number field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("phone_number")]
+        Synthesis.FieldTypes.Interfaces.ITextField PhoneNumber {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Headline template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B7156E36-FDDE-4F40-86C3-EC2291F74551}", "qxWxugtaADg9zcsPgoqcsAunPhM=", "Valtech.Foundation.Synthesis")]
@@ -1766,6 +1796,110 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new FTestPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class HeadingTrainingCenter : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem {
+        
+        private Synthesis.FieldTypes.ImageField _image;
+        
+        private Synthesis.FieldTypes.HyperlinkField _openingHours;
+        
+        private Synthesis.FieldTypes.TextField _contactEmail;
+        
+        private Synthesis.FieldTypes.TextField _phoneNumber;
+        
+        public HeadingTrainingCenter(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public HeadingTrainingCenter(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "HeadingTrainingCenter";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{77F8111C-E439-4FCA-B3E8-320DB734D8C0}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
+            }
+        }
+        
+        /// <summary>Represents the Opening Hours field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours {
+            get {
+                if (_openingHours == null) {
+                    _openingHours = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{121CC763-40E1-45A1-B40F-961BE8CA10FF}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Opening Hours"), this.GetSearchFieldValue("opening_hours"));
+                }
+                return _openingHours;
+            }
+        }
+        
+        /// <summary>Represents the Contact Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ContactEmail {
+            get {
+                if (_contactEmail == null) {
+                    _contactEmail = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Contact Email"), this.GetSearchFieldValue("contact_email"));
+                }
+                return _contactEmail;
+            }
+        }
+        
+        /// <summary>Represents the Phone Number field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("phone_number")]
+        public Synthesis.FieldTypes.Interfaces.ITextField PhoneNumber {
+            get {
+                if (_phoneNumber == null) {
+                    _phoneNumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{40A4F97B-6312-4034-955D-E05E9BB1E844}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Phone Number"), this.GetSearchFieldValue("phone_number"));
+                }
+                return _phoneNumber;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class HeadingTrainingCenterInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new HeadingTrainingCenter(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new HeadingTrainingCenter(searchFields);
         }
     }
     

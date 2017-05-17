@@ -45,6 +45,12 @@ namespace FOS.Website.Feature.Content.Controllers
             return View(Constants.Views.Paths.AdvancedHeading, model);
         }
 
+        public ActionResult GetHeadingTrainingCenterView()
+        {
+            HeadingTrainingCenterModel model = new HeadingTrainingCenterModel(Sitecore.Context.Item);
+            return View(Constants.Views.Paths.HeadingTrainingCenterView, model);
+        }
+
         public ActionResult GetExpandableSectionView()
         {
             IExpandableSectionItem expandableItem = RenderingContext.Current.Rendering.Item.As<IExpandableSectionItem>();

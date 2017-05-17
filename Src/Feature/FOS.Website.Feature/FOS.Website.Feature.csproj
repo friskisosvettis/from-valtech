@@ -1049,6 +1049,7 @@
     <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
     <Content Include="Feature\Content\Views\Video.cshtml" />
     <Content Include="Feature\Content\Views\AutoCompleteModuleView.cshtml" />
+    <Content Include="Feature\Content\Views\HeadingTrainingCenterView.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1066,6 +1067,7 @@
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\HeadingTrainingCenterModel.cs" />
     <Compile Include="Feature\Content\Models\AutoCompleteModuleModel.cs" />
     <Compile Include="Feature\Content\Models\ProximityModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationIntroductionModuleModel.cs" />

@@ -34,14 +34,19 @@
             <ul>
                 @{
                     int i = 0;
+
+
                     foreach (var mapNode in Model.MapNodes)
                     {
-                        <li data-js-map-i="@i" data-js-map-title="@mapNode.MapHeadline" data-js-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-js-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-js-map-lat="@mapNode.Latitude" data-js-map-lng="@mapNode.Longitude">
+                        var className = (i < 1) ? "map__item--large" : "";
+                        var classNameAddress = (i < 1) ? "icon--small icon__pin-map-filled" : "";
+
+                         <li class="@className" data-js-map-i="@i" data-js-map-title="@mapNode.MapHeadline" data-js-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-js-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-js-map-lat="@mapNode.Latitude" data-js-map-lng="@mapNode.Longitude">
                             @* TODO - remove hardcoded text for Lista & Karta *@
                             <button class="map__list--show">Visa på karta</button>
                             <a href="@LinkManager.GetItemUrl(mapNode.InnerItem)">
                                 <h4>@mapNode.MapHeadline</h4>
-                                <p class="address">@mapNode.Street @mapNode.StreetNr, @mapNode.City</p>
+                                <p class="address @classNameAddress">@mapNode.Street @mapNode.StreetNr, @mapNode.City</p>
                             </a>
                         </li>
                         i = i + 1;

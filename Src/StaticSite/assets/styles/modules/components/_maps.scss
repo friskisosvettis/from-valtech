@@ -133,6 +133,11 @@ $map-height: rem($base-height*12);
                     margin-bottom: 0;
                     color: $color-text;
                     text-decoration: none;
+
+                    //TODO: Remove only add icon when needed
+                    &:before {
+                        display: none;
+                    }
                 }
             }
 
@@ -147,6 +152,46 @@ $map-height: rem($base-height*12);
                     text-decoration: underline;
                 }
             }
+        }
+    }
+}
+
+/* TODO: Change approach so that this is applied to all that has 1 element in the list 
+    - and not the first element always (even though there is more elements in the list) 
+*/
+.trainingcenter-page {
+    .map__item--large {
+        min-height: rem($base-height*4);
+        position: relative;
+
+
+        @include medium-up {
+            min-height: rem($base-height*6);
+        }
+
+        //TODO: Remove only add icon when needed
+        .address:before {
+            display: inline-block;
+        }
+        > button {
+            position: absolute;
+            bottom: $space-quad;
+            right: 0;
+        }
+        > a > h4 {
+            color: $color-text;
+            /* TODO: Style as h2 -- do in another way - with a class*/
+            font-size: rem(22px);
+
+            @include small-up {
+                font-size: rem(42px);
+            }
+
+            @include medium-up {
+                font-size: rem(48px);
+                line-height: rem(58px);
+            }
+
         }
     }
 }

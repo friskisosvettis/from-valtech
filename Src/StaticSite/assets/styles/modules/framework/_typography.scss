@@ -195,12 +195,6 @@ ol {
         }
     }
     &.list--goto {
-        li {
-            background-image: url('/assets/images/icon_arrow-right-red.svg');
-        }
-    }
-
-    &.list__box {
         background-color: $primary-color-light;
         background-color: #FDF8F8;
         padding: rem($base-height*1.5);
@@ -208,6 +202,9 @@ ol {
 
         a {
             color: $color-text;
+        }
+        li {
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
         }
     }
 }

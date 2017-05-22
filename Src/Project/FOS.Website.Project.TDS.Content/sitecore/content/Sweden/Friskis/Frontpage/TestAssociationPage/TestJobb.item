@@ -2,8 +2,8 @@
 version: 1
 id: {1AA752F5-C108-4DB3-BCF4-C7A02AE90A3B}
 database: master
-path: /sitecore/content/Sweden/Friskis/Frontpage/TestAssociationPage/AssociuationYogaArticle/TestJobb
-parent: {E00112B8-1368-4C91-B7BF-7DAEFBF8567E}
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestAssociationPage/TestJobb
+parent: {1DA3CA41-D099-4641-BC3A-477DFE8000F8}
 name: TestJobb
 master: {00000000-0000-0000-0000-000000000000}
 template: {11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}
@@ -13,7 +13,7 @@ created: 20170403T105606Z
 ----version----
 language: sv-SE
 version: 1
-revision: cc028f04-6055-40fb-ba5b-cf1b741029c8
+revision: 01dc1fa1-6725-4956-a524-001dd0d914a7
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -119,14 +119,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cc028f04-6055-40fb-ba5b-cf1b741029c8
+01dc1fa1-6725-4956-a524-001dd0d914a7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170516T113221Z
+20170519T134246Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

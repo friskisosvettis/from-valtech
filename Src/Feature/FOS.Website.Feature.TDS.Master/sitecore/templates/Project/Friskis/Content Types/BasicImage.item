@@ -18,6 +18,13 @@ content-length: 77
 
 {1930BBEB-7805-471A-A3BE-4858AC7CF696}|{498B6925-E022-456B-8242-341F39B4983E}
 ----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 0
+
+
+----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
@@ -27,7 +34,7 @@ applications/16x16/photo_portrait.png
 ----version----
 language: en
 version: 1
-revision: 87eeebc9-3284-4a0d-91c5-9e82f79b45ea
+revision: cb44125c-1905-4fb9-a6c5-dea91747a9a8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-87eeebc9-3284-4a0d-91c5-9e82f79b45ea
+cb44125c-1905-4fb9-a6c5-dea91747a9a8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T130816Z
+20170519T130925Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -67,7 +74,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: a7e10046-3ed6-4fe2-a0a5-52b40e073b82
+revision: 245e3436-f416-4aa2-8d53-18c64f6f5971
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -96,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a7e10046-3ed6-4fe2-a0a5-52b40e073b82
+245e3436-f416-4aa2-8d53-18c64f6f5971
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T130935Z
+20170519T130746Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

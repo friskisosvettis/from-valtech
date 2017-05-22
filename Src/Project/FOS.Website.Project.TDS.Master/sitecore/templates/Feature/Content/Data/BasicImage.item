@@ -21,9 +21,9 @@ content-length: 38
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 37
+content-length: 32
 
-Applications/16x16/photo_portrait.png
+Applications/16x16/form_blue.png
 ----version----
 language: en
 version: 1

@@ -25,6 +25,13 @@ content-length: 38
 
 {726CD98C-9CA2-437A-B3C0-A8C011D4C5C9}
 ----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 23
+
+People/32x32/houses.png
+----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
 key: __renderings
@@ -34,7 +41,7 @@ content-length: 0
 ----version----
 language: en
 version: 1
-revision: 76053717-8b44-4202-9338-25da4f2d9128
+revision: 304fe01a-3067-49c6-ab26-914a03dffe5b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-76053717-8b44-4202-9338-25da4f2d9128
+304fe01a-3067-49c6-ab26-914a03dffe5b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170517T130652Z
+20170519T133534Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

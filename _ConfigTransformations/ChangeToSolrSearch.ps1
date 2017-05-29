@@ -58,7 +58,7 @@ function DeActivateLuceneConfigFiles{
 function UpdateGlobalAsax {
 	param([string]$webRootPath)
 	
-	$globalFilePath = join-path $webRootPath "Global.asax"
-	(Get-Content $globalFilePath).Replace("Sitecore.Web.Application","Sitecore.ContentSearch.SolrProvider.CastleWindsorIntegration.WindsorApplication") | Set-Content $globalFilePath 
+	#$globalFilePath = join-path $webRootPath "Global.asax"
+	#(Get-Content $globalFilePath).Replace("Sitecore.Web.Application","Sitecore.ContentSearch.SolrProvider.CastleWindsorIntegration.WindsorApplication") | Set-Content $globalFilePath 
 }
 

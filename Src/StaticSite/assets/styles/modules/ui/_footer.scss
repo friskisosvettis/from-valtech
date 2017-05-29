@@ -10,22 +10,17 @@ $color-footer-secondary: #222326;
 
 .footer {
     min-height: 10em;
+    padding-top: $space-quad;
     background-color: $color-footer-primary;
     color: $color-white;
 
     a {
-        padding: $space-half 0;
         display: block;
         color: $color-white;
         text-decoration: none;
         @include medium-up {
             display: inline-block;
         }
-    }
-    .icon__background {
-        padding-left: $space-quad;
-        margin-right: $space-double;
-        background-position: 0 50%;
     }
 
     ul {
@@ -37,6 +32,11 @@ $color-footer-secondary: #222326;
     &__navigation {
         &--primary{
             font-weight: bold;
+        }
+        &--primary, &--secondary {
+            a {
+                padding: $space-half 0;
+            }
         }
     }
 

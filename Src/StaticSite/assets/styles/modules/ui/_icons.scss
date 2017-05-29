@@ -17,6 +17,17 @@
         &--medium {
             background-size: $icon-size-medium $icon-size-medium;
         }
+        &--large {
+            background-size:70px 70px;
+            background-position: 50% top;
+            padding-top: 70px;
+
+            @include medium-up {
+                padding-top: 0;
+                padding-left: 80px;
+                background-position: 0 $space;
+            }
+        }
     }
 
     &__phone {
@@ -26,15 +37,14 @@
     &__mail {
             background-image: url('/assets/images/icon_mail.svg');
     }
-    &__phone--light {
-        background-image: url('/assets/images/icon_phone-white.svg');
-    }
-
-    &__mail--light {
-            background-image: url('/assets/images/icon_mail-white.svg');
-    }
     &__clock {
         background-image: url('/assets/images/icon_clock.svg');
+    }
+    &__card {
+        background-image: url('/assets/images/icon_card.svg');
+    }
+    &__funkis{
+        background-image: url('/assets/images/icon_funkis.png');
     }
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -100,6 +110,33 @@
             background-image: url('/assets/images/icon_pin-map.svg');
         }
     }
+    &__facebook {
+        &:before {
+            background-image: url('/assets/images/icon_facebook.png');
+        }
+    }
+    &__twitter {
+        &:before {
+            background-image: url('/assets/images/icon_twitter.png');
+        }
+    }
+    &__instagram {
+        &:before {
+            background-image: url('/assets/images/icon_instagram.png');
+        }
+    }
+    &__phone--light {
+        &:before {
+            background-image: url('/assets/images/icon_phone-white.svg');
+        }
+    }
+
+    &__mail--light {
+        &:before {
+            background-image: url('/assets/images/icon_mail-white.svg');
+        }
+    }
+
 }
 
 .active {

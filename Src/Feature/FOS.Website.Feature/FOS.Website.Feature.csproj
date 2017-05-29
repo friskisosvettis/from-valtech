@@ -1047,6 +1047,11 @@
     <Content Include="Feature\Content\Views\Video.cshtml" />
     <Content Include="Feature\Content\Views\AutoCompleteModuleView.cshtml" />
     <Content Include="Feature\Content\Views\HeadingTrainingCenterView.cshtml" />
+    <Content Include="Feature\Summary\Views\Web.config" />
+    <Content Include="Feature\Summary\Views\SummaryList.cshtml" />
+    <Content Include="Feature\News\Views\Web.config" />
+    <Content Include="Feature\Taxonomy\Views\Web.config" />
+    <Content Include="Feature\Summary\Views\SummarySpot.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1091,6 +1096,20 @@
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
+    <Compile Include="Feature\Taxonomy\Constants.cs" />
+    <Compile Include="Feature\Taxonomy\Controllers\Taxonomy.cs" />
+    <Compile Include="Feature\Taxonomy\Controllers\TaxonomyController.cs" />
+    <Compile Include="Feature\Taxonomy\Data\TaxonomySynthesisModels.cs" />
+    <Compile Include="Feature\News\Constants.cs" />
+    <Compile Include="Feature\News\Controllers\News.cs" />
+    <Compile Include="Feature\News\Controllers\NewsController.cs" />
+    <Compile Include="Feature\News\Data\NewsSynthesisModels.cs" />
+    <Compile Include="Feature\Summary\Constants.cs" />
+    <Compile Include="Feature\Summary\Controllers\Summary.cs" />
+    <Compile Include="Feature\Summary\Controllers\SummaryController.cs" />
+    <Compile Include="Feature\Summary\Data\SummarySynthesisModels.cs" />
+    <Compile Include="Feature\Summary\Models\SummaryListModel.cs" />
+    <Compile Include="Feature\Summary\Models\SummarySpotModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1129,7 +1148,10 @@
       <Name>Valtech.Foundation</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Feature\News\Models\" />
+    <Folder Include="Feature\Taxonomy\Models\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

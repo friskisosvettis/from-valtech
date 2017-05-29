@@ -1,0 +1,68 @@
+﻿@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@using FOS.Website.Feature.Summary
+@using FOS.Website.Feature.Summary.Models
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using Sitecore.Web.UI.WebControls
+@using Synthesis.Mvc.Extensions
+
+@model SummaryListModel
+
+<div> SummaryList </div>
+<section class="list rows">
+    <div class="isotope">
+        @if (Model.SummaryList.Any())
+        {
+            <ul>
+                @foreach (SummarySpotModel summarySpot in Model.SummaryList)
+                {
+                    <li>
+                        <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions(){LanguageEmbedding = LanguageEmbedding.Never})">
+                            @if (summarySpot.SummaryItem.SummaryImage.HasValue)
+                            {
+                                <div class="image">
+                                    @{
+                                        if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                        {
+                                            @summarySpot.SummaryItem.SummaryImage.Render(96, 128, "TestClass")
+                                        }
+                                    }
+                                </div>
+                                        }
+                            <div class="content">
+                                <h2>
+
+                                    @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                    }
+                                    else
+                                    {
+                                        @summarySpot.SummaryItem.Name
+                                    }
+
+                                </h2>
+
+                                @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                {
+                                    @summarySpot.SummaryItem.SummaryText.Render(false)
+                                }
+                                
+                                @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
+                                    {
+                                        <h3>
+                                            @if (summarySpot.SummaryItem.NewsPublishDate != DateTime.MinValue)
+                                            {
+                                                @summarySpot.NewsPublishDate.ToString(Sitecore.Context.Culture.DateTimeFormat.ShortDatePattern)
+                                            }
+                                        </h3>
+                                    }*@
+                            </div>
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+</section>

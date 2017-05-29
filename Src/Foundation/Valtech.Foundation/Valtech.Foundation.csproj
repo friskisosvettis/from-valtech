@@ -1023,6 +1023,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Fingerprint.cs" />
+    <Compile Include="DataSource\DataSource.cs" />
     <Compile Include="DynamicDataSources\Pipelines\CreateDataSourcesFolder.cs" />
     <Compile Include="DynamicDataSources\Pipelines\DatasourceLocationPipeline.cs" />
     <Compile Include="Pipelines\HttpRequestBegin\CustomUrlEnforcer.cs" />

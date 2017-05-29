@@ -7,6 +7,7 @@
 
 .rich-text {
     overflow: hidden;
+    min-height: $space-quad;
     max-width: $text-max-width;
     margin: $space-double 0;
 

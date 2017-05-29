@@ -7,9 +7,9 @@
 
 $teaser-height: rem(3 * $base-height);
 $teaser-height-small: rem(5 * $base-height);
-$teaser-height-medium: rem(7 * $base-height);
-$teaser-height-large: rem(10 * $base-height);
-$teaser-height-xlarge: rem(14.5 * $base-height);
+$teaser-height-medium: rem(6 * $base-height);
+$teaser-height-large: rem(9 * $base-height);
+$teaser-height-xlarge: rem(12.5 * $base-height);
 
 .teaser {
     overflow: hidden;
@@ -163,7 +163,7 @@ $teaser-height-xlarge: rem(14.5 * $base-height);
         display: table;
         width: 100%;
         height: 100%;
-        background:  $primary-color-dim-90;
+        background:  $primary-color-dim-80;
         @include transition(background ,0.35s);
 
         > .teaser__content {

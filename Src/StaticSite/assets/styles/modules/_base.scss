@@ -75,10 +75,10 @@ $primary-color-light: #FCE7E9;  // Light red
 $secondary-color: #48A1DA;      // Blue
 $cta-color: #0EC55A;            // Green
 
-$primary-color-98: #e45563;
-$primary-color-dim-80: rgba(221,82,94,0.8);
-$primary-color-dim-90: rgba(221,82,94,0.9);
-$primary-color-dim-98: rgba(221,82,94,0.98);
+$primary-color-98: rgba(227, 25, 55, 1); //TODO: Primary color remove this variable and replace with primary
+$primary-color-dim-80: rgba(227, 25, 55, 0.8);
+$primary-color-dim-90: rgba(227, 25, 55, 0.9);
+$primary-color-dim-98: rgba(227, 25, 55, 0.98);
 
 $overlay-color-dim-60: rgba(41, 48, 66, 0.6); // TODO - change to another color? 
 /*

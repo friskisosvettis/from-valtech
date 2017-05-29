@@ -5,11 +5,51 @@
 * @author Veronika Jeppsson
 */
 
-footer {
-    min-height: 10em;
-    background-color: $color-black-10;
+$color-footer-primary: #2A2C31;
+$color-footer-secondary: #222326;
 
-    > .container div {
-        @include span(12);
+.footer {
+    min-height: 10em;
+    background-color: $color-footer-primary;
+    color: $color-white;
+
+    a {
+        padding: $space-half 0;
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        @include medium-up {
+            display: inline-block;
+        }
+    }
+    .icon__background {
+        padding-left: $space-quad;
+        margin-right: $space-double;
+        background-position: 0 50%;
+    }
+
+    ul {
+        margin: 0 0 $space-double 0;
+        padding: 0;
+        list-style: none;
+        padding: 0 $space 0 0;
+    }
+    &__navigation {
+        &--primary{
+            font-weight: bold;
+        }
+    }
+
+
+    //-- BOTTOM PART OF FOOTER --//
+    &__bottom {
+        background-color: $color-footer-secondary;
+    }
+}
+
+.center-small-down {
+    text-align: center;
+    @include medium-up {
+        text-align: left;
     }
 }

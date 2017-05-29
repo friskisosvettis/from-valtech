@@ -274,3 +274,10 @@ $grid-outer: (
         @include span(4);
     }
 }
+.container--3 {
+    @include span(12);
+
+    @include medium-up {
+        @include span(3);
+    }
+}

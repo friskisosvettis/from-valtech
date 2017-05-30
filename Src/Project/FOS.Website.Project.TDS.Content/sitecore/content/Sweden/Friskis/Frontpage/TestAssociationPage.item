@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: e512c6b4-c9e2-4bd6-a399-c7270bf838f5
+revision: 6ed52bba-cfa7-4d91-9da2-ffc0ddef9590
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -51,6 +51,13 @@ content-length: 15
 
 Hetaste i Solna
 ----field----
+field: {D39C7329-B2AB-4121-87C3-822619AEB2B0}
+name: Region
+key: region
+content-length: 7
+
+Waikiki
+----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
@@ -70,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e512c6b4-c9e2-4bd6-a399-c7270bf838f5
+6ed52bba-cfa7-4d91-9da2-ffc0ddef9590
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170410T104917Z
+20170526T100200Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

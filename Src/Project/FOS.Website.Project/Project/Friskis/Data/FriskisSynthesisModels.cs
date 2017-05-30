@@ -41,6 +41,18 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
     public partial interface IHeroObjectImageItem : global::FOS.Website.Feature.Content.Data.IHeroObjectImageItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/PropertyFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{42A0D00F-CE10-4139-9D08-BE5854A2158C}", "txFq31ypqk+b9370Nao/tc0EWNI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IPropertyFolderItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Region template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{79F17249-8B9D-4ABF-9982-226F1D9988FF}", "bKaCZ/2c6xex0vIn9Njx1MKCTlg=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRegionItem : global::FOS.Website.Feature.Content.Data.IRegionItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/RichText template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{523342F4-95C8-4796-A0C5-28FAE1DDEF58}", "/WPHNVDEJvXuC3cv02ImhikiZA0=", "Valtech.Foundation.Synthesis")]
@@ -89,7 +101,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestPage template</summary>
@@ -107,7 +119,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}", "sjrxBCKJdQVAkMx8SjRWHMizVCc=", "Valtech.Foundation.Synthesis")]
-    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem {
+    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem, global::FOS.Website.Feature.Content.Data.ITrainingCenterFlagTemplateItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/HeroPage template</summary>
@@ -477,6 +489,123 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new HeroObjectImage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/PropertyFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class PropertyFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IPropertyFolderItem {
+        
+        public PropertyFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public PropertyFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "PropertyFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{42A0D00F-CE10-4139-9D08-BE5854A2158C}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class PropertyFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{42A0D00F-CE10-4139-9D08-BE5854A2158C}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new PropertyFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new PropertyFolder(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Region template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Region : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IRegionItem {
+        
+        private Synthesis.FieldTypes.TextField _name1;
+        
+        public Region(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Region(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Region";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{79F17249-8B9D-4ABF-9982-226F1D9988FF}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Name field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("name")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Name1 {
+            get {
+                if (_name1 == null) {
+                    _name1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D99D59C6-1D94-48FE-A994-C725935C1FE4}"], "/sitecore/templates/Project/Friskis/Content Types/Region", "Name"), this.GetSearchFieldValue("name"));
+                }
+                return _name1;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RegionInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{79F17249-8B9D-4ABF-9982-226F1D9988FF}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Region(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Region(searchFields);
         }
     }
     
@@ -987,6 +1116,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _introTitle;
         
+        private Synthesis.FieldTypes.TextField _region;
+        
         private Synthesis.FieldTypes.TextField _introBody;
         
         private Synthesis.FieldTypes.HyperlinkField _introLink;
@@ -1062,6 +1193,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _introTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroTitle"), this.GetSearchFieldValue("introtitle"));
                 }
                 return _introTitle;
+            }
+        }
+        
+        /// <summary>Represents the Region field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("region")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Region {
+            get {
+                if (_region == null) {
+                    _region = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D39C7329-B2AB-4121-87C3-822619AEB2B0}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Region"), this.GetSearchFieldValue("region"));
+                }
+                return _region;
             }
         }
         

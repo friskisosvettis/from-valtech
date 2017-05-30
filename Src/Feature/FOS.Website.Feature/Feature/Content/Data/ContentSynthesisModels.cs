@@ -443,6 +443,18 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Region template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{5249731A-3F1D-4B2D-8C21-974253A1A7E5}", "uemrO3IlG5otnHju4RZXMW+pjp4=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRegionItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Name field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("name")]
+        Synthesis.FieldTypes.Interfaces.ITextField Name1 {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/RichTextContent template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}", "rWBL6Whx3bUzcYzbL4X3JpRZ2Es=", "Valtech.Foundation.Synthesis")]
@@ -515,6 +527,12 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/TrainingCenterFlagTemplate template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{6A31FD53-4781-4CE9-B3CD-6AD25A28912F}", "SaPIsy8fFj2JuPhnlECH2VgQZak=", "Valtech.Foundation.Synthesis")]
+    public partial interface ITrainingCenterFlagTemplateItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Video template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1BB71F1F-E0E5-4791-8495-47AE8BC00C31}", "aW45B7un3Hc+liLoag5BKsbIVMI=", "Valtech.Foundation.Synthesis")]
@@ -535,6 +553,21 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("image")]
         Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get;
+        }
+    }
+}
+namespace FOS.Website.Feature.Content.ListWidgets {
+    
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/ListWidgets/Regions template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{62A4946C-28F7-4C6B-A8BC-9BFE96B925C9}", "JbHwLH15XNMUt4f8le8Rd16h3I4=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRegionsItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Region field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("region")]
+        Synthesis.FieldTypes.Interfaces.ITextField Region {
             get;
         }
     }
@@ -2413,6 +2446,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Region template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Region : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IRegionItem {
+        
+        private Synthesis.FieldTypes.TextField _name1;
+        
+        public Region(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Region(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Region";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{5249731A-3F1D-4B2D-8C21-974253A1A7E5}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Name field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("name")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Name1 {
+            get {
+                if (_name1 == null) {
+                    _name1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D99D59C6-1D94-48FE-A994-C725935C1FE4}"], "/sitecore/templates/Feature/Content/Data/Region", "Name"), this.GetSearchFieldValue("name"));
+                }
+                return _name1;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RegionInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{5249731A-3F1D-4B2D-8C21-974253A1A7E5}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Region(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Region(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/RichTextContent template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class RichTextContent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem {
@@ -2686,6 +2784,58 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/TrainingCenterFlagTemplate template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class TrainingCenterFlagTemplate : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.ITrainingCenterFlagTemplateItem {
+        
+        public TrainingCenterFlagTemplate(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public TrainingCenterFlagTemplate(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "TrainingCenterFlagTemplate";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{6A31FD53-4781-4CE9-B3CD-6AD25A28912F}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class TrainingCenterFlagTemplateInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{6A31FD53-4781-4CE9-B3CD-6AD25A28912F}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new TrainingCenterFlagTemplate(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new TrainingCenterFlagTemplate(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Video template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class Video : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IVideoItem {
@@ -2813,6 +2963,74 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new WideImage(searchFields);
+        }
+    }
+}
+namespace FOS.Website.Concrete.Feature.Content.ListWidgets {
+    
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/ListWidgets/Regions template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Regions : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem {
+        
+        private Synthesis.FieldTypes.TextField _region;
+        
+        public Regions(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Regions(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Regions";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{62A4946C-28F7-4C6B-A8BC-9BFE96B925C9}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Region field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("region")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Region {
+            get {
+                if (_region == null) {
+                    _region = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D39C7329-B2AB-4121-87C3-822619AEB2B0}"], "/sitecore/templates/Feature/Content/ListWidgets/Regions", "Region"), this.GetSearchFieldValue("region"));
+                }
+                return _region;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RegionsInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{62A4946C-28F7-4C6B-A8BC-9BFE96B925C9}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Regions(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Regions(searchFields);
         }
     }
 }

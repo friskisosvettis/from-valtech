@@ -13,7 +13,7 @@ created: 20170410T095717Z
 ----version----
 language: sv-SE
 version: 1
-revision: 1bafb658-2bfc-4ddc-bb1f-d9937256fbff
+revision: 491f6eb9-ea31-493d-a8b3-cac4726a8c62
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -86,6 +86,13 @@ content-length: 11
 
 -118.321548
 ----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 11
+
+Vintervägen
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -112,14 +119,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1bafb658-2bfc-4ddc-bb1f-d9937256fbff
+491f6eb9-ea31-493d-a8b3-cac4726a8c62
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170516T113245Z
+20170529T115727Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

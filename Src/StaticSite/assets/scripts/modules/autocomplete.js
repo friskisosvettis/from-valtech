@@ -19,52 +19,15 @@ var autocompleteModule = {
 
 		$(document).ready(function() {
 
-            $('.autocomplete__input').on('click', function() {
-                $('html,body').animate({scrollTop: $(this).offset().top - $('.navigation__container').height()}, 800);
-            });
+		    $('.autocomplete__input')
+		        .on('click',
+		            function() {
+		                $('html,body')
+		                    .animate({ scrollTop: $(this).offset().top - $('.navigation__container').height() }, 800);
+		            });
 
-            var _trainingCenters = [
-                //TRAINING CENTER - SEARCH BY ASSOCIATION
-                { value: 'Stockholm', data: { sortBy: 'Stockholm' , category: 'Förening' , url: 'associationpage.html', centers: 
-                [{ name: 'Gärdet', url: 'associationpage.html/#kungsholmen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Ringen', url: 'associationpage.html/#ringen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'City', url: 'associationpage.html/#city', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Kungsholmen', url: 'associationpage.html/#kungsholmen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Södermalm', url: 'associationpage.html/#ringen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Annan', url: 'associationpage.html/#city', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Aktivitetshuset Skjortan', url: 'associationpage.html/#kungsholmen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Hornstull', url: 'associationpage.html/#ringen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Odenplan', url: 'associationpage.html/#city', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'St. Eriksbron', url: 'associationpage.html/#kungsholmen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Fridhemsplan', url: 'associationpage.html/#ringen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'City', url: 'associationpage.html/#city', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Vällingby', url: 'associationpage.html/#kungsholmen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Hötorget', url: 'associationpage.html/#ringen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Sundbyberg', url: 'associationpage.html/#city', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Älvsjä', url: 'associationpage.html/#kungsholmen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Rinöen', url: 'associationpage.html/#ringen', address: 'Ringvägen 111', city: 'Stockholm'},
-                { name: 'Mariatorget', url: 'associationpage.html/#city', address: 'Ringvägen 111', city: 'Stockholm'}
-                ]} },
-				{ value: 'Storuman', data: { sortBy:  'Storuman' , category: 'Förening' , centers: [{ name: 'Storumans', url: 'associationpage.html/#storuman', address: 'Ringvägen 111', city: 'Stockholm'}], url: 'associationpage.html#storuman' , address: 'Ringvägen 111', city: 'Stockholm'} },
-				{ value: 'Huddinge', data: { sortBy:  'Huddinge' , category: 'Förening' , centers: [{ name: 'Huddinge Centrum', url: 'associationpage.html/#centrum', address: 'Ringvägen 111', city: 'Stockholm'},{ name: 'Huddinges gymnastikhall', url: 'associationpage.html/#huddinge', address: 'Ringvägen 111', city: 'Stockholm'}], url: 'associationpage.html' } },
-
-                // ASSOCIATIONS - SEARCH BY AREA
-				{ value: 'Stockholm', data: { sortBy:  'StockholmArea', category:  'Område' , associations:[{name:'F&S Stockholm', url: '#stockholm'}, {name:'F&S Huddinge', url: '#hudding',},{name:'F&S Lidingö', url: '#lidingo'},{name:'F&S Stockholm', url: '#stockholm'}, {name:'F&S Huddinge', url: '#hudding'},{name:'F&S Lidingö', url: '#lidingo'},{name:'F&S Stockholm', url: '#stockholm'}, {name:'F&S Huddinge', url: '#hudding'}] } },
-
-				// TRAINING CENTERS - SEARH BY TRAINING CENTER
-				{ value: 'Kungsholmen', data: { sortBy: 'Träningscenter' , category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm', association: 'F&S Stockholm', url: 'associationpage.html'} },
-				{ value: 'Ringen', data: { sortBy:  'Träningscenter' , category: 'Träningscenter',  address: 'Ringvägen 11, 112 45 Stockholm' , association: 'F&S Stockholm', url: 'associationpage.html' } },
-				{ value: 'Skrapan', data: { sortBy:  'Träningscenter', category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm' , association: 'F&S Stockholm', url: 'associationpage.html' } },
-				{ value: 'City', data: { sortBy:  'Träningscenter', category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm' , association: 'F&S Stockholm',  url: 'associationpage.html' } },
-				{ value: 'Skanstull', data: { sortBy:  'Träningscenter', category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm' , association: 'F&S Stockholm', url: 'associationpage.html' } },
-				{ value: 'City', data: { sortBy:  'Träningscenter' , category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm', association: 'F&S Göteborg', url: 'associationpage.html' } },
-				{ value: 'Storcentret', data: { sortBy: 'Träningscenter' , category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm', association:  'F&S Göteborg', url: 'associationpage.html' } },
-				{ value: 'Storumans träningscenter', data: { sortBy: 'Träningscenter' , category: 'Träningscenter' ,  address: 'Ringvägen 11, 112 45 Stockholm', association:  'F&S Storuman', url: 'associationpage.html' } },
-				{ value: 'Stocksunds gympasal', data: { sortBy: 'Träningscenter', category: 'Träningscenter',  address: 'Ringvägen 11, 112 45 Stockholm', association: 'F&S Danderyd', url: 'associationpage.html' } },
-			];
-
-			$('*[data-js-autocomplete]').autocomplete({
-				lookup: _trainingCenters,
+		    $('*[data-js-autocomplete]').autocomplete({
+			    serviceUrl: "/__AutoComplete",
 				minChars: 3,
                 lookupLimit: 10,
 				groupBy: 'sortBy',
@@ -72,6 +35,7 @@ var autocompleteModule = {
                 showNoSuggestionNotice: true,
                 appendTo: '.autocomplete--content',
                 maxHeight: 1400,
+		        triggerSelectOnValidInput: false,
 				onSelect: function (suggestion) {
                     window.location = suggestion.data.url;
                 },
@@ -79,16 +43,16 @@ var autocompleteModule = {
 					var result;
 
 					// All gyms that exists (in an assoc. that match the search query) with a name that does not neccesary match the search query
-					if((suggestion.data.category == "Förening") && (suggestion.data.sortBy.toLowerCase().indexOf(queryLowerCase) >= 0)) {
+					if ((suggestion.data.category == "Förening") && (suggestion.data.sortBy.toLowerCase().indexOf(queryLowerCase) >= 0)) {
 						result = result + suggestion.value;
 					}
 					// All associations that match the search query in an are (if they exist)
-					if((suggestion.data.category == "Område") && (suggestion.data.sortBy.toLowerCase().indexOf(queryLowerCase) >= 0)) {
+					if ((suggestion.data.category == "Område") && (suggestion.data.sortBy.toLowerCase().indexOf(queryLowerCase) >= 0)) {
 						result = result + suggestion.value;
 					}
 
 					// All training centers that match the searched query
-					if((suggestion.data.sortBy == "Träningscenter") && (suggestion.value.toLowerCase().indexOf(queryLowerCase) >= 0)) {
+					if ((suggestion.data.category == "Träningscenter") && (suggestion.data.sortBy.toLowerCase().indexOf(queryLowerCase) >= 0)) {
 						result = result + suggestion.value;
 					}
 					// Return result of search
@@ -126,16 +90,28 @@ var autocompleteModule = {
 
                         //------ AREA ------//
                         // If it's an area add the associations
-                        if($(suggestion).closest('.autocomplete-container').data('autocomplete-category') == "Område"){
+                        if ($(suggestion).closest('.autocomplete-container').data('autocomplete-category') == "Område"
+                        ) {
                             var associations = suggestions[i].data.associations;
-                            $(suggestion).closest('.autocomplete-container').append('<ul class="autocomplete-suggestion-results"></ul>');
+                            $(suggestion)
+                                .closest('.autocomplete-container')
+                                .append('<ul class="autocomplete-suggestion-results"></ul>');
                             $(suggestion).closest('.autocomplete-suggestion').prepend('Område ')
 
-                            for (var j=0; j < associations.length; j++) {
-                                $(suggestion).closest('*[data-autocomplete-category]').find('.autocomplete-suggestion-results').append( '<li><a href='+associations[j].url +'>' + associations[j].name + '</a></li>')
+                            for (var j = 0; j < associations.length; j++) {
+                                $(suggestion)
+                                    .closest('*[data-autocomplete-category]')
+                                    .find('.autocomplete-suggestion-results')
+                                    .append('<li><a href=' +
+                                        associations[j].url +
+                                        '>' +
+                                        associations[j].name +
+                                        '</a></li>')
                             }
                             // Find data attribute and remove data index.
-                            $('*[data-autocomplete-category="Område"]').find('.autocomplete-suggestion').attr('data-index','');
+                            $('*[data-autocomplete-category="Område"]')
+                                .find('.autocomplete-suggestion')
+                                .attr('data-index', '');
                         }
 
                         //------ TRAINING CENTER ------//

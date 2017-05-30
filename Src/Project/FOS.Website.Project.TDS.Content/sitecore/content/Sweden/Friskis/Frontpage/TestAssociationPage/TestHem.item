@@ -95,7 +95,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 7787acb2-f3be-41fd-8647-298156d4cedf
+revision: 47a342fa-0dc4-4412-88f8-8f4e922e6c18
 
 ----field----
 field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
@@ -199,9 +199,9 @@ content-length: 11
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 3
+content-length: 10
 
-Hem
+Västra Hem
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -236,14 +236,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7787acb2-f3be-41fd-8647-298156d4cedf
+47a342fa-0dc4-4412-88f8-8f4e922e6c18
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170517T141850Z
+20170529T115923Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -24,23 +24,32 @@ namespace FOS.Website.Feature.Content.Controllers
             longi = null;
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://freegeoip.net/json/");
-            var response = client.GetAsync(ip.ToString()).Result;
-            if (response.IsSuccessStatusCode)
+            try
             {
-                var content = response.Content;
-
-                if (null != content)
+                var response = client.GetAsync(ip.ToString()).Result;
+                if (response.IsSuccessStatusCode)
                 {
-                    var answer = content.ReadAsStringAsync().Result;
-                    var coord = JsonConvert.DeserializeObject<coordParser>(answer);
+                    var content = response.Content;
 
-                    if (!decimal.Equals(coord.latitude, 0) && !decimal.Equals(coord.longitude, 0))
+                    if (null != content)
                     {
-                        lat = coord.latitude;
-                        longi = coord.longitude;
+                        var answer = content.ReadAsStringAsync().Result;
+                        var coord = JsonConvert.DeserializeObject<coordParser>(answer);
+
+                        if (!decimal.Equals(coord.latitude, 0) && !decimal.Equals(coord.longitude, 0))
+                        {
+                            lat = coord.latitude;
+                            longi = coord.longitude;
+                        }
                     }
                 }
             }
+            catch (Exception e)
+            {
+                var exc = string.Format("Dictionary failed with error {0}. Think no connection", e.ToString());
+                Debug.WriteLine(exc);
+            }
+            
         }
 
         // NOT used or Tested. If it should be used it need to be activated in App - center

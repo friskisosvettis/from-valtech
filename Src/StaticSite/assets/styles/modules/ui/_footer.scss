@@ -43,13 +43,18 @@ $color-footer-secondary: #222326;
 
     //-- BOTTOM PART OF FOOTER --//
     &__bottom {
+        padding: $space-quad 0;
         background-color: $color-footer-secondary;
-    }
-}
+        text-align: center;
+        display: block;
 
-.center-small-down {
-    text-align: center;
-    @include medium-up {
-        text-align: left;
+        a {
+            margin: $space-half 0;
+
+            @include medium-up {
+                margin-right: $space-double;
+                display: inline-block;
+            }
+        }
     }
 }

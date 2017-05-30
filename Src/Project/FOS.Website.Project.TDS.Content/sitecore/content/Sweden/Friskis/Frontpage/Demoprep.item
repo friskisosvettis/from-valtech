@@ -13,22 +13,8 @@ created: 20170315T153117Z
 ----version----
 language: sv-SE
 version: 1
-revision: 2ddc70a2-7e6b-460d-b72e-de4c163d1e20
+revision: f65f3310-8aa5-4241-b6dd-440b7ce89437
 
-----field----
-field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
-name: Headline
-key: headline
-content-length: 28
-
-Träna - och förbättra minnet
-----field----
-field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
-name: Image
-key: image
-content-length: 58
-
-<image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -49,14 +35,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2ddc70a2-7e6b-460d-b72e-de4c163d1e20
+f65f3310-8aa5-4241-b6dd-440b7ce89437
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170316T083031Z
+20170530T125625Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

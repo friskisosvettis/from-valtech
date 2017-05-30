@@ -39,12 +39,6 @@ namespace FOS.Website.Feature.Content.Controllers
             return View(Constants.Views.Paths.BasicHeading, model);
         }
 
-        public ActionResult GetAdvancedHeadingView()
-        {
-            AdvancedHeadingModel model = new AdvancedHeadingModel(Sitecore.Context.Item);
-            return View(Constants.Views.Paths.AdvancedHeading, model);
-        }
-
         public ActionResult GetHeadingTrainingCenterView()
         {
             HeadingTrainingCenterModel model = new HeadingTrainingCenterModel(Sitecore.Context.Item);

@@ -13,22 +13,8 @@ created: 20170426T132645Z
 ----version----
 language: en
 version: 1
-revision: 0f5b5b8f-7cc4-4914-94be-7c534f9cd612
+revision: e6f131ac-23c2-4215-921a-cab90f97189d
 
-----field----
-field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
-name: Headline
-key: headline
-content-length: 4
-
-Yoga
-----field----
-field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
-name: Image
-key: image
-content-length: 58
-
-<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
 ----field----
 field: {0E12FF8A-DC4F-43F0-8D43-6C2BE8CF4021}
 name: Navigation_NavigationTitle
@@ -70,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0f5b5b8f-7cc4-4914-94be-7c534f9cd612
+e6f131ac-23c2-4215-921a-cab90f97189d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170426T132744Z
+20170530T125625Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -88,22 +74,8 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: a41e38f3-29f5-41b3-9f30-1424198a96e3
+revision: 0cd03fa8-2b92-43a0-bb2e-ea83e6ee24fc
 
-----field----
-field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
-name: Headline
-key: headline
-content-length: 4
-
-Yoga
-----field----
-field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
-name: Image
-key: image
-content-length: 58
-
-<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -124,14 +96,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a41e38f3-29f5-41b3-9f30-1424198a96e3
+0cd03fa8-2b92-43a0-bb2e-ea83e6ee24fc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170519T134511Z
+20170530T125625Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

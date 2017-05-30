@@ -1021,7 +1021,6 @@
     <Content Include="Feature\Content\Views\Collage.cshtml" />
     <Content Include="Feature\Content\Views\Teaser.cshtml" />
     <Content Include="Feature\Content\Views\Media.cshtml" />
-    <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
     <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
     <Content Include="Feature\Content\Views\BasicImage.cshtml" />
@@ -1088,7 +1087,6 @@
     <Compile Include="Feature\Content\Models\TrainingCenterCollectionMapModel.cs" />
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
-    <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
     <Compile Include="Feature\Content\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />

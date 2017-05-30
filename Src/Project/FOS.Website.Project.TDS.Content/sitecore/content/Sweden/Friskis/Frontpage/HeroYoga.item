@@ -13,22 +13,8 @@ created: 20170307T170044Z
 ----version----
 language: en
 version: 1
-revision: 97b1fa8f-f772-4186-b8b7-0f9d81487fe4
+revision: 0d773a1b-ce3e-420b-bfe2-58b8edf9c98a
 
-----field----
-field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
-name: Headline
-key: headline
-content-length: 4
-
-Yoga
-----field----
-field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
-name: Image
-key: image
-content-length: 58
-
-<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -49,14 +35,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-97b1fa8f-f772-4186-b8b7-0f9d81487fe4
+0d773a1b-ce3e-420b-bfe2-58b8edf9c98a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170309T100239Z
+20170530T125625Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -74,22 +60,8 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: f5895733-fcce-4939-8d4a-0c7515eb27a0
+revision: b7efa910-38b2-44dc-b327-b14e8fdaf60a
 
-----field----
-field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
-name: Headline
-key: headline
-content-length: 4
-
-Yoga
-----field----
-field: {F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}
-name: Image
-key: image
-content-length: 58
-
-<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -110,14 +82,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f5895733-fcce-4939-8d4a-0c7515eb27a0
+b7efa910-38b2-44dc-b327-b14e8fdaf60a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T144252Z
+20170530T125625Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

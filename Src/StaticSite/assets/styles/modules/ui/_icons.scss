@@ -98,6 +98,16 @@
             background-image: url('/assets/images/icon_list-inactive.svg');
         }
     }
+    &__goto {
+        &:before {
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+        }
+    }
+    &__goto-circle {
+        &:before {
+            background-image: url('/assets/images/icon_goto-circle.svg');
+        }
+    }
 
     &__pin-map {
         &:before {

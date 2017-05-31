@@ -245,6 +245,7 @@ $grid-outer: (
     @include layout($grid-outer);
     @include container();
     padding: 0 $space-double;
+    list-style-type: none;
 }
 
 .container--12 {

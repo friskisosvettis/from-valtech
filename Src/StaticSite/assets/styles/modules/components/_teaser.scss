@@ -8,10 +8,11 @@
 $teaser-height: rem(3 * $base-height);
 $teaser-height-small: rem(5 * $base-height);
 $teaser-height-medium: rem(6 * $base-height);
-$teaser-height-large: rem(9 * $base-height);
-$teaser-height-xlarge: rem(12.5 * $base-height);
+$teaser-height-large: rem(9 * $base-height);        //360px
+$teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
 
 .teaser {
+    margin-bottom: $space;
     overflow: hidden;
     text-align: center;
     padding: $space-half 0;
@@ -45,6 +46,17 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
 
     /*--------------SMALL VERSION TEASER --------------*/
     &--small {
+        padding: 0;
+        @include box-shadow(0, 1px, 2px, 0, $color-black-30);
+
+        @include small-up {
+            margin: $space;
+            min-height: $teaser-height-medium;
+        }
+        @include medium-up {
+            min-height: $teaser-height-large;
+        }
+
         img {
             @include span(3);
             height: rem($base-height*2);
@@ -74,6 +86,12 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
     /*----------------- Full width teaser -----------------*/
 
     &--full {
+        transform: none;
+
+        &:hover {
+            transform: none;
+        }
+
         @include medium-up {
             max-height: $teaser-height-large;
         }

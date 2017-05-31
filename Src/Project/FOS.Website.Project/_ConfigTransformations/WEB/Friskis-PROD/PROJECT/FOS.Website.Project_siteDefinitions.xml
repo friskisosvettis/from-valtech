@@ -3,7 +3,11 @@
   <Website>
     <ReplaceXml>
       <File name="\App_Config\Include\Project\Friskis\SiteDefinitions.config">
-        <Item path="/configuration/sitecore/sites/site" action="Replace" key="hostName" value="" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="hostName" value="prod.friskissvettis.se" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="rootPath" value="/sitecore/content/sweden/friskis" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="startItem" value="/frontpage" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="database" value="web" />
+        <Item path="/configuration/sitecore/sites/site" action="Replace" key="language" value="sv-se" />
       </File>
     </ReplaceXml>
   </Website>

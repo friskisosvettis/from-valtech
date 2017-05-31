@@ -997,10 +997,16 @@
     <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\PROJECT\FOS.Website.Project_siteDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\PROJECT\FOS.Website.Project_solr.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_connectionStrings.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_dataFolder.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_KeepAlive.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_siteDefinitions.xml">
@@ -1013,6 +1019,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_dataFolder.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_KeepAlive.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_siteDefinitions.xml">
@@ -1033,6 +1042,12 @@
     <Content Include="_ConfigTransformations\WEB\Friskis-PROD\PROJECT\FOS.Website.Project_siteDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\WEB\Friskis-PROD\PROJECT\FOS.Website.Project_solr.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_ConfigTransformations\WEB\Friskis-STAGE\PROJECT\FOS.Website.Project_KeepAlive.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\WEB\Friskis-STAGE\PROJECT\FOS.Website.Project_solr.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1040,6 +1055,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\WEB\Friskis-TEST\PROJECT\FOS.Website.Project_dataFolder.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_ConfigTransformations\WEB\Friskis-TEST\PROJECT\FOS.Website.Project_KeepAlive.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\WEB\Friskis-TEST\PROJECT\FOS.Website.Project_solr.xml">

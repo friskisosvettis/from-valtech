@@ -4,7 +4,7 @@
     <ReplaceXml>
       <File name="\App_Config\Include\Project\Friskis\KeepAlive.config">
         <Item path="/configuration/sitecore/scheduling/agent[@type='Sitecore.Tasks.UrlAgent']/param[@desc='url']" action="InsertIfMissing">
-          <param desc="url">http://cm.friskissvettis.se/sitecore/service/keepalive.aspx</param>
+          <param desc="url">https://stage-cm1.friskissvettis.se/sitecore/service/keepalive.aspx</param>
         </Item>
       </File>
     </ReplaceXml>

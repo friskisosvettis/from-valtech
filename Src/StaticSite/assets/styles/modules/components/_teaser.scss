@@ -114,10 +114,9 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
         text-align: left;
         padding: 0;
 
-        &:hover{
+        &:hover {
             transform: scale(1.00);
-        }
-        li:hover {
+
             h3 {
                 text-decoration: underline;
             }
@@ -131,6 +130,8 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
             margin-bottom: 0;
         }
         .teaser__content {
+            vertical-align: top;
+            display: inline-block;
             color: $color-black;
         }
     }

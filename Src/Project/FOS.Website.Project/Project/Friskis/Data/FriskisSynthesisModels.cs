@@ -101,13 +101,13 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Frontpage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B08553A1-4D24-411A-9AF4-0F076996FF45}", "st5H+gsFtLQPgW4Htzl4O6oVE2Q=", "Valtech.Foundation.Synthesis")]
-    public partial interface IFrontpageItem : global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem, global::FOS.Website.Feature.Content.Data.IProximityItem {
+    public partial interface IFrontpageItem : global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem, global::FOS.Website.Feature.Content.Data.IProximityItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
@@ -1120,15 +1120,25 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _bookingLink;
         
+        private Synthesis.FieldTypes.HyperlinkField _facebookLink;
+        
         private Synthesis.FieldTypes.TextField _introTitle;
         
         private Synthesis.FieldTypes.TextField _region;
+        
+        private Synthesis.FieldTypes.HyperlinkField _instagramLink;
         
         private Synthesis.FieldTypes.TextField _introBody;
         
         private Synthesis.FieldTypes.HyperlinkField _introLink;
         
+        private Synthesis.FieldTypes.HyperlinkField _twitterLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _contactEmail;
+        
         private Synthesis.FieldTypes.TextField _introLinkLabel;
+        
+        private Synthesis.FieldTypes.TextField _contactPhonenumber;
         
         private Synthesis.FieldTypes.HyperlinkField _trainingSelectionLink;
         
@@ -1191,6 +1201,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Facebook Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("facebook_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField FacebookLink {
+            get {
+                if (_facebookLink == null) {
+                    _facebookLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9AB29783-D2F7-4204-925E-66ED71C53B64}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Facebook Link"), this.GetSearchFieldValue("facebook_link"));
+                }
+                return _facebookLink;
+            }
+        }
+        
         /// <summary>Represents the IntroTitle field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("introtitle")]
         public Synthesis.FieldTypes.Interfaces.ITextField IntroTitle {
@@ -1210,6 +1231,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _region = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D39C7329-B2AB-4121-87C3-822619AEB2B0}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Region"), this.GetSearchFieldValue("region"));
                 }
                 return _region;
+            }
+        }
+        
+        /// <summary>Represents the Instagram Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("instagram_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField InstagramLink {
+            get {
+                if (_instagramLink == null) {
+                    _instagramLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{05933144-6A41-4125-824E-DC2832E9981E}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Instagram Link"), this.GetSearchFieldValue("instagram_link"));
+                }
+                return _instagramLink;
             }
         }
         
@@ -1235,6 +1267,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Twitter Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("twitter_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TwitterLink {
+            get {
+                if (_twitterLink == null) {
+                    _twitterLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F5BE9F09-AE1A-4545-A82A-51FF0D0A6C5F}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Twitter Link"), this.GetSearchFieldValue("twitter_link"));
+                }
+                return _twitterLink;
+            }
+        }
+        
+        /// <summary>Represents the Contact Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactEmail {
+            get {
+                if (_contactEmail == null) {
+                    _contactEmail = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D1B53717-5F4C-46FF-A6D4-302D19D868B9}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Contact Email"), this.GetSearchFieldValue("contact_email"));
+                }
+                return _contactEmail;
+            }
+        }
+        
         /// <summary>Represents the IntroLinkLabel field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("introlinklabel")]
         public Synthesis.FieldTypes.Interfaces.ITextField IntroLinkLabel {
@@ -1243,6 +1297,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _introLinkLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{AC36FE21-630A-48FF-BA2D-97C803E1A2F3}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroLinkLabel"), this.GetSearchFieldValue("introlinklabel"));
                 }
                 return _introLinkLabel;
+            }
+        }
+        
+        /// <summary>Represents the Contact Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_phonenumber")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ContactPhonenumber {
+            get {
+                if (_contactPhonenumber == null) {
+                    _contactPhonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5AE87D4E-7F3A-45B0-8512-EF283254FF0B}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Contact Phonenumber"), this.GetSearchFieldValue("contact_phonenumber"));
+                }
+                return _contactPhonenumber;
             }
         }
         
@@ -1326,13 +1391,23 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _closeToYouLabel;
         
+        private Synthesis.FieldTypes.HyperlinkField _facebookLink;
+        
         private Synthesis.FieldTypes.TextField _headline;
+        
+        private Synthesis.FieldTypes.HyperlinkField _instagramLink;
         
         private Synthesis.FieldTypes.TextField _introduction;
         
         private Synthesis.FieldTypes.TextField _showAllAssociationLabel;
         
         private Synthesis.FieldTypes.HyperlinkField _showAllButtonLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _twitterLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _contactEmail;
+        
+        private Synthesis.FieldTypes.TextField _contactPhonenumber;
         
         public Frontpage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -1374,6 +1449,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Facebook Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("facebook_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField FacebookLink {
+            get {
+                if (_facebookLink == null) {
+                    _facebookLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9AB29783-D2F7-4204-925E-66ED71C53B64}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Facebook Link"), this.GetSearchFieldValue("facebook_link"));
+                }
+                return _facebookLink;
+            }
+        }
+        
         /// <summary>Represents the Headline field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
         public Synthesis.FieldTypes.Interfaces.ITextField Headline {
@@ -1382,6 +1468,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{7E35007F-1840-4A9E-B155-410325E8A43C}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Headline"), this.GetSearchFieldValue("headline"));
                 }
                 return _headline;
+            }
+        }
+        
+        /// <summary>Represents the Instagram Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("instagram_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField InstagramLink {
+            get {
+                if (_instagramLink == null) {
+                    _instagramLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{05933144-6A41-4125-824E-DC2832E9981E}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Instagram Link"), this.GetSearchFieldValue("instagram_link"));
+                }
+                return _instagramLink;
             }
         }
         
@@ -1415,6 +1512,39 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _showAllButtonLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{520218B1-CEA1-4EC7-8CDE-6D754918BC22}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Show All Button Link"), this.GetSearchFieldValue("show_all_button_link"));
                 }
                 return _showAllButtonLink;
+            }
+        }
+        
+        /// <summary>Represents the Twitter Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("twitter_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TwitterLink {
+            get {
+                if (_twitterLink == null) {
+                    _twitterLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F5BE9F09-AE1A-4545-A82A-51FF0D0A6C5F}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Twitter Link"), this.GetSearchFieldValue("twitter_link"));
+                }
+                return _twitterLink;
+            }
+        }
+        
+        /// <summary>Represents the Contact Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactEmail {
+            get {
+                if (_contactEmail == null) {
+                    _contactEmail = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D1B53717-5F4C-46FF-A6D4-302D19D868B9}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Contact Email"), this.GetSearchFieldValue("contact_email"));
+                }
+                return _contactEmail;
+            }
+        }
+        
+        /// <summary>Represents the Contact Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_phonenumber")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ContactPhonenumber {
+            get {
+                if (_contactPhonenumber == null) {
+                    _contactPhonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5AE87D4E-7F3A-45B0-8512-EF283254FF0B}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Contact Phonenumber"), this.GetSearchFieldValue("contact_phonenumber"));
+                }
+                return _contactPhonenumber;
             }
         }
     }

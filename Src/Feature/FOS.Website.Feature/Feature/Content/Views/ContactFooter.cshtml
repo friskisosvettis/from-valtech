@@ -1,0 +1,34 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model ContactFooterModel
+
+@if (Model.ContactFooterItem == null)
+{
+    return;
+}
+
+<div class="footer__bottom">
+    <div class="container">
+        <div class="container--12">
+            @if (Model.ContactFooterItem.FacebookLink.HasValue)
+            {
+                <a class="icon--large icon__facebook" href="@Model.ContactFooterItem.FacebookLink.Href"><span class="hidden--accessible">Facebook</span></a>
+            }
+            @if (Model.ContactFooterItem.InstagramLink.HasValue)
+            {
+                <a class="icon--large icon__instagram" href="@Model.ContactFooterItem.InstagramLink.Href"><span class="hidden--accessible">Instagram</span></a>
+            }
+            @if (Model.ContactFooterItem.TwitterLink.HasValue)
+            {
+                <a class="icon--large icon__twitter" href="@Model.ContactFooterItem.TwitterLink.Href"><span class="hidden--accessible">Twitter</span></a>
+            }
+            @Model.ContactFooterItem.ContactEmail.Render(null ,"icon--large icon__mail--light")
+            @if (Model.ContactFooterItem.ContactPhonenumber.HasValue)
+            {
+                <a class="icon--large icon__phone--light" href="@Model.ContactFooterItem.ContactPhonenumber.RawValue">@Model.ContactFooterItem.ContactPhonenumber.Render()</a>
+            }
+        </div>
+    </div>
+</div>

@@ -185,6 +185,42 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Contact footer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B834CE03-2B61-4043-A14E-9B0393CE9A1B}", "nYeYKK1hl8I1drJAaad0x6OGMD8=", "Valtech.Foundation.Synthesis")]
+    public partial interface IFooterContactfooterItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Facebook Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("facebook_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField FacebookLink {
+            get;
+        }
+        
+        /// <summary>Represents the Instagram Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("instagram_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField InstagramLink {
+            get;
+        }
+        
+        /// <summary>Represents the Twitter Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("twitter_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField TwitterLink {
+            get;
+        }
+        
+        /// <summary>Represents the Contact Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactEmail {
+            get;
+        }
+        
+        /// <summary>Represents the Contact Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_phonenumber")]
+        Synthesis.FieldTypes.Interfaces.ITextField ContactPhonenumber {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "aE1uCuKUiqQFhB9jrJd4Af8+Qzc=", "Valtech.Foundation.Synthesis")]
@@ -1476,6 +1512,123 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new ExpandableSection(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Contact footer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class FooterContactfooter : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem {
+        
+        private Synthesis.FieldTypes.HyperlinkField _facebookLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _instagramLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _twitterLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _contactEmail;
+        
+        private Synthesis.FieldTypes.TextField _contactPhonenumber;
+        
+        public FooterContactfooter(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public FooterContactfooter(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Footer - Contact footer";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B834CE03-2B61-4043-A14E-9B0393CE9A1B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Facebook Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("facebook_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField FacebookLink {
+            get {
+                if (_facebookLink == null) {
+                    _facebookLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9AB29783-D2F7-4204-925E-66ED71C53B64}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Facebook Link"), this.GetSearchFieldValue("facebook_link"));
+                }
+                return _facebookLink;
+            }
+        }
+        
+        /// <summary>Represents the Instagram Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("instagram_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField InstagramLink {
+            get {
+                if (_instagramLink == null) {
+                    _instagramLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{05933144-6A41-4125-824E-DC2832E9981E}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Instagram Link"), this.GetSearchFieldValue("instagram_link"));
+                }
+                return _instagramLink;
+            }
+        }
+        
+        /// <summary>Represents the Twitter Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("twitter_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TwitterLink {
+            get {
+                if (_twitterLink == null) {
+                    _twitterLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F5BE9F09-AE1A-4545-A82A-51FF0D0A6C5F}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Twitter Link"), this.GetSearchFieldValue("twitter_link"));
+                }
+                return _twitterLink;
+            }
+        }
+        
+        /// <summary>Represents the Contact Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactEmail {
+            get {
+                if (_contactEmail == null) {
+                    _contactEmail = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D1B53717-5F4C-46FF-A6D4-302D19D868B9}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Contact Email"), this.GetSearchFieldValue("contact_email"));
+                }
+                return _contactEmail;
+            }
+        }
+        
+        /// <summary>Represents the Contact Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_phonenumber")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ContactPhonenumber {
+            get {
+                if (_contactPhonenumber == null) {
+                    _contactPhonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5AE87D4E-7F3A-45B0-8512-EF283254FF0B}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Contact Phonenumber"), this.GetSearchFieldValue("contact_phonenumber"));
+                }
+                return _contactPhonenumber;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class FooterContactfooterInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B834CE03-2B61-4043-A14E-9B0393CE9A1B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new FooterContactfooter(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new FooterContactfooter(searchFields);
         }
     }
     

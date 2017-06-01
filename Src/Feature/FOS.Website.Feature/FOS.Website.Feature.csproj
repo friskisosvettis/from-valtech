@@ -1054,6 +1054,7 @@
     <Content Include="Feature\News\Views\Web.config" />
     <Content Include="Feature\Taxonomy\Views\Web.config" />
     <Content Include="Feature\Summary\Views\SummarySpot.cshtml" />
+    <Content Include="Feature\Content\Views\ContactFooter.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1071,6 +1072,7 @@
     <Compile Include="Feature\AutoComplete\Routing\RegisterAutoCompleteRoutes.cs" />
     <Compile Include="Feature\Content\Constants.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteDataController.cs" />
+    <Compile Include="Feature\Content\Controllers\FooterController.cs" />
     <Compile Include="Feature\Content\Controllers\LocationIP.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteModuleController.cs" />
     <Compile Include="Feature\Content\Controllers\ProximityController.cs" />
@@ -1080,6 +1082,7 @@
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\ContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\HeadingTrainingCenterModel.cs" />
     <Compile Include="Feature\Content\Models\AutoCompleteModuleModel.cs" />
     <Compile Include="Feature\Content\Models\ProximityModel.cs" />

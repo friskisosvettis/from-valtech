@@ -15,6 +15,7 @@ namespace FOS.Website.Feature.Content
                 public const string AssociationTopBar = "/Feature/Content/Views/AssociationTopBar.cshtml";
                 public const string BasicHeading = "/Feature/Content/Views/BasicHeading.cshtml";
                 public const string BasicImage = "/Feature/Content/Views/BasicImage.cshtml";
+                public const string ContactFooter = "/Feature/Content/Views/ContactFooter.cshtml";
                 public const string ExpandableSection = "/Feature/Content/Views/ExpandableSection.cshtml";
                 public const string AutoCompleteModuleView = "/Feature/Content/Views/AutoCompleteModuleView.cshtml";
                 public const string HeadingTrainingCenterView = "/Feature/Content/Views/HeadingTrainingCenterView.cshtml";

@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: 6ed52bba-cfa7-4d91-9da2-ffc0ddef9590
+revision: 7d639076-f23f-4f2d-b0b4-7d96296a0cc7
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -51,6 +51,20 @@ content-length: 15
 
 Hetaste i Solna
 ----field----
+field: {05933144-6A41-4125-824E-DC2832E9981E}
+name: Instagram Link
+key: instagram link
+content-length: 94
+
+<link text="Insta" linktype="external" url="https://www.instagram.com/" anchor="" target="" />
+----field----
+field: {5AE87D4E-7F3A-45B0-8512-EF283254FF0B}
+name: Contact Phonenumber
+key: contact phonenumber
+content-length: 10
+
+555 - Surf
+----field----
 field: {D39C7329-B2AB-4121-87C3-822619AEB2B0}
 name: Region
 key: region
@@ -77,14 +91,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6ed52bba-cfa7-4d91-9da2-ffc0ddef9590
+7d639076-f23f-4f2d-b0b4-7d96296a0cc7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170526T100200Z
+20170530T153634Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1039,6 +1039,9 @@
     <Content Include="App_Config\Include\AutoCompleteRouting\RegisterCustomRoutes.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\AutoCompleteRouting\z_AllowSpecialControllers.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config">
       <SubType>Designer</SubType>
     </None>

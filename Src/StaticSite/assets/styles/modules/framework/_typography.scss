@@ -112,7 +112,7 @@ p {
 }
 
 .note {
-    color: $primary-color-98;
+    color: $primary-color;
     font-size: 0.9rem; // TODO CHECK THIS
 
     &:before {
@@ -144,7 +144,22 @@ a {
     &.link--inverted {
         color: $color-white;
     }
+    &.link--goto {
+        text-decoration: none;
 
+        &:before {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin-right: $space;
+            vertical-align: middle;
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+            background-size: $icon-size-small $icon-size-small;
+            height: $icon-size-small;
+            width: $icon-size-small;
+        }
+
+    }
 }
 
 /*-------------------------------------------------*/

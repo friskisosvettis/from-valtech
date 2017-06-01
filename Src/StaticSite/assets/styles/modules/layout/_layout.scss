@@ -79,6 +79,14 @@ main {
 }
 
 // ----------- COLORS ----------- //
-.color--primary-98 {
-    color: $primary-color-98;
+.color--primary {
+    color: $primary-color;
+}
+
+// ----------- TEXT ALIGN ----------- //
+.text-align--center {
+    text-align: center;
+}
+.text-align--right {
+    text-align: right;
 }

@@ -75,7 +75,6 @@ $primary-color-light: #FCE7E9;  // Light red
 $secondary-color: #48A1DA;      // Blue
 $cta-color: #0EC55A;            // Green
 
-$primary-color-98: rgba(227, 25, 55, 1); //TODO: Primary color remove this variable and replace with primary
 $primary-color-dim-80: rgba(227, 25, 55, 0.8);
 $primary-color-dim-90: rgba(227, 25, 55, 0.9);
 $primary-color-dim-98: rgba(227, 25, 55, 0.98);
@@ -105,7 +104,6 @@ $color-dim-70: rgba(0,0,0,0.7);
  * 1) These are non-linked text colors, such as body copy.
  */
 $color-text: $color-black-90;
-/*$color-text-subtle: $color-gray-50;*/
 
 /*
  * Heading Colors
@@ -120,7 +118,7 @@ $color-heading: $color-black-90;
  *    navigation link, footer link, etc.
  */
 
- $color-text-link: $primary-color-98;
+ $color-text-link: $primary-color;
 
 /*
  * Border Colors

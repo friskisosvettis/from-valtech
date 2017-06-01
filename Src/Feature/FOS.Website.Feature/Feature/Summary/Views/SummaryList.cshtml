@@ -26,17 +26,23 @@
 @if (Model.SummaryList.Any())
 {
     // Alternative one - SIMPLE LIST - if checked this is displayed instead of page specific teaser list
-    var cssClass = "teaser__small";
+    var cssClass = "teaser--small";
+    if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
+    {
+        cssClass = "teaser--full";
+    }
+
     if (Model.SummaryListItem.DisplayAsSimpleList.Value)
     {
         cssClass = "teaser__list icon__background icon__background--large icon__card";
         <div class="container">
             <div class="container--12">
-                <ul>
+                <h2 class="color--primary margin-bottom--none">@Model.SummaryListItem.Header</h2>
+                <ul class="teaser teaser__list">
                     @foreach (SummarySpotModel summarySpot in Model.SummaryList)
                     {
-                        <li class="teaser teaser__list">
-                            <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})" class="icon--medium icon__goto">
+                        <li class="icon__background icon__background--medium icon--top icon__goto-circle">
+                            <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
                                 <div class="teaser__content">
                                     <h3 class="heading-5">
                                         @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
@@ -48,7 +54,8 @@
                                             @summarySpot.SummaryItem.Name
                                         }
                                     </h3>
-                                    @*If it is a news/article I *@
+
+                                     @*If it is a news/article I *@
                                     @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
                                         {
                                             <p class="date">
@@ -60,62 +67,93 @@
                                         }*@
                                     @if (summarySpot.SummaryItem.SummaryText.HasValue)
                                     {
-                                        @summarySpot.SummaryItem.SummaryText.Render(false)
+                                        <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
                                     }
                                 </div>
                             </a>
                         </li>
                     }
+
                 </ul>
+                @if (Model.SummaryListItem.ReadMoreLink.HasValue)
+                {
+                    @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto")
+                }
             </div>
         </div>
     }
-
-
-    <ul class="container">
-        @foreach (SummarySpotModel summarySpot in Model.SummaryList)
-        {
-            <li class="@containerClass">
-                <div class="teaser @cssClass">
-                    <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
-                        @* Don't show an image if it's a simple list*@
-                        @if (summarySpot.SummaryItem.SummaryImage.HasValue & !Model.SummaryListItem.DisplayAsSimpleList.Value)
-                        {
-                            if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+    else
+    {
+        <div class="container">
+            <div class="container--12">
+                <h2 class="color--primary margin-bottom--none text-align--center">@Model.SummaryListItem.Header</h2>
+            </div>
+        </div>
+        <ul class="container">
+            @foreach (SummarySpotModel summarySpot in Model.SummaryList)
+            {
+                <li class="@containerClass">
+                    <div class="teaser @cssClass">
+                        <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                            @* Don't show an image if it's a simple list*@
+                            @if (summarySpot.SummaryItem.SummaryImage.HasValue & !Model.SummaryListItem.DisplayAsSimpleList.Value)
                             {
-                                @summarySpot.SummaryItem.SummaryImage.Render()
+                                if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                {
+                                    @summarySpot.SummaryItem.SummaryImage.Render()
+                                }
                             }
-                        }
-                        <div class="teaser__content">
-                            <h2 class="heading-5">
-                                @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
-                                {
-                                    @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                            <div class="teaser__content">
+                                <h3 class="heading-5">
+                                    @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                    }
+                                    else
+                                    {
+                                        @summarySpot.SummaryItem.Name
+                                    }
+                                </h3>
+                                @*Article/news/events FULL WIDTH KICKER: Render with text *@
+                               @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
+                               {
+                                   if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                   {
+                                    <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                   }
+                                   // TODO: Remove hard coded "Läs mer" text and make it translatable
+                                    <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                        Läs mer
+                                    </a>
                                 }
-                                else
-                                {
-                                    @summarySpot.SummaryItem.Name
-                                }
-                            </h2>
-                            @* TODO: ONLY RENDER TEXT IF IT IS AN EVENT/NEWS ITEM
-                                @if (summarySpot.SummaryItem.SummaryText.HasValue)
-                                {
-                                    @summarySpot.SummaryItem.SummaryText.Render(false)
-                                }*@
+                                @* TODO: ONLY RENDER TEXT IF IT IS AN EVENT/NEWS ITEM
+                                    @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryText.Render(false)
+                                    }*@
 
-                            @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
-                                {
-                                    <p class="date">
-                                        @if (summarySpot.SummaryItem.NewsPublishDate != DateTime.MinValue)
-                                        {
-                                            @summarySpot.NewsPublishDate.ToString(Sitecore.Context.Culture.DateTimeFormat.ShortDatePattern)
-                                        }
-                                    </p>
-                                }*@
-                        </div>
-                    </a>
-                </div>
-            </li>
-        }
-    </ul>
+                                @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
+                                    {
+                                        <p class="date">
+                                            @if (summarySpot.SummaryItem.NewsPublishDate != DateTime.MinValue)
+                                            {
+                                                @summarySpot.NewsPublishDate.ToString(Sitecore.Context.Culture.DateTimeFormat.ShortDatePattern)
+                                            }
+                                        </p>
+                                    }*@
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            }
+        </ul>
+        if (Model.SummaryListItem.ReadMoreLink.HasValue)
+         {
+             <div class="container">
+                 <div class="container--12 text-align--right">
+                     @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto")
+                 </div>
+             </div>
+         }
+    }
 }

@@ -29,6 +29,9 @@
             }
         }
     }
+    &--top {
+        background-position: 0 0;
+    }
 
     &__phone {
         background-image: url('/assets/images/icon_phone.svg');
@@ -45,6 +48,9 @@
     }
     &__funkis{
         background-image: url('/assets/images/icon_funkis.png');
+    }
+    &__goto-circle {
+        background-image: url('/assets/images/icon_goto-circle.svg');
     }
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -103,12 +109,6 @@
             background-image: url('/assets/images/icon_arrow-right-red.svg');
         }
     }
-    &__goto-circle {
-        &:before {
-            background-image: url('/assets/images/icon_goto-circle.svg');
-        }
-    }
-
     &__pin-map {
         &:before {
             background-image: url('/assets/images/icon_pin-map-inactive.svg');

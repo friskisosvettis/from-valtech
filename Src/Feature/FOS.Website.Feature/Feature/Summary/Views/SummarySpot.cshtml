@@ -30,9 +30,9 @@
             <div class="teaser__content">
                 @if (Model.SummaryItem.SummaryHeading.HasValue)
                 {
-                    <h2 class="heading-5">
+                    <h3 class="heading-5">
                         @Model.SummaryItem.SummaryHeading.Render()
-                    </h2>
+                    </h3>
                 }
                 @if (Model.SummaryItem.SummaryText.HasValue)
                 {
@@ -40,7 +40,7 @@
                         @Model.SummaryItem.SummaryText.Render()
                     </p>
                     // TODO: Remove hard coded "Läs mer" text and make it translatable
-                    <a class="icon--small icon__goto" href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                    <a class="link--goto" href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
                         Läs mer
                     </a>
                 }

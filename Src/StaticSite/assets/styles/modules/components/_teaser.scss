@@ -5,11 +5,13 @@
 * @author Veronika Jeppsson
 */
 
-$teaser-height: rem(3 * $base-height);
-$teaser-height-small: rem(5 * $base-height);
-$teaser-height-medium: rem(6 * $base-height);
+// TODO: Refactor this module //
+
+$teaser-height: rem(3 * $base-height);              //120px
+$teaser-height-small: rem(5 * $base-height);        //240px
+$teaser-height-medium: rem(6 * $base-height);       //240px
 $teaser-height-large: rem(9 * $base-height);        //360px
-$teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
+$teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 
 .teaser {
     margin-bottom: $space;
@@ -18,6 +20,12 @@ $teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
     padding: $space-half 0;
     @include transform-scale(1.00);
     @include transition(opacity ,0.35s);
+
+    &__header {
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: $space;
+    }
 
     &:hover {
         @include transform-scale(1.05);
@@ -32,54 +40,35 @@ $teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
         text-decoration: none;
     }
 
-    h2 {
+    h3 {
         color: $color-text;
     }
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
         // This is in order to make object-fit cover work in IE
-        font-family: "object-fit: cover; object-position: top";
+        font-family: "object-fit: cover; object-position: center";
     }
 
-    /*--------------SMALL VERSION TEASER --------------*/
+    /*--------------SMALL VERSION TEASER ARTICLE/NEWS/EVENTS--------------*/
     &--small {
         padding: 0;
         @include box-shadow(0, 1px, 2px, 0, $color-black-30);
+        height: $teaser-height-large;
 
         @include small-up {
             margin: $space;
-            min-height: $teaser-height-medium;
-        }
-        @include medium-up {
-            min-height: $teaser-height-large;
         }
 
-        img {
-            @include span(3);
-            height: rem($base-height*2);
-
-            @include small-up {
-                @include span(12);
-                height: $teaser-height-small;
-            }
-
-            @include medium-up {
-                height: $teaser-height-medium;
-            }
-        }
         .teaser__content {
-            @include span(9);
-            text-align: left;
-            padding-left: $space;
-
-            @include small-up {
-                @include span(12);
-                text-align: center;
-                padding-left: 0;
-            }
+            @include span(12);
+            text-align: center;
+        }
+        img {
+            @include span(12);
+            height: 80%;
         }
     }
 
@@ -134,11 +123,20 @@ $teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
 
         &:hover {
             transform: scale(1.00);
+        }
 
-            h3 {
-                text-decoration: underline;
+        li {
+            padding-left: $space-quad;
+            margin-bottom: $space;
+            min-height: $base-height;
+
+            &:hover {
+                h3 {
+                    text-decoration: underline;
+                }
             }
         }
+
         h3 {
             margin: 0;
         }
@@ -148,6 +146,7 @@ $teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
             margin-bottom: 0;
         }
         .teaser__content {
+            max-width: $text-max-width;
             vertical-align: top;
             display: inline-block;
             color: $color-black;
@@ -228,6 +227,44 @@ $teaser-height-xlarge: rem(12.5 * $base-height);;   //500px
             height: $teaser-height-xlarge;
             img {
                 height: $teaser-height-xlarge;
+            }
+        }
+    }
+}
+
+// TEASER SMALL IN 3 columns
+.container--4 {
+    .teaser--small {
+        height: rem($base-height*2);
+
+        @include small-up {
+            height: $teaser-height-medium;
+        }
+        @include medium-up {
+            height: $teaser-height-large;
+        }
+
+        img {
+            @include span(3);
+            height: rem($base-height*2);
+
+            @include small-up {
+                @include span(12);
+                height: 65%;
+            }
+            @include medium-up {
+                height: 80%;
+            }
+        }
+        .teaser__content {
+            @include span(9);
+            text-align: left;
+            padding-left: $space;
+
+            @include small-up {
+                @include span(12);
+                text-align: center;
+                padding-left: 0;
             }
         }
     }

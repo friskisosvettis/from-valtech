@@ -2,9 +2,9 @@
 version: 1
 id: {695108BE-03A4-4177-AEF7-3A92F30C48AE}
 database: master
-path: /sitecore/templates/Feature/Navigation/Data/NavigationBarRoot
+path: /sitecore/templates/Feature/Navigation/Data/Navigation Menu Links Association
 parent: {A577BB1F-728A-4FC4-B816-D4098B10BE69}
-name: NavigationBarRoot
+name: Navigation Menu Links Association
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 75e5cd56-9ab8-4fb5-b9f8-da6082107c27
+revision: b963ca5f-4dc4-428a-8f08-9e0b0e3b7d88
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-75e5cd56-9ab8-4fb5-b9f8-da6082107c27
+b963ca5f-4dc4-428a-8f08-9e0b0e3b7d88
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170404T093253Z
+20170602T131629Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

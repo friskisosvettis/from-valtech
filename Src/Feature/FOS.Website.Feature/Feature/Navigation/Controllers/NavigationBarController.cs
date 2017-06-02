@@ -21,7 +21,7 @@ namespace FOS.Website.Feature.Navigation.Controllers
         {
             var activeItem = Sitecore.Context.Item;
             NavigationBarModel model = null;
-            var menuBarItem = activeItem.ClosestAscendantItemOfType<INavigationBarRootItem>();
+            var menuBarItem = activeItem.ClosestAscendantItemOfType<INavigationRootPageFlagItem>();
             if (menuBarItem != null)
             {
                 List<INavigationDataItem> mainMenuItems = new List<INavigationDataItem>();
@@ -34,7 +34,7 @@ namespace FOS.Website.Feature.Navigation.Controllers
                     MoreMenuItems = moreMenuItems,
                     HomeItem = menuBarItem.InnerItem,
                     ActiveItemID = activeItem.ID,
-                    BookingLink = menuBarItem.BookingLink
+                    AssociationLinks = menuBarItem.InnerItem.As<INavigationMenuLinksAssociationItem>(),
                 };
             }
                 

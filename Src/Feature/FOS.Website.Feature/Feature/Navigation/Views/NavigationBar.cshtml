@@ -5,6 +5,7 @@
 @using FOS.Website.Feature.Navigation.Models
 @using Sitecore.Data.Items
 @using Sitecore.Links
+@using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model NavigationBarModel
 
@@ -53,9 +54,13 @@
                 </li>
                 <!--TODO: ADD hidden text boka for accessibility on click -->
                 <li>
-                    @if (Model.BookingLink.HasValue)
+                    @if (@Model.AssociationLinks != null)
                     {
-                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn__icon btn__icon--left")
+                        @Model.AssociationLinks.BookingLink.Render("Boka pass", "btn btn--book btn__icon btn__icon--left")
+                    }
+                    else
+                    {
+                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--book btn__icon btn__icon--left">Träna Här</a>
                     }
                     <button class="navigation__btn" href="#uou2" data-js-menu>
                         <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
@@ -92,10 +97,16 @@
                         </ul>
                     </li>
                 }
-                @if (Model.BookingLink.HasValue)
+                @if (@Model.AssociationLinks != null)
                 {
                     <li class="navigation__item visible-large-up">
-                        @Html.HyperlinkFor(m => m.BookingLink, "Boka pass", "btn btn--book btn__icon btn__icon--left")
+                        @Model.AssociationLinks.BookingLink.Render("Boka pass", "btn btn--book btn__icon btn__icon--left")
+                    </li>
+                }
+                else
+                {
+                    <li class="navigation__item visible-large-up">
+                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--book btn__icon btn__icon--left">Träna Här</a>
                     </li>
                 }
             </ul>

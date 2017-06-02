@@ -2,7 +2,7 @@
 version: 1
 id: {A26B0801-FAED-4426-8F97-4D06670FFBEF}
 database: master
-path: /sitecore/templates/Feature/Navigation/Data/NavigationBarRoot/Navigation Bar/BookingLink
+path: /sitecore/templates/Feature/Navigation/Data/Navigation Menu Links Association/Navigation Menu Links/BookingLink
 parent: {9A608A80-E372-41D8-B9AA-F2FE82474A2C}
 name: BookingLink
 master: {00000000-0000-0000-0000-000000000000}
@@ -27,7 +27,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: e01be2ca-65d4-4675-a6de-3fba6c77c200
+revision: 11679c9d-e327-415e-91b3-872bbe3347b3
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e01be2ca-65d4-4675-a6de-3fba6c77c200
+11679c9d-e327-415e-91b3-872bbe3347b3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170405T100545Z
+20170602T131641Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -515,15 +515,15 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Navigation\Data\NavigationBarRoot.item">
+    <SitecoreItem Include="sitecore\templates\Feature\Navigation\Data\Navigation Menu Links Association.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Navigation\Data\NavigationBarRoot\Navigation Bar.item">
+    <SitecoreItem Include="sitecore\templates\Feature\Navigation\Data\Navigation Menu Links Association\Navigation Menu Links.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Navigation\Data\NavigationBarRoot\Navigation Bar\BookingLink.item">
+    <SitecoreItem Include="sitecore\templates\Feature\Navigation\Data\Navigation Menu Links Association\Navigation Menu Links\BookingLink.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

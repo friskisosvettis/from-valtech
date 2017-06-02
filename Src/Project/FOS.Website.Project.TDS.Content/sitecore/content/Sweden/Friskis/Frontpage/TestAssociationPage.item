@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: 3c99d2db-298e-41c9-970f-92ead5715634
+revision: b1bda7a2-59ea-433b-a5c4-dc73fe312727
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -79,6 +79,13 @@ content-length: 129
 
 <link text="Bli funkis" linktype="external" url="https://stage.friskissvettis.se/stockholm/bli-funktionar" anchor="" target="" />
 ----field----
+field: {A26B0801-FAED-4426-8F97-4D06670FFBEF}
+name: BookingLink
+key: bookinglink
+content-length: 137
+
+<link text="Boka" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{D9968685-F1ED-4369-8487-F4C6E5BB9BF4}" />
+----field----
 field: {D39C7329-B2AB-4121-87C3-822619AEB2B0}
 name: Region
 key: region
@@ -105,14 +112,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3c99d2db-298e-41c9-970f-92ead5715634
+b1bda7a2-59ea-433b-a5c4-dc73fe312727
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T093403Z
+20170602T143155Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

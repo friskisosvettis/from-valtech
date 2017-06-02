@@ -1115,7 +1115,7 @@
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterAssociation.cs" />
-    <Compile Include="Feature\Navigation\Models\NavigationFooterBase.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterFrontPage.cs" />
     <Compile Include="Feature\Navigation\NavigationDataCollector.cs" />
     <Compile Include="Feature\Taxonomy\Constants.cs" />

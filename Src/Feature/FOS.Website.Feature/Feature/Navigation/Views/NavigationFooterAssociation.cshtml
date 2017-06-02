@@ -8,8 +8,6 @@
 @using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model NavigationFooterAssociation
-
-Association Footer
 @if (Model == null)
 {
     return;
@@ -18,23 +16,42 @@ Association Footer
 {
     <li><a href="@LinkManager.GetItemUrl(linkItem)">@linkItem.DisplayName</a></li>
 }
-<ul>
-    @foreach (var navigationDataItem in Model.PrimaryMenuItems)
-    {
-        @AddLinkLine(navigationDataItem.InnerItem)
-    }
-</ul>
-<ul>
-    @foreach (var navigationDataItem in Model.MoreMenuItems)
-    {
-        @AddLinkLine(navigationDataItem.InnerItem)
-    }
-</ul>
-<ul>
-    <li>
-        @Model.AssociationFooterLinks.BecomeAMember.Render()
-    </li>
-    <li>
-        @Model.AssociationFooterLinks.BecomeAFunkis.Render()
-    </li>
-</ul>
+<div class="footer__navigation">
+    <div class="container">
+        <div class="container--3">
+            <ul class="footer__navigation--primary">
+                @foreach (var navigationDataItem in Model.PrimaryMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem.InnerItem)
+                }
+            </ul>
+        </div>
+        <div class="container--3">
+            <ul class="footer__navigation--secondary">
+                @foreach (var navigationDataItem in Model.MoreMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem.InnerItem)
+                }
+            </ul>
+        </div>
+        <div class="container--6 center-small-down">
+            @if (!Model.AssociationFooterLinks.BecomeAMember.Href.IsEmpty())
+            {
+                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAMember, "icon__background icon__background--large icon__card"))
+                 {
+                     <h2 class="heading-6">Bli medlem</h2>
+                     <p>Oavsett om du vill bli starkare, rörligare, springa ett långlopp eller helt enkelt må bra så har vi träningen för dig.</p>
+                 }
+            }
+            @if (!Model.AssociationFooterLinks.BecomeAFunkis.Href.IsEmpty())
+            {
+                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAFunkis, "icon__background icon__background--large icon__funkis"))
+                {
+                    <h2 class="heading-6">Bli funktionär</h2>
+                    <p>Oavsett om du vill bli starkare, rörligare, springa ett långlopp eller helt enkelt må bra så har vi träningen för dig.</p>
+                }
+
+            }
+        </div>
+    </div>
+</div>

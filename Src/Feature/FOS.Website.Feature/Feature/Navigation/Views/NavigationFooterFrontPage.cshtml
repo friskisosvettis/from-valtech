@@ -9,20 +9,23 @@
 @using Synthesis.Mvc.Helpers
 @model NavigationFooterFrontPage
 
-Front Page Footer
 @if (Model == null)
 {
     return;
 }
-
 @helper AddLinkLine(Item linkItem)
 {
     <li><a href="@LinkManager.GetItemUrl(linkItem)">@linkItem.DisplayName</a></li>
 }
-
-<ul>
-    @foreach (var navigationDataItem in Model.PrimaryMenuItems)
-    {
-        @AddLinkLine(navigationDataItem.InnerItem)
-    }
-</ul>
+<div class="footer__navigation">
+    <div class="container">
+        <div class="container--12">
+            <ul class="footer__navigation--slim">
+                @foreach (var navigationDataItem in Model.PrimaryMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem.InnerItem)
+                }
+            </ul>
+        </div>
+    </div>
+</div>

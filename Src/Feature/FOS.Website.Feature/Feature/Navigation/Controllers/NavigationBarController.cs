@@ -26,22 +26,7 @@ namespace FOS.Website.Feature.Navigation.Controllers
             {
                 List<INavigationDataItem> mainMenuItems = new List<INavigationDataItem>();
                 List<INavigationDataItem> moreMenuItems = new List<INavigationDataItem>();
-                
-                foreach (Item childItem in menuBarItem.InnerItem.Children)
-                {
-                    var child = childItem.As<INavigationDataItem>();
-                    if (child != null && child.Navigation_ShowInMenu.Value)
-                    {
-                        if (child.Navigation_IsSecondary.Value)
-                        {
-                            moreMenuItems.Add(child);
-                        }
-                        else
-                        {
-                            mainMenuItems.Add(child);
-                        }
-                    }
-                }
+                NavigationDataCollector.GetNavigationChildren(menuBarItem.InnerItem, ref mainMenuItems, ref moreMenuItems);
 
                 model = new NavigationBarModel()
                 {

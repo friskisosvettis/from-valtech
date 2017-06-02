@@ -101,7 +101,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem, global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/FTestArtical template</summary>
@@ -119,7 +119,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Frontpage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B08553A1-4D24-411A-9AF4-0F076996FF45}", "st5H+gsFtLQPgW4Htzl4O6oVE2Q=", "Valtech.Foundation.Synthesis")]
-    public partial interface IFrontpageItem : global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem, global::FOS.Website.Feature.Content.Data.IProximityItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem {
+    public partial interface IFrontpageItem : global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem, global::FOS.Website.Feature.Content.Data.IProximityItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
@@ -1136,6 +1136,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _associationName;
         
+        private Synthesis.FieldTypes.HyperlinkField _becomeAMember;
+        
         private Synthesis.FieldTypes.HyperlinkField _bookingLink;
         
         private Synthesis.FieldTypes.HyperlinkField _facebookLink;
@@ -1143,6 +1145,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.TextField _introTitle;
         
         private Synthesis.FieldTypes.TextField _region;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeAFunkis;
         
         private Synthesis.FieldTypes.HyperlinkField _instagramLink;
         
@@ -1208,6 +1212,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Become A Member field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMember {
+            get {
+                if (_becomeAMember == null) {
+                    _becomeAMember = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4947E29E-797A-47B7-9F5D-7EF88933FD92}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Member"), this.GetSearchFieldValue("become_a_member"));
+                }
+                return _becomeAMember;
+            }
+        }
+        
         /// <summary>Represents the BookingLink field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
@@ -1249,6 +1264,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _region = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D39C7329-B2AB-4121-87C3-822619AEB2B0}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Region"), this.GetSearchFieldValue("region"));
                 }
                 return _region;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkis {
+            get {
+                if (_becomeAFunkis == null) {
+                    _becomeAFunkis = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Funkis"), this.GetSearchFieldValue("become_a_funkis"));
+                }
+                return _becomeAFunkis;
             }
         }
         

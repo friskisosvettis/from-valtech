@@ -1058,6 +1058,8 @@
     <Content Include="Feature\Taxonomy\Views\Web.config" />
     <Content Include="Feature\Summary\Views\SummarySpot.cshtml" />
     <Content Include="Feature\Content\Views\ContactFooter.cshtml" />
+    <Content Include="Feature\Navigation\Views\NavigationFooterFrontPage.cshtml" />
+    <Content Include="Feature\Navigation\Views\NavigationFooterAssociation.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1109,9 +1111,13 @@
     <Compile Include="Feature\Identity\Constants.cs" />
     <Compile Include="Feature\Identity\Controllers\FooterController.cs" />
     <Compile Include="Feature\Navigation\Constants.cs" />
+    <Compile Include="Feature\Navigation\Controllers\NavigationFooterController.cs" />
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
-    <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationFooterAssociation.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationFooterBase.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationFooterFrontPage.cs" />
+    <Compile Include="Feature\Navigation\NavigationDataCollector.cs" />
     <Compile Include="Feature\Taxonomy\Constants.cs" />
     <Compile Include="Feature\Taxonomy\Controllers\Taxonomy.cs" />
     <Compile Include="Feature\Taxonomy\Controllers\TaxonomyController.cs" />

@@ -221,17 +221,6 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 
 /* CONTAINER SPECIFIC CHANGES FOR TEASER */
 
-@include small-up {
-    .container--8, .container--12 {
-        .teaser--overlay {
-            height: $teaser-height-xlarge;
-            img {
-                height: $teaser-height-xlarge;
-            }
-        }
-    }
-}
-
 // TEASER SMALL IN 3 columns
 .container--4 {
     .teaser--small {

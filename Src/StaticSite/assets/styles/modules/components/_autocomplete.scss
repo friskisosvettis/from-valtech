@@ -1,5 +1,5 @@
 .autocomplete {
-    background: $color-black-10;
+    background: $color-black-05;
 
     &--container {
         @include container;
@@ -185,7 +185,7 @@
             }
             .autocomplete-suggestion-results {
                 @include span(12);
-                border-top: 1px solid $color-black-10;
+                border-top: 1px solid $color-black-05;
                 border-radius: 0 $border-med $border-med 0;
                 list-style: none;
                 margin: 0;
@@ -243,7 +243,7 @@
             .autocomplete-suggestion {
                 display: block;
                 padding: $space 0;
-                border-bottom: 1px solid $color-black-10;
+                border-bottom: 1px solid $color-black-05;
                 @include container;
 
                 &:last-child {
@@ -309,6 +309,6 @@
     &-selected {
         @include transform-scale(1.05);
         @include transition(scale, 0.35s);
-        text-shadow: 2px 2px 2px $color-black-30;
+        text-shadow: 2px 2px 2px $color-black-20;
     }
 }

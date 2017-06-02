@@ -86,11 +86,13 @@ $overlay-color-dim-60: rgba(41, 48, 66, 0.6); // TODO - change to another color?
  *    "$color-gray-10" means "10% gray", which is a gray closer to white than to black. For more info
  *    read https://medium.com/eightshapes-llc/color-in-design-systems-a1c80f65fa3#.brevrq67p
  */
+
 $color-white: #fff;
-$color-black-10: #F5F5F5;
-$color-black-30: #CCCCCC;
-$color-black-60: #999999;
-$color-black-90: #383232;
+$color-black-05: #F5F5F5;
+$color-black-20: #CCCCCC;
+$color-black-40: #999999;
+$color-black-80: #333333;
+$color-black-90: #262626;
 $color-black: #000;
 
 $color-dim-00: rgba(0,0,0,0);

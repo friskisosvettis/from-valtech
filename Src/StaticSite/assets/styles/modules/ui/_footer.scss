@@ -50,7 +50,6 @@
     }
     //-- MOOD PART OF FOOTER --//
     &--mood {
-        margin-bottom: $space-quad;
         height: rem(15 * $base-height);
         position: relative;
 
@@ -95,8 +94,17 @@
             font-family: "object-fit: cover; object-position: top";
         }
     }
-
-
+    &__navigation {
+        padding-top: $space-quad;
+        padding-bottom: $space-quad;
+    }
+    //-- CONTACT PART OF FOOTER --//
+    &__contact {
+        padding: $space;
+        height: rem(5*$base-height);
+        background: $primary-color;
+        text-align: center;
+    }
     //-- BOTTOM PART OF FOOTER --//
     &__bottom {
         padding: $space-quad 0;

@@ -32,6 +32,7 @@ namespace FOS.Website.Feature.Content
                 // Footers
                 public const string ContactFooter = "/Feature/Content/Views/ContactFooter.cshtml";
                 public const string MoodFooter = "/Feature/Content/Views/MoodFooter.cshtml";
+                public const string TrainingCenterContactFooter = "/Feature/Content/Views/TrainingCenterContactFooter.cshtml";
 
                 // Hero carousel views HeroArea
                 public const string HeroArea = "/Feature/Content/Views/HeroArea.cshtml";

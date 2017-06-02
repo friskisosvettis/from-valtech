@@ -37,5 +37,15 @@ namespace FOS.Website.Feature.Content.Controllers
 
             return View(Constants.Views.Paths.MoodFooter, model);
         }
+
+        public ActionResult GetTrainingCenterContactFooterView()
+        {
+            TrainingCenterContactFooterModel model = new TrainingCenterContactFooterModel()
+            {
+                ContactFooterItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IFooterTrainingCenterContactFooterItem>()
+            };
+
+            return View(Constants.Views.Paths.TrainingCenterContactFooter, model);
+        }
     }
 }

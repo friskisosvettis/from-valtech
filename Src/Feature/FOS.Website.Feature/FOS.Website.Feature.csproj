@@ -1061,6 +1061,7 @@
     <Content Include="Feature\Navigation\Views\NavigationFooterFrontPage.cshtml" />
     <Content Include="Feature\Navigation\Views\NavigationFooterAssociation.cshtml" />
     <Content Include="Feature\Content\Views\MoodFooter.cshtml" />
+    <Content Include="Feature\Content\Views\TrainingCenterContactFooter.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1098,6 +1099,7 @@
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
+    <Compile Include="Feature\Content\Models\TrainingCenterContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicImageModel.cs" />

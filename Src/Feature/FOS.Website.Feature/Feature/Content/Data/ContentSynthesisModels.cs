@@ -251,6 +251,24 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Training Center Contact Footer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{7CB9E313-7B15-43A9-9783-D6416CA47230}", "WU0Uy7IDD36JD43/rHCQnFtdUPw=", "Valtech.Foundation.Synthesis")]
+    public partial interface IFooterTrainingCenterContactFooterItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("email")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField Email {
+            get;
+        }
+        
+        /// <summary>Represents the Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("phonenumber")]
+        Synthesis.FieldTypes.Interfaces.ITextField Phonenumber {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "aE1uCuKUiqQFhB9jrJd4Af8+Qzc=", "Valtech.Foundation.Synthesis")]
@@ -1763,6 +1781,84 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new FooterMoodFooter(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Training Center Contact Footer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class FooterTrainingCenterContactFooter : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IFooterTrainingCenterContactFooterItem {
+        
+        private Synthesis.FieldTypes.HyperlinkField _email;
+        
+        private Synthesis.FieldTypes.TextField _phonenumber;
+        
+        public FooterTrainingCenterContactFooter(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public FooterTrainingCenterContactFooter(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Footer - Training Center Contact Footer";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{7CB9E313-7B15-43A9-9783-D6416CA47230}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("email")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Email {
+            get {
+                if (_email == null) {
+                    _email = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8F31BB13-A1F4-4AA1-9BE6-C14A90F417F9}"], "/sitecore/templates/Feature/Content/Data/Footer - Training Center Contact Footer", "Email"), this.GetSearchFieldValue("email"));
+                }
+                return _email;
+            }
+        }
+        
+        /// <summary>Represents the Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("phonenumber")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Phonenumber {
+            get {
+                if (_phonenumber == null) {
+                    _phonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D9C70DA3-46A6-4759-8BD1-DB7C5175B404}"], "/sitecore/templates/Feature/Content/Data/Footer - Training Center Contact Footer", "Phonenumber"), this.GetSearchFieldValue("phonenumber"));
+                }
+                return _phonenumber;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class FooterTrainingCenterContactFooterInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{7CB9E313-7B15-43A9-9783-D6416CA47230}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new FooterTrainingCenterContactFooter(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new FooterTrainingCenterContactFooter(searchFields);
         }
     }
     

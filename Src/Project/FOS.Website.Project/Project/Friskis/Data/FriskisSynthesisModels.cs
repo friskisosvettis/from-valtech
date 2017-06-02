@@ -113,7 +113,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}", "sjrxBCKJdQVAkMx8SjRWHMizVCc=", "Valtech.Foundation.Synthesis")]
-    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.ITrainingCenterFlagTemplateItem {
+    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterTrainingCenterContactFooterItem, global::FOS.Website.Feature.Content.Data.ITrainingCenterFlagTemplateItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/HeroPage template</summary>
@@ -1719,6 +1719,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _streetNr;
         
+        private Synthesis.FieldTypes.HyperlinkField _email;
+        
         private Synthesis.FieldTypes.HyperlinkField _link;
         
         private Synthesis.FieldTypes.TextField _phoneNumber;
@@ -1726,6 +1728,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.TextField _zipCode;
         
         private Synthesis.FieldTypes.TextField _city;
+        
+        private Synthesis.FieldTypes.TextField _phonenumber;
         
         private Synthesis.FieldTypes.TextField _country;
         
@@ -1865,6 +1869,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Email field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("email")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Email {
+            get {
+                if (_email == null) {
+                    _email = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8F31BB13-A1F4-4AA1-9BE6-C14A90F417F9}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Email"), this.GetSearchFieldValue("email"));
+                }
+                return _email;
+            }
+        }
+        
         /// <summary>Represents the Link field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("link")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
@@ -1906,6 +1921,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _city = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9F6C2E78-A0AE-446F-8426-C87367B26EFE}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "City"), this.GetSearchFieldValue("city"));
                 }
                 return _city;
+            }
+        }
+        
+        /// <summary>Represents the Phonenumber field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("phonenumber")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Phonenumber {
+            get {
+                if (_phonenumber == null) {
+                    _phonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D9C70DA3-46A6-4759-8BD1-DB7C5175B404}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Phonenumber"), this.GetSearchFieldValue("phonenumber"));
+                }
+                return _phonenumber;
             }
         }
         

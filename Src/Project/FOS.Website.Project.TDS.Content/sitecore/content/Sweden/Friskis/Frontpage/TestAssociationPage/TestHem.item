@@ -95,7 +95,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 9ffb3b4f-cf7e-4ac0-82fc-662d0b59ddfe
+revision: 3fecfe20-3637-4080-ab2c-5ef4ebcd35b9
 
 ----field----
 field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
@@ -224,6 +224,20 @@ content-length: 145
 
 <link text="Vår förening" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
 ----field----
+field: {8F31BB13-A1F4-4AA1-9BE6-C14A90F417F9}
+name: Email
+key: email
+content-length: 89
+
+<link text='surf@up.com' linktype='mailto' style='' url='mailto:surf@up.com'  title='' />
+----field----
+field: {D9C70DA3-46A6-4759-8BD1-DB7C5175B404}
+name: Phonenumber
+key: phonenumber
+content-length: 9
+
+555-surf1
+----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
@@ -264,14 +278,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9ffb3b4f-cf7e-4ac0-82fc-662d0b59ddfe
+3fecfe20-3637-4080-ab2c-5ef4ebcd35b9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T161115Z
+20170602T165604Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

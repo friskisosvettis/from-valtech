@@ -38,6 +38,19 @@ $color-footer-secondary: #222326;
                 padding: $space-half 0;
             }
         }
+        &--slim {
+            font-weight: bold;
+
+            @include medium-up {
+               text-align: center;
+                li {
+                    display: inline-block;
+                    a {
+                        margin: $space $space-quad;
+                    }
+                }
+           }
+        }
     }
 
 

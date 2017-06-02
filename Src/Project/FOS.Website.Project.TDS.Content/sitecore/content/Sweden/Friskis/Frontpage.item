@@ -142,7 +142,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 521810d1-7a8d-487c-b57f-098f4dd063ea
+revision: 29b32a12-57e4-41d4-8aed-c81a3d4831ed
 
 ----field----
 field: {9AB29783-D2F7-4204-925E-66ED71C53B64}
@@ -190,9 +190,9 @@ Vi finns på mer än 30 orter och har fler än 500 träningsställen.
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 0
+content-length: 278
 
-
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{0E9160BE-F4DC-4FA4-BD5C-4B9D805C4659}" p:before="*" s:ds="{C73E7031-4563-458D-A010-7A83162A8044}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /></d></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -220,14 +220,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-521810d1-7a8d-487c-b57f-098f4dd063ea
+29b32a12-57e4-41d4-8aed-c81a3d4831ed
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170530T152507Z
+20170602T145531Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -8,7 +8,7 @@
 
 @mixin button-settings($color, $color-text) {
     background-color: $color;
-    color: $color-white;
+    color: $color-text !important;
     text-decoration: none;
     border: none;
     border-radius: rem(44px);
@@ -76,5 +76,8 @@
             background-size: rem(15px) rem(15px);
             background-position: right $space-double bottom 50%;
         }
+    }
+    &--secondary {
+        @include button-settings($primary-color-light, $color-text);
     }
 }

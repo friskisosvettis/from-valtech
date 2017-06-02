@@ -97,9 +97,8 @@ p {
 }
 
 .intro {
-    margin: $base-height*2 0 $base-height 0;
+    margin-bottom: $space-double;
     font-size: rem(18px);
-    font-weight: 700;
 
     @include small-up {
         font-size: rem(20px);
@@ -212,7 +211,6 @@ ol {
     }
     &.list--goto {
         background-color: $primary-color-light;
-        background-color: #FDF8F8;
         padding: rem($base-height*1.5);
         margin-bottom: rem($base-height);
 

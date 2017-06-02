@@ -5,13 +5,9 @@
 * @author Veronika Jeppsson
 */
 
-$color-footer-primary: #2A2C31;
-$color-footer-secondary: #222326;
-
 .footer {
     min-height: 10em;
-    padding-top: $space-quad;
-    background-color: $color-footer-primary;
+    background-color: $color-black-80;
     color: $color-white;
 
     a {
@@ -52,15 +48,64 @@ $color-footer-secondary: #222326;
            }
         }
     }
+    //-- MOOD PART OF FOOTER --//
+    &--mood {
+        margin-bottom: $space-quad;
+        height: rem(15 * $base-height);
+        position: relative;
+
+        .btn__link {
+            display: inline-block;
+        }
+
+        .footer__overlay {
+            height: rem(12.5 * $base-height);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: table;
+            width: 100%;
+            height: 100%;
+            background:  $primary-color-dim-80;
+        }
+
+        .footer__content {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+
+            > h2, p, a {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: $text-max-width;
+            }
+            > h2, p  {
+                padding: 0 $space;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            // This is in order to make object-fit cover work in IE
+            font-family: "object-fit: cover; object-position: top";
+        }
+    }
 
 
     //-- BOTTOM PART OF FOOTER --//
     &__bottom {
         padding: $space-quad 0;
-        background-color: $color-footer-secondary;
+        background-color: $color-black-90;
         text-align: center;
         display: block;
-
+        .icon__twitter, .icon__instagram, .icon__facebook {
+            display: inline-block;
+        }
         a {
             margin: $space-half 0;
 

@@ -1060,6 +1060,7 @@
     <Content Include="Feature\Content\Views\ContactFooter.cshtml" />
     <Content Include="Feature\Navigation\Views\NavigationFooterFrontPage.cshtml" />
     <Content Include="Feature\Navigation\Views\NavigationFooterAssociation.cshtml" />
+    <Content Include="Feature\Content\Views\MoodFooter.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1087,6 +1088,7 @@
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\MoodFooterModel.cs" />
     <Compile Include="Feature\Content\Models\ContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\HeadingTrainingCenterModel.cs" />
     <Compile Include="Feature\Content\Models\AutoCompleteModuleModel.cs" />

@@ -23,9 +23,19 @@ namespace FOS.Website.Feature.Content.Controllers
             ContactFooterModel model = new ContactFooterModel()
             {
                 ContactFooterItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IFooterContactfooterItem>()
-        };
+            };
 
             return View(Constants.Views.Paths.ContactFooter, model);
+        }
+
+        public ActionResult GetMoodFooterView()
+        {
+            MoodFooterModel model = new MoodFooterModel()
+            {
+                MoodFooterItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IFooterMoodFooterItem>()
+            };
+
+            return View(Constants.Views.Paths.MoodFooter, model);
         }
     }
 }

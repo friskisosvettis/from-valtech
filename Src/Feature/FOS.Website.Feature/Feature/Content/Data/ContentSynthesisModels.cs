@@ -221,6 +221,36 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Mood Footer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1FF9FE30-7F13-452E-AAB9-A218EAB62730}", "6cVJodgrtism04vvV14FB+HuBJY=", "Valtech.Foundation.Synthesis")]
+    public partial interface IFooterMoodFooterItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
+        Synthesis.FieldTypes.Interfaces.ITextField Title {
+            get;
+        }
+        
+        /// <summary>Represents the Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
+        Synthesis.FieldTypes.Interfaces.ITextField Description {
+            get;
+        }
+        
+        /// <summary>Represents the Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
+            get;
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "aE1uCuKUiqQFhB9jrJd4Af8+Qzc=", "Valtech.Foundation.Synthesis")]
@@ -1629,6 +1659,110 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new FooterContactfooter(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Mood Footer template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class FooterMoodFooter : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem {
+        
+        private Synthesis.FieldTypes.TextField _title;
+        
+        private Synthesis.FieldTypes.TextField _description;
+        
+        private Synthesis.FieldTypes.ImageField _backgroundImage;
+        
+        private Synthesis.FieldTypes.HyperlinkField _link;
+        
+        public FooterMoodFooter(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public FooterMoodFooter(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Footer - Mood Footer";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1FF9FE30-7F13-452E-AAB9-A218EAB62730}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Title {
+            get {
+                if (_title == null) {
+                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Title"), this.GetSearchFieldValue("title"));
+                }
+                return _title;
+            }
+        }
+        
+        /// <summary>Represents the Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Description {
+            get {
+                if (_description == null) {
+                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Description"), this.GetSearchFieldValue("description"));
+                }
+                return _description;
+            }
+        }
+        
+        /// <summary>Represents the Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
+            get {
+                if (_backgroundImage == null) {
+                    _backgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Background Image"), this.GetSearchFieldValue("background_image"));
+                }
+                return _backgroundImage;
+            }
+        }
+        
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+            get {
+                if (_link == null) {
+                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Link"), this.GetSearchFieldValue("link"));
+                }
+                return _link;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class FooterMoodFooterInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1FF9FE30-7F13-452E-AAB9-A218EAB62730}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new FooterMoodFooter(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new FooterMoodFooter(searchFields);
         }
     }
     

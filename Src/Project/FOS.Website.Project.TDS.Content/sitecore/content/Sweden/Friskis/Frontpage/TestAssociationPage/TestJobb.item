@@ -13,7 +13,7 @@ created: 20170403T105606Z
 ----version----
 language: sv-SE
 version: 1
-revision: 01dc1fa1-6725-4956-a524-001dd0d914a7
+revision: a3dc9645-9d03-4b64-99b0-55cc34eb3c27
 
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
@@ -86,6 +86,34 @@ content-length: 11
 
 -157.825341
 ----field----
+field: {D79E1157-28CB-46C6-92E4-67043C9D4B11}
+name: Title
+key: title
+content-length: 21
+
+Fler lokaler blir det
+----field----
+field: {17AAEC3D-7316-44F1-A6AE-C334E6115746}
+name: Description
+key: description
+content-length: 57
+
+Jympa, Jympa o Jympa. Det är Friskis och... Du blir varm!
+----field----
+field: {06BAE32C-663B-4DB5-A497-EB818B987B25}
+name: Background Image
+key: background image
+content-length: 58
+
+<image mediaid="{F292FBF3-DA8B-44D7-A89F-3A56E7DC4DEA}" />
+----field----
+field: {BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}
+name: Link
+key: link
+content-length: 145
+
+<link text="Vår förening" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
@@ -119,14 +147,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-01dc1fa1-6725-4956-a524-001dd0d914a7
+a3dc9645-9d03-4b64-99b0-55cc34eb3c27
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170519T134246Z
+20170602T161325Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

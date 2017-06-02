@@ -95,7 +95,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 47a342fa-0dc4-4412-88f8-8f4e922e6c18
+revision: 9ffb3b4f-cf7e-4ac0-82fc-662d0b59ddfe
 
 ----field----
 field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
@@ -196,6 +196,34 @@ content-length: 11
 
 -157.835698
 ----field----
+field: {D79E1157-28CB-46C6-92E4-67043C9D4B11}
+name: Title
+key: title
+content-length: 40
+
+Friskis&Svettis - Lokalen för oss starka
+----field----
+field: {17AAEC3D-7316-44F1-A6AE-C334E6115746}
+name: Description
+key: description
+content-length: 20
+
+Här lyfter vi tungt.
+----field----
+field: {06BAE32C-663B-4DB5-A497-EB818B987B25}
+name: Background Image
+key: background image
+content-length: 58
+
+<image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
+----field----
+field: {BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}
+name: Link
+key: link
+content-length: 145
+
+<link text="Vår förening" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
@@ -236,14 +264,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-47a342fa-0dc4-4412-88f8-8f4e922e6c18
+9ffb3b4f-cf7e-4ac0-82fc-662d0b59ddfe
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170529T115923Z
+20170602T161115Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

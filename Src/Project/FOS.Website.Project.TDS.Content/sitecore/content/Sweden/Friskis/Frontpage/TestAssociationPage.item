@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: b1bda7a2-59ea-433b-a5c4-dc73fe312727
+revision: aee50bc6-f8f9-4047-b783-370c91d39746
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -65,6 +65,34 @@ content-length: 10
 
 555 - Surf
 ----field----
+field: {D79E1157-28CB-46C6-92E4-67043C9D4B11}
+name: Title
+key: title
+content-length: 56
+
+Friskis&Svettis är en idrottsförening för folk i rörelse
+----field----
+field: {17AAEC3D-7316-44F1-A6AE-C334E6115746}
+name: Description
+key: description
+content-length: 64
+
+Som ni ser på kartan så hänger vi i de hetare delarna av Waikiki
+----field----
+field: {06BAE32C-663B-4DB5-A497-EB818B987B25}
+name: Background Image
+key: background image
+content-length: 58
+
+<image mediaid="{429E8994-C283-4EAF-8849-50636AFD2D43}" />
+----field----
+field: {BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}
+name: Link
+key: link
+content-length: 148
+
+<link text="Bli medlem idag" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
 field: {4947E29E-797A-47B7-9F5D-7EF88933FD92}
 name: Become A Member
 key: become a member
@@ -112,14 +140,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b1bda7a2-59ea-433b-a5c4-dc73fe312727
+aee50bc6-f8f9-4047-b783-370c91d39746
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T143155Z
+20170602T160857Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

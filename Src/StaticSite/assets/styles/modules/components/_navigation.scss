@@ -56,28 +56,37 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
     }
     &--top {
         height: $topbar-height;
+        max-height: $topbar-height;
         width: 100%;
         position: fixed;
         z-index: 1000000;
         background-color: $color-black;
+        opacity: 1;
+        @include transition(all, 0.25s);
 
         a {
             color: $color-white;
             height: $topbar-height;
         }
-
+        &.hide {
+            opacity: 0;
+            max-height: 0;
+            @include transition(all, 0.25s);
+        }
         // Move navigation down if topbar exists (on association pages)
-        + .navigation--bottom {
-            top: $topbar-height;
+        &:not(.hide) {
+            + .navigation--bottom {
+                top: $topbar-height;
 
-            .navigation--medium {
-                top: $topbar-height;
-            }
-            .navigation__list {
-                top: $topbar-height;
-            }
-            .navigation__btn--close {
-                top: rem($space + $base-height); //space + topbar
+                .navigation--medium {
+                    top: $topbar-height;
+                }
+                .navigation__list {
+                    top: $topbar-height;
+                }
+                .navigation__btn--close {
+                    top: rem($space + $base-height); //space + topbar
+                }
             }
         }
     }

@@ -35,20 +35,20 @@
             </ul>
         </div>
         <div class="container--6 center-small-down">
-            @if (!Model.AssociationFooterLinks.BecomeAMember.Href.IsEmpty())
+            @if (Sitecore.Context.PageMode.IsExperienceEditor || !Model.AssociationFooterLinks.BecomeAMemberLink.Href.IsEmpty())
             {
-                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAMember, "icon__background icon__background--large icon__card"))
+                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAMemberLink, "icon__background icon__background--large icon__card"))
                  {
-                     <h2 class="heading-6">Bli medlem</h2>
-                     <p>Oavsett om du vill bli starkare, rörligare, springa ett långlopp eller helt enkelt må bra så har vi träningen för dig.</p>
+                     <h2 class="heading-6">@Model.AssociationFooterLinks.BecomeAMemberTitle.Render()</h2>
+                     <p>@Model.AssociationFooterLinks.BecomeAMemberText.Render()</p>
                  }
             }
-            @if (!Model.AssociationFooterLinks.BecomeAFunkis.Href.IsEmpty())
+            @if (Sitecore.Context.PageMode.IsExperienceEditor || !Model.AssociationFooterLinks.BecomeAFunkisLink.Href.IsEmpty())
             {
-                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAFunkis, "icon__background icon__background--large icon__funkis"))
+                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAFunkisLink, "icon__background icon__background--large icon__funkis"))
                 {
-                    <h2 class="heading-6">Bli funktionär</h2>
-                    <p>Oavsett om du vill bli starkare, rörligare, springa ett långlopp eller helt enkelt må bra så har vi träningen för dig.</p>
+                    <h2 class="heading-6">@Model.AssociationFooterLinks.BecomeAFunkisTitle.Render()</h2>
+                    <p>@Model.AssociationFooterLinks.BecomeAFunkisText.Render()</p>
                 }
 
             }

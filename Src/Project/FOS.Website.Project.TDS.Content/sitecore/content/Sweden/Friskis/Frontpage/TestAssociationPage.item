@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: 42f3e923-d902-4213-80d3-54ad4690ccbe
+revision: f9e0c0af-b870-4038-abfe-4476d29093f7
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -101,18 +101,46 @@ content-length: 148
 <link text="Bli medlem idag" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
 ----field----
 field: {4947E29E-797A-47B7-9F5D-7EF88933FD92}
-name: Become A Member
-key: become a member
-content-length: 125
+name: Become A Member Title
+key: become a member title
+content-length: 10
 
-<link text="BLi Medlem" linktype="external" url="https://stage.friskissvettis.se/stockholm/bli-medlem" anchor="" target="" />
+Bli medlem
 ----field----
 field: {EBC14A33-8C87-4597-B1ED-31478BB0E15B}
-name: Become A Funkis
-key: become a funkis
-content-length: 129
+name: Become A Member Text
+key: become a member text
+content-length: 118
 
-<link text="Bli funkis" linktype="external" url="https://stage.friskissvettis.se/stockholm/bli-funktionar" anchor="" target="" />
+Oavsett om du vill bli starkare, rörligare, springa ett långlopp eller helt enkelt må bra så har vi träningen för dig.
+----field----
+field: {4A724144-806F-4095-AC95-5E505116C321}
+name: Become A Member Link
+key: become a member link
+content-length: 133
+
+<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
+field: {EFDEB810-5031-431B-A39D-2F2FE95CBAA7}
+name: Become A Funkis Title
+key: become a funkis title
+content-length: 10
+
+Bli funkis
+----field----
+field: {DEA239CC-6ED9-40F3-90E9-481CC24F0181}
+name: Become A Funkis Text
+key: become a funkis text
+content-length: 112
+
+Vill du dela med dig av den känslan och inspirera flera att börja röra på sig? Då kanske du vill bli funktionär!
+----field----
+field: {12A33354-69A6-4BDF-9AB4-ADC7BA2ED69D}
+name: Become A Funkis Link
+key: become a funkis link
+content-length: 133
+
+<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
 ----field----
 field: {A26B0801-FAED-4426-8F97-4D06670FFBEF}
 name: BookingLink
@@ -147,14 +175,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-42f3e923-d902-4213-80d3-54ad4690ccbe
+f9e0c0af-b870-4038-abfe-4476d29093f7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170607T090912Z
+20170607T093903Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

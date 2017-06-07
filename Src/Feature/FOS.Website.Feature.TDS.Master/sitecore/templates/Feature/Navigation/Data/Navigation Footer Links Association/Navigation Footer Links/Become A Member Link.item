@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {4947E29E-797A-47B7-9F5D-7EF88933FD92}
+id: {4A724144-806F-4095-AC95-5E505116C321}
 database: master
-path: /sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association/Navigation Footer Links/Become A Member
+path: /sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association/Navigation Footer Links/Become A Member Link
 parent: {D862544D-9EAD-4A60-BBC6-558EB1FEC81A}
-name: Become A Member
+name: Become A Member Link
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
-created: 20170602T084633Z
+created: 20170607T093047Z
 
 ----field----
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
@@ -23,11 +23,11 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-100
+300
 ----version----
 language: en
 version: 1
-revision: 389a1c92-db23-4a2d-a8b3-eae2ce674c2c
+revision: 6b927423-78a0-49bb-b686-2dff76aeaf1f
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170602T084633Z
+20170607T093047Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-389a1c92-db23-4a2d-a8b3-eae2ce674c2c
+6b927423-78a0-49bb-b686-2dff76aeaf1f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T090155Z
+20170607T093047Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

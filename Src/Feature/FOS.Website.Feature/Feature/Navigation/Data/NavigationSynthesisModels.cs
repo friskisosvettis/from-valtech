@@ -37,18 +37,42 @@ namespace FOS.Website.Feature.Navigation.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{DF386FEF-1DB8-41BD-88A3-0DAE41FE5453}", "LkQ6rdvQsCZBhLxRdAMaMgRN3ks=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{DF386FEF-1DB8-41BD-88A3-0DAE41FE5453}", "jHAePYYX768msttYJuEEqpPTxFw=", "Valtech.Foundation.Synthesis")]
     public partial interface INavigationFooterLinksAssociationItem : Synthesis.IStandardTemplateItem {
         
-        /// <summary>Represents the Become A Member field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMember {
+        /// <summary>Represents the Become A Member Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberTitle {
             get;
         }
         
-        /// <summary>Represents the Become A Funkis field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkis {
+        /// <summary>Represents the Become A Member Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_text")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberText {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Member Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMemberLink {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Funkis Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisTitle {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Funkis Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_text")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisText {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Funkis Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkisLink {
             get;
         }
     }
@@ -180,9 +204,17 @@ namespace FOS.Website.Concrete.Feature.Navigation.Data {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class NavigationFooterLinksAssociation : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem {
         
-        private Synthesis.FieldTypes.HyperlinkField _becomeAMember;
+        private Synthesis.FieldTypes.TextField _becomeAMemberTitle;
         
-        private Synthesis.FieldTypes.HyperlinkField _becomeAFunkis;
+        private Synthesis.FieldTypes.TextField _becomeAMemberText;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeAMemberLink;
+        
+        private Synthesis.FieldTypes.TextField _becomeAFunkisTitle;
+        
+        private Synthesis.FieldTypes.TextField _becomeAFunkisText;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeAFunkisLink;
         
         public NavigationFooterLinksAssociation(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -213,25 +245,69 @@ namespace FOS.Website.Concrete.Feature.Navigation.Data {
             }
         }
         
-        /// <summary>Represents the Become A Member field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMember {
+        /// <summary>Represents the Become A Member Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberTitle {
             get {
-                if (_becomeAMember == null) {
-                    _becomeAMember = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4947E29E-797A-47B7-9F5D-7EF88933FD92}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member"), this.GetSearchFieldValue("become_a_member"));
+                if (_becomeAMemberTitle == null) {
+                    _becomeAMemberTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4947E29E-797A-47B7-9F5D-7EF88933FD92}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member Title"), this.GetSearchFieldValue("become_a_member_title"));
                 }
-                return _becomeAMember;
+                return _becomeAMemberTitle;
             }
         }
         
-        /// <summary>Represents the Become A Funkis field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkis {
+        /// <summary>Represents the Become A Member Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberText {
             get {
-                if (_becomeAFunkis == null) {
-                    _becomeAFunkis = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis"), this.GetSearchFieldValue("become_a_funkis"));
+                if (_becomeAMemberText == null) {
+                    _becomeAMemberText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member Text"), this.GetSearchFieldValue("become_a_member_text"));
                 }
-                return _becomeAFunkis;
+                return _becomeAMemberText;
+            }
+        }
+        
+        /// <summary>Represents the Become A Member Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMemberLink {
+            get {
+                if (_becomeAMemberLink == null) {
+                    _becomeAMemberLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4A724144-806F-4095-AC95-5E505116C321}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member Link"), this.GetSearchFieldValue("become_a_member_link"));
+                }
+                return _becomeAMemberLink;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisTitle {
+            get {
+                if (_becomeAFunkisTitle == null) {
+                    _becomeAFunkisTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EFDEB810-5031-431B-A39D-2F2FE95CBAA7}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis Title"), this.GetSearchFieldValue("become_a_funkis_title"));
+                }
+                return _becomeAFunkisTitle;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisText {
+            get {
+                if (_becomeAFunkisText == null) {
+                    _becomeAFunkisText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DEA239CC-6ED9-40F3-90E9-481CC24F0181}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis Text"), this.GetSearchFieldValue("become_a_funkis_text"));
+                }
+                return _becomeAFunkisText;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkisLink {
+            get {
+                if (_becomeAFunkisLink == null) {
+                    _becomeAFunkisLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{12A33354-69A6-4BDF-9AB4-ADC7BA2ED69D}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis Link"), this.GetSearchFieldValue("become_a_funkis_link"));
+                }
+                return _becomeAFunkisLink;
             }
         }
     }

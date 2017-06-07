@@ -1118,7 +1118,7 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _associationName;
         
-        private Synthesis.FieldTypes.HyperlinkField _becomeAMember;
+        private Synthesis.FieldTypes.TextField _becomeAMemberTitle;
         
         private Synthesis.FieldTypes.HyperlinkField _bookingLink;
         
@@ -1130,7 +1130,7 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _title;
         
-        private Synthesis.FieldTypes.HyperlinkField _becomeAFunkis;
+        private Synthesis.FieldTypes.TextField _becomeAMemberText;
         
         private Synthesis.FieldTypes.TextField _description;
         
@@ -1140,9 +1140,13 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ImageField _backgroundImage;
         
+        private Synthesis.FieldTypes.HyperlinkField _becomeAMemberLink;
+        
         private Synthesis.FieldTypes.HyperlinkField _introLink;
         
         private Synthesis.FieldTypes.HyperlinkField _twitterLink;
+        
+        private Synthesis.FieldTypes.TextField _becomeAFunkisTitle;
         
         private Synthesis.FieldTypes.HyperlinkField _contactEmail;
         
@@ -1150,9 +1154,13 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _link;
         
+        private Synthesis.FieldTypes.TextField _becomeAFunkisText;
+        
         private Synthesis.FieldTypes.TextField _contactPhonenumber;
         
         private Synthesis.FieldTypes.HyperlinkField _trainingSelectionLink;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeAFunkisLink;
         
         private Synthesis.FieldTypes.HyperlinkField _contactLink;
         
@@ -1204,14 +1212,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Become A Member field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMember {
+        /// <summary>Represents the Become A Member Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberTitle {
             get {
-                if (_becomeAMember == null) {
-                    _becomeAMember = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4947E29E-797A-47B7-9F5D-7EF88933FD92}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Member"), this.GetSearchFieldValue("become_a_member"));
+                if (_becomeAMemberTitle == null) {
+                    _becomeAMemberTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4947E29E-797A-47B7-9F5D-7EF88933FD92}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Member Title"), this.GetSearchFieldValue("become_a_member_title"));
                 }
-                return _becomeAMember;
+                return _becomeAMemberTitle;
             }
         }
         
@@ -1270,14 +1278,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Become A Funkis field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkis {
+        /// <summary>Represents the Become A Member Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberText {
             get {
-                if (_becomeAFunkis == null) {
-                    _becomeAFunkis = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Funkis"), this.GetSearchFieldValue("become_a_funkis"));
+                if (_becomeAMemberText == null) {
+                    _becomeAMemberText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Member Text"), this.GetSearchFieldValue("become_a_member_text"));
                 }
-                return _becomeAFunkis;
+                return _becomeAMemberText;
             }
         }
         
@@ -1325,6 +1333,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Become A Member Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMemberLink {
+            get {
+                if (_becomeAMemberLink == null) {
+                    _becomeAMemberLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4A724144-806F-4095-AC95-5E505116C321}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Member Link"), this.GetSearchFieldValue("become_a_member_link"));
+                }
+                return _becomeAMemberLink;
+            }
+        }
+        
         /// <summary>Represents the IntroLink field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("introlink")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField IntroLink {
@@ -1344,6 +1363,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _twitterLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F5BE9F09-AE1A-4545-A82A-51FF0D0A6C5F}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Twitter Link"), this.GetSearchFieldValue("twitter_link"));
                 }
                 return _twitterLink;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisTitle {
+            get {
+                if (_becomeAFunkisTitle == null) {
+                    _becomeAFunkisTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EFDEB810-5031-431B-A39D-2F2FE95CBAA7}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Funkis Title"), this.GetSearchFieldValue("become_a_funkis_title"));
+                }
+                return _becomeAFunkisTitle;
             }
         }
         
@@ -1380,6 +1410,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Become A Funkis Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisText {
+            get {
+                if (_becomeAFunkisText == null) {
+                    _becomeAFunkisText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DEA239CC-6ED9-40F3-90E9-481CC24F0181}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Funkis Text"), this.GetSearchFieldValue("become_a_funkis_text"));
+                }
+                return _becomeAFunkisText;
+            }
+        }
+        
         /// <summary>Represents the Contact Phonenumber field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("contact_phonenumber")]
         public Synthesis.FieldTypes.Interfaces.ITextField ContactPhonenumber {
@@ -1399,6 +1440,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _trainingSelectionLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A93C40DE-3A8F-4E46-8EEB-B5E2447EFF98}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "TrainingSelectionLink"), this.GetSearchFieldValue("trainingselectionlink"));
                 }
                 return _trainingSelectionLink;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkisLink {
+            get {
+                if (_becomeAFunkisLink == null) {
+                    _becomeAFunkisLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{12A33354-69A6-4BDF-9AB4-ADC7BA2ED69D}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Funkis Link"), this.GetSearchFieldValue("become_a_funkis_link"));
+                }
+                return _becomeAFunkisLink;
             }
         }
         

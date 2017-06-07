@@ -113,7 +113,7 @@ $map-height: rem($base-height*12);
 
         > li {
             @include container();
-            background-color: $white;
+            background-color: $color-white;
             margin: $space-half 0;
             padding: $space-double;
 

@@ -20,11 +20,7 @@ var $ = require('jquery'),
 	_ = require('_');
 
 // Modules
-var fixedRibbon = require('./modules/fixed-ribbon'),
-	visualHero = require('./modules/visual-hero'),
-	foldExpand = require('./modules/fold-expand'),
-	loadSvg = require('./modules/load-svg'),
-	devbridgeAutocomplete = require('./modules/autocomplete'),
+var devbridgeAutocomplete = require('./modules/autocomplete'),
     fitImages = require('./modules/object-fit-images'),
 	slickSlider = require('./modules/carousel'),
 	maps = require('./modules/maps'),
@@ -33,10 +29,6 @@ var fixedRibbon = require('./modules/fixed-ribbon'),
 	video = require('./modules/video');
 
 $(function () {
-	fixedRibbon.init();
-	foldExpand.init();
-	loadSvg.loadSvg();
-	visualHero.init();
 	fitImages.init();
 	slickSlider.init();
 	maps.init();

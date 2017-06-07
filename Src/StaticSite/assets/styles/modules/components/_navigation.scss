@@ -61,7 +61,7 @@ $menu-height: 6em;
             position: fixed; //TODO Look into other solution - fixed in fixed not good
             top: $space-double;
             right: $space;
-            color: $white;
+            color: $color-white;
         }
     }
 
@@ -107,7 +107,7 @@ $menu-height: 6em;
         }
         a {
             display: block;
-            color: $white;
+            color: $color-white;
             text-decoration: none;
             height: 100%;
             padding: $space;
@@ -168,7 +168,7 @@ $menu-height: 6em;
                 }
             }
             a {
-                color: $white;
+                color: $color-white;
             }
         }
     }

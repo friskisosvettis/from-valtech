@@ -5,28 +5,6 @@
 */
 
 // ---------------------------------------------------------------------------
-// Colors
-
-$white: #fff;
-$black: #000;
-
-$primary-color-1: #ffca5c; // Yellow
-$primary-color-2: #4b2a18; // Brown
-$primary-color-3: #2e3b26; // Green
-
-$secondary-color-1: #42474f; // Dark Blue/almost black for icons
-$secondary-color-2: #c2c2c2; // Gray for 1px line
-$secondary-color-3: #ebebeb; // Light Gray for statusbar
-$secondary-color-4: #f9f9f9; // Lightest Gray for decks
-
-$tertiary-color-1: #a8c39a; // Green (light olive green)
-$tertiary-color-2: #59879f; // Blue (petroleum blue)
-
-$font-color-1: #42474f; // Typography dark
-$font-color-2: #777879; // Typography light
-
-
-// ---------------------------------------------------------------------------
 // Base variables
 
 $base-font-size: 16px;
@@ -39,33 +17,6 @@ $base-font-size: 16px;
 	$remSize: $size / $base-font-size;
 	@return #{$remSize}rem;
 }
-
-
-// ---------------------------------------------------------------------------
-// Icons
-
-
-// Media queries
-
-$mq-tablet-portrait: 500px;
-$mq-tablet-horizontal: 768px;
-$mq-desktop: 1024px;
-$mq-desktop-large: 1280px;
-$mq-desktop-xlarge: 1600px;
-
-
-// ---------------------------------------------------------------------------
-// Font stack
-
-$font-serif: 'Georgia', serif;
-$font-sans-serif: 'Ministry', sans-serif;
-$font-sans-serif-light: 'Ministry-Light', sans-serif;
-
-
-/*---------------------------------------------------------------------------*/
-/*--------------------------- New section Friskis ---------------------------*/
-/*---------------------------------------------------------------------------*/
-
 
 /*
  * Brand Colors

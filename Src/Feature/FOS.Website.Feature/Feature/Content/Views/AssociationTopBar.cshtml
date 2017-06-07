@@ -1,13 +1,22 @@
 ﻿
 @using FOS.Website.Feature.Content.Models
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model AssociationTopBarModel
 
-@if (Model.AssociationTopBarItem == null)
+@if (Model.TopBarData == null)
 {
     return;
 }
 
-@*<div style="background-color: black; color: white">
-        @Html.TextFor(m => m.AssociationTopBarItem.AssociationName)
-</div>*@
+<div style="background-color: black; color: white">
+    <a href="@LinkManager.GetItemUrl(@Model.AssociationItem)">F&S @Model.AssociationItem.DisplayName</a>
+    
+    @Model.TopBarData.TopbarLink1.Render()
+    @Model.TopBarData.TopbarLink2.Render()
+    @Model.TopBarData.TopbarLink3.Render()
+    @Model.TopBarData.TopbarLink4.Render()
+    
+    <a href="@LinkManager.GetItemUrl(@Model.TopBarData.InnerItem)">@Model.TopBarData.HomeLinkLabel.Render()</a>
+</div>

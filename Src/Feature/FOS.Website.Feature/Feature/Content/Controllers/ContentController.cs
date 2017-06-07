@@ -19,17 +19,24 @@ namespace FOS.Website.Feature.Content.Controllers
     {
         public ActionResult GeAssociationIntroductionModuleView()
         {
-            var topBarItem = Sitecore.Context.Item.As<IAssociationTopBarItem>();
-            var model = new AssociationIntroductionModuleModel(Sitecore.Context.Item)
+            var model = new AssociationIntroductionModuleModel()
             {
-                AssociationName = ((topBarItem == null || !topBarItem.AssociationName.HasTextValue) ? Sitecore.Context.Item.DisplayName:topBarItem.AssociationName.RawValue)
+                AssociationIntroductionModuleItem = Sitecore.Context.Item.As<IAssociationIntroductionModuleItem>(),
+                AssociationName = Sitecore.Context.Item.DisplayName
             };
             return View(Constants.Views.Paths.AssociationIntroductionModule, model);
         }
 
         public ActionResult GetAssociationTopBarView()
         {
-            AssociationTopBarModel model = new AssociationTopBarModel(Sitecore.Context.Item);
+            AssociationTopBarModel model = new AssociationTopBarModel(); ;
+            var associationItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationFlagTemplateItem>();
+            if (associationItem != null)
+            {
+                model.AssociationItem = associationItem.InnerItem;
+                model.TopBarData = associationItem.InnerItem.ClosestAscendantItemOfType<IAssociationTopBarDataItem>();
+            }
+
             return View(Constants.Views.Paths.AssociationTopBar, model);
         }
 

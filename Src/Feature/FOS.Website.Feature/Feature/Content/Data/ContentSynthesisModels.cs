@@ -77,14 +77,38 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationTopBar template</summary>
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Top Bar Data template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{67886500-F92C-4DB4-8909-D36EF7884BD2}", "/1bTSXsNRYUdvDHVT1lJr7LudIE=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationTopBarItem : Synthesis.IStandardTemplateItem {
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{67886500-F92C-4DB4-8909-D36EF7884BD2}", "YfCgFNVYBSZ85IqoWbhi2bz+DZ0=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationTopBarDataItem : Synthesis.IStandardTemplateItem {
         
-        /// <summary>Represents the Association Name field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("association_name")]
-        Synthesis.FieldTypes.Interfaces.ITextField AssociationName {
+        /// <summary>Represents the Topbar Link1 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link1")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink1 {
+            get;
+        }
+        
+        /// <summary>Represents the Topbar Link2 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link2")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink2 {
+            get;
+        }
+        
+        /// <summary>Represents the Topbar Link3 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link3")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink3 {
+            get;
+        }
+        
+        /// <summary>Represents the Topbar Link4 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link4")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink4 {
+            get;
+        }
+        
+        /// <summary>Represents the Home Link Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("home_link_label")]
+        Synthesis.FieldTypes.Interfaces.ITextField HomeLinkLabel {
             get;
         }
     }
@@ -945,24 +969,32 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationTopBar template</summary>
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Top Bar Data template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class AssociationTopBar : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationTopBarItem {
+    public partial class AssociationTopBarData : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationTopBarDataItem {
         
-        private Synthesis.FieldTypes.TextField _associationName;
+        private Synthesis.FieldTypes.HyperlinkField _topbarLink1;
         
-        public AssociationTopBar(Sitecore.Data.Items.Item innerItem) : 
+        private Synthesis.FieldTypes.HyperlinkField _topbarLink2;
+        
+        private Synthesis.FieldTypes.HyperlinkField _topbarLink3;
+        
+        private Synthesis.FieldTypes.HyperlinkField _topbarLink4;
+        
+        private Synthesis.FieldTypes.TextField _homeLinkLabel;
+        
+        public AssociationTopBarData(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
         
-        public AssociationTopBar(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+        public AssociationTopBarData(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
                 base(searchFields) {
         }
         
         /// <summary>The name of the Sitecore Template that this class represents</summary>
         public static string TemplateName {
             get {
-                return "AssociationTopBar";
+                return "Association Top Bar Data";
             }
         }
         
@@ -980,20 +1012,64 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
             }
         }
         
-        /// <summary>Represents the Association Name field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("association_name")]
-        public Synthesis.FieldTypes.Interfaces.ITextField AssociationName {
+        /// <summary>Represents the Topbar Link1 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link1")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink1 {
             get {
-                if (_associationName == null) {
-                    _associationName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C952386-D9DC-444F-8C73-77CD265192BD}"], "/sitecore/templates/Feature/Content/Data/AssociationTopBar", "Association Name"), this.GetSearchFieldValue("association_name"));
+                if (_topbarLink1 == null) {
+                    _topbarLink1 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E01387D9-C723-4108-84ED-342E3CAFA9B7}"], "/sitecore/templates/Feature/Content/Data/Association Top Bar Data", "Topbar Link1"), this.GetSearchFieldValue("topbar_link1"));
                 }
-                return _associationName;
+                return _topbarLink1;
+            }
+        }
+        
+        /// <summary>Represents the Topbar Link2 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link2")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink2 {
+            get {
+                if (_topbarLink2 == null) {
+                    _topbarLink2 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DB76CEA1-E099-40DB-B37D-BB0C9FE7EE4E}"], "/sitecore/templates/Feature/Content/Data/Association Top Bar Data", "Topbar Link2"), this.GetSearchFieldValue("topbar_link2"));
+                }
+                return _topbarLink2;
+            }
+        }
+        
+        /// <summary>Represents the Topbar Link3 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link3")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink3 {
+            get {
+                if (_topbarLink3 == null) {
+                    _topbarLink3 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{B88DEEDF-9258-45C1-9013-7DC1AEA38128}"], "/sitecore/templates/Feature/Content/Data/Association Top Bar Data", "Topbar Link3"), this.GetSearchFieldValue("topbar_link3"));
+                }
+                return _topbarLink3;
+            }
+        }
+        
+        /// <summary>Represents the Topbar Link4 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link4")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink4 {
+            get {
+                if (_topbarLink4 == null) {
+                    _topbarLink4 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{38C059B5-4D91-4AB5-83C6-FA7E12FAEE21}"], "/sitecore/templates/Feature/Content/Data/Association Top Bar Data", "Topbar Link4"), this.GetSearchFieldValue("topbar_link4"));
+                }
+                return _topbarLink4;
+            }
+        }
+        
+        /// <summary>Represents the Home Link Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("home_link_label")]
+        public Synthesis.FieldTypes.Interfaces.ITextField HomeLinkLabel {
+            get {
+                if (_homeLinkLabel == null) {
+                    _homeLinkLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{CB7EDB1B-FD57-44C2-A8E3-6975554C3895}"], "/sitecore/templates/Feature/Content/Data/Association Top Bar Data", "Home Link Label"), this.GetSearchFieldValue("home_link_label"));
+                }
+                return _homeLinkLabel;
             }
         }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class AssociationTopBarInitializer : Synthesis.Initializers.ITemplateInitializer {
+    public class AssociationTopBarDataInitializer : Synthesis.Initializers.ITemplateInitializer {
         
         public Sitecore.Data.ID InitializesTemplateId {
             get {
@@ -1002,11 +1078,11 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
         
         public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new AssociationTopBar(innerItem);
+            return new AssociationTopBarData(innerItem);
         }
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new AssociationTopBar(searchFields);
+            return new AssociationTopBarData(searchFields);
         }
     }
     

@@ -2,9 +2,9 @@
 version: 1
 id: {67886500-F92C-4DB4-8909-D36EF7884BD2}
 database: master
-path: /sitecore/templates/Feature/Content/Data/AssociationTopBar
+path: /sitecore/templates/Feature/Content/Data/Association Top Bar Data
 parent: {2BEB4C49-A29E-4DDB-B24D-B6E5FB6C0B24}
-name: AssociationTopBar
+name: Association Top Bar Data
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: f585be44-5208-4d27-82f6-23b5fa2cdc58
+revision: 3cecb759-40b4-4732-ac88-604a9b3a266f
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f585be44-5208-4d27-82f6-23b5fa2cdc58
+3cecb759-40b4-4732-ac88-604a9b3a266f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170322T134523Z
+20170607T110701Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

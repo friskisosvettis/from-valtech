@@ -142,8 +142,15 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 74d16113-3114-4479-abb7-b05268ad44b1
+revision: bb0cc148-da58-40f6-8a0a-3e1b563cdf2c
 
+----field----
+field: {CB7EDB1B-FD57-44C2-A8E3-6975554C3895}
+name: Home Link Label
+key: home link label
+content-length: 10
+
+Friskis.se
 ----field----
 field: {9AB29783-D2F7-4204-925E-66ED71C53B64}
 name: Facebook Link
@@ -248,14 +255,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-74d16113-3114-4479-abb7-b05268ad44b1
+bb0cc148-da58-40f6-8a0a-3e1b563cdf2c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T160323Z
+20170607T122000Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

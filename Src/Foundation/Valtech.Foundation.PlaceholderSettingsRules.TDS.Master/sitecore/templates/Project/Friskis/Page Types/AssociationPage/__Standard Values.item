@@ -20,15 +20,8 @@ content-length: 1030
 ----version----
 language: en
 version: 1
-revision: 51510092-7af0-4bec-ba57-5309bd7b624e
+revision: 5d9ff2ff-8d8e-4729-b566-8a6bef7ffb43
 
-----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 5
-
-$name
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-51510092-7af0-4bec-ba57-5309bd7b624e
+5d9ff2ff-8d8e-4729-b566-8a6bef7ffb43
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T154918Z
+20170607T110615Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -74,15 +67,8 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: dfcde3a9-5577-484e-8db8-29ceb7b97a58
+revision: 2bcc950a-c46f-42af-9b25-201a68faa69d
 
-----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 5
-
-$name
 ----field----
 field: {C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}
 name: IntroTitle
@@ -131,14 +117,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dfcde3a9-5577-484e-8db8-29ceb7b97a58
+2bcc950a-c46f-42af-9b25-201a68faa69d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170410T104553Z
+20170607T110615Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

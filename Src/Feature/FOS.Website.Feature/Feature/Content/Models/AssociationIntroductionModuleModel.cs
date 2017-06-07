@@ -14,11 +14,5 @@ namespace FOS.Website.Feature.Content.Models
     {
         public string AssociationName { get; set; }
         public IAssociationIntroductionModuleItem AssociationIntroductionModuleItem { get; set; }
-
-
-        public AssociationIntroductionModuleModel(Item item)
-        {
-            AssociationIntroductionModuleItem = item.As<IAssociationIntroductionModuleItem>();
-        }
     }
 }

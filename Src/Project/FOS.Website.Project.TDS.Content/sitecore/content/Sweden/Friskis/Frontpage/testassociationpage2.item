@@ -13,15 +13,8 @@ created: 20170327T131127Z
 ----version----
 language: sv-SE
 version: 1
-revision: 84382be3-2d4d-48f3-b1a0-7af5fc5d1da1
+revision: 59e1adb6-2b2f-4c9b-a4c0-da463b71f4b7
 
-----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 20
-
-testassociationpage2
 ----field----
 field: {F5BE9F09-AE1A-4545-A82A-51FF0D0A6C5F}
 name: Twitter Link
@@ -49,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-84382be3-2d4d-48f3-b1a0-7af5fc5d1da1
+59e1adb6-2b2f-4c9b-a4c0-da463b71f4b7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170530T153927Z
+20170607T110615Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

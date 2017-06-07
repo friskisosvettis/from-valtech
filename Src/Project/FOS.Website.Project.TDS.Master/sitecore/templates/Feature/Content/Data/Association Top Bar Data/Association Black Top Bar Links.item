@@ -2,9 +2,9 @@
 version: 1
 id: {ECE49E24-EBBA-4DEE-9102-58D1CB3C4A02}
 database: master
-path: /sitecore/templates/Feature/Content/Data/AssociationTopBar/Association top bar
+path: /sitecore/templates/Feature/Content/Data/Association Top Bar Data/Association Black Top Bar Links
 parent: {67886500-F92C-4DB4-8909-D36EF7884BD2}
-name: Association top bar
+name: Association Black Top Bar Links
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
@@ -13,7 +13,7 @@ created: 20170322T134840Z
 ----version----
 language: en
 version: 1
-revision: 6ea1dce2-afd7-4961-af25-0ddb1ac14a02
+revision: 07ef2a21-e140-41e4-b9f2-7b2371d93e97
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,14 +35,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6ea1dce2-afd7-4961-af25-0ddb1ac14a02
+07ef2a21-e140-41e4-b9f2-7b2371d93e97
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170322T134840Z
+20170607T110708Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

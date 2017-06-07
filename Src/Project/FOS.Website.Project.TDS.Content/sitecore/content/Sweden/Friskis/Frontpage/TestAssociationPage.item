@@ -13,15 +13,8 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: f9e0c0af-b870-4038-abfe-4476d29093f7
+revision: db72afeb-a75f-4e6e-b918-a5c733d40a83
 
-----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 7
-
-Fredrik
 ----field----
 field: {C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}
 name: IntroTitle
@@ -175,14 +168,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f9e0c0af-b870-4038-abfe-4476d29093f7
+db72afeb-a75f-4e6e-b918-a5c733d40a83
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170607T093903Z
+20170607T110615Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

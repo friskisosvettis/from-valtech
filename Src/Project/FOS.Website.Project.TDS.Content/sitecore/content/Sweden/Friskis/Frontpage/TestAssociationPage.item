@@ -13,8 +13,15 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: db72afeb-a75f-4e6e-b918-a5c733d40a83
+revision: 86bea5a1-62f0-4993-b65b-c23dd70c95a6
 
+----field----
+field: {DB2BC8F5-6AE2-4A7B-A74A-332C1F992953}
+name: Association Ready
+key: association ready
+content-length: 1
+
+1
 ----field----
 field: {C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}
 name: IntroTitle
@@ -168,14 +175,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-db72afeb-a75f-4e6e-b918-a5c733d40a83
+86bea5a1-62f0-4993-b65b-c23dd70c95a6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170607T110615Z
+20170607T152349Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -40,6 +40,23 @@ namespace FOS.Website.Feature.Content.Controllers
             return View(Constants.Views.Paths.AssociationTopBar, model);
         }
 
+        public ActionResult GetAssociationNotMigratedView()
+        {
+            var associationMigratedCheckItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationNotMigratedCheckWidgetItem>();
+            if (associationMigratedCheckItem != null && !associationMigratedCheckItem.AssociationReady.Value)
+            {
+                var model = new AssociationNotMigratedModel()
+                {
+                    AssociationCheckWidget = associationMigratedCheckItem,
+                    GeneralData = associationMigratedCheckItem.InnerItem.ClosestAscendantItemOfType<IAssociationNotMigratedGeneralInfoItem>()
+                };
+
+                return View(Constants.Views.Paths.AssociationNotMigrated, model);
+            }
+
+            return new EmptyResult();
+        }
+
         public ActionResult GetBasicHeadingView()
         {
             BasicHeadingModel model = new BasicHeadingModel(Sitecore.Context.Item);

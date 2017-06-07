@@ -13,6 +13,7 @@ namespace FOS.Website.Feature.Content
             {
                 public const string AssociationIntroductionModule = "/Feature/Content/Views/AssociationIntroductionModule.cshtml";
                 public const string AssociationTopBar = "/Feature/Content/Views/AssociationTopBar.cshtml";
+                public const string AssociationNotMigrated = "/Feature/Content/Views/AssociationNotMigrated.cshtml";
                 public const string BasicHeading = "/Feature/Content/Views/BasicHeading.cshtml";
                 public const string BasicImage = "/Feature/Content/Views/BasicImage.cshtml";
                 public const string ExpandableSection = "/Feature/Content/Views/ExpandableSection.cshtml";

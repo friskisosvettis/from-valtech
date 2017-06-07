@@ -162,6 +162,8 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             left: auto;
             width: auto;
             height: auto;
+            max-width: $xl-max-width;
+            overflow: hidden;
             background-color: transparent;
             width: 100%;
         }

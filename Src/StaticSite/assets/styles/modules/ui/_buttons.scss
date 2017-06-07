@@ -69,6 +69,7 @@
             background-image: url('/assets/images/icon_book.svg');
             background-size: rem(30px) rem(30px);
             background-position: left $space top 50%;
+            text-align: left;
         }
 
         &.btn--external-link {

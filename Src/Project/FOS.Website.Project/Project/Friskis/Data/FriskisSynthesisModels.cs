@@ -1154,6 +1154,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _trainingSelectionLink;
         
+        private Synthesis.FieldTypes.HyperlinkField _contactLink;
+        
         private Synthesis.FieldTypes.HyperlinkField _gymsLink;
         
         private Synthesis.FieldTypes.HyperlinkField _scheduleLink;
@@ -1400,6 +1402,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Contact Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactLink {
+            get {
+                if (_contactLink == null) {
+                    _contactLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{B35D8A46-177B-4A46-BC95-CBADC68ED46C}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Contact Link"), this.GetSearchFieldValue("contact_link"));
+                }
+                return _contactLink;
+            }
+        }
+        
         /// <summary>Represents the GymsLink field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("gymslink")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField GymsLink {
@@ -1494,6 +1507,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.HyperlinkField _link;
         
         private Synthesis.FieldTypes.TextField _contactPhonenumber;
+        
+        private Synthesis.FieldTypes.HyperlinkField _contactLink;
         
         public Frontpage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -1675,6 +1690,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _contactPhonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5AE87D4E-7F3A-45B0-8512-EF283254FF0B}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Contact Phonenumber"), this.GetSearchFieldValue("contact_phonenumber"));
                 }
                 return _contactPhonenumber;
+            }
+        }
+        
+        /// <summary>Represents the Contact Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactLink {
+            get {
+                if (_contactLink == null) {
+                    _contactLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{B35D8A46-177B-4A46-BC95-CBADC68ED46C}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Contact Link"), this.GetSearchFieldValue("contact_link"));
+                }
+                return _contactLink;
             }
         }
     }

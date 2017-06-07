@@ -187,7 +187,7 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Contact footer template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B834CE03-2B61-4043-A14E-9B0393CE9A1B}", "nYeYKK1hl8I1drJAaad0x6OGMD8=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B834CE03-2B61-4043-A14E-9B0393CE9A1B}", "W0aA+fB3UYvzDvlAK8WAcPCeDbQ=", "Valtech.Foundation.Synthesis")]
     public partial interface IFooterContactfooterItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Facebook Link field</summary>
@@ -217,6 +217,12 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the Contact Phonenumber field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("contact_phonenumber")]
         Synthesis.FieldTypes.Interfaces.ITextField ContactPhonenumber {
+            get;
+        }
+        
+        /// <summary>Represents the Contact Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactLink {
             get;
         }
     }
@@ -1577,6 +1583,8 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.TextField _contactPhonenumber;
         
+        private Synthesis.FieldTypes.HyperlinkField _contactLink;
+        
         public FooterContactfooter(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1658,6 +1666,17 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _contactPhonenumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5AE87D4E-7F3A-45B0-8512-EF283254FF0B}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Contact Phonenumber"), this.GetSearchFieldValue("contact_phonenumber"));
                 }
                 return _contactPhonenumber;
+            }
+        }
+        
+        /// <summary>Represents the Contact Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("contact_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ContactLink {
+            get {
+                if (_contactLink == null) {
+                    _contactLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{B35D8A46-177B-4A46-BC95-CBADC68ED46C}"], "/sitecore/templates/Feature/Content/Data/Footer - Contact footer", "Contact Link"), this.GetSearchFieldValue("contact_link"));
+                }
+                return _contactLink;
             }
         }
     }

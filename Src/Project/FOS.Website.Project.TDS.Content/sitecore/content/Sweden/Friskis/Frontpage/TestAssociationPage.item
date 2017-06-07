@@ -13,7 +13,7 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: aee50bc6-f8f9-4047-b783-370c91d39746
+revision: 42f3e923-d902-4213-80d3-54ad4690ccbe
 
 ----field----
 field: {3C952386-D9DC-444F-8C73-77CD265192BD}
@@ -64,6 +64,13 @@ key: contact phonenumber
 content-length: 10
 
 555 - Surf
+----field----
+field: {B35D8A46-177B-4A46-BC95-CBADC68ED46C}
+name: Contact Link
+key: contact link
+content-length: 150
+
+<link text="Texten för länken" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
 ----field----
 field: {D79E1157-28CB-46C6-92E4-67043C9D4B11}
 name: Title
@@ -140,14 +147,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aee50bc6-f8f9-4047-b783-370c91d39746
+42f3e923-d902-4213-80d3-54ad4690ccbe
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T160857Z
+20170607T090912Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

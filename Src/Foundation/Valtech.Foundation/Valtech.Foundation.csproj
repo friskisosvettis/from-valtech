@@ -984,6 +984,9 @@
     <Content Include="_ConfigTransformations\LOCAL\_ENVIRONMENT\FOUNDATION\Valtech.Foundation_debug.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\FOUNDATION\Valtech.Foundation.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\FOUNDATION\Valtech.Foundation.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -991,6 +994,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\_ENVIRONMENT\FOUNDATION\Valtech.Foundation.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_ConfigTransformations\WEB\Friskis-PROD\FOUNDATION\Valtech.Foundation.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\WEB\Friskis-STAGE\FOUNDATION\Valtech.Foundation.xml">

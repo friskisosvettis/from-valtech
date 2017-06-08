@@ -1015,6 +1015,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="default.css" />
     <Content Include="Feature\Content\Views\ImageCollage.cshtml" />
     <Content Include="Feature\Content\Views\Quote.cshtml" />
     <Content Include="Feature\Content\Views\Headline.cshtml" />
@@ -1042,6 +1043,7 @@
     <Content Include="App_Config\Include\AutoCompleteRouting\z_AllowSpecialControllers.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="sitecore\shell\Controls\Rich Text Editor\ToolsFile.xml" />
     <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config">
       <SubType>Designer</SubType>
     </None>

@@ -16,7 +16,7 @@
             <div class="message__content">
                 <img src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo" />
                 <h1 class="heading-3">
-                    @Model.GeneralData.ExplainCopyForNewAssociation.Render()
+                    @Model.GeneralData.TextForNewAssociation.Render()
                 </h1>
                 <p>@Model.AssociationCheckWidget.LinkToExistingPage.Render("Go to Friskis " + @Model.AssociationCheckWidget.InnerItem.DisplayName, "btn btn--secondary btn__link btn__icon btn__icon--right btn--external-link")</p>
                 <a href="@LinkManager.GetItemUrl(@Model.GeneralData.InnerItem)" class="link--inverted">@Model.GeneralData.LinkToStartPageLabel.Render()</a>

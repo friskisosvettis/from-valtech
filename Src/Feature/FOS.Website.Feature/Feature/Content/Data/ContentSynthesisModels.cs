@@ -77,10 +77,28 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated Check Widget template</summary>
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated Info template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{52B11AD8-5383-4001-9A6A-567CF1CC16CB}", "qKg827X6cwwBccUuomHnZN3dKM4=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationNotMigratedCheckWidgetItem : Synthesis.IStandardTemplateItem {
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3E374DBE-D2BD-4D17-9FE8-98C6FBFD5466}", "bLwLqehbAiJrWwqj/Dy5Sf+QqNY=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationNotMigratedInfoItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Text For New Association field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_for_new_association")]
+        Synthesis.FieldTypes.Interfaces.ITextField TextForNewAssociation {
+            get;
+        }
+        
+        /// <summary>Represents the Link To Start Page Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_to_start_page_label")]
+        Synthesis.FieldTypes.Interfaces.ITextField LinkToStartPageLabel {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated Widget template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{52B11AD8-5383-4001-9A6A-567CF1CC16CB}", "y/7qZNNwmPdOa8K3w5oqfCw6Saw=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAssociationNotMigratedWidgetItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Association Ready field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("association_ready")]
@@ -91,24 +109,6 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the Link To Existing Page field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("link_to_existing_page")]
         Synthesis.FieldTypes.Interfaces.IHyperlinkField LinkToExistingPage {
-            get;
-        }
-    }
-    
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated General Info template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3E374DBE-D2BD-4D17-9FE8-98C6FBFD5466}", "bmCuUifAsUUC+tVqEXtt4dKdh7Q=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationNotMigratedGeneralInfoItem : Synthesis.IStandardTemplateItem {
-        
-        /// <summary>Represents the Explain Copy For New Association field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("explain_copy_for_new_association")]
-        Synthesis.FieldTypes.Interfaces.ITextField ExplainCopyForNewAssociation {
-            get;
-        }
-        
-        /// <summary>Represents the Link To Start Page Label field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link_to_start_page_label")]
-        Synthesis.FieldTypes.Interfaces.ITextField LinkToStartPageLabel {
             get;
         }
     }
@@ -1005,26 +1005,104 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated Check Widget template</summary>
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated Info template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class AssociationNotMigratedCheckWidget : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedCheckWidgetItem {
+    public partial class AssociationNotMigratedInfo : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedInfoItem {
         
-        private Synthesis.FieldTypes.BooleanField _associationReady;
+        private Synthesis.FieldTypes.TextField _textForNewAssociation;
         
-        private Synthesis.FieldTypes.HyperlinkField _linkToExistingPage;
+        private Synthesis.FieldTypes.TextField _linkToStartPageLabel;
         
-        public AssociationNotMigratedCheckWidget(Sitecore.Data.Items.Item innerItem) : 
+        public AssociationNotMigratedInfo(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
         
-        public AssociationNotMigratedCheckWidget(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+        public AssociationNotMigratedInfo(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
                 base(searchFields) {
         }
         
         /// <summary>The name of the Sitecore Template that this class represents</summary>
         public static string TemplateName {
             get {
-                return "Association Not Migrated Check Widget";
+                return "Association Not Migrated Info";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{3E374DBE-D2BD-4D17-9FE8-98C6FBFD5466}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Text For New Association field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text_for_new_association")]
+        public Synthesis.FieldTypes.Interfaces.ITextField TextForNewAssociation {
+            get {
+                if (_textForNewAssociation == null) {
+                    _textForNewAssociation = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3B7976CB-2255-4B8D-83E3-5FBEDAC974DE}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated Info", "Text For New Association"), this.GetSearchFieldValue("text_for_new_association"));
+                }
+                return _textForNewAssociation;
+            }
+        }
+        
+        /// <summary>Represents the Link To Start Page Label field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_to_start_page_label")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LinkToStartPageLabel {
+            get {
+                if (_linkToStartPageLabel == null) {
+                    _linkToStartPageLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{ABC75A3A-3CB7-4D23-A224-4F7B617CD46C}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated Info", "Link To Start Page Label"), this.GetSearchFieldValue("link_to_start_page_label"));
+                }
+                return _linkToStartPageLabel;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AssociationNotMigratedInfoInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{3E374DBE-D2BD-4D17-9FE8-98C6FBFD5466}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AssociationNotMigratedInfo(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AssociationNotMigratedInfo(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated Widget template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AssociationNotMigratedWidget : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedWidgetItem {
+        
+        private Synthesis.FieldTypes.BooleanField _associationReady;
+        
+        private Synthesis.FieldTypes.HyperlinkField _linkToExistingPage;
+        
+        public AssociationNotMigratedWidget(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AssociationNotMigratedWidget(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Association Not Migrated Widget";
             }
         }
         
@@ -1047,7 +1125,7 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         public Synthesis.FieldTypes.Interfaces.IBooleanField AssociationReady {
             get {
                 if (_associationReady == null) {
-                    _associationReady = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DB2BC8F5-6AE2-4A7B-A74A-332C1F992953}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated Check Widget", "Association Ready"), this.GetSearchFieldValue("association_ready"));
+                    _associationReady = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DB2BC8F5-6AE2-4A7B-A74A-332C1F992953}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated Widget", "Association Ready"), this.GetSearchFieldValue("association_ready"));
                 }
                 return _associationReady;
             }
@@ -1058,7 +1136,7 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField LinkToExistingPage {
             get {
                 if (_linkToExistingPage == null) {
-                    _linkToExistingPage = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{72D4E6BC-2C3E-46D2-B3AC-259351C6E612}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated Check Widget", "Link To Existing Page"), this.GetSearchFieldValue("link_to_existing_page"));
+                    _linkToExistingPage = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{72D4E6BC-2C3E-46D2-B3AC-259351C6E612}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated Widget", "Link To Existing Page"), this.GetSearchFieldValue("link_to_existing_page"));
                 }
                 return _linkToExistingPage;
             }
@@ -1066,7 +1144,7 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class AssociationNotMigratedCheckWidgetInitializer : Synthesis.Initializers.ITemplateInitializer {
+    public class AssociationNotMigratedWidgetInitializer : Synthesis.Initializers.ITemplateInitializer {
         
         public Sitecore.Data.ID InitializesTemplateId {
             get {
@@ -1075,89 +1153,11 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
         
         public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new AssociationNotMigratedCheckWidget(innerItem);
+            return new AssociationNotMigratedWidget(innerItem);
         }
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new AssociationNotMigratedCheckWidget(searchFields);
-        }
-    }
-    
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Not Migrated General Info template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class AssociationNotMigratedGeneralInfo : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedGeneralInfoItem {
-        
-        private Synthesis.FieldTypes.TextField _explainCopyForNewAssociation;
-        
-        private Synthesis.FieldTypes.TextField _linkToStartPageLabel;
-        
-        public AssociationNotMigratedGeneralInfo(Sitecore.Data.Items.Item innerItem) : 
-                base(innerItem) {
-        }
-        
-        public AssociationNotMigratedGeneralInfo(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
-                base(searchFields) {
-        }
-        
-        /// <summary>The name of the Sitecore Template that this class represents</summary>
-        public static string TemplateName {
-            get {
-                return "Association Not Migrated General Info";
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public static Sitecore.Data.ID ItemTemplateId {
-            get {
-                return new Sitecore.Data.ID("{3E374DBE-D2BD-4D17-9FE8-98C6FBFD5466}");
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public override Sitecore.Data.ID TemplateId {
-            get {
-                return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the Explain Copy For New Association field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("explain_copy_for_new_association")]
-        public Synthesis.FieldTypes.Interfaces.ITextField ExplainCopyForNewAssociation {
-            get {
-                if (_explainCopyForNewAssociation == null) {
-                    _explainCopyForNewAssociation = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3B7976CB-2255-4B8D-83E3-5FBEDAC974DE}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated General Info", "Explain Copy For New Association"), this.GetSearchFieldValue("explain_copy_for_new_association"));
-                }
-                return _explainCopyForNewAssociation;
-            }
-        }
-        
-        /// <summary>Represents the Link To Start Page Label field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link_to_start_page_label")]
-        public Synthesis.FieldTypes.Interfaces.ITextField LinkToStartPageLabel {
-            get {
-                if (_linkToStartPageLabel == null) {
-                    _linkToStartPageLabel = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{ABC75A3A-3CB7-4D23-A224-4F7B617CD46C}"], "/sitecore/templates/Feature/Content/Data/Association Not Migrated General Info", "Link To Start Page Label"), this.GetSearchFieldValue("link_to_start_page_label"));
-                }
-                return _linkToStartPageLabel;
-            }
-        }
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class AssociationNotMigratedGeneralInfoInitializer : Synthesis.Initializers.ITemplateInitializer {
-        
-        public Sitecore.Data.ID InitializesTemplateId {
-            get {
-                return new Sitecore.Data.ID("{3E374DBE-D2BD-4D17-9FE8-98C6FBFD5466}");
-            }
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new AssociationNotMigratedGeneralInfo(innerItem);
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new AssociationNotMigratedGeneralInfo(searchFields);
+            return new AssociationNotMigratedWidget(searchFields);
         }
     }
     

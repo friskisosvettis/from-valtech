@@ -12,7 +12,7 @@ namespace FOS.Website.Feature.Content.Models
 {
     public class AssociationNotMigratedModel
     {
-        public IAssociationNotMigratedGeneralInfoItem GeneralData { get; set; }
-        public IAssociationNotMigratedCheckWidgetItem AssociationCheckWidget{ get; set; }
+        public IAssociationNotMigratedInfoItem GeneralData { get; set; }
+        public IAssociationNotMigratedWidgetItem AssociationCheckWidget{ get; set; }
     }
 }

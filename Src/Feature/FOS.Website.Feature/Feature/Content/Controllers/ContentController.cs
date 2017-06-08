@@ -42,13 +42,13 @@ namespace FOS.Website.Feature.Content.Controllers
 
         public ActionResult GetAssociationNotMigratedView()
         {
-            var associationMigratedCheckItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationNotMigratedCheckWidgetItem>();
+            var associationMigratedCheckItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationNotMigratedWidgetItem>();
             if (associationMigratedCheckItem != null && !associationMigratedCheckItem.AssociationReady.Value)
             {
                 var model = new AssociationNotMigratedModel()
                 {
                     AssociationCheckWidget = associationMigratedCheckItem,
-                    GeneralData = associationMigratedCheckItem.InnerItem.ClosestAscendantItemOfType<IAssociationNotMigratedGeneralInfoItem>()
+                    GeneralData = associationMigratedCheckItem.InnerItem.ClosestAscendantItemOfType<IAssociationNotMigratedInfoItem>()
                 };
 
                 return View(Constants.Views.Paths.AssociationNotMigrated, model);

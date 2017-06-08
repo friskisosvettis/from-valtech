@@ -13,13 +13,16 @@
 
 <div class="navigation--top">
     <div class="container">
-        <div class="container--12">
+        <div class="container--4">
             <a href="@LinkManager.GetItemUrl(@Model.AssociationItem)">F&S @Model.AssociationItem.DisplayName</a>
-            @Model.TopBarData.TopbarLink1.Render(null, "visible-on-large-up")
-            @Model.TopBarData.TopbarLink2.Render(null, "visible-on-large-up")
-            @Model.TopBarData.TopbarLink3.Render(null, "visible-on-large-up")
-            @Model.TopBarData.TopbarLink4.Render(null, "visible-on-large-up")
-            <a href="@LinkManager.GetItemUrl(@Model.TopBarData.InnerItem)">@Model.TopBarData.HomeLinkLabel.Render()</a>
+            <a href="@LinkManager.GetItemUrl(@Model.TopBarData.InnerItem)" class="hidden-small-up navigation__link--border-left">@Model.TopBarData.HomeLinkLabel.Render()</a>
+        </div>
+        <div class="container--8 text-align--right">
+            @Model.TopBarData.TopbarLink1.Render(null, "visible-medium-up")
+            @Model.TopBarData.TopbarLink2.Render(null, "visible-medium-up")
+            @Model.TopBarData.TopbarLink3.Render(null, "visible-medium-up")
+            @Model.TopBarData.TopbarLink4.Render(null, "visible-medium-up")
+            <a href="@LinkManager.GetItemUrl(@Model.TopBarData.InnerItem)" class="visible-small-up navigation__link--border-left">@Model.TopBarData.HomeLinkLabel.Render()</a>
         </div>
     </div>
 </div>

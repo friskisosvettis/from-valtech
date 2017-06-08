@@ -57,25 +57,64 @@ button, input, optgroup, select, textarea {
 	#scLogo {
 		margin-top:20px;
 	}
+
+    .intro {
+      font-size: 1.375rem;
+      line-height: 1.4; }
+
+.note {
+  color: #e45563;
+  font-size: 0.9rem; }
+  .note:before {
+    content: '*';
+    font-size: 1.1rem;
+    vertical-align: middle;
+    display: inline-block; }
+
+ol {
+  padding: 0;
+  margin: 0 0 60px 0;
+  counter-reset: item; }
+  ol li {
+    list-style-type: none;
+    counter-increment: item;
+    margin: 0 0 10px 0;
+    line-height: 1; }
+    ol li:before {
+      display: inline-block;
+      width: 1em;
+      padding-right: 20px;
+      font-weight: bold;
+      text-align: right;
+      content: counter(item) ".";
+      vertical-align: middle; }
+ul {
+  padding: 0;
+  margin: 0 0 60px 0; }
+
+ul li {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    background-image: url("/assets/images/icon_bullet.svg");
+    background-size: 1rem 1rem;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding-left: 2rem; }
 	
-	.contentTitle {
-		margin-top: 50px;
-		font-weight:400;
-		font-size: 36px;
-	}
-	
-	.divider {
-		background-color: #DCDCDC;
-		border: 0 none;
-		clear: both;
-		display: block;
-		height: 1px;
-		float:none;
-		margin: 50px auto;
-		width: 100%;
-	}
-	
-	.contentDescription{
-		padding-right:20px;
-		line-height: 22px;
-	}	
+ul.list--tick li {
+    background-image: url("/assets/images/icon_tick.svg"); 
+    background-position: 0 50%;
+    background-repeat: no-repeat;}
+
+ul.list--goto li {
+    background-image: url("/assets/images/icon_arrow-right-red.svg"); 
+    background-position: 0 50%;
+    background-repeat: no-repeat;}
+
+ul.list--goto {
+    background-color: #FCE7E9;
+    background-color: #FDF8F8;
+    padding: 60px; }
+    ul.list--goto a {
+      color: #383232; }
+

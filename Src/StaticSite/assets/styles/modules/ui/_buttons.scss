@@ -81,4 +81,7 @@
     &--secondary {
         @include button-settings($primary-color-light, $color-text);
     }
+    &--on-red {
+        @include button-settings($primary-color-dark, $color-white);
+    }
 }

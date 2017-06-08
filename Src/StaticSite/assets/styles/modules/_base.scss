@@ -25,10 +25,11 @@ $primary-color: #E31836;        // Friskis Red
 $primary-color-light: #FEF0F2;  // Light red
 $secondary-color: #E7F5ED;      // Light green
 $cta-color: #F8F7EA;            // Yellow
+$primary-color-dark: #BE0621 ;   // Dark red
 
 $primary-color-dim-80: rgba(227, 25, 55, 0.8);
 $primary-color-dim-90: rgba(227, 25, 55, 0.9);
-$primary-color-dim-98: rgba(227, 25, 55, 0.98);
+$primary-color-dim-95: rgba(227, 25, 55, 0.95);
 
 $overlay-color-dim-60: rgba(41, 48, 66, 0.6); // TODO - change to another color? 
 /*
@@ -166,7 +167,6 @@ $border-radius: 6px;
 $icon-size: rem(44px);
 $icon-size-medium: rem(28px);
 $icon-size-small: rem(20px);
-
 
 /*------------------------------------*\
     #BASE HEIGT

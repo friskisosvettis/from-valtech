@@ -50,7 +50,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             &.open {
                 height: $menu-height !important;
                 max-height: $menu-height !important;
-                background: $primary-color-dim-98 !important;
+                background: $primary-color-dim-95 !important;
             }
         }
     }
@@ -66,7 +66,28 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
 
         a {
             color: $color-white;
-            height: $topbar-height;
+            text-decoration: none;
+            display: inline-block;
+            padding-top: 8px;// TODO - vertical align in a better way   
+
+            @include xsmall-up {
+                padding: 8px $space; // TODO - vertical align in a better way            
+            }
+
+            &.navigation__link--border-left {
+                float: right;
+                margin-top: 8px; // TODO - vertical align in a better way
+                padding: 0 0 0 $space-double;
+
+                @include small-up {
+                    float: none;
+                }
+
+                @include medium-up {
+                    margin-left: $space;
+                    border-left: 1px dashed $color-white;
+                }
+            }
         }
         &.hide {
             opacity: 0;
@@ -148,7 +169,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
     &__list {
         width: 100%;
         height: 100%;
-        background-color: $primary-color-dim-98;
+        background-color: $primary-color-dim-95;
         position: fixed;
         top: 0;
         left: 0;
@@ -173,6 +194,36 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         text-align: center;
         width: 100%;
 
+        &:nth-last-child(3) {
+            margin-bottom: 150px; //in order to not be hidden below top nav buttons
+            @include medium-up {
+                margin-bottom: 0;
+            }
+        }
+
+        // Top navigation
+        &--top {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient($primary-color-dim-80, $primary-color-dim-95);   
+
+            &:before {
+                position: absolute;
+                content: "";
+                background: linear-gradient($color-dim-00,$primary-color);
+                height: 50px;
+                top: -50px;
+                width: 100%;
+            }
+
+            a {
+                display: inline-block;
+                margin: $space-half;
+            }
+        }
         @include large-up {
             width: 7em;
             vertical-align: middle;
@@ -181,6 +232,10 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
 
             &:first-of-type {
                 width: $menu-height;
+                a{
+                    padding: 0;
+                    text-align: left;
+                }
             }
             &:last-of-type {
                 width: 12em;
@@ -227,7 +282,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             @include large-up {
                 &.open {
                     position: fixed;
-                    background-color: $primary-color-dim-98;
+                    background-color: $primary-color-dim-95;
                     top: $menu-height;
                     width: 100%;
                     left: 0;

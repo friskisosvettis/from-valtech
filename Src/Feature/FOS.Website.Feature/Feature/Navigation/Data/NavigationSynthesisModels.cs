@@ -11,18 +11,6 @@
 namespace FOS.Website.Feature.Navigation.Data {
     
     
-    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationBarRoot template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{695108BE-03A4-4177-AEF7-3A92F30C48AE}", "TYZm3qwNXByuVa4S+ylr/GABTgc=", "Valtech.Foundation.Synthesis")]
-    public partial interface INavigationBarRootItem : Synthesis.IStandardTemplateItem {
-        
-        /// <summary>Represents the BookingLink field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
-            get;
-        }
-    }
-    
     /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationData template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A2B8D74F-1F5A-4A8D-BB21-599CBC277098}", "i0d6PaNeV1bRoqud4wh7YzljVcI=", "Valtech.Foundation.Synthesis")]
@@ -46,6 +34,66 @@ namespace FOS.Website.Feature.Navigation.Data {
             get;
         }
     }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{DF386FEF-1DB8-41BD-88A3-0DAE41FE5453}", "jHAePYYX768msttYJuEEqpPTxFw=", "Valtech.Foundation.Synthesis")]
+    public partial interface INavigationFooterLinksAssociationItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Become A Member Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberTitle {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Member Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_text")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberText {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Member Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMemberLink {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Funkis Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisTitle {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Funkis Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_text")]
+        Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisText {
+            get;
+        }
+        
+        /// <summary>Represents the Become A Funkis Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkisLink {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/Navigation Menu Links Association template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{695108BE-03A4-4177-AEF7-3A92F30C48AE}", "UN07i9UblYUAuqrMXsRAk+aCcOQ=", "Valtech.Foundation.Synthesis")]
+    public partial interface INavigationMenuLinksAssociationItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the BookingLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationRootPageFlag template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AB6CD7A3-2AED-4E4A-8E2A-A17C04C395AC}", "7O3T+EwqYxH4lqI8NEI3nwzno28=", "Valtech.Foundation.Synthesis")]
+    public partial interface INavigationRootPageFlagItem : Synthesis.IStandardTemplateItem {
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -60,71 +108,6 @@ namespace FOS.Website.Feature.Navigation.Data {
 
 namespace FOS.Website.Concrete.Feature.Navigation.Data {
     
-    
-    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationBarRoot template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class NavigationBarRoot : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationBarRootItem {
-        
-        private Synthesis.FieldTypes.HyperlinkField _bookingLink;
-        
-        public NavigationBarRoot(Sitecore.Data.Items.Item innerItem) : 
-                base(innerItem) {
-        }
-        
-        public NavigationBarRoot(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
-                base(searchFields) {
-        }
-        
-        /// <summary>The name of the Sitecore Template that this class represents</summary>
-        public static string TemplateName {
-            get {
-                return "NavigationBarRoot";
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public static Sitecore.Data.ID ItemTemplateId {
-            get {
-                return new Sitecore.Data.ID("{695108BE-03A4-4177-AEF7-3A92F30C48AE}");
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public override Sitecore.Data.ID TemplateId {
-            get {
-                return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the BookingLink field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
-            get {
-                if (_bookingLink == null) {
-                    _bookingLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A26B0801-FAED-4426-8F97-4D06670FFBEF}"], "/sitecore/templates/Feature/Navigation/Data/NavigationBarRoot", "BookingLink"), this.GetSearchFieldValue("bookinglink"));
-                }
-                return _bookingLink;
-            }
-        }
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class NavigationBarRootInitializer : Synthesis.Initializers.ITemplateInitializer {
-        
-        public Sitecore.Data.ID InitializesTemplateId {
-            get {
-                return new Sitecore.Data.ID("{695108BE-03A4-4177-AEF7-3A92F30C48AE}");
-            }
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new NavigationBarRoot(innerItem);
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new NavigationBarRoot(searchFields);
-        }
-    }
     
     /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationData template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -214,6 +197,253 @@ namespace FOS.Website.Concrete.Feature.Navigation.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new NavigationData(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class NavigationFooterLinksAssociation : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem {
+        
+        private Synthesis.FieldTypes.TextField _becomeAMemberTitle;
+        
+        private Synthesis.FieldTypes.TextField _becomeAMemberText;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeAMemberLink;
+        
+        private Synthesis.FieldTypes.TextField _becomeAFunkisTitle;
+        
+        private Synthesis.FieldTypes.TextField _becomeAFunkisText;
+        
+        private Synthesis.FieldTypes.HyperlinkField _becomeAFunkisLink;
+        
+        public NavigationFooterLinksAssociation(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public NavigationFooterLinksAssociation(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Navigation Footer Links Association";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{DF386FEF-1DB8-41BD-88A3-0DAE41FE5453}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Become A Member Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberTitle {
+            get {
+                if (_becomeAMemberTitle == null) {
+                    _becomeAMemberTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4947E29E-797A-47B7-9F5D-7EF88933FD92}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member Title"), this.GetSearchFieldValue("become_a_member_title"));
+                }
+                return _becomeAMemberTitle;
+            }
+        }
+        
+        /// <summary>Represents the Become A Member Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberText {
+            get {
+                if (_becomeAMemberText == null) {
+                    _becomeAMemberText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member Text"), this.GetSearchFieldValue("become_a_member_text"));
+                }
+                return _becomeAMemberText;
+            }
+        }
+        
+        /// <summary>Represents the Become A Member Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAMemberLink {
+            get {
+                if (_becomeAMemberLink == null) {
+                    _becomeAMemberLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4A724144-806F-4095-AC95-5E505116C321}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Member Link"), this.GetSearchFieldValue("become_a_member_link"));
+                }
+                return _becomeAMemberLink;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisTitle {
+            get {
+                if (_becomeAFunkisTitle == null) {
+                    _becomeAFunkisTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EFDEB810-5031-431B-A39D-2F2FE95CBAA7}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis Title"), this.GetSearchFieldValue("become_a_funkis_title"));
+                }
+                return _becomeAFunkisTitle;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BecomeAFunkisText {
+            get {
+                if (_becomeAFunkisText == null) {
+                    _becomeAFunkisText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DEA239CC-6ED9-40F3-90E9-481CC24F0181}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis Text"), this.GetSearchFieldValue("become_a_funkis_text"));
+                }
+                return _becomeAFunkisText;
+            }
+        }
+        
+        /// <summary>Represents the Become A Funkis Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("become_a_funkis_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BecomeAFunkisLink {
+            get {
+                if (_becomeAFunkisLink == null) {
+                    _becomeAFunkisLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{12A33354-69A6-4BDF-9AB4-ADC7BA2ED69D}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Footer Links Association", "Become A Funkis Link"), this.GetSearchFieldValue("become_a_funkis_link"));
+                }
+                return _becomeAFunkisLink;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class NavigationFooterLinksAssociationInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{DF386FEF-1DB8-41BD-88A3-0DAE41FE5453}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new NavigationFooterLinksAssociation(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new NavigationFooterLinksAssociation(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/Navigation Menu Links Association template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class NavigationMenuLinksAssociation : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationMenuLinksAssociationItem {
+        
+        private Synthesis.FieldTypes.HyperlinkField _bookingLink;
+        
+        public NavigationMenuLinksAssociation(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public NavigationMenuLinksAssociation(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Navigation Menu Links Association";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{695108BE-03A4-4177-AEF7-3A92F30C48AE}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the BookingLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("bookinglink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField BookingLink {
+            get {
+                if (_bookingLink == null) {
+                    _bookingLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A26B0801-FAED-4426-8F97-4D06670FFBEF}"], "/sitecore/templates/Feature/Navigation/Data/Navigation Menu Links Association", "BookingLink"), this.GetSearchFieldValue("bookinglink"));
+                }
+                return _bookingLink;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class NavigationMenuLinksAssociationInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{695108BE-03A4-4177-AEF7-3A92F30C48AE}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new NavigationMenuLinksAssociation(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new NavigationMenuLinksAssociation(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Navigation/Data/NavigationRootPageFlag template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class NavigationRootPageFlag : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem {
+        
+        public NavigationRootPageFlag(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public NavigationRootPageFlag(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "NavigationRootPageFlag";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{AB6CD7A3-2AED-4E4A-8E2A-A17C04C395AC}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class NavigationRootPageFlagInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{AB6CD7A3-2AED-4E4A-8E2A-A17C04C395AC}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new NavigationRootPageFlag(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new NavigationRootPageFlag(searchFields);
         }
     }
 }

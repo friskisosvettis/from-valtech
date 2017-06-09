@@ -105,15 +105,15 @@ $touch-width: 44px;
     }
 
     .slick-prev:before {
-        border-top: 1px solid $white;
-        border-left: 1px solid $white;
+        border-top: 1px solid $color-white;
+        border-left: 1px solid $color-white;
         transform: rotate(-45deg);
         left: 17px;
     }
 
     .slick-next:before {
-        border-top: 1px solid $white;
-        border-right: 1px solid $white;
+        border-top: 1px solid $color-white;
+        border-right: 1px solid $color-white;
         transform: rotate(45deg);
         right: 17px;
     }
@@ -156,7 +156,7 @@ $touch-width: 44px;
                 position: absolute;
                 height: 2px;
                 width: $touch-width;
-                background-color: $white;
+                background-color: $color-white;
                 opacity: 0.3;
             }
 

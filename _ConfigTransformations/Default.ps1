@@ -87,7 +87,6 @@ Write-Host ""
  {
  	ActivateSolrConfigFiles -webRootPath $webRootPath
  	DeActivateLuceneConfigFiles -webRootPath $webRootPath
-	UpdateGlobalAsax -webRootPath $webRootPath
 	if($type -eq 'WEB')
 	{
 		DeActivateSolrMasterConfigFiles -webRootPath $webRootPath

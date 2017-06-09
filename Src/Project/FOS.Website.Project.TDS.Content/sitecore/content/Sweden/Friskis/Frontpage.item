@@ -81,8 +81,22 @@ content-length: 5
 ----version----
 language: en
 version: 1
-revision: 38709dfa-404c-436d-87dd-884dc9f26754
+revision: b57ba6d1-e019-4c85-939d-c0a6b4f65256
 
+----field----
+field: {9AB29783-D2F7-4204-925E-66ED71C53B64}
+name: Facebook Link
+key: facebook link
+content-length: 94
+
+<link text="Facebook" linktype="external" url="http://www.facebook.com" anchor="" target="" />
+----field----
+field: {D1B53717-5F4C-46FF-A6D4-302D19D868B9}
+name: Contact Email
+key: contact email
+content-length: 97
+
+<link text='test@friskis.se' linktype='mailto' style='' url='mailto:test@friskis.se'  title='' />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -110,14 +124,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-38709dfa-404c-436d-87dd-884dc9f26754
+b57ba6d1-e019-4c85-939d-c0a6b4f65256
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170516T133144Z
+20170530T151722Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -128,8 +142,64 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 69d9267a-5ad5-42f8-b74c-579d5f5b63e3
+revision: bb0cc148-da58-40f6-8a0a-3e1b563cdf2c
 
+----field----
+field: {CB7EDB1B-FD57-44C2-A8E3-6975554C3895}
+name: Home Link Label
+key: home link label
+content-length: 10
+
+Friskis.se
+----field----
+field: {9AB29783-D2F7-4204-925E-66ED71C53B64}
+name: Facebook Link
+key: facebook link
+content-length: 94
+
+<link text="Facebook" linktype="external" url="http://www.facebook.com" anchor="" target="" />
+----field----
+field: {D1B53717-5F4C-46FF-A6D4-302D19D868B9}
+name: Contact Email
+key: contact email
+content-length: 107
+
+<link text='test.riks@friskis.se' linktype='mailto' style='' url='mailto:test.riks@friskis.se'  title='' />
+----field----
+field: {5AE87D4E-7F3A-45B0-8512-EF283254FF0B}
+name: Contact Phonenumber
+key: contact phonenumber
+content-length: 11
+
+555 - Jympa
+----field----
+field: {D79E1157-28CB-46C6-92E4-67043C9D4B11}
+name: Title
+key: title
+content-length: 120
+
+Friskis&Svettis är en idrottsförening med ett för idrottsvärlden ovanligt mål: "ett leende. Leende känns. Ofta syns det.
+----field----
+field: {17AAEC3D-7316-44F1-A6AE-C334E6115746}
+name: Description
+key: description
+content-length: 46
+
+Det sitter i maggropen som en känsla av lycka.
+----field----
+field: {06BAE32C-663B-4DB5-A497-EB818B987B25}
+name: Background Image
+key: background image
+content-length: 58
+
+<image mediaid="{F292FBF3-DA8B-44D7-A89F-3A56E7DC4DEA}" />
+----field----
+field: {BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}
+name: Link
+key: link
+content-length: 163
+
+<link text="Hitta din förening" anchor="autocomplete" linktype="internal" class="" title="" target="" querystring="" id="{E25CB178-5CFA-4949-B9E3-EC717FCA34A1}" />
 ----field----
 field: {CA1ED9D7-5876-4E20-8D3D-14948A8B4EE4}
 name: Close To You Label
@@ -155,9 +225,9 @@ Vi finns på mer än 30 orter och har fler än 500 träningsställen.
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 0
+content-length: 278
 
-
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{0E9160BE-F4DC-4FA4-BD5C-4B9D805C4659}" p:before="*" s:ds="{C73E7031-4563-458D-A010-7A83162A8044}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /></d></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -185,14 +255,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-69d9267a-5ad5-42f8-b74c-579d5f5b63e3
+bb0cc148-da58-40f6-8a0a-3e1b563cdf2c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170517T115803Z
+20170607T122000Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

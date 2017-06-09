@@ -18,6 +18,9 @@ var _navigationContentClose = $('*[data-js-menu-close]');
 var _navigationContainer = $('*[data-js-menu-container]');
 var _more = $('*[data-js-menu-more]');
 var _moreContent =  $('*[data-js-menu-more-content]');
+var _navigationTop = $('.navigation--top');
+var _totalMenuHeight =  _navigationContainer.outerHeight() + _navigationTop.outerHeight();
+var _scroll = $('.hero').outerHeight() - _totalMenuHeight;
 
 // The navigation module is for expanding/navigating the navigation
 var navigationModule = {
@@ -46,11 +49,22 @@ var navigationModule = {
             $('.navigation__item').not($(_more).parent('.navigation__item')).toggleClass('hide');
         }.bind(this));
 
+        var lastScrollTop = 0;
         $(window).on('scroll', function() {
-            if($(_navigationContainer).length) {
-                $(_navigationContainer).addClass('scroll');
+            $(_navigationContainer).toggleClass('animation', $(document).scrollTop() > _scroll/2);
+            $(_navigationContainer).toggleClass('scroll',$(document).scrollTop() >= _scroll);
+
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop){
+                // hide nav when scrolling down
+                _navigationTop.addClass('hide');
+            } else {
+                // show nav when scrolling up
+                _navigationTop.removeClass('hide');
             }
-        }.bind(this));
+            lastScrollTop = st;
+
+        });
 
     }
 }

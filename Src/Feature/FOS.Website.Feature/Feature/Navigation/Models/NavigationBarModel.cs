@@ -19,6 +19,6 @@ namespace FOS.Website.Feature.Navigation.Models
         public IEnumerable<INavigationDataItem> MoreMenuItems { get; set; }
         public Item HomeItem { get; set; }
         public ID ActiveItemID { get; set; }
-        public IHyperlinkField BookingLink { get; set; }
+        public INavigationMenuLinksAssociationItem AssociationLinks { get; set; }
     }
 }

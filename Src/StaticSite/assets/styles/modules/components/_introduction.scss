@@ -1,5 +1,5 @@
 .introduction {
-    background-color: $color-black-10;
+    background-color: $color-black-05;
 
     &__container {
         @include container();
@@ -47,7 +47,7 @@
     &__member {
         background: url('/assets/images/bg_pattern.jpg') repeat;;
         background-size: cover;
-        color: $white;
+        color: $color-white;
         text-align: center;
 
         @include medium-up {
@@ -87,7 +87,7 @@
             margin: 0;
         }
         a {
-            color: $white;
+            color: $color-white;
             text-decoration: none;
         }
     }
@@ -118,7 +118,7 @@
                 width: 5em;
                 height: 5em;
                 margin: 0 auto $space auto;
-                background-color: $white;
+                background-color: $color-white;
                 border-radius: 50%;
             }
         }

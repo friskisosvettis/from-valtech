@@ -16,12 +16,12 @@
         vertical-align: top;
         text-align: center;
         background: rgba(245,248,250,0.50);
-        border-bottom: 1px solid $color-black-10;
+        border-bottom: 1px solid $color-black-05;
         cursor: pointer;
 
         &.active {
-            background-color: $white;
-            border: 1px solid $color-black-10;
+            background-color: $color-white;
+            border: 1px solid $color-black-05;
             border-bottom: none;
             box-shadow: -5px 0 5px -5px $color-dim-70, 5px 0 5px -5px $color-dim-70;
 

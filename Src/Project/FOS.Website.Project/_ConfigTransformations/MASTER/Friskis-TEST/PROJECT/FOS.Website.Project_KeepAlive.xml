@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="\App_Config\Include\Project\Friskis\KeepAlive.config">
+        <Item path="/configuration/sitecore/scheduling/agent[@type='Sitecore.Tasks.UrlAgent']/param[@desc='url']" action="InsertIfMissing">
+          <param desc="url">http://fos-cm.valtech.se/sitecore/service/keepalive.aspx</param>
+        </Item>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

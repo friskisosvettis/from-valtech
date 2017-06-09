@@ -13,7 +13,7 @@ namespace FOS.Website.Feature.Content
             {
                 public const string AssociationIntroductionModule = "/Feature/Content/Views/AssociationIntroductionModule.cshtml";
                 public const string AssociationTopBar = "/Feature/Content/Views/AssociationTopBar.cshtml";
-                public const string AdvancedHeading = "/Feature/Content/Views/AdvancedHeading.cshtml";
+                public const string AssociationNotMigrated = "/Feature/Content/Views/AssociationNotMigrated.cshtml";
                 public const string BasicHeading = "/Feature/Content/Views/BasicHeading.cshtml";
                 public const string BasicImage = "/Feature/Content/Views/BasicImage.cshtml";
                 public const string ExpandableSection = "/Feature/Content/Views/ExpandableSection.cshtml";
@@ -29,6 +29,11 @@ namespace FOS.Website.Feature.Content
                 public const string TestPage = "/Feature/Content/Views/TestPage.cshtml";
                 public const string WideImage = "/Feature/Content/Views/WideImage.cshtml";
                 public const string Video = "/Feature/Content/Views/Video.cshtml";
+
+                // Footers
+                public const string ContactFooter = "/Feature/Content/Views/ContactFooter.cshtml";
+                public const string MoodFooter = "/Feature/Content/Views/MoodFooter.cshtml";
+                public const string TrainingCenterContactFooter = "/Feature/Content/Views/TrainingCenterContactFooter.cshtml";
 
                 // Hero carousel views HeroArea
                 public const string HeroArea = "/Feature/Content/Views/HeroArea.cshtml";

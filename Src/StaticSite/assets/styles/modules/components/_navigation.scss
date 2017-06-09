@@ -1,13 +1,16 @@
 // TODO: Refactor this file
 
-$menu-height: 6em;
+$menu-height: rem($base-height*4);
+$menu-height-animation: rem($base-height*2);
+$logo-height-small: rem($base-height*3);
+$topbar-height: rem($base-height);
+$total-height: rem($base-height*5); // menu-height + topbar-height
 
 .navigation {
     display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: $menu-height;
 
     @include large-up {
         display: block;
@@ -17,27 +20,121 @@ $menu-height: 6em;
         width: 100%;
         position: fixed;
         z-index: 1000000;
-        height: $menu-height;
+        top: 0;
+        background: none;
+        @include transition(background ,0.5s);
 
         &.scroll {
             background: $color-dim-50;
+            @include transition(background ,0.5s);
+
+        }
+
+        &.animation {
+            &.navigation--bottom {
+                max-height: $menu-height-animation !important;
+                @include transition(max-height ,0.5s);
+            }
+            .navigation__logo {
+                width: $menu-height-animation;
+                max-height: $menu-height-animation !important;
+            }
+            &.open {
+                height: $menu-height !important;
+                max-height: $menu-height !important;
+                @include transition(max-height ,0s);
+            }
         }
 
         @include large-up {
             &.open {
-                background: $primary-color-dim-98 !important;
+                height: $menu-height !important;
+                max-height: $menu-height !important;
+                background: $primary-color-dim-95 !important;
+            }
+        }
+    }
+    &--top {
+        height: $topbar-height;
+        max-height: $topbar-height;
+        width: 100%;
+        position: fixed;
+        z-index: 1000000;
+        background-color: $color-black;
+        opacity: 1;
+        @include transition(all, 0.25s);
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+            display: inline-block;
+            padding-top: 8px;// TODO - vertical align in a better way   
+
+            @include xsmall-up {
+                padding: 8px $space; // TODO - vertical align in a better way            
+            }
+
+            &.navigation__link--border-left {
+                float: right;
+                margin-top: 8px; // TODO - vertical align in a better way
+                padding: 0 0 0 $space-double;
+
+                @include small-up {
+                    float: none;
+                }
+
+                @include medium-up {
+                    margin-left: $space;
+                    border-left: 1px dashed $color-white;
+                }
+            }
+        }
+        &.hide {
+            opacity: 0;
+            max-height: 0;
+            @include transition(all, 0.25s);
+        }
+        // Move navigation down if topbar exists (on association pages)
+        &:not(.hide) {
+            + .navigation--bottom {
+                top: $topbar-height;
+
+                .navigation--medium {
+                    top: $topbar-height;
+                }
+                .navigation__list {
+                    top: $topbar-height;
+                }
+                .navigation__btn--close {
+                    top: rem($space + $base-height); //space + topbar
+                }
             }
         }
     }
 
-    &__logo {
-        width: $menu-height;
+    &--bottom {
         height: $menu-height;
-        padding: $space;
+        max-height: $menu-height;
+        @include transition(max-height ,0.5s);
+    }
+
+    &__logo {
+        width: $logo-height-small;
+        height: $logo-height-small;
+        max-height: $logo-height-small;
+        padding: $space 0;
+        @include transition(max-height ,0.5s);
+
+        @include medium-up {
+            width: $menu-height;
+            height: $menu-height;
+            max-height: $menu-height;
+
+        }
     }
     &__btn {
-        color: $white;
-        font-weight: 700;
+        color: $color-white;
+        padding-top: 0;
         border: none;
         background: transparent;
 
@@ -45,6 +142,7 @@ $menu-height: 6em;
             outline: none;
             height: 100%;
             width: 100%;
+            font-weight: 700;
 
             &:hover {
                 text-decoration: underline;
@@ -53,36 +151,41 @@ $menu-height: 6em;
                 text-decoration: underline;
             }
         }
-
+        &--open {
+            position: absolute;
+            top: $space;
+            right: 0;
+        }
         &--close {
             display: none;
-            padding: 0 $space;;
             z-index: 10000;
             position: fixed; //TODO Look into other solution - fixed in fixed not good
-            top: $space-double;
-            right: $space;
-            color: $white;
+            top: $space;
+            right: 0;
+            color: $color-white;
         }
     }
 
     &__list {
         width: 100%;
         height: 100%;
-        background-color: $primary-color-dim-98;
+        background-color: $primary-color-dim-95;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 100;
-
-        padding-top: 5em;
+        overflow-y: scroll;
+        padding-top: $space-quad;
 
         @include large-up {
+            padding-top: 0;
             display: block !important;
             left: auto;
             width: auto;
             height: auto;
+            max-width: $xl-max-width;
+            overflow: hidden;
             background-color: transparent;
-            padding-top: 0;
             width: 100%;
         }
     }
@@ -90,14 +193,54 @@ $menu-height: 6em;
     &__item {
         text-align: center;
         width: 100%;
-        vertical-align: top;
 
-        @include large-up {
-            width: 8em;
-            height: $menu-height;
-            display: inline-block;
+        &:nth-last-child(3) {
+            margin-bottom: 150px; //in order to not be hidden below top nav buttons
+            @include medium-up {
+                margin-bottom: 0;
+            }
         }
 
+        // Top navigation
+        &--top {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient($primary-color-dim-80, $primary-color-dim-95);   
+
+            &:before {
+                position: absolute;
+                content: "";
+                background: linear-gradient($color-dim-00,$primary-color);
+                height: 50px;
+                top: -50px;
+                width: 100%;
+            }
+
+            a {
+                display: inline-block;
+                margin: $space-half;
+            }
+        }
+        @include large-up {
+            width: 7em;
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: 700;
+
+            &:first-of-type {
+                width: $menu-height;
+                a{
+                    padding: 0;
+                    text-align: left;
+                }
+            }
+            &:last-of-type {
+                width: 12em;
+            }
+        }
         &.hide {
             display: none;
 
@@ -107,32 +250,19 @@ $menu-height: 6em;
         }
         a {
             display: block;
-            color: $white;
+            color: $color-white;
             text-decoration: none;
             height: 100%;
             padding: $space;
 
             @include large-up {
                 font-weight: 700;
-                padding-top: 2.5em;
-                line-height: 1;
-            }
-        }
-        > a {
-            @include large-up {
+                padding: 0 $space;
 
-                &:hover {
-                    color: $color-text-link;
-                }
+                &:hover,
                 &:active {
-                    color: $color-text-link;
                     text-decoration: underline;
                 }
-            }
-        }
-        &:first-of-type {
-            > a {
-                padding-top: 0;
             }
         }
         button {
@@ -140,35 +270,31 @@ $menu-height: 6em;
             padding: $space;
             width: 100%;
         }
-         @include large-up {
-            &:last-of-type {
-                width: 12em;
-                padding-top: 2em;
 
-                > a {
-                    display: inline;
-                }
-            }
-        }
         ul {
             display: none;
             height: 100%;
             padding: 0;
             text-align: center;
             list-style-type: none;
+            overflow-y: scroll;
 
             @include large-up {
                 &.open {
                     position: fixed;
-                    background-color: $primary-color-dim-98;
+                    background-color: $primary-color-dim-95;
                     top: $menu-height;
                     width: 100%;
                     left: 0;
-                    z-index: 9;
+                    z-index: -1;
                 }
+                a {
+                    padding: $space-half 0;
+                }
+
             }
             a {
-                color: $white;
+                color: $color-white;
             }
         }
     }
@@ -179,37 +305,26 @@ $menu-height: 6em;
         z-index: 2;
         display: block;
         width: 100%;
+        height: $menu-height;
         top: 0;
         left: 0;
         @include container();
 
-        > li {
-            height: 100%;
-
-            a {
-                text-decoration: none;
-            }
-        }
-        li:first-of-type {
+        > li:first-of-type {
             position: absolute;
             top: 0;
             left: 0;
         }
-        li:last-of-type {
+        > li:last-of-type {
             width: 75%;
             text-align: right;
             float: right;
 
-            .navigation__btn {
-                padding-top: $space-double;
-                padding-right: $space-double;
-            }
             .btn--book {
-                margin: $space-double 0 0 0;
+                margin-right: 60px;
+                vertical-align: middle;
                 display: inline-block;
-                vertical-align: top;
             }
-
         }
     }
 }
@@ -225,8 +340,8 @@ $menu-height: 6em;
         width: rem(16px);
         height: rem(16px);
         margin-left: $space;
-        -webkit-transition: all 300ms 0s ease-in-out;
-        transition: all 300ms 0s ease-in-out;
+        @include transition(all ,0.3s);
+
     }
     &.open {
         font-weight: 700;

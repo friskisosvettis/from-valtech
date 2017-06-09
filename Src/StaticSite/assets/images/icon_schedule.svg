@@ -1,16 +1,20 @@
 
-<svg width="74px" height="80px" viewBox="36 34 74 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+<svg width="75px" height="82px" viewBox="0 0 75 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" opacity="0.8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(73.500000, 74.000000) rotate(3.000000) translate(-73.500000, -74.000000) translate(41.000000, 38.000000)" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Group-4" transform="translate(-0.000000, 0.358812)" stroke-width="3" stroke="#373D49">
-            <polygon id="Stroke-1" points="0.275423729 70.8865979 64.9085593 70.8865979 64.9085593 19.0510515 0.275423729 19.0510515"></polygon>
-            <polygon id="Stroke-3" points="0.275423729 19.0510515 64.9085593 19.0510515 64.9085593 0.0126185567 0.275423729 0.0126185567"></polygon>
+    <g id="Design-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="object_icon_schedule" transform="translate(-2.000000, -2.000000)" stroke="#999999" stroke-width="3">
+            <g id="Group-2" transform="translate(39.500000, 43.000000) rotate(3.000000) translate(-39.500000, -43.000000) translate(5.000000, 5.000000)">
+                <g id="Group-4" transform="translate(0.531423, 0.638281)">
+                    <polygon id="Stroke-1" points="0.288201833 74.5515872 67.9199497 74.5515872 67.9199497 20.0360318 0.288201833 20.0360318"></polygon>
+                    <polygon id="Stroke-3" points="0.288201833 20.0360318 67.9199497 20.0360318 67.9199497 0.0132709632 0.288201833 0.0132709632"></polygon>
+                </g>
+                <path d="M9.38669519,35.15 L56.2598414,35.15" id="Stroke-5"></path>
+                <path d="M8.93502526,43.7 L55.8081714,43.7" id="Stroke-6"></path>
+                <path d="M8.48337564,52.25 L55.3565218,52.25" id="Stroke-7"></path>
+                <path d="M8.03174229,60.8 L54.9048885,60.8" id="Stroke-8"></path>
+            </g>
         </g>
-        <path d="M10.1944788,33.1824247 L54.9893941,33.1824247" id="Stroke-5" stroke="#373D49" stroke-width="3"></path>
-        <path d="M10.1944788,41.4299876 L54.9893941,41.4299876" id="Stroke-6" stroke="#373D49" stroke-width="3"></path>
-        <path d="M10.1944788,49.6771794 L54.9893941,49.6771794" id="Stroke-7" stroke="#373D49" stroke-width="3"></path>
-        <path d="M10.1944788,57.9240742 L54.9893941,57.9240742" id="Stroke-8" stroke="#373D49" stroke-width="3"></path>
     </g>
 </svg>

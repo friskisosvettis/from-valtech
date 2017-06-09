@@ -1,0 +1,22 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model MoodFooterModel
+
+@if (Model.MoodFooterItem == null)
+{
+    return;
+}
+
+<div class="footer--mood">
+    
+    @Model.MoodFooterItem.BackgroundImage.Render() @*alt="Träna på Friskis"*@
+    <div class="footer__overlay">
+        <div class="footer__content">
+            <h2>@Model.MoodFooterItem.Title.Render()</h2>
+            <p class="intro">@Model.MoodFooterItem.Description.Render()</p>
+            @Model.MoodFooterItem.Link.Render(null, "btn btn__link btn--secondary")
+        </div>
+    </div>
+</div>

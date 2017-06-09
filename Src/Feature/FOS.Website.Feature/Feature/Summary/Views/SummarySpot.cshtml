@@ -9,57 +9,42 @@
 
 @model SummarySpotModel
 
-<div> SummarySpot </div>
+@* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE *@
 
+<div class="container">
+    <div class="container--12">
 
-<div class="spot-basic">
-    <div class="spot-wrapper">
-
-        @*@Html.Raw(Model.InvalidModelText)*@
-
-        <div class="spot-header">
-            @if (Model.SummaryItem.SummaryHeading.HasValue)
+        <div class="teaser teaser--full">
+            @if (Model.SummaryItem.SummaryImage.HasValue)
             {
 
-                <a href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions(){LanguageEmbedding = LanguageEmbedding.Never})">
-                    <h2 class="spot-header-title">
-                        @Model.SummaryItem.SummaryHeading.Render(false)
-                    </h2>
-                </a>
-            }
-        </div>
-        @if (Model.SummaryItem.SummaryImage.HasValue)
-        {
-            <a href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem)">
-
-                @{
-                    
-                    if(Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null && Model.SummaryItem.SummaryHeading.HasValue)
-                    {
-                        <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)?w=400&h=250&useCustomFunctions=1&centerCrop=1" alt="@Model.SummaryItem.SummaryHeading.Render())" class="spot-basic_image">
-                    }
-                    else if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null)
-                    {
-                        <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)?w=400&h=250&useCustomFunctions=1&centerCrop=1" class="spot-basic_image">
-                    }
-                }
-
-                <div class="spot-basic_image-overlay"></div>
-            </a>
-        }
-
-        @if (Model.SummaryItem.SummaryText.HasValue)
-        {
-            <div class="spot-basic_content-wrapper">
-                <p class="spot-basic_content">
-                    @Model.SummaryItem.SummaryText.Render() 
-                </p>
-                @*@if (!string.IsNullOrWhiteSpace(Model.SummaryLink.Text))
+                if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null && Model.SummaryItem.SummaryHeading.HasValue)
                 {
-                    <a href="@Model.SummaryLink.Linkurl" class="spot-basic_readmore">@Model.SummaryLink.Text</a>
-                }*@
+                    <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)" alt="@Model.SummaryItem.SummaryHeading.Render(false)">
+                }
+                else if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null)
+                {
+                    <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)">
+                }
+            }
+            <div class="teaser__content">
+                @if (Model.SummaryItem.SummaryHeading.HasValue)
+                {
+                    <h3 class="heading-5">
+                        @Model.SummaryItem.SummaryHeading.Render()
+                    </h3>
+                }
+                @if (Model.SummaryItem.SummaryText.HasValue)
+                {
+                    <p>
+                        @Model.SummaryItem.SummaryText.Render()
+                    </p>
+                    // TODO: Remove hard coded "Läs mer" text and make it translatable
+                    <a class="link--goto" href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                        Läs mer
+                    </a>
+                }
             </div>
-        }
-
+        </div>
     </div>
 </div>

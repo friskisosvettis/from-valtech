@@ -13,15 +13,15 @@ created: 20170323T151022Z
 ----version----
 language: sv-SE
 version: 1
-revision: e512c6b4-c9e2-4bd6-a399-c7270bf838f5
+revision: 86bea5a1-62f0-4993-b65b-c23dd70c95a6
 
 ----field----
-field: {3C952386-D9DC-444F-8C73-77CD265192BD}
-name: Association Name
-key: association name
-content-length: 7
+field: {DB2BC8F5-6AE2-4A7B-A74A-332C1F992953}
+name: Association Ready
+key: association ready
+content-length: 1
 
-Fredrik
+1
 ----field----
 field: {C7EF0DA8-E48E-4CEC-94E9-D1EF4F03983A}
 name: IntroTitle
@@ -51,6 +51,111 @@ content-length: 15
 
 Hetaste i Solna
 ----field----
+field: {05933144-6A41-4125-824E-DC2832E9981E}
+name: Instagram Link
+key: instagram link
+content-length: 94
+
+<link text="Insta" linktype="external" url="https://www.instagram.com/" anchor="" target="" />
+----field----
+field: {5AE87D4E-7F3A-45B0-8512-EF283254FF0B}
+name: Contact Phonenumber
+key: contact phonenumber
+content-length: 10
+
+555 - Surf
+----field----
+field: {B35D8A46-177B-4A46-BC95-CBADC68ED46C}
+name: Contact Link
+key: contact link
+content-length: 150
+
+<link text="Texten för länken" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
+field: {D79E1157-28CB-46C6-92E4-67043C9D4B11}
+name: Title
+key: title
+content-length: 56
+
+Friskis&Svettis är en idrottsförening för folk i rörelse
+----field----
+field: {17AAEC3D-7316-44F1-A6AE-C334E6115746}
+name: Description
+key: description
+content-length: 64
+
+Som ni ser på kartan så hänger vi i de hetare delarna av Waikiki
+----field----
+field: {06BAE32C-663B-4DB5-A497-EB818B987B25}
+name: Background Image
+key: background image
+content-length: 58
+
+<image mediaid="{429E8994-C283-4EAF-8849-50636AFD2D43}" />
+----field----
+field: {BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}
+name: Link
+key: link
+content-length: 148
+
+<link text="Bli medlem idag" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
+field: {4947E29E-797A-47B7-9F5D-7EF88933FD92}
+name: Become A Member Title
+key: become a member title
+content-length: 10
+
+Bli medlem
+----field----
+field: {EBC14A33-8C87-4597-B1ED-31478BB0E15B}
+name: Become A Member Text
+key: become a member text
+content-length: 118
+
+Oavsett om du vill bli starkare, rörligare, springa ett långlopp eller helt enkelt må bra så har vi träningen för dig.
+----field----
+field: {4A724144-806F-4095-AC95-5E505116C321}
+name: Become A Member Link
+key: become a member link
+content-length: 133
+
+<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
+field: {EFDEB810-5031-431B-A39D-2F2FE95CBAA7}
+name: Become A Funkis Title
+key: become a funkis title
+content-length: 10
+
+Bli funkis
+----field----
+field: {DEA239CC-6ED9-40F3-90E9-481CC24F0181}
+name: Become A Funkis Text
+key: become a funkis text
+content-length: 112
+
+Vill du dela med dig av den känslan och inspirera flera att börja röra på sig? Då kanske du vill bli funktionär!
+----field----
+field: {12A33354-69A6-4BDF-9AB4-ADC7BA2ED69D}
+name: Become A Funkis Link
+key: become a funkis link
+content-length: 133
+
+<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{1DA3CA41-D099-4641-BC3A-477DFE8000F8}" />
+----field----
+field: {A26B0801-FAED-4426-8F97-4D06670FFBEF}
+name: BookingLink
+key: bookinglink
+content-length: 137
+
+<link text="Boka" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{D9968685-F1ED-4369-8487-F4C6E5BB9BF4}" />
+----field----
+field: {D39C7329-B2AB-4121-87C3-822619AEB2B0}
+name: Region
+key: region
+content-length: 7
+
+Waikiki
+----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
@@ -70,14 +175,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e512c6b4-c9e2-4bd6-a399-c7270bf838f5
+86bea5a1-62f0-4993-b65b-c23dd70c95a6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170410T104917Z
+20170607T152349Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

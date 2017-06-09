@@ -5,28 +5,6 @@
 */
 
 // ---------------------------------------------------------------------------
-// Colors
-
-$white: #fff;
-$black: #000;
-
-$primary-color-1: #ffca5c; // Yellow
-$primary-color-2: #4b2a18; // Brown
-$primary-color-3: #2e3b26; // Green
-
-$secondary-color-1: #42474f; // Dark Blue/almost black for icons
-$secondary-color-2: #c2c2c2; // Gray for 1px line
-$secondary-color-3: #ebebeb; // Light Gray for statusbar
-$secondary-color-4: #f9f9f9; // Lightest Gray for decks
-
-$tertiary-color-1: #a8c39a; // Green (light olive green)
-$tertiary-color-2: #59879f; // Blue (petroleum blue)
-
-$font-color-1: #42474f; // Typography dark
-$font-color-2: #777879; // Typography light
-
-
-// ---------------------------------------------------------------------------
 // Base variables
 
 $base-font-size: 16px;
@@ -40,58 +18,35 @@ $base-font-size: 16px;
 	@return #{$remSize}rem;
 }
 
-
-// ---------------------------------------------------------------------------
-// Icons
-
-
-// Media queries
-
-$mq-tablet-portrait: 500px;
-$mq-tablet-horizontal: 768px;
-$mq-desktop: 1024px;
-$mq-desktop-large: 1280px;
-$mq-desktop-xlarge: 1600px;
-
-
-// ---------------------------------------------------------------------------
-// Font stack
-
-$font-serif: 'Georgia', serif;
-$font-sans-serif: 'Ministry', sans-serif;
-$font-sans-serif-light: 'Ministry-Light', sans-serif;
-
-
-/*---------------------------------------------------------------------------*/
-/*--------------------------- New section Friskis ---------------------------*/
-/*---------------------------------------------------------------------------*/
-
-
 /*
  * Brand Colors
  */
 $primary-color: #E31836;        // Friskis Red
-$primary-color-light: #FCE7E9;  // Light red
-$secondary-color: #48A1DA;      // Blue
-$cta-color: #0EC55A;            // Green
+$primary-color-light: #FEF0F2;  // Light red
+$secondary-color: #E7F5ED;      // Light green
+$cta-color: #F8F7EA;            // Yellow
+$primary-color-dark: #BE0621 ;   // Dark red
 
-$primary-color-98: rgba(227, 25, 55, 1); //TODO: Primary color remove this variable and replace with primary
 $primary-color-dim-80: rgba(227, 25, 55, 0.8);
 $primary-color-dim-90: rgba(227, 25, 55, 0.9);
-$primary-color-dim-98: rgba(227, 25, 55, 0.98);
+$primary-color-dim-95: rgba(227, 25, 55, 0.95);
 
 $overlay-color-dim-60: rgba(41, 48, 66, 0.6); // TODO - change to another color? 
+$overlay-color-dim-25: rgba(41, 48, 66, 0.25);
+
 /*
  * Neutral Colors
  * 1) Neutral color variables use a numbered system to define variables for better maintainability.
  *    "$color-gray-10" means "10% gray", which is a gray closer to white than to black. For more info
  *    read https://medium.com/eightshapes-llc/color-in-design-systems-a1c80f65fa3#.brevrq67p
  */
+
 $color-white: #fff;
-$color-black-10: #F5F5F5;
-$color-black-30: #CCCCCC;
-$color-black-60: #999999;
-$color-black-90: #383232;
+$color-black-05: #F5F5F5;
+$color-black-20: #CCCCCC;
+$color-black-40: #999999;
+$color-black-80: #333333;
+$color-black-90: #262626;
 $color-black: #000;
 
 $color-dim-00: rgba(0,0,0,0);
@@ -105,7 +60,6 @@ $color-dim-70: rgba(0,0,0,0.7);
  * 1) These are non-linked text colors, such as body copy.
  */
 $color-text: $color-black-90;
-/*$color-text-subtle: $color-gray-50;*/
 
 /*
  * Heading Colors
@@ -120,7 +74,7 @@ $color-heading: $color-black-90;
  *    navigation link, footer link, etc.
  */
 
- $color-text-link: $primary-color-98;
+ $color-text-link: $primary-color;
 
 /*
  * Border Colors
@@ -215,7 +169,7 @@ $border-radius: 6px;
 $icon-size: rem(44px);
 $icon-size-medium: rem(28px);
 $icon-size-small: rem(20px);
-
+$icon-size-mini: rem(16px);
 
 /*------------------------------------*\
     #BASE HEIGT

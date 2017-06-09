@@ -8,7 +8,7 @@
 
 @mixin button-settings($color, $color-text) {
     background-color: $color;
-    color: $color-white;
+    color: $color-text !important;
     text-decoration: none;
     border: none;
     border-radius: rem(44px);
@@ -34,12 +34,12 @@
 
     &:disabled {
         cursor: default;
-        background-color: $color-black-30;
+        background-color: $color-black-20;
     }
 }
 
 .btn {
-    @include button-settings($primary-color-98, $color-white);
+    @include button-settings($primary-color, $color-white);
 
     &__link {
         // This is a class added to an a tag in order for make it behave as a btn
@@ -69,6 +69,7 @@
             background-image: url('/assets/images/icon_book.svg');
             background-size: rem(30px) rem(30px);
             background-position: left $space top 50%;
+            text-align: left;
         }
 
         &.btn--external-link {
@@ -76,5 +77,11 @@
             background-size: rem(15px) rem(15px);
             background-position: right $space-double bottom 50%;
         }
+    }
+    &--secondary {
+        @include button-settings($primary-color-light, $color-text);
+    }
+    &--on-red {
+        @include button-settings($primary-color-dark, $color-white);
     }
 }

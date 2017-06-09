@@ -1,0 +1,57 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using FOS.Website.Feature.Navigation.Data
+@using Sitecore.Mvc.Presentation
+@using FOS.Website.Feature.Navigation.Models
+@using Sitecore.Data.Items
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model NavigationFooterAssociation
+@if (Model == null)
+{
+    return;
+}
+@helper AddLinkLine(Item linkItem)
+{
+    <li><a href="@LinkManager.GetItemUrl(linkItem)">@linkItem.DisplayName</a></li>
+}
+<div class="footer__navigation">
+    <div class="container">
+        <div class="container--3">
+            <ul class="footer__navigation--primary">
+                @foreach (var navigationDataItem in Model.PrimaryMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem.InnerItem)
+                }
+            </ul>
+        </div>
+        <div class="container--3">
+            <ul class="footer__navigation--secondary">
+                @foreach (var navigationDataItem in Model.MoreMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem.InnerItem)
+                }
+            </ul>
+        </div>
+        <div class="container--6 center-small-down">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor || !Model.AssociationFooterLinks.BecomeAMemberLink.Href.IsEmpty())
+            {
+                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAMemberLink, "icon__background icon__background--large icon__card"))
+                 {
+                     <h2 class="heading-6">@Model.AssociationFooterLinks.BecomeAMemberTitle.Render()</h2>
+                     <p>@Model.AssociationFooterLinks.BecomeAMemberText.Render()</p>
+                 }
+            }
+            @if (Sitecore.Context.PageMode.IsExperienceEditor || !Model.AssociationFooterLinks.BecomeAFunkisLink.Href.IsEmpty())
+            {
+                using (Html.BeginHyperlinkFor(m => m.AssociationFooterLinks.BecomeAFunkisLink, "icon__background icon__background--large icon__funkis"))
+                {
+                    <h2 class="heading-6">@Model.AssociationFooterLinks.BecomeAFunkisTitle.Render()</h2>
+                    <p>@Model.AssociationFooterLinks.BecomeAFunkisText.Render()</p>
+                }
+
+            }
+        </div>
+    </div>
+</div>

@@ -4,6 +4,11 @@
 @using Sitecore.Mvc.Presentation
 @model HeroAreaModel
 
+@if (Model.NrOfHeroObjects < 1 && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
 @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.NrOfHeroObjects == 1)
 {
     @Html.Sitecore().Placeholder(@Model.PlaceholderName)

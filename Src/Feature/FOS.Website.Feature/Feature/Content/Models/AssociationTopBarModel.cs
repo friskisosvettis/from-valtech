@@ -12,12 +12,7 @@ namespace FOS.Website.Feature.Content.Models
 {
     public class AssociationTopBarModel
     {
-        public IAssociationTopBarItem AssociationTopBarItem = null;
-
-
-        public AssociationTopBarModel(Item item)
-        {
-            AssociationTopBarItem = item.ClosestAscendantItemOfType<IAssociationTopBarItem>();
-        }
+        public IAssociationTopBarDataItem TopBarData { get; set; }
+        public Item AssociationItem { get; set; }
     }
 }

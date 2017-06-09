@@ -1,8 +1,12 @@
 
-<svg width="60px" height="77px" viewBox="-1 -1 60 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+<svg width="56px" height="81px" viewBox="0 0 56 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <path d="M51.6218044,13.77 C59.6090489,26.7553448 56.4267822,74.1941379 56.4267822,74.1941379 C56.4267822,74.1941379 12.7386044,55.7712931 4.75136,42.7872414 C-3.23588444,29.8006034 0.782871111,12.7781897 13.7246044,4.76612069 C26.6676267,-3.24594828 43.63456,0.784655172 51.6218044,13.77 Z" id="Stroke-1" stroke="#373D49" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-    <path d="M38.9940444,21.586681 C42.6776889,27.5750431 40.8242667,35.4267672 34.8554222,39.1211638 C28.8865778,42.8168534 21.0617333,40.9573707 17.3780889,34.9690086 C13.6957333,28.9806466 15.5491556,21.1302155 21.5167111,17.435819 C27.4855556,13.7401293 35.3116889,15.5996121 38.9940444,21.586681 Z" id="Stroke-3" stroke="#373D49" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+    <g id="Design-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="object_icon_location" transform="translate(-2.000000, -2.000000)" stroke="#999999" stroke-width="3">
+            <path d="M47.5286176,15.6860566 C55.0710664,27.9482705 52.0660146,72.7452807 52.0660146,72.7452807 C52.0660146,72.7452807 10.8107545,55.3483717 3.26830566,43.0873789 C-4.2741432,30.823944 -0.479185065,14.7494785 11.7418459,7.18358752 C23.964094,-0.382303428 39.9861687,3.42384281 47.5286176,15.6860566 Z" id="Stroke-1" transform="translate(26.023652, 38.019392) rotate(32.000000) translate(-26.023652, -38.019392) "></path>
+            <path d="M40.168881,23.0744428 C43.4663696,28.4350458 41.8072413,35.4636749 36.4641099,38.7707885 C31.1209785,42.0790596 24.1164113,40.4145061 20.8189227,35.0539031 C17.5225879,29.6933001 19.1817161,22.6658285 24.5236938,19.358715 C29.8668252,16.0504439 36.8725462,17.7149974 40.168881,23.0744428 Z" id="Stroke-3" transform="translate(30.494295, 29.064727) rotate(32.000000) translate(-30.494295, -29.064727) "></path>
+        </g>
+    </g>
 </svg>

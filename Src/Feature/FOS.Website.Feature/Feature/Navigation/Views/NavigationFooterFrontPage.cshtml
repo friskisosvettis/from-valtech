@@ -1,0 +1,31 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using FOS.Website.Feature.Navigation.Data
+@using Sitecore.Mvc.Presentation
+@using FOS.Website.Feature.Navigation.Models
+@using Sitecore.Data.Items
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model NavigationFooterFrontPage
+
+@if (Model == null)
+{
+    return;
+}
+@helper AddLinkLine(Item linkItem)
+{
+    <li><a href="@LinkManager.GetItemUrl(linkItem)">@linkItem.DisplayName</a></li>
+}
+<div class="footer__navigation">
+    <div class="container">
+        <div class="container--12">
+            <ul class="footer__navigation--slim">
+                @foreach (var navigationDataItem in Model.PrimaryMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem.InnerItem)
+                }
+            </ul>
+        </div>
+    </div>
+</div>

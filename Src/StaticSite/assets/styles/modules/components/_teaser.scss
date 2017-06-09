@@ -5,18 +5,27 @@
 * @author Veronika Jeppsson
 */
 
-$teaser-height: rem(3 * $base-height);
-$teaser-height-small: rem(5 * $base-height);
-$teaser-height-medium: rem(6 * $base-height);
-$teaser-height-large: rem(9 * $base-height);
-$teaser-height-xlarge: rem(12.5 * $base-height);
+// TODO: Refactor this module //
+
+$teaser-height: rem(3 * $base-height);              //120px
+$teaser-height-small: rem(5 * $base-height);        //240px
+$teaser-height-medium: rem(6 * $base-height);       //240px
+$teaser-height-large: rem(9 * $base-height);        //360px
+$teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 
 .teaser {
+    margin-bottom: $space;
     overflow: hidden;
     text-align: center;
     padding: $space-half 0;
     @include transform-scale(1.00);
     @include transition(opacity ,0.35s);
+
+    &__header {
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: $space;
+    }
 
     &:hover {
         @include transform-scale(1.05);
@@ -31,49 +40,54 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
         text-decoration: none;
     }
 
-    h2 {
+    h3 {
         color: $color-text;
     }
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
         // This is in order to make object-fit cover work in IE
-        font-family: "object-fit: cover; object-position: top";
+        font-family: "object-fit: cover; object-position: center";
     }
 
-    /*--------------SMALL VERSION TEASER --------------*/
+    /*--------------SMALL VERSION TEASER ARTICLE/NEWS/EVENTS--------------*/
     &--small {
-        img {
-            @include span(3);
-            height: rem($base-height*2);
+        padding: 0;
+        @include box-shadow(0, 1px, 2px, 0, $color-black-20);
+        height: $teaser-height-large;
 
-            @include small-up {
-                @include span(12);
-                height: $teaser-height-small;
-            }
-
-            @include medium-up {
-                height: $teaser-height-medium;
-            }
+        @include small-up {
+            margin: $space;
+        }
+        .date {
+            color: $color-text;
         }
         .teaser__content {
-            @include span(9);
-            text-align: left;
-            padding-left: $space;
-
-            @include small-up {
-                @include span(12);
-                text-align: center;
-                padding-left: 0;
-            }
+            @include span(12);
+            text-align: center;
+        }
+        img {
+            @include span(12);
+            height: 80%;
+        }
+        h3 {
+            margin: $space 0 0 0;
         }
     }
 
     /*----------------- Full width teaser -----------------*/
 
     &--full {
+        transform: none;
+
+        &:hover {
+            transform: none;
+        }
+        h3 {
+            margin-bottom: $space;
+        }
         @include medium-up {
             max-height: $teaser-height-large;
         }
@@ -114,23 +128,34 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
         text-align: left;
         padding: 0;
 
-        &:hover{
+        &:hover {
             transform: scale(1.00);
         }
-        li:hover {
-            h3 {
-                text-decoration: underline;
+
+        li {
+            padding-left: $space-quad;
+            margin-bottom: $space;
+            min-height: $base-height;
+
+            &:hover {
+                h3 {
+                    text-decoration: underline;
+                }
             }
         }
+
         h3 {
             margin: 0;
         }
 
         .date {
-            color: $color-black-60;
+            color: $color-black-40;
             margin-bottom: 0;
         }
         .teaser__content {
+            max-width: $text-max-width;
+            vertical-align: top;
+            display: inline-block;
             color: $color-black;
         }
     }
@@ -139,14 +164,24 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
     &--overlay {
         position: relative; // Should ot be possible to have an overlay without a link?
         overflow: hidden;
-        height: $teaser-height-small;
+        height: $teaser-height-medium;
 
-        @include xsmall-up {
-            height: $teaser-height-medium;
+        @include small-up {
+            > .teaser__overlay > .teaser__content {
+                padding: 0 $space-quad;
+            }
+        }
+        
+        @include medium-up {
+            height: $teaser-height-large;
         }
 
-        @include medium-up {
+        img {
             height: $teaser-height-medium;
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
         }
 
         h2 {
@@ -166,6 +201,11 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
         background:  $primary-color-dim-80;
         @include transition(background ,0.35s);
 
+        &:hover {
+            background: $overlay-color-dim-25;
+            @include transition(background ,0.5s);
+        }
+
         > .teaser__content {
             display: table-cell;
             vertical-align: middle;
@@ -177,38 +217,47 @@ $teaser-height-xlarge: rem(12.5 * $base-height);
             }
         }
     }
-    &--enhanced {
-        height: $teaser-height-medium;
-
-        @include small-up {
-            > .teaser__overlay > .teaser__content {
-                padding: 0 $space-quad;
-            }
-        }
-
-        @include medium-up {
-            height: $teaser-height-large;
-        }
-
-        img {
-            height: $teaser-height-medium;
-
-            @include medium-up {
-                height: $teaser-height-large;
-            }
-        }
-    }
 }
 
 
 /* CONTAINER SPECIFIC CHANGES FOR TEASER */
 
-@include small-up {
-    .container--8, .container--12 {
-        .teaser--overlay {
-            height: $teaser-height-xlarge;
-            img {
-                height: $teaser-height-xlarge;
+// TEASER SMALL IN 3 columns
+.container--4 {
+    .teaser--small {
+        height: rem($base-height*2);
+
+        @include small-up {
+            height: $teaser-height-medium;
+        }
+        @include medium-up {
+            height: $teaser-height-large;
+        }
+
+        img {
+            @include span(3);
+            height: rem($base-height*2);
+
+            @include small-up {
+                @include span(12);
+                height: 65%;
+            }
+            @include medium-up {
+                height: 75%;
+            }
+        }
+        .teaser__content {
+            @include span(9);
+            text-align: left;
+            padding-left: $space;
+
+            @include small-up {
+                @include span(12);
+                text-align: center;
+                padding-left: 0;
+            }
+             @include medium-up {
+                padding: 0 $space;
             }
         }
     }

@@ -91,7 +91,7 @@ namespace FOS.Website.Feature.Summary {
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SummaryList template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "yDOEGGaIMPCjDqqVnsZE+xoVMbo=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "5+quzRJjwk3EYDL+6BMXZfIPboc=", "Valtech.Foundation.Synthesis")]
     public partial interface ISummaryListItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the UseManualList field</summary>
@@ -160,9 +160,21 @@ namespace FOS.Website.Feature.Summary {
             get;
         }
         
+        /// <summary>Represents the ItemsPerRow field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("itemsperrow")]
+        Synthesis.FieldTypes.Interfaces.ITextField ItemsPerRow {
+            get;
+        }
+        
         /// <summary>Represents the Taxonomy field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
         Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy {
+            get;
+        }
+        
+        /// <summary>Represents the DisplayAsSimpleList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayassimplelist")]
+        Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsSimpleList {
             get;
         }
     }
@@ -577,7 +589,11 @@ namespace FOS.Website.Concrete.Feature.Summary {
         
         private Synthesis.FieldTypes.ItemReferenceListField _selectedMonths;
         
+        private Synthesis.FieldTypes.TextField _itemsPerRow;
+        
         private Synthesis.FieldTypes.ItemReferenceListField _taxonomy;
+        
+        private Synthesis.FieldTypes.BooleanField _displayAsSimpleList;
         
         public SummaryList(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -729,6 +745,17 @@ namespace FOS.Website.Concrete.Feature.Summary {
             }
         }
         
+        /// <summary>Represents the ItemsPerRow field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("itemsperrow")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ItemsPerRow {
+            get {
+                if (_itemsPerRow == null) {
+                    _itemsPerRow = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5323BF68-E862-4192-B27F-05E3F94F7B68}"], "/sitecore/templates/Feature/Summary/SummaryList", "ItemsPerRow"), this.GetSearchFieldValue("itemsperrow"));
+                }
+                return _itemsPerRow;
+            }
+        }
+        
         /// <summary>Represents the Taxonomy field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
         public Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy {
@@ -737,6 +764,17 @@ namespace FOS.Website.Concrete.Feature.Summary {
                     _taxonomy = new Synthesis.FieldTypes.ItemReferenceListField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3CDA5452-4D1E-48F6-B322-2D3C4732CE7B}"], "/sitecore/templates/Feature/Summary/SummaryList", "Taxonomy"), this.GetSearchFieldValue("taxonomy"));
                 }
                 return _taxonomy;
+            }
+        }
+        
+        /// <summary>Represents the DisplayAsSimpleList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayassimplelist")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsSimpleList {
+            get {
+                if (_displayAsSimpleList == null) {
+                    _displayAsSimpleList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{096C7E9C-6390-4DF6-8CB6-463C944B5695}"], "/sitecore/templates/Feature/Summary/SummaryList", "DisplayAsSimpleList"), this.GetSearchFieldValue("displayassimplelist"));
+                }
+                return _displayAsSimpleList;
             }
         }
     }

@@ -61,6 +61,12 @@ main {
         border: 0;
     }
 }
+.hidden-small-up {
+    @include small-up {
+        display: none !important;
+    }
+}
+
 .hidden-medium-up {
     @include medium-up {
         display: none !important;
@@ -79,6 +85,14 @@ main {
 }
 
 // ----------- COLORS ----------- //
-.color--primary-98 {
-    color: $primary-color-98;
+.color--primary {
+    color: $primary-color;
+}
+
+// ----------- TEXT ALIGN ----------- //
+.text-align--center {
+    text-align: center;
+}
+.text-align--right {
+    text-align: right;
 }

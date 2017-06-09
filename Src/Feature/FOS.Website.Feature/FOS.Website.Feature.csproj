@@ -1015,13 +1015,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="default.css" />
     <Content Include="Feature\Content\Views\ImageCollage.cshtml" />
     <Content Include="Feature\Content\Views\Quote.cshtml" />
     <Content Include="Feature\Content\Views\Headline.cshtml" />
     <Content Include="Feature\Content\Views\Collage.cshtml" />
     <Content Include="Feature\Content\Views\Teaser.cshtml" />
     <Content Include="Feature\Content\Views\Media.cshtml" />
-    <Content Include="Feature\Content\Views\AdvancedHeading.cshtml" />
     <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
     <Content Include="Feature\Content\Views\BasicImage.cshtml" />
@@ -1037,6 +1037,13 @@
     </Content>
     <Content Include="Feature\Content\Views\ProximityView.cshtml" />
     <Content Include="App_Config\Include\aaaSearchIndexConfigs\aaaSitecore.ContentSearch.DisableAllLuceneIndexes.config" />
+    <Content Include="App_Config\Include\AutoCompleteRouting\RegisterCustomRoutes.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\AutoCompleteRouting\z_AllowSpecialControllers.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sitecore\shell\Controls\Rich Text Editor\ToolsFile.xml" />
     <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config">
       <SubType>Designer</SubType>
     </None>
@@ -1052,6 +1059,12 @@
     <Content Include="Feature\News\Views\Web.config" />
     <Content Include="Feature\Taxonomy\Views\Web.config" />
     <Content Include="Feature\Summary\Views\SummarySpot.cshtml" />
+    <Content Include="Feature\Content\Views\ContactFooter.cshtml" />
+    <Content Include="Feature\Navigation\Views\NavigationFooterFrontPage.cshtml" />
+    <Content Include="Feature\Navigation\Views\NavigationFooterAssociation.cshtml" />
+    <Content Include="Feature\Content\Views\MoodFooter.cshtml" />
+    <Content Include="Feature\Content\Views\TrainingCenterContactFooter.cshtml" />
+    <Content Include="Feature\Content\Views\AssociationNotMigrated.cshtml" />
     <Content Include="Feature\ComponentBlock\Views\ComponentBlock.cshtml" />
     <Content Include="Feature\ComponentBlock\Views\Web.config" />
     <None Include="packages.config">
@@ -1061,11 +1074,21 @@
     <Content Include="Feature\Content\Views\TestPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Feature\AutoComplete\AutoComplete.cs" />
+    <Compile Include="Feature\AutoComplete\AutoCompleteModel\AssociationModel.cs" />
+    <Compile Include="Feature\AutoComplete\AutoCompleteModel\AssociationTrainingCenterModel.cs" />
+    <Compile Include="Feature\AutoComplete\AutoCompleteModel\AutoCompleteSearchModel.cs" />
+    <Compile Include="Feature\AutoComplete\AutoCompleteModel\RegionAssociationModel.cs" />
+    <Compile Include="Feature\AutoComplete\AutoCompleteModel\RegionModel.cs" />
+    <Compile Include="Feature\AutoComplete\AutoCompleteModel\TrainingCenterModel.cs" />
+    <Compile Include="Feature\AutoComplete\Routing\RegisterAutoCompleteRoutes.cs" />
     <Compile Include="Feature\ComponentBlock\Constants.cs" />
     <Compile Include="Feature\ComponentBlock\Controllers\ComponentBlockController.cs" />
     <Compile Include="Feature\ComponentBlock\Data\ComponentBlockSynthesisModels.cs" />
     <Compile Include="Feature\ComponentBlock\Models\ComponentBlockModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />
+    <Compile Include="Feature\Content\Controllers\AutoCompleteDataController.cs" />
+    <Compile Include="Feature\Content\Controllers\FooterController.cs" />
     <Compile Include="Feature\Content\Controllers\LocationIP.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteModuleController.cs" />
     <Compile Include="Feature\Content\Controllers\ProximityController.cs" />
@@ -1075,6 +1098,9 @@
     <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
+    <Compile Include="Feature\Content\Models\AssociationNotMigratedModel.cs" />
+    <Compile Include="Feature\Content\Models\MoodFooterModel.cs" />
+    <Compile Include="Feature\Content\Models\ContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\HeadingTrainingCenterModel.cs" />
     <Compile Include="Feature\Content\Models\AutoCompleteModuleModel.cs" />
     <Compile Include="Feature\Content\Models\ProximityModel.cs" />
@@ -1082,8 +1108,8 @@
     <Compile Include="Feature\Content\Models\TrainingCenterCollectionMapModel.cs" />
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
-    <Compile Include="Feature\Content\Models\AdvancedHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
+    <Compile Include="Feature\Content\Models\TrainingCenterContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
@@ -1099,9 +1125,13 @@
     <Compile Include="Feature\Identity\Constants.cs" />
     <Compile Include="Feature\Identity\Controllers\FooterController.cs" />
     <Compile Include="Feature\Navigation\Constants.cs" />
+    <Compile Include="Feature\Navigation\Controllers\NavigationFooterController.cs" />
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationFooterAssociation.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
+    <Compile Include="Feature\Navigation\Models\NavigationFooterFrontPage.cs" />
+    <Compile Include="Feature\Navigation\NavigationDataCollector.cs" />
     <Compile Include="Feature\Taxonomy\Constants.cs" />
     <Compile Include="Feature\Taxonomy\Controllers\Taxonomy.cs" />
     <Compile Include="Feature\Taxonomy\Controllers\TaxonomyController.cs" />
@@ -1116,6 +1146,10 @@
     <Compile Include="Feature\Summary\Data\SummarySynthesisModels.cs" />
     <Compile Include="Feature\Summary\Models\SummaryListModel.cs" />
     <Compile Include="Feature\Summary\Models\SummarySpotModel.cs" />
+    <Compile Include="Feature\SearchUtilityFunctions\AssociationSearch.cs" />
+    <Compile Include="Feature\SearchUtilityFunctions\PredicateCollection.cs" />
+    <Compile Include="Feature\SearchUtilityFunctions\RegionSearch.cs" />
+    <Compile Include="Feature\SearchUtilityFunctions\TrainingCenterSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -57,13 +57,20 @@
     /* - - - - - ICONS AS BEFORE/AFTER ELEMENTS- - - - - */
     /* - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-    &--small, &--medium, &--large {
+    &--mini, &--small, &--medium, &--large {
         &:before {
             content: "";
             display: inline-block;
             background-repeat: no-repeat;
             margin-right: $space;
             vertical-align: middle;
+        }
+    }
+    &--mini {
+        &:before {
+            background-size: $icon-size-mini $icon-size-mini;
+            height: $icon-size-mini;
+            width: $icon-size-mini;
         }
     }
     &--small {
@@ -90,6 +97,21 @@
     &__pin {
         &:before {
             background-image: url('/assets/images/icon_map_white.svg');
+        }
+    }
+    &__event {
+        &:before {
+            background-image: url('/assets/images/icon_event.svg');
+        }
+    }
+    &__event-light {
+        &:before {
+            background-image: url('/assets/images/icon_event-light.svg');
+        }
+    }
+    &__pin-map-light {
+        &:before {
+            background-image: url('/assets/images/icon_pin-map-light.svg');
         }
     }
     &__play {

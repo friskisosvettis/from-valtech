@@ -10,7 +10,11 @@
 @model SummarySpotModel
 
 @* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE *@
-
+@{
+    //temporary news/events
+    var news = false;
+    var events = false;
+}
 <div class="container">
     <div class="container--12">
 
@@ -33,6 +37,15 @@
                     <h3 class="heading-5">
                         @Model.SummaryItem.SummaryHeading.Render()
                     </h3>
+                }
+                @if (news)
+                {
+                    <p><small class="date icon--mini icon__event">2014 01 22</small></p>
+                    <p><small class="date icon--mini  icon__pin-map">Ölandsgatan 38</small></p>
+                }
+                @if (events)
+                {
+                    <p><small class="date">25 augusti 2017</small></p>
                 }
                 @if (Model.SummaryItem.SummaryText.HasValue)
                 {

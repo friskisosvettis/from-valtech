@@ -167,6 +167,11 @@
             background-image: url('/assets/images/icon_mail-white.svg');
         }
     }
+    &__goto-circle-red {
+        &:before {
+            background-image: url('/assets/images/icon_goto-circle-red.svg');
+        }
+    }
 }
 
 .active {

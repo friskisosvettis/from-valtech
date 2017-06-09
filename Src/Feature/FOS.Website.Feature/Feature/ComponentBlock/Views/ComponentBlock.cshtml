@@ -1,0 +1,22 @@
+﻿@using Synthesis.Mvc.Helpers
+@using Sitecore.ExperienceContentManagement.Administration.Helpers.SupportPackage.Diagnostics.Base
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using Synthesis.Mvc.Extensions
+@using FOS.Website.Feature.ComponentBlock.Models
+@using Valtech.Foundation.SitecoreExtensions;
+
+@model ComponentBlockModel
+
+<div> ComponentBlock TEST 1</div>
+<div>@Model.Item.Name</div>
+<div>@Model.Item.ID.ToString()</div>
+<div>@Model.Item["__Renderings"]</div>
+<div>@Model.Item["__Final renderings"]</div>
+<div>@Model.Item["__Renderers"]</div>
+
+@*@Html.Sitecore().ItemRendering(Model.Item)*@
+@if(Model.Item != null)
+{
+    @Html.Sitecore().TrueItemRendering(Model.Item, null)
+}

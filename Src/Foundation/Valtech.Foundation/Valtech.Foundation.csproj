@@ -1012,6 +1012,7 @@
     <Content Include="App_Config\Include\zzz\Sitecore.Support.101295.config" />
     <None Include="App_Config\Include\Foundation\Valtech.Foundation\DefaultSiteDefinitions.config" />
     <Content Include="App_Config\Include\Foundation\Valtech.Foundation\AbortSitecoreForKnownRoutes.config" />
+    <Content Include="App_Config\Include\TrueItemRendering\TrueItemRendering.config" />
     <None Include="packages.config" />
     <Content Include="App_Config\Include\DynamicDataSources\CreateDataSourcesFolder.config" />
     <Content Include="App_Config\Include\DynamicDataSources\DynamicDataSourceLocation.config" />
@@ -1031,6 +1032,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SitecoreExtensions\ItemExtensions.cs" />
     <Compile Include="SitecoreExtensions\RenderingParametersExtensions.cs" />
+    <Compile Include="SitecoreExtensions\SitecoreHelperExtension.cs" />
+    <Compile Include="TrueItemRendering\GetTrueItemRenderer.cs" />
+    <Compile Include="TrueItemRendering\TrueItemRenderer.cs" />
     <Compile Include="WebApi\AbortSitecoreForKnownRoutes.cs" />
   </ItemGroup>
   <ItemGroup />

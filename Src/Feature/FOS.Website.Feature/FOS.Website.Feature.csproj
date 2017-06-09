@@ -1052,6 +1052,8 @@
     <Content Include="Feature\News\Views\Web.config" />
     <Content Include="Feature\Taxonomy\Views\Web.config" />
     <Content Include="Feature\Summary\Views\SummarySpot.cshtml" />
+    <Content Include="Feature\ComponentBlock\Views\ComponentBlock.cshtml" />
+    <Content Include="Feature\ComponentBlock\Views\Web.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1059,6 +1061,10 @@
     <Content Include="Feature\Content\Views\TestPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Feature\ComponentBlock\Constants.cs" />
+    <Compile Include="Feature\ComponentBlock\Controllers\ComponentBlockController.cs" />
+    <Compile Include="Feature\ComponentBlock\Data\ComponentBlockSynthesisModels.cs" />
+    <Compile Include="Feature\ComponentBlock\Models\ComponentBlockModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />
     <Compile Include="Feature\Content\Controllers\LocationIP.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteModuleController.cs" />

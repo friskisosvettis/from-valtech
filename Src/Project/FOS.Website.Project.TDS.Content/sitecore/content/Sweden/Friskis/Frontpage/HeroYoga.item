@@ -74,7 +74,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: f5895733-fcce-4939-8d4a-0c7515eb27a0
+revision: 96ba041e-ee9d-479e-b9cc-f82c61bdf79b
 
 ----field----
 field: {2787E0AA-9275-47DE-B524-2AE187EEAE69}
@@ -90,6 +90,27 @@ key: image
 content-length: 58
 
 <image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
+----field----
+field: {9E912AC0-D370-4A1C-9577-C53D335BD007}
+name: SummaryHeading
+key: summaryheading
+content-length: 24
+
+HeroYoga Summary Heading
+----field----
+field: {93226CCC-A692-4A1F-9445-772065350708}
+name: SummaryImage
+key: summaryimage
+content-length: 58
+
+<image mediaid="{0359BCEA-7385-4773-83CC-90423F341F3D}" />
+----field----
+field: {76DE3755-E119-4719-9F7C-B8918667520C}
+name: SummaryText
+key: summarytext
+content-length: 21
+
+HeroYoga Summary Text
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -110,14 +131,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f5895733-fcce-4939-8d4a-0c7515eb27a0
+96ba041e-ee9d-479e-b9cc-f82c61bdf79b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T144252Z
+20170608T111612Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

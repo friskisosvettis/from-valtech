@@ -157,14 +157,24 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
     &--overlay {
         position: relative; // Should ot be possible to have an overlay without a link?
         overflow: hidden;
-        height: $teaser-height-small;
+        height: $teaser-height-medium;
 
-        @include xsmall-up {
-            height: $teaser-height-medium;
+        @include small-up {
+            > .teaser__overlay > .teaser__content {
+                padding: 0 $space-quad;
+            }
+        }
+        
+        @include medium-up {
+            height: $teaser-height-large;
         }
 
-        @include medium-up {
+        img {
             height: $teaser-height-medium;
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
         }
 
         h2 {
@@ -184,6 +194,11 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
         background:  $primary-color-dim-80;
         @include transition(background ,0.35s);
 
+        &:hover {
+            background: $overlay-color-dim-25;
+            @include transition(background ,0.5s);
+        }
+
         > .teaser__content {
             display: table-cell;
             vertical-align: middle;
@@ -192,27 +207,6 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 
             @include large-up {
                 padding: 0 $space-quad;
-            }
-        }
-    }
-    &--enhanced {
-        height: $teaser-height-medium;
-
-        @include small-up {
-            > .teaser__overlay > .teaser__content {
-                padding: 0 $space-quad;
-            }
-        }
-
-        @include medium-up {
-            height: $teaser-height-large;
-        }
-
-        img {
-            height: $teaser-height-medium;
-
-            @include medium-up {
-                height: $teaser-height-large;
             }
         }
     }

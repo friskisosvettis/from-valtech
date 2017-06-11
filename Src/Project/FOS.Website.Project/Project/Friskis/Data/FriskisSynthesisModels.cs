@@ -107,13 +107,13 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/CCCHeroPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AAC7B8A7-17FB-47C5-84A2-F54AD0E70B55}", "IOAMYSAkYVLnl710aYuc5Md6qIQ=", "Valtech.Foundation.Synthesis")]
-    public partial interface ICCCHeroPageItem : global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.Content.Data.IAdvancedHeadingItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem {
+    public partial interface ICCCHeroPageItem : global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Frontpage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B08553A1-4D24-411A-9AF4-0F076996FF45}", "st5H+gsFtLQPgW4Htzl4O6oVE2Q=", "Valtech.Foundation.Synthesis")]
-    public partial interface IFrontpageItem : global::FOS.Website.Feature.Content.Data.IAssociationTopBarDataItem, global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem, global::FOS.Website.Feature.Content.Data.IProximityItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedInfoItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem {
+    public partial interface IFrontpageItem : global::FOS.Website.Feature.Navigation.Data.IAssociationTopBarDataItem, global::FOS.Website.Feature.Content.Data.IAutoCompleteModuleItem, global::FOS.Website.Feature.Content.Data.IProximityItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedInfoItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
@@ -1535,15 +1535,11 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ItemReferenceField _componentBlockItem;
         
-        private Synthesis.FieldTypes.TextField _headline;
-        
         private Synthesis.FieldTypes.TextField _navigation_NavigationTitle;
         
         private Synthesis.FieldTypes.ItemReferenceField _originalItemLink;
         
         private Synthesis.FieldTypes.TextField _summaryHeading;
-        
-        private Synthesis.FieldTypes.ImageField _image;
         
         private Synthesis.FieldTypes.BooleanField _navigation_ShowInMenu;
         
@@ -1597,17 +1593,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Headline field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
-            get {
-                if (_headline == null) {
-                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2787E0AA-9275-47DE-B524-2AE187EEAE69}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "Headline"), this.GetSearchFieldValue("headline"));
-                }
-                return _headline;
-            }
-        }
-        
         /// <summary>Represents the Navigation_NavigationTitle field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("navigation_navigationtitle")]
         public Synthesis.FieldTypes.Interfaces.ITextField Navigation_NavigationTitle {
@@ -1638,17 +1623,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryHeading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9E912AC0-D370-4A1C-9577-C53D335BD007}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "SummaryHeading"), this.GetSearchFieldValue("summaryheading"));
                 }
                 return _summaryHeading;
-            }
-        }
-        
-        /// <summary>Represents the Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField Image {
-            get {
-                if (_image == null) {
-                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "Image"), this.GetSearchFieldValue("image"));
-                }
-                return _image;
             }
         }
         
@@ -1741,8 +1715,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class Frontpage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IFrontpageItem {
         
-        private Synthesis.FieldTypes.TextField _associationName;
-        
         private Synthesis.FieldTypes.TextField _closeToYouLabel;
         
         private Synthesis.FieldTypes.HyperlinkField _facebookLink;
@@ -1813,17 +1785,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         public override Sitecore.Data.ID TemplateId {
             get {
                 return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the Association Name field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("association_name")]
-        public Synthesis.FieldTypes.Interfaces.ITextField AssociationName {
-            get {
-                if (_associationName == null) {
-                    _associationName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C952386-D9DC-444F-8C73-77CD265192BD}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Association Name"), this.GetSearchFieldValue("association_name"));
-                }
-                return _associationName;
             }
         }
         

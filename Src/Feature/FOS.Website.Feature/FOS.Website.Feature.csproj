@@ -1026,7 +1026,6 @@
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
     <Content Include="Feature\Content\Views\BasicImage.cshtml" />
     <Content Include="Feature\Content\Views\WideImage.cshtml" />
-    <Content Include="Feature\Content\Views\AssociationTopBar.cshtml" />
     <Content Include="Feature\Content\Views\HeroObjectImage.cshtml" />
     <Content Include="Feature\Content\Views\HeroArea.cshtml" />
     <Content Include="Feature\Content\Views\TrainingCenterCollectionMap.cshtml" />
@@ -1067,6 +1066,7 @@
     <Content Include="Feature\Content\Views\AssociationNotMigrated.cshtml" />
     <Content Include="Feature\ComponentBlock\Views\ComponentBlock.cshtml" />
     <Content Include="Feature\ComponentBlock\Views\Web.config" />
+    <Content Include="Feature\Navigation\Views\Partial\AssociationTopBar.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1108,7 +1108,6 @@
     <Compile Include="Feature\Content\Models\TrainingCenterCollectionMapModel.cs" />
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
-    <Compile Include="Feature\Content\Models\AssociationTopBarModel.cs" />
     <Compile Include="Feature\Content\Models\TrainingCenterContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />
@@ -1128,6 +1127,7 @@
     <Compile Include="Feature\Navigation\Controllers\NavigationFooterController.cs" />
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
+    <Compile Include="Feature\Navigation\Models\AssociationTopBarModel.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterAssociation.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterFrontPage.cs" />

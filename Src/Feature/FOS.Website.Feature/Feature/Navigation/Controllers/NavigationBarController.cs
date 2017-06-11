@@ -35,7 +35,18 @@ namespace FOS.Website.Feature.Navigation.Controllers
                     HomeItem = menuBarItem.InnerItem,
                     ActiveItemID = activeItem.ID,
                     AssociationLinks = menuBarItem.InnerItem.As<INavigationMenuLinksAssociationItem>(),
+                    AssociationTopBlackBarModel = null
                 };
+
+                if (model.AssociationLinks != null) // Add Association Black bar
+                {
+                    model.AssociationTopBlackBarModel = new AssociationTopBarModel()
+                    {
+                        AssociationItem = model.HomeItem,
+                        TopBarData =
+                            model.AssociationLinks.InnerItem.ClosestAscendantItemOfType<IAssociationTopBarDataItem>()
+                    };
+                }
             }
                 
             return View(Constants.Views.Paths.NavigationBar, model);

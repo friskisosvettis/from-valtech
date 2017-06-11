@@ -27,19 +27,6 @@ namespace FOS.Website.Feature.Content.Controllers
             return View(Constants.Views.Paths.AssociationIntroductionModule, model);
         }
 
-        public ActionResult GetAssociationTopBarView()
-        {
-            AssociationTopBarModel model = new AssociationTopBarModel(); ;
-            var associationItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationFlagTemplateItem>();
-            if (associationItem != null)
-            {
-                model.AssociationItem = associationItem.InnerItem;
-                model.TopBarData = associationItem.InnerItem.ClosestAscendantItemOfType<IAssociationTopBarDataItem>();
-            }
-
-            return View(Constants.Views.Paths.AssociationTopBar, model);
-        }
-
         public ActionResult GetAssociationNotMigratedView()
         {
             var associationMigratedCheckItem = Sitecore.Context.Item.ClosestAscendantItemOfType<IAssociationNotMigratedWidgetItem>();

@@ -2,7 +2,7 @@
 version: 1
 id: {E01387D9-C723-4108-84ED-342E3CAFA9B7}
 database: master
-path: /sitecore/templates/Feature/Content/Data/Association Top Bar Data/Association Black Top Bar Links/Topbar Link1
+path: /sitecore/templates/Feature/Navigation/Data/Association Top Bar Data/Association Black Top Bar Links/Topbar Link1
 parent: {ECE49E24-EBBA-4DEE-9102-58D1CB3C4A02}
 name: Topbar Link1
 master: {00000000-0000-0000-0000-000000000000}

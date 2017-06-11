@@ -2,7 +2,7 @@
 version: 1
 id: {CB7EDB1B-FD57-44C2-A8E3-6975554C3895}
 database: master
-path: /sitecore/templates/Feature/Content/Data/Association Top Bar Data/Association Black Top Bar Links/Home Link Label
+path: /sitecore/templates/Feature/Navigation/Data/Association Top Bar Data/Association Black Top Bar Links/Home Link Label
 parent: {ECE49E24-EBBA-4DEE-9102-58D1CB3C4A02}
 name: Home Link Label
 master: {00000000-0000-0000-0000-000000000000}

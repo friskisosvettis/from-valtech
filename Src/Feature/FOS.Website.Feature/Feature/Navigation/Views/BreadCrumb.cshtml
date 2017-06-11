@@ -1,0 +1,30 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using FOS.Website.Feature.Navigation.Data
+@using Sitecore.Mvc.Presentation
+@using FOS.Website.Feature.Navigation.Models
+@using Google.Apis.Util
+@using Sitecore.Data.Items
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model BreadCrumbModel
+@if (Model == null || Model.BreadCrumbsPages == null || Model.BreadCrumbsPages.Count() < 2)
+{
+    return;
+}
+
+@{ var pagesInBreadCrumbs = Model.BreadCrumbsPages.Count();}
+<div class="container">
+    <div class="container-12">
+        <ul class="navigation--second-level">
+            @for (var i = 1; i < @pagesInBreadCrumbs; i++)
+            {
+                var page = @Model.BreadCrumbsPages.ElementAt(@pagesInBreadCrumbs - @i);
+                <li> <a href="@LinkManager.GetItemUrl(@page)">@page.DisplayName > </a> </li>
+            }
+            
+            <li>@Model.BreadCrumbsPages.First().DisplayName</li>
+        </ul>
+    </div>
+</div>

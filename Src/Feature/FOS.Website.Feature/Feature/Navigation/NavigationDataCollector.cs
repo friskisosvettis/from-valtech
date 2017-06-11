@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using FOS.Website.Feature.Navigation.Data;
+using Sitecore.Buckets.Extensions;
 using Sitecore.Data.Items;
 using Synthesis;
 
@@ -42,6 +43,20 @@ namespace FOS.Website.Feature.Navigation
             }
 
             return childNavigationDataItems;
+        }
+
+        public static IEnumerable<Item> GetAllParentsToNavRoot(this Item page)
+        {
+            var parentPages = new List<Item>();
+            parentPages.Add(page);
+            var parentPage = page.GetParentBucketItemOrParent();
+            while (parentPage != null && parentPage.As<INavigationRootPageFlagItem>() == null)
+            {
+                parentPages.Add(parentPage);
+                parentPage = parentPage.GetParentBucketItemOrParent();
+            }
+            
+            return parentPages;
         }
     }
 }

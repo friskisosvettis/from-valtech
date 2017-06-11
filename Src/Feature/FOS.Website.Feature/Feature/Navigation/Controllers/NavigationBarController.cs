@@ -61,5 +61,15 @@ namespace FOS.Website.Feature.Navigation.Controllers
 
             return View(Constants.Views.Paths.SecondaryNavigation, model);
         }
+
+        public ActionResult GetBreadCrumbView()
+        {
+            var model = new BreadCrumbModel()
+            {
+                BreadCrumbsPages = Sitecore.Context.Item.GetAllParentsToNavRoot()
+            };
+
+            return View(Constants.Views.Paths.BreadCrumb, model);
+        }
     }
 }

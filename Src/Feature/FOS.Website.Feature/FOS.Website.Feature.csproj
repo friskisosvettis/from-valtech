@@ -1067,6 +1067,7 @@
     <Content Include="Feature\ComponentBlock\Views\ComponentBlock.cshtml" />
     <Content Include="Feature\ComponentBlock\Views\Web.config" />
     <Content Include="Feature\Navigation\Views\Partial\AssociationTopBar.cshtml" />
+    <Content Include="Feature\Navigation\Views\SecondaryNavigation.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1128,6 +1129,7 @@
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />
     <Compile Include="Feature\Navigation\Data\NavigationSynthesisModels.cs" />
     <Compile Include="Feature\Navigation\Models\AssociationTopBarModel.cs" />
+    <Compile Include="Feature\Navigation\Models\SecondaryNavigationModel.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterAssociation.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterFrontPage.cs" />

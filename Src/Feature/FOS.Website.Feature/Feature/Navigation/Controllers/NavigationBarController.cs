@@ -51,5 +51,15 @@ namespace FOS.Website.Feature.Navigation.Controllers
                 
             return View(Constants.Views.Paths.NavigationBar, model);
         }
+
+        public ActionResult GetSecondaryNavigationView()
+        {
+            var model = new SecondaryNavigationModel()
+            {
+                MenuItems = Sitecore.Context.Item.GetNavigationChildren()
+            };
+
+            return View(Constants.Views.Paths.SecondaryNavigation, model);
+        }
     }
 }

@@ -28,5 +28,20 @@ namespace FOS.Website.Feature.Navigation
                 }
             }
         }
+
+        public static IEnumerable<INavigationDataItem> GetNavigationChildren(this Item page)
+        {
+            var childNavigationDataItems = new List<INavigationDataItem>();
+            foreach (Item childItem in page.Children)
+            {
+                var child = childItem.As<INavigationDataItem>();
+                if (child != null && child.Navigation_ShowInMenu.Value)
+                {
+                    childNavigationDataItems.Add(child);
+                }
+            }
+
+            return childNavigationDataItems;
+        }
     }
 }

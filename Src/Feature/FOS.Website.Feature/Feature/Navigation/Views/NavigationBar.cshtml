@@ -102,6 +102,18 @@
                         </ul>
                     </li>
                 }
+                @if (Model.AssociationTopBlackBarModel.TopBarData.TopbarLink1.HasValue ||
+                    Model.AssociationTopBlackBarModel.TopBarData.TopbarLink2.HasValue ||
+                    Model.AssociationTopBlackBarModel.TopBarData.TopbarLink3.HasValue ||
+                    Model.AssociationTopBlackBarModel.TopBarData.TopbarLink1.HasValue)
+                {
+                    <li class="navigation__item--top hidden-large-up">
+                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink1.Render(null, "btn btn__link btn--on-red")
+                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink2.Render(null, "btn btn__link btn--on-red")
+                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink3.Render(null, "btn btn__link btn--on-red")
+                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink4.Render(null, "btn btn__link btn--on-red")
+                    </li>
+                }
                 @if (@Model.AssociationLinks != null)
                 {
                     <li class="navigation__item visible-large-up">

@@ -13,5 +13,6 @@ namespace FOS.Website.Feature.Navigation.Models
     {
         public IAssociationTopBarDataItem TopBarData { get; set; }
         public Item AssociationItem { get; set; }
+        public bool IsForMobile { get; set; }
     }
 }

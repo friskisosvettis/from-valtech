@@ -43,6 +43,7 @@
 
 @if (@Model.AssociationTopBlackBarModel != null)
 {
+    Model.AssociationTopBlackBarModel.IsForMobile = false;
     @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
 }
 
@@ -102,17 +103,10 @@
                         </ul>
                     </li>
                 }
-                @if (Model.AssociationTopBlackBarModel.TopBarData.TopbarLink1.HasValue ||
-                    Model.AssociationTopBlackBarModel.TopBarData.TopbarLink2.HasValue ||
-                    Model.AssociationTopBlackBarModel.TopBarData.TopbarLink3.HasValue ||
-                    Model.AssociationTopBlackBarModel.TopBarData.TopbarLink1.HasValue)
+                @if (@Model.AssociationTopBlackBarModel != null)
                 {
-                    <li class="navigation__item--top hidden-large-up">
-                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink1.Render(null, "btn btn__link btn--on-red")
-                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink2.Render(null, "btn btn__link btn--on-red")
-                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink3.Render(null, "btn btn__link btn--on-red")
-                        @Model.AssociationTopBlackBarModel.TopBarData.TopbarLink4.Render(null, "btn btn__link btn--on-red")
-                    </li>
+                    Model.AssociationTopBlackBarModel.IsForMobile = true;
+                    @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
                 }
                 @if (@Model.AssociationLinks != null)
                 {

@@ -1,0 +1,47 @@
+
+.breadcrumbs {
+    @include container();
+
+    ol {
+        list-style: none;
+        margin: $space 0;
+        padding: 0 $space-double;
+        @include span(12);
+    }
+
+    li {
+        display: inline-block;
+        color: $color-black-40;
+
+        &::before {
+            display: none;
+        }
+        &:after {
+            content: "";
+            background-image: url('/assets/images/icon_arrow-right-grey.svg');
+            background-size: $icon-size-mini $icon-size-mini;
+            background-repeat: no-repeat;
+            height: $icon-size-mini;
+            width: $icon-size-mini;
+
+            display: inline-block;
+            margin: 0 $space-double 0 $space;
+            vertical-align: middle;
+
+        }
+
+        &:last-of-type {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    a {
+        color: $color-black-40;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

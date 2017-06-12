@@ -40,6 +40,10 @@ namespace FOS.Website.Feature.Summary.Controllers
             {
                 summaryListModel = new SummaryListModel(DataSourceItem);
             }
+            else
+            {
+                summaryListModel = new SummaryListModel(Sitecore.Context.Item);
+            }
 
             return View(Constants.Views.Paths.SummaryList, summaryListModel);
         }

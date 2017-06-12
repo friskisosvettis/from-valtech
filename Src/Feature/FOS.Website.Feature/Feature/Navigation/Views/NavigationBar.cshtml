@@ -41,6 +41,11 @@
 </style>
 }
 
+@if (@Model.AssociationTopBlackBarModel != null)
+{
+    @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
+}
+
 <!--TODO: Hide text close for accessibility -->
 <div class="navigation__container navigation--bottom navigation__SITECORE" data-js-menu-container>
     <div class="container">

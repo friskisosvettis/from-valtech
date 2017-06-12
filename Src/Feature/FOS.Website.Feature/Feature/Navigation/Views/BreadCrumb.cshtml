@@ -15,16 +15,13 @@
 }
 
 @{ var pagesInBreadCrumbs = Model.BreadCrumbsPages.Count();}
-<div class="container">
-    <div class="container-12">
-        <ul class="navigation--second-level">
-            @for (var i = 1; i < @pagesInBreadCrumbs; i++)
-            {
-                var page = @Model.BreadCrumbsPages.ElementAt(@pagesInBreadCrumbs - @i);
-                <li> <a href="@LinkManager.GetItemUrl(@page)">@page.DisplayName > </a> </li>
-            }
-            
-            <li>@Model.BreadCrumbsPages.First().DisplayName</li>
-        </ul>
-    </div>
-</div>
+<nav class="breadcrumbs">
+    <ol>
+        @for (var i = 1; i < @pagesInBreadCrumbs; i++)
+        {
+            var page = @Model.BreadCrumbsPages.ElementAt(@pagesInBreadCrumbs - @i);
+            <li><a href="@LinkManager.GetItemUrl(@page)">@page.DisplayName</a></li>
+        }
+        <li>@Model.BreadCrumbsPages.First().DisplayName</li>
+    </ol>
+</nav>

@@ -113,11 +113,13 @@ $hero-height-small: rem(9 * $base-height);        //360px
     &--small {
         height: $hero-height-small;
 
-        img {
+        .hero_img {
             height: $hero-height-small;
         }
+        .hero__content {
+            padding-bottom: 0;
+        }
     }
-
 
     /* USED ON TRAINING CENTER PAGE */
     &__infobox {

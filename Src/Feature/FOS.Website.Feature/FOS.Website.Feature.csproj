@@ -1069,6 +1069,7 @@
     <Content Include="Feature\Navigation\Views\Partial\AssociationTopBar.cshtml" />
     <Content Include="Feature\Navigation\Views\SecondaryNavigation.cshtml" />
     <Content Include="Feature\Navigation\Views\BreadCrumb.cshtml" />
+    <Content Include="Feature\Summary\Views\SummaryListCompact.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1123,6 +1124,7 @@
     <Compile Include="Feature\Document\Constants.cs" />
     <Compile Include="Feature\Document\Controllers\DocumentController.cs" />
     <Compile Include="Feature\Document\Data\DocumentSynthesisModels.cs" />
+    <Compile Include="Feature\Event\Data\EventSynthesisModels.cs" />
     <Compile Include="Feature\Identity\Constants.cs" />
     <Compile Include="Feature\Identity\Controllers\FooterController.cs" />
     <Compile Include="Feature\Navigation\Constants.cs" />

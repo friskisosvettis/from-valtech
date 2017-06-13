@@ -91,7 +91,7 @@ namespace FOS.Website.Feature.Summary {
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SummaryList template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "5+quzRJjwk3EYDL+6BMXZfIPboc=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "d1Af68xuXf6E8rmjOpeEVPkcktM=", "Valtech.Foundation.Synthesis")]
     public partial interface ISummaryListItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the UseManualList field</summary>
@@ -175,6 +175,18 @@ namespace FOS.Website.Feature.Summary {
         /// <summary>Represents the DisplayAsSimpleList field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("displayassimplelist")]
         Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsSimpleList {
+            get;
+        }
+        
+        /// <summary>Represents the DisplayAsHighlightedList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayashighlightedlist")]
+        Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsHighlightedList {
+            get;
+        }
+        
+        /// <summary>Represents the DisplayAsCollage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayascollage")]
+        Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsCollage {
             get;
         }
     }
@@ -595,6 +607,10 @@ namespace FOS.Website.Concrete.Feature.Summary {
         
         private Synthesis.FieldTypes.BooleanField _displayAsSimpleList;
         
+        private Synthesis.FieldTypes.BooleanField _displayAsHighlightedList;
+        
+        private Synthesis.FieldTypes.BooleanField _displayAsCollage;
+        
         public SummaryList(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -775,6 +791,28 @@ namespace FOS.Website.Concrete.Feature.Summary {
                     _displayAsSimpleList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{096C7E9C-6390-4DF6-8CB6-463C944B5695}"], "/sitecore/templates/Feature/Summary/SummaryList", "DisplayAsSimpleList"), this.GetSearchFieldValue("displayassimplelist"));
                 }
                 return _displayAsSimpleList;
+            }
+        }
+        
+        /// <summary>Represents the DisplayAsHighlightedList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayashighlightedlist")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsHighlightedList {
+            get {
+                if (_displayAsHighlightedList == null) {
+                    _displayAsHighlightedList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{64E91C69-1B7F-44E0-8BDC-BFFB5F9F0128}"], "/sitecore/templates/Feature/Summary/SummaryList", "DisplayAsHighlightedList"), this.GetSearchFieldValue("displayashighlightedlist"));
+                }
+                return _displayAsHighlightedList;
+            }
+        }
+        
+        /// <summary>Represents the DisplayAsCollage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayascollage")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsCollage {
+            get {
+                if (_displayAsCollage == null) {
+                    _displayAsCollage = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F8C25F8D-43F2-45EC-9765-B288D657443C}"], "/sitecore/templates/Feature/Summary/SummaryList", "DisplayAsCollage"), this.GetSearchFieldValue("displayascollage"));
+                }
+                return _displayAsCollage;
             }
         }
     }

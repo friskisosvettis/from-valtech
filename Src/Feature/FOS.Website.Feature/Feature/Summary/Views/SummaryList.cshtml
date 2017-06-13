@@ -13,8 +13,6 @@
     //temporary news/events
     var news = false;
     var events = false;
-    //temporary highlight
-    var highlight = false;
 }
 @{
     // Different wrapping classes for different colums dependent on the editors choice
@@ -31,14 +29,14 @@
 
 @if (Model.SummaryList.Any())
 {
-    // Alternative one - SIMPLE LIST - if checked this is displayed instead of page specific teaser list
+    // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
     var cssClass = "teaser--small";
     if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
     {
         cssClass = "teaser--full";
     }
 
-    if (Model.SummaryListItem.DisplayAsSimpleList.Value)
+    if (Model.SummaryListItem.DisplayAsCompactList.Value)
     {
         <div class="container">
             <div class="container--12">
@@ -59,11 +57,11 @@
                                             @summarySpot.SummaryItem.Name
                                         }
                                     </h3>
-                                    @if (news)
+                                    @if (summarySpot.EventItem != null)
                                     {
                                         <p><small class="date">2014 01 22</small> | <small class="date">Ölandsgatan 38</small></p>
                                     }
-                                    @if (events)
+                                    @if (summarySpot.NewsItem != null)
                                     {
                                         <p><small class="date">25 augusti 2017</small></p>
                                     }
@@ -95,7 +93,7 @@
             </div>
         </div>
     }
-    else if (highlight)
+    else if (Model.SummaryListItem.DisplayAsHighlightedList.Value)
     {
         <div class="container">
             <div class="container--12">
@@ -128,13 +126,13 @@
                                                     @summarySpot.SummaryItem.Name
                                                 }
                                             </h2>
-                                            @if (news)
+                                            @if (summarySpot.EventItem != null)
                                             {
                                                 <p>
                                                     <small class="date icon--mini icon__event-light">2014 01 22</small>
                                                 </p>
                                             }
-                                            @if (events)
+                                            @if (summarySpot.NewsItem != null)
                                             {
                                                 <p>
                                                     <small class="date icon--mini icon__event-light">2014 01 22</small>
@@ -166,8 +164,8 @@
                 <li class="@containerClass">
                     <div class="teaser @cssClass">
                         <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
-                            @* Don't show an image if it's a simple list*@
-                            @if (summarySpot.SummaryItem.SummaryImage.HasValue & !Model.SummaryListItem.DisplayAsSimpleList.Value)
+                            @* Don't show an image if it's a compact list*@
+                            @if (summarySpot.SummaryItem.SummaryImage.HasValue & !Model.SummaryListItem.DisplayAsCompactList.Value)
                             {
                                 if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
                                 {
@@ -189,14 +187,14 @@
                                 @*Article/news/events FULL WIDTH KICKER: Render with text *@
                                @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
                                {
-                                   if (news)
+                                   if (summarySpot.EventItem != null)
                                    {
                                        <p><small class="date icon--mini icon__event">2014 01 22</small>
                                        </p>
                                        <p><small class="date icon--mini  icon__pin-map">Ölandsgatan 38</small>
                                        </p>
                                    }
-                                   if (events)
+                                   if (summarySpot.NewsItem != null)
                                    {
                                        <p><small class="date">25 augusti 2017</small></p>
                                    }
@@ -211,13 +209,13 @@
                                }
                                else
                                {
-                                   if (news)
+                                   if (summarySpot.EventItem != null)
                                    {
                                     <p>
                                         <small class="date icon--mini icon__event">2014 01 22</small>
                                     </p>
                                    }
-                                   if (events)
+                                   if (summarySpot.NewsItem != null)
                                    {
                                     <p><small class="date">25 augusti 2017</small></p>
                                    }

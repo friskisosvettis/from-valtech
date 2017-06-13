@@ -13,6 +13,7 @@ namespace FOS.Website.Feature.Summary
             {
                 public const string SummaryList = "/Feature/Summary/Views/SummaryList.cshtml";
                 public const string SummarySpot = "/Feature/Summary/Views/SummarySpot.cshtml";
+                public const string SummaryListCompact = "/Feature/Summary/Views/SummaryListCompact.cshtml";
             }
         }
     }

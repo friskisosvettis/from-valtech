@@ -49,6 +49,21 @@ namespace FOS.Website.Feature.Summary.Controllers
         }
 
 
+        public ActionResult GetSummaryListCompactView()
+        {
+            SummaryListModel summaryListModel = new SummaryListModel();
+            if (DataSourceItem != null)
+            {
+                summaryListModel = new SummaryListModel(DataSourceItem);
+            }
+            else
+            {
+                summaryListModel = new SummaryListModel(Sitecore.Context.Item);
+            }
+
+            return View(Constants.Views.Paths.SummaryListCompact, summaryListModel);
+        }
+
         public ActionResult GetSummarySpotView()
         {
             SummarySpotModel summarySpotModel = new SummarySpotModel();

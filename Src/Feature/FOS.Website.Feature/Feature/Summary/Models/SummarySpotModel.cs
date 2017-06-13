@@ -6,6 +6,7 @@ using System.Linq;
 //using Core.Site;
 using Sitecore.Data.Items;
 using System;
+using FOS.Website.Feature.Event;
 using FOS.Website.Feature.News;
 using FOS.Website.Feature.Summary.Controllers;
 using Synthesis;
@@ -22,6 +23,10 @@ namespace FOS.Website.Feature.Summary.Models
         public string SummaryHeadingString { get; set; }
 
         public DateTime NewsPublishDate { get; set; }
+
+        public INewsItem NewsItem { get; set; }
+
+        public IEventItem EventItem { get; set; }
 
         public Item Item { get; set; }
         

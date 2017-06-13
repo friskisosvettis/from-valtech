@@ -44,24 +44,11 @@ namespace FOS.Website.Feature.Summary.Controllers
             {
                 summaryListModel = new SummaryListModel(Sitecore.Context.Item);
             }
-
+            if (summaryListModel?.SummaryListItem?.DisplayAsCompactList?.Value != null && summaryListModel.SummaryListItem.DisplayAsCompactList.Value)
+            {
+                return View(Constants.Views.Paths.SummaryListCompact, summaryListModel);
+            }
             return View(Constants.Views.Paths.SummaryList, summaryListModel);
-        }
-
-
-        public ActionResult GetSummaryListCompactView()
-        {
-            SummaryListModel summaryListModel = new SummaryListModel();
-            if (DataSourceItem != null)
-            {
-                summaryListModel = new SummaryListModel(DataSourceItem);
-            }
-            else
-            {
-                summaryListModel = new SummaryListModel(Sitecore.Context.Item);
-            }
-
-            return View(Constants.Views.Paths.SummaryListCompact, summaryListModel);
         }
 
         public ActionResult GetSummarySpotView()

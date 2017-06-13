@@ -4,7 +4,9 @@
 * @section Setup
 * @author Veronika Jeppsson
 */
+$hero-height-mini: rem(6 * $base-height);         //280px
 $hero-height-small: rem(9 * $base-height);        //360px
+$hero-height-medium: rem(12 * $base-height);       //480px
 
 .hero {
     // APPROACH WITH IMG & OBJECT-FIT (OBS, uses polyfill for non supported browsers (IE)
@@ -111,13 +113,30 @@ $hero-height-small: rem(9 * $base-height);        //360px
     }
     /* USED ON HEROS WITH ONLY AN IMAGE AND SMALLER HEIGHT */
     &--small {
-        height: $hero-height-small;
+        height: $hero-height-mini;
 
         .hero_img {
-            height: $hero-height-small;
+            height: $hero-height-mini;
         }
         .hero__content {
             padding-bottom: 0;
+        }
+        .hero__container {
+            background: linear-gradient($color-dim-50 0%, $color-dim-00 50%);
+        }
+        @include small-up {
+            height: $hero-height-small;
+
+            .hero_img {
+                height: $hero-height-small;
+            }
+        }
+        @include xxlarge-up {
+            height: $hero-height-medium;
+
+            .hero_img {
+                height: $hero-height-medium;
+            }
         }
     }
 

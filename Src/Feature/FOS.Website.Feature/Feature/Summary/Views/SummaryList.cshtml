@@ -59,23 +59,12 @@
                                     </h3>
                                     @if (summarySpot.EventItem != null)
                                     {
-                                        <p><small class="date">2014 01 22</small> | <small class="date">Ölandsgatan 38</small></p>
+                                        <p><small class="date">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small> | <small class="date">@summarySpot.EventItem.EventLocation</small></p>
                                     }
                                     @if (summarySpot.NewsItem != null)
                                     {
-                                        <p><small class="date">25 augusti 2017</small></p>
+                                        <p><small class="date">@summarySpot.NewsItem.NewsDate</small></p>
                                     }
-
-                                     @*If it is a news/article I *@
-                                    @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
-                                        {
-                                            <p class="date">
-                                                @if (summarySpot.SummaryItem.NewsPublishDate != DateTime.MinValue)
-                                                {
-                                                    @summarySpot.NewsPublishDate.ToString(Sitecore.Context.Culture.DateTimeFormat.ShortDatePattern)
-                                                }
-                                            </p>
-                                        }*@
                                     @if (summarySpot.SummaryItem.SummaryText.HasValue)
                                     {
                                         <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
@@ -129,15 +118,16 @@
                                             @if (summarySpot.EventItem != null)
                                             {
                                                 <p>
-                                                    <small class="date icon--mini icon__event-light">2014 01 22</small>
+                                                    <small class="date icon--mini icon__event-light">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
+                                                    <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
                                                 </p>
                                             }
                                             @if (summarySpot.NewsItem != null)
                                             {
                                                 <p>
-                                                    <small class="date icon--mini icon__event-light">2014 01 22</small>
-                                                    <small class="date icon--mini  icon__pin-map-light">Ölandsgatan 38</small>
-                                                </p>                                        }
+                                                    <small class="date icon--mini icon__event-light">@summarySpot.NewsItem.NewsDate</small>
+                                                </p>
+                                            }
                                             @if (summarySpot.SummaryItem.SummaryText.HasValue)
                                             {
                                                 <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
@@ -189,14 +179,14 @@
                                {
                                    if (summarySpot.EventItem != null)
                                    {
-                                       <p><small class="date icon--mini icon__event">2014 01 22</small>
+                                       <p><small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
                                        </p>
-                                       <p><small class="date icon--mini  icon__pin-map">Ölandsgatan 38</small>
+                                       <p><small class="date icon--mini  icon__pin-map">@summarySpot.EventItem.EventLocation</small>
                                        </p>
                                    }
                                    if (summarySpot.NewsItem != null)
                                    {
-                                       <p><small class="date">25 augusti 2017</small></p>
+                                       <p><small class="date">@summarySpot.NewsItem.NewsDate</small></p>
                                    }
                                    if (summarySpot.SummaryItem.SummaryText.HasValue)
                                    {
@@ -212,29 +202,14 @@
                                    if (summarySpot.EventItem != null)
                                    {
                                     <p>
-                                        <small class="date icon--mini icon__event">2014 01 22</small>
+                                        <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
                                     </p>
                                    }
                                    if (summarySpot.NewsItem != null)
                                    {
-                                    <p><small class="date">25 augusti 2017</small></p>
+                                    <p><small class="date">@summarySpot.NewsItem.NewsDate</small></p>
                                    }
                                }
-                                @* TODO: ONLY RENDER TEXT IF IT IS AN EVENT/NEWS ITEM
-                                    @if (summarySpot.SummaryItem.SummaryText.HasValue)
-                                    {
-                                        @summarySpot.SummaryItem.SummaryText.Render(false)
-                                    }*@
-
-                                @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
-                                    {
-                                        <p class="date">
-                                            @if (summarySpot.SummaryItem.NewsPublishDate != DateTime.MinValue)
-                                            {
-                                                @summarySpot.NewsPublishDate.ToString(Sitecore.Context.Culture.DateTimeFormat.ShortDatePattern)
-                                            }
-                                        </p>
-                                    }*@
                             </div>
                         </a>
                     </div>

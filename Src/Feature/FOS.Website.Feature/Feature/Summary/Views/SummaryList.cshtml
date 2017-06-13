@@ -9,6 +9,8 @@
 @model SummaryListModel
 
 @{
+    int counter = 0;
+
     // Different wrapping classes for different colums dependent on the editors choice
     var containerClass = "container--12";
     if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("2"))
@@ -38,10 +40,24 @@
             <h2 class="color--primary margin-bottom--none text-align--center">@Model.SummaryListItem.Header</h2>
         </div>
     </div>
-
         <ul class="container">
             @foreach (SummarySpotModel summarySpot in Model.SummaryList)
             {
+                if (Model.SummaryListItem.DisplayAsCollage.Value)
+                {
+                    if (counter == 0)
+                    {
+                        containerClass = "container--6";
+                    }
+                    else if (counter == 2)
+                    {
+                        containerClass = "container--4";
+                    }
+                    else if (counter == 5)
+                    {
+                        containerClass = "container--12";
+                    }
+                }
                 <li class="@containerClass">
                     <div class="teaser @cssClass">
                         <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
@@ -84,88 +100,99 @@
                                             }
                                             @if (summarySpot.SummaryItem.SummaryText.HasValue)
                                             {
-                                            <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
-                                        }
+                                                <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             }
                             else
                             {
                                 @* Render this section if not highlight or traing form kicker*@
 
-                            if (summarySpot.SummaryItem.SummaryImage.HasValue)
-                            {
-                                if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                if (summarySpot.SummaryItem.SummaryImage.HasValue)
                                 {
-                                    @summarySpot.SummaryItem.SummaryImage.Render()
+                                    if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryImage.Render()
+                                    }
                                 }
-                            }
-                            <div class="teaser__content">
-                                <h3 class="heading-5">
-                                    @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
-                                    {
-                                        @summarySpot.SummaryItem.SummaryHeading.Render(false)
-                                    }
-                                    else
-                                    {
-                                        @summarySpot.SummaryItem.Name
-                                    }
-                                </h3>
+                                <div class="teaser__content">
+                                    <h3 class="heading-5">
+                                        @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                        {
+                                            @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                        }
+                                        else
+                                        {
+                                            @summarySpot.SummaryItem.Name
+                                        }
+                                    </h3>
 
-                                @*Article/news/events FULL WIDTH KICKER: Render with text *@
-                                @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
-                                {
-                                    if (summarySpot.EventItem != null)
+                                    @*Article/news/events FULL WIDTH KICKER: Render with text *@
+                                    @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
                                     {
-                                        <p>
-                                            <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
-                                        </p>
+                                        if (summarySpot.EventItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
+                                            </p>
                                             <p>
                                                 <small class="date icon--mini  icon__pin-map">@summarySpot.EventItem.EventLocation</small>
                                             </p>
+                                        }
+                                        if (summarySpot.NewsItem != null)
+                                        {
+                                            <p>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate</small>
+                                            </p>
+                                        }
+                                        if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                        {
+                                            <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                        }
+                                        // TODO: Remove hard coded "Läs mer" text and make it translatable
+                                        <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                            Läs mer
+                                        </a>
                                     }
-                                    if (summarySpot.NewsItem != null)
+                                    else
                                     {
-                                        <p>
-                                            <small class="date">@summarySpot.NewsItem.NewsDate</small>
-                                        </p>
+                                        if (summarySpot.EventItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
+                                            </p>
+                                        }
+                                        if (summarySpot.NewsItem != null)
+                                        {
+                                            <p>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate</small>
+                                            </p>
+                                        }
                                     }
-                                    if (summarySpot.SummaryItem.SummaryText.HasValue)
-                                    {
-                                        <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
-                                    }
-                                    // TODO: Remove hard coded "Läs mer" text and make it translatable
-                                    <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
-                                        Läs mer
-                                    </a>
-                                }
-                                else
-                                {
-                                    if (summarySpot.EventItem != null)
-                                    {
-                                        <p>
-                                            <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.Day @summarySpot.EventItem.EventStartDate.Value.Month, @summarySpot.EventItem.EventStartDate.Value.TimeOfDay - @summarySpot.EventItem.EventEndDate.Value.Day @summarySpot.EventItem.EventEndDate.Value.Month, @summarySpot.EventItem.EventEndDate.Value.TimeOfDay</small>
-                                        </p>
-                                    }
-                                    if (summarySpot.NewsItem != null)
-                                    {
-                                        <p>
-                                            <small class="date">@summarySpot.NewsItem.NewsDate</small>
-                                        </p>
-                                    }
-                                }
-                            </div>
+                                </div>
                             }
                         </a>
                     </div>
                 </li>
+                if (Model.SummaryListItem.DisplayAsCollage.Value)
+                {
+                    if (counter == 5)
+                    {
+                        counter = 0;
+                    }
+                    else
+                    {
+                        counter = counter + 1;
+                    }
+                }
             }
         </ul>
     if (Model.SummaryListItem.ReadMoreLink.HasValue)
     {
         <div class="container">
-            <div class="container--12 text-align--right">
+            <div class="container--12 text-align--right margin-bottom--space">
                 @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto")
             </div>
         </div>

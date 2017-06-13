@@ -13,8 +13,15 @@ created: 20170403T105606Z
 ----version----
 language: sv-SE
 version: 1
-revision: 9e1516a1-c8de-4ee8-8f07-228312058724
+revision: dbe6a465-06b2-446e-b16f-163e79640c4a
 
+----field----
+field: {0F7ECFC1-6DD8-40B7-B7F3-026E299D8C57}
+name: Facilities
+key: facilities
+content-length: 38
+
+{1B74A824-DE7E-4D9F-9912-E463E68DA739}
 ----field----
 field: {1CA2ED53-8CC2-4BC5-BEFA-DF2A377D7659}
 name: MapHeadline
@@ -161,14 +168,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9e1516a1-c8de-4ee8-8f07-228312058724
+dbe6a465-06b2-446e-b16f-163e79640c4a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T165638Z
+20170613T121621Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

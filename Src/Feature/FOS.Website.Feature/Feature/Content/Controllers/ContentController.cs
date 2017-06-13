@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FOS.Website.Feature.Content.ListWidgets;
 using Synthesis;
 using FOS.Website.Feature.Content.Models;
 using Sitecore.Buckets.Extensions;
@@ -61,6 +62,19 @@ namespace FOS.Website.Feature.Content.Controllers
             IExpandableSectionItem expandableItem = RenderingContext.Current.Rendering.Item.As<IExpandableSectionItem>();
             ExpandableSectionModel model = new ExpandableSectionModel(expandableItem);
             return View(Constants.Views.Paths.ExpandableSection, model);
+        }
+
+        public ActionResult GetFacilitiesView()
+        {
+            FacilitiesModel model = new FacilitiesModel()
+            {
+                Facilities =
+                    Sitecore.Context.Item.As<IFacilitiesItem>()?
+                        .Facilities1.TargetItems.Select(i => i.InnerItem.As<IFacilityItem>())
+                        .Where(i => i != null)
+            };
+
+            return View(Constants.Views.Paths.Facilities, model);
         }
 
         public ActionResult GetImageCollageView()

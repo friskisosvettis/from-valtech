@@ -1,0 +1,52 @@
+----item----
+version: 1
+id: {C4B1F43A-BD7F-485F-ACF4-929671FBFC51}
+database: master
+path: /sitecore/templates/Feature/Content/ListWidgets/Facilities/Facilities
+parent: {3E471787-DC58-4B76-9EFA-BF0B6BAFA3C6}
+name: Facilities
+master: {00000000-0000-0000-0000-000000000000}
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20170612T123448Z
+
+----version----
+language: en
+version: 1
+revision: 52d57189-62b9-47c7-90cf-f51e0bee91de
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170612T123448Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+52d57189-62b9-47c7-90cf-f51e0bee91de
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170612T123510Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

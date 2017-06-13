@@ -1069,6 +1069,7 @@
     <Content Include="Feature\Navigation\Views\Partial\AssociationTopBar.cshtml" />
     <Content Include="Feature\Navigation\Views\SecondaryNavigation.cshtml" />
     <Content Include="Feature\Navigation\Views\BreadCrumb.cshtml" />
+    <Content Include="Feature\Content\Views\Facilities.cshtml" />
     <Content Include="Feature\Summary\Views\SummaryListCompact.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -1102,6 +1103,7 @@
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
     <Compile Include="Feature\Content\Models\AssociationNotMigratedModel.cs" />
+    <Compile Include="Feature\Content\Models\FacilitiesModel.cs" />
     <Compile Include="Feature\Content\Models\MoodFooterModel.cs" />
     <Compile Include="Feature\Content\Models\ContactFooterModel.cs" />
     <Compile Include="Feature\Content\Models\HeadingTrainingCenterModel.cs" />

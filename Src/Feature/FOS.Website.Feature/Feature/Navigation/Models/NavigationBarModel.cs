@@ -20,5 +20,6 @@ namespace FOS.Website.Feature.Navigation.Models
         public Item HomeItem { get; set; }
         public ID ActiveItemID { get; set; }
         public INavigationMenuLinksAssociationItem AssociationLinks { get; set; }
+        public AssociationTopBarModel AssociationTopBlackBarModel { get; set; }
     }
 }

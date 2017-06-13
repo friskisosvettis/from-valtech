@@ -1,33 +1,33 @@
 ----item----
 version: 1
-id: {E01387D9-C723-4108-84ED-342E3CAFA9B7}
+id: {E66AE016-B5EC-4EEF-809A-E1A2AE1146BA}
 database: master
-path: /sitecore/templates/Feature/Content/Data/Association Top Bar Data/Association Black Top Bar Links/Topbar Link1
-parent: {ECE49E24-EBBA-4DEE-9102-58D1CB3C4A02}
-name: Topbar Link1
+path: /sitecore/layout/Renderings/Feature/Navigation/BreadCrumbs
+parent: {399A228B-FA1C-41A9-B76D-37A1DA346B6A}
+name: BreadCrumbs
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
-created: 20170607T110438Z
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20170611T130835Z
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 12
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 87
 
-General Link
+FOS.Website.Feature.Navigation.Controllers.NavigationBarController, FOS.Website.Feature
 ----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 17
 
-100
+GetBreadCrumbView
 ----version----
-language: en
+language: sv-SE
 version: 1
-revision: 144ba292-b312-48ea-9162-a75704ee276b
+revision: 39152dc8-b0e4-497d-bbdf-5f23743d6e76
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170607T110438Z
+20170404T134749Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-144ba292-b312-48ea-9162-a75704ee276b
+39152dc8-b0e4-497d-bbdf-5f23743d6e76
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170607T110708Z
+20170611T130847Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

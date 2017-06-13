@@ -41,6 +41,12 @@
 </style>
 }
 
+@if (@Model.AssociationTopBlackBarModel != null)
+{
+    Model.AssociationTopBlackBarModel.IsForMobile = false;
+    @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
+}
+
 <!--TODO: Hide text close for accessibility -->
 <div class="navigation__container navigation--bottom navigation__SITECORE" data-js-menu-container>
     <div class="container">
@@ -96,6 +102,11 @@
                             }
                         </ul>
                     </li>
+                }
+                @if (@Model.AssociationTopBlackBarModel != null)
+                {
+                    Model.AssociationTopBlackBarModel.IsForMobile = true;
+                    @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
                 }
                 @if (@Model.AssociationLinks != null)
                 {

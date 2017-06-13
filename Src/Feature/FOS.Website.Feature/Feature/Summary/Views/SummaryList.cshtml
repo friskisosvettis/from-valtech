@@ -9,7 +9,13 @@
 @model SummaryListModel
 
 @* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE *@
-
+@{
+    //temporary news/events
+    var news = false;
+    var events = false;
+    //temporary highlight
+    var highlight = false;
+}
 @{
     // Different wrapping classes for different colums dependent on the editors choice
     var containerClass = "container--12";
@@ -34,7 +40,6 @@
 
     if (Model.SummaryListItem.DisplayAsSimpleList.Value)
     {
-        cssClass = "teaser__list icon__background icon__background--large icon__card";
         <div class="container">
             <div class="container--12">
                 <h2 class="color--primary margin-bottom--none">@Model.SummaryListItem.Header</h2>
@@ -54,6 +59,14 @@
                                             @summarySpot.SummaryItem.Name
                                         }
                                     </h3>
+                                    @if (news)
+                                    {
+                                        <p><small class="date">2014 01 22</small> | <small class="date">Ölandsgatan 38</small></p>
+                                    }
+                                    @if (events)
+                                    {
+                                        <p><small class="date">25 augusti 2017</small></p>
+                                    }
 
                                      @*If it is a news/article I *@
                                     @*@if (summarySpot.NewsPublishDate != DateTime.MinValue)
@@ -82,7 +95,7 @@
             </div>
         </div>
     }
-    else
+    else if (highlight)
     {
         <div class="container">
             <div class="container--12">
@@ -92,6 +105,64 @@
         <ul class="container">
             @foreach (SummarySpotModel summarySpot in Model.SummaryList)
             {
+                <li class="@containerClass">
+                    <div class="teaser">
+                        <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                            <div class="teaser--overlay">
+                                @if (summarySpot.SummaryItem.SummaryImage.HasValue)
+                                {
+                                    if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryImage.Render()
+                                    }
+                                }
+                                    <div class="teaser__overlay">
+                                        <div class="teaser__content">
+                                            <h2 lass="heading-3">
+                                                @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                                {
+                                                    @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                                }
+                                                else
+                                                {
+                                                    @summarySpot.SummaryItem.Name
+                                                }
+                                            </h2>
+                                            @if (news)
+                                            {
+                                                <p>
+                                                    <small class="date icon--mini icon__event-light">2014 01 22</small>
+                                                </p>
+                                            }
+                                            @if (events)
+                                            {
+                                                <p>
+                                                    <small class="date icon--mini icon__event-light">2014 01 22</small>
+                                                    <small class="date icon--mini  icon__pin-map-light">Ölandsgatan 38</small>
+                                                </p>                                        }
+                                            @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                            {
+                                                <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                            }
+                                        </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <div class="container">
+            <div class="container--12">
+                <h2 class="color--primary margin-bottom--none text-align--center">@Model.SummaryListItem.Header</h2>
+            </div>
+        </div>
+        <ul class="container">
+            @foreach (SummarySpotModel summarySpot in Model.SummaryList)
+{
                 <li class="@containerClass">
                     <div class="teaser @cssClass">
                         <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
@@ -114,18 +185,43 @@
                                         @summarySpot.SummaryItem.Name
                                     }
                                 </h3>
+
                                 @*Article/news/events FULL WIDTH KICKER: Render with text *@
                                @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
                                {
+                                   if (news)
+                                   {
+                                       <p><small class="date icon--mini icon__event">2014 01 22</small>
+                                       </p>
+                                       <p><small class="date icon--mini  icon__pin-map">Ölandsgatan 38</small>
+                                       </p>
+                                   }
+                                   if (events)
+                                   {
+                                       <p><small class="date">25 augusti 2017</small></p>
+                                   }
                                    if (summarySpot.SummaryItem.SummaryText.HasValue)
                                    {
-                                    <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                       <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
                                    }
                                    // TODO: Remove hard coded "Läs mer" text and make it translatable
-                                    <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
-                                        Läs mer
-                                    </a>
-                                }
+                                   <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                       Läs mer
+                                   </a>
+                               }
+                               else
+                               {
+                                   if (news)
+                                   {
+                                    <p>
+                                        <small class="date icon--mini icon__event">2014 01 22</small>
+                                    </p>
+                                   }
+                                   if (events)
+                                   {
+                                    <p><small class="date">25 augusti 2017</small></p>
+                                   }
+                               }
                                 @* TODO: ONLY RENDER TEXT IF IT IS AN EVENT/NEWS ITEM
                                     @if (summarySpot.SummaryItem.SummaryText.HasValue)
                                     {

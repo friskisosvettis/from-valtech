@@ -4,6 +4,7 @@
 * @section Setup
 * @author Veronika Jeppsson
 */
+$hero-height-small: rem(9 * $base-height);        //360px
 
 .hero {
     // APPROACH WITH IMG & OBJECT-FIT (OBS, uses polyfill for non supported browsers (IE)
@@ -106,6 +107,17 @@
                 padding-bottom: $space-quad;
                 bottom: 0;
             }
+        }
+    }
+    /* USED ON HEROS WITH ONLY AN IMAGE AND SMALLER HEIGHT */
+    &--small {
+        height: $hero-height-small;
+
+        .hero_img {
+            height: $hero-height-small;
+        }
+        .hero__content {
+            padding-bottom: 0;
         }
     }
 

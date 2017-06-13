@@ -8,12 +8,12 @@
 
 @model ComponentBlockModel
 
-<div> ComponentBlock TEST 1</div>
+@*<div> ComponentBlock TEST 1</div>
 <div>@Model.Item.Name</div>
 <div>@Model.Item.ID.ToString()</div>
 <div>@Model.Item["__Renderings"]</div>
 <div>@Model.Item["__Final renderings"]</div>
-<div>@Model.Item["__Renderers"]</div>
+<div>@Model.Item["__Renderers"]</div>*@
 
 @*@Html.Sitecore().ItemRendering(Model.Item)*@
 @if(Model.Item != null)

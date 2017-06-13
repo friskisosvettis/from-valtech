@@ -1139,11 +1139,11 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Summary\SummaryList\List options\DisplayAsHighlightedList.item">
+    <SitecoreItem Include="sitecore\templates\Feature\Summary\SummaryList\List options\DisplayAsCompactList.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Summary\SummaryList\List options\DisplayAsSimpleList.item">
+    <SitecoreItem Include="sitecore\templates\Feature\Summary\SummaryList\List options\DisplayAsHighlightedList.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

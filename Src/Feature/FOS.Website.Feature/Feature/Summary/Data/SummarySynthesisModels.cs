@@ -91,7 +91,7 @@ namespace FOS.Website.Feature.Summary {
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SummaryList template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "d1Af68xuXf6E8rmjOpeEVPkcktM=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "3ZWv653mXq/BGlAfbG3P0dL0UGI=", "Valtech.Foundation.Synthesis")]
     public partial interface ISummaryListItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the UseManualList field</summary>
@@ -172,9 +172,9 @@ namespace FOS.Website.Feature.Summary {
             get;
         }
         
-        /// <summary>Represents the DisplayAsSimpleList field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("displayassimplelist")]
-        Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsSimpleList {
+        /// <summary>Represents the DisplayAsCompactList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayascompactlist")]
+        Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsCompactList {
             get;
         }
         
@@ -605,7 +605,7 @@ namespace FOS.Website.Concrete.Feature.Summary {
         
         private Synthesis.FieldTypes.ItemReferenceListField _taxonomy;
         
-        private Synthesis.FieldTypes.BooleanField _displayAsSimpleList;
+        private Synthesis.FieldTypes.BooleanField _displayAsCompactList;
         
         private Synthesis.FieldTypes.BooleanField _displayAsHighlightedList;
         
@@ -783,14 +783,14 @@ namespace FOS.Website.Concrete.Feature.Summary {
             }
         }
         
-        /// <summary>Represents the DisplayAsSimpleList field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("displayassimplelist")]
-        public Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsSimpleList {
+        /// <summary>Represents the DisplayAsCompactList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("displayascompactlist")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField DisplayAsCompactList {
             get {
-                if (_displayAsSimpleList == null) {
-                    _displayAsSimpleList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{096C7E9C-6390-4DF6-8CB6-463C944B5695}"], "/sitecore/templates/Feature/Summary/SummaryList", "DisplayAsSimpleList"), this.GetSearchFieldValue("displayassimplelist"));
+                if (_displayAsCompactList == null) {
+                    _displayAsCompactList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{096C7E9C-6390-4DF6-8CB6-463C944B5695}"], "/sitecore/templates/Feature/Summary/SummaryList", "DisplayAsCompactList"), this.GetSearchFieldValue("displayascompactlist"));
                 }
-                return _displayAsSimpleList;
+                return _displayAsCompactList;
             }
         }
         

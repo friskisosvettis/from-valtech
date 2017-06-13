@@ -133,14 +133,8 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Association Top Bar Data template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{67886500-F92C-4DB4-8909-D36EF7884BD2}", "pmFpmsuD63EWR4WIyBvd98ECbqQ=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{67886500-F92C-4DB4-8909-D36EF7884BD2}", "YfCgFNVYBSZ85IqoWbhi2bz+DZ0=", "Valtech.Foundation.Synthesis")]
     public partial interface IAssociationTopBarDataItem : Synthesis.IStandardTemplateItem {
-        
-        /// <summary>Represents the Association Name field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("association_name")]
-        Synthesis.FieldTypes.Interfaces.ITextField AssociationName {
-            get;
-        }
         
         /// <summary>Represents the Topbar Link1 field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link1")]
@@ -1267,8 +1261,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class AssociationTopBarData : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationTopBarDataItem {
         
-        private Synthesis.FieldTypes.TextField _associationName;
-        
         private Synthesis.FieldTypes.HyperlinkField _topbarLink1;
         
         private Synthesis.FieldTypes.HyperlinkField _topbarLink2;
@@ -1305,17 +1297,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         public override Sitecore.Data.ID TemplateId {
             get {
                 return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the Association Name field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("association_name")]
-        public Synthesis.FieldTypes.Interfaces.ITextField AssociationName {
-            get {
-                if (_associationName == null) {
-                    _associationName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3C952386-D9DC-444F-8C73-77CD265192BD}"], "/sitecore/templates/Feature/Content/Data/Association Top Bar Data", "Association Name"), this.GetSearchFieldValue("association_name"));
-                }
-                return _associationName;
             }
         }
         

@@ -16,6 +16,12 @@ namespace FOS.Website.Project.Friskis.ContainerTypes {
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C3A19B6-A734-440A-A114-8E5AD3A32390}", "ysrUmgdH8wJRmIDpthtXCu1dKHY=", "Valtech.Foundation.Synthesis")]
     public partial interface IFacilitiesFolderItem : Synthesis.IStandardTemplateItem {
     }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Container Types/RegionsFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{BDFA971B-1CF9-46FB-B387-DF1BA632BFFB}", "yC98QTECHCzni9U78192kkW8pXw=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRegionsFolderItem : Synthesis.IStandardTemplateItem {
+    }
 }
 namespace FOS.Website.Project.Friskis.ContentTypes {
     
@@ -212,6 +218,58 @@ namespace FOS.Website.Concrete.Project.Friskis.ContainerTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new FacilitiesFolder(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Container Types/RegionsFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class RegionsFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContainerTypes.IRegionsFolderItem {
+        
+        public RegionsFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public RegionsFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "RegionsFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{BDFA971B-1CF9-46FB-B387-DF1BA632BFFB}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RegionsFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{BDFA971B-1CF9-46FB-B387-DF1BA632BFFB}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new RegionsFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new RegionsFolder(searchFields);
         }
     }
 }

@@ -3,7 +3,7 @@ version: 1
 id: {D8E3A607-1C7F-40F4-B71A-7F7903047667}
 database: master
 path: /sitecore/content/Regions/Hollywood
-parent: {C53AC6B0-65F5-4075-AA21-6480CE4FD11D}
+parent: {96EB3761-8355-4182-80C2-A0017C01B85F}
 name: Hollywood
 master: {00000000-0000-0000-0000-000000000000}
 template: {79F17249-8B9D-4ABF-9982-226F1D9988FF}

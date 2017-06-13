@@ -1,48 +1,48 @@
 ----item----
 version: 1
-id: {F7FD05A3-79E2-4F1D-A073-8A1FCFEB1184}
+id: {A9556E0E-694E-427B-8A96-21760138ED8D}
 database: master
-path: /sitecore/content/Regions/Waikiki
-parent: {96EB3761-8355-4182-80C2-A0017C01B85F}
-name: Waikiki
+path: /sitecore/content/Facilities
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Facilities
 master: {00000000-0000-0000-0000-000000000000}
-template: {79F17249-8B9D-4ABF-9982-226F1D9988FF}
-templatekey: Region
-created: 20170522T092410Z
-
-----version----
-language: en
-version: 1
-revision: 43c0a5c3-5c03-4071-be51-d739bb8b9c1b
+template: {1C3A19B6-A734-440A-A114-8E5AD3A32390}
+templatekey: FacilitiesFolder
+created: 20170612T123217Z
 
 ----field----
-field: {D99D59C6-1D94-48FE-A994-C725935C1FE4}
-name: Name
-key: name
-content-length: 7
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
 
-Waikiki
+200
+----version----
+language: sv-SE
+version: 1
+revision: 601e6523-1ed1-4031-be9d-52b53ad48384
+
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170522T092410Z
+20170612T123217Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-43c0a5c3-5c03-4071-be51-d739bb8b9c1b
+601e6523-1ed1-4031-be9d-52b53ad48384
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170522T092410Z
+20170612T123253Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,48 +1,48 @@
 ----item----
 version: 1
-id: {F7FD05A3-79E2-4F1D-A073-8A1FCFEB1184}
+id: {A7478E0C-929D-426F-82FC-998222335B6D}
 database: master
-path: /sitecore/content/Regions/Waikiki
-parent: {96EB3761-8355-4182-80C2-A0017C01B85F}
-name: Waikiki
+path: /sitecore/templates/Project/Friskis/Container Types
+parent: {04154157-3308-467E-AC56-83063FF5E478}
+name: Container Types
 master: {00000000-0000-0000-0000-000000000000}
-template: {79F17249-8B9D-4ABF-9982-226F1D9988FF}
-templatekey: Region
-created: 20170522T092410Z
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
+created: 20170613T083909Z
 
 ----version----
 language: en
 version: 1
-revision: 43c0a5c3-5c03-4071-be51-d739bb8b9c1b
+revision: 10713f2c-777c-4d58-8086-1f48f540d93f
 
 ----field----
-field: {D99D59C6-1D94-48FE-A994-C725935C1FE4}
-name: Name
-key: name
-content-length: 7
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
 
-Waikiki
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170522T092410Z
+20170613T083909Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-43c0a5c3-5c03-4071-be51-d739bb8b9c1b
+10713f2c-777c-4d58-8086-1f48f540d93f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170522T092410Z
+20170613T083909Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

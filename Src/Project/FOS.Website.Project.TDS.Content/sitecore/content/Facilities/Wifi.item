@@ -1,0 +1,120 @@
+----item----
+version: 1
+id: {1B74A824-DE7E-4D9F-9912-E463E68DA739}
+database: master
+path: /sitecore/content/Facilities/Wifi
+parent: {A9556E0E-694E-427B-8A96-21760138ED8D}
+name: Wifi
+master: {00000000-0000-0000-0000-000000000000}
+template: {12AC44AC-126F-4969-A316-66E0370EC26D}
+templatekey: Facility
+created: 20170613T094214Z
+
+----version----
+language: en
+version: 1
+revision: 0673b98b-c298-408a-8eff-cc12cf16f401
+
+----field----
+field: {FED03B81-87AA-4BB5-B9F1-E66A6EBEA40B}
+name: Facility Name
+key: facility name
+content-length: 4
+
+Wifi
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T122421Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0673b98b-c298-408a-8eff-cc12cf16f401
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170613T122438Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----version----
+language: sv-SE
+version: 1
+revision: 4a9c4ad4-763d-4374-8bcb-8a5405adb3e6
+
+----field----
+field: {FED03B81-87AA-4BB5-B9F1-E66A6EBEA40B}
+name: Facility Name
+key: facility name
+content-length: 4
+
+Wifi
+----field----
+field: {1A17988E-C045-4389-842B-417C51DA327D}
+name: Facility Icon
+key: facility icon
+content-length: 58
+
+<image mediaid="{70882A3C-D6E1-47F1-853B-D18868A55144}" />
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Wifi
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T094214Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4a9c4ad4-763d-4374-8bcb-8a5405adb3e6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170613T111621Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

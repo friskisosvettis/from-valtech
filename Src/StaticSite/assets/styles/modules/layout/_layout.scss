@@ -84,6 +84,10 @@ main {
     margin-bottom: 0;
 }
 
+.margin-bottom--space {
+    margin-bottom: $space-double;
+}
+
 // ----------- COLORS ----------- //
 .color--primary {
     color: $primary-color;

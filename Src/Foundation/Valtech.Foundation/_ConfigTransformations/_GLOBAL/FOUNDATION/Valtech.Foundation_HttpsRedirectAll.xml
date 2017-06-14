@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <!--- Rewrite rules for asset https redirect of all requests -->
+        <Item path="configuration/system.webServer/rewrite" action="InsertIfMissing">
+          <rewrite>
+            <rules/>
+          </rewrite>
+        </Item>
+        <Item path="configuration/system.webServer/rewrite/rules//rule[@name='Redirect_to_https']" action="InsertIfMissing">
+          <rule name="Redirect_to_https" enabled="true" patternSyntax="Wildcard" stopProcessing="true">
+            <match url="*" negate="false" />
+            <conditions logicalGrouping="MatchAll">
+              <add input="{HTTPS}" pattern="off" ignoreCase="true"/>
+              <!-- Prevent the following url patterns to be redirected to https -->
+              <!-- Make sure that TDS can get hold of /_dev/tdsservice.asmx and any further request beneath the /_dev/ folder -->
+              <add input="{REQUEST_URI}" negate="true" pattern="/_dev/*" ignoreCase="true" />
+              <!-- Make sure that TDS can get hold of /sitecore -->
+              <add input="{REQUEST_URI}" negate="true" pattern="/sitecore*" ignoreCase="true" />
+              <!-- Make sure that TDS can get hold of /<timestamp>-TdsTest.html as part of VS-TDS connection testing -->
+              <add input="{REQUEST_URI}" negate="true" pattern="/*-TdsTest.html" ignoreCase="true" />
+            </conditions>
+            <action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" redirectType="Found" />
+          </rule>
+        </Item>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

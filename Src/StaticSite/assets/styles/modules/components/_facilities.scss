@@ -2,6 +2,7 @@ $facility-height-small: $base-height*4;
 $facility-height: $base-height*6.5;
 
 .facilities {
+    position: relative;
     text-align: center;
     background: $color-black-05;
     height: $facility-height-small;
@@ -23,12 +24,12 @@ $facility-height: $base-height*6.5;
         }
     }
     &:before {
-        background: linear-gradient(to right, $color-black-05 0%, $color-dim-00 100%);
+        background-image: linear-gradient(to right, $color-black-05 0%, $color-dim-00 100%);
         top: 0;
         left: 0;
     }
     &:after {
-        background: linear-gradient(to left, $color-black-05 0%, $color-dim-00 100%);
+        background-image: linear-gradient(to left, $color-black-05 0%, $color-dim-00 100%);
         top: 0;
         right: 0;
     }

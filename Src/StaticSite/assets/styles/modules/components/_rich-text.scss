@@ -10,11 +10,11 @@
     overflow: hidden;
     min-height: $space-quad;
     max-width: $text-max-width;
-    margin: $space-double 0;
+    margin: 0 0 $space-double 0;
 
     @include medium-up {
         padding: 0 $space-quad;
-        margin: $space-double auto;
+        margin: 0 auto $space-double auto;
     }
 
     h2, h3, h4 {

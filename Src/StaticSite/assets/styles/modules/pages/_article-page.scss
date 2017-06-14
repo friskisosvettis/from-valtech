@@ -1,13 +1,1 @@
 ﻿
-.article-page {
-    // Add background to navigation when page do not have a hero area
-    .navigation__container {
-        background: $color-dim-50;
-        
-        // Add margin-top to the first container after the navigation on the article page
-        // in order for the navigation to be displayed above
-        + .container > .container--12 {
-            margin-top: $menu-height;
-        }
-    }
-}

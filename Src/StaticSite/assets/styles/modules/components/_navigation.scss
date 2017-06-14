@@ -213,7 +213,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             &:before {
                 position: absolute;
                 content: "";
-                background: linear-gradient($color-dim-00,$primary-color);
+                background: linear-gradient($primary-color-dim-10,$primary-color-dim-80);
                 height: 50px;
                 top: -50px;
                 width: 100%;

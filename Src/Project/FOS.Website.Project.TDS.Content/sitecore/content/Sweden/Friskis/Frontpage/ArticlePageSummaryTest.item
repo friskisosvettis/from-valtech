@@ -50,8 +50,8 @@ revision: aaac94e3-bf86-4dd6-85d9-11bb844bb26d
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
-name: Headline
-key: headline
+name: Page Heading Headline
+key: page heading headline
 content-length: 31
 
 ArticlePageSummaryTest Headline

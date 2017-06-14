@@ -96,6 +96,13 @@ p {
     margin: 0 0 $space 0;
 }
 
+.date {
+    color: $color-black-40;
+    &--primary {
+        color: $color-text;
+    }
+}
+
 .intro {
     margin-bottom: $space-double;
     font-size: rem(18px);

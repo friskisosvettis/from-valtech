@@ -47,7 +47,11 @@ namespace FOS.Website.Feature.Content.Controllers
 
         public ActionResult GetBasicHeadingView()
         {
-            BasicHeadingModel model = new BasicHeadingModel(Sitecore.Context.Item);
+            var model = new BasicHeadingModel()
+            {
+                BasicHeadingItem = Sitecore.Context.Item.As<IBasicHeadingItem>()
+            };
+
             return View(Constants.Views.Paths.BasicHeading, model);
         }
 

@@ -9,12 +9,12 @@
     return;
 }
 
-<ul class="navigation--second-level">
+<ul class="facilities">
     @foreach (var facility in Model.Facilities)
     {
-        <li class="text-align--center">
-            @facility.FacilityIcon.Render()
-            <p>@facility.FacilityName.RawValue</p>
+        <li>
+            <div class="image__container">@facility.FacilityIcon.Render()</div>
+            <p><small>@facility.FacilityName.RawValue</small></p>
         </li>
     }
 </ul>

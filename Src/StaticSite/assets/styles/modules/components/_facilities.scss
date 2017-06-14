@@ -1,0 +1,88 @@
+$facility-height-small: $base-height*4;
+$facility-height: $base-height*6.5;
+
+.facilities {
+    position: relative;
+    text-align: center;
+    background: $color-black-05;
+    height: $facility-height-small;
+    padding: $space $base-height*1;
+    margin: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    &:before, &:after {
+        content: "";
+        height: $facility-height-small;
+        width: $base-height*2.5;
+        position: absolute;
+
+        @include medium-up {
+            width: $base-height*4;
+            height: $facility-height;
+        }
+    }
+    &:before {
+        background-image: linear-gradient(to right, $color-black-05 0%, $color-dim-00 100%);
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        background-image: linear-gradient(to left, $color-black-05 0%, $color-dim-00 100%);
+        top: 0;
+        right: 0;
+    }
+
+    @include medium-up {
+        padding: $space $base-height*3;
+        height: $facility-height;
+    }
+
+    li {
+        text-align: center;
+        display: inline-block;
+        margin: $space 0;
+        width: $base-height*3;
+        vertical-align: top;
+        white-space: normal;
+
+        @include medium-up {
+            margin: $space-quad $space;
+        }
+    }
+    .img__container {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background: $color-white;
+        border-radius: 50%;
+        padding: $space;
+        margin-bottom: $space;
+        width: $base-height*1.5;
+        height: $base-height*1.5;
+
+        @include medium-up {
+            width: $base-height*2.5;
+            height: $base-height*2.5;
+        }
+    }
+     img {
+        margin: 0 auto;
+        width: $base-height;
+        height: $base-height;
+
+        @include medium-up {
+            width: $base-height*2;
+            height: $base-height*2;
+        }
+    }
+    p {
+        word-wrap: break-word;
+
+        @include medium-up {
+            word-wrap: normal;
+        }
+
+    }
+}

@@ -1,6 +1,30 @@
 ﻿
 @using FOS.Website.Feature.Content.Models
+@using Sitecore.ContentSearch.Pipelines.TranslateQuery
+@using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model BasicHeadingModel
 
-<h1>@Html.TextFor(m => m.BasicHeadingItem.Headline)</h1>
+@if (Model.BasicHeadingItem == null)
+{
+    <div class="container--relative">
+        @Html.Sitecore().Placeholder("breadcrumbs")
+    </div>
+    return;
+}
+
+<div class="hero hero--small">
+    <div class="hero__img">
+        @Model.BasicHeadingItem.PageHeadingImage.Render()
+    </div>
+    <div class=“hero__container”></div>
+</div>
+<div class="container--relative">
+    @Html.Sitecore().Placeholder("breadcrumbs")
+    <div class="container">
+        <div class="container--12 text-align--center">
+            <h1>@Model.BasicHeadingItem.PageHeadingHeadline.Render()</h1>
+            <p class="intro">@Model.BasicHeadingItem.PageHeadingIntroduction.Render()</p>            
+        </div>
+    </div>
+</div>

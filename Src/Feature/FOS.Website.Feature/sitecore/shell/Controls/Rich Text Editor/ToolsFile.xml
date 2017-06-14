@@ -176,8 +176,8 @@
 	<classes>
 	<class name="Note" value=".note"/>
 	<class name="Introduction" value=".intro"/>
-	<class name="List - tick" value=".list--tick"/>
-	<class name="List - goto" value=".list--goto"/>
+	<class name="List tick" value=".list--tick"/>
+	<class name="List goto" value=".list--goto"/>
 	</classes>
 	<dialogParameters></dialogParameters>
 	<languages></languages>

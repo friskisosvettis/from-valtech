@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {C02FCA52-717C-40D7-BEA9-0AE15FA39CE7}
+database: master
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Redirect Manager/Tags/Default
+parent: {E2115D53-49C2-487A-A955-45FE7791971F}
+name: Default
+master: {00000000-0000-0000-0000-000000000000}
+template: {854BA861-63EA-4A0C-8C7B-541E9A7EC4C1}
+templatekey: Tags Definition
+created: 20161005T215500Z
+
+----field----
+field: {42F77151-098F-496A-94CF-590B7EDEEABE}
+name: Tags
+key: tags
+content-length: 77
+
+{73DF0E8D-17FC-4715-B2EB-FA60349C4FDF}|{67D3BB0D-8883-474A-B6D4-D7CB20B0D1AC}
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 38
+
+{6F0688E4-7B16-482F-845B-35836FD15D14}
+----version----
+language: en
+version: 1
+revision: 913708b7-b7f0-4ac9-845a-22bbf64ce922
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161005T215500Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+913708b7-b7f0-4ac9-845a-22bbf64ce922
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161005T221340Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

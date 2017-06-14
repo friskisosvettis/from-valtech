@@ -58,9 +58,9 @@ button, input, optgroup, select, textarea {
 		margin-top:20px;
 	}
 
-    .intro {
-      font-size: 1.375rem;
-      line-height: 1.4; }
+.intro {
+    font-size: 1.375rem;
+    line-height: 1.4; }
 
 .note {
   color: #e45563;
@@ -100,21 +100,24 @@ ul li {
     background-position: 0 50%;
     background-repeat: no-repeat;
     padding-left: 2rem; }
-	
-ul.list--tick li {
+
+.list--tick {
+}
+
+.list--tick li {
     background-image: url("/assets/images/icon_tick.svg"); 
     background-position: 0 50%;
     background-repeat: no-repeat;}
 
-ul.list--goto li {
+.list--goto li {
     background-image: url("/assets/images/icon_arrow-right-red.svg"); 
     background-position: 0 50%;
     background-repeat: no-repeat;}
 
-ul.list--goto {
+.list--goto {
     background-color: #FCE7E9;
     background-color: #FDF8F8;
-    padding: 60px; }
-    ul.list--goto a {
+}
+.list--goto a {
       color: #383232; }
 

@@ -981,6 +981,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="robots.txt" />
     <Content Include="_ConfigTransformations\LOCAL\_ENVIRONMENT\FOUNDATION\Valtech.Foundation_debug.xml">
       <SubType>Designer</SubType>
     </Content>

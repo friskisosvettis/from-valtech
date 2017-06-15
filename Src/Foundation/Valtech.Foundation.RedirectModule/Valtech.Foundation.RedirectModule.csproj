@@ -58,6 +58,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dependencies\SharedSource.RedirectModule.dll" />
     <Content Include="readme.md" />
     <Content Include="App_Config\Include\SharedSource.RedirectModule.config" />
     <None Include="Web.config" />

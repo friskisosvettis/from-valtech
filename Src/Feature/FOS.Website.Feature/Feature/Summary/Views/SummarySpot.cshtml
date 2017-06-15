@@ -9,12 +9,7 @@
 
 @model SummarySpotModel
 
-@* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE *@
-@{
-    //temporary news/events
-    var news = false;
-    var events = false;
-}
+@* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE / EVENT / NEWS PAGE*@
 <div class="container">
     <div class="container--12">
         <div class="teaser teaser--full">
@@ -37,14 +32,28 @@
                         @Model.SummaryItem.SummaryHeading.Render()
                     </h3>
                 }
-                @if (news)
+                @if (Model.EventItem != null)
                 {
-                    <p><small class="date icon--mini icon__event">2014 01 22</small></p>
-                    <p><small class="date icon--mini  icon__pin-map">Ölandsgatan 38</small></p>
+                    if (Model.EventItem.EventStartDate.HasValue)
+                    {
+                        <p>
+                            <small class="date icon--mini icon__event">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</small>
+                            @if (Model.EventItem.EventEndDate.HasValue)
+                            {
+                                <small class="date"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventEndDate.Value.ToString("t")</small>
+                            }
+                        </p>
+                    }
+                    if (Model.EventItem.EventLocation.HasValue)
+                    {
+                        <p><small class="date icon--mini  icon__pin-map">@Model.EventItem.EventLocation</small></p>
+                    }
                 }
-                @if (events)
+                @if (Model.NewsItem != null)
                 {
-                    <p><small class="date">25 augusti 2017</small></p>
+                <p>
+                    <small class="date">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                </p>
                 }
                 @if (Model.SummaryItem.SummaryText.HasValue)
                 {

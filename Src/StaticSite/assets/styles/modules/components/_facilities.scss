@@ -2,21 +2,20 @@ $facility-height-small: $base-height*4;
 $facility-height: $base-height*6.5;
 
 .facilities {
-    position: relative;
     text-align: center;
     background: $color-black-05;
     height: $facility-height-small;
-    padding: $space $base-height*1;
+    padding: 0 $base-height*1;
     margin: 0;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
 
     &:before, &:after {
+        position: absolute;
         content: "";
         height: $facility-height-small;
         width: $base-height*2.5;
-        position: absolute;
 
         @include medium-up {
             width: $base-height*4;
@@ -25,12 +24,10 @@ $facility-height: $base-height*6.5;
     }
     &:before {
         background-image: linear-gradient(to right, $color-black-05 0%, $color-dim-00 100%);
-        top: 0;
         left: 0;
     }
     &:after {
         background-image: linear-gradient(to left, $color-black-05 0%, $color-dim-00 100%);
-        top: 0;
         right: 0;
     }
 

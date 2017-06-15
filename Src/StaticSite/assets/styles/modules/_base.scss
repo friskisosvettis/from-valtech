@@ -27,6 +27,7 @@ $secondary-color: #E7F5ED;      // Light green
 $cta-color: #F8F7EA;            // Yellow
 $primary-color-dark: #BE0621 ;   // Dark red
 
+$primary-color-dim-10: rgba(227, 25, 55, 0.1);
 $primary-color-dim-80: rgba(227, 25, 55, 0.8);
 $primary-color-dim-90: rgba(227, 25, 55, 0.9);
 $primary-color-dim-95: rgba(227, 25, 55, 0.95);
@@ -49,7 +50,7 @@ $color-black-80: #333333;
 $color-black-90: #262626;
 $color-black: #000;
 
-$color-dim-00: rgba(0,0,0,0);
+$color-dim-00: rgba(255,255,255,0);
 $color-dim-30: rgba(0,0,0,0.3);
 $color-dim-40: rgba(0,0,0,0.4);
 $color-dim-50: rgba(0,0,0,0.5);

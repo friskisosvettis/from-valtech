@@ -9,18 +9,19 @@
     return;
 }
 
-<div class="hero hero--overlay">
+<div class="hero hero--overlay hero--small">
     <div class="hero__img">
         @Model.HeadingTrainingCenterItem.Image.Render()
     </div>
     <div class="hero__container">
         <div class="hero__content">
             <div class="container">
-                <div class="container--8">
+                <div class="container--12 text-align--center">
                     <h1>@Model.TrainingCenterName</h1>
                     <p class="address icon--small icon__pin">@Model.TrainingCenterAddress</p>
                 </div>
-                <div class="container--4">
+                @* OUTCOMENTED - not used design will be changed so this will be removeed *@
+                @*<div class="container--4">
                     <ul class="hero__infobox">
                         @if (Model.HeadingTrainingCenterItem.OpeningHours.HasValue)
                         {
@@ -35,7 +36,7 @@
                             <li><a class="icon__background icon__background--medium icon__phone" href="tel:mailto:@Model.HeadingTrainingCenterItem.PhoneNumber.RawValue">@Model.HeadingTrainingCenterItem.PhoneNumber.Render(false)</a></li>
                         }
                     </ul>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>

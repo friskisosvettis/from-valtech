@@ -98,8 +98,13 @@ p {
 
 .date {
     color: $color-black-40;
+
     &--primary {
         color: $color-text;
+    }
+
+    &--container {
+        margin-bottom: $space-quad;
     }
 }
 

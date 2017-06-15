@@ -58,7 +58,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dependencies\SharedSource.RedirectModule.dll" />
+    <Content Include="Dependencies\SharedSource.RedirectModule.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="readme.md" />
     <Content Include="App_Config\Include\SharedSource.RedirectModule.config" />
     <None Include="Web.config" />

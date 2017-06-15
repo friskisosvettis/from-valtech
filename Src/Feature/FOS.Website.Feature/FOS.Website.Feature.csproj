@@ -1071,6 +1071,7 @@
     <Content Include="Feature\Navigation\Views\BreadCrumb.cshtml" />
     <Content Include="Feature\Content\Views\Facilities.cshtml" />
     <Content Include="Feature\Summary\Views\SummaryListCompact.cshtml" />
+    <Content Include="Feature\Navigation\Views\Partial\CanonicalUrlRenderer.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

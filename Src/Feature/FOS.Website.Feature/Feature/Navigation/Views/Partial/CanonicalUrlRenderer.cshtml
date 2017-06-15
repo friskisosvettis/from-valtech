@@ -1,0 +1,15 @@
+﻿@using Synthesis;
+@using FOS.Website.Feature.ComponentBlock
+@using Sitecore.Links
+@{
+    var originalItem = Sitecore.Context.Item.As<IOriginalItemItem>();
+
+    if (originalItem != null &&
+        originalItem.OriginalItemLink != null &&
+        originalItem.OriginalItemLink.HasValue &&
+        originalItem.OriginalItemLink.Target != null &&
+        !originalItem.OriginalItemLink.Target.Id.Equals(Sitecore.Context.Item.ID))
+    {
+        <link rel="canonical" href="@LinkManager.GetItemUrl(originalItem.OriginalItemLink.Target.InnerItem)" />
+    }
+}

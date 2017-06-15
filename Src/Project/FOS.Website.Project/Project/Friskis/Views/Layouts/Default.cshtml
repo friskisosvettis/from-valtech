@@ -1,4 +1,7 @@
-﻿@using Sitecore.Mvc
+﻿@using FOS.Website.Concrete.Feature.ComponentBlock
+@using Sitecore.ExperienceContentManagement.Administration.Helpers.SupportPackage.Diagnostics.Base
+@using Sitecore.Links
+@using Sitecore.Mvc
 @using Valtech.Foundation
 @* @using Sitecore.Mvc.Analytics.Extensions *@
 @{
@@ -27,6 +30,18 @@
     @* @Html.Sitecore().VisitorIdentification() *@
 
     <link rel="stylesheet" href="@Valtech.Foundation.Assets.Fingerprint.Add("/assets/styles/style.css")" media="all" />
+    
+    @{
+        var originalItem = new OriginalItem(Sitecore.Context.Item);
+        if(originalItem.OriginalItemLink != null && 
+            originalItem.OriginalItemLink.HasValue && 
+            originalItem.OriginalItemLink.Target != null && 
+            !originalItem.OriginalItemLink.Target.Id.Equals(Sitecore.Context.Item.ID))
+        {
+            <link rel="canonical" href="@LinkManager.GetItemUrl(originalItem.OriginalItemLink.Target.InnerItem)" />
+        }
+    }
+
 </head>
 <body class="@extraBodyClasses">
 

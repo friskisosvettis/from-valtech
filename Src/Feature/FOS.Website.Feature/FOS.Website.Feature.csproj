@@ -1072,6 +1072,8 @@
     <Content Include="Feature\Content\Views\Facilities.cshtml" />
     <Content Include="Feature\Summary\Views\SummaryListCompact.cshtml" />
     <Content Include="Feature\Navigation\Views\Partial\CanonicalUrlRenderer.cshtml" />
+    <Content Include="Feature\HtmlDocumentRenderings\Views\Web.config" />
+    <Content Include="Feature\HtmlDocumentRenderings\Views\NoRobotsMetaHeader.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1128,6 +1130,8 @@
     <Compile Include="Feature\Document\Controllers\DocumentController.cs" />
     <Compile Include="Feature\Document\Data\DocumentSynthesisModels.cs" />
     <Compile Include="Feature\Event\Data\EventSynthesisModels.cs" />
+    <Compile Include="Feature\HtmlDocumentRenderings\Constants.cs" />
+    <Compile Include="Feature\HtmlDocumentRenderings\Controllers\NoRobotsMetaHeader.cs" />
     <Compile Include="Feature\Identity\Constants.cs" />
     <Compile Include="Feature\Identity\Controllers\FooterController.cs" />
     <Compile Include="Feature\Navigation\Constants.cs" />

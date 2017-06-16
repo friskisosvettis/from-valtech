@@ -43,7 +43,9 @@ namespace FOS.Website.Feature.Summary.Models
 
         public SummarySpotModel(Item item) : this()
         {
-                SummaryItem = item.As<ISummaryItem>(); 
+            SummaryItem = item.As<ISummaryItem>();
+            NewsItem = item.As<INewsItem>();
+            EventItem = item.As<IEventItem>();
         }
 
         // Used for generic items

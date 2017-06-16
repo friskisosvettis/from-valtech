@@ -93,13 +93,13 @@
                                                     {
                                                         <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
                                                     }
-                                                    <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>-
+                                                    <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
                                                 </p>
                                             }
                                             @if (summarySpot.NewsItem != null)
                                             {
                                                 <p>
-                                                    <small class="date icon--mini icon__event-light">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                                    <small class="date icon--mini icon__event-light">- @summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
                                                 </p>
                                             }
                                             @if (summarySpot.SummaryItem.SummaryText.HasValue)

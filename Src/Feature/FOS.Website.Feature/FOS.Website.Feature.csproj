@@ -1074,6 +1074,9 @@
     <Content Include="Feature\Navigation\Views\Partial\CanonicalUrlRenderer.cshtml" />
     <Content Include="Feature\HtmlDocumentRenderings\Views\Web.config" />
     <Content Include="Feature\HtmlDocumentRenderings\Views\NoRobotsMetaHeader.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\RichText.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\Web.config" />
+    <Content Include="Feature\ContentBlocks\Views\Heading.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1093,6 +1096,11 @@
     <Compile Include="Feature\ComponentBlock\Controllers\ComponentBlockController.cs" />
     <Compile Include="Feature\ComponentBlock\Data\ComponentBlockSynthesisModels.cs" />
     <Compile Include="Feature\ComponentBlock\Models\ComponentBlockModel.cs" />
+    <Compile Include="Feature\ContentBlocks\Constants.cs" />
+    <Compile Include="Feature\ContentBlocks\Controllers\ContentBlockController.cs" />
+    <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\ContentBlockModelBase.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteDataController.cs" />
     <Compile Include="Feature\Content\Controllers\FooterController.cs" />

@@ -20,7 +20,6 @@ namespace FOS.Website.Feature.Navigation.Controllers
         public ActionResult GetNavigationFooterView()
         {
             var activeItem = Sitecore.Context.Item;
-            NavigationBarModel model = null;
             var navigationRoot = activeItem.ClosestAscendantItemOfType<INavigationRootPageFlagItem>();
             if (navigationRoot != null)
             {

@@ -2,8 +2,8 @@
 version: 1
 id: {F292FBF3-DA8B-44D7-A89F-3A56E7DC4DEA}
 database: master
-path: /sitecore/media library/temp_default_mood_footer
-parent: {3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}
+path: /sitecore/media library/Friskis Default Images/temp_default_mood_footer
+parent: {740B7859-C2AD-4190-8C91-2C0462D6B99F}
 name: temp_default_mood_footer
 master: {00000000-0000-0000-0000-000000000000}
 template: {DAF085E8-602E-43A6-8299-038FF171349F}
@@ -1415,8 +1415,15 @@ sitecore\Admin
 ----version----
 language: en
 version: 1
-revision: 4fcb5c55-c1bf-407c-bbcd-e97f00c4b861
+revision: 12c46531-e7ab-409c-81bc-a98f12433286
 
+----field----
+field: {65885C44-8FCD-4A7F-94F1-EE63703FE193}
+name: Alt
+key: alt
+content-length: 25
+
+default-image-mood-footer
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -1444,14 +1451,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4fcb5c55-c1bf-407c-bbcd-e97f00c4b861
+12c46531-e7ab-409c-81bc-a98f12433286
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170602T154238Z
+20170616T124241Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

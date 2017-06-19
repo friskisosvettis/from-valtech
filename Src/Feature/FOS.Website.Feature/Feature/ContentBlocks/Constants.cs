@@ -13,6 +13,7 @@ namespace FOS.Website.Feature.ContentBlocks
             {
                 public const string RichText = "/Feature/ContentBlocks/Views/RichText.cshtml";
                 public const string ImageRichText = "/Feature/ContentBlocks/Views/ImageAndRichText.cshtml";
+                public const string Video = "/Feature/ContentBlocks/Views/Video.cshtml";
             }
         }
     }

@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {BF9C2070-D1FF-4F77-B373-011ED121FE45}
+id: {34C0E5D4-DEF0-4239-8679-59EB6D4BE786}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Data/Heading/Heading
-parent: {2F8D1730-8E48-4D2A-AC96-4547DD5CDC02}
-name: Heading
+path: /sitecore/templates/Feature/ContentBlocks/Data/RichText/Content Block
+parent: {7A6E5726-35AD-4789-BE04-ED8575247C03}
+name: Content Block
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
-created: 20170615T131400Z
+created: 20170615T123737Z
 
 ----version----
 language: en
 version: 1
-revision: 04995958-f206-43fe-9ebc-ec69e0fa8a48
+revision: e7a83e95-3b76-416d-9eb3-062704a7c54e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,21 +28,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170615T131400Z
+20170615T123737Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-04995958-f206-43fe-9ebc-ec69e0fa8a48
+e7a83e95-3b76-416d-9eb3-062704a7c54e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170615T144335Z
+20170616T110851Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

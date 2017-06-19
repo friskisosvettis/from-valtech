@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {34C0E5D4-DEF0-4239-8679-59EB6D4BE786}
+id: {0FC5F86D-3014-48B4-9E36-5127B3AD4F08}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Data/RichText/Content Block Rich Text
-parent: {7A6E5726-35AD-4789-BE04-ED8575247C03}
-name: Content Block Rich Text
+path: /sitecore/templates/Feature/ContentBlocks/Blocks
+parent: {128A681B-610D-42EF-9B42-73DA83D0F5AA}
+name: Blocks
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
-created: 20170615T123737Z
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
+created: 20170616T111051Z
 
 ----version----
 language: en
 version: 1
-revision: 7ec9ce16-83d0-4f93-9567-aa2b1d6dee65
+revision: d2e445f9-efa2-4935-a010-6ce960e8e3c5
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,21 +28,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170615T123737Z
+20170616T111051Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-7ec9ce16-83d0-4f93-9567-aa2b1d6dee65
+d2e445f9-efa2-4935-a010-6ce960e8e3c5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170615T145345Z
+20170616T111051Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

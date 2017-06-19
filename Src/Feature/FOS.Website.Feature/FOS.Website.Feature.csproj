@@ -1077,6 +1077,7 @@
     <Content Include="Feature\ContentBlocks\Views\RichText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Web.config" />
     <Content Include="Feature\ContentBlocks\Views\Heading.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\ImageAndRichText.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1099,7 +1100,9 @@
     <Compile Include="Feature\ContentBlocks\Constants.cs" />
     <Compile Include="Feature\ContentBlocks\Controllers\ContentBlockController.cs" />
     <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />
+    <Compile Include="Feature\ContentBlocks\Helpers\RenderingHelper.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ContentBlockModelBase.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\ImageAndRichTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteDataController.cs" />

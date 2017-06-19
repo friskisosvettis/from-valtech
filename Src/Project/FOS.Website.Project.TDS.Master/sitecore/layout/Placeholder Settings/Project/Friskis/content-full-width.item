@@ -21,9 +21,9 @@ content-full-width
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 116
+content-length: 77
 
-{715D20E7-43F3-4E0F-BA8B-4BE1B6704C45}|{27B84146-6E73-4A86-9D7E-F7DCBCD22056}|{A05BDE92-B873-4619-B54E-15CB45D8FE9F}
+{715D20E7-43F3-4E0F-BA8B-4BE1B6704C45}|{27B84146-6E73-4A86-9D7E-F7DCBCD22056}
 ----version----
 language: en
 version: 1
@@ -74,7 +74,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 69aabe4e-342b-4d7f-bbbc-15617cb22eb2
+revision: a3d9de33-ec4e-4d21-92de-49bd5ed5aac4
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -103,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-69aabe4e-342b-4d7f-bbbc-15617cb22eb2
+a3d9de33-ec4e-4d21-92de-49bd5ed5aac4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170515T092007Z
+20170619T092429Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

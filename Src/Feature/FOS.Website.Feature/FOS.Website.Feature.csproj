@@ -1050,7 +1050,6 @@
     <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.AutoRegenerate.config" />
-    <Content Include="Feature\Content\Views\Video.cshtml" />
     <Content Include="Feature\Content\Views\AutoCompleteModuleView.cshtml" />
     <Content Include="Feature\Content\Views\HeadingTrainingCenterView.cshtml" />
     <Content Include="Feature\Summary\Views\Web.config" />
@@ -1077,6 +1076,7 @@
     <Content Include="Feature\ContentBlocks\Views\RichText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Web.config" />
     <Content Include="Feature\ContentBlocks\Views\Heading.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\Video.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1101,6 +1101,7 @@
     <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ContentBlockModelBase.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />
     <Compile Include="Feature\Content\Controllers\AutoCompleteDataController.cs" />
     <Compile Include="Feature\Content\Controllers\FooterController.cs" />
@@ -1125,7 +1126,6 @@
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
     <Compile Include="Feature\Content\Models\TrainingCenterContactFooterModel.cs" />
-    <Compile Include="Feature\Content\Models\VideoModel.cs" />
     <Compile Include="Feature\Content\Models\WideImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />

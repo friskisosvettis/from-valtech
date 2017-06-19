@@ -27,6 +27,22 @@
 }
 
 // container specific styling for the rich text component
-.container--6 .rich-text {
-    padding: 0;
+.container--6 {
+    .rich-text {
+        padding: 0;
+    }
+}
+@include medium-up {
+    .container {
+        :first-child:not(.container--12) {
+            .rich-text {
+                padding-right: 20px;
+            }
+        }
+       :last-child:not(.container--12) {
+            .rich-text {
+                padding-left: 20px;
+            }
+        }
+    }
 }

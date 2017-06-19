@@ -25,3 +25,8 @@
         margin-bottom: $space !important;
     }
 }
+
+// container specific styling for the rich text component
+.container--6 .rich-text {
+    padding: 0;
+}

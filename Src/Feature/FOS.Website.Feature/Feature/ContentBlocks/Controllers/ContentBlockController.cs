@@ -18,5 +18,12 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.ImageRichText, model);
         }
+
+        public ActionResult GetVideoView()
+        {
+            var model = new VideoModel();
+
+            return View(Constants.Views.Paths.Video, model);
+        }
     }
 }

@@ -4,12 +4,19 @@
 * @section Setup
 * @author Veronika Jeppsson
 */
+$media-container-height: rem(9 * $base-height);        //360px
 
 .media-container {
     position: relative;
     width: 100%;
     display: block;
-    padding-bottom: $space-double;
+    margin-bottom: $space-double;
+
+    &.media-container--360 {
+        height: $media-container-height !important;
+        padding-bottom: $media-container-height; /* 16:9 ratio */
+        overflow: hidden;
+    }
 
     &.media-container--16x9 {
         height: 0 !important;

@@ -93,13 +93,16 @@
                                                     {
                                                         <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
                                                     }
-                                                    <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>-
+                                                    @if (containerClass == "container--12")
+                                                    {
+                                                        <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
+                                                    }
                                                 </p>
                                             }
                                             @if (summarySpot.NewsItem != null)
                                             {
                                                 <p>
-                                                    <small class="date icon--mini icon__event-light">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                                    <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                                                 </p>
                                             }
                                             @if (summarySpot.SummaryItem.SummaryText.HasValue)
@@ -139,20 +142,20 @@
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p>
-                                                <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date--primary icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
-                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                    <small class="date--primary"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
                                                 }
                                             </p>
                                             <p>
-                                                <small class="date icon--mini  icon__pin-map">@summarySpot.EventItem.EventLocation</small>
+                                                <small class="date--primary icon--mini  icon__pin-map">@summarySpot.EventItem.EventLocation</small>
                                             </p>
                                         }
                                         if (summarySpot.NewsItem != null)
                                         {
                                             <p>
-                                                <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                                <small class="date--primary">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
                                             </p>
                                         }
                                         if (summarySpot.SummaryItem.SummaryText.HasValue)

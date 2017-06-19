@@ -61,6 +61,18 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
             get;
         }
     }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Video template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F717621B-4257-45DB-AECC-902A6F682FDB}", "tTxIj54zAqtGn7dLJb7OjNdyBa8=", "Valtech.Foundation.Synthesis")]
+    public partial interface IVideoItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the YoutubeID field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("youtubeid")]
+        Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
+            get;
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -375,6 +387,71 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new RichText(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Video template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Video : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.IVideoItem {
+        
+        private Synthesis.FieldTypes.TextField _youtubeID;
+        
+        public Video(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Video(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Video";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{F717621B-4257-45DB-AECC-902A6F682FDB}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the YoutubeID field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("youtubeid")]
+        public Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
+            get {
+                if (_youtubeID == null) {
+                    _youtubeID = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{54D306E0-F243-4DBE-859D-248BBEC1A7D0}"], "/sitecore/templates/Feature/ContentBlocks/Data/Video", "YoutubeID"), this.GetSearchFieldValue("youtubeid"));
+                }
+                return _youtubeID;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class VideoInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{F717621B-4257-45DB-AECC-902A6F682FDB}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Video(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Video(searchFields);
         }
     }
 }

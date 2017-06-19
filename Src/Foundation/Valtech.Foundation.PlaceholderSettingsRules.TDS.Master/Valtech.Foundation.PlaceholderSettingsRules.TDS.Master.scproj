@@ -61,19 +61,19 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\PlaceholderRules.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -125,7 +125,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Tags.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Tags\PlaceholderRules.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>

@@ -38,6 +38,13 @@ key: datasource template
 content-length: 57
 
 /sitecore/templates/Project/Friskis/Content Types/Gym Map
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 29
+
+Network/16x16/environment.png
 ----version----
 language: en
 version: 1
@@ -88,8 +95,15 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 5519d5f4-caf1-4ce4-922d-e0d0eb20d3a6
+revision: 374ecdbb-c590-4e93-960f-488cae7007da
 
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 19
+
+Träningscenterkarta
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -117,14 +131,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5519d5f4-caf1-4ce4-922d-e0d0eb20d3a6
+374ecdbb-c590-4e93-960f-488cae7007da
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170426T123500Z
+20170619T123656Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

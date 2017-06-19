@@ -43,6 +43,9 @@ namespace FOS.Website.Feature.Content
 
                 //ProximityView
                 public const string ProximityView = "/Feature/Content/Views/ProximityView.cshtml";
+
+                //EditorInfo
+                public const string EditorInfo = "/Feature/Content/Views/EditorInfo.cshtml";
             }
         }
     }

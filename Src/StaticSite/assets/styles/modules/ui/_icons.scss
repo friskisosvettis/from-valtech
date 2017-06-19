@@ -65,12 +65,28 @@
             margin-right: $space;
             vertical-align: middle;
         }
+        &--after {
+            &:after {
+                content: "";
+                display: inline-block;
+                background-repeat: no-repeat;
+                margin-left: $space;
+                vertical-align: middle;
+            }
+        }
     }
     &--mini {
         &:before {
             background-size: $icon-size-mini $icon-size-mini;
             height: $icon-size-mini;
             width: $icon-size-mini;
+        }
+        &--after {
+            &:after {
+                background-size: $icon-size-mini $icon-size-mini;
+                height: $icon-size-mini;
+                width: $icon-size-mini;
+            }
         }
     }
     &--small {
@@ -172,6 +188,26 @@
             background-image: url('/assets/images/icon_goto-circle-red.svg');
         }
     }
+
+    &__goto--after {
+        &:after {
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+        }
+    }
+    &__expand--after {
+        &:after {
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+            transform: rotate(90deg);
+            @include transition(rotate, 0.35s);
+        }
+
+        &.active {
+            &:after {
+                transform: rotate(270deg);
+                @include transition(rotate, 0.35s);
+            }
+        }
+    }
 }
 
 .active {
@@ -191,14 +227,14 @@
 }
 .icon__link {
     &:before {
-    content: "";
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: $icon-size;
-    width: $icon-size;
-    margin: 0 auto;
-    display: block;
+        content: "";
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: $icon-size;
+        width: $icon-size;
+        margin: 0 auto;
+        display: block;
 
         @include medium-up {
             display: inline-block;

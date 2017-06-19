@@ -26,7 +26,8 @@ var devbridgeAutocomplete = require('./modules/autocomplete'),
 	maps = require('./modules/maps'),
 	tabs = require('./modules/tabs'),
 	navigation = require('./modules/navigation'),
-	video = require('./modules/video');
+	video = require('./modules/video'),
+	accordion = require('./modules/accordion');
 
 $(function () {
 	fitImages.init();
@@ -36,6 +37,7 @@ $(function () {
 	navigation.init();
 	devbridgeAutocomplete.init();
 	video.init();
+	accordion.init();
 
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

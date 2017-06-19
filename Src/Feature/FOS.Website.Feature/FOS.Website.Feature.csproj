@@ -1078,6 +1078,7 @@
     <Content Include="Feature\ContentBlocks\Views\Heading.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\ImageAndRichText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Video.cshtml" />
+    <Content Include="Feature\Content\Views\EditorInfo.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1118,6 +1119,7 @@
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
     <Compile Include="Feature\Content\Models\AssociationNotMigratedModel.cs" />
+    <Compile Include="Feature\Content\Models\EditorInfoModel.cs" />
     <Compile Include="Feature\Content\Models\FacilitiesModel.cs" />
     <Compile Include="Feature\Content\Models\MoodFooterModel.cs" />
     <Compile Include="Feature\Content\Models\ContactFooterModel.cs" />

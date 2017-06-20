@@ -1080,6 +1080,7 @@
     <Content Include="Feature\ContentBlocks\Views\Video.cshtml" />
     <Content Include="Feature\Content\Views\EditorInfo.cshtml" />
     <Content Include="Feature\TrainingForm\Views\TrainingFormList.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\LinkBlock.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1104,6 +1105,7 @@
     <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />
     <Compile Include="Feature\ContentBlocks\Helpers\RenderingHelper.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ContentBlockModelBase.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\LinkBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ImageAndRichTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\VideoModel.cs" />

@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using FOS.Website.Feature.ContentBlocks.Data;
+using FOS.Website.Feature.ContentBlocks.Helpers;
 using FOS.Website.Feature.ContentBlocks.Models;
 
 namespace FOS.Website.Feature.ContentBlocks.Controllers
@@ -17,6 +19,17 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
             var model = new ImageAndRichTextModel();
 
             return View(Constants.Views.Paths.ImageRichText, model);
+        }
+
+        public ActionResult GetLinkBlockView()
+        {
+            var model = new LinkBlockModel()
+            {
+                LinkBlock  = RenderingHelper.GetRenderingContextOrDefault<ILinkItem>(),
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+            };
+
+            return View(Constants.Views.Paths.LinkBlock, model);
         }
 
         public ActionResult GetVideoView()

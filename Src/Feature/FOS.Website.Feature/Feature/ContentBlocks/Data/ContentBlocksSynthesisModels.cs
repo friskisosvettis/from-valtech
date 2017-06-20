@@ -22,6 +22,12 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
             get;
         }
     }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}", "KN1SMvNfluL4CXXZk51WM8Pa/PY=", "Valtech.Foundation.Synthesis")]
+    public partial interface IManualLinkCTAItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.ILinkItem, global::FOS.Website.Feature.ContentBlocks.Data.IImageItem {
+    }
 }
 namespace FOS.Website.Feature.ContentBlocks.Data {
     
@@ -46,6 +52,30 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
         /// <summary>Represents the Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("image")]
         Synthesis.FieldTypes.Interfaces.IImageField Image1 {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Link template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{FA69C4B3-2B4A-4A48-89E7-8430DE6DEB86}", "chu4E+zWwcwrWFpWkMcbhS1jwuE=", "Valtech.Foundation.Synthesis")]
+    public partial interface ILinkItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Link Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_heading")]
+        Synthesis.FieldTypes.Interfaces.ITextField LinkHeading {
+            get;
+        }
+        
+        /// <summary>Represents the Link Intro field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_intro")]
+        Synthesis.FieldTypes.Interfaces.ITextField LinkIntro {
+            get;
+        }
+        
+        /// <summary>Represents the Link Target field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_target")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField LinkTarget {
             get;
         }
     }
@@ -191,6 +221,123 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
             return new ImageAndText(searchFields);
         }
     }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class ManualLinkCTA : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IManualLinkCTAItem {
+        
+        private Synthesis.FieldTypes.TextField _heading1;
+        
+        private Synthesis.FieldTypes.ImageField _image1;
+        
+        private Synthesis.FieldTypes.TextField _linkHeading;
+        
+        private Synthesis.FieldTypes.TextField _linkIntro;
+        
+        private Synthesis.FieldTypes.HyperlinkField _linkTarget;
+        
+        public ManualLinkCTA(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public ManualLinkCTA(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Manual Link CTA";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading1 {
+            get {
+                if (_heading1 == null) {
+                    _heading1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading1;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image1 {
+            get {
+                if (_image1 == null) {
+                    _image1 = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{61F71B9B-9ED2-45A9-9003-B4A3D81056B4}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image1;
+            }
+        }
+        
+        /// <summary>Represents the Link Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LinkHeading {
+            get {
+                if (_linkHeading == null) {
+                    _linkHeading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{231A37D9-1212-4904-9A3E-0886F4D694A6}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA", "Link Heading"), this.GetSearchFieldValue("link_heading"));
+                }
+                return _linkHeading;
+            }
+        }
+        
+        /// <summary>Represents the Link Intro field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_intro")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LinkIntro {
+            get {
+                if (_linkIntro == null) {
+                    _linkIntro = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{AD86A76E-DA99-4B6E-B8E8-C44AAD2E6177}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA", "Link Intro"), this.GetSearchFieldValue("link_intro"));
+                }
+                return _linkIntro;
+            }
+        }
+        
+        /// <summary>Represents the Link Target field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_target")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField LinkTarget {
+            get {
+                if (_linkTarget == null) {
+                    _linkTarget = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{784A2993-0FE3-4F65-8172-ABC04E6E8F7D}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA", "Link Target"), this.GetSearchFieldValue("link_target"));
+                }
+                return _linkTarget;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ManualLinkCTAInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new ManualLinkCTA(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new ManualLinkCTA(searchFields);
+        }
+    }
 }
 namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
     
@@ -322,6 +469,97 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new Image(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Link template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Link : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.ILinkItem {
+        
+        private Synthesis.FieldTypes.TextField _linkHeading;
+        
+        private Synthesis.FieldTypes.TextField _linkIntro;
+        
+        private Synthesis.FieldTypes.HyperlinkField _linkTarget;
+        
+        public Link(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Link(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Link";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{FA69C4B3-2B4A-4A48-89E7-8430DE6DEB86}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Link Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LinkHeading {
+            get {
+                if (_linkHeading == null) {
+                    _linkHeading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{231A37D9-1212-4904-9A3E-0886F4D694A6}"], "/sitecore/templates/Feature/ContentBlocks/Data/Link", "Link Heading"), this.GetSearchFieldValue("link_heading"));
+                }
+                return _linkHeading;
+            }
+        }
+        
+        /// <summary>Represents the Link Intro field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_intro")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LinkIntro {
+            get {
+                if (_linkIntro == null) {
+                    _linkIntro = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{AD86A76E-DA99-4B6E-B8E8-C44AAD2E6177}"], "/sitecore/templates/Feature/ContentBlocks/Data/Link", "Link Intro"), this.GetSearchFieldValue("link_intro"));
+                }
+                return _linkIntro;
+            }
+        }
+        
+        /// <summary>Represents the Link Target field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link_target")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField LinkTarget {
+            get {
+                if (_linkTarget == null) {
+                    _linkTarget = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{784A2993-0FE3-4F65-8172-ABC04E6E8F7D}"], "/sitecore/templates/Feature/ContentBlocks/Data/Link", "Link Target"), this.GetSearchFieldValue("link_target"));
+                }
+                return _linkTarget;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class LinkInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{FA69C4B3-2B4A-4A48-89E7-8430DE6DEB86}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Link(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Link(searchFields);
         }
     }
     

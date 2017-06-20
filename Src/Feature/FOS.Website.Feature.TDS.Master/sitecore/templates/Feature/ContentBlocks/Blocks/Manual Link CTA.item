@@ -1,40 +1,40 @@
 ----item----
 version: 1
-id: {16532899-6EB4-4B83-BD83-FA54143A9578}
+id: {AB4BCE34-FFF4-4045-AB94-6D05A7E95468}
 database: master
-path: /sitecore/templates/Project/Friskis/Content Blocks/Video
-parent: {244B24BA-1040-4026-8106-12C4968B9A21}
-name: Video
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA
+parent: {0FC5F86D-3014-48B4-9E36-5127B3AD4F08}
+name: Manual Link CTA
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
-created: 20170619T082900Z
+created: 20170619T141115Z
 
 ----field----
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 116
+content-length: 155
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{2F8D1730-8E48-4D2A-AC96-4547DD5CDC02}|{F717621B-4257-45DB-AECC-902A6F682FDB}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{2F8D1730-8E48-4D2A-AC96-4547DD5CDC02}|{FA69C4B3-2B4A-4A48-89E7-8430DE6DEB86}|{76F41557-F22A-4CFB-95E7-B3D9D1781FAC}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 22
+content-length: 31
 
-People/16x16/movie.png
+Network/32x32/earth_network.png
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
 content-length: 3
 
-350
+250
 ----version----
 language: en
 version: 1
-revision: 085ecb46-f5b6-4776-aa5d-2f6486b7267a
+revision: 06a804ca-86c0-42aa-b66e-c3cbaa9dbf8f
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,21 +49,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T082900Z
+20170619T141115Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-085ecb46-f5b6-4776-aa5d-2f6486b7267a
+06a804ca-86c0-42aa-b66e-c3cbaa9dbf8f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T122850Z
+20170620T122318Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

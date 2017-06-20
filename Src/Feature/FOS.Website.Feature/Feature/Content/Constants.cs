@@ -28,7 +28,6 @@ namespace FOS.Website.Feature.Content
                 public const string RichTextContent = "/Feature/Content/Views/RichTextContent.cshtml";
                 public const string TestPage = "/Feature/Content/Views/TestPage.cshtml";
                 public const string WideImage = "/Feature/Content/Views/WideImage.cshtml";
-                public const string Video = "/Feature/Content/Views/Video.cshtml";
 
                 // Footers
                 public const string ContactFooter = "/Feature/Content/Views/ContactFooter.cshtml";
@@ -44,6 +43,9 @@ namespace FOS.Website.Feature.Content
 
                 //ProximityView
                 public const string ProximityView = "/Feature/Content/Views/ProximityView.cshtml";
+
+                //EditorInfo
+                public const string EditorInfo = "/Feature/Content/Views/EditorInfo.cshtml";
             }
         }
     }

@@ -85,7 +85,14 @@ namespace FOS.Website.Feature.Content.Controllers
                 }
                 else
                 {
-                    listOfGyms = GetAllMapNodes(Sitecore.Context.Item).ToList();
+                    // This is a map under .se
+                    // We do not support this but will tell the the user in experience editor that this is not supported.
+                    var editorMsgModel = new EditorInfoModel()
+                    {
+                        Heading = "Map placement",
+                        Message = "This map component will only be visible when this page is under an Association page"
+                    };
+                    return View(Constants.Views.Paths.EditorInfo, editorMsgModel);
                 }
             }
 

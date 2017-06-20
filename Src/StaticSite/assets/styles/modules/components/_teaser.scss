@@ -200,6 +200,10 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
         background:  $primary-color-dim-80;
         @include transition(background ,0.35s);
 
+        .date {
+            color: $color-white;
+        }
+
         &:hover {
             background: $overlay-color-dim-25;
             @include transition(background ,0.5s);

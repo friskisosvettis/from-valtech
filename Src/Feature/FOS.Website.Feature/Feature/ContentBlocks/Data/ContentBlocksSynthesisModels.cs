@@ -28,6 +28,12 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}", "KN1SMvNfluL4CXXZk51WM8Pa/PY=", "Valtech.Foundation.Synthesis")]
     public partial interface IManualLinkCTAItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.ILinkItem, global::FOS.Website.Feature.ContentBlocks.Data.IImageItem {
     }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Wide Image Separator template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AF5A8490-F600-4B4C-BC8B-B710461769BF}", "cMVvQGJKabw3aAU74fms9yXIY4g=", "Valtech.Foundation.Synthesis")]
+    public partial interface IWideImageSeparatorItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.IImageItem, global::FOS.Website.Feature.ContentBlocks.Data.ISimpleTextBoxItem {
+    }
 }
 namespace FOS.Website.Feature.ContentBlocks.Data {
     
@@ -88,6 +94,24 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
         /// <summary>Represents the Text field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("text")]
         Synthesis.FieldTypes.Interfaces.IRichTextField Text {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/SimpleTextBox template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{6EC9DFC3-E55B-4057-9F88-CD17F5E144BC}", "nn4/wKl6Bx6VDo3ADSRCgcswzFk=", "Valtech.Foundation.Synthesis")]
+    public partial interface ISimpleTextBoxItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Box Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("box_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField BoxTitle {
+            get;
+        }
+        
+        /// <summary>Represents the Paragraph field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("paragraph")]
+        Synthesis.FieldTypes.Interfaces.ITextField Paragraph {
             get;
         }
     }
@@ -336,6 +360,110 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new ManualLinkCTA(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Wide Image Separator template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class WideImageSeparator : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IWideImageSeparatorItem {
+        
+        private Synthesis.FieldTypes.TextField _boxTitle;
+        
+        private Synthesis.FieldTypes.TextField _heading1;
+        
+        private Synthesis.FieldTypes.ImageField _image1;
+        
+        private Synthesis.FieldTypes.TextField _paragraph;
+        
+        public WideImageSeparator(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public WideImageSeparator(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Wide Image Separator";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{AF5A8490-F600-4B4C-BC8B-B710461769BF}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Box Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("box_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BoxTitle {
+            get {
+                if (_boxTitle == null) {
+                    _boxTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9425421A-3417-42D7-B998-9D263E8268C9}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Wide Image Separator", "Box Title"), this.GetSearchFieldValue("box_title"));
+                }
+                return _boxTitle;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading1 {
+            get {
+                if (_heading1 == null) {
+                    _heading1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Wide Image Separator", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading1;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image1 {
+            get {
+                if (_image1 == null) {
+                    _image1 = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{61F71B9B-9ED2-45A9-9003-B4A3D81056B4}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Wide Image Separator", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image1;
+            }
+        }
+        
+        /// <summary>Represents the Paragraph field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("paragraph")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Paragraph {
+            get {
+                if (_paragraph == null) {
+                    _paragraph = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A8164555-F140-4305-B722-1CA52DFA5780}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Wide Image Separator", "Paragraph"), this.GetSearchFieldValue("paragraph"));
+                }
+                return _paragraph;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class WideImageSeparatorInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{AF5A8490-F600-4B4C-BC8B-B710461769BF}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new WideImageSeparator(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new WideImageSeparator(searchFields);
         }
     }
 }
@@ -625,6 +753,84 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new RichText(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/SimpleTextBox template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class SimpleTextBox : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.ISimpleTextBoxItem {
+        
+        private Synthesis.FieldTypes.TextField _boxTitle;
+        
+        private Synthesis.FieldTypes.TextField _paragraph;
+        
+        public SimpleTextBox(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public SimpleTextBox(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "SimpleTextBox";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{6EC9DFC3-E55B-4057-9F88-CD17F5E144BC}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Box Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("box_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BoxTitle {
+            get {
+                if (_boxTitle == null) {
+                    _boxTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9425421A-3417-42D7-B998-9D263E8268C9}"], "/sitecore/templates/Feature/ContentBlocks/Data/SimpleTextBox", "Box Title"), this.GetSearchFieldValue("box_title"));
+                }
+                return _boxTitle;
+            }
+        }
+        
+        /// <summary>Represents the Paragraph field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("paragraph")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Paragraph {
+            get {
+                if (_paragraph == null) {
+                    _paragraph = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{A8164555-F140-4305-B722-1CA52DFA5780}"], "/sitecore/templates/Feature/ContentBlocks/Data/SimpleTextBox", "Paragraph"), this.GetSearchFieldValue("paragraph"));
+                }
+                return _paragraph;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class SimpleTextBoxInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{6EC9DFC3-E55B-4057-9F88-CD17F5E144BC}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new SimpleTextBox(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new SimpleTextBox(searchFields);
         }
     }
     

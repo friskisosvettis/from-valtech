@@ -1,0 +1,32 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Sitecore.ExperienceAnalytics.Client
+@using Synthesis.Mvc
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model WideImageSeparatorModel
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+<div class="image-divider">
+    @Model.ImageItem.Image1.Render()
+    @if (Model.SimpleTextBox.BoxTitle.HasTextValue || Model.SimpleTextBox.BoxTitle.HasTextValue || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="image-divider__content">
+            <div class="container">
+                <div class="container--12">
+                    <div class="image-divider__infobox">
+                        <div class="text-align--center">
+                            <h3 class="color--primary">@Model.SimpleTextBox.BoxTitle.Render()</h3>
+                            <p>@Model.SimpleTextBox.Paragraph.Render()</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@* Fluff Talk to Veronika**@

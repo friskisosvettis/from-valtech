@@ -38,5 +38,16 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.Video, model);
         }
+
+        public ActionResult GetWideImageSeparatorView()
+        {
+            var model = new WideImageSeparatorModel()
+            {
+                SimpleTextBox = RenderingHelper.GetRenderingContextOrDefault<ISimpleTextBoxItem>(),
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+            };
+
+            return View(Constants.Views.Paths.WideImageSeparator, model);
+        }
     }
 }

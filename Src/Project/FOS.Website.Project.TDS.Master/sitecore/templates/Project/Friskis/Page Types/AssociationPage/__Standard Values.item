@@ -20,8 +20,15 @@ content-length: 1164
 ----version----
 language: en
 version: 1
-revision: ea5793e9-d148-412b-ba08-352ea8ddbf59
+revision: e34725c9-c9cc-4f36-b159-e3c6bd3827de
 
+----field----
+field: {06BAE32C-663B-4DB5-A497-EB818B987B25}
+name: Background Image
+key: background image
+content-length: 58
+
+<image mediaid="{CD93D672-87E8-42D5-95B1-59D8F556CC16}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ea5793e9-d148-412b-ba08-352ea8ddbf59
+e34725c9-c9cc-4f36-b159-e3c6bd3827de
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170615T113809Z
+20170621T083248Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -14,13 +14,13 @@ created: 20170620T104801Z
 field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
 name: Value
 key: value
-content-length: 14
+content-length: 19
 
-white centered
+ text-align--center
 ----version----
 language: en
 version: 1
-revision: e754b343-30a5-4482-be0e-84ef00b13c16
+revision: 5ec890bb-449b-4046-91a0-8fbdec9c658d
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e754b343-30a5-4482-be0e-84ef00b13c16
+5ec890bb-449b-4046-91a0-8fbdec9c658d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T104826Z
+20170621T084648Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

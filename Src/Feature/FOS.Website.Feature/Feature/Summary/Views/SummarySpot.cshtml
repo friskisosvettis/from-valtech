@@ -8,64 +8,105 @@
 @using Synthesis.Mvc.Extensions
 
 @model SummarySpotModel
+}
 
-@* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE / EVENT / NEWS PAGE*@
 <div class="container">
     <div class="container--12">
-        <div class="teaser teaser--full">
-            @if (Model.SummaryItem.SummaryImage.HasValue)
-            {
-
-                if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null && Model.SummaryItem.SummaryHeading.HasValue)
-                {
-                    <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)" alt="@Model.SummaryItem.SummaryHeading.Render(false)">
-                }
-                else if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null)
-                {
-                    <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)">
-                }
-            }
-            <div class="teaser__content">
-                @if (Model.SummaryItem.SummaryHeading.HasValue)
-                {
-                    <h3 class="heading-5">
-                        @Model.SummaryItem.SummaryHeading.Render()
-                    </h3>
-                }
-                @if (Model.EventItem != null)
-                {
-                    if (Model.EventItem.EventStartDate.HasValue)
+    @* SUMMARY&/TEASER/KICKER - FOR TRAINING FORM*@
+    @if (Model.TrainingFormItem != null)
+    {
+        <div class="teaser">
+            <a href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                <div class="teaser--overlay">
+                    @if (Model.SummaryItem.SummaryImage.HasValue)
                     {
-                        <p>
-                            <small class="date--primary icon--mini icon__event">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</small>
-                            @if (Model.EventItem.EventEndDate.HasValue)
+                        if (Model.SummaryItem.SummaryImage.MediaItem != null)
+                        {
+                            @Model.SummaryItem.SummaryImage.Render()
+                        }
+                    }
+                    <div class="teaser__overlay">
+                        <div class="teaser__content">
+                            <h2 lass="heading-3">
+                                @if (Model.SummaryItem.SummaryHeading.HasValue)
+                                {
+                                    @Model.SummaryItem.SummaryHeading.Render(false)
+                                }
+                                else
+                                {
+                                    @Model.SummaryItem.Name
+                                }
+                            </h2>
+                            @if (Model.SummaryItem.SummaryText.HasValue)
                             {
-                                <small class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventEndDate.Value.ToString("t")</small>
+                                <p>@Model.SummaryItem.SummaryText.Render(false)</p>
                             }
-                        </p>
-                    }
-                    if (Model.EventItem.EventLocation.HasValue)
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+            }
+            else
+            {
+                @* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE / EVENT / NEWS PAGE*@
+                <div class="teaser teaser--full">
+                    @if (Model.SummaryItem.SummaryImage.HasValue)
                     {
-                        <p><small class="date--primary icon--mini  icon__pin-map">@Model.EventItem.EventLocation</small></p>
+
+                        if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null && Model.SummaryItem.SummaryHeading.HasValue)
+                        {
+                            <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)" alt="@Model.SummaryItem.SummaryHeading.Render(false)">
+                        }
+                        else if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null)
+                        {
+                            <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)">
+                        }
                     }
-                }
-                @if (Model.NewsItem != null)
-                {
-                <p>
-                    <small class="date--primary">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
-                </p>
-                }
-                @if (Model.SummaryItem.SummaryText.HasValue)
-                {
-                    <p>
-                        @Model.SummaryItem.SummaryText.Render()
-                    </p>
-                    // TODO: Remove hard coded "Läs mer" text and make it translatable
-                    <a class="link--goto" href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
-                        Läs mer
-                    </a>
-                }
-            </div>
+                    <div class="teaser__content">
+                        @if (Model.SummaryItem.SummaryHeading.HasValue)
+                        {
+                            <h3 class="heading-5">
+                                @Model.SummaryItem.SummaryHeading.Render()
+                            </h3>
+                        }
+                        @if (Model.EventItem != null)
+                        {
+                            if (Model.EventItem.EventStartDate.HasValue)
+                            {
+                                <p>
+                                    <small class="date--primary icon--mini icon__event">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</small>
+                                    @if (Model.EventItem.EventEndDate.HasValue)
+                                    {
+                                        <small class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventEndDate.Value.ToString("t")</small>
+                                    }
+                                </p>
+                            }
+                            if (Model.EventItem.EventLocation.HasValue)
+                            {
+                                <p>
+                                    <small class="date--primary icon--mini  icon__pin-map">@Model.EventItem.EventLocation</small>
+                                </p>
+                            }
+                        }
+                        @if (Model.NewsItem != null)
+                        {
+                            <p>
+                                <small class="date--primary">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                            </p>
+                        }
+                        @if (Model.SummaryItem.SummaryText.HasValue)
+                        {
+                            <p>
+                                @Model.SummaryItem.SummaryText.Render()
+                            </p>
+                            // TODO: Remove hard coded "Läs mer" text and make it translatable
+                            <a class="link--goto" href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                Läs mer
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
         </div>
     </div>
-</div>

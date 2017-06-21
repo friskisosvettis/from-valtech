@@ -3,10 +3,13 @@ $textbox-height: rem(9 * $base-height);        //360px
 
 .textbox {
     display: table;
-    height: $textbox-height;
-    overflow: hidden;
-    margin-bottom: $space-double;
-    text-align: center;
+
+    &.rich-text {
+        overflow: hidden;
+        height: $textbox-height;
+        margin-bottom: $space-double;
+        padding: $space $space-quad !important;
+    }
 
     &--red {
         background: $primary-color-light;
@@ -23,7 +26,5 @@ $textbox-height: rem(9 * $base-height);        //360px
     &__content {
         display: table-cell;
         vertical-align: middle;
-        padding: $space $space-quad;
-        text-align: center;
     }
 }

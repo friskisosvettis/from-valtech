@@ -1,6 +1,21 @@
+function RenameFile{
+	param([string]$FileName
+	     ,[string]$newFileName)
+	
+	if($newFileName | Test-Path)
+	{
+		Remove-Item -Path $newFileName -Force
+		Write-Host "Deleting old file" $newFileName
+	}
+	
+	Rename-Item $FileName $newFileName
+	Write-Host $FileName "=>"
+	Write-Host "====>" $newFileName
+}
+
 function ActivateConfigureFile{
 	param([string]$FileName)
-	
+
 	$newFileName = ""
 	if($FileName.EndsWith(".config"))
 	{
@@ -9,28 +24,22 @@ function ActivateConfigureFile{
 	elseif ($FileName.EndsWith(".disabled"))
 	{
 		$newFileName = $FileName.Replace(".disabled","")
-		Rename-Item $FileName $newFileName
-		Write-Host $FileName "=>"
-		Write-Host "====>" $newFileName
+		RenameFile -FileName $FileName -newFileName $newFileName
 	}
 	elseif ($FileName.EndsWith(".example"))
 	{
 		$newFileName = $FileName.Replace(".example","")
-		Rename-Item $FileName $newFileName
-		Write-Host $FileName "=>"
-		Write-Host "====>" $newFileName
+		RenameFile -FileName $FileName -newFileName $newFileName
 	}	
  }
  
  function DeActivateConfigureFile{
 	param([string]$FileName)
-	
+
 	if($FileName.EndsWith(".config"))
 	{
 		$newFileName = $FileName.Replace(".config",".config.disabled")
-		Rename-Item $FileName $newFileName
-		Write-Host $FileName "=>"
-		Write-Host "====>" $newFileName
+		RenameFile -FileName $FileName -newFileName $newFileName
 	}
 	else
 	{

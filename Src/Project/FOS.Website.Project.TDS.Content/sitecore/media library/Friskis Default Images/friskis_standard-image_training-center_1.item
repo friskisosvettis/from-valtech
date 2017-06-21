@@ -2256,15 +2256,15 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: c239a45a-5706-4093-b496-8cb4756bcfaf
+revision: 857e8a44-dee8-43a9-811a-3355b10c1039
 
 ----field----
 field: {65885C44-8FCD-4A7F-94F1-EE63703FE193}
 name: Alt
 key: alt
-content-length: 37
+content-length: 13
 
-default-image-training-center-heading
+stämningsbild
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -2292,14 +2292,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c239a45a-5706-4093-b496-8cb4756bcfaf
+857e8a44-dee8-43a9-811a-3355b10c1039
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170616T124439Z
+20170621T082855Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

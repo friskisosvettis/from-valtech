@@ -20,8 +20,15 @@ content-length: 1668
 ----version----
 language: en
 version: 1
-revision: aa6fb154-6c69-4ede-b42b-7fa7ba5ae97e
+revision: d162f790-40b3-4c1b-a995-ea106edc9c11
 
+----field----
+field: {BE167F68-9DE7-404D-9D10-B6E8D20D23C0}
+name: Page Heading Image
+key: page heading image
+content-length: 58
+
+<image mediaid="{AD1F322F-454A-478C-925A-41B84C77B58C}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aa6fb154-6c69-4ede-b42b-7fa7ba5ae97e
+d162f790-40b3-4c1b-a995-ea106edc9c11
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170615T113720Z
+20170621T082446Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -67,8 +74,15 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: e93d2a1e-cbec-4931-b7ca-74752ada1de4
+revision: 75bd70f6-cf27-496f-90db-8f8254890a92
 
+----field----
+field: {BE167F68-9DE7-404D-9D10-B6E8D20D23C0}
+name: Page Heading Image
+key: page heading image
+content-length: 58
+
+<image mediaid="{AD1F322F-454A-478C-925A-41B84C77B58C}" />
 ----field----
 field: {F60E9BBE-8B37-4EB3-A293-A072E18C67D5}
 name: Navigation_ShowInMenu
@@ -103,14 +117,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e93d2a1e-cbec-4931-b7ca-74752ada1de4
+75bd70f6-cf27-496f-90db-8f8254890a92
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T160357Z
+20170621T082350Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

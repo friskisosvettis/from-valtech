@@ -91,7 +91,7 @@ namespace FOS.Website.Feature.Summary {
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SummaryList template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "3ZWv653mXq/BGlAfbG3P0dL0UGI=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "Zj8NOBYItN+NpltvHx1fOQyNoxQ=", "Valtech.Foundation.Synthesis")]
     public partial interface ISummaryListItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the UseManualList field</summary>
@@ -166,9 +166,9 @@ namespace FOS.Website.Feature.Summary {
             get;
         }
         
-        /// <summary>Represents the Taxonomy field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
-        Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy {
+        /// <summary>Represents the SelectedTaxonomy field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("selectedtaxonomy")]
+        Synthesis.FieldTypes.Interfaces.IItemReferenceListField SelectedTaxonomy {
             get;
         }
         
@@ -603,7 +603,7 @@ namespace FOS.Website.Concrete.Feature.Summary {
         
         private Synthesis.FieldTypes.TextField _itemsPerRow;
         
-        private Synthesis.FieldTypes.ItemReferenceListField _taxonomy;
+        private Synthesis.FieldTypes.ItemReferenceListField _selectedTaxonomy;
         
         private Synthesis.FieldTypes.BooleanField _displayAsCompactList;
         
@@ -772,14 +772,14 @@ namespace FOS.Website.Concrete.Feature.Summary {
             }
         }
         
-        /// <summary>Represents the Taxonomy field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
-        public Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy {
+        /// <summary>Represents the SelectedTaxonomy field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("selectedtaxonomy")]
+        public Synthesis.FieldTypes.Interfaces.IItemReferenceListField SelectedTaxonomy {
             get {
-                if (_taxonomy == null) {
-                    _taxonomy = new Synthesis.FieldTypes.ItemReferenceListField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3CDA5452-4D1E-48F6-B322-2D3C4732CE7B}"], "/sitecore/templates/Feature/Summary/SummaryList", "Taxonomy"), this.GetSearchFieldValue("taxonomy"));
+                if (_selectedTaxonomy == null) {
+                    _selectedTaxonomy = new Synthesis.FieldTypes.ItemReferenceListField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3CDA5452-4D1E-48F6-B322-2D3C4732CE7B}"], "/sitecore/templates/Feature/Summary/SummaryList", "SelectedTaxonomy"), this.GetSearchFieldValue("selectedtaxonomy"));
                 }
-                return _taxonomy;
+                return _selectedTaxonomy;
             }
         }
         

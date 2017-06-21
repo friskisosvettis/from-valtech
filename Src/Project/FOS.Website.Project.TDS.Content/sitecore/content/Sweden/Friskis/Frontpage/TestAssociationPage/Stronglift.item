@@ -13,12 +13,12 @@ created: 20170404T140932Z
 ----version----
 language: sv-SE
 version: 1
-revision: 05251421-4f2a-4e6d-8b10-29f14bb072cb
+revision: 131b117b-4e07-4580-8048-d8c3d569c8ad
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
-name: Headline
-key: headline
+name: Page Heading Headline
+key: page heading headline
 content-length: 11
 
 Strong Lift
@@ -37,6 +37,13 @@ content-length: 1
 
 1
 ----field----
+field: {6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}
+name: Taxonomy
+key: taxonomy
+content-length: 38
+
+{63BD45E4-F123-4A2A-95CB-1A13B5EF8824}
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-05251421-4f2a-4e6d-8b10-29f14bb072cb
+131b117b-4e07-4580-8048-d8c3d569c8ad
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170404T141104Z
+20170620T134042Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Web;
-//using Core.CustomItems.Components.Spot;
-//using Core.CustomItems.Listtypes;
-//using Core.Site;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Data;
 using Sitecore.Data.Items;
-//using Web.Models.Spots;
 using Synthesis;
+using Valtech.Foundation.Index;
+using FOS.Website.Feature.Taxonomy.Controllers;
 
 
 namespace FOS.Website.Feature.Summary.Models
@@ -139,109 +137,99 @@ namespace FOS.Website.Feature.Summary.Models
             public string IdAsString { get; set; }
         }
 
-        //public static List<Item> GetSummaryList(SummaryListItem summaryListItem)
+        
         public static List<Item> GetSummaryList(ISummaryListItem summaryListItem)
         {
-            // TODO: Change mock data to real search
-            // MOCK DATA START: double/repeat the manual list
             List<Item> summaryItemList = new List<Item>();
-            summaryItemList = summaryListItem.ChosenListItems.TargetItems.Select(i => i.InnerItem).ToList();
-            summaryItemList.AddRange(summaryListItem.ChosenListItems.TargetItems.Select(i => i.InnerItem).ToList());
-            return summaryItemList;
-            // MOCK DATA END: double/repeat the manual list
+            var indexName = Indexes.GetIndexName(summaryListItem.InnerItem);
+            if (string.IsNullOrWhiteSpace(indexName))
+            {
+                return summaryItemList;
+            }
 
-            //List<Item> summaryItemList = new List<Item>();
-            //var indexName = Core.Site.Indexes.GetIndexName(summaryListItem.InnerItem);
-            //if (string.IsNullOrWhiteSpace(indexName))
-            //{
-            //    return summaryItemList;
-            //}
-
-            //if (Sitecore.Context.Language == null || String.IsNullOrWhiteSpace(Sitecore.Context.Language.Name))
-            //{
-            //    return summaryItemList;
-            //}
+            if (Sitecore.Context.Language == null || String.IsNullOrWhiteSpace(Sitecore.Context.Language.Name))
+            {
+                return summaryItemList;
+            }
 
 
-            //// Taxonomy Predicate
-            //var taxonomyPredicate = PredicateBuilder.True<SummarySearchResultItem>();
-            //List<Item> taxonomyList = summaryListItem.Taxonomy.ListItems;
+            // Taxonomy Predicate
+            var taxonomyPredicate = PredicateBuilder.True<SummarySearchResultItem>();
+            List<Item> taxonomyList = summaryListItem.SelectedTaxonomy.TargetItems.Select(i => i.InnerItem).ToList();
 
-            //foreach (ID taxonomyId in taxonomyList.Select(i => i.ID))
-            //{
-            //    string taxonomyIdString = Clean(taxonomyId.ToString(), "{}");
-            //    taxonomyPredicate = taxonomyPredicate.Or(s => s.Taxonomy.Contains(taxonomyIdString));
-            //}
+            foreach (ID taxonomyId in taxonomyList.Select(i => i.ID))
+            {
+                string taxonomyIdString = Clean(taxonomyId.ToString(), "{}");
+                taxonomyPredicate = taxonomyPredicate.Or(s => s.Taxonomy.Contains(taxonomyIdString));
+            }
 
-            //// Seasonal Predicate
-            //var seasonalPredicate = PredicateBuilder.True<SummarySearchResultItem>();
+            // Seasonal Predicate
+            var seasonalPredicate = PredicateBuilder.True<SummarySearchResultItem>();
 
-            //if (summaryListItem.UseSeasonal.Checked)
-            //{
-            //    List<Item> seasons = summaryListItem.SelectedMonths.ListItems;
-            //    if (!seasons.Any())
-            //    {
-            //        // Get the current month
-            //        var cultureInfo = new CultureInfo("en-US");
-            //        string month = DateTime.Now.ToString("MMMM", cultureInfo);
+            if (summaryListItem.UseSeasonal.Value)
+            {
+                List<Item> seasons = summaryListItem.SelectedMonths.TargetItems.Select(i => i.InnerItem).ToList();
+                if (!seasons.Any())
+                {
+                    // Get the current month
+                    var cultureInfo = new CultureInfo("en-US");
+                    string month = DateTime.Now.ToString("MMMM", cultureInfo);
 
-            //        Item monthTaxonomyItem = Taxonomy.GetMonthItem(month);
-            //        if (monthTaxonomyItem != default(Item))
-            //            seasons.Add(monthTaxonomyItem);
-            //    }
-            //    foreach (ID seasonId in seasons.Select(i => i.ID))
-            //    {
-            //        string seasonIdString = Clean(seasonId.ToString(), "{}");
+                    Item monthTaxonomyItem = Taxonomy.Controllers.Taxonomy.GetMonthItem(month);
+                    if (monthTaxonomyItem != default(Item))
+                        seasons.Add(monthTaxonomyItem);
+                }
+                foreach (ID seasonId in seasons.Select(i => i.ID))
+                {
+                    string seasonIdString = Clean(seasonId.ToString(), "{}");
 
-            //        seasonalPredicate = seasonalPredicate.Or(s => s.Months.Contains(seasonIdString));
-            //    }
-            //}
-
-
-            //// Template Predicate
-            //var templatePredicate = PredicateBuilder.True<SummarySearchResultItem>();
-            //List<Item> resultTypes = summaryListItem.ResultTypes.ListItems;
-            //foreach (ID typeId in resultTypes.Select(i => i.ID))
-            //{
-            //    string templateIdString = Clean(typeId.ToString());
-            //    templatePredicate = templatePredicate.Or(t => t.TemplateIdAsString.Contains(templateIdString));
-            //}
-
-            //// Search Root Predicate
-            //var searchRootPredicate = PredicateBuilder.True<SummarySearchResultItem>();
-            //Item searchRootItem = summaryListItem.SourceRootItem.Item;
-            //if (searchRootItem != null)
-            //{
-            //    ID searchRootItemId = searchRootItem.ID;
-            //    // Find decendants and remove the searchroot
-            //    searchRootPredicate = searchRootPredicate.Or(r => r.Paths.Contains(searchRootItemId) && r.ItemId != searchRootItemId);
-            //}
-
-            //// Only Search For Children of Root Predicate
-            //var onlySearchRootChildrenPredicate = PredicateBuilder.True<SummarySearchResultItem>();
-            //if (summaryListItem.OnlyIncludeSearchRootChildren.Checked)
-            //{
-            //    onlySearchRootChildrenPredicate = onlySearchRootChildrenPredicate.Or(r => r.Parent == searchRootItem.ID);
-            //}
+                    seasonalPredicate = seasonalPredicate.Or(s => s.Months.Contains(seasonIdString));
+                }
+            }
 
 
+            // Template Predicate
+            var templatePredicate = PredicateBuilder.True<SummarySearchResultItem>();
+            List<Item> resultTypes = summaryListItem.ResultTypes.TargetItems.Select(i=>i.InnerItem).ToList();
+            foreach (ID typeId in resultTypes.Select(i => i.ID))
+            {
+                string templateIdString = Clean(typeId.ToString());
+                templatePredicate = templatePredicate.Or(t => t.TemplateIdAsString.Contains(templateIdString));
+            }
+
+            // Search Root Predicate
+            var searchRootPredicate = PredicateBuilder.True<SummarySearchResultItem>();
+            Item searchRootItem = summaryListItem.SourceRootItem.Target.InnerItem;
+            if (searchRootItem != null)
+            {
+                ID searchRootItemId = searchRootItem.ID;
+                // Find decendants and remove the searchroot
+                searchRootPredicate = searchRootPredicate.Or(r => r.Paths.Contains(searchRootItemId) && r.ItemId != searchRootItemId);
+            }
+
+            // Only Search For Children of Root Predicate
+            var onlySearchRootChildrenPredicate = PredicateBuilder.True<SummarySearchResultItem>();
+            if (summaryListItem.OnlyIncludeSearchRootChildren.Value)
+            {
+                onlySearchRootChildrenPredicate = onlySearchRootChildrenPredicate.Or(r => r.Parent == searchRootItem.ID);
+            }
 
 
-            //string contextLanguage = Sitecore.Context.Language.Name;
+            string contextLanguage = Sitecore.Context.Language.Name;
 
-            //using (var context = ContentSearchManager.GetIndex(indexName).CreateSearchContext())
-            //{
-            //    SearchResults<SummarySearchResultItem> result = context.GetQueryable<SummarySearchResultItem>()
-            //        .Where(s => s.Language == contextLanguage)
-            //        .Where(taxonomyPredicate)
-            //        .Where(seasonalPredicate)
-            //        .Where(searchRootPredicate)
-            //        .Where(onlySearchRootChildrenPredicate)
-            //        .Where(templatePredicate)
-            //        .GetResults();
+            using (var context = ContentSearchManager.GetIndex(indexName).CreateSearchContext())
+            {
+                SearchResults<SummarySearchResultItem> result = context.GetQueryable<SummarySearchResultItem>()
+                    .Where(s => s.Language == contextLanguage)
+                    .Where(taxonomyPredicate)
+                    .Where(seasonalPredicate)
+                    .Where(searchRootPredicate)
+                    .Where(onlySearchRootChildrenPredicate)
+                    .Where(templatePredicate)
+                    .GetResults();
 
-            //    return result.Hits.Select(i => i.Document.GetItem()).ToList();
-            //}
+                return result.Hits.Select(i => i.Document.GetItem()).ToList();
+            }
 
         }
 
@@ -264,42 +252,5 @@ namespace FOS.Website.Feature.Summary.Models
             return cleanString;
         }
 
-
-        // TODO: looks like its nevers used
-        //public static void FillSummaryList(Item item, int currentDepth, int maxDepth, List<Item> summaryList, List<ID> templateIds = null)
-        //{
-        //    if (item == null)
-        //    {
-        //        return;
-        //    }
-
-        //    if (templateIds != null && templateIds.Count <= 0)
-        //    {
-        //        templateIds = null;
-        //    }
-
-        //    if (currentDepth >= maxDepth)
-        //    {
-        //        return;
-        //    }
-
-        //    // We need to support all kinds of items
-        //    //if (SummaryItem.IsValid(item))
-        //    //{
-        //    var summarySpotModel = new SummarySpotModel(item);
-        //    if (summarySpotModel.IsValid())
-        //    {
-        //        if (templateIds == null || templateIds.Contains(item.TemplateID))
-        //        {
-        //            summaryList.Add(item);
-        //        }
-        //    }
-        //    //}
-
-        //    foreach (Item child in item.Children)
-        //    {
-        //        FillSummaryList(child, currentDepth + 1, maxDepth, summaryList, templateIds);
-        //    }
-        //}
     }
 }

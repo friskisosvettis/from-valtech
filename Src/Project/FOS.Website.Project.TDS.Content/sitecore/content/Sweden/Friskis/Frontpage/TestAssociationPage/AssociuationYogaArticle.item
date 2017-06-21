@@ -13,7 +13,7 @@ created: 20170323T151044Z
 ----version----
 language: sv-SE
 version: 1
-revision: f31a4a02-01a3-4444-862c-46d41f1f2922
+revision: 4148b1e8-560c-4a33-bb82-3efa36842fa2
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
@@ -51,6 +51,13 @@ content-length: 24
 
 Orginal richtext on Yoga
 ----field----
+field: {6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}
+name: Taxonomy
+key: taxonomy
+content-length: 38
+
+{63BD45E4-F123-4A2A-95CB-1A13B5EF8824}
+----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f31a4a02-01a3-4444-862c-46d41f1f2922
+4148b1e8-560c-4a33-bb82-3efa36842fa2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T161438Z
+20170620T134032Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1326,7 +1326,7 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Summary\SummaryList\Seasonal And Taxonomy\Taxonomy.item">
+    <SitecoreItem Include="sitecore\templates\Feature\Summary\SummaryList\Seasonal And Taxonomy\SelectedTaxonomy.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

@@ -14,9 +14,9 @@ created: 20130925T105622Z
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 17
+content-length: 8
 
-QueryableDroptree
+Droptree
 ----field----
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
@@ -34,7 +34,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 3aee9bfb-56cf-44c0-8173-bf11debd11a6
+revision: fa6690c0-15b1-4731-a863-b741f79a2646
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -63,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3aee9bfb-56cf-44c0-8173-bf11debd11a6
+fa6690c0-15b1-4731-a863-b741f79a2646
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20131016T011130:635174826907522528
+20170620T141601Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

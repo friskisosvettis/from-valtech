@@ -13,7 +13,7 @@ created: 20170613T130039Z
 ----version----
 language: sv-SE
 version: 1
-revision: 7ba2103d-7890-486e-bcbb-201e32c51bc8
+revision: 815e09b9-80e3-49e5-9fc8-aa13bac2a8b9
 
 ----field----
 field: {5A44F60A-547B-482A-993D-4C35CE6205FD}
@@ -33,9 +33,9 @@ content-length: 128
 field: {536A8DCE-C437-43A8-ACB5-33892215398C}
 name: UseManualList
 key: usemanuallist
-content-length: 1
+content-length: 0
 
-1
+
 ----field----
 field: {0A829798-7F50-4B1D-AF4D-235ACC5C31CC}
 name: ChosenListItems
@@ -43,6 +43,27 @@ key: chosenlistitems
 content-length: 38
 
 {CC7430BB-1212-4F08-9571-5F1EA002501C}
+----field----
+field: {666968FD-72E5-420D-A8D3-62420B4725A8}
+name: SourceRootItem
+key: sourcerootitem
+content-length: 38
+
+{E25CB178-5CFA-4949-B9E3-EC717FCA34A1}
+----field----
+field: {D546DC37-0588-46B9-AFCD-CD0B6A8A5381}
+name: ResultTypes
+key: resulttypes
+content-length: 38
+
+{4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
+----field----
+field: {3CDA5452-4D1E-48F6-B322-2D3C4732CE7B}
+name: SelectedTaxonomy
+key: selectedtaxonomy
+content-length: 38
+
+{1969875D-20A1-4C5A-AD58-BF5755C67E8B}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -70,14 +91,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7ba2103d-7890-486e-bcbb-201e32c51bc8
+815e09b9-80e3-49e5-9fc8-aa13bac2a8b9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T130052Z
+20170620T134216Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

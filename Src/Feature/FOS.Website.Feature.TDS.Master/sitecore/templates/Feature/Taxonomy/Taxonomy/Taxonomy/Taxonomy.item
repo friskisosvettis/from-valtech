@@ -14,9 +14,9 @@ created: 20130913T220013Z
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 17
+content-length: 8
 
-QueryableTreelist
+Treelist
 ----field----
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
@@ -34,7 +34,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: dd02117b-034c-40b4-8ca9-d94d96a48432
+revision: 0f8d2c85-3d30-4df2-bd99-615294728afc
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -49,18 +49,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dd02117b-034c-40b4-8ca9-d94d96a48432
+0f8d2c85-3d30-4df2-bd99-615294728afc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20140707T144434:635403410747324282
+20170620T133920Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

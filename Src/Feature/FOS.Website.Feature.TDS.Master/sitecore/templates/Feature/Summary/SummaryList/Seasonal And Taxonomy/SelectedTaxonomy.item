@@ -2,9 +2,9 @@
 version: 1
 id: {3CDA5452-4D1E-48F6-B322-2D3C4732CE7B}
 database: master
-path: /sitecore/templates/Feature/Summary/SummaryList/Seasonal And Taxonomy/Taxonomy
+path: /sitecore/templates/Feature/Summary/SummaryList/Seasonal And Taxonomy/SelectedTaxonomy
 parent: {E980FF6E-EC1C-4D7F-9743-78CD2055A818}
-name: Taxonomy
+name: SelectedTaxonomy
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -34,7 +34,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: c96df912-6f7f-4211-8217-2ee1159d5c46
+revision: 1ee32092-4f4e-419b-9e54-02f4ea049b69
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c96df912-6f7f-4211-8217-2ee1159d5c46
+1ee32092-4f4e-419b-9e54-02f4ea049b69
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170524T120322Z
+20170620T142559Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

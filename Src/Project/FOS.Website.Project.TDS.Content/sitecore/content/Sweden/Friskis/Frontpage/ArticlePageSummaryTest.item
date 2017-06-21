@@ -46,7 +46,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: aaac94e3-bf86-4dd6-85d9-11bb844bb26d
+revision: 190a1f5b-fb84-4233-bbd1-e4983254f855
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
@@ -91,6 +91,13 @@ content-length: 35
 
 ArticlePageSummaryTest Summary Text
 ----field----
+field: {6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}
+name: Taxonomy
+key: taxonomy
+content-length: 38
+
+{1969875D-20A1-4C5A-AD58-BF5755C67E8B}
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
@@ -103,14 +110,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aaac94e3-bf86-4dd6-85d9-11bb844bb26d
+190a1f5b-fb84-4233-bbd1-e4983254f855
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170612T115556Z
+20170620T134009Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,0 +1,162 @@
+----item----
+version: 1
+id: {429B8D37-9C6E-4B04-8A5A-A84F0E92A6E4}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/Test/NagonYogaPryl
+parent: {B318DBED-CED6-43EB-B74B-A253E97338F3}
+name: NagonYogaPryl
+master: {00000000-0000-0000-0000-000000000000}
+template: {1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}
+templatekey: RichTextContent
+created: 20170309T164329Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+300
+----version----
+language: en
+version: 1
+revision: 8c96e1fc-7a9e-4b66-9d9f-51f8b93b4047
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 12814
+
+<h2 style="color: #000000; background: none #ffffff; margin: 1em 0px 0.25em; padding: 0px; border-bottom: 1px solid #a2a9b1;"><span class="mw-headline" id="Historia_i_v.C3.A4st">Historia i v&auml;st</span></h2>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Med grund i den tyska romantiken och genom bland andra&nbsp;<a href="https://sv.wikipedia.org/wiki/Friedrich_Max_MÃ¼ller" title="Friedrich Max Müller" style="color: #0b0080; background: none;">Friedrich Max M&uuml;ller</a>&nbsp;och&nbsp;<a href="https://sv.wikipedia.org/wiki/Arthur_Schopenhauer" title="Arthur Schopenhauer" style="color: #0b0080; background: none;">Arthur Schopenhauer</a>&nbsp;b&ouml;rjade i mitten av 1800-talet indisk filosofi uppm&auml;rksammas i v&auml;sterlandet.<sup id="cite_ref-7" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-7" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>7<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;&Aring;r 1851 publicerades den f&ouml;rsta boken om yoga i v&auml;st,&nbsp;<em>Treatise on Yoga Philosophy</em>&nbsp;av N. C. Paul,<sup id="cite_ref-8" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-8" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>8<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;som vid sidan av Major D. Basu hade p&aring;b&ouml;rjat moderna vetenskapliga studier av yoga i slutet av 1800-talet. Det fortsattes p&aring; 1900-talet genom Sri Yogendra (1897-1989) och Swami Kuvalayananda.<sup id="cite_ref-9" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-9" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>9<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-10" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-10" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>10<span class="cite-reference-link-bracket">]</span></a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Den f&ouml;rste indiske l&auml;rare som undervisade om yoga i v&auml;sterlandet var&nbsp;<a href="https://sv.wikipedia.org/wiki/Swami_Vivekananda" title="Swami Vivekananda" style="color: #0b0080; background: none;">Swami Vivekananda</a>, som reste runt I Europa och USA p&aring; 1890-talet. Han fick ett positivt mottagande av tidens intellektuella, s&auml;rskilt fr&aring;n&nbsp;<em>the New England&nbsp;<a href="https://sv.wikipedia.org/wiki/Transcendentalism" title="Transcendentalism" style="color: #0b0080; background: none;">Transcendentalists</a></em>, exempelvis&nbsp;<a href="https://sv.wikipedia.org/wiki/R._W._Emerson" class="mw-redirect" title="R. W. Emerson" style="color: #0b0080; background: none;">R. W. Emerson</a>&nbsp;(1803-1882).</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">&Auml;ven&nbsp;<a href="https://sv.wikipedia.org/wiki/Teosofi" title="Teosofi" style="color: #0b0080; background: none;">teosofin</a>, starkt influerad av indiska tankar, fick, s&auml;rskilt under slutet av 1800-talet och b&ouml;rjan av 1900-talet, inflytande p&aring; v&auml;sterlandets syn p&aring; yoga. D&aring; betonades s&auml;rskilt yogans&nbsp;<a href="https://sv.wikipedia.org/wiki/Guds_transcendens" title="Guds transcendens" style="color: #0b0080; background: none;">transcendenta</a>&nbsp;dimensioner.<sup id="cite_ref-11" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-11" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>11<span class="cite-reference-link-bracket">]</span></a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">P&aring; 1930- och 1940-talet b&ouml;rjade yoga bli mer allm&auml;nt accepterad, delvis p&aring; grund av att k&auml;nda personer hade visat intresse.&nbsp;<a href="https://sv.wikipedia.org/wiki/Mircea_Eliade" title="Mircea Eliade" style="color: #0b0080; background: none;">Mircea Eliade</a>, rum&auml;nsk religionshistoriker, studerade yoga 1928-1933 i Indien. Han kom i en doktorsavhandling 1933 och i en senare bok,&nbsp;<em>Yoga: Immortality and Freedom</em>, (1954)1958, att betona en&nbsp;<a href="https://sv.wikipedia.org/wiki/Tantra" title="Tantra" style="color: #0b0080; background: none;">tantrisk</a>&nbsp;yoga-tradition. D&auml;rigenom flyttades fokus fr&aring;n det transcendenta ("<a href="https://sv.wikipedia.org/wiki/Atman" title="Atman" style="color: #0b0080; background: none;">Atman</a>-<a href="https://sv.wikipedia.org/wiki/Brahman" title="Brahman" style="color: #0b0080; background: none;">Brahman</a>" i&nbsp;<a href="https://sv.wikipedia.org/wiki/Advaita" title="Advaita" style="color: #0b0080; background: none;">Advaita</a>) till den tydliga inriktning p&aring; kroppen som pr&auml;glar v&aring;r tids v&auml;sterl&auml;ndska yoga.<sup id="cite_ref-12" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-12" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>12<span class="cite-reference-link-bracket">]</span></a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">P&aring; 1960-talet &ouml;kade intresset f&ouml;r indisk andlighet starkt i v&auml;st. Under denna period tillh&ouml;rde de mest inflytelserika yogal&auml;rarna tv&aring; olika riktningar, de som f&ouml;ljde Sivananda Saraswati (1887&ndash;1963)<sup id="cite_ref-13" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-13" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>13<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;och de som f&ouml;ljde Tirumalai Krishnamacharya<sup id="cite_ref-14" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-14" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>14<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;(1888&ndash;1989). L&auml;rare som undervisade i&nbsp;<a href="https://sv.wikipedia.org/wiki/Hathayoga" title="Hathayoga" style="color: #0b0080; background: none;">Hathayoga</a>&nbsp;i v&auml;st under denna tid var&nbsp;<a href="https://sv.wikipedia.org/wiki/B.K.S._Iyengar" title="B.K.S. Iyengar" style="color: #0b0080; background: none;">B.K.S. Iyengar</a>&nbsp;(1918-2014), K. Pattabhi Jois (1915-2009), Swami Vishnu-devananda (1927-1993) och Swami Satchidananda (1914-2002). Yogi Bhajan inf&ouml;rde&nbsp;<a href="https://sv.wikipedia.org/wiki/Kundaliniyoga" class="mw-redirect" title="Kundaliniyoga" style="color: #0b0080; background: none;">kundaliniyoga</a>&nbsp;till USA 1969.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">&Aring;r 1970 grundade&nbsp;<a href="https://sv.wikipedia.org/wiki/Swami_Janakananda" title="Swami Janakananda" style="color: #0b0080; background: none;">Swami Janakananda</a>&nbsp;den f&ouml;rsta nordiska yogaskolan i K&ouml;penhamn, som fortfarande &auml;r verksam i flertalet nordiska l&auml;nder.<sup id="cite_ref-15" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-15" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>15<span class="cite-reference-link-bracket">]</span></a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">En andra "yoga boom" kom p&aring; 1980-talet, d&aring; Dean Ornish,<sup id="cite_ref-16" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-16" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>16<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;som f&ouml;ljde Swami Satchidananda, f&ouml;rknippade yoga med hj&auml;rt/k&auml;rl-h&auml;lsa och betonade yoga som ett rent fysiskt system f&ouml;r tr&auml;ning f&ouml;r god h&auml;lsa - yoga menades st&aring; helt vid sidan av new-age eller esoterism och vara frist&aring;ende fr&aring;n alla religi&ouml;sa anknytningar.<sup id="cite_ref-17" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-17" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>17<span class="cite-reference-link-bracket">]</span></a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">I v&auml;sterlandet har ordet yoga sedan 1980-talet fr&auml;mst kommit att associeras med&nbsp;<a href="https://sv.wikipedia.org/wiki/Hathayoga" title="Hathayoga" style="color: #0b0080; background: none;">Hathayoga</a>&nbsp;och dess&nbsp;<a href="https://sv.wikipedia.org/wiki/Asana" title="Asana" style="color: #0b0080; background: none;">asanas</a>&nbsp;(st&auml;llningar).<sup id="cite_ref-18" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-18" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>18<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;Det har dessutom kommit att uppfattats som en form av tr&auml;ning.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Sedan &aring;r 2000 har yoga konstant &ouml;kat i popularitet i v&auml;st. I USA har antalet personer som ut&ouml;var yoga &ouml;kat fr&aring;n 4 miljoner (&aring;r 2001) till 20 miljoner (&aring;r 2011).</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">&Aring;r 2013 opponerade sig vissa skolor I USA mot ut&ouml;vande av yoga inne i skolans lokaler, med argumentet att detta propagerade f&ouml;r&nbsp;<a href="https://sv.wikipedia.org/wiki/Hinduism" title="Hinduism" style="color: #0b0080; background: none;">hinduism</a>. Samma argument framf&ouml;rdes i vissa svenska skolor, men m&ouml;ttes d&aring; av bred of&ouml;rst&aring;else,<sup id="cite_ref-19" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-19" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>19<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-20" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-20" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>20<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;i st&auml;llet har yoga kommit att bli allt mer accepterad, &auml;ven inom kristen tradition.<sup id="cite_ref-21" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-21" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>21<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-22" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-22" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>22<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-23" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-23" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>23<span class="cite-reference-link-bracket">]</span></a></sup>&nbsp;I&nbsp;<a href="https://sv.wikipedia.org/wiki/Svenska_kyrkan" title="Svenska kyrkan" style="color: #0b0080; background: none;">Svenska kyrkan</a>&nbsp;ing&aring;r yoga i flera f&ouml;rsamlingars verksamhet.<sup id="cite_ref-24" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-24" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>24<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-25" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-25" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>25<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-26" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-26" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>26<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-27" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-27" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>27<span class="cite-reference-link-bracket">]</span></a></sup><sup id="cite_ref-28" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-28" style="color: #0b0080; background: none;"><span class="cite-reference-link-bracket">[</span>28<span class="cite-reference-link-bracket">]</span></a></sup></p>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T164329Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+8c96e1fc-7a9e-4b66-9d9f-51f8b93b4047
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T165843Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: sv-SE
+version: 1
+revision: 85996f50-43ff-457a-8bc0-7563c1c28f9f
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 10632
+
+<h2 style="color: #000000; background: none #ffffff; margin: 1em 0px 0.25em; padding: 0px; border-bottom: 1px solid #a2a9b1;">Historia i v&auml;st</h2>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Med grund i den tyska romantiken och genom bland andra&nbsp;<a href="https://sv.wikipedia.org/wiki/Friedrich_Max_MÃÂ¼ller" title="Friedrich Max Müller" style="color: #0b0080; background: none;">Friedrich Max M&uuml;ller</a>&nbsp;och&nbsp;<a href="https://sv.wikipedia.org/wiki/Arthur_Schopenhauer" title="Arthur Schopenhauer" style="color: #0b0080; background: none;">Arthur Schopenhauer</a>&nbsp;b&ouml;rjade i mitten av 1800-talet indisk filosofi uppm&auml;rksammas i v&auml;sterlandet.<sup id="cite_ref-7" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-7" style="color: #0b0080; background: none;">[7]</a></sup>&nbsp;&Aring;r 1851 publicerades den f&ouml;rsta boken om yoga i v&auml;st,&nbsp;<em>Treatise on Yoga Philosophy</em>&nbsp;av N. C. Paul,<sup id="cite_ref-8" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-8" style="color: #0b0080; background: none;">[8]</a></sup>&nbsp;som vid sidan av Major D. Basu hade p&aring;b&ouml;rjat moderna vetenskapliga studier av yoga i slutet av 1800-talet. Det fortsattes p&aring; 1900-talet genom Sri Yogendra (1897-1989) och Swami Kuvalayananda.<sup id="cite_ref-9" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-9" style="color: #0b0080; background: none;">[9]</a></sup><sup id="cite_ref-10" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-10" style="color: #0b0080; background: none;">[10]</a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Den f&ouml;rste indiske l&auml;rare som undervisade om yoga i v&auml;sterlandet var&nbsp;<a href="https://sv.wikipedia.org/wiki/Swami_Vivekananda" title="Swami Vivekananda" style="color: #0b0080; background: none;">Swami Vivekananda</a>, som reste runt I Europa och USA p&aring; 1890-talet. Han fick ett positivt mottagande av tidens intellektuella, s&auml;rskilt fr&aring;n&nbsp;<em>the New England&nbsp;<a href="https://sv.wikipedia.org/wiki/Transcendentalism" title="Transcendentalism" style="color: #0b0080; background: none;">Transcendentalists</a></em>, exempelvis&nbsp;<a href="https://sv.wikipedia.org/wiki/R._W._Emerson" class="mw-redirect" title="R. W. Emerson" style="color: #0b0080; background: none;">R. W. Emerson</a>&nbsp;(1803-1882).</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">&Auml;ven&nbsp;<a href="https://sv.wikipedia.org/wiki/Teosofi" title="Teosofi" style="color: #0b0080; background: none;">teosofin</a>, starkt influerad av indiska tankar, fick, s&auml;rskilt under slutet av 1800-talet och b&ouml;rjan av 1900-talet, inflytande p&aring; v&auml;sterlandets syn p&aring; yoga. D&aring; betonades s&auml;rskilt yogans&nbsp;<a href="https://sv.wikipedia.org/wiki/Guds_transcendens" title="Guds transcendens" style="color: #0b0080; background: none;">transcendenta</a>&nbsp;dimensioner.<sup id="cite_ref-11" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-11" style="color: #0b0080; background: none;">[11]</a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">P&aring; 1930- och 1940-talet b&ouml;rjade yoga bli mer allm&auml;nt accepterad, delvis p&aring; grund av att k&auml;nda personer hade visat intresse.&nbsp;<a href="https://sv.wikipedia.org/wiki/Mircea_Eliade" title="Mircea Eliade" style="color: #0b0080; background: none;">Mircea Eliade</a>, rum&auml;nsk religionshistoriker, studerade yoga 1928-1933 i Indien. Han kom i en doktorsavhandling 1933 och i en senare bok,&nbsp;<em>Yoga: Immortality and Freedom</em>, (1954)1958, att betona en&nbsp;<a href="https://sv.wikipedia.org/wiki/Tantra" title="Tantra" style="color: #0b0080; background: none;">tantrisk</a>&nbsp;yoga-tradition. D&auml;rigenom flyttades fokus fr&aring;n det transcendenta ("<a href="https://sv.wikipedia.org/wiki/Atman" title="Atman" style="color: #0b0080; background: none;">Atman</a>-<a href="https://sv.wikipedia.org/wiki/Brahman" title="Brahman" style="color: #0b0080; background: none;">Brahman</a>" i&nbsp;<a href="https://sv.wikipedia.org/wiki/Advaita" title="Advaita" style="color: #0b0080; background: none;">Advaita</a>) till den tydliga inriktning p&aring; kroppen som pr&auml;glar v&aring;r tids v&auml;sterl&auml;ndska yoga.<sup id="cite_ref-12" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-12" style="color: #0b0080; background: none;">[12]</a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">P&aring; 1960-talet &ouml;kade intresset f&ouml;r indisk andlighet starkt i v&auml;st. Under denna period tillh&ouml;rde de mest inflytelserika yogal&auml;rarna tv&aring; olika riktningar, de som f&ouml;ljde Sivananda Saraswati (1887&ndash;1963)<sup id="cite_ref-13" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-13" style="color: #0b0080; background: none;">[13]</a></sup>&nbsp;och de som f&ouml;ljde Tirumalai Krishnamacharya<sup id="cite_ref-14" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-14" style="color: #0b0080; background: none;">[14]</a></sup>&nbsp;(1888&ndash;1989). L&auml;rare som undervisade i&nbsp;<a href="https://sv.wikipedia.org/wiki/Hathayoga" title="Hathayoga" style="color: #0b0080; background: none;">Hathayoga</a>&nbsp;i v&auml;st under denna tid var&nbsp;<a href="https://sv.wikipedia.org/wiki/B.K.S._Iyengar" title="B.K.S. Iyengar" style="color: #0b0080; background: none;">B.K.S. Iyengar</a>&nbsp;(1918-2014), K. Pattabhi Jois (1915-2009), Swami Vishnu-devananda (1927-1993) och Swami Satchidananda (1914-2002). Yogi Bhajan inf&ouml;rde&nbsp;<a href="https://sv.wikipedia.org/wiki/Kundaliniyoga" class="mw-redirect" title="Kundaliniyoga" style="color: #0b0080; background: none;">kundaliniyoga</a>&nbsp;till USA 1969.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">&Aring;r 1970 grundade&nbsp;<a href="https://sv.wikipedia.org/wiki/Swami_Janakananda" title="Swami Janakananda" style="color: #0b0080; background: none;">Swami Janakananda</a>&nbsp;den f&ouml;rsta nordiska yogaskolan i K&ouml;penhamn, som fortfarande &auml;r verksam i flertalet nordiska l&auml;nder.<sup id="cite_ref-15" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-15" style="color: #0b0080; background: none;">[15]</a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">En andra "yoga boom" kom p&aring; 1980-talet, d&aring; Dean Ornish,<sup id="cite_ref-16" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-16" style="color: #0b0080; background: none;">[16]</a></sup>&nbsp;som f&ouml;ljde Swami Satchidananda, f&ouml;rknippade yoga med hj&auml;rt/k&auml;rl-h&auml;lsa och betonade yoga som ett rent fysiskt system f&ouml;r tr&auml;ning f&ouml;r god h&auml;lsa - yoga menades st&aring; helt vid sidan av new-age eller esoterism och vara frist&aring;ende fr&aring;n alla religi&ouml;sa anknytningar.<sup id="cite_ref-17" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-17" style="color: #0b0080; background: none;">[17]</a></sup></p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">I v&auml;sterlandet har ordet yoga sedan 1980-talet fr&auml;mst kommit att associeras med&nbsp;<a href="https://sv.wikipedia.org/wiki/Hathayoga" title="Hathayoga" style="color: #0b0080; background: none;">Hathayoga</a>&nbsp;och dess&nbsp;<a href="https://sv.wikipedia.org/wiki/Asana" title="Asana" style="color: #0b0080; background: none;">asanas</a>&nbsp;(st&auml;llningar).<sup id="cite_ref-18" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-18" style="color: #0b0080; background: none;">[18]</a></sup>&nbsp;Det har dessutom kommit att uppfattats som en form av tr&auml;ning.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Sedan &aring;r 2000 har yoga konstant &ouml;kat i popularitet i v&auml;st. I USA har antalet personer som ut&ouml;var yoga &ouml;kat fr&aring;n 4 miljoner (&aring;r 2001) till 20 miljoner (&aring;r 2011).</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">&Aring;r 2013 opponerade sig vissa skolor I USA mot ut&ouml;vande av yoga inne i skolans lokaler, med argumentet att detta propagerade f&ouml;r&nbsp;<a href="https://sv.wikipedia.org/wiki/Hinduism" title="Hinduism" style="color: #0b0080; background: none;">hinduism</a>. Samma argument framf&ouml;rdes i vissa svenska skolor, men m&ouml;ttes d&aring; av bred of&ouml;rst&aring;else,<sup id="cite_ref-19" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-19" style="color: #0b0080; background: none;">[19]</a></sup><sup id="cite_ref-20" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-20" style="color: #0b0080; background: none;">[20]</a></sup>&nbsp;i st&auml;llet har yoga kommit att bli allt mer accepterad, &auml;ven inom kristen tradition.<sup id="cite_ref-21" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-21" style="color: #0b0080; background: none;">[21]</a></sup><sup id="cite_ref-22" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-22" style="color: #0b0080; background: none;">[22]</a></sup><sup id="cite_ref-23" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-23" style="color: #0b0080; background: none;">[23]</a></sup>&nbsp;I&nbsp;<a href="https://sv.wikipedia.org/wiki/Svenska_kyrkan" title="Svenska kyrkan" style="color: #0b0080; background: none;">Svenska kyrkan</a>&nbsp;ing&aring;r yoga i flera f&ouml;rsamlingars verksamhet.<sup id="cite_ref-24" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-24" style="color: #0b0080; background: none;">[24]</a></sup><sup id="cite_ref-25" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-25" style="color: #0b0080; background: none;">[25]</a></sup><sup id="cite_ref-26" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-26" style="color: #0b0080; background: none;">[26]</a></sup><sup id="cite_ref-27" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-27" style="color: #0b0080; background: none;">[27]</a></sup><sup id="cite_ref-28" class="reference"><a href="https://sv.wikipedia.org/wiki/Yoga#cite_note-28" style="color: #0b0080; background: none;">[<span>28</span>]</a></sup></p>
+<div>&nbsp;</div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T171724Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+85996f50-43ff-457a-8bc0-7563c1c28f9f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T121202Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

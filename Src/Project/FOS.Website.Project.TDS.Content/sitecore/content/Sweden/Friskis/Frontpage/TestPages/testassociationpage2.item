@@ -1,0 +1,87 @@
+----item----
+version: 1
+id: {BE4F226D-00CC-4059-BF36-A976648FB46B}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/testassociationpage2
+parent: {9C01FA09-56A2-4615-B911-F3C19934A383}
+name: testassociationpage2
+master: {00000000-0000-0000-0000-000000000000}
+template: {ED6742D6-FC75-4FCF-B245-4F89EEF2824D}
+templatekey: AssociationPage
+created: 20170327T131127Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1600
+----version----
+language: sv-SE
+version: 1
+revision: 9cd3c154-070f-4460-b574-d48e1c968059
+
+----field----
+field: {72D4E6BC-2C3E-46D2-B3AC-259351C6E612}
+name: Link To Existing Page
+key: link to existing page
+content-length: 84
+
+<link linktype="external" url="http://web.friskissvettis.se/" anchor="" target="" />
+----field----
+field: {F5BE9F09-AE1A-4545-A82A-51FF0D0A6C5F}
+name: Twitter Link
+key: twitter link
+content-length: 88
+
+<link text="twitter" linktype="external" url="http://twitter.com" anchor="" target="" />
+----field----
+field: {D39C7329-B2AB-4121-87C3-822619AEB2B0}
+name: Region
+key: region
+content-length: 9
+
+Hollywood
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 278
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{E25CA30E-29C4-4A01-8BA3-F2B1D0DA3592}" p:before="*" s:ds="{E070EC4D-8507-4525-99B4-105E81E67B53}" s:id="{06257D00-C6A6-4C45-BE01-E4D0802A4B25}" s:ph="/main/topcontent/heroarea" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170327T131127Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9cd3c154-070f-4460-b574-d48e1c968059
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T121308Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {8E88113F-E379-43F2-85E3-BE9260894FE2}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/Test/ImageComponentFolder/LimitedEdition/3_Flowride
+parent: {C2AF5915-6B2F-4D68-B0E1-96EDD83578E4}
+name: 3_Flowride
+master: {00000000-0000-0000-0000-000000000000}
+template: {498B6925-E022-456B-8242-341F39B4983E}
+templatekey: BasicImage
+created: 20170316T081710Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 39de0d00-fbf6-430d-89c1-03a069d43269
+
+----field----
+field: {E8DDA2E7-E4D1-44F8-B2B4-28B2C36D20F7}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{BDBE03C3-0390-4CA5-92A8-527BFF25377C}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170316T081710Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+39de0d00-fbf6-430d-89c1-03a069d43269
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170316T081748Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

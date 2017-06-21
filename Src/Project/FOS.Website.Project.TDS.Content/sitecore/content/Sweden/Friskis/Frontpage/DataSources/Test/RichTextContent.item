@@ -1,0 +1,233 @@
+----item----
+version: 1
+id: {D5B5BAC2-3A04-47C6-93AC-C8F3BC8AD216}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/Test/RichTextContent
+parent: {B318DBED-CED6-43EB-B74B-A253E97338F3}
+name: RichTextContent
+master: {00000000-0000-0000-0000-000000000000}
+template: {1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}
+templatekey: RichTextContent
+created: 20170309T113326Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+600
+----version----
+language: en
+version: 1
+revision: fe5d6bc6-09cb-4909-a61b-e8a7e941d6dc
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 2549
+
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">En&nbsp;<strong>motionscykel</strong>&nbsp;&auml;r ett&nbsp;<a href="https://sv.wikipedia.org/w/index.php?title=TrÃ¤ningsredskap&amp;action=edit&amp;redlink=1" class="new" title="Träningsredskap [inte skriven än]" style="color: #a55858; background: none;">tr&auml;ningsredskap</a>&nbsp;som liknar en&nbsp;<a href="https://sv.wikipedia.org/wiki/Cykel" title="Cykel" style="color: #0b0080; background: none;">cykel</a>. Skillnaden mot en cykel &auml;r att den&nbsp;<a href="https://sv.wikipedia.org/wiki/Energi" title="Energi" style="color: #0b0080; background: none;">energi</a>&nbsp;som utvecklas genom trampr&ouml;relserna inte leder till att redskapet r&ouml;r sig. Motionscyklar &auml;r oftast utrustade med ett&nbsp;<a href="https://sv.wikipedia.org/wiki/SvÃ¤nghjul" title="Svänghjul" style="color: #0b0080; background: none;">sv&auml;nghjul</a>, som tar upp de d&ouml;da punkterna i trampet och d&auml;rmed ger ett j&auml;mnare motst&aring;nd. Sv&auml;nghjulet belastas oftast mekaniskt med n&aring;gon typ av bromskloss som genom&nbsp;<a href="https://sv.wikipedia.org/wiki/Friktion" title="Friktion" style="color: #0b0080; background: none;">friktion</a>&nbsp;mot hjulet ger ett reglerbart motst&aring;nd, via ett reglage p&aring; eller i n&auml;rheten av styret. Motst&aring;ndet kan varieras efter individens &ouml;nskem&aring;l.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">Motionscyklar anv&auml;nds f&ouml;r&nbsp;<a href="https://sv.wikipedia.org/wiki/Kondition" title="Kondition" style="color: #0b0080; background: none;">konditionstr&auml;ning</a>, individuellt eller i grupp som ibland kallas spinning. Den &auml;r &auml;ven vanliga f&ouml;r&nbsp;<a href="https://sv.wikipedia.org/wiki/UppvÃ¤rmning_(trÃ¤ning)" title="Uppvärmning (träning)" style="color: #0b0080; background: none;">uppv&auml;rmning</a>&nbsp;inf&ouml;r&nbsp;<a href="https://sv.wikipedia.org/wiki/StyrketrÃ¤ning" title="Styrketräning" style="color: #0b0080; background: none;">styrketr&auml;ning</a>&nbsp;p&aring;&nbsp;<a href="https://sv.wikipedia.org/wiki/Gym" title="Gym" style="color: #0b0080; background: none;">gym</a>.</p>
+<p style="color: #252525; background-color: #ffffff; margin: 0.5em 0px;">En&nbsp;<a href="https://sv.wikipedia.org/wiki/Ergometer" title="Ergometer" style="color: #0b0080; background: none;">ergometer</a>&nbsp;&auml;r en motionscykel som &auml;r s&auml;rskilt utrustad f&ouml;r att m&auml;ta fysisk prestationsf&ouml;rm&aring;ga</p>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T163559Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fe5d6bc6-09cb-4909-a61b-e8a7e941d6dc
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170309T163559Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: sv-SE
+version: 1
+revision: 337bd785-8918-4f3e-8f50-efabb7c3bf35
+
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 6240
+
+<div class="wg-article" style="color: #333333; background-color: #ffffff; margin-bottom: 10px;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-8 col-md-offset-2" style="width: 640px; margin-left: 160px; padding-right: 15px; padding-left: 15px;">
+<div class="wysiwyg cXenseParse text-widget" style="margin-bottom: 15px;">
+<div class="outtake">### Ställ in cykeln rätt Sadeln och styret får varken sitta för högt eller för lågt. Många sitter fel på cykeln trots att det inte tar mer än högst 2–3 minuter att ställa in cykeln rätt. Ta hjälp av instruktören så att du sitter och står rätt och kan trampa optimalt under hela passet. **Fördel:** Risken minskar för överbelastningsskador och värk i t.ex. knäna.</div>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wg-article" style="color: #333333; background-color: #ffffff; margin-bottom: 10px;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-8 col-md-offset-2" style="width: 640px; margin-left: 160px; padding-right: 15px; padding-left: 15px;">
+<div class="inserted-code-widget" style="width: 610px; padding: 10px 15px;">
+<table class="simple" cellpadding="0" cellspacing="0" style="background-color: transparent; border-spacing: 0px;">
+    <tbody style="background-color: #f0f1f3;">
+        <tr>
+            <td style="padding: 0px 15px 0px 0px; text-align: left;">
+            <h3 style="color: inherit; margin-top: 22px; margin-bottom: 11px;">Ge full gas i en timme</h3>
+            <p style="margin: 0px 0px 11px;">Du kan mycket väl köra två spinningpass i rad, men i början bör du nöja dig med ett pass. Då kan du ta ut dig mer och få upp pulsen maximalt i stället för att köra med lägre intensitet under den andra timmen eftersom du blivit trött.<strong>Fördel:</strong>Du ödslar ingen tid på att trampa sakta ena timmen.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wg-article" style="color: #333333; background-color: #ffffff; margin-bottom: 10px;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-8 col-md-offset-2" style="width: 640px; margin-left: 160px; padding-right: 15px; padding-left: 15px;">
+<div class="wysiwyg cXenseParse text-widget" style="margin-bottom: 15px;">
+<div class="outtake">### Fuska inte med belastningen Det ger inget att köra med för låg intensitet. Om du känner dig trött och sliten bör du hellre hoppa över ett intervallpass i stället för att minska belastningen och hoppas att instruktören inte upptäcker något. **Fördel:** Du får ut maximalt av träningstiden.</div>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wg-article" style="color: #333333; background-color: #ffffff; margin-bottom: 10px;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-8 col-md-offset-2" style="width: 640px; margin-left: 160px; padding-right: 15px; padding-left: 15px;">
+<div class="inserted-code-widget" style="width: 610px; padding: 10px 15px;">
+<table class="simple" cellpadding="0" cellspacing="0" style="background-color: transparent; border-spacing: 0px;">
+    <tbody style="background-color: #f0f1f3;">
+        <tr>
+            <td style="padding: 0px 15px 0px 0px; text-align: left;">
+            <h3 style="color: inherit; margin-top: 22px; margin-bottom: 11px;">Låt kroppen bestämma</h3>
+            <p style="margin: 0px 0px 11px;">Se till att du äter innan du ska träna. Ät en måltid 2–3 timmar före träningen. Lär dig hur din kropp fungerar och se om du blir trött i början då tempot är högt, eller om du blir trött på slutet då energin börjar ta slut.<strong>Fördel:</strong>Du slipper få soppatorsk.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wg-article" style="color: #333333; background-color: #ffffff; margin-bottom: 10px;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-8 col-md-offset-2" style="width: 640px; margin-left: 160px; padding-right: 15px; padding-left: 15px;">
+<div class="wysiwyg cXenseParse text-widget" style="margin-bottom: 15px;">
+<div class="outtake">### Kör i takt till musiken Träna på att trampa i takt till musiken. När du lärt dig det kan du pressa dig ytterligare. Rytmen i musiken hjälper dig också att lägga i rätt växel så att det blir skonsammare för knäna. **Fördel:** Du orkar cykla snabbare längre tid.</div>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wg-banner" style="color: #333333; background-color: #ffffff; margin-right: -15px; margin-left: -15px; text-align: center;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-12" style="width: 990px; padding-right: 15px; padding-left: 15px;">
+<div class="banner-min-height banner gtm-banner bonnier-ad" data-ad-position="in-content-banner">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="wg-article" style="color: #333333; background-color: #ffffff; margin-bottom: 10px;">
+<div class="row" style="margin-right: -15px; margin-left: -15px;">
+<div class="col-md-8 col-md-offset-2" style="width: 640px; margin-left: 160px; padding-right: 15px; padding-left: 15px;">
+<div class="inserted-code-widget" style="width: 610px; padding: 10px 15px;">
+<table class="simple" cellpadding="0" cellspacing="0" style="background-color: transparent; border-spacing: 0px;">
+    <tbody style="background-color: #f0f1f3;">
+        <tr>
+            <td style="padding: 0px 15px 0px 0px; text-align: left;">
+            <h3 style="color: inherit; margin-top: 22px; margin-bottom: 11px;">Följ instruktörens program</h3>
+            <p style="margin: 0px 0px 11px;">Tro inte att du kan mer än instruktören, även om du kanske inte gillar en viss spinningledare. Välj en instruktör som kan peppa dig. Om han/hon är duktig på att motivera så brukar det uppväga ett program som eventuellt inte tilltalar dig.<strong>Fördel:</strong>Du orkar träna intensivt och koncentrerat under hela passet.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="clearfix">&nbsp;</div></div></div></div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170309T113326Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+337bd785-8918-4f3e-8f50-efabb7c3bf35
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T121202Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

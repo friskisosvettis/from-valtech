@@ -10,6 +10,13 @@ template: {29BBA25B-AABE-405E-9388-84381D582484}
 templatekey: CountryContainer
 created: 20170301T144558Z
 
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 27
+
+Flags/32x32/flag_sweden.png
 ----version----
 language: en
 version: 1
@@ -60,7 +67,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 1c437914-4708-4494-88b6-aefb6c67bd7d
+revision: 5d341916-4a90-422b-b1c3-cb2f89d9851b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -89,14 +96,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1c437914-4708-4494-88b6-aefb6c67bd7d
+5d341916-4a90-422b-b1c3-cb2f89d9851b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170301T144709Z
+20170621T104432Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

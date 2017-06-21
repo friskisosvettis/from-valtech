@@ -10,10 +10,17 @@ template: {F89CEE2A-4DAB-4922-8587-AD0658EF5D52}
 templatekey: SummaryList
 created: 20170528T113218Z
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1200
 ----version----
 language: sv-SE
 version: 1
-revision: 5b57e0ae-1f43-4073-82a5-ffee4a3b467b
+revision: f32f0f9b-3ba6-4ceb-ba0e-5ff813f7a591
 
 ----field----
 field: {5A44F60A-547B-482A-993D-4C35CE6205FD}
@@ -70,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5b57e0ae-1f43-4073-82a5-ffee4a3b467b
+f32f0f9b-3ba6-4ceb-ba0e-5ff813f7a591
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170528T113322Z
+20170621T093621Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

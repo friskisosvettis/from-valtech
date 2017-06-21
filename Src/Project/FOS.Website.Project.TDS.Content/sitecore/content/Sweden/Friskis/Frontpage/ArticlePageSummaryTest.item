@@ -10,6 +10,13 @@ template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
 templatekey: ArticlePage
 created: 20170612T115354Z
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+500
 ----version----
 language: en
 version: 1
@@ -46,7 +53,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 190a1f5b-fb84-4233-bbd1-e4983254f855
+revision: 0b717643-b418-42bd-a81c-c1b4c944d402
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
@@ -110,14 +117,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-190a1f5b-fb84-4233-bbd1-e4983254f855
+0b717643-b418-42bd-a81c-c1b4c944d402
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T134009Z
+20170621T091521Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

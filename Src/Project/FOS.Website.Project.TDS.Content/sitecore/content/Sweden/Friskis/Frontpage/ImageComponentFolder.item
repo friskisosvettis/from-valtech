@@ -10,10 +10,17 @@ template: {F7B78574-8135-4A79-B5C3-C313ABA1B06E}
 templatekey: DataSourceFolder
 created: 20170314T140526Z
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1200
 ----version----
 language: sv-SE
 version: 1
-revision: dfa253bd-fe08-40a6-9b75-2fd6297f9c09
+revision: 94dfc128-0b39-4e55-b9e1-016ef6c64913
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dfa253bd-fe08-40a6-9b75-2fd6297f9c09
+94dfc128-0b39-4e55-b9e1-016ef6c64913
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170314T140526Z
+20170621T091521Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

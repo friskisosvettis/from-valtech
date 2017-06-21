@@ -10,6 +10,13 @@ template: {1C510D3B-9CC1-4FD7-9FA3-1FB3773BE021}
 templatekey: RichTextContent
 created: 20170309T113326Z
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1500
 ----version----
 language: en
 version: 1
@@ -76,7 +83,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 4df9b0cb-08f7-4c7d-8589-5b2e6a5fa2fb
+revision: 4220c757-375a-4780-9f85-3a4357cee2df
 
 ----field----
 field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
@@ -202,14 +209,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4df9b0cb-08f7-4c7d-8589-5b2e6a5fa2fb
+4220c757-375a-4780-9f85-3a4357cee2df
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170309T173102Z
+20170621T093621Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

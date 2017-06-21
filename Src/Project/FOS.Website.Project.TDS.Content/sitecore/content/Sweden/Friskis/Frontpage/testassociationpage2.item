@@ -10,10 +10,17 @@ template: {ED6742D6-FC75-4FCF-B245-4F89EEF2824D}
 templatekey: AssociationPage
 created: 20170327T131127Z
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1600
 ----version----
 language: sv-SE
 version: 1
-revision: 6fd1f8e8-0c2d-44ef-9fd6-214154a46f5a
+revision: 636c03c2-a07b-489a-a8f3-7cb5ba8cbb98
 
 ----field----
 field: {72D4E6BC-2C3E-46D2-B3AC-259351C6E612}
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6fd1f8e8-0c2d-44ef-9fd6-214154a46f5a
+636c03c2-a07b-489a-a8f3-7cb5ba8cbb98
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T124434Z
+20170621T091521Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

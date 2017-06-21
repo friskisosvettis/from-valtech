@@ -10,6 +10,13 @@ template: {F89CEE2A-4DAB-4922-8587-AD0658EF5D52}
 templatekey: SummaryList
 created: 20170524T111853Z
 
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1100
 ----version----
 language: en
 version: 1

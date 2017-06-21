@@ -355,7 +355,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
 // SECOND LEVEL NAVIGATION
 .navigation--second-level {
     list-style: none;
-    margin: 0 0 $space 0;
+    margin: 0;
     padding: $space-double 0;
     text-align: center;
 

@@ -15,13 +15,15 @@
 @helper RenderImage()
 {
     <div class="container--6">
-        @Model.ImageItem.Image1.Render(cssClass: "media - container__media")
+        <div class="media-container media-container--360">
+            @Model.ImageItem.Image1.Render(cssClass: "media-container__media")
+        </div>
     </div>
 }
 @helper RenderRichText()
 {
     <div class="container--6">
-        <div class="textbox textbox--@Model.Style">
+        <div class="rich-text @Model.Style">
             <div class="textbox__content">
                 <p>@Model.RichTextItem.Text.Render()</p>
             </div>

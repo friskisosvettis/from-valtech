@@ -8,33 +8,8 @@
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }
 
-@if (Sitecore.Context.PageMode.IsExperienceEditor)
-{    <div class="container">
-        <div class="container--12">
-            <p>
-                <strong>Fyll i YoutubeID</strong><br />
-                Under dela i Youtube kommer länken som https://youtu.be/YoutubeID<br />
-                <span class="color--primary">https://youtu.be/</span>@Model.VideoItem.YoutubeID.Render()
-            </p>
-        </div>
+<div class="container">
+    <div class="container--12">
+        @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", Model)
     </div>
-}
-
-
-@if (Model.VideoItem.YoutubeID.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
-{
-    var highres = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/maxresdefault.jpg";
-    var lowres = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/sddefault.jpg";
-    var videoUrl = lowres;
-
-    <div class="container">
-        <div class="container--12">
-            <div class="media-container media-container--16x9 media-container__youtube media-container__video" data-js-youtube="@Model.VideoItem.YoutubeID">
-                <img class="media-container__media" src="@videoUrl" />
-                <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Spela video</span></div>
-            </div>
-        </div>
-    </div>
-}
-
-@* TODO: Add translation to "Spela Video" *@
+</div>

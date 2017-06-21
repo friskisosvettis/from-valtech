@@ -1,0 +1,43 @@
+﻿@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.ContentBlocks.Models.MediaAndTextModel
+
+@if (Model == null || Model.RichTextItem == null)
+{
+    return;
+}
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@helper RenderImage()
+{
+    <div class="container--6">
+        @Model.ImageItem.Image1.Render()
+    </div>
+}
+@helper RenderRichText()
+{
+    <div class="container--6">
+        <div class="textbox textbox--@Model.Style">
+            <div class="textbox__content">
+                <p>@Model.RichTextItem.Text.Render()</p>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container">
+    @if (Model.InvertPositions)
+    {
+        @RenderImage()
+        @RenderRichText()
+    }
+    else
+    {
+        @RenderRichText()
+        @RenderImage()
+    }
+</div>

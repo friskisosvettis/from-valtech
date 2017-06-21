@@ -1,0 +1,80 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Sitecore.ExperienceAnalytics.Client
+@using Synthesis.Mvc
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model LinkBlockModel
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@helper EditorMode()
+{
+        <div class="teaser--overlay">
+            @Model.ImageItem.Image1.Render()
+            <div class="teaser__overlay">
+                <div class="teaser__content">
+                    <h2>@Model.LinkBlock.LinkHeading.Render()</h2>
+                    <p>@Model.LinkBlock.LinkIntro.Render()</p>
+                    @Model.LinkBlock.LinkTarget.Render(null, "btn btn__link btn--secondary")
+                </div>
+            </div>
+        </div>
+}
+
+
+@helper VisualMode()
+{
+    <a href="@Model.LinkBlock.LinkTarget.Href">
+        <div class="teaser--overlay">
+            @Model.ImageItem.Image1.Render()
+            <div class="teaser__overlay">
+                <div class="teaser__content">
+                    <h2>@Model.LinkBlock.LinkHeading.Render()</h2>
+                    <p>@Model.LinkBlock.LinkIntro.Render()</p>
+                    <span class="btn btn__link btn--secondary">@Model.LinkBlock.LinkTarget.Text</span>
+                </div>
+            </div>
+        </div>
+    </a>
+}
+
+
+<div class="container">
+    <div class="container--12">
+        <div class="teaser">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                @EditorMode()
+            }
+            else
+            {
+                @VisualMode()
+            }
+        </div>
+    </div>
+</div>
+
+@* Fluff Talk to Veronika**@
+@*
+    <div class="container">
+        <div class="container--12">
+            <div class="teaser">
+                <a href="#add-link-if-you-want-to">
+                    <div class="teaser--overlay">
+                        <img src="/assets/images/styleguide/friskis-running.jpg" alt="Träna på Friskis">
+                        <div class="teaser__overlay">
+                            <div class="teaser__content">
+                                <h2>This is a h2 to this image</h2>
+                                <p>Oavsett om du vill bli starkare, rörligare, springa ett lopp eller må bra så har vi träningen för dig.</p>
+                                <span class="btn btn__link btn--secondary">Nu kör vi!</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+*@

@@ -1,0 +1,36 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model VideoModel
+
+@{
+    string mediaContainerClass = Model.IsFullSize ? "media-container--16x9" : "media-container--360";
+}
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div class="editor-info">
+        <p>
+            <strong>Fyll i YoutubeID</strong><br />
+            Under dela i Youtube kommer länken som https://youtu.be/YoutubeID<br />
+            <span class="color--primary">https://youtu.be/</span>@Model.VideoItem.YoutubeID.Render()
+        </p>    
+    </div>
+}
+
+
+@if (Model.VideoItem.YoutubeID.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    var highres = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/maxresdefault.jpg";
+    var lowres = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/sddefault.jpg";
+    var defaultThumbnail = "https://i.ytimg.com/vi/" + Model.VideoItem.YoutubeID + "/0.jpg";
+    var videoUrl = defaultThumbnail;
+
+    <div class="media-container @mediaContainerClass media-container__youtube media-container__video" data-js-youtube="@Model.VideoItem.YoutubeID">
+        <img class="media-container__media" src="@videoUrl" />
+        <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Spela video</span></div>
+    </div>
+
+}
+
+    @* TODO: Add translation to "Spela Video" *@

@@ -21,9 +21,9 @@ FOS.Website.Feature.ContentBlocks.Controllers.ContentBlockController, FOS.Websit
 field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
 name: Controller Action
 key: controller action
-content-length: 23
+content-length: 19
 
-GetImageAndRichTextView
+GetImageAndTextView
 ----field----
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
@@ -48,7 +48,7 @@ WordProcessing/32x32/word_wrap_a.png
 ----version----
 language: en
 version: 1
-revision: 3d97a27d-ab62-40d3-adcc-daedd4dee85d
+revision: e47695bb-5ecb-4124-8f64-778eb43bfd55
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3d97a27d-ab62-40d3-adcc-daedd4dee85d
+e47695bb-5ecb-4124-8f64-778eb43bfd55
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T101230Z
+20170620T101346Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

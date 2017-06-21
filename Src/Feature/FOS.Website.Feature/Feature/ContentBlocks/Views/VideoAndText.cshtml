@@ -1,0 +1,49 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Synthesis.Mvc.Extensions
+@model MediaAndTextModel
+
+@if (Model == null || Model.RichTextItem == null)
+{
+    return;
+}
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@helper RenderVideo()
+{
+
+    <div class="container--6">
+        <div class="media-container media-container--360">
+            @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", new VideoModel() {IsFullSize = false})
+        </div>
+    </div>
+    
+}
+
+@helper RenderTitleAndIntroText()
+{
+    <div class="container--6">
+        <div class="textbox textbox--@Model.Style">
+            <div class="textbox__content">
+
+                <p>@Model.RichTextItem.Text.Render()</p>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container">
+    @if (Model.InvertPositions)
+    {
+        @RenderVideo()
+        @RenderTitleAndIntroText()
+    }
+    else
+    {
+        @RenderTitleAndIntroText()
+        @RenderVideo()
+    }
+</div>

@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {8B9B1870-93B3-4488-9236-AB1F9CC3F20B}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/Modules/Video and Text
+parent: {D1CC12C7-A542-445C-9478-136F69D2E213}
+name: Video and Text
+master: {00000000-0000-0000-0000-000000000000}
+template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
+templatekey: ArticlePage
+created: 20170620T124943Z
+
+----version----
+language: sv-SE
+version: 1
+revision: ff37609e-9aca-418c-9ea3-45fd6be922c4
+
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 722
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{94B436AF-4EA8-43CE-B2AD-AD6279C97C45}" p:before="*" s:ds="{29AF78AB-7E68-4F40-B3B4-42E374F0E6D0}" s:id="{59BF81E3-D900-4704-B5C5-F8F1813C3607}" s:ph="/main/maincontent" /><r uid="{6528E1C7-436B-44A7-A652-ACDC7C131ACF}" p:after="r[@uid='{94B436AF-4EA8-43CE-B2AD-AD6279C97C45}']" s:ds="{6A854D97-95CF-4CB0-A5F9-4E098476003A}" s:id="{59BF81E3-D900-4704-B5C5-F8F1813C3607}" s:ph="/main/maincontent" /><r uid="{416127C3-1B63-42C6-9B05-7E27E0943A83}" p:after="r[@uid='{6528E1C7-436B-44A7-A652-ACDC7C131ACF}']" s:ds="{035CD4A2-1AC5-40DF-9054-A2705837AEFD}" s:id="{1B041E5F-D136-48B7-835C-9B4C237D16CD}" s:ph="/main/maincontent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170620T124943Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ff37609e-9aca-418c-9ea3-45fd6be922c4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T070343Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

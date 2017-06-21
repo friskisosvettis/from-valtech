@@ -197,7 +197,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/TrainingFormPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4D46261E-471A-4C6B-AF3E-E420751ACE4B}", "yue/4DcIcNNyK/gkgULwqihA3zg=", "Valtech.Foundation.Synthesis")]
-    public partial interface ITrainingFormPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem {
+    public partial interface ITrainingFormPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.TrainingForm.ITrainingFormItem {
     }
 }
 
@@ -4139,11 +4139,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.RichTextField _textContent;
         
+        private Synthesis.FieldTypes.TextField _trainingFormName;
+        
+        private Synthesis.FieldTypes.BooleanField _hideChildTrainingFormsFromList;
+        
         private Synthesis.FieldTypes.BooleanField _navigation_ShowInMenu;
         
         private Synthesis.FieldTypes.TextField _pageHeadingIntroduction;
         
         private Synthesis.FieldTypes.ImageField _summaryImage;
+        
+        private Synthesis.FieldTypes.BooleanField _hideThisTrainingFormFromList;
         
         private Synthesis.FieldTypes.BooleanField _navigation_IsSecondary;
         
@@ -4250,6 +4256,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the TrainingFormName field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("trainingformname")]
+        public Synthesis.FieldTypes.Interfaces.ITextField TrainingFormName {
+            get {
+                if (_trainingFormName == null) {
+                    _trainingFormName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{98FF996F-FD0E-4024-B550-C2CF0ADBB0EB}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "TrainingFormName"), this.GetSearchFieldValue("trainingformname"));
+                }
+                return _trainingFormName;
+            }
+        }
+        
+        /// <summary>Represents the HideChildTrainingFormsFromList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hidechildtrainingformsfromlist")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField HideChildTrainingFormsFromList {
+            get {
+                if (_hideChildTrainingFormsFromList == null) {
+                    _hideChildTrainingFormsFromList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C43EB9AF-3DD5-4FA3-9BDD-79C083E3C259}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "HideChildTrainingFormsFromList"), this.GetSearchFieldValue("hidechildtrainingformsfromlist"));
+                }
+                return _hideChildTrainingFormsFromList;
+            }
+        }
+        
         /// <summary>Represents the Navigation_ShowInMenu field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("navigation_showinmenu")]
         public Synthesis.FieldTypes.Interfaces.IBooleanField Navigation_ShowInMenu {
@@ -4280,6 +4308,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{93226CCC-A692-4A1F-9445-772065350708}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "SummaryImage"), this.GetSearchFieldValue("summaryimage"));
                 }
                 return _summaryImage;
+            }
+        }
+        
+        /// <summary>Represents the HideThisTrainingFormFromList field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hidethistrainingformfromlist")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField HideThisTrainingFormFromList {
+            get {
+                if (_hideThisTrainingFormFromList == null) {
+                    _hideThisTrainingFormFromList = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9A970602-4B3F-4B50-B2F9-1024982D9C3E}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "HideThisTrainingFormFromList"), this.GetSearchFieldValue("hidethistrainingformfromlist"));
+                }
+                return _hideThisTrainingFormFromList;
             }
         }
         

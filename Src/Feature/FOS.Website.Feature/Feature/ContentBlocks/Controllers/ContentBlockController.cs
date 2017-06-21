@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using FOS.Website.Feature.ContentBlocks.Data;
+using FOS.Website.Feature.ContentBlocks.Helpers;
 using FOS.Website.Feature.ContentBlocks.Models;
 
 namespace FOS.Website.Feature.ContentBlocks.Controllers
@@ -26,11 +28,33 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
             return View(Constants.Views.Paths.VideoAndText, model);
         }
 
+        public ActionResult GetLinkBlockView()
+        {
+            var model = new LinkBlockModel()
+            {
+                LinkBlock  = RenderingHelper.GetRenderingContextOrDefault<ILinkItem>(),
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+            };
+
+            return View(Constants.Views.Paths.LinkBlock, model);
+        }
+
         public ActionResult GetVideoView()
         {
             var model = new VideoModel();
 
             return View(Constants.Views.Paths.Video, model);
+        }
+
+        public ActionResult GetWideImageSeparatorView()
+        {
+            var model = new WideImageSeparatorModel()
+            {
+                SimpleTextBox = RenderingHelper.GetRenderingContextOrDefault<ISimpleTextBoxItem>(),
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+            };
+
+            return View(Constants.Views.Paths.WideImageSeparator, model);
         }
     }
 }

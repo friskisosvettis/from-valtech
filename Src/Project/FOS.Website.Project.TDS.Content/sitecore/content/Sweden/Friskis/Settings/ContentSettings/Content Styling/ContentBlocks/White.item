@@ -1,19 +1,26 @@
 ----item----
 version: 1
-id: {4B26BECE-752C-4B2F-BC4E-14A39009FA44}
+id: {8E695491-FAD8-4A4E-9403-093579ADCD37}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Data/Video/Video
-parent: {F717621B-4257-45DB-AECC-902A6F682FDB}
-name: Video
+path: /sitecore/content/Sweden/Friskis/Settings/ContentSettings/Content Styling/ContentBlocks/White
+parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
+name: White
 master: {00000000-0000-0000-0000-000000000000}
-template: {E269FBB5-3750-427A-9149-7AA950B49301}
-templatekey: Template section
-created: 20170619T082750Z
+template: {A5771A36-9D4F-404B-8120-654F833AF23B}
+templatekey: TextSetting
+created: 20170619T192440Z
+
+----field----
+field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
+name: Value
+key: value
+content-length: 0
+
 
 ----version----
 language: en
 version: 1
-revision: c1a12779-513f-4948-adfc-845c7fe87d25
+revision: ea927c22-d694-4885-b7b7-861c9a1e7839
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,21 +35,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T082750Z
+20170619T192440Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-c1a12779-513f-4948-adfc-845c7fe87d25
+ea927c22-d694-4885-b7b7-861c9a1e7839
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T082750Z
+20170619T194411Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

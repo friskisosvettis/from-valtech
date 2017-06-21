@@ -1,33 +1,26 @@
 ----item----
 version: 1
-id: {54D306E0-F243-4DBE-859D-248BBEC1A7D0}
+id: {E9932891-45BE-446F-8526-960A09203D49}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Data/Video/Video/YoutubeID
-parent: {4B26BECE-752C-4B2F-BC4E-14A39009FA44}
-name: YoutubeID
+path: /sitecore/content/Sweden/Friskis/Settings/ContentSettings/Content Styling/ContentBlocks/Red centered
+parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
+name: Red centered
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
-created: 20170619T082750Z
+template: {A5771A36-9D4F-404B-8120-654F833AF23B}
+templatekey: TextSetting
+created: 20170620T104750Z
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 16
+field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
+name: Value
+key: value
+content-length: 12
 
-Single-Line Text
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-100
+red centered
 ----version----
 language: en
 version: 1
-revision: 9ade41f1-1934-438f-bbb0-faed4573b9bf
+revision: 5898e4c8-bcd3-4b12-80c6-6facac6a0781
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T082750Z
+20170619T192440Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9ade41f1-1934-438f-bbb0-faed4573b9bf
+5898e4c8-bcd3-4b12-80c6-6facac6a0781
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T082750Z
+20170620T104831Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

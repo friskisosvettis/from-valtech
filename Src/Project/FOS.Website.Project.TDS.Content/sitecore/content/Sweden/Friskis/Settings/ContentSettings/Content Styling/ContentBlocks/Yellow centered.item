@@ -1,19 +1,26 @@
 ----item----
 version: 1
-id: {5D0C6408-8A1F-46B1-A7A3-B95A1123D77F}
+id: {7FDC9D54-055F-4840-9A16-A32A7DA35511}
 database: master
-path: /sitecore/layout/Placeholder Settings/Project
-parent: {1CE3B36C-9B0C-4EB5-A996-BFCB4EAA5287}
-name: Project
+path: /sitecore/content/Sweden/Friskis/Settings/ContentSettings/Content Styling/ContentBlocks/Yellow centered
+parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
+name: Yellow centered
 master: {00000000-0000-0000-0000-000000000000}
-template: {C3B037A0-46E5-4B67-AC7A-A144B962A56F}
-templatekey: Placeholder Settings Folder
-created: 20170110T093918Z
+template: {A5771A36-9D4F-404B-8120-654F833AF23B}
+templatekey: TextSetting
+created: 20170620T104811Z
 
+----field----
+field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
+name: Value
+key: value
+content-length: 15
+
+yellow centered
 ----version----
 language: en
 version: 1
-revision: cefce816-0513-4e93-b902-1b6c77cbbbec
+revision: aa8aa60f-e0a7-4e76-a3ee-95c884cb235b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170110T093918Z
+20170619T192440Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cefce816-0513-4e93-b902-1b6c77cbbbec
+aa8aa60f-e0a7-4e76-a3ee-95c884cb235b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170110T093918Z
+20170620T104819Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -58,12 +58,16 @@
                         containerClass = "container--12";
                     }
                 }
+                if (summarySpot.TrainingFormItem != null)
+                {
+                    cssClass = "";
+                }
                 <li class="@containerClass">
                     <div class="teaser @cssClass">
                         <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
 
                             @* Only render this section (with teaser--overlay/teaser__overlay) if highlight or traing form kicker*@
-                            @if (Model.SummaryListItem.DisplayAsHighlightedList.Value)
+                            @if (Model.SummaryListItem.DisplayAsHighlightedList.Value || (summarySpot.TrainingFormItem != null))
                             {
                                 <div class="teaser--overlay">
                                     @if (summarySpot.SummaryItem.SummaryImage.HasValue)

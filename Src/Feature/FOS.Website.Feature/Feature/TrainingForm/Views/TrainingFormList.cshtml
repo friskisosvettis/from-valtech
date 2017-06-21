@@ -13,7 +13,6 @@
     // Different wrapping classes for different colums dependent on the editors choice
     var containerClass = "container--12";
 
-    var cssClass = "teaser--small";
 }
 
 @if (Model.TrainingFormList.Any())
@@ -36,7 +35,7 @@
             }
 
             <li class="@containerClass">
-                <div class="teaser @cssClass">
+                <div class="teaser">
                     <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
 
                         <div class="teaser--overlay">

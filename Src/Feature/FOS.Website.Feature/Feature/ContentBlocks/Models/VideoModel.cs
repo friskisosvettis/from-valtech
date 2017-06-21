@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using FOS.Website.Feature.ContentBlocks.Data;
-using Sitecore.Data.Items;
-using Sitecore.Mvc.Presentation;
-using Synthesis;
+﻿using FOS.Website.Feature.ContentBlocks.Data;
+using FOS.Website.Feature.ContentBlocks.Helpers;
+using Synthesis.FieldTypes.Interfaces;
 
 namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class VideoModel : ContentBlockModelBase
     {
-        public bool IsFullSize { get; set; }
-        public IVideoItem VideoItem { get; set; }
+        public bool IsFullSize { get; set; } = true;
+        public IVideoItem VideoItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IVideoItem>();
 
-        public VideoModel() : base()
+        public ITextField VideoIdField { get; set; }
+
+        public VideoModel()
         {
-            var contextItem = RenderingContext.Current.Rendering.Item.As<IVideoItem>();
-            VideoItem = (contextItem == null)
-                ? Sitecore.Context.Item.As<IVideoItem>()
-                : contextItem;
-            IsFullSize = true;
+            VideoIdField = VideoItem.YoutubeID;
+        }
+
+        public VideoModel(ITextField videoIdField)
+        {
+            VideoIdField = videoIdField;
         }
     }
 }

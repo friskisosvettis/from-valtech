@@ -27,6 +27,12 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.VideoAndText, model);
         }
+        public ActionResult GetImageAndVideoView()
+        {
+            var model = new ImageAndVideoModel();
+
+            return View(Constants.Views.Paths.ImageAndVideo, model);
+        }
 
         public ActionResult GetLinkBlockView()
         {

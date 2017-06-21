@@ -1086,6 +1086,7 @@
     <Content Include="Feature\TrainingForm\Views\TrainingFormList.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\LinkBlock.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\WideImageSeparator.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\ImageAndVideo.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1113,6 +1114,7 @@
     <Compile Include="Feature\ContentBlocks\Models\LinkBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\MediaAndTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\ImageAndVideoModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\VideoModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\WideImageSeparatorModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />

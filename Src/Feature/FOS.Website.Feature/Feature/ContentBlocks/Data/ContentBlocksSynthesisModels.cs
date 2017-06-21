@@ -17,6 +17,36 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
     public partial interface IImageAndTextItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.IImageItem, global::FOS.Website.Feature.ContentBlocks.Data.IRichTextItem, global::FOS.Website.Feature.ContentBlocks.Data.Settings.IInvertContentItem, global::FOS.Website.Feature.ContentBlocks.Data.Settings.IStyleItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{0D6361CF-8650-4D91-BFF1-13687D56C3E1}", "kx8JwIvasm7FIjp34CVegdCHtzg=", "Valtech.Foundation.Synthesis")]
+    public partial interface IImageAndVideoItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem {
+        
+        /// <summary>Represents the LeftVideo field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("leftvideo")]
+        Synthesis.FieldTypes.Interfaces.ITextField LeftVideo {
+            get;
+        }
+        
+        /// <summary>Represents the LeftImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("leftimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField LeftImage {
+            get;
+        }
+        
+        /// <summary>Represents the RightVideo field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("rightvideo")]
+        Synthesis.FieldTypes.Interfaces.ITextField RightVideo {
+            get;
+        }
+        
+        /// <summary>Represents the RightImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("rightimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField RightImage {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}", "KN1SMvNfluL4CXXZk51WM8Pa/PY=", "Valtech.Foundation.Synthesis")]
@@ -283,6 +313,123 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new ImageAndText(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class ImageAndVideo : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IImageAndVideoItem {
+        
+        private Synthesis.FieldTypes.TextField _heading1;
+        
+        private Synthesis.FieldTypes.TextField _leftVideo;
+        
+        private Synthesis.FieldTypes.ImageField _leftImage;
+        
+        private Synthesis.FieldTypes.TextField _rightVideo;
+        
+        private Synthesis.FieldTypes.ImageField _rightImage;
+        
+        public ImageAndVideo(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public ImageAndVideo(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "ImageAndVideo";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{0D6361CF-8650-4D91-BFF1-13687D56C3E1}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading1 {
+            get {
+                if (_heading1 == null) {
+                    _heading1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading1;
+            }
+        }
+        
+        /// <summary>Represents the LeftVideo field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("leftvideo")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LeftVideo {
+            get {
+                if (_leftVideo == null) {
+                    _leftVideo = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6467C812-37A4-455C-B6FF-4364AE5CECAF}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "LeftVideo"), this.GetSearchFieldValue("leftvideo"));
+                }
+                return _leftVideo;
+            }
+        }
+        
+        /// <summary>Represents the LeftImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("leftimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField LeftImage {
+            get {
+                if (_leftImage == null) {
+                    _leftImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E5C16C8F-F6BA-4861-8735-F1C5FC6C577D}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "LeftImage"), this.GetSearchFieldValue("leftimage"));
+                }
+                return _leftImage;
+            }
+        }
+        
+        /// <summary>Represents the RightVideo field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("rightvideo")]
+        public Synthesis.FieldTypes.Interfaces.ITextField RightVideo {
+            get {
+                if (_rightVideo == null) {
+                    _rightVideo = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CD27145-CFB6-45BA-AFA1-69DDA0037E98}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "RightVideo"), this.GetSearchFieldValue("rightvideo"));
+                }
+                return _rightVideo;
+            }
+        }
+        
+        /// <summary>Represents the RightImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("rightimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField RightImage {
+            get {
+                if (_rightImage == null) {
+                    _rightImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{118EA6FC-046A-41A9-A0E9-9A948FF1A33A}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "RightImage"), this.GetSearchFieldValue("rightimage"));
+                }
+                return _rightImage;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ImageAndVideoInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{0D6361CF-8650-4D91-BFF1-13687D56C3E1}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new ImageAndVideo(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new ImageAndVideo(searchFields);
         }
     }
     

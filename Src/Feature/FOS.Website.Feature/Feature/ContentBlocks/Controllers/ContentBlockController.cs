@@ -12,11 +12,18 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
             return View(Constants.Views.Paths.RichText, model);
         }
 
-        public ActionResult GetImageAndRichTextView()
+        public ActionResult GetImageAndTextView()
         {
-            var model = new ImageAndRichTextModel();
+            var model = new MediaAndTextModel();
 
-            return View(Constants.Views.Paths.ImageRichText, model);
+            return View(Constants.Views.Paths.ImageAndText, model);
+        }
+
+        public ActionResult GetVideoAndTextView()
+        {
+            var model = new MediaAndTextModel();
+
+            return View(Constants.Views.Paths.VideoAndText, model);
         }
 
         public ActionResult GetVideoView()

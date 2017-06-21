@@ -1,33 +1,54 @@
 ----item----
 version: 1
-id: {4B97F7BD-DACF-49AD-B9A5-1CEAAAF65F99}
+id: {59BF81E3-D900-4704-B5C5-F8F1813C3607}
 database: master
-path: /sitecore/layout/Placeholder Settings/Project/Friskis/maincontent
-parent: {768835D3-8882-41F5-A498-179DF70B3BE6}
-name: maincontent
+path: /sitecore/layout/Renderings/Feature/ContentBlocks/Image Intro And Text
+parent: {497C9A87-87EB-428C-84C5-FAD1ED9406C7}
+name: Image Intro And Text
 master: {00000000-0000-0000-0000-000000000000}
-template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
-templatekey: Placeholder
-created: 20170306T093550Z
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20170619T204417Z
 
 ----field----
-field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
-name: Placeholder Key
-key: placeholder key
-content-length: 11
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 89
 
-maincontent
+FOS.Website.Feature.ContentBlocks.Controllers.ContentBlockController, FOS.Website.Feature
 ----field----
-field: {E391B526-D0C5-439D-803E-17512EAE6222}
-name: Allowed Controls
-key: allowed controls
-content-length: 233
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 19
 
-{34A1EFB9-481B-45D9-B330-7BF2DE1BF0C4}|{1B041E5F-D136-48B7-835C-9B4C237D16CD}|{59BF81E3-D900-4704-B5C5-F8F1813C3607}|{8BE0287F-AA76-4038-9BCB-7343AD89CAAF}|{607BAC1B-B8B7-4AB9-8679-FAC25A4B741A}|{CCE76F2F-37CA-405E-9223-619728A3822F}
+GetImageAndTextView
+----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 17
+
+/sitecore/content
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 66
+
+/sitecore/templates/Feature/ContentBlocks/Blocks/ImageTextAndIntro
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 36
+
+WordProcessing/32x32/word_wrap_a.png
 ----version----
 language: en
 version: 1
-revision: dc5558d5-fcaf-4ce2-aff0-e55ff3629c16
+revision: 5001e6cc-ed5a-43ab-be94-b4537473fe78
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,7 +63,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170306T093550Z
+20170619T080302Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dc5558d5-fcaf-4ce2-aff0-e55ff3629c16
+5001e6cc-ed5a-43ab-be94-b4537473fe78
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T220541Z
+20170619T205831Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -74,7 +95,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 88999628-a5ce-4077-8fcb-6b4ebb576540
+revision: 6da29d30-c8d8-4de4-996f-137b6f97ac45
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -89,7 +110,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170529T144619Z
+20170619T075324Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -103,14 +124,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-88999628-a5ce-4077-8fcb-6b4ebb576540
+6da29d30-c8d8-4de4-996f-137b6f97ac45
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T092548Z
+20170619T075324Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

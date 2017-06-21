@@ -1,26 +1,19 @@
 ----item----
 version: 1
-id: {063A2B23-F245-422C-B274-629124D9A343}
+id: {AC6E6480-A162-4FD2-93F6-A09D1F949A6D}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndText/__Standard Values
-parent: {21EA2408-A9D6-4CA6-AFD1-80798B77B5DB}
-name: __Standard Values
+path: /sitecore/templates/Feature/ContentBlocks/Data/Settings/Style/Content Block
+parent: {49A5DB17-079B-47C1-9F1B-101E72006B3A}
+name: Content Block
 master: {00000000-0000-0000-0000-000000000000}
-template: {21EA2408-A9D6-4CA6-AFD1-80798B77B5DB}
-templatekey: ImageAndText
-created: 20170616T111849Z
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20170619T203133Z
 
 ----version----
 language: en
 version: 1
-revision: 4a3e91b2-67c9-4abd-9e2d-3960ab5354a3
-
-----field----
-field: {172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}
-name: Heading
-key: heading
-content-length: 0
-
+revision: 51004b85-880d-4cb4-be3a-350cb492522a
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,28 +28,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170616T111849Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\Admin
+20170616T111231Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-4a3e91b2-67c9-4abd-9e2d-3960ab5354a3
+51004b85-880d-4cb4-be3a-350cb492522a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170616T112755Z
+20170619T203304Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

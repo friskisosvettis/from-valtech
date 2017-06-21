@@ -1,6 +1,6 @@
 ﻿@using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
-@model FOS.Website.Feature.ContentBlocks.Models.ImageAndRichTextModel
+@model FOS.Website.Feature.ContentBlocks.Models.MediaAndTextModel
 
 @if (Model == null || Model.RichTextItem == null)
 {
@@ -18,10 +18,14 @@
         @Model.ImageItem.Image1.Render()
     </div>
 }
-@helper RenderText()
+@helper RenderRichText()
 {
     <div class="container--6">
-        <div class="rich-text">@Model.RichTextItem.Text.Render()</div>
+        <div class="textbox textbox--@Model.Style">
+            <div class="textbox__content">
+                <p>@Model.RichTextItem.Text.Render()</p>
+            </div>
+        </div>
     </div>
 }
 
@@ -29,11 +33,11 @@
     @if (Model.InvertPositions)
     {
         @RenderImage()
-        @RenderText()
+        @RenderRichText()
     }
     else
     {
-        @RenderText()
+        @RenderRichText()
         @RenderImage()
     }
 </div>

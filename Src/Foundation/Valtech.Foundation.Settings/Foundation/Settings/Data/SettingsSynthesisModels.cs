@@ -22,6 +22,18 @@ namespace FOS.Website.Foundation.Settings {
             get;
         }
     }
+    
+    /// <summary>Represents the /sitecore/templates/Foundation/Settings/TextSetting template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A5771A36-9D4F-404B-8120-654F833AF23B}", "C20cjiLmBdzYi4ci0NcEyGCI1+Y=", "Valtech.Foundation.Synthesis")]
+    public partial interface ITextSettingItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Value field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("value")]
+        Synthesis.FieldTypes.Interfaces.ITextField Value {
+            get;
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -99,6 +111,71 @@ namespace FOS.Website.Concrete.Foundation.Settings {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new SettingsSelector(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Foundation/Settings/TextSetting template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class TextSetting : global::Synthesis.StandardTemplateItem, global::FOS.Website.Foundation.Settings.ITextSettingItem {
+        
+        private Synthesis.FieldTypes.TextField _value;
+        
+        public TextSetting(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public TextSetting(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "TextSetting";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{A5771A36-9D4F-404B-8120-654F833AF23B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Value field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("value")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Value {
+            get {
+                if (_value == null) {
+                    _value = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}"], "/sitecore/templates/Foundation/Settings/TextSetting", "Value"), this.GetSearchFieldValue("value"));
+                }
+                return _value;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class TextSettingInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{A5771A36-9D4F-404B-8120-654F833AF23B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new TextSetting(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new TextSetting(searchFields);
         }
     }
 }

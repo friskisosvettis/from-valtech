@@ -21,9 +21,9 @@ maincontent
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 194
+content-length: 155
 
-{34A1EFB9-481B-45D9-B330-7BF2DE1BF0C4}|{1B041E5F-D136-48B7-835C-9B4C237D16CD}|{607BAC1B-B8B7-4AB9-8679-FAC25A4B741A}|{CCE76F2F-37CA-405E-9223-619728A3822F}|{27B84146-6E73-4A86-9D7E-F7DCBCD22056}
+{34A1EFB9-481B-45D9-B330-7BF2DE1BF0C4}|{1B041E5F-D136-48B7-835C-9B4C237D16CD}|{607BAC1B-B8B7-4AB9-8679-FAC25A4B741A}|{CCE76F2F-37CA-405E-9223-619728A3822F}
 ----version----
 language: en
 version: 1
@@ -74,7 +74,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: ad6d835c-0fc6-4261-ad3d-c7e909de72de
+revision: 88999628-a5ce-4077-8fcb-6b4ebb576540
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -103,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ad6d835c-0fc6-4261-ad3d-c7e909de72de
+88999628-a5ce-4077-8fcb-6b4ebb576540
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T123758Z
+20170619T092548Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -11,6 +11,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class VideoModel : ContentBlockModelBase
     {
+        public bool IsFullSize { get; set; }
         public IVideoItem VideoItem { get; set; }
 
         public VideoModel() : base()
@@ -19,7 +20,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
             VideoItem = (contextItem == null)
                 ? Sitecore.Context.Item.As<IVideoItem>()
                 : contextItem;
+            IsFullSize = true;
         }
-
     }
 }

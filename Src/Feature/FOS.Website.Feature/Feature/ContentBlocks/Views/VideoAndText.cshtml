@@ -23,7 +23,7 @@
     
 }
 
-@helper RenderTitleAndIntroText()
+@helper RenderRichText()
 {
     <div class="container--6">
         <div class="textbox textbox--@Model.Style">
@@ -39,11 +39,11 @@
     @if (Model.InvertPositions)
     {
         @RenderVideo()
-        @RenderTitleAndIntroText()
+        @RenderRichText()
     }
     else
     {
-        @RenderTitleAndIntroText()
+        @RenderRichText()
         @RenderVideo()
     }
 </div>

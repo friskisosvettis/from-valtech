@@ -6,8 +6,8 @@ path: /sitecore/content/Sweden/Friskis/Frontpage/About
 parent: {E25CB178-5CFA-4949-B9E3-EC717FCA34A1}
 name: About
 master: {00000000-0000-0000-0000-000000000000}
-template: {CBABDBBF-F826-4F61-AB85-2383356DACE5}
-templatekey: HeroPage
+template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
+templatekey: ArticlePage
 created: 20170621T091025Z
 
 ----field----
@@ -27,8 +27,36 @@ content-length: 3
 ----version----
 language: sv-SE
 version: 1
-revision: 1e7b53a8-272e-449b-9041-2c9efd5cc403
+revision: 6a7a49dc-529f-42e7-9858-086c6d4e53a8
 
+----field----
+field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
+name: Page Heading Headline
+key: page heading headline
+content-length: 17
+
+About us headline
+----field----
+field: {DC370DF3-C260-42A0-9A08-C2E0FE94669E}
+name: Page Heading Introduction
+key: page heading introduction
+content-length: 21
+
+About us Introduction
+----field----
+field: {BE167F68-9DE7-404D-9D10-B6E8D20D23C0}
+name: Page Heading Image
+key: page heading image
+content-length: 58
+
+<image mediaid="{429E8994-C283-4EAF-8849-50636AFD2D43}" />
+----field----
+field: {0E12FF8A-DC4F-43F0-8D43-6C2BE8CF4021}
+name: Navigation_NavigationTitle
+key: navigation_navigationtitle
+content-length: 8
+
+About us
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1e7b53a8-272e-449b-9041-2c9efd5cc403
+6a7a49dc-529f-42e7-9858-086c6d4e53a8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T121705Z
+20170621T125427Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -64,3 +92,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

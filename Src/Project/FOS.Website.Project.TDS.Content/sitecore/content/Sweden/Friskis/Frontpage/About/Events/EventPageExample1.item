@@ -13,8 +13,29 @@ created: 20170621T120211Z
 ----version----
 language: sv-SE
 version: 1
-revision: 0d633706-a1f7-4c3d-aa0b-39ae01bfa179
+revision: 0a9b26f0-eec0-4a92-be63-aa1724fa985f
 
+----field----
+field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
+name: Page Heading Headline
+key: page heading headline
+content-length: 29
+
+Event Page Example 1 Headline
+----field----
+field: {DC370DF3-C260-42A0-9A08-C2E0FE94669E}
+name: Page Heading Introduction
+key: page heading introduction
+content-length: 33
+
+Event Page Example 1 Introduction
+----field----
+field: {BE167F68-9DE7-404D-9D10-B6E8D20D23C0}
+name: Page Heading Image
+key: page heading image
+content-length: 58
+
+<image mediaid="{F292FBF3-DA8B-44D7-A89F-3A56E7DC4DEA}" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -28,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0d633706-a1f7-4c3d-aa0b-39ae01bfa179
+0a9b26f0-eec0-4a92-be63-aa1724fa985f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T120211Z
+20170621T125614Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

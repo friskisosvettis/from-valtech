@@ -146,12 +146,16 @@
             background-image: url('/assets/images/icon_arrow-right-red.svg');
         }
     }
+    &__tick {
+        &:before {
+            background-image: url('/assets/images/icon_tick.svg');
+        }
+    }
     &__pin-map {
         &:before {
             background-image: url('/assets/images/icon_pin-map-inactive.svg');
         }
     }
-
     &__pin-map-filled {
         &:before {
             background-image: url('/assets/images/icon_pin-map.svg');

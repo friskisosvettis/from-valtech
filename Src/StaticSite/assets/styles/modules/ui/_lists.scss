@@ -1,0 +1,25 @@
+// Horizontal list
+.list {
+    &--horizontal {
+        list-style: none;
+        margin: 0;
+        padding: $space-double 0;
+        text-align: center;
+
+        li {
+            margin: $space;
+            display: inline-block;
+
+            a {
+                font-weight: bold;
+                color: $color-text;
+                text-decoration: none;
+            }
+        }
+    }
+    &--small {
+        max-width: $text-max-width;
+        margin: 0 auto;
+        padding: $space-double $space-quad;
+    }
+}

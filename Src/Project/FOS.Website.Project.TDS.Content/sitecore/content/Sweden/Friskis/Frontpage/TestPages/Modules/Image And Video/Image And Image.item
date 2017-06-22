@@ -1,34 +1,41 @@
 ----item----
 version: 1
-id: {035CD4A2-1AC5-40DF-9054-A2705837AEFD}
+id: {077E9241-FC10-496F-A112-AD5B8C2B95BD}
 database: master
-path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/Modules/Video and Text/Video full
-parent: {8B9B1870-93B3-4488-9236-AB1F9CC3F20B}
-name: Video full
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/Modules/Image And Video/Image And Image
+parent: {443D39F3-5147-4F49-B9D7-6043184A85DD}
+name: Image And Image
 master: {00000000-0000-0000-0000-000000000000}
-template: {16532899-6EB4-4B83-BD83-FA54143A9578}
-templatekey: Video
-created: 20170621T070318Z
+template: {0D6361CF-8650-4D91-BFF1-13687D56C3E1}
+templatekey: ImageAndVideo
+created: 20170621T141428Z
 
 ----version----
 language: sv-SE
 version: 1
-revision: ccc2cead-b99d-4f42-af03-8e2f6daab6ac
+revision: eb7ac373-fcde-4a86-9844-fe2f3f5020cc
 
 ----field----
 field: {172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}
 name: Heading
 key: heading
-content-length: 19
+content-length: 13
 
-Video module - 100%
+Image / image
 ----field----
-field: {54D306E0-F243-4DBE-859D-248BBEC1A7D0}
-name: YoutubeID
-key: youtubeid
-content-length: 11
+field: {E5C16C8F-F6BA-4861-8735-F1C5FC6C577D}
+name: LeftImage
+key: leftimage
+content-length: 58
 
-Wtx0e6buA0E
+<image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
+----field----
+field: {118EA6FC-046A-41A9-A0E9-9A948FF1A33A}
+name: RightImage
+key: rightimage
+content-length: 58
+
+<image mediaid="{0359BCEA-7385-4773-83CC-90423F341F3D}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170621T070318Z
+20170621T141428Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ccc2cead-b99d-4f42-af03-8e2f6daab6ac
+eb7ac373-fcde-4a86-9844-fe2f3f5020cc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T084007Z
+20170621T142415Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

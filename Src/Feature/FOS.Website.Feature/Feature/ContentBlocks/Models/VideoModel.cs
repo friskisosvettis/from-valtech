@@ -1,5 +1,6 @@
 ﻿using FOS.Website.Feature.ContentBlocks.Data;
 using FOS.Website.Feature.ContentBlocks.Helpers;
+using Sitecore.Analytics.Commons;
 using Synthesis.FieldTypes.Interfaces;
 
 namespace FOS.Website.Feature.ContentBlocks.Models
@@ -11,14 +12,18 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 
         public ITextField VideoIdField { get; set; }
 
+        public IImageField ImageThumbnailField { get; set; }
+
         public VideoModel()
         {
             VideoIdField = VideoItem.YoutubeID;
+            ImageThumbnailField = VideoItem.StartImage;
         }
 
-        public VideoModel(ITextField videoIdField)
+        public VideoModel(ITextField videoIdField, IImageField imageField)
         {
             VideoIdField = videoIdField;
+            ImageThumbnailField = imageField;
         }
     }
 }

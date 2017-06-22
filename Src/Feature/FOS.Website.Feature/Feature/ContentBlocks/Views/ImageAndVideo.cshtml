@@ -1,5 +1,4 @@
-﻿@using FOS.Website.Feature.ContentBlocks.Data
-@using FOS.Website.Feature.ContentBlocks.Models
+﻿@using FOS.Website.Feature.ContentBlocks.Models
 @using Synthesis.FieldTypes.Interfaces
 @using Synthesis.Mvc.Extensions
 @using Valtech.Foundation.Helpers
@@ -27,12 +26,12 @@
     }
 }
 
-@helper RenderVideo(ITextField videoIdField)
+@helper RenderVideo(ITextField videoIdField, IImageField imageField)
 {
     if(videoIdField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <div class="media-container media-container--360">
-            @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", new VideoModel(videoIdField) { IsFullSize = false })
+            @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", new VideoModel(videoIdField, imageField) { IsFullSize = false })
         </div>
     }
 }
@@ -46,8 +45,8 @@
             </div>
         }
 
-        @RenderImage(@Model.ImageAndVideoItem.LeftImage)
-        @RenderVideo(@Model.ImageAndVideoItem.LeftVideo)
+        @RenderImage(Model.ImageAndVideoItem.LeftImage)
+        @RenderVideo(Model.ImageAndVideoItem.LeftVideo, Model.ImageAndVideoItem.LeftVideoStartImage)
     </div>
     <div class="container--6">
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
@@ -57,7 +56,7 @@
             </div>
         }
 
-        @RenderImage(@Model.ImageAndVideoItem.RightImage)
-        @RenderVideo(@Model.ImageAndVideoItem.RightVideo)
+        @RenderImage(Model.ImageAndVideoItem.RightImage)
+        @RenderVideo(Model.ImageAndVideoItem.RightVideo, Model.ImageAndVideoItem.RightVideoStartImage)
     </div>
 </div>

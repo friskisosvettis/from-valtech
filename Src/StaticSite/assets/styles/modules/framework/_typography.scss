@@ -135,8 +135,11 @@ p {
 }
 
 blockquote {
+    font-family: $font-bold;
     font-size: rem(26px);
     text-align: center;
+    line-height: 1.25;
+    margin: $space $space $space-double $space;
 
     @include small-up {
         font-size: rem(32px);
@@ -144,10 +147,16 @@ blockquote {
 
     @include medium-up {
         font-size: rem(40px);
-        line-height: rem(48px);
     }
 }
-
+cite {
+    font-family: $font-secondary;
+    margin: $space 0;
+    display: block;
+    font-size: rem(16px);
+    font-style: normal;
+    line-height: 1.25;
+}
 a {
     color: $color-text-link;
     cursor: pointer;

@@ -17,10 +17,17 @@ key: __base template
 content-length: 194
 
 {2F8D1730-8E48-4D2A-AC96-4547DD5CDC02}|{7A6E5726-35AD-4789-BE04-ED8575247C03}|{F717621B-4257-45DB-AECC-902A6F682FDB}|{045B2421-1361-42F0-8D39-DE0F1A9C6575}|{49A5DB17-079B-47C1-9F1B-101E72006B3A}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 39
+
+Applications/32x32/text_rich_marked.png
 ----version----
 language: en
 version: 1
-revision: f2054081-8cac-4458-b7d2-ebb603d10269
+revision: 7bc0e770-6945-47cb-ba53-43988814a9ba
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f2054081-8cac-4458-b7d2-ebb603d10269
+7bc0e770-6945-47cb-ba53-43988814a9ba
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T101459Z
+20170622T113850Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

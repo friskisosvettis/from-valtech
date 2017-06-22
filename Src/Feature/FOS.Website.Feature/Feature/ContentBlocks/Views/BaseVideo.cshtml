@@ -1,7 +1,5 @@
-﻿@using System.Text
-@using FOS.Website.Feature.ContentBlocks.Models
+﻿@using FOS.Website.Feature.ContentBlocks.Models
 @using Synthesis.Mvc.Extensions
-@using Synthesis.Mvc.Helpers
 @using Valtech.Foundation.Helpers
 @model VideoModel
 
@@ -12,26 +10,30 @@
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div class="editor-info">
-        <p>
+        <div style="float: left; width: 70%">
             <strong>Fyll i YoutubeID!</strong><br />
             @EncodingHelper.GetRazorViewText("Under dela i Youtube kommer länken som https://youtu.be/YoutubeID")<br />
             <span class="color--primary">https://youtu.be/</span>@Model.VideoIdField.Render()
-        </p>
+        </div>
+        <div style="float: right;width: 30%">
+            <strong>@EncodingHelper.GetRazorViewText("Välj bild för video")</strong><br />
+            <div class="media-container" style="width: 160px;height: 90px">
+                 @Model.ImageThumbnailField.Render(cssClass: "media-container__media")
+            </div>
+        </div>
     </div>
-}
+    }
 
 
-@if(Model.VideoIdField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
-                {
-                    var highres = "https://i.ytimg.com/vi/" + Model.VideoIdField + "/maxresdefault.jpg";
-                    var lowres = "https://i.ytimg.com/vi/" + Model.VideoIdField + "/sddefault.jpg";
-                    var defaultThumbnail = "https://i.ytimg.com/vi/" + Model.VideoIdField + "/0.jpg";
-                    var videoUrl = defaultThumbnail;
+    @if (Model.VideoIdField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        var defaultThumbnail = "https://i.ytimg.com/vi/" + Model.VideoIdField + "/0.jpg";
+        var videoUrl = Model.ImageThumbnailField.HasValue ? Model.ImageThumbnailField.Url : defaultThumbnail;
 
-    <div class="media-container @mediaContainerClass media-container__youtube media-container__video" data-js-youtube="@Model.VideoIdField">
-        <img class="media-container__media" src="@videoUrl" />
-        <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Spela video</span></div>
-    </div>
-}
+        <div class="media-container @mediaContainerClass media-container__youtube media-container__video" data-js-youtube="@Model.VideoIdField">
+            <img class="media-container__media" src="@videoUrl" />
+            <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Spela video</span></div>
+        </div>
+    }
 
     @* TODO: Add translation to "Spela Video" *@

@@ -13,8 +13,15 @@ created: 20170620T125016Z
 ----version----
 language: sv-SE
 version: 1
-revision: c40012b2-5170-4903-89f8-21e5f8a12df8
+revision: 04afcf3b-628e-4893-998a-63d07920d940
 
+----field----
+field: {172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}
+name: Heading
+key: heading
+content-length: 19
+
+Video modules 50/50
 ----field----
 field: {2EA03F17-AA46-4522-839C-B02F90CE87AD}
 name: Text
@@ -58,14 +65,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c40012b2-5170-4903-89f8-21e5f8a12df8
+04afcf3b-628e-4893-998a-63d07920d940
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T125141Z
+20170621T084200Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -73,3 +80,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

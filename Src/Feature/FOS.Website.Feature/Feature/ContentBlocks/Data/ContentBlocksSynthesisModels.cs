@@ -19,7 +19,7 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
     
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{0D6361CF-8650-4D91-BFF1-13687D56C3E1}", "kx8JwIvasm7FIjp34CVegdCHtzg=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{0D6361CF-8650-4D91-BFF1-13687D56C3E1}", "qOutfezjRhMy/uZ5FIsK2FDs+KE=", "Valtech.Foundation.Synthesis")]
     public partial interface IImageAndVideoItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem {
         
         /// <summary>Represents the LeftVideo field</summary>
@@ -43,6 +43,18 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
         /// <summary>Represents the RightImage field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("rightimage")]
         Synthesis.FieldTypes.Interfaces.IImageField RightImage {
+            get;
+        }
+        
+        /// <summary>Represents the LeftVideoStartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("leftvideostartimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField LeftVideoStartImage {
+            get;
+        }
+        
+        /// <summary>Represents the RightVideoStartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("rightvideostartimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField RightVideoStartImage {
             get;
         }
     }
@@ -148,12 +160,18 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Video template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F717621B-4257-45DB-AECC-902A6F682FDB}", "tTxIj54zAqtGn7dLJb7OjNdyBa8=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F717621B-4257-45DB-AECC-902A6F682FDB}", "yz4qwZzmHcs9VZgJfoCTEmvTxfo=", "Valtech.Foundation.Synthesis")]
     public partial interface IVideoItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the YoutubeID field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("youtubeid")]
         Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
+            get;
+        }
+        
+        /// <summary>Represents the StartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("startimage")]
+        Synthesis.FieldTypes.Interfaces.IImageField StartImage {
             get;
         }
     }
@@ -330,6 +348,10 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         private Synthesis.FieldTypes.ImageField _rightImage;
         
+        private Synthesis.FieldTypes.ImageField _leftVideoStartImage;
+        
+        private Synthesis.FieldTypes.ImageField _rightVideoStartImage;
+        
         public ImageAndVideo(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -411,6 +433,28 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
                     _rightImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{118EA6FC-046A-41A9-A0E9-9A948FF1A33A}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "RightImage"), this.GetSearchFieldValue("rightimage"));
                 }
                 return _rightImage;
+            }
+        }
+        
+        /// <summary>Represents the LeftVideoStartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("leftvideostartimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField LeftVideoStartImage {
+            get {
+                if (_leftVideoStartImage == null) {
+                    _leftVideoStartImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BE7C7F7D-5DCE-4689-9CEB-33033C29DA06}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "LeftVideoStartImage"), this.GetSearchFieldValue("leftvideostartimage"));
+                }
+                return _leftVideoStartImage;
+            }
+        }
+        
+        /// <summary>Represents the RightVideoStartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("rightvideostartimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField RightVideoStartImage {
+            get {
+                if (_rightVideoStartImage == null) {
+                    _rightVideoStartImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{70229C36-FE4E-4CEA-8ADF-0E241450ECBA}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndVideo", "RightVideoStartImage"), this.GetSearchFieldValue("rightvideostartimage"));
+                }
+                return _rightVideoStartImage;
             }
         }
     }
@@ -560,6 +604,8 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         private Synthesis.FieldTypes.TextField _youtubeID;
         
+        private Synthesis.FieldTypes.ImageField _startImage;
+        
         private Synthesis.FieldTypes.BooleanField _invertPositions;
         
         private Synthesis.FieldTypes.ItemReferenceField _style1;
@@ -623,6 +669,17 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
                     _youtubeID = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{54D306E0-F243-4DBE-859D-248BBEC1A7D0}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/VideoAndText", "YoutubeID"), this.GetSearchFieldValue("youtubeid"));
                 }
                 return _youtubeID;
+            }
+        }
+        
+        /// <summary>Represents the StartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("startimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField StartImage {
+            get {
+                if (_startImage == null) {
+                    _startImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2E6D32D7-E51D-495A-B71D-C1685CAD857B}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/VideoAndText", "StartImage"), this.GetSearchFieldValue("startimage"));
+                }
+                return _startImage;
             }
         }
         
@@ -1144,6 +1201,8 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         private Synthesis.FieldTypes.TextField _youtubeID;
         
+        private Synthesis.FieldTypes.ImageField _startImage;
+        
         public Video(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1181,6 +1240,17 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
                     _youtubeID = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{54D306E0-F243-4DBE-859D-248BBEC1A7D0}"], "/sitecore/templates/Feature/ContentBlocks/Data/Video", "YoutubeID"), this.GetSearchFieldValue("youtubeid"));
                 }
                 return _youtubeID;
+            }
+        }
+        
+        /// <summary>Represents the StartImage field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("startimage")]
+        public Synthesis.FieldTypes.Interfaces.IImageField StartImage {
+            get {
+                if (_startImage == null) {
+                    _startImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2E6D32D7-E51D-495A-B71D-C1685CAD857B}"], "/sitecore/templates/Feature/ContentBlocks/Data/Video", "StartImage"), this.GetSearchFieldValue("startimage"));
+                }
+                return _startImage;
             }
         }
     }

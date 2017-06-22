@@ -9,6 +9,7 @@ using System;
 using FOS.Website.Feature.Event;
 using FOS.Website.Feature.News;
 using FOS.Website.Feature.Summary.Controllers;
+using FOS.Website.Feature.TrainingForm;
 using Synthesis;
 
 //using Web.Models.Base;
@@ -28,6 +29,8 @@ namespace FOS.Website.Feature.Summary.Models
 
         public IEventItem EventItem { get; set; }
 
+        public ITrainingFormItem TrainingFormItem { get; set; }
+
         public Item Item { get; set; }
         
         public bool HideNewsDate { get; set; }
@@ -46,6 +49,7 @@ namespace FOS.Website.Feature.Summary.Models
             SummaryItem = item.As<ISummaryItem>();
             NewsItem = item.As<INewsItem>();
             EventItem = item.As<IEventItem>();
+            TrainingFormItem = item.As<ITrainingFormItem>();
         }
 
         // Used for generic items

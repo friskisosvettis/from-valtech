@@ -14,16 +14,18 @@
 {
     return;
 }
- 
-<div class="container">
-    <div class="container-12">
-        <ul class="navigation--second-level">
-            @foreach (var childPage in Model.MenuItems)
+
+<div class="background--white">
+    <div class="container">
+        <div class="container-12">
+            <ul class="navigation--second-level">
+                @foreach (var childPage in Model.MenuItems)
             {
-                <li class="icon--medium icon__goto-circle-red">
-                    <a href="@LinkManager.GetItemUrl(@childPage.InnerItem)">@childPage.DisplayName</a>
-                </li>
-            }
-        </ul>
+                    <li class="icon--medium icon__goto-circle-red">
+                        <a href="@LinkManager.GetItemUrl(@childPage.InnerItem)">@childPage.DisplayName</a>
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 </div>

@@ -135,6 +135,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Solr.DefaultIndexConfiguration.IOC.CastleWindsor.config" />
+    <Content Include="App_Config\Include\Sitecore.ContentSearch.Solr.DefaultIndexConfiguration.config.example" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

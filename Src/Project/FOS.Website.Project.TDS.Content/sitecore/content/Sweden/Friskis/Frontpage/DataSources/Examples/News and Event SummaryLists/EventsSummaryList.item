@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {1662CADE-3E91-48A6-BCCD-CBE12464EBEA}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/DataSources/Examples/News and Event SummaryLists/EventsSummaryList
+parent: {B6037BA0-FC33-4DD2-B406-745BF5D4D1CB}
+name: EventsSummaryList
+master: {00000000-0000-0000-0000-000000000000}
+template: {F89CEE2A-4DAB-4922-8587-AD0658EF5D52}
+templatekey: SummaryList
+created: 20170621T122218Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 7185b59c-d1b5-4f04-8db5-ad97515387f2
+
+----field----
+field: {5A44F60A-547B-482A-993D-4C35CE6205FD}
+name: Header
+key: header
+content-length: 27
+
+Events Summary List Example
+----field----
+field: {666968FD-72E5-420D-A8D3-62420B4725A8}
+name: SourceRootItem
+key: sourcerootitem
+content-length: 38
+
+{0C6940C0-53EE-4BE1-AC0B-5A53CF777083}
+----field----
+field: {D546DC37-0588-46B9-AFCD-CD0B6A8A5381}
+name: ResultTypes
+key: resulttypes
+content-length: 38
+
+{128BB843-9606-40F4-96E3-692C189C9055}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170621T122208Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7185b59c-d1b5-4f04-8db5-ad97515387f2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T122410Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

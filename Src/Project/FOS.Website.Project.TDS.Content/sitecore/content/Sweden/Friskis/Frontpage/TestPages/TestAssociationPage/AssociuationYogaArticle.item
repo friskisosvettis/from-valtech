@@ -1,0 +1,101 @@
+----item----
+version: 1
+id: {E00112B8-1368-4C91-B7BF-7DAEFBF8567E}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage/AssociuationYogaArticle
+parent: {1DA3CA41-D099-4641-BC3A-477DFE8000F8}
+name: AssociuationYogaArticle
+master: {00000000-0000-0000-0000-000000000000}
+template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
+templatekey: ArticlePage
+created: 20170323T151044Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 4148b1e8-560c-4a33-bb82-3efa36842fa2
+
+----field----
+field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
+name: Page Heading Headline
+key: page heading headline
+content-length: 4
+
+Yoga
+----field----
+field: {DC370DF3-C260-42A0-9A08-C2E0FE94669E}
+name: Page Heading Introduction
+key: page heading introduction
+content-length: 16
+
+This is the Yoga
+----field----
+field: {BE167F68-9DE7-404D-9D10-B6E8D20D23C0}
+name: Page Heading Image
+key: page heading image
+content-length: 58
+
+<image mediaid="{2F984554-9174-4A10-A2D6-1E11D5D011EB}" />
+----field----
+field: {F60E9BBE-8B37-4EB3-A293-A072E18C67D5}
+name: Navigation_ShowInMenu
+key: navigation_showinmenu
+content-length: 1
+
+1
+----field----
+field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
+name: Text Content
+key: text content
+content-length: 24
+
+Orginal richtext on Yoga
+----field----
+field: {6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}
+name: Taxonomy
+key: taxonomy
+content-length: 38
+
+{63BD45E4-F123-4A2A-95CB-1A13B5EF8824}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Yoga
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1234
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{A6D293A1-F2E1-4BBB-A88C-7F56F0A63627}" p:before="*" s:ds="{EE166889-9478-478B-9D08-5DA050BF37C4}" s:id="{498FDFEB-A073-4B9C-9EF5-1B1C856D32E3}" s:ph="/main/maincontent/content-67_3aac0925-635d-4791-9d99-47b0c59a74cc" /><r uid="{9020B54E-672E-463D-A7F9-A9E6EC073476}" p:after="r[@uid='{A6D293A1-F2E1-4BBB-A88C-7F56F0A63627}']" s:ds="{DE4CC5E3-6C8E-4759-BC3A-0D6973FCE526}" s:id="{159E8E9F-4B95-4693-970B-4A96780FC7E6}" s:ph="/main/maincontent/content-33_3aac0925-635d-4791-9d99-47b0c59a74cc" /><r uid="{3AAC0925-635D-4791-9D99-47B0C59A74CC}" p:after="r[@uid='{9020B54E-672E-463D-A7F9-A9E6EC073476}']" s:id="{584BFA5E-492C-4323-B277-D6AFDE75579F}" s:ph="/main/maincontent" /><r uid="{8368F01F-F697-42FA-AFE4-138B2F0E420A}" p:after="r[@uid='{3AAC0925-635D-4791-9D99-47B0C59A74CC}']" s:ds="{3CFF94D7-AF33-4D0A-A6E3-9C1093CA2BD0}" s:id="{715D20E7-43F3-4E0F-BA8B-4BE1B6704C45}" s:ph="/main/maincontent/content-full-width_826fd292-5771-4ed9-b60f-0f1a4c424859" /><r uid="{826FD292-5771-4ED9-B60F-0F1A4C424859}" p:after="r[@uid='{8368F01F-F697-42FA-AFE4-138B2F0E420A}']" s:id="{0B96BF8F-AD3C-46E0-914B-D029F6B75A2D}" s:ph="/main/maincontent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170314T145132Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4148b1e8-560c-4a33-bb82-3efa36842fa2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170620T134032Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

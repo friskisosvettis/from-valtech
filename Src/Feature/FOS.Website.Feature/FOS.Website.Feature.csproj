@@ -1106,6 +1106,7 @@
     <Compile Include="Feature\ComponentBlock\Controllers\ComponentBlockController.cs" />
     <Compile Include="Feature\ComponentBlock\Data\ComponentBlockSynthesisModels.cs" />
     <Compile Include="Feature\ComponentBlock\Models\ComponentBlockModel.cs" />
+    <Compile Include="Feature\ComponentBlock\OriginalItemHelper.cs" />
     <Compile Include="Feature\ContentBlocks\Constants.cs" />
     <Compile Include="Feature\ContentBlocks\Controllers\ContentBlockController.cs" />
     <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />

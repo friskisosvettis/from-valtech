@@ -26,10 +26,9 @@
 @helper RenderRichText()
 {
     <div class="container--6">
-        <div class="textbox textbox--@Model.Style">
+        <div class="rich-text @Model.Style">
             <div class="textbox__content">
-
-                <p>@Model.RichTextItem.Text.Render()</p>
+                @Model.RichTextItem.Text.Render()
             </div>
         </div>
     </div>

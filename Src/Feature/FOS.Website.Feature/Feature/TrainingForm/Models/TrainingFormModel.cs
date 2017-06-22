@@ -38,7 +38,7 @@ namespace FOS.Website.Feature.TrainingForm.Models
         {
             ITrainingFormItem trainingFormItem = item.As<ITrainingFormItem>();
 
-            if (item != null && trainingFormItem.HideChildTrainingFormsFromList.Value == false)
+            if (trainingFormItem != null && trainingFormItem.HideChildTrainingFormsFromList.Value == false)
             {
                 List<Item> summaryItemList = new List<Item>();
                 summaryItemList.AddRange(item.Children.Where(i => i.As<ITrainingFormItem>() != null && i.As<ITrainingFormItem>().HideThisTrainingFormFromList.Value != true));

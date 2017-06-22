@@ -8,21 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-//namespace FOS.Website.Feature.Taxonomy {
-    
-    
-//    /// <summary>Represents the /sitecore/templates/Feature/Taxonomy/Taxonomy template</summary>
-//    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-//    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F8376B7A-00E3-4517-943E-8E6BF0D1632E}", "fY2pGv2MhAnQ0ksWxviGk4dEjf0=", "Valtech.Foundation.Synthesis")]
-//    public partial interface ITaxonomyItem : Synthesis.IStandardTemplateItem {
-        
-//        /// <summary>Represents the Taxonomy field</summary>
-//        [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
-//        Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy1 {
-//            get;
-//        }
-//    }
-//}
 namespace FOS.Website.Project.Friskis.ContainerTypes {
     
     
@@ -113,7 +98,7 @@ namespace FOS.Website.Project.Friskis.ContentTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/Video template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3FCDE34C-3E06-4BB6-BDC7-C2076B1DC9F3}", "IrQFg7/hZ9DpPfmAm9HzXrnvGVg=", "Valtech.Foundation.Synthesis")]
-    public partial interface IVideoItem : Synthesis.IStandardTemplateItem {
+    public partial interface IVideoItem : global::FOS.Website.Feature.Content.Data.IVideoItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Content Types/WebsiteRoot template</summary>
@@ -158,7 +143,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/CCCHeroPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AAC7B8A7-17FB-47C5-84A2-F54AD0E70B55}", "IOAMYSAkYVLnl710aYuc5Md6qIQ=", "Valtech.Foundation.Synthesis")]
-    public partial interface ICCCHeroPageItem : global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem {
+    public partial interface ICCCHeroPageItem : global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.Content.Data.IAdvancedHeadingItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/EventListPage template</summary>
@@ -1097,6 +1082,8 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class Video : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IVideoItem {
         
+        private Synthesis.FieldTypes.TextField _youtubeID;
+        
         public Video(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1123,6 +1110,17 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
         public override Sitecore.Data.ID TemplateId {
             get {
                 return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Youtube ID field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("youtube_id")]
+        public Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
+            get {
+                if (_youtubeID == null) {
+                    _youtubeID = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4AD217F6-D385-40C4-ABD0-E0AD97F514A3}"], "/sitecore/templates/Project/Friskis/Content Types/Video", "Youtube ID"), this.GetSearchFieldValue("youtube_id"));
+                }
+                return _youtubeID;
             }
         }
     }
@@ -2051,11 +2049,15 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ItemReferenceField _componentBlockItem;
         
+        private Synthesis.FieldTypes.TextField _headline;
+        
         private Synthesis.FieldTypes.TextField _navigation_NavigationTitle;
         
         private Synthesis.FieldTypes.ItemReferenceField _originalItemLink;
         
         private Synthesis.FieldTypes.TextField _summaryHeading;
+        
+        private Synthesis.FieldTypes.ImageField _image;
         
         private Synthesis.FieldTypes.BooleanField _navigation_ShowInMenu;
         
@@ -2109,6 +2111,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Headline field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("headline")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Headline {
+            get {
+                if (_headline == null) {
+                    _headline = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{2787E0AA-9275-47DE-B524-2AE187EEAE69}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "Headline"), this.GetSearchFieldValue("headline"));
+                }
+                return _headline;
+            }
+        }
+        
         /// <summary>Represents the Navigation_NavigationTitle field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("navigation_navigationtitle")]
         public Synthesis.FieldTypes.Interfaces.ITextField Navigation_NavigationTitle {
@@ -2139,6 +2152,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryHeading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9E912AC0-D370-4A1C-9577-C53D335BD007}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "SummaryHeading"), this.GetSearchFieldValue("summaryheading"));
                 }
                 return _summaryHeading;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image {
+            get {
+                if (_image == null) {
+                    _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F0DE3138-1E51-4D24-A6F9-19E5E5E7213B}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image;
             }
         }
         

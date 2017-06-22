@@ -11,6 +11,7 @@ namespace FOS.Website.Feature.ComponentBlock
         {
             public struct Paths
             {
+                public const string ComponentBlockGrid = "/Feature/ComponentBlock/Views/ComponentBlockGrid.cshtml";
                 public const string ComponentBlock = "/Feature/ComponentBlock/Views/ComponentBlock.cshtml";
             }
         }

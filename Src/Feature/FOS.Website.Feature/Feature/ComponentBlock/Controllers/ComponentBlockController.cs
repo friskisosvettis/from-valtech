@@ -48,5 +48,11 @@ namespace FOS.Website.Feature.ComponentBlock.Controllers
 
             return View(Constants.Views.Paths.ComponentBlock, componentBlockModel);
         }
+
+
+        public ActionResult GetComponentBlockGridView()
+        {
+            return View(Constants.Views.Paths.ComponentBlockGrid);
+        }
     }
 }

@@ -20,8 +20,29 @@ content-length: 3
 ----version----
 language: sv-SE
 version: 1
-revision: 002f8dc5-c922-48ae-8813-7f5370ac297c
+revision: ede838c7-4bc8-4c53-968b-5284a87dc325
 
+----field----
+field: {9E912AC0-D370-4A1C-9577-C53D335BD007}
+name: SummaryHeading
+key: summaryheading
+content-length: 21
+
+Röris Summary Heading
+----field----
+field: {93226CCC-A692-4A1F-9445-772065350708}
+name: SummaryImage
+key: summaryimage
+content-length: 58
+
+<image mediaid="{1D563B8E-A7F4-4807-84D8-46D86C30C107}" />
+----field----
+field: {76DE3755-E119-4719-9F7C-B8918667520C}
+name: SummaryText
+key: summarytext
+content-length: 18
+
+Röris Summary Text
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -42,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-002f8dc5-c922-48ae-8813-7f5370ac297c
+ede838c7-4bc8-4c53-968b-5284a87dc325
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T091815Z
+20170622T134728Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

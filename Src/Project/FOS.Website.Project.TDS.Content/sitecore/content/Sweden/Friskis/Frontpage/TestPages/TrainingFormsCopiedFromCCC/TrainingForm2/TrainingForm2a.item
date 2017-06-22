@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {CC8423BD-E7F2-47ED-8EA5-AC8421424446}
+database: master
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TrainingFormsCopiedFromCCC/TrainingForm2/TrainingForm2a
+parent: {F08ACE35-9F56-4FFC-89D4-9BBCE65EBDED}
+name: TrainingForm2a
+master: {00000000-0000-0000-0000-000000000000}
+template: {4D46261E-471A-4C6B-AF3E-E420751ACE4B}
+templatekey: TrainingFormPage
+created: 20170622T135132Z
+
+----version----
+language: sv-SE
+version: 1
+revision: 94cfb996-9252-4632-bc06-5c64275319a4
+
+----field----
+field: {F1C13FFB-740B-4951-B4F4-393A81791013}
+name: OriginalItemLink
+key: originalitemlink
+content-length: 38
+
+{2511217D-C991-4750-BA52-6059A9E8CF6F}
+----field----
+field: {9E912AC0-D370-4A1C-9577-C53D335BD007}
+name: SummaryHeading
+key: summaryheading
+content-length: 14
+
+TrainingForm2a
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170619T115557Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+94cfb996-9252-4632-bc06-5c64275319a4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T092902Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

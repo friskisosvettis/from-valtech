@@ -54,6 +54,7 @@
               <field fieldName="__workflow_state"     returnType="string" />
               <field fieldName="extension"            returnType="text" />
               <field fieldName="title"                returnType="text" />
+              <field fieldName="taxonomy"                returnType="text" />
             </fieldNames>
 
             <!-- FIELD TYPE MAPPING

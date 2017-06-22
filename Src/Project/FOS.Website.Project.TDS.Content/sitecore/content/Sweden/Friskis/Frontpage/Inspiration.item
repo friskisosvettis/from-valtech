@@ -20,8 +20,29 @@ content-length: 3
 ----version----
 language: sv-SE
 version: 1
-revision: 18625f7c-b083-42e7-b382-d0fdfa99888c
+revision: af290f71-6a26-4879-9114-73ab7651de78
 
+----field----
+field: {9E912AC0-D370-4A1C-9577-C53D335BD007}
+name: SummaryHeading
+key: summaryheading
+content-length: 27
+
+Inspiration Summary Heading
+----field----
+field: {93226CCC-A692-4A1F-9445-772065350708}
+name: SummaryImage
+key: summaryimage
+content-length: 58
+
+<image mediaid="{0359BCEA-7385-4773-83CC-90423F341F3D}" />
+----field----
+field: {76DE3755-E119-4719-9F7C-B8918667520C}
+name: SummaryText
+key: summarytext
+content-length: 24
+
+Inspiration Summary Text
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -35,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-18625f7c-b083-42e7-b382-d0fdfa99888c
+af290f71-6a26-4879-9114-73ab7651de78
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T091613Z
+20170622T134701Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

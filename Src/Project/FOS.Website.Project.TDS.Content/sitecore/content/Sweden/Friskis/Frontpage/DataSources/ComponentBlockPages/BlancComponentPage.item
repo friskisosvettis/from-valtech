@@ -60,15 +60,15 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 355adfae-3c15-4a6a-9345-7706dc640417
+revision: f05808ba-986e-4fd7-9487-4517aac05f87
 
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 253
+content-length: 280
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{AD8816DC-F392-4D1A-A3CA-A57CF86C2166}" s:ds="{1338E904-536D-45C3-8DBB-5E2FC9338E30}" s:id="{CCE76F2F-37CA-405E-9223-619728A3822F}" s:par="" s:ph="main" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{AD8816DC-F392-4D1A-A3CA-A57CF86C2166}" p:after="*[1=2]" s:ds="{1338E904-536D-45C3-8DBB-5E2FC9338E30}" s:id="{CCE76F2F-37CA-405E-9223-619728A3822F}" s:par="" s:ph="componentblock" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -82,14 +82,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-355adfae-3c15-4a6a-9345-7706dc640417
+f05808ba-986e-4fd7-9487-4517aac05f87
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T093627Z
+20170622T144023Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

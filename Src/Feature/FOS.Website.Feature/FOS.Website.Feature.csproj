@@ -1087,6 +1087,8 @@
     <Content Include="Feature\ContentBlocks\Views\LinkBlock.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\WideImageSeparator.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\ImageAndVideo.cshtml" />
+    <Content Include="Feature\TrainingForm\Views\Web.config" />
+    <Content Include="Feature\ComponentBlock\Views\ComponentBlockGrid.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

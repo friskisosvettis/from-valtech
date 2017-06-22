@@ -1,34 +1,34 @@
 ----item----
 version: 1
-id: {2A71A1A1-A6ED-4D4E-A1B3-6396909E067B}
+id: {7CED1773-7B93-4EF1-A9D3-A27629C69280}
 database: master
-path: /sitecore/templates/Project/Friskis/Page Types/BlancComponentPage/__Standard Values
-parent: {DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}
-name: __Standard Values
+path: /sitecore/layout/Renderings/Feature/ComponentBlock/ComponentBlockGrid
+parent: {DF3BAB65-7200-49CC-A5C7-E3E163070D09}
+name: ComponentBlockGrid
 master: {00000000-0000-0000-0000-000000000000}
-template: {DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}
-templatekey: BlancComponentPage
-created: 20170529T143159Z
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20170622T142239Z
 
 ----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 251
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 92
 
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{7CED1773-7B93-4EF1-A9D3-A27629C69280}" ph="main" uid="{0E460F7A-01C6-4F3E-8A5F-3468C4437F36}" /></d></r>
+FOS.Website.Feature.ComponentBlock.Controllers.ComponentBlockController, FOS.Website.Feature
+----field----
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 25
+
+GetComponentBlockGridView
 ----version----
 language: en
 version: 1
-revision: 673e3274-81ed-45eb-9057-748d5f1cd7a4
+revision: 2c1b119d-741d-44cf-b36a-5a21aea7c651
 
-----field----
-field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
-name: __Final Renderings
-key: __final renderings
-content-length: 145
-
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}" /></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170529T143159Z
+20170530T105920Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-673e3274-81ed-45eb-9057-748d5f1cd7a4
+2c1b119d-741d-44cf-b36a-5a21aea7c651
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170529T143222Z
+20170530T111307Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -74,7 +74,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 6a3da5a6-90b6-414a-b14b-eca81b5faf24
+revision: 81789725-a6dd-4745-bf5e-8f341e3a0165
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -89,7 +89,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170529T151352Z
+20170622T142243Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -103,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a3da5a6-90b6-414a-b14b-eca81b5faf24
+81789725-a6dd-4745-bf5e-8f341e3a0165
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T142400Z
+20170622T142252Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

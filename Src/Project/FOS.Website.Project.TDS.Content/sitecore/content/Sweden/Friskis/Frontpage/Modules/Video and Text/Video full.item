@@ -1,20 +1,34 @@
 ----item----
 version: 1
-id: {1D76608D-E0AA-4A1B-9DC6-97F199D2CCAC}
+id: {035CD4A2-1AC5-40DF-9054-A2705837AEFD}
 database: master
-path: /sitecore/content/Sweden/Friskis/Frontpage/Modules/Image And Video/Image And Video
-parent: {443D39F3-5147-4F49-B9D7-6043184A85DD}
-name: Image And Video
+path: /sitecore/content/Sweden/Friskis/Frontpage/Modules/Video and Text/Video full
+parent: {8B9B1870-93B3-4488-9236-AB1F9CC3F20B}
+name: Video full
 master: {00000000-0000-0000-0000-000000000000}
-template: {21EA2408-A9D6-4CA6-AFD1-80798B77B5DB}
-templatekey: ImageAndText
-created: 20170621T095555Z
+template: {16532899-6EB4-4B83-BD83-FA54143A9578}
+templatekey: Video
+created: 20170621T070318Z
 
 ----version----
-language: en
+language: sv-SE
 version: 1
-revision: df08132c-e4a8-4242-9865-72d9c1b37b94
+revision: ccc2cead-b99d-4f42-af03-8e2f6daab6ac
 
+----field----
+field: {172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}
+name: Heading
+key: heading
+content-length: 19
+
+Video module - 100%
+----field----
+field: {54D306E0-F243-4DBE-859D-248BBEC1A7D0}
+name: YoutubeID
+key: youtubeid
+content-length: 11
+
+Wtx0e6buA0E
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -28,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170621T095555Z
+20170621T070318Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-df08132c-e4a8-4242-9865-72d9c1b37b94
+ccc2cead-b99d-4f42-af03-8e2f6daab6ac
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T095555Z
+20170621T084007Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -57,3 +71,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

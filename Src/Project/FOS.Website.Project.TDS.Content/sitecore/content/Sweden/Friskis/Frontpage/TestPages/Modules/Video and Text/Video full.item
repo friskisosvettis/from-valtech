@@ -13,7 +13,7 @@ created: 20170621T070318Z
 ----version----
 language: sv-SE
 version: 1
-revision: ccc2cead-b99d-4f42-af03-8e2f6daab6ac
+revision: 6607c0ee-3ced-4573-9b0e-ce6118689c54
 
 ----field----
 field: {172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}
@@ -29,6 +29,13 @@ key: youtubeid
 content-length: 11
 
 Wtx0e6buA0E
+----field----
+field: {2E6D32D7-E51D-495A-B71D-C1685CAD857B}
+name: StartImage
+key: startimage
+content-length: 58
+
+<image mediaid="{95676E6F-C8B7-4EB5-95AD-4440658CD3F7}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ccc2cead-b99d-4f42-af03-8e2f6daab6ac
+6607c0ee-3ced-4573-9b0e-ce6118689c54
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T084007Z
+20170622T122435Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

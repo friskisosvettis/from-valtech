@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FOS.Website.Feature.ComponentBlock;
 using FOS.Website.Feature.Content.ListWidgets;
 using Synthesis;
 using FOS.Website.Feature.Content.Models;
@@ -47,7 +48,8 @@ namespace FOS.Website.Feature.Content.Controllers
 
         public ActionResult GetBasicHeadingView()
         {
-            BasicHeadingModel basicHeadingModel = new BasicHeadingModel(Sitecore.Context.Item);
+            var originalBasicHeadingItem = Sitecore.Context.Item.GetOriginalItem<IBasicHeadingItem>();
+            BasicHeadingModel basicHeadingModel = new BasicHeadingModel(originalBasicHeadingItem);
             return View(Constants.Views.Paths.BasicHeading, basicHeadingModel);
         }
 

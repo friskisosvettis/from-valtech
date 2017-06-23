@@ -20,7 +20,7 @@ content-length: 3
 ----version----
 language: sv-SE
 version: 1
-revision: dfd87610-c0c5-4886-8f56-cd8b0aa8a0ee
+revision: 1b075290-10b9-4d15-ad29-0b4cc21c270d
 
 ----field----
 field: {5A44F60A-547B-482A-993D-4C35CE6205FD}
@@ -33,9 +33,9 @@ NIFO summary list test
 field: {3D6B9D0A-CB9C-48AA-8CA9-53DE791042D4}
 name: ReadMoreLink
 key: readmorelink
-content-length: 128
+content-length: 0
 
-<link text="Demo" anchor="" linktype="internal" class="" title=""  querystring="" id="{80F0E633-088B-4D21-AA36-9D09C6C740CE}" />
+
 ----field----
 field: {536A8DCE-C437-43A8-ACB5-33892215398C}
 name: UseManualList
@@ -98,14 +98,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dfd87610-c0c5-4886-8f56-cd8b0aa8a0ee
+1b075290-10b9-4d15-ad29-0b4cc21c270d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T121202Z
+20170623T130407Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

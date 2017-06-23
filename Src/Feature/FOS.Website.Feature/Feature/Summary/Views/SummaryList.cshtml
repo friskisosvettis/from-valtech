@@ -13,17 +13,17 @@
 
     // Different wrapping classes for different colums dependent on the editors choice
     var containerClass = "container--12";
-    if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("2"))
+    if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("2"))
     {
         containerClass = "container--6";
     }
-    else if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("3"))
+    else if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("3"))
     {
         containerClass = "container--4";
     }
 }
 
-@if (Model.SummaryList.Any())
+@if (Model.SummaryListItem != null && Model.SummaryList.Any())
 {
     // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
     var cssClass = "teaser--small";
@@ -208,7 +208,7 @@
                 }
             }
         </ul>
-    if (Model.SummaryListItem.ReadMoreLink.HasValue)
+    if (Model.SummaryListItem != null && Model.SummaryListItem.ReadMoreLink.HasValue)
     {
         <div class="container">
             <div class="container--12 text-align--right margin-bottom--space">

@@ -2,8 +2,8 @@
 version: 1
 id: {16532899-6EB4-4B83-BD83-FA54143A9578}
 database: master
-path: /sitecore/templates/Project/Friskis/Content Blocks/Video
-parent: {244B24BA-1040-4026-8106-12C4968B9A21}
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/Video
+parent: {0FC5F86D-3014-48B4-9E36-5127B3AD4F08}
 name: Video
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
@@ -34,7 +34,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 085ecb46-f5b6-4776-aa5d-2f6486b7267a
+revision: b46e7d57-b9c6-407a-b1a4-af822c872229
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-085ecb46-f5b6-4776-aa5d-2f6486b7267a
+b46e7d57-b9c6-407a-b1a4-af822c872229
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T122850Z
+20170626T130523Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

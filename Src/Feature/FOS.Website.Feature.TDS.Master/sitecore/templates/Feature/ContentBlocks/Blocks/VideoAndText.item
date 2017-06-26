@@ -24,10 +24,17 @@ key: __icon
 content-length: 39
 
 Applications/32x32/text_rich_marked.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+375
 ----version----
 language: en
 version: 1
-revision: 7bc0e770-6945-47cb-ba53-43988814a9ba
+revision: e36991a5-2116-41c3-951b-e95bd5a1ea9b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7bc0e770-6945-47cb-ba53-43988814a9ba
+e36991a5-2116-41c3-951b-e95bd5a1ea9b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T113850Z
+20170626T130545Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

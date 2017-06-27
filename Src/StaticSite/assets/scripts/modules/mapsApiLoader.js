@@ -25,7 +25,7 @@ var mapsApiLoader = {
         $.getScript(
             'https://maps.googleapis.com/maps/api/js?' +
             'key=AIzaSyD3Fzwhnxu8K80A--t1OTriXGNhU5o6dkE' +
-            '&libraries=places'
+            '&libraries=places&language=sv'
         ).done(function () {
             window.mapsApiLoaderIsLoaded = true;
             $(document).trigger("mapsApiLoader:events:loaded");

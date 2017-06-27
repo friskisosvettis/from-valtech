@@ -2,8 +2,8 @@
 version: 1
 id: {D622CC13-7257-46CD-A670-8741BD41C74E}
 database: master
-path: /sitecore/templates/Project/Friskis/Content Blocks/Rich Text
-parent: {244B24BA-1040-4026-8106-12C4968B9A21}
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/Rich Text
+parent: {0FC5F86D-3014-48B4-9E36-5127B3AD4F08}
 name: Rich Text
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
@@ -30,11 +30,11 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-250
+275
 ----version----
 language: en
 version: 1
-revision: 83bbb573-41bd-4135-b1e6-f64822cd10c5
+revision: e8acc360-c700-4fb0-8d09-70e8cf6321fb
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-83bbb573-41bd-4135-b1e6-f64822cd10c5
+e8acc360-c700-4fb0-8d09-70e8cf6321fb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T122843Z
+20170626T130508Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

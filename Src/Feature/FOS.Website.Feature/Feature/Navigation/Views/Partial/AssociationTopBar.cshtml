@@ -5,7 +5,7 @@
 @using Synthesis.Mvc.Helpers
 @model AssociationTopBarModel
 
-@if (Model.TopBarData == null)
+@if (Model.TopBarData == null || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     return;
 }

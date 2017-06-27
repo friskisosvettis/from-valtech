@@ -159,7 +159,7 @@ namespace FOS.Website.Feature.Summary.Models
 
             foreach (ID taxonomyId in taxonomyList.Select(i => i.ID))
             {
-                string taxonomyIdString = Clean(taxonomyId.ToString(), "{}");
+                string taxonomyIdString = Clean(taxonomyId.ToString(), "{-}");
                 taxonomyPredicate = taxonomyPredicate.Or(s => s.Taxonomy.Contains(taxonomyIdString));
             }
 
@@ -181,7 +181,7 @@ namespace FOS.Website.Feature.Summary.Models
                 }
                 foreach (ID seasonId in seasons.Select(i => i.ID))
                 {
-                    string seasonIdString = Clean(seasonId.ToString(), "{}");
+                    string seasonIdString = Clean(seasonId.ToString(), "{-}");
 
                     seasonalPredicate = seasonalPredicate.Or(s => s.Months.Contains(seasonIdString));
                 }

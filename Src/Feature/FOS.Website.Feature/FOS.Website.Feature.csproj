@@ -1089,6 +1089,7 @@
     <Content Include="Feature\ContentBlocks\Views\ImageAndVideo.cshtml" />
     <Content Include="Feature\TrainingForm\Views\Web.config" />
     <Content Include="Feature\ComponentBlock\Views\ComponentBlockGrid.cshtml" />
+    <Content Include="Feature\Content\Views\OpeningHoursView.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1161,6 +1162,8 @@
     <Compile Include="Feature\HtmlDocumentRenderings\Controllers\NoRobotsMetaHeader.cs" />
     <Compile Include="Feature\Identity\Constants.cs" />
     <Compile Include="Feature\Identity\Controllers\FooterController.cs" />
+    <Compile Include="Feature\Content\Controllers\OpeningHoursController.cs" />
+    <Compile Include="Feature\Content\Models\OpeningHoursModel.cs" />
     <Compile Include="Feature\Navigation\Constants.cs" />
     <Compile Include="Feature\Navigation\Controllers\NavigationFooterController.cs" />
     <Compile Include="Feature\Navigation\Controllers\NavigationBarController.cs" />

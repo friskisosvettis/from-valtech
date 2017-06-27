@@ -24,6 +24,8 @@ var devbridgeAutocomplete = require('./modules/autocomplete'),
     fitImages = require('./modules/object-fit-images'),
 	slickSlider = require('./modules/carousel'),
 	maps = require('./modules/maps'),
+	mapsApiLoader = require('./modules/mapsApiLoader'),
+	openingHours = require('./modules/opening-hours'),
 	tabs = require('./modules/tabs'),
 	navigation = require('./modules/navigation'),
 	video = require('./modules/video'),
@@ -33,6 +35,7 @@ $(function () {
 	fitImages.init();
 	slickSlider.init();
 	maps.init();
+    openingHours.init();
 	tabs.init();
 	navigation.init();
 	devbridgeAutocomplete.init();

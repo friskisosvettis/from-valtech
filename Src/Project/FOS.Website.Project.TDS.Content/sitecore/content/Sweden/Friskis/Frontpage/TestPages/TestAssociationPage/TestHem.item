@@ -13,7 +13,7 @@ created: 20170403T105434Z
 ----version----
 language: en
 version: 1
-revision: 14f52875-f84a-445c-93ec-b01a22dc8484
+revision: 51cc46cb-379c-481a-b6b1-108a00df9b57
 
 ----field----
 field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
@@ -22,13 +22,6 @@ key: image
 content-length: 58
 
 <image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
-----field----
-field: {121CC763-40E1-45A1-B40F-961BE8CA10FF}
-name: Opening Hours
-key: opening hours
-content-length: 28
-
-<link linktype="internal" />
 ----field----
 field: {D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}
 name: Contact Email
@@ -43,6 +36,13 @@ key: phone number
 content-length: 8
 
 555-1234
+----field----
+field: {19534E43-1EF1-4D7C-924B-D7E0A9343AA6}
+name: Link
+key: link
+content-length: 124
+
+<link linktype="internal" text="Visa alla öppetider" querystring="" target="" id="{03A5A9C7-6A83-42F7-BE5F-6BDA0BDD66E4}" />
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
@@ -70,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-14f52875-f84a-445c-93ec-b01a22dc8484
+51cc46cb-379c-481a-b6b1-108a00df9b57
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170517T133155Z
+20170626T091939Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -95,7 +95,7 @@ content-length: 5
 ----version----
 language: sv-SE
 version: 1
-revision: 1d38ea9a-12af-46f4-b9fc-d6f6eeb99ce9
+revision: 1c54a118-d63e-4a5b-a8e7-c72a520dfa3b
 
 ----field----
 field: {0F7ECFC1-6DD8-40B7-B7F3-026E299D8C57}
@@ -111,13 +111,6 @@ key: image
 content-length: 58
 
 <image mediaid="{CC9687C1-5B60-4800-BB0C-D0FB7C638225}" />
-----field----
-field: {121CC763-40E1-45A1-B40F-961BE8CA10FF}
-name: Opening Hours
-key: opening hours
-content-length: 133
-
-<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{4DEF8BAE-5F40-421A-AF68-E0401E98E8CC}" />
 ----field----
 field: {D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}
 name: Contact Email
@@ -285,14 +278,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1d38ea9a-12af-46f4-b9fc-d6f6eeb99ce9
+1c54a118-d63e-4a5b-a8e7-c72a520dfa3b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T122824Z
+20170623T114530Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

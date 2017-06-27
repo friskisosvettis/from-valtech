@@ -10,6 +10,7 @@
 
 // Require dependencies for this module
 var $ = require('jquery');
+var _mapsApi = require('../modules/mapsApiLoader');
 
 var _mediumBreakpoint = 768;
 var _initialized = false;
@@ -32,24 +33,12 @@ var maps = {
             }
 
             if ($(window).width() > _mediumBreakpoint) {
-                loadGoogleMaps();
-            }
-        }
-
-        function loadScripts(showThisPin) {
-            $.getScript(
-                'https://maps.googleapis.com/maps/api/js?' +
-                'key=AIzaSyD3Fzwhnxu8K80A--t1OTriXGNhU5o6dkE'
-            ).done(function() {
-                initializeMap(showThisPin);
-            });
-        }
-
-        function loadGoogleMaps(showThisPin) {
-            if(_initialized){
-                return;
-            } else {
-                loadScripts(showThisPin);
+                //loadGoogleMaps();
+                //only inits maps api when maps element present
+                $(document).on("mapsApiLoader:events:loaded", function() {
+                    initializeMap();
+                });
+                _mapsApi.init();
             }
         }
 

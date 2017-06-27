@@ -13,7 +13,7 @@ created: 20170621T095349Z
 ----version----
 language: en
 version: 1
-revision: b97bd14a-4ffc-4831-9667-24451d359957
+revision: 34d6cd1f-af41-4c9c-8556-258f0d6641a5
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
@@ -40,9 +40,9 @@ content-length: 257
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 270
+content-length: 232
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{6376D875-0B6E-4DB1-8EB2-919F2DB05FA5}" p:before="*" s:ds="{1D76608D-E0AA-4A1B-9DC6-97F199D2CCAC}" s:id="{3CF88FD5-0793-4BBC-8452-FA46DCAC9A04}" s:ph="/main/maincontent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{6376D875-0B6E-4DB1-8EB2-919F2DB05FA5}" p:before="*" s:ds="" s:id="{3CF88FD5-0793-4BBC-8452-FA46DCAC9A04}" s:ph="/main/maincontent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b97bd14a-4ffc-4831-9667-24451d359957
+34d6cd1f-af41-4c9c-8556-258f0d6641a5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T112301Z
+20170626T130805Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

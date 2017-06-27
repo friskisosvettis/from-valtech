@@ -46,6 +46,9 @@ namespace FOS.Website.Feature.Content
 
                 //EditorInfo
                 public const string EditorInfo = "/Feature/Content/Views/EditorInfo.cshtml";
+
+                //OpeningHours
+                public const string OpeningHours = "/Feature/Content/Views/OpeningHoursView.cshtml";
             }
         }
     }

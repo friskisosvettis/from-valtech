@@ -161,7 +161,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/GymPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{11192A93-2C8B-4C41-8D4F-DB7B3A95B20F}", "sjrxBCKJdQVAkMx8SjRWHMizVCc=", "Valtech.Foundation.Synthesis")]
-    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterTrainingCenterContactFooterItem, global::FOS.Website.Feature.Content.Data.ITrainingCenterFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IFacilitiesItem {
+    public partial interface IGymPageItem : global::FOS.Website.Feature.Content.Data.IHeadingTrainingCenterItem, global::FOS.Website.Feature.Content.Data.IOpeningHoursItem, global::FOS.Website.Feature.Content.Data.IMapNodeItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterTrainingCenterContactFooterItem, global::FOS.Website.Feature.Content.Data.ITrainingCenterFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IFacilitiesItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/HeroPage template</summary>
@@ -2979,6 +2979,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ItemReferenceListField _facilities1;
         
+        private Synthesis.FieldTypes.TextField _googlePlaceId;
+        
         private Synthesis.FieldTypes.ImageField _image;
         
         private Synthesis.FieldTypes.TextField _mapHeadline;
@@ -2987,7 +2989,7 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _description;
         
-        private Synthesis.FieldTypes.HyperlinkField _openingHours;
+        private Synthesis.FieldTypes.HyperlinkField _link;
         
         private Synthesis.FieldTypes.TextField _street;
         
@@ -2999,7 +3001,7 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _email;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _link1;
         
         private Synthesis.FieldTypes.TextField _phoneNumber;
         
@@ -3059,6 +3061,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the GooglePlaceId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("googleplaceid")]
+        public Synthesis.FieldTypes.Interfaces.ITextField GooglePlaceId {
+            get {
+                if (_googlePlaceId == null) {
+                    _googlePlaceId = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{539EAF91-AA60-44F5-A231-93A15A605BA5}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "GooglePlaceId"), this.GetSearchFieldValue("googleplaceid"));
+                }
+                return _googlePlaceId;
+            }
+        }
+        
         /// <summary>Represents the Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("image")]
         public Synthesis.FieldTypes.Interfaces.IImageField Image {
@@ -3103,14 +3116,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Opening Hours field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours {
+        /// <summary>Represents the Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
             get {
-                if (_openingHours == null) {
-                    _openingHours = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{121CC763-40E1-45A1-B40F-961BE8CA10FF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Opening Hours"), this.GetSearchFieldValue("opening_hours"));
+                if (_link == null) {
+                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{19534E43-1EF1-4D7C-924B-D7E0A9343AA6}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Link"), this.GetSearchFieldValue("link"));
                 }
-                return _openingHours;
+                return _link;
             }
         }
         
@@ -3171,12 +3184,12 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         /// <summary>Represents the Link field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link1 {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Link"), this.GetSearchFieldValue("link"));
+                if (_link1 == null) {
+                    _link1 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Link"), this.GetSearchFieldValue("link"));
                 }
-                return _link;
+                return _link1;
             }
         }
         

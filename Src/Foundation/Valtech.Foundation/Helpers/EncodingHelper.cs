@@ -1,12 +1,20 @@
 ﻿using System.Text;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Valtech.Foundation.Helpers
 {
     public static class EncodingHelper
     {
-        public static string GetRazorViewText(string text)
+        public static IHtmlString GetRazorViewText(string text)
         {
-            return Encoding.UTF8.GetString(Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding("ISO-8859-1"), Encoding.UTF8.GetBytes(text)));
+            return new MvcHtmlString(text
+                .Replace("ä", @"&auml;")
+                .Replace("ö", @"&ouml;")
+                .Replace("å", @"&aring;")
+                .Replace("Ä", @"&Auml;")
+                .Replace("Ö", @"&Ouml;")
+                .Replace("Å", @"&Aring;"));
         }
     }
 }

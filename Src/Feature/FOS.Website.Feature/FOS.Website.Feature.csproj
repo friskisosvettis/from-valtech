@@ -1090,6 +1090,8 @@
     <Content Include="Feature\TrainingForm\Views\Web.config" />
     <Content Include="Feature\ComponentBlock\Views\ComponentBlockGrid.cshtml" />
     <Content Include="Feature\Content\Views\OpeningHoursView.cshtml" />
+    <Content Include="Feature\CustomScripts\Views\CustomScriptsView.cshtml" />
+    <Content Include="Feature\CustomScripts\Views\Web.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1154,6 +1156,10 @@
     <Compile Include="Feature\Content\Models\RichTextContentModel.cs" />
     <Compile Include="Feature\Content\Models\TestPageModel.cs" />
     <Compile Include="Feature\Content\Models\QuoteModel.cs" />
+    <Compile Include="Feature\CustomScripts\Constants.cs" />
+    <Compile Include="Feature\CustomScripts\Services\CustomScriptsService.cs" />
+    <Compile Include="Feature\CustomScripts\Data\CustomScriptsSynthesisModels.cs" />
+    <Compile Include="Feature\CustomScripts\Models\CustomScriptsModel.cs" />
     <Compile Include="Feature\Document\Constants.cs" />
     <Compile Include="Feature\Document\Controllers\DocumentController.cs" />
     <Compile Include="Feature\Document\Data\DocumentSynthesisModels.cs" />

@@ -110,7 +110,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationMenuLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedWidgetItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationMenuLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedWidgetItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/BlancComponentPage template</summary>
@@ -1327,11 +1327,15 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _bookingLink;
         
+        private Synthesis.FieldTypes.TextField _customScripts;
+        
         private Synthesis.FieldTypes.HyperlinkField _facebookLink;
         
         private Synthesis.FieldTypes.TextField _introTitle;
         
         private Synthesis.FieldTypes.TextField _region;
+        
+        private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
         
         private Synthesis.FieldTypes.TextField _title;
         
@@ -1441,6 +1445,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the CustomScripts field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customscripts")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomScripts {
+            get {
+                if (_customScripts == null) {
+                    _customScripts = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{30627248-3125-4A7E-BF76-DECFAD8FB7AB}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "CustomScripts"), this.GetSearchFieldValue("customscripts"));
+                }
+                return _customScripts;
+            }
+        }
+        
         /// <summary>Represents the Facebook Link field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("facebook_link")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField FacebookLink {
@@ -1471,6 +1486,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _region = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D39C7329-B2AB-4121-87C3-822619AEB2B0}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Region"), this.GetSearchFieldValue("region"));
                 }
                 return _region;
+            }
+        }
+        
+        /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
+            get {
+                if (_scriptsInheritedOnSubpages == null) {
+                    _scriptsInheritedOnSubpages = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F64D4477-A514-4BF8-8539-B9FF7B2F9F36}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "ScriptsInheritedOnSubpages"), this.GetSearchFieldValue("scriptsinheritedonsubpages"));
+                }
+                return _scriptsInheritedOnSubpages;
             }
         }
         

@@ -2,9 +2,9 @@
 version: 1
 id: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
 database: master
-path: /sitecore/content/Sweden/Friskis/Settings/ContentSettings/Content Styling/ContentBlocks
+path: /sitecore/content/Global Settings/Content Blocks/Rich Text Styles
 parent: {981F7605-7998-4DDB-9F2A-8FECC2490207}
-name: ContentBlocks
+name: Rich Text Styles
 master: {00000000-0000-0000-0000-000000000000}
 template: {F4A5273B-B7BF-4A00-8769-B2FA33068590}
 templatekey: ContentStylingFolder
@@ -13,7 +13,7 @@ created: 20170619T191149Z
 ----version----
 language: en
 version: 1
-revision: efea9437-b755-4cee-b3e5-559daca1fcf2
+revision: 62080928-1292-45d4-ae59-a6495465b0dd
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-efea9437-b755-4cee-b3e5-559daca1fcf2
+62080928-1292-45d4-ae59-a6495465b0dd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T192739Z
+20170629T112148Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

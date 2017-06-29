@@ -1,19 +1,26 @@
 ----item----
 version: 1
-id: {981F7605-7998-4DDB-9F2A-8FECC2490207}
+id: {E9932891-45BE-446F-8526-960A09203D49}
 database: master
-path: /sitecore/content/Sweden/Friskis/Settings/ContentSettings/Content Styling
-parent: {F6C464B5-9DD6-40D1-996F-5A79D0AC45A9}
-name: Content Styling
+path: /sitecore/content/Global Settings/Content Blocks/Rich Text Styles/Red centered
+parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
+name: Red centered
 master: {00000000-0000-0000-0000-000000000000}
-template: {F4A5273B-B7BF-4A00-8769-B2FA33068590}
-templatekey: ContentStylingFolder
-created: 20170619T191129Z
+template: {A5771A36-9D4F-404B-8120-654F833AF23B}
+templatekey: TextSetting
+created: 20170620T104750Z
 
+----field----
+field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
+name: Value
+key: value
+content-length: 40
+
+ textbox textbox--red text-align--center
 ----version----
 language: en
 version: 1
-revision: 1a0ee8d9-06b9-4b74-813d-227158bc3c24
+revision: e92041b9-f23a-4d88-9f81-c14698c075d3
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T191129Z
+20170619T192440Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1a0ee8d9-06b9-4b74-813d-227158bc3c24
+e92041b9-f23a-4d88-9f81-c14698c075d3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T191129Z
+20170621T095435Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

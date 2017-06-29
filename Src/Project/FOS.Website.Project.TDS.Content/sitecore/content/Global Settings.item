@@ -1,40 +1,26 @@
 ----item----
 version: 1
-id: {29F6CD5C-6EC6-4D39-99EA-35A1F6567BB8}
+id: {1E1211E5-256E-4AF4-B9CA-38596A621E99}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Data/Settings/Style/Content Block/Style
-parent: {AC6E6480-A162-4FD2-93F6-A09D1F949A6D}
-name: Style
+path: /sitecore/content/Global Settings
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Global Settings
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
-created: 20170619T203133Z
+template: {A00AC400-2525-4C8E-BDA9-092B3667D233}
+templatekey: SettingsFolder
+created: 20170626T150733Z
 
-----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 8
-
-Droplink
-----field----
-field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
-name: Source
-key: source
-content-length: 65
-
-/sitecore/content/Global Settings/Content Blocks/Rich Text Styles
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
-content-length: 4
+content-length: 3
 
-1100
+600
 ----version----
 language: en
 version: 1
-revision: 23a61092-9b90-4bab-ad78-2b7e5a61bf4d
+revision: d33a449c-65e2-4cb8-bfcd-109832c203c7
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T191659Z
+20170626T150733Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-23a61092-9b90-4bab-ad78-2b7e5a61bf4d
+d33a449c-65e2-4cb8-bfcd-109832c203c7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170629T113622Z
+20170627T074811Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

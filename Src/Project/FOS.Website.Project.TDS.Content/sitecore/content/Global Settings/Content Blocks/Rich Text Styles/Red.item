@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {94A1EF78-D19F-4B88-89D1-FB7A76920252}
+id: {0AEB4052-CA0E-47A0-93F3-59F134FB1BF8}
 database: master
-path: /sitecore/content/Sweden/Friskis/Settings/ContentSettings/Content Styling/ContentBlocks/Yellow
+path: /sitecore/content/Global Settings/Content Blocks/Rich Text Styles/Red
 parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
-name: Yellow
+name: Red
 master: {00000000-0000-0000-0000-000000000000}
 template: {A5771A36-9D4F-404B-8120-654F833AF23B}
 templatekey: TextSetting
-created: 20170619T192516Z
+created: 20170619T192455Z
 
 ----field----
 field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
 name: Value
 key: value
-content-length: 24
+content-length: 21
 
- textbox textbox--yellow
+ textbox textbox--red
 ----version----
 language: en
 version: 1
-revision: 10f0c5eb-9e74-4823-8076-a931c8175e6e
+revision: 5bbaceac-01ee-4261-bbd0-060f561481c8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-10f0c5eb-9e74-4823-8076-a931c8175e6e
+5bbaceac-01ee-4261-bbd0-060f561481c8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T095534Z
+20170621T095449Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

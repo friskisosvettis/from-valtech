@@ -36,7 +36,9 @@
 <body class="@extraBodyClasses">
 
     @Html.Sitecore().Placeholder("main")
-
+    
+    @Html.Sitecore().Controller("Content", "GetCookieConsentView")
+    
 <script src="@Valtech.Foundation.Assets.Fingerprint.Add("/assets/scripts/bundle.js")"></script>
     @Html.Partial("~/Feature/CustomScripts/Views/CustomScriptsView.cshtml", new CustomScriptsModel())
 </body>

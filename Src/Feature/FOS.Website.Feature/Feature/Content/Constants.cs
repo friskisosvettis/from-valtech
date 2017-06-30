@@ -49,6 +49,9 @@ namespace FOS.Website.Feature.Content
 
                 //OpeningHours
                 public const string OpeningHours = "/Feature/Content/Views/OpeningHoursView.cshtml";
+
+                //Cookie consent
+                public const string CookieConsent = "/Feature/Content/Views/CookieConsent.cshtml";
             }
         }
     }

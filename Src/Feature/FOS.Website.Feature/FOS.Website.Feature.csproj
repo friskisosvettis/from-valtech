@@ -1092,6 +1092,7 @@
     <Content Include="Feature\Content\Views\OpeningHoursView.cshtml" />
     <Content Include="Feature\CustomScripts\Views\CustomScriptsView.cshtml" />
     <Content Include="Feature\CustomScripts\Views\Web.config" />
+    <Content Include="Feature\Content\Views\CookieConsent.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

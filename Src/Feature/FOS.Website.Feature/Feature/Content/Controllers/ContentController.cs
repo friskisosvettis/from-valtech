@@ -14,6 +14,7 @@ using Sitecore.Buckets.Extensions;
 using Valtech.Foundation.SitecoreExtensions;
 using Valtech.Foundation.Synthesis;
 using Sitecore.Data.Items;
+using Valtech.Foundation.Settings;
 
 namespace FOS.Website.Feature.Content.Controllers
 {
@@ -129,6 +130,13 @@ namespace FOS.Website.Feature.Content.Controllers
         public ActionResult GetCollageView()
         {
             return View(Constants.Views.Paths.Collage);
+        }
+
+        public ActionResult GetCookieConsentView()
+        {
+            var model = new SettingsRepository().GetSetting<ICookieConsentItem>(Sitecore.Context.Item);
+
+            return View(Constants.Views.Paths.CookieConsent, model);
         }
     }
 }

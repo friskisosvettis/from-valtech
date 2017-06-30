@@ -110,7 +110,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationMenuLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedWidgetItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationMenuLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedWidgetItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/BlancComponentPage template</summary>
@@ -3016,8 +3016,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _link;
         
-        private Synthesis.FieldTypes.HyperlinkField _openingHours1;
-        
         private Synthesis.FieldTypes.TextField _street;
         
         private Synthesis.FieldTypes.ImageField _backgroundImage;
@@ -3039,6 +3037,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.TextField _phonenumber;
         
         private Synthesis.FieldTypes.TextField _country;
+        
+        private Synthesis.FieldTypes.TextField _longitudeStr;
+        
+        private Synthesis.FieldTypes.TextField _latitudeStr;
         
         private Synthesis.FieldTypes.NumericField _latitude;
         
@@ -3172,17 +3174,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Opening Hours field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours1 {
-            get {
-                if (_openingHours1 == null) {
-                    _openingHours1 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{121CC763-40E1-45A1-B40F-961BE8CA10FF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Opening Hours"), this.GetSearchFieldValue("opening_hours"));
-                }
-                return _openingHours1;
-            }
-        }
-        
         /// <summary>Represents the Street field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("street")]
         public Synthesis.FieldTypes.Interfaces.ITextField Street {
@@ -3301,6 +3292,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _country = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{243161A1-958B-4A58-AF6E-456AE453E502}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Country"), this.GetSearchFieldValue("country"));
                 }
                 return _country;
+            }
+        }
+        
+        /// <summary>Represents the LongitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
+            get {
+                if (_longitudeStr == null) {
+                    _longitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "LongitudeStr"), this.GetSearchFieldValue("longitudestr"));
+                }
+                return _longitudeStr;
+            }
+        }
+        
+        /// <summary>Represents the LatitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
+            get {
+                if (_latitudeStr == null) {
+                    _latitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "LatitudeStr"), this.GetSearchFieldValue("latitudestr"));
+                }
+                return _latitudeStr;
             }
         }
         

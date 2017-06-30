@@ -215,6 +215,30 @@ namespace FOS.Website.Feature.Content.Data {
     public partial interface IContentStylingFolderItem : Synthesis.IStandardTemplateItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/CookieConsent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{E503FCA1-EA77-4E9F-A892-C481ABC06717}", "icdjXoivzZKIUccKYPIj0zGq+cI=", "Valtech.Foundation.Synthesis")]
+    public partial interface ICookieConsentItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the ReadMoreLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("readmorelink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField ReadMoreLink {
+            get;
+        }
+        
+        /// <summary>Represents the Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text")]
+        Synthesis.FieldTypes.Interfaces.ITextField Text {
+            get;
+        }
+        
+        /// <summary>Represents the ButtonText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("buttontext")]
+        Synthesis.FieldTypes.Interfaces.ITextField ButtonText {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ExpandableSection template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{74878397-9414-4E16-9978-CE5F8214690D}", "Y0d98pAFWBrdQ01bNOay7gsOy54=", "Valtech.Foundation.Synthesis")]
@@ -337,18 +361,12 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "aE1uCuKUiqQFhB9jrJd4Af8+Qzc=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "9CKVtc86kZrPfEdBgz9mqyHpdgM=", "Valtech.Foundation.Synthesis")]
     public partial interface IHeadingTrainingCenterItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("image")]
         Synthesis.FieldTypes.Interfaces.IImageField Image {
-            get;
-        }
-        
-        /// <summary>Represents the Opening Hours field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours {
             get;
         }
         
@@ -433,7 +451,7 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/MapNode template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08AEE5ED-BD95-438D-8936-2A59091A882B}", "UkAzDzR56P5Zoeugx42/piedjhw=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08AEE5ED-BD95-438D-8936-2A59091A882B}", "edKQhKv4bZlIic1xG4UCRlh0rJ0=", "Valtech.Foundation.Synthesis")]
     public partial interface IMapNodeItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the MapHeadline field</summary>
@@ -469,6 +487,18 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the Country field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("country")]
         Synthesis.FieldTypes.Interfaces.ITextField Country {
+            get;
+        }
+        
+        /// <summary>Represents the LongitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
+        Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
+            get;
+        }
+        
+        /// <summary>Represents the LatitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
+        Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
             get;
         }
         
@@ -1739,6 +1769,97 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/CookieConsent template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class CookieConsent : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.ICookieConsentItem {
+        
+        private Synthesis.FieldTypes.HyperlinkField _readMoreLink;
+        
+        private Synthesis.FieldTypes.TextField _text;
+        
+        private Synthesis.FieldTypes.TextField _buttonText;
+        
+        public CookieConsent(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public CookieConsent(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "CookieConsent";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{E503FCA1-EA77-4E9F-A892-C481ABC06717}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the ReadMoreLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("readmorelink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ReadMoreLink {
+            get {
+                if (_readMoreLink == null) {
+                    _readMoreLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{736F968B-94D7-4F3B-BC20-F1EA62AE0203}"], "/sitecore/templates/Feature/Content/Data/CookieConsent", "ReadMoreLink"), this.GetSearchFieldValue("readmorelink"));
+                }
+                return _readMoreLink;
+            }
+        }
+        
+        /// <summary>Represents the Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Text {
+            get {
+                if (_text == null) {
+                    _text = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D0102413-B992-41B9-9B8A-E5D0A186B61C}"], "/sitecore/templates/Feature/Content/Data/CookieConsent", "Text"), this.GetSearchFieldValue("text"));
+                }
+                return _text;
+            }
+        }
+        
+        /// <summary>Represents the ButtonText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("buttontext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ButtonText {
+            get {
+                if (_buttonText == null) {
+                    _buttonText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{AB6EA823-E640-4BB1-A060-173FB5D43C92}"], "/sitecore/templates/Feature/Content/Data/CookieConsent", "ButtonText"), this.GetSearchFieldValue("buttontext"));
+                }
+                return _buttonText;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class CookieConsentInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{E503FCA1-EA77-4E9F-A892-C481ABC06717}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new CookieConsent(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new CookieConsent(searchFields);
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ExpandableSection template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class ExpandableSection : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IExpandableSectionItem {
@@ -2200,8 +2321,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.ImageField _image;
         
-        private Synthesis.FieldTypes.HyperlinkField _openingHours;
-        
         private Synthesis.FieldTypes.TextField _contactEmail;
         
         private Synthesis.FieldTypes.TextField _phoneNumber;
@@ -2243,17 +2362,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{77F8111C-E439-4FCA-B3E8-320DB734D8C0}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Image"), this.GetSearchFieldValue("image"));
                 }
                 return _image;
-            }
-        }
-        
-        /// <summary>Represents the Opening Hours field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours {
-            get {
-                if (_openingHours == null) {
-                    _openingHours = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{121CC763-40E1-45A1-B40F-961BE8CA10FF}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Opening Hours"), this.GetSearchFieldValue("opening_hours"));
-                }
-                return _openingHours;
             }
         }
         
@@ -2574,6 +2682,10 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.TextField _country;
         
+        private Synthesis.FieldTypes.TextField _longitudeStr;
+        
+        private Synthesis.FieldTypes.TextField _latitudeStr;
+        
         private Synthesis.FieldTypes.NumericField _latitude;
         
         private Synthesis.FieldTypes.NumericField _longitude;
@@ -2670,6 +2782,28 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _country = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{243161A1-958B-4A58-AF6E-456AE453E502}"], "/sitecore/templates/Feature/Content/Data/MapNode", "Country"), this.GetSearchFieldValue("country"));
                 }
                 return _country;
+            }
+        }
+        
+        /// <summary>Represents the LongitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
+            get {
+                if (_longitudeStr == null) {
+                    _longitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Feature/Content/Data/MapNode", "LongitudeStr"), this.GetSearchFieldValue("longitudestr"));
+                }
+                return _longitudeStr;
+            }
+        }
+        
+        /// <summary>Represents the LatitudeStr field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
+        public Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
+            get {
+                if (_latitudeStr == null) {
+                    _latitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Feature/Content/Data/MapNode", "LatitudeStr"), this.GetSearchFieldValue("latitudestr"));
+                }
+                return _latitudeStr;
             }
         }
         

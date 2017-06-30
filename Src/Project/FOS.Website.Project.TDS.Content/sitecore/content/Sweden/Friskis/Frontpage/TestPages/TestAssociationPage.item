@@ -14,16 +14,16 @@ created: 20170323T151022Z
 field: {30627248-3125-4A7E-BF76-DECFAD8FB7AB}
 name: CustomScripts
 key: customscripts
-content-length: 151
+content-length: 154
 
-<script>console.log('script outputted from Test association page @ /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage');</script>
+<script>console.log('script outputted ONLY on Test association page @ /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage');</script>
 ----field----
 field: {F64D4477-A514-4BF8-8539-B9FF7B2F9F36}
 name: ScriptsInheritedOnSubpages
 key: scriptsinheritedonsubpages
-content-length: 1
+content-length: 175
 
-1
+<script>console.log('script outputted on Test association page @ /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage and inherited on subpages');</script>
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -34,7 +34,7 @@ content-length: 4
 ----version----
 language: sv-SE
 version: 1
-revision: 82d3af88-08ad-4a57-947b-4c9ac8473970
+revision: 117de4a3-5069-45f4-b853-bce1a6c10c68
 
 ----field----
 field: {DB2BC8F5-6AE2-4A7B-A74A-332C1F992953}
@@ -196,14 +196,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-82d3af88-08ad-4a57-947b-4c9ac8473970
+117de4a3-5069-45f4-b853-bce1a6c10c68
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170627T164220Z
+20170628T104819Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

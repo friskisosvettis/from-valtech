@@ -3016,6 +3016,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _link;
         
+        private Synthesis.FieldTypes.HyperlinkField _openingHours1;
+        
         private Synthesis.FieldTypes.TextField _street;
         
         private Synthesis.FieldTypes.ImageField _backgroundImage;
@@ -3037,10 +3039,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.TextField _phonenumber;
         
         private Synthesis.FieldTypes.TextField _country;
-        
-        private Synthesis.FieldTypes.TextField _longitudeStr;
-        
-        private Synthesis.FieldTypes.TextField _latitudeStr;
         
         private Synthesis.FieldTypes.NumericField _latitude;
         
@@ -3174,6 +3172,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Opening Hours field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHours1 {
+            get {
+                if (_openingHours1 == null) {
+                    _openingHours1 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{121CC763-40E1-45A1-B40F-961BE8CA10FF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Opening Hours"), this.GetSearchFieldValue("opening_hours"));
+                }
+                return _openingHours1;
+            }
+        }
+        
         /// <summary>Represents the Street field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("street")]
         public Synthesis.FieldTypes.Interfaces.ITextField Street {
@@ -3292,28 +3301,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _country = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{243161A1-958B-4A58-AF6E-456AE453E502}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Country"), this.GetSearchFieldValue("country"));
                 }
                 return _country;
-            }
-        }
-        
-        /// <summary>Represents the LongitudeStr field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
-        public Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
-            get {
-                if (_longitudeStr == null) {
-                    _longitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "LongitudeStr"), this.GetSearchFieldValue("longitudestr"));
-                }
-                return _longitudeStr;
-            }
-        }
-        
-        /// <summary>Represents the LatitudeStr field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
-        public Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
-            get {
-                if (_latitudeStr == null) {
-                    _latitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "LatitudeStr"), this.GetSearchFieldValue("latitudestr"));
-                }
-                return _latitudeStr;
             }
         }
         

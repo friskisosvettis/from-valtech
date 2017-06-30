@@ -58,20 +58,6 @@ content-length: 6
 
 Sweden
 ----field----
-field: {8342753A-30D9-4093-BFC1-97C83F34D1CC}
-name: LongitudeStr
-key: longitudestr
-content-length: 11
-
--118.321548
-----field----
-field: {6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}
-name: LatitudeStr
-key: latitudestr
-content-length: 9
-
-34.134115
-----field----
 field: {D8AE139D-9B68-4F8E-BBE8-0EB5DBEB25AF}
 name: Latitude
 key: latitude

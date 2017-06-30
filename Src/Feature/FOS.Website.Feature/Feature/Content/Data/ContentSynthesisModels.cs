@@ -209,12 +209,6 @@ namespace FOS.Website.Feature.Content.Data {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ContentStylingFolder template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F4A5273B-B7BF-4A00-8769-B2FA33068590}", "asOKK0r2mHMISMOHiGw2DHIIH4Q=", "Valtech.Foundation.Synthesis")]
-    public partial interface IContentStylingFolderItem : Synthesis.IStandardTemplateItem {
-    }
-    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/CookieConsent template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{E503FCA1-EA77-4E9F-A892-C481ABC06717}", "icdjXoivzZKIUccKYPIj0zGq+cI=", "Valtech.Foundation.Synthesis")]
@@ -1714,58 +1708,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new ContentSize(searchFields);
-        }
-    }
-    
-    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/ContentStylingFolder template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class ContentStylingFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IContentStylingFolderItem {
-        
-        public ContentStylingFolder(Sitecore.Data.Items.Item innerItem) : 
-                base(innerItem) {
-        }
-        
-        public ContentStylingFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
-                base(searchFields) {
-        }
-        
-        /// <summary>The name of the Sitecore Template that this class represents</summary>
-        public static string TemplateName {
-            get {
-                return "ContentStylingFolder";
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public static Sitecore.Data.ID ItemTemplateId {
-            get {
-                return new Sitecore.Data.ID("{F4A5273B-B7BF-4A00-8769-B2FA33068590}");
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public override Sitecore.Data.ID TemplateId {
-            get {
-                return ItemTemplateId;
-            }
-        }
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class ContentStylingFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
-        
-        public Sitecore.Data.ID InitializesTemplateId {
-            get {
-                return new Sitecore.Data.ID("{F4A5273B-B7BF-4A00-8769-B2FA33068590}");
-            }
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new ContentStylingFolder(innerItem);
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new ContentStylingFolder(searchFields);
         }
     }
     

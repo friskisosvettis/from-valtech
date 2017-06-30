@@ -1,40 +1,26 @@
 ----item----
 version: 1
-id: {29F6CD5C-6EC6-4D39-99EA-35A1F6567BB8}
+id: {94A1EF78-D19F-4B88-89D1-FB7A76920252}
 database: master
-path: /sitecore/templates/Feature/ContentBlocks/Data/Settings/Style/Content Block/Style
-parent: {AC6E6480-A162-4FD2-93F6-A09D1F949A6D}
-name: Style
+path: /sitecore/content/Global Settings/Content Block Settings/Rich Text Styles/Yellow
+parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
+name: Yellow
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
-created: 20170619T203133Z
+template: {A5771A36-9D4F-404B-8120-654F833AF23B}
+templatekey: TextSetting
+created: 20170619T192516Z
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 8
+field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
+name: Value
+key: value
+content-length: 24
 
-Droplink
-----field----
-field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
-name: Source
-key: source
-content-length: 73
-
-/sitecore/content/Global Settings/Content Block Settings/Rich Text Styles
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 4
-
-1100
+ textbox textbox--yellow
 ----version----
 language: en
 version: 1
-revision: c6f57166-3206-4536-95ea-d4f7e9b71726
+revision: 10f0c5eb-9e74-4823-8076-a931c8175e6e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T191659Z
+20170619T192440Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c6f57166-3206-4536-95ea-d4f7e9b71726
+10f0c5eb-9e74-4823-8076-a931c8175e6e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170629T125118Z
+20170621T095534Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

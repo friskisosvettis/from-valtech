@@ -62,5 +62,16 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.WideImageSeparator, model);
         }
+
+        public ActionResult GetFiftyFiftyMediaView()
+        {
+            var model = new FiftyFiftyMediaModel();
+            if (model.LeftMediaBlock == null || model.RightMediaBlock == null)
+            {
+                return new EmptyResult();
+            }
+
+            return View(Constants.Views.Paths.FiftyFiftyMedia, model);
+        }
     }
 }

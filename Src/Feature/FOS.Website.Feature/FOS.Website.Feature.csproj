@@ -1092,6 +1092,8 @@
     <Content Include="Feature\Content\Views\OpeningHoursView.cshtml" />
     <Content Include="Feature\CustomScripts\Views\CustomScriptsView.cshtml" />
     <Content Include="Feature\CustomScripts\Views\Web.config" />
+    <Content Include="Feature\ContentBlocks\Views\FiftyFiftyMedia.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\MediaBlock_Partial.cshtml" />
     <Content Include="Feature\Content\Views\CookieConsent.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -1118,7 +1120,9 @@
     <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />
     <Compile Include="Feature\ContentBlocks\Helpers\RenderingHelper.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ContentBlockModelBase.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\MediaBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\LinkBlockModel.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\FiftyFiftyMediaModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\MediaAndTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ImageAndVideoModel.cs" />

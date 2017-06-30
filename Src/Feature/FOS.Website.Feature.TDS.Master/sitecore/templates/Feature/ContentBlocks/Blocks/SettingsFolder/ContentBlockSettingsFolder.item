@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {F4A5273B-B7BF-4A00-8769-B2FA33068590}
+id: {2826C395-1FAD-4323-807C-646DEF0C7E58}
 database: master
-path: /sitecore/templates/Feature/Content/Data/ContentStylingFolder
-parent: {2BEB4C49-A29E-4DDB-B24D-B6E5FB6C0B24}
-name: ContentStylingFolder
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/ContentBlockSettingsFolder
+parent: {26FA2B2A-9D45-4583-8EAD-11DFBFF83596}
+name: ContentBlockSettingsFolder
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
-created: 20170619T185547Z
+created: 20170629T124651Z
 
 ----field----
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
@@ -23,14 +23,14 @@ name: __Standard values
 key: __standard values
 content-length: 38
 
-{1D698608-DFFB-4A78-845B-1DB0C6809BE9}
+{316C6983-E166-4680-9812-2B62D7D55000}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 33
+content-length: 28
 
-Applications/32x32/folder_new.png
+Applications/16x16/gears.png
 ----version----
 language: da
 version: 1
@@ -74,7 +74,7 @@ sitecore\Admin
 ----version----
 language: en
 version: 1
-revision: 807885f3-ea1f-4154-92aa-2d26459f0214
+revision: d908af66-38d3-40f0-a8d0-1b50533fd0b6
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -96,14 +96,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-807885f3-ea1f-4154-92aa-2d26459f0214
+d908af66-38d3-40f0-a8d0-1b50533fd0b6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170619T191217Z
+20170629T124704Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

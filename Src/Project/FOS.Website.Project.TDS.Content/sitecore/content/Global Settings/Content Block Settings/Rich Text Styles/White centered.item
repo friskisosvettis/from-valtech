@@ -2,7 +2,7 @@
 version: 1
 id: {1A87B1B6-63D9-41ED-AEAD-5B2693A7F083}
 database: master
-path: /sitecore/content/Global Settings/Content Blocks/Rich Text Styles/White centered
+path: /sitecore/content/Global Settings/Content Block Settings/Rich Text Styles/White centered
 parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
 name: White centered
 master: {00000000-0000-0000-0000-000000000000}

@@ -11,6 +11,12 @@
 namespace FOS.Website.Feature.ContentBlocks.Blocks {
     
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{B5A2F964-5714-4761-8DB9-0CA676809493}", "ZVnw1i+xt3IG2UrB43ufthvlfsM=", "Valtech.Foundation.Synthesis")]
+    public partial interface IFiftyFiftyMediaItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.IMediaBlockItem, global::FOS.Website.Feature.ContentBlocks.Data.IMediaBlock2Item {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndText template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{21EA2408-A9D6-4CA6-AFD1-80798B77B5DB}", "rUpDfQXoMEoHrjPYOc6B5VBP76s=", "Valtech.Foundation.Synthesis")]
@@ -89,6 +95,27 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
     public partial interface IWideImageSeparatorItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.IImageItem, global::FOS.Website.Feature.ContentBlocks.Data.ISimpleTextBoxItem {
     }
 }
+namespace FOS.Website.Feature.ContentBlocks.Blocks.SettingsFolder {
+    
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/ContentBlockSettingsFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{2826C395-1FAD-4323-807C-646DEF0C7E58}", "t7FzIN5Zkcg+a1Dr++NcArP3JpI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IContentBlockSettingsFolderItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/MediaTypeFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{49F3FDBD-2480-4415-82A1-A755169782D3}", "7ZMeEQuo08ucYHArI0C6pyGcBT4=", "Valtech.Foundation.Synthesis")]
+    public partial interface IMediaTypeFolderItem : Synthesis.IStandardTemplateItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/RichTextStylingFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F4A5273B-B7BF-4A00-8769-B2FA33068590}", "TVO+wyG9L5xs8GWBTXWlfsA1oxM=", "Valtech.Foundation.Synthesis")]
+    public partial interface IRichTextStylingFolderItem : Synthesis.IStandardTemplateItem {
+    }
+}
 namespace FOS.Website.Feature.ContentBlocks.Data {
     
     
@@ -136,6 +163,66 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
         /// <summary>Represents the Link Target field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("link_target")]
         Synthesis.FieldTypes.Interfaces.IHyperlinkField LinkTarget {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/MediaBlock 2 template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A291686E-EDBA-4A75-A956-4E6AA2777B7E}", "aDDbgXmEV8xKuwQUUZC5Nv9PcaQ=", "Valtech.Foundation.Synthesis")]
+    public partial interface IMediaBlock2Item : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Right Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_media_type")]
+        Synthesis.FieldTypes.Interfaces.ITextField RightMediaType {
+            get;
+        }
+        
+        /// <summary>Represents the Right Block Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField RightBlockImage {
+            get;
+        }
+        
+        /// <summary>Represents the Right Block YoutubeId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtubeid")]
+        Synthesis.FieldTypes.Interfaces.ITextField RightBlockYoutubeId {
+            get;
+        }
+        
+        /// <summary>Represents the Right Block Youtube Start Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtube_start_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField RightBlockYoutubeStartImage {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/MediaBlock template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4AA060E1-9301-46AF-98FD-074042EC2412}", "4LSvc9mS5AuHDWRzUFsc7LQWPYI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IMediaBlockItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("media_type")]
+        Synthesis.FieldTypes.Interfaces.ITextField MediaType {
+            get;
+        }
+        
+        /// <summary>Represents the Block Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField BlockImage {
+            get;
+        }
+        
+        /// <summary>Represents the Block YoutubeId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_youtubeid")]
+        Synthesis.FieldTypes.Interfaces.ITextField BlockYoutubeId {
+            get;
+        }
+        
+        /// <summary>Represents the Block Youtube Start Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_youtube_start_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField BlockYoutubeStartImage {
             get;
         }
     }
@@ -203,6 +290,18 @@ namespace FOS.Website.Feature.ContentBlocks.Data.Settings {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Settings/MediaSelector template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{3BE03051-0722-44AC-82BE-3ABA2EAD2FCC}", "v4L3NptykE5jNBRgTLVxkhoYpBY=", "Valtech.Foundation.Synthesis")]
+    public partial interface IMediaSelectorItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("media_type")]
+        Synthesis.FieldTypes.Interfaces.ITextField MediaType {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Settings/Style template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{49A5DB17-079B-47C1-9F1B-101E72006B3A}", "0gJ94H6JRkwmkg3RaKvq0dxvgog=", "Valtech.Foundation.Synthesis")]
@@ -228,6 +327,175 @@ namespace FOS.Website.Feature.ContentBlocks.Data.Settings {
 
 namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
     
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class FiftyFiftyMedia : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IFiftyFiftyMediaItem {
+        
+        private Synthesis.FieldTypes.TextField _heading1;
+        
+        private Synthesis.FieldTypes.TextField _mediaType;
+        
+        private Synthesis.FieldTypes.TextField _rightMediaType;
+        
+        private Synthesis.FieldTypes.ImageField _blockImage;
+        
+        private Synthesis.FieldTypes.ImageField _rightBlockImage;
+        
+        private Synthesis.FieldTypes.TextField _blockYoutubeId;
+        
+        private Synthesis.FieldTypes.TextField _rightBlockYoutubeId;
+        
+        private Synthesis.FieldTypes.ImageField _blockYoutubeStartImage;
+        
+        private Synthesis.FieldTypes.ImageField _rightBlockYoutubeStartImage;
+        
+        public FiftyFiftyMedia(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public FiftyFiftyMedia(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "FiftyFiftyMedia";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B5A2F964-5714-4761-8DB9-0CA676809493}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading1 {
+            get {
+                if (_heading1 == null) {
+                    _heading1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading1;
+            }
+        }
+        
+        /// <summary>Represents the Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("media_type")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MediaType {
+            get {
+                if (_mediaType == null) {
+                    _mediaType = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{ED37F874-2672-488C-ABCE-1299E6FBD5ED}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Media Type"), this.GetSearchFieldValue("media_type"));
+                }
+                return _mediaType;
+            }
+        }
+        
+        /// <summary>Represents the Right Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_media_type")]
+        public Synthesis.FieldTypes.Interfaces.ITextField RightMediaType {
+            get {
+                if (_rightMediaType == null) {
+                    _rightMediaType = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DBE820BE-60EA-43E3-A6F3-DD062478D298}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Right Media Type"), this.GetSearchFieldValue("right_media_type"));
+                }
+                return _rightMediaType;
+            }
+        }
+        
+        /// <summary>Represents the Block Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField BlockImage {
+            get {
+                if (_blockImage == null) {
+                    _blockImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C54FE79D-7197-424A-9AFA-5DB1307DA5D7}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Block Image"), this.GetSearchFieldValue("block_image"));
+                }
+                return _blockImage;
+            }
+        }
+        
+        /// <summary>Represents the Right Block Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField RightBlockImage {
+            get {
+                if (_rightBlockImage == null) {
+                    _rightBlockImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DE0D63B4-CF60-4089-81A9-AFF7AA0FBD18}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Right Block Image"), this.GetSearchFieldValue("right_block_image"));
+                }
+                return _rightBlockImage;
+            }
+        }
+        
+        /// <summary>Represents the Block YoutubeId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_youtubeid")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BlockYoutubeId {
+            get {
+                if (_blockYoutubeId == null) {
+                    _blockYoutubeId = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DC204E53-BAF3-45D6-8F9F-196E68F77D27}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Block YoutubeId"), this.GetSearchFieldValue("block_youtubeid"));
+                }
+                return _blockYoutubeId;
+            }
+        }
+        
+        /// <summary>Represents the Right Block YoutubeId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtubeid")]
+        public Synthesis.FieldTypes.Interfaces.ITextField RightBlockYoutubeId {
+            get {
+                if (_rightBlockYoutubeId == null) {
+                    _rightBlockYoutubeId = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{28FE292B-7E48-43F8-9C2A-5E344A1336DF}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Right Block YoutubeId"), this.GetSearchFieldValue("right_block_youtubeid"));
+                }
+                return _rightBlockYoutubeId;
+            }
+        }
+        
+        /// <summary>Represents the Block Youtube Start Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_youtube_start_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField BlockYoutubeStartImage {
+            get {
+                if (_blockYoutubeStartImage == null) {
+                    _blockYoutubeStartImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{721F83B9-EFC9-4F77-B6BA-B08196B060C4}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Block Youtube Start Image"), this.GetSearchFieldValue("block_youtube_start_image"));
+                }
+                return _blockYoutubeStartImage;
+            }
+        }
+        
+        /// <summary>Represents the Right Block Youtube Start Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtube_start_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField RightBlockYoutubeStartImage {
+            get {
+                if (_rightBlockYoutubeStartImage == null) {
+                    _rightBlockYoutubeStartImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{B9FE6616-8267-4FD6-9B5D-E211F9FE9EDE}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/FiftyFiftyMedia", "Right Block Youtube Start Image"), this.GetSearchFieldValue("right_block_youtube_start_image"));
+                }
+                return _rightBlockYoutubeStartImage;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class FiftyFiftyMediaInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{B5A2F964-5714-4761-8DB9-0CA676809493}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new FiftyFiftyMedia(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new FiftyFiftyMedia(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndText template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -1009,6 +1277,165 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         }
     }
 }
+namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks.SettingsFolder {
+    
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/ContentBlockSettingsFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class ContentBlockSettingsFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.SettingsFolder.IContentBlockSettingsFolderItem {
+        
+        public ContentBlockSettingsFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public ContentBlockSettingsFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "ContentBlockSettingsFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{2826C395-1FAD-4323-807C-646DEF0C7E58}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ContentBlockSettingsFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{2826C395-1FAD-4323-807C-646DEF0C7E58}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new ContentBlockSettingsFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new ContentBlockSettingsFolder(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/MediaTypeFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class MediaTypeFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.SettingsFolder.IMediaTypeFolderItem {
+        
+        public MediaTypeFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public MediaTypeFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "MediaTypeFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{49F3FDBD-2480-4415-82A1-A755169782D3}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class MediaTypeFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{49F3FDBD-2480-4415-82A1-A755169782D3}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new MediaTypeFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new MediaTypeFolder(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/RichTextStylingFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class RichTextStylingFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.SettingsFolder.IRichTextStylingFolderItem {
+        
+        public RichTextStylingFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public RichTextStylingFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "RichTextStylingFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{F4A5273B-B7BF-4A00-8769-B2FA33068590}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class RichTextStylingFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{F4A5273B-B7BF-4A00-8769-B2FA33068590}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new RichTextStylingFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new RichTextStylingFolder(searchFields);
+        }
+    }
+}
 namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
     
     
@@ -1230,6 +1657,214 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new Link(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/MediaBlock template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class MediaBlock : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.IMediaBlockItem {
+        
+        private Synthesis.FieldTypes.TextField _mediaType;
+        
+        private Synthesis.FieldTypes.ImageField _blockImage;
+        
+        private Synthesis.FieldTypes.TextField _blockYoutubeId;
+        
+        private Synthesis.FieldTypes.ImageField _blockYoutubeStartImage;
+        
+        public MediaBlock(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public MediaBlock(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "MediaBlock";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4AA060E1-9301-46AF-98FD-074042EC2412}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("media_type")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MediaType {
+            get {
+                if (_mediaType == null) {
+                    _mediaType = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{ED37F874-2672-488C-ABCE-1299E6FBD5ED}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock", "Media Type"), this.GetSearchFieldValue("media_type"));
+                }
+                return _mediaType;
+            }
+        }
+        
+        /// <summary>Represents the Block Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField BlockImage {
+            get {
+                if (_blockImage == null) {
+                    _blockImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C54FE79D-7197-424A-9AFA-5DB1307DA5D7}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock", "Block Image"), this.GetSearchFieldValue("block_image"));
+                }
+                return _blockImage;
+            }
+        }
+        
+        /// <summary>Represents the Block YoutubeId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_youtubeid")]
+        public Synthesis.FieldTypes.Interfaces.ITextField BlockYoutubeId {
+            get {
+                if (_blockYoutubeId == null) {
+                    _blockYoutubeId = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DC204E53-BAF3-45D6-8F9F-196E68F77D27}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock", "Block YoutubeId"), this.GetSearchFieldValue("block_youtubeid"));
+                }
+                return _blockYoutubeId;
+            }
+        }
+        
+        /// <summary>Represents the Block Youtube Start Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("block_youtube_start_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField BlockYoutubeStartImage {
+            get {
+                if (_blockYoutubeStartImage == null) {
+                    _blockYoutubeStartImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{721F83B9-EFC9-4F77-B6BA-B08196B060C4}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock", "Block Youtube Start Image"), this.GetSearchFieldValue("block_youtube_start_image"));
+                }
+                return _blockYoutubeStartImage;
+            }
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/MediaBlock 2 template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class MediaBlock2 : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.IMediaBlock2Item {
+        
+        private Synthesis.FieldTypes.TextField _rightMediaType;
+        
+        private Synthesis.FieldTypes.ImageField _rightBlockImage;
+        
+        private Synthesis.FieldTypes.TextField _rightBlockYoutubeId;
+        
+        private Synthesis.FieldTypes.ImageField _rightBlockYoutubeStartImage;
+        
+        public MediaBlock2(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public MediaBlock2(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "MediaBlock 2";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{A291686E-EDBA-4A75-A956-4E6AA2777B7E}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Right Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_media_type")]
+        public Synthesis.FieldTypes.Interfaces.ITextField RightMediaType {
+            get {
+                if (_rightMediaType == null) {
+                    _rightMediaType = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DBE820BE-60EA-43E3-A6F3-DD062478D298}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock 2", "Right Media Type"), this.GetSearchFieldValue("right_media_type"));
+                }
+                return _rightMediaType;
+            }
+        }
+        
+        /// <summary>Represents the Right Block Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField RightBlockImage {
+            get {
+                if (_rightBlockImage == null) {
+                    _rightBlockImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{DE0D63B4-CF60-4089-81A9-AFF7AA0FBD18}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock 2", "Right Block Image"), this.GetSearchFieldValue("right_block_image"));
+                }
+                return _rightBlockImage;
+            }
+        }
+        
+        /// <summary>Represents the Right Block YoutubeId field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtubeid")]
+        public Synthesis.FieldTypes.Interfaces.ITextField RightBlockYoutubeId {
+            get {
+                if (_rightBlockYoutubeId == null) {
+                    _rightBlockYoutubeId = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{28FE292B-7E48-43F8-9C2A-5E344A1336DF}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock 2", "Right Block YoutubeId"), this.GetSearchFieldValue("right_block_youtubeid"));
+                }
+                return _rightBlockYoutubeId;
+            }
+        }
+        
+        /// <summary>Represents the Right Block Youtube Start Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtube_start_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField RightBlockYoutubeStartImage {
+            get {
+                if (_rightBlockYoutubeStartImage == null) {
+                    _rightBlockYoutubeStartImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{B9FE6616-8267-4FD6-9B5D-E211F9FE9EDE}"], "/sitecore/templates/Feature/ContentBlocks/Data/MediaBlock 2", "Right Block Youtube Start Image"), this.GetSearchFieldValue("right_block_youtube_start_image"));
+                }
+                return _rightBlockYoutubeStartImage;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class MediaBlock2Initializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{A291686E-EDBA-4A75-A956-4E6AA2777B7E}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new MediaBlock2(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new MediaBlock2(searchFields);
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class MediaBlockInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4AA060E1-9301-46AF-98FD-074042EC2412}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new MediaBlock(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new MediaBlock(searchFields);
         }
     }
     
@@ -1519,6 +2154,71 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data.Settings {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new InvertContent(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/Settings/MediaSelector template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class MediaSelector : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.Settings.IMediaSelectorItem {
+        
+        private Synthesis.FieldTypes.TextField _mediaType;
+        
+        public MediaSelector(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public MediaSelector(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "MediaSelector";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{3BE03051-0722-44AC-82BE-3ABA2EAD2FCC}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Media Type field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("media_type")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MediaType {
+            get {
+                if (_mediaType == null) {
+                    _mediaType = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{021AC93F-E169-4371-BCD2-5F96F5395055}"], "/sitecore/templates/Feature/ContentBlocks/Data/Settings/MediaSelector", "Media Type"), this.GetSearchFieldValue("media_type"));
+                }
+                return _mediaType;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class MediaSelectorInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{3BE03051-0722-44AC-82BE-3ABA2EAD2FCC}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new MediaSelector(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new MediaSelector(searchFields);
         }
     }
     

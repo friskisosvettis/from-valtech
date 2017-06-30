@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {8E695491-FAD8-4A4E-9403-093579ADCD37}
+id: {70019D24-9993-4A29-93BF-47B172F9139A}
 database: master
-path: /sitecore/content/Global Settings/Content Blocks/Rich Text Styles/White
-parent: {E84C88C5-CAFF-426A-92B4-4CD9D7CAC084}
-name: White
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/MediaTypeFolder/__Standard Values
+parent: {49F3FDBD-2480-4415-82A1-A755169782D3}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {A5771A36-9D4F-404B-8120-654F833AF23B}
-templatekey: TextSetting
-created: 20170619T192440Z
+template: {49F3FDBD-2480-4415-82A1-A755169782D3}
+templatekey: MediaTypeFolder
+created: 20170629T133205Z
 
 ----field----
-field: {E7FB9EFC-FD56-431C-8FF4-BBBBD5E78ADA}
-name: Value
-key: value
-content-length: 8
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 77
 
- textbox
+{49F3FDBD-2480-4415-82A1-A755169782D3}|{476F5EC2-52F8-474D-B5B5-B9DA42DDC580}
 ----version----
 language: en
 version: 1
-revision: b570e7de-8c1c-4c66-88b5-b32869beea9a
+revision: be2cf3b9-060c-4d03-a32f-48a287844dbe
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170619T192440Z
+20170619T191216Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b570e7de-8c1c-4c66-88b5-b32869beea9a
+be2cf3b9-060c-4d03-a32f-48a287844dbe
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T095456Z
+20170629T133320Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

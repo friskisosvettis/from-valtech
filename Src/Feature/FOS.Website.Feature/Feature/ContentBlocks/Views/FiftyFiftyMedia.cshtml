@@ -1,0 +1,19 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Synthesis.FieldTypes.Interfaces
+@using Synthesis.Mvc.Extensions
+@using Valtech.Foundation.Helpers
+@model FiftyFiftyMediaModel
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+<div class="container">
+    <div class="container--6">
+        @Html.Partial("~/Feature/ContentBlocks/Views/MediaBlock_Partial.cshtml", Model.LeftMediaBlock)
+    </div>
+    <div class="container--6">
+        @Html.Partial("~/Feature/ContentBlocks/Views/MediaBlock_Partial.cshtml", Model.RightMediaBlock)
+    </div>
+</div>

@@ -8,7 +8,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
     public class VideoModel : ContentBlockModelBase
     {
         public bool IsFullSize { get; set; } = true;
-        public IVideoItem VideoItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IVideoItem>();
+        public I_VideoItem VideoItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_VideoItem>();
 
         public ITextField VideoIdField { get; set; }
 

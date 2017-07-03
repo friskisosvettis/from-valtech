@@ -7,7 +7,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class LinkBlockModel : ContentBlockModelBase
     {
-        public ILinkItem LinkBlock { get; set; }
-        public IImageItem ImageItem { get; set; }
+        public I_LinkItem LinkBlock { get; set; }
+        public I_ImageItem ImageItem { get; set; }
     }
 }

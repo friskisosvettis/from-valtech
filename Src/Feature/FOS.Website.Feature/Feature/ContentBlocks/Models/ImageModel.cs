@@ -7,6 +7,6 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class ImageModel : ContentBlockModelBase
     {
-        public IImageItem ImageItem { get; set; }
+        public I_ImageItem ImageItem { get; set; }
     }
 }

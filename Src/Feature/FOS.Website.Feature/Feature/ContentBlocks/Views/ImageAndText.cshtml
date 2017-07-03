@@ -7,7 +7,7 @@
     return;
 }
 
-@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }
@@ -16,7 +16,7 @@
 {
     <div class="container--6"> 
         <div class="media-container media-container--360">
-            @Model.ImageItem.Image1.Render(cssClass: "media-container__media")
+            @Model.ImageItem.Picture.Render("media-container__media")
         </div>
     </div>
 }

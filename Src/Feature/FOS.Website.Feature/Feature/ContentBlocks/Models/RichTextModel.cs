@@ -14,13 +14,6 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class RichTextModel : ContentBlockModelBase
     {
-        public IRichTextItem RichTextItem { get; set; }
-        public RichTextModel() : base()
-        {
-            var contextItem = RenderingContext.Current.Rendering.Item.As<IRichTextItem>();
-            RichTextItem = (contextItem == null)
-                ? Sitecore.Context.Item.As<IRichTextItem>()
-                : contextItem;
-        }
+        public I_RichTextItem RichTextItem { get; set; }
     }
 }

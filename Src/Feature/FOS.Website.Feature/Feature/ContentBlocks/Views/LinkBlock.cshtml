@@ -5,7 +5,7 @@
 @using Synthesis.Mvc.Helpers
 @model LinkBlockModel
 
-@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }
@@ -13,7 +13,7 @@
 @helper EditorMode()
 {
         <div class="teaser--overlay">
-            @Model.ImageItem.Image1.Render()
+            @Model.ImageItem.Picture.Render()
             <div class="teaser__overlay">
                 <div class="teaser__content">
                     <h2>@Model.LinkBlock.LinkHeading.Render()</h2>
@@ -29,7 +29,7 @@
 {
     <a href="@Model.LinkBlock.LinkTarget.Href">
         <div class="teaser--overlay">
-            @Model.ImageItem.Image1.Render()
+            @Model.ImageItem.Picture.Render()
             <div class="teaser__overlay">
                 <div class="teaser__content">
                     <h2>@Model.LinkBlock.LinkHeading.Render()</h2>

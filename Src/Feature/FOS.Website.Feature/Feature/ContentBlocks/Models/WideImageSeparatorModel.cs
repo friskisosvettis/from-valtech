@@ -6,7 +6,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class WideImageSeparatorModel : ContentBlockModelBase
     {
-        public ISimpleTextBoxItem SimpleTextBox { get; set; }
-        public IImageItem ImageItem { get; set; }
+        public I_SimpleTextBoxItem SimpleTextBox { get; set; }
+        public I_ImageItem ImageItem { get; set; }
     }
 }

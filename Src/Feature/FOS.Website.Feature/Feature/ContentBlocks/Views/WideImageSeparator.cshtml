@@ -5,13 +5,13 @@
 @using Synthesis.Mvc.Helpers
 @model WideImageSeparatorModel
 
-@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }
 
 <div class="image-divider">
-    @Model.ImageItem.Image1.Render()
+    @Model.ImageItem.Picture.Render()
     @if (Model.SimpleTextBox.BoxTitle.HasTextValue || Model.SimpleTextBox.BoxTitle.HasTextValue || Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <div class="image-divider__content">

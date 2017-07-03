@@ -4,7 +4,7 @@
 @using Valtech.Foundation.Helpers
 @model FiftyFiftyMediaModel
 
-@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }

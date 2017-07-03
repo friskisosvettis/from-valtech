@@ -7,13 +7,13 @@
     return;
 }
 
-@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }
 
 <div class="container">
     <div class="container--12">
-        @Model.ImageItem.Image1.Render("image--wide")
+        @Model.ImageItem.Picture.Render("image--wide")
     </div>
 </div>

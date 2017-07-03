@@ -15,13 +15,13 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 
         public FiftyFiftyMediaModel()
         {
-            var mediaBlock = RenderingHelper.GetRenderingContextOrDefault<IMediaBlockItem>();
+            var mediaBlock = RenderingHelper.GetRenderingContextOrDefault<I_MediaBlockItem>();
             if (mediaBlock != null)
             {
                 LeftMediaBlock = new MediaBlockModel(mediaBlock.MediaType, mediaBlock.BlockImage, mediaBlock.BlockYoutubeId, mediaBlock.BlockYoutubeStartImage);
             }
 
-            var mediaBlock2 = RenderingHelper.GetRenderingContextOrDefault<IMediaBlock2Item>();
+            var mediaBlock2 = RenderingHelper.GetRenderingContextOrDefault<I_MediaBlockRightItem>();
             if (mediaBlock2 != null)
             {
                 RightMediaBlock = new MediaBlockModel(mediaBlock2.RightMediaType, mediaBlock2.RightBlockImage, mediaBlock2.RightBlockYoutubeId, mediaBlock2.RightBlockYoutubeStartImage);

@@ -15,7 +15,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
 {
     public class ContentBlockModelBase
     {
-        public IHeadingItem HeadingItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IHeadingItem>();
+        public I_HeadingItem HeadingItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_HeadingItem>();
 
         protected ContentBlockModelBase()
         {

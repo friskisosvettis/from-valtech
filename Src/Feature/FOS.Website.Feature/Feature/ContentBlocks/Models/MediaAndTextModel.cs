@@ -10,15 +10,15 @@ namespace FOS.Website.Feature.ContentBlocks.Models
     /// </summary>
     public class MediaAndTextModel : ContentBlockModelBase
     {
-        public IRichTextItem RichTextItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IRichTextItem>();
+        public I_RichTextItem RichTextItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_RichTextItem>();
 
-        public IImageItem ImageItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IImageItem>();
+        public I_ImageItem ImageItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_ImageItem>();
 
-        public IVideoItem VideoItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IVideoItem>();
+        public I_VideoItem VideoItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_VideoItem>();
 
-        public IInvertContentItem ImageAndTextItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IInvertContentItem>();
+        public I_InvertContentItem ImageAndTextItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_InvertContentItem>();
 
-        public IStyleItem ContentBlockStyleSetting { get; set; } = RenderingHelper.GetRenderingContextOrDefault<IStyleItem>();
+        public I_StyleItem ContentBlockStyleSetting { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_StyleItem>();
 
         public bool InvertPositions => ImageAndTextItem.InvertPositions.Value;
 
@@ -26,7 +26,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
         {
             get
             {
-                var styleSettingReferenceItem = ContentBlockStyleSetting?.Style1?.Target as ITextSettingItem;
+                var styleSettingReferenceItem = ContentBlockStyleSetting?.Style?.Target as ITextSettingItem;
 
                 return styleSettingReferenceItem != null ? styleSettingReferenceItem.Value.RawValue : string.Empty;
             }

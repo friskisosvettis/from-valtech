@@ -9,7 +9,10 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
     {
         public ActionResult GetRichTextView()
         {
-            var model = new RichTextModel();
+            var model = new RichTextModel()
+            {
+                RichTextItem = RenderingHelper.GetRenderingContextOrDefault<I_RichTextItem>()
+            };
             
             return View(Constants.Views.Paths.RichText, model);
         }
@@ -38,8 +41,8 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
         {
             var model = new LinkBlockModel()
             {
-                LinkBlock  = RenderingHelper.GetRenderingContextOrDefault<ILinkItem>(),
-                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+                LinkBlock  = RenderingHelper.GetRenderingContextOrDefault<I_LinkItem>(),
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<I_ImageItem>()
             };
 
             return View(Constants.Views.Paths.LinkBlock, model);
@@ -56,8 +59,8 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
         {
             var model = new WideImageSeparatorModel()
             {
-                SimpleTextBox = RenderingHelper.GetRenderingContextOrDefault<ISimpleTextBoxItem>(),
-                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+                SimpleTextBox = RenderingHelper.GetRenderingContextOrDefault<I_SimpleTextBoxItem>(),
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<I_ImageItem>()
             };
 
             return View(Constants.Views.Paths.WideImageSeparator, model);
@@ -78,7 +81,7 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
         {
             var model = new ImageModel()
             {
-                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<I_ImageItem>()
             };
 
             return View(Constants.Views.Paths.Image, model);

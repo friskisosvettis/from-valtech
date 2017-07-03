@@ -1124,7 +1124,7 @@
     <Compile Include="Feature\ContentBlocks\Models\MediaBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\LinkBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\FiftyFiftyMediaModel.cs" />
-    <Compile Include="Feature\ContentBlocks\Models\MediaAndTextModel.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\VideoImageAndTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ImageAndVideoModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ImageModel.cs" />

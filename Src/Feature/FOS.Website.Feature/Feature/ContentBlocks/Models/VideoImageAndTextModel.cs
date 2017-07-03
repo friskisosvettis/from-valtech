@@ -8,7 +8,7 @@ namespace FOS.Website.Feature.ContentBlocks.Models
     /// <summary>
     /// Model used for image/text video/text type modules
     /// </summary>
-    public class MediaAndTextModel : ContentBlockModelBase
+    public class VideoImageAndTextModel : ContentBlockModelBase
     {
         public I_RichTextItem RichTextItem { get; set; } = RenderingHelper.GetRenderingContextOrDefault<I_RichTextItem>();
 

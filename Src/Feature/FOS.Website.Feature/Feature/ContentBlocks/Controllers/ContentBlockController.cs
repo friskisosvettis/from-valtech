@@ -19,14 +19,14 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
         public ActionResult GetImageAndTextView()
         {
-            var model = new MediaAndTextModel();
+            var model = new VideoImageAndTextModel();
 
             return View(Constants.Views.Paths.ImageAndText, model);
         }
 
         public ActionResult GetVideoAndTextView()
         {
-            var model = new MediaAndTextModel();
+            var model = new VideoImageAndTextModel();
 
             return View(Constants.Views.Paths.VideoAndText, model);
         }

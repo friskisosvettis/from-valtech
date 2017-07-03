@@ -65,6 +65,12 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Image template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1B7E8ED4-2D93-49BD-811D-B39D030DDE7F}", "MRmecYfVEdCw3BsUp+npaTqYmMQ=", "Valtech.Foundation.Synthesis")]
+    public partial interface IImageItem : global::FOS.Website.Feature.ContentBlocks.Data.IHeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.IImageItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Manual Link CTA template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}", "KN1SMvNfluL4CXXZk51WM8Pa/PY=", "Valtech.Foundation.Synthesis")]
@@ -497,6 +503,66 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         }
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Image template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Image : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IImageItem {
+        
+        private Synthesis.FieldTypes.TextField _heading1;
+        
+        private Synthesis.FieldTypes.ImageField _image1;
+        
+        public Image(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Image(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Image";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1B7E8ED4-2D93-49BD-811D-B39D030DDE7F}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading1 {
+            get {
+                if (_heading1 == null) {
+                    _heading1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Image", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading1;
+            }
+        }
+        
+        /// <summary>Represents the Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField Image1 {
+            get {
+                if (_image1 == null) {
+                    _image1 = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{61F71B9B-9ED2-45A9-9003-B4A3D81056B4}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Image", "Image"), this.GetSearchFieldValue("image"));
+                }
+                return _image1;
+            }
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/ImageAndText template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class ImageAndText : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IImageAndTextItem {
@@ -754,6 +820,24 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new ImageAndVideo(searchFields);
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ImageInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1B7E8ED4-2D93-49BD-811D-B39D030DDE7F}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Image(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Image(searchFields);
         }
     }
     

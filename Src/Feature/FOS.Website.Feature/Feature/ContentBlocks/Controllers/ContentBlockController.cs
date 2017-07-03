@@ -73,5 +73,15 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.FiftyFiftyMedia, model);
         }
+
+        public ActionResult GetImageView()
+        {
+            var model = new ImageModel()
+            {
+                ImageItem = RenderingHelper.GetRenderingContextOrDefault<IImageItem>()
+            };
+
+            return View(Constants.Views.Paths.Image, model);
+        }
     }
 }

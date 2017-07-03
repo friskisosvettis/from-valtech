@@ -1095,6 +1095,7 @@
     <Content Include="Feature\ContentBlocks\Views\FiftyFiftyMedia.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\MediaBlock_Partial.cshtml" />
     <Content Include="Feature\Content\Views\CookieConsent.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\Image.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1126,6 +1127,7 @@
     <Compile Include="Feature\ContentBlocks\Models\MediaAndTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ImageAndVideoModel.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\ImageModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\VideoModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\WideImageSeparatorModel.cs" />
     <Compile Include="Feature\Content\Constants.cs" />

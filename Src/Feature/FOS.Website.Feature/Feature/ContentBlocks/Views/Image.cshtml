@@ -1,0 +1,19 @@
+﻿@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.ContentBlocks.Models.ImageModel
+
+@if (Model == null)
+{
+    return;
+}
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading1.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+<div class="container">
+    <div class="container--12">
+        @Model.ImageItem.Image1.Render("image--wide")
+    </div>
+</div>

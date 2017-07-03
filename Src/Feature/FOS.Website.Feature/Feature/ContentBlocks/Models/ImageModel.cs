@@ -1,13 +1,12 @@
 ﻿using FOS.Website.Feature.ContentBlocks.Data;
 using FOS.Website.Feature.ContentBlocks.Helpers;
-using Sitecore.Mvc.Presentation;
-using Synthesis;
+using Sitecore.Analytics.Commons;
+using Synthesis.FieldTypes.Interfaces;
 
 namespace FOS.Website.Feature.ContentBlocks.Models
 {
-    public class LinkBlockModel : ContentBlockModelBase
+    public class ImageModel : ContentBlockModelBase
     {
-        public ILinkItem LinkBlock { get; set; }
         public IImageItem ImageItem { get; set; }
     }
 }

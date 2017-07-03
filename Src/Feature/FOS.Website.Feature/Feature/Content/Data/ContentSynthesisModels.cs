@@ -445,7 +445,7 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/MapNode template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08AEE5ED-BD95-438D-8936-2A59091A882B}", "edKQhKv4bZlIic1xG4UCRlh0rJ0=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{08AEE5ED-BD95-438D-8936-2A59091A882B}", "UkAzDzR56P5Zoeugx42/piedjhw=", "Valtech.Foundation.Synthesis")]
     public partial interface IMapNodeItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the MapHeadline field</summary>
@@ -481,18 +481,6 @@ namespace FOS.Website.Feature.Content.Data {
         /// <summary>Represents the Country field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("country")]
         Synthesis.FieldTypes.Interfaces.ITextField Country {
-            get;
-        }
-        
-        /// <summary>Represents the LongitudeStr field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
-        Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
-            get;
-        }
-        
-        /// <summary>Represents the LatitudeStr field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
-        Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
             get;
         }
         
@@ -2624,10 +2612,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.TextField _country;
         
-        private Synthesis.FieldTypes.TextField _longitudeStr;
-        
-        private Synthesis.FieldTypes.TextField _latitudeStr;
-        
         private Synthesis.FieldTypes.NumericField _latitude;
         
         private Synthesis.FieldTypes.NumericField _longitude;
@@ -2724,28 +2708,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _country = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{243161A1-958B-4A58-AF6E-456AE453E502}"], "/sitecore/templates/Feature/Content/Data/MapNode", "Country"), this.GetSearchFieldValue("country"));
                 }
                 return _country;
-            }
-        }
-        
-        /// <summary>Represents the LongitudeStr field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("longitudestr")]
-        public Synthesis.FieldTypes.Interfaces.ITextField LongitudeStr {
-            get {
-                if (_longitudeStr == null) {
-                    _longitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{8342753A-30D9-4093-BFC1-97C83F34D1CC}"], "/sitecore/templates/Feature/Content/Data/MapNode", "LongitudeStr"), this.GetSearchFieldValue("longitudestr"));
-                }
-                return _longitudeStr;
-            }
-        }
-        
-        /// <summary>Represents the LatitudeStr field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("latitudestr")]
-        public Synthesis.FieldTypes.Interfaces.ITextField LatitudeStr {
-            get {
-                if (_latitudeStr == null) {
-                    _latitudeStr = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6CBAE8F2-C545-43DB-82CB-CA8E25FE38BF}"], "/sitecore/templates/Feature/Content/Data/MapNode", "LatitudeStr"), this.GetSearchFieldValue("latitudestr"));
-                }
-                return _latitudeStr;
             }
         }
         

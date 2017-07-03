@@ -11,29 +11,29 @@
 
 @helper RenderImage(IImageField imageField)
 {
-if (Sitecore.Context.PageMode.IsExperienceEditor)
-{
-        <div class="editor-info">
-            <p>@EncodingHelper.GetRazorViewText("Klicka på bildikonen nedanför för att lägga till en bild")</p>
-        </div>
-}
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+            <div class="editor-info">
+                <p>@EncodingHelper.GetRazorViewText("Klicka på bildikonen nedanför för att lägga till en bild")</p>
+            </div>
+    }
 
-if (imageField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
-{
-        <div class="media-container media-container--360">
-            @imageField.Render(cssClass: "media-container__media")
-        </div>
-}
+    if (imageField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+            <div class="media-container media-container--360">
+                @imageField.Render(cssClass: "media-container__media")
+            </div>
+    }
 }
 
 @helper RenderVideo(ITextField videoIdField, IImageField imageField)
 {
-if (videoIdField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
-{
-        <div class="media-container media-container--360">
-            @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", new VideoModel(videoIdField, imageField) { IsFullSize = false })
-        </div>
-}
+    if (videoIdField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+            <div class="media-container media-container--360">
+                @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", new VideoModel(videoIdField, imageField) { IsFullSize = false })
+            </div>
+    }
 }
 
 @if (@Model.MediaIsImage)

@@ -1096,6 +1096,7 @@
     <Content Include="Feature\ContentBlocks\Views\MediaBlock_Partial.cshtml" />
     <Content Include="Feature\Content\Views\CookieConsent.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Image.cshtml" />
+    <Content Include="Feature\ContentBlocks\Views\MediaAndText.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -1121,6 +1122,7 @@
     <Compile Include="Feature\ContentBlocks\Data\ContentBlocksSynthesisModels.cs" />
     <Compile Include="Feature\ContentBlocks\Helpers\RenderingHelper.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ContentBlockModelBase.cs" />
+    <Compile Include="Feature\ContentBlocks\Models\MediaAndTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\MediaBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\LinkBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\FiftyFiftyMediaModel.cs" />

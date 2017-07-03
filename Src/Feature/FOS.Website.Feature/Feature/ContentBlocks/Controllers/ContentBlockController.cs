@@ -86,5 +86,12 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.Image, model);
         }
+
+        public ActionResult GetMediaAndTextView()
+        {
+            var model = new MediaAndTextModel();
+
+            return View(Constants.Views.Paths.MediaAndText, model);
+        }
     }
 }

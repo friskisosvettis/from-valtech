@@ -95,6 +95,12 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
     public partial interface IRichTextItem : global::FOS.Website.Feature.ContentBlocks.Data.I_HeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.I_RichTextItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Tickers template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{2AD44F8D-C7E3-44D9-80B8-7EBDC4614BBB}", "9xIqIJ2DFQHdhtDESbSiDk0+zoo=", "Valtech.Foundation.Synthesis")]
+    public partial interface ITickersItem : global::FOS.Website.Feature.ContentBlocks.Data.I_HeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.I_TickersItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/VideoAndText template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F7ECA36A-F814-44CD-B4BF-84D321220CCF}", "WbApP1baVRKGIDZDX34B2UB7eOY=", "Valtech.Foundation.Synthesis")]
@@ -307,6 +313,42 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
         /// <summary>Represents the Paragraph field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("paragraph")]
         Synthesis.FieldTypes.Interfaces.ITextField Paragraph {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/_Tickers template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4D9112DB-933B-4780-A4AC-37F1DC4771E0}", "nSy4A0Ey6MEjMkXyBmWesKW9iQA=", "Valtech.Foundation.Synthesis")]
+    public partial interface I_TickersItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Statement 1 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_1")]
+        Synthesis.FieldTypes.Interfaces.ITextField Statement1 {
+            get;
+        }
+        
+        /// <summary>Represents the Statement 2 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_2")]
+        Synthesis.FieldTypes.Interfaces.ITextField Statement2 {
+            get;
+        }
+        
+        /// <summary>Represents the Statement 3 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_3")]
+        Synthesis.FieldTypes.Interfaces.ITextField Statement3 {
+            get;
+        }
+        
+        /// <summary>Represents the Statement 4 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_4")]
+        Synthesis.FieldTypes.Interfaces.ITextField Statement4 {
+            get;
+        }
+        
+        /// <summary>Represents the Statement 5 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_5")]
+        Synthesis.FieldTypes.Interfaces.ITextField Statement5 {
             get;
         }
     }
@@ -1367,6 +1409,136 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new RichText(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Tickers template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Tickers : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.ITickersItem {
+        
+        private Synthesis.FieldTypes.TextField _heading;
+        
+        private Synthesis.FieldTypes.TextField _statement1;
+        
+        private Synthesis.FieldTypes.TextField _statement2;
+        
+        private Synthesis.FieldTypes.TextField _statement3;
+        
+        private Synthesis.FieldTypes.TextField _statement4;
+        
+        private Synthesis.FieldTypes.TextField _statement5;
+        
+        public Tickers(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Tickers(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Tickers";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{2AD44F8D-C7E3-44D9-80B8-7EBDC4614BBB}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading {
+            get {
+                if (_heading == null) {
+                    _heading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Tickers", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading;
+            }
+        }
+        
+        /// <summary>Represents the Statement 1 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_1")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement1 {
+            get {
+                if (_statement1 == null) {
+                    _statement1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3ADA6E61-80DE-4B85-8C3D-9131813576FE}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Tickers", "Statement 1"), this.GetSearchFieldValue("statement_1"));
+                }
+                return _statement1;
+            }
+        }
+        
+        /// <summary>Represents the Statement 2 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_2")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement2 {
+            get {
+                if (_statement2 == null) {
+                    _statement2 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{308DDDA7-F6E8-4160-A3CC-EC75FA63D68C}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Tickers", "Statement 2"), this.GetSearchFieldValue("statement_2"));
+                }
+                return _statement2;
+            }
+        }
+        
+        /// <summary>Represents the Statement 3 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_3")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement3 {
+            get {
+                if (_statement3 == null) {
+                    _statement3 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{04AD0BBE-5543-476A-8B1A-F17544038D04}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Tickers", "Statement 3"), this.GetSearchFieldValue("statement_3"));
+                }
+                return _statement3;
+            }
+        }
+        
+        /// <summary>Represents the Statement 4 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_4")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement4 {
+            get {
+                if (_statement4 == null) {
+                    _statement4 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9072E3F3-F530-43D3-8D11-ED6B0DD1EF0B}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Tickers", "Statement 4"), this.GetSearchFieldValue("statement_4"));
+                }
+                return _statement4;
+            }
+        }
+        
+        /// <summary>Represents the Statement 5 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_5")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement5 {
+            get {
+                if (_statement5 == null) {
+                    _statement5 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5CF8BC37-41F3-4061-8D20-40E6511959E1}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Tickers", "Statement 5"), this.GetSearchFieldValue("statement_5"));
+                }
+                return _statement5;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class TickersInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{2AD44F8D-C7E3-44D9-80B8-7EBDC4614BBB}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Tickers(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Tickers(searchFields);
         }
     }
     
@@ -2543,6 +2715,123 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new _SimpleTextBox(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/_Tickers template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class _Tickers : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.I_TickersItem {
+        
+        private Synthesis.FieldTypes.TextField _statement1;
+        
+        private Synthesis.FieldTypes.TextField _statement2;
+        
+        private Synthesis.FieldTypes.TextField _statement3;
+        
+        private Synthesis.FieldTypes.TextField _statement4;
+        
+        private Synthesis.FieldTypes.TextField _statement5;
+        
+        public _Tickers(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public _Tickers(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "_Tickers";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4D9112DB-933B-4780-A4AC-37F1DC4771E0}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Statement 1 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_1")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement1 {
+            get {
+                if (_statement1 == null) {
+                    _statement1 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{3ADA6E61-80DE-4B85-8C3D-9131813576FE}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Tickers", "Statement 1"), this.GetSearchFieldValue("statement_1"));
+                }
+                return _statement1;
+            }
+        }
+        
+        /// <summary>Represents the Statement 2 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_2")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement2 {
+            get {
+                if (_statement2 == null) {
+                    _statement2 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{308DDDA7-F6E8-4160-A3CC-EC75FA63D68C}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Tickers", "Statement 2"), this.GetSearchFieldValue("statement_2"));
+                }
+                return _statement2;
+            }
+        }
+        
+        /// <summary>Represents the Statement 3 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_3")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement3 {
+            get {
+                if (_statement3 == null) {
+                    _statement3 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{04AD0BBE-5543-476A-8B1A-F17544038D04}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Tickers", "Statement 3"), this.GetSearchFieldValue("statement_3"));
+                }
+                return _statement3;
+            }
+        }
+        
+        /// <summary>Represents the Statement 4 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_4")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement4 {
+            get {
+                if (_statement4 == null) {
+                    _statement4 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9072E3F3-F530-43D3-8D11-ED6B0DD1EF0B}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Tickers", "Statement 4"), this.GetSearchFieldValue("statement_4"));
+                }
+                return _statement4;
+            }
+        }
+        
+        /// <summary>Represents the Statement 5 field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("statement_5")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Statement5 {
+            get {
+                if (_statement5 == null) {
+                    _statement5 = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{5CF8BC37-41F3-4061-8D20-40E6511959E1}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Tickers", "Statement 5"), this.GetSearchFieldValue("statement_5"));
+                }
+                return _statement5;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class _TickersInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{4D9112DB-933B-4780-A4AC-37F1DC4771E0}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new _Tickers(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new _Tickers(searchFields);
         }
     }
     

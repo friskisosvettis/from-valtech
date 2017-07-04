@@ -98,10 +98,17 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
         {
             var model = new QuoteModel()
             {
-                QuoteItem = RenderingHelper.GetRenderingContextOrDefault<I_QuoteItem>(),
+                QuoteItem = RenderingHelper.GetRenderingContextOrDefault<I_QuoteItem>()
             };
 
             return View(Constants.Views.Paths.Quote, model);
+        }
+
+        public ActionResult GetTickerView()
+        {
+            var model = new TickersModel(RenderingHelper.GetRenderingContextOrDefault<I_TickersItem>());
+
+            return View(Constants.Views.Paths.Tickers, model);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace FOS.Website.Feature.ContentBlocks
                 public const string Video = "/Feature/ContentBlocks/Views/Video.cshtml"; 
                 public const string WideImageSeparator = "/Feature/ContentBlocks/Views/WideImageSeparator.cshtml";
                 public const string FiftyFiftyMedia = "/Feature/ContentBlocks/Views/FiftyFiftyMedia.cshtml";
+                public const string Quote = "/Feature/ContentBlocks/Views/Quote.cshtml";
             }
         }
     }

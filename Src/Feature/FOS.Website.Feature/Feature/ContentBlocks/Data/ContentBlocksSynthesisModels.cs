@@ -83,6 +83,12 @@ namespace FOS.Website.Feature.ContentBlocks.Blocks {
     public partial interface IMediaAndTextItem : global::FOS.Website.Feature.ContentBlocks.Data.I_HeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.I_RichTextItem, global::FOS.Website.Feature.ContentBlocks.Data.Settings.I_InvertContentItem, global::FOS.Website.Feature.ContentBlocks.Data.Settings.I_StyleItem, global::FOS.Website.Feature.ContentBlocks.Data.I_MediaBlockItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Quote template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{C9FABED6-FCA3-4B63-B0EF-298F7E2A814C}", "ZJL8yjCiM+Xu959vNHwYdV5hTxE=", "Valtech.Foundation.Synthesis")]
+    public partial interface IQuoteItem : global::FOS.Website.Feature.ContentBlocks.Data.I_HeadingItem, global::FOS.Website.Feature.ContentBlocks.Data.I_QuoteItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Rich Text template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D622CC13-7257-46CD-A670-8741BD41C74E}", "N0V0FkKhKivyye8/iwEvwYOk0kI=", "Valtech.Foundation.Synthesis")]
@@ -235,6 +241,42 @@ namespace FOS.Website.Feature.ContentBlocks.Data {
         /// <summary>Represents the Right Block Youtube Start Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("right_block_youtube_start_image")]
         Synthesis.FieldTypes.Interfaces.IImageField RightBlockYoutubeStartImage {
+            get;
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/_Quote template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{2EA906FD-7F62-4A01-A0DB-6FB6BC541BAD}", "TRRjSJfRSDoVYKJC9gqW5dZgzDc=", "Valtech.Foundation.Synthesis")]
+    public partial interface I_QuoteItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Quote Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField QuoteImage {
+            get;
+        }
+        
+        /// <summary>Represents the Quote Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_text")]
+        Synthesis.FieldTypes.Interfaces.ITextField QuoteText {
+            get;
+        }
+        
+        /// <summary>Represents the Quote Person Name field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_person_name")]
+        Synthesis.FieldTypes.Interfaces.ITextField QuotePersonName {
+            get;
+        }
+        
+        /// <summary>Represents the Quote Person Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_person_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField QuotePersonTitle {
+            get;
+        }
+        
+        /// <summary>Represents the Quote Font field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_font")]
+        Synthesis.FieldTypes.Interfaces.IBooleanField QuoteFont {
             get;
         }
     }
@@ -1117,6 +1159,136 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Blocks {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new MediaAndText(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Blocks/Quote template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Quote : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Blocks.IQuoteItem {
+        
+        private Synthesis.FieldTypes.TextField _heading;
+        
+        private Synthesis.FieldTypes.ImageField _quoteImage;
+        
+        private Synthesis.FieldTypes.TextField _quoteText;
+        
+        private Synthesis.FieldTypes.TextField _quotePersonName;
+        
+        private Synthesis.FieldTypes.TextField _quotePersonTitle;
+        
+        private Synthesis.FieldTypes.BooleanField _quoteFont;
+        
+        public Quote(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Quote(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Quote";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{C9FABED6-FCA3-4B63-B0EF-298F7E2A814C}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Heading field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("heading")]
+        public Synthesis.FieldTypes.Interfaces.ITextField Heading {
+            get {
+                if (_heading == null) {
+                    _heading = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{172680EC-44BF-4CED-AAA6-DEC3A9E6CDC5}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Quote", "Heading"), this.GetSearchFieldValue("heading"));
+                }
+                return _heading;
+            }
+        }
+        
+        /// <summary>Represents the Quote Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField QuoteImage {
+            get {
+                if (_quoteImage == null) {
+                    _quoteImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9B98F972-A300-4C8B-90DE-6EC458C8827F}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Quote", "Quote Image"), this.GetSearchFieldValue("quote_image"));
+                }
+                return _quoteImage;
+            }
+        }
+        
+        /// <summary>Represents the Quote Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField QuoteText {
+            get {
+                if (_quoteText == null) {
+                    _quoteText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76C6BDC4-4EC2-4A89-87C0-AE70DF1BE5B8}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Quote", "Quote Text"), this.GetSearchFieldValue("quote_text"));
+                }
+                return _quoteText;
+            }
+        }
+        
+        /// <summary>Represents the Quote Person Name field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_person_name")]
+        public Synthesis.FieldTypes.Interfaces.ITextField QuotePersonName {
+            get {
+                if (_quotePersonName == null) {
+                    _quotePersonName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{45EDB6C7-0E87-4549-9A9A-DD6937C57969}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Quote", "Quote Person Name"), this.GetSearchFieldValue("quote_person_name"));
+                }
+                return _quotePersonName;
+            }
+        }
+        
+        /// <summary>Represents the Quote Person Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_person_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField QuotePersonTitle {
+            get {
+                if (_quotePersonTitle == null) {
+                    _quotePersonTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C2CE803E-C688-4012-AD5D-3141A7AC9150}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Quote", "Quote Person Title"), this.GetSearchFieldValue("quote_person_title"));
+                }
+                return _quotePersonTitle;
+            }
+        }
+        
+        /// <summary>Represents the Quote Font field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_font")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField QuoteFont {
+            get {
+                if (_quoteFont == null) {
+                    _quoteFont = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{062CF1F4-D162-4CD4-BA9F-84755CF7C5D3}"], "/sitecore/templates/Feature/ContentBlocks/Blocks/Quote", "Quote Font"), this.GetSearchFieldValue("quote_font"));
+                }
+                return _quoteFont;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class QuoteInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{C9FABED6-FCA3-4B63-B0EF-298F7E2A814C}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Quote(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Quote(searchFields);
         }
     }
     
@@ -2111,6 +2283,123 @@ namespace FOS.Website.Concrete.Feature.ContentBlocks.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new _MediaBlockRight(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/ContentBlocks/Data/_Quote template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class _Quote : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.ContentBlocks.Data.I_QuoteItem {
+        
+        private Synthesis.FieldTypes.ImageField _quoteImage;
+        
+        private Synthesis.FieldTypes.TextField _quoteText;
+        
+        private Synthesis.FieldTypes.TextField _quotePersonName;
+        
+        private Synthesis.FieldTypes.TextField _quotePersonTitle;
+        
+        private Synthesis.FieldTypes.BooleanField _quoteFont;
+        
+        public _Quote(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public _Quote(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "_Quote";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{2EA906FD-7F62-4A01-A0DB-6FB6BC541BAD}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Quote Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField QuoteImage {
+            get {
+                if (_quoteImage == null) {
+                    _quoteImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{9B98F972-A300-4C8B-90DE-6EC458C8827F}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Quote", "Quote Image"), this.GetSearchFieldValue("quote_image"));
+                }
+                return _quoteImage;
+            }
+        }
+        
+        /// <summary>Represents the Quote Text field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_text")]
+        public Synthesis.FieldTypes.Interfaces.ITextField QuoteText {
+            get {
+                if (_quoteText == null) {
+                    _quoteText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76C6BDC4-4EC2-4A89-87C0-AE70DF1BE5B8}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Quote", "Quote Text"), this.GetSearchFieldValue("quote_text"));
+                }
+                return _quoteText;
+            }
+        }
+        
+        /// <summary>Represents the Quote Person Name field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_person_name")]
+        public Synthesis.FieldTypes.Interfaces.ITextField QuotePersonName {
+            get {
+                if (_quotePersonName == null) {
+                    _quotePersonName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{45EDB6C7-0E87-4549-9A9A-DD6937C57969}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Quote", "Quote Person Name"), this.GetSearchFieldValue("quote_person_name"));
+                }
+                return _quotePersonName;
+            }
+        }
+        
+        /// <summary>Represents the Quote Person Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_person_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField QuotePersonTitle {
+            get {
+                if (_quotePersonTitle == null) {
+                    _quotePersonTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{C2CE803E-C688-4012-AD5D-3141A7AC9150}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Quote", "Quote Person Title"), this.GetSearchFieldValue("quote_person_title"));
+                }
+                return _quotePersonTitle;
+            }
+        }
+        
+        /// <summary>Represents the Quote Font field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("quote_font")]
+        public Synthesis.FieldTypes.Interfaces.IBooleanField QuoteFont {
+            get {
+                if (_quoteFont == null) {
+                    _quoteFont = new Synthesis.FieldTypes.BooleanField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{062CF1F4-D162-4CD4-BA9F-84755CF7C5D3}"], "/sitecore/templates/Feature/ContentBlocks/Data/_Quote", "Quote Font"), this.GetSearchFieldValue("quote_font"));
+                }
+                return _quoteFont;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class _QuoteInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{2EA906FD-7F62-4A01-A0DB-6FB6BC541BAD}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new _Quote(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new _Quote(searchFields);
         }
     }
     

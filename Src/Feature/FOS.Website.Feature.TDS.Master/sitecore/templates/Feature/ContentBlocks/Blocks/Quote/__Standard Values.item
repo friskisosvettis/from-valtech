@@ -1,34 +1,27 @@
 ----item----
 version: 1
-id: {4B97F7BD-DACF-49AD-B9A5-1CEAAAF65F99}
+id: {FB06D558-9925-4514-BA1B-B80F900E9625}
 database: master
-path: /sitecore/layout/Placeholder Settings/Project/Friskis/maincontent
-parent: {768835D3-8882-41F5-A498-179DF70B3BE6}
-name: maincontent
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/Quote/__Standard Values
+parent: {C9FABED6-FCA3-4B63-B0EF-298F7E2A814C}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
-templatekey: Placeholder
-created: 20170306T093550Z
+template: {C9FABED6-FCA3-4B63-B0EF-298F7E2A814C}
+templatekey: Quote
+created: 20170704T111812Z
 
-----field----
-field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
-name: Placeholder Key
-key: placeholder key
-content-length: 11
-
-maincontent
-----field----
-field: {E391B526-D0C5-439D-803E-17512EAE6222}
-name: Allowed Controls
-key: allowed controls
-content-length: 506
-
-{34A1EFB9-481B-45D9-B330-7BF2DE1BF0C4}|{1B041E5F-D136-48B7-835C-9B4C237D16CD}|{607BAC1B-B8B7-4AB9-8679-FAC25A4B741A}|{CCE76F2F-37CA-405E-9223-619728A3822F}|{59BF81E3-D900-4704-B5C5-F8F1813C3607}|{8BE0287F-AA76-4038-9BCB-7343AD89CAAF}|{3CF88FD5-0793-4BBC-8452-FA46DCAC9A04}|{27B84146-6E73-4A86-9D7E-F7DCBCD22056}|{B1442055-DA34-42FC-9189-8DBE00471DDD}|{E5FBCBD4-65F8-46AB-B817-FAD846F6E9AB}|{73A2CE6C-3924-4166-9278-A3DD0B7BCCC1}|{D7044B49-E0B8-4C90-92D1-41C150BF6598}|{A8A493E5-D861-41AA-B686-97391F579A52}
 ----version----
 language: en
 version: 1
-revision: f405b6e4-f18a-491e-af5e-ace543e0eb03
+revision: 6bfe746f-8fa6-4518-8c6e-43c3ce8d8647
 
+----field----
+field: {062CF1F4-D162-4CD4-BA9F-84755CF7C5D3}
+name: Quote Font
+key: quote font
+content-length: 1
+
+1
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170306T093550Z
+20170704T111812Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f405b6e4-f18a-491e-af5e-ace543e0eb03
+6bfe746f-8fa6-4518-8c6e-43c3ce8d8647
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170703T103455Z
+20170704T111835Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -74,8 +67,15 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: db25dc4d-070a-4b33-b556-27c2554f9c91
+revision: 1b367dda-0626-4415-8cb1-f3d0802e76a4
 
+----field----
+field: {062CF1F4-D162-4CD4-BA9F-84755CF7C5D3}
+name: Quote Font
+key: quote font
+content-length: 1
+
+1
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -89,7 +89,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170529T144619Z
+20170704T111924Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -103,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-db25dc4d-070a-4b33-b556-27c2554f9c91
+1b367dda-0626-4415-8cb1-f3d0802e76a4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170704T112746Z
+20170704T111928Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

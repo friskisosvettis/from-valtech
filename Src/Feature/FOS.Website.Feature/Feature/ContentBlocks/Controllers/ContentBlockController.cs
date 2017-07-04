@@ -93,5 +93,15 @@ namespace FOS.Website.Feature.ContentBlocks.Controllers
 
             return View(Constants.Views.Paths.MediaAndText, model);
         }
+
+        public ActionResult GetQuoteView()
+        {
+            var model = new QuoteModel()
+            {
+                QuoteItem = RenderingHelper.GetRenderingContextOrDefault<I_QuoteItem>(),
+            };
+
+            return View(Constants.Views.Paths.Quote, model);
+        }
     }
 }

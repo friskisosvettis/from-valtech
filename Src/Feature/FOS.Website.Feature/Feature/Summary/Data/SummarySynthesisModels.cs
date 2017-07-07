@@ -91,7 +91,7 @@ namespace FOS.Website.Feature.Summary {
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SummaryList template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "Zj8NOBYItN+NpltvHx1fOQyNoxQ=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}", "58apu5pTHT6kSbbwpHrynVk7eZk=", "Valtech.Foundation.Synthesis")]
     public partial interface ISummaryListItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the UseManualList field</summary>

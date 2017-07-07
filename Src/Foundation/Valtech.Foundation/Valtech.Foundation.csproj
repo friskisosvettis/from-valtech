@@ -1017,6 +1017,7 @@
     </Content>
     <Content Include="App_Config\Include\Foundation\Valtech.Foundation\CustomUrlEnforcer.config" />
     <Content Include="App_Config\Include\zzz\Sitecore.Support.101295.config" />
+    <Content Include="App_Config\Include\CustomFields\CustomFields.config" />
     <None Include="App_Config\Include\Foundation\Valtech.Foundation\DefaultSiteDefinitions.config" />
     <Content Include="App_Config\Include\Foundation\Valtech.Foundation\AbortSitecoreForKnownRoutes.config" />
     <Content Include="App_Config\Include\TrueItemRendering\TrueItemRendering.config" />
@@ -1032,6 +1033,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Fingerprint.cs" />
+    <Compile Include="CustomFields\QueryableTree.cs" />
+    <Compile Include="CustomFields\QueryableTreeList.cs" />
     <Compile Include="DataSource\DataSource.cs" />
     <Compile Include="DynamicDataSources\Pipelines\CreateDataSourcesFolder.cs" />
     <Compile Include="DynamicDataSources\Pipelines\DatasourceLocationPipeline.cs" />

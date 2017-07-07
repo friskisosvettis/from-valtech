@@ -11,6 +11,12 @@
 namespace FOS.Website.Feature.Content.Data {
     
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AdvancedHeading template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{205EF50E-C945-4982-A3DB-5404A3F026DA}", "/bs+LZo0+pW+NLnS9DHuqFcv/f4=", "Valtech.Foundation.Synthesis")]
+    public partial interface IAdvancedHeadingItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationFlagTemplate template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{C31EE96F-98DD-46B1-908A-201446DFD394}", "UX7neFAarfaLP0oEz0lrLMUtykE=", "Valtech.Foundation.Synthesis")]
@@ -247,7 +253,7 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Facility template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AAA5CB12-A76F-477E-982C-786358A55909}", "b7zNxjUvCJiBqoRl63TYWzZtdw8=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AAA5CB12-A76F-477E-982C-786358A55909}", "ZOVoOYBFAopx+NJr0diipAJJ9fE=", "Valtech.Foundation.Synthesis")]
     public partial interface IFacilityItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Facility Name field</summary>
@@ -683,6 +689,18 @@ namespace FOS.Website.Feature.Content.Data {
     public partial interface ITrainingCenterFlagTemplateItem : Synthesis.IStandardTemplateItem {
     }
     
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Video template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1BB71F1F-E0E5-4791-8495-47AE8BC00C31}", "aW45B7un3Hc+liLoag5BKsbIVMI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IVideoItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the Youtube ID field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("youtube_id")]
+        Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
+            get;
+        }
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/WideImage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{00C556ED-F3FD-4D27-8870-7CF2DF44A49B}", "pHZxmVmbqiUC25isYj/s9plv68Q=", "Valtech.Foundation.Synthesis")]
@@ -801,6 +819,58 @@ namespace FOS.Website.System.Layout.RenderingParameters {
 
 namespace FOS.Website.Concrete.Feature.Content.Data {
     
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AdvancedHeading template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class AdvancedHeading : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAdvancedHeadingItem {
+        
+        public AdvancedHeading(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public AdvancedHeading(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "AdvancedHeading";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{205EF50E-C945-4982-A3DB-5404A3F026DA}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class AdvancedHeadingInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{205EF50E-C945-4982-A3DB-5404A3F026DA}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new AdvancedHeading(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new AdvancedHeading(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationFlagTemplate template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -3542,6 +3612,71 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new TrainingCenterFlagTemplate(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Video template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class Video : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IVideoItem {
+        
+        private Synthesis.FieldTypes.TextField _youtubeID;
+        
+        public Video(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public Video(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "Video";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1BB71F1F-E0E5-4791-8495-47AE8BC00C31}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the Youtube ID field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("youtube_id")]
+        public Synthesis.FieldTypes.Interfaces.ITextField YoutubeID {
+            get {
+                if (_youtubeID == null) {
+                    _youtubeID = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4AD217F6-D385-40C4-ABD0-E0AD97F514A3}"], "/sitecore/templates/Feature/Content/Data/Video", "Youtube ID"), this.GetSearchFieldValue("youtube_id"));
+                }
+                return _youtubeID;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class VideoInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{1BB71F1F-E0E5-4791-8495-47AE8BC00C31}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new Video(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new Video(searchFields);
         }
     }
     

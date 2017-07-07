@@ -25,7 +25,7 @@ namespace FOS.Website.Feature.Taxonomy {
     
     /// <summary>Represents the /sitecore/templates/Feature/Taxonomy/Taxonomy template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F8376B7A-00E3-4517-943E-8E6BF0D1632E}", "fY2pGv2MhAnQ0ksWxviGk4dEjf0=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F8376B7A-00E3-4517-943E-8E6BF0D1632E}", "LoMOpK+IXu04j1fC2nIyuVTIpGc=", "Valtech.Foundation.Synthesis")]
     public partial interface ITaxonomyItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Taxonomy field</summary>
@@ -55,7 +55,7 @@ namespace FOS.Website.Feature.Taxonomy {
     
     /// <summary>Represents the /sitecore/templates/Feature/Taxonomy/TaxonomySpotParameters template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{05E2D62E-60B2-4049-8F55-C9AAC2B050B6}", "IB1CeHFmrhiJsRjOku63Mpgzhb4=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{05E2D62E-60B2-4049-8F55-C9AAC2B050B6}", "mZbTy2KNxJ6HQHQmhx2dTmHktcY=", "Valtech.Foundation.Synthesis")]
     public partial interface ITaxonomySpotParametersItem : global::FOS.Website.System.Layout.RenderingParameters.IStandardRenderingParametersItem {
         
         /// <summary>Represents the Variation field</summary>

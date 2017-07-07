@@ -1082,6 +1082,7 @@
     <None Include="App_Config\Include\DynamicPlaceholders\DynamicPlaceholders.config" />
     <Content Include="App_Config\Include\Project\Friskis\RegisterCustomRoutes.config" />
     <Content Include="App_Config\Include\Project\Friskis\KeepAlive.config" />
+    <Content Include="App_Config\Include\Project\Friskis\ItemClones.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
     <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />

@@ -7,14 +7,15 @@
 @model TickersModel
 
 @{var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor;}
-@if (!@isExperienceEditor && Model.NrTickers == 0)
-{
-    return;
-}
 
 @if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || @isExperienceEditor)
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@if (!@isExperienceEditor && Model.NrTickers == 0)
+{
+    return;
 }
 
 <div class="container">

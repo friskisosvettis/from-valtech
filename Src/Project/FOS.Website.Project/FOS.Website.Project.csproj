@@ -998,6 +998,9 @@
     <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\PROJECT\FOS.Website.Project_KeepAlive.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\PROJECT\FOS.Website.Project_PublishAgent.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-PROD\PROJECT\FOS.Website.Project_siteDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1013,6 +1016,9 @@
     <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_KeepAlive.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_PublishAgent.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-STAGE\PROJECT\FOS.Website.Project_siteDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1026,6 +1032,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_KeepAlive.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_PublishAgent.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_ConfigTransformations\MASTER\Friskis-TEST\PROJECT\FOS.Website.Project_siteDefinitions.xml">
@@ -1083,6 +1092,7 @@
     <Content Include="App_Config\Include\Project\Friskis\RegisterCustomRoutes.config" />
     <Content Include="App_Config\Include\Project\Friskis\KeepAlive.config" />
     <Content Include="App_Config\Include\Project\Friskis\ItemClones.config" />
+    <Content Include="App_Config\Include\Project\Friskis\PublishAgent.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.Startup.config" />
     <None Include="App_Config\Include\Synthesis\Synthesis.LocalConfig.config.example" />
     <None Include="App_Config\Include\Synthesis\Synthesis.ControlPanel.config" />

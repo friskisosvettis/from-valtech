@@ -22,6 +22,7 @@ var $ = require('jquery'),
 // Modules
 var devbridgeAutocomplete = require('./modules/autocomplete'),
     fitImages = require('./modules/object-fit-images'),
+    fitVideos = require('./modules/object-fit-videos'),
 	slickSlider = require('./modules/carousel'),
 	maps = require('./modules/maps'),
 	mapsApiLoader = require('./modules/mapsApiLoader'),
@@ -32,7 +33,8 @@ var devbridgeAutocomplete = require('./modules/autocomplete'),
 	accordion = require('./modules/accordion');
 
 $(function () {
-	fitImages.init();
+    fitImages.init();
+    fitVideos.init();
 	slickSlider.init();
 	maps.init();
     openingHours.init();

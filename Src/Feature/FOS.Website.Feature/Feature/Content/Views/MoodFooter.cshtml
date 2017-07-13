@@ -10,8 +10,19 @@
 }
 
 <div class="footer--mood">
-    
-    @Model.MoodFooterItem.BackgroundImage.Render()
+    @if (Model.MoodFooterItem.MoodMovie.HasValue)
+    {
+        <video autoplay loop="loop" preload="none">
+            <source src="@Model.MoodFooterItem.MoodMovie.Url" type="video/webm">
+            <source src="@Model.MoodFooterItem.MoodMovie.Url" type="video/mp4"/>
+            <source src="@Model.MoodFooterItem.MoodMovie.Url" type="video/ogg">
+            @Model.MoodFooterItem.BackgroundImage.Render()
+        </video>
+    }
+    else
+    {
+        @Model.MoodFooterItem.BackgroundImage.Render()
+    }
     <div class="footer__overlay">
         <div class="footer__content">
             <h2>@Model.MoodFooterItem.Title.Render()</h2>

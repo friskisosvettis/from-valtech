@@ -25,6 +25,8 @@ namespace FOS.Website.Feature.Summary.Models
 
         public DateTime NewsPublishDate { get; set; }
 
+        public DateTime EventStartDate { get; set; }
+
         public INewsItem NewsItem { get; set; }
 
         public IEventItem EventItem { get; set; }
@@ -40,6 +42,7 @@ namespace FOS.Website.Feature.Summary.Models
             SummaryItem = null;
             SummaryHeadingString = String.Empty;
             NewsPublishDate = DateTime.MinValue;
+            EventStartDate = DateTime.MaxValue;
             Item = null;
             HideNewsDate = false;
         }
@@ -48,7 +51,18 @@ namespace FOS.Website.Feature.Summary.Models
         {
             SummaryItem = item.As<ISummaryItem>();
             NewsItem = item.As<INewsItem>();
+
+            if (NewsItem != null)
+            {
+                NewsPublishDate = NewsItem.NewsDate.Value;
+            }
+
             EventItem = item.As<IEventItem>();
+            if (EventItem != null)
+            {
+                EventStartDate = EventItem.EventStartDate.Value;
+            }
+
             TrainingFormItem = item.As<ITrainingFormItem>();
         }
 

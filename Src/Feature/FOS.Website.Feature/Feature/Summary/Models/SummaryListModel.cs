@@ -73,7 +73,14 @@ namespace FOS.Website.Feature.Summary.Models
                 ISortByNewsDateItem sortByNewsDateItem = sortByItem.As<ISortByNewsDateItem>();
                 if (sortByNewsDateItem != null)
                 { 
-                    SummaryList = SummaryList.OrderBy(t => t.NewsPublishDate).ToList();
+                    SummaryList = SummaryList.OrderByDescending(t => t.NewsPublishDate).ToList();
+                }
+
+                // Sort by eventdate
+                ISortByEventDateItem sortByEventDateItem = sortByItem.As<ISortByEventDateItem>();
+                if (sortByEventDateItem != null)
+                {
+                    SummaryList = SummaryList.Where(t=>t.EventStartDate >= DateTime.Now).OrderBy(t => t.EventStartDate).ToList();
                 }
 
                 SummaryList = SummaryList.Take(maxResults).ToList();   

@@ -1017,7 +1017,9 @@
     </Content>
     <Content Include="App_Config\Include\Foundation\Valtech.Foundation\CustomUrlEnforcer.config" />
     <Content Include="App_Config\Include\zzz\Sitecore.Support.101295.config" />
-    <Content Include="App_Config\Include\CustomFields\CustomFields.config" />
+    <Content Include="App_Config\Include\CustomFields\CustomFields.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Foundation\Valtech.Foundation\DefaultSiteDefinitions.config" />
     <Content Include="App_Config\Include\Foundation\Valtech.Foundation\AbortSitecoreForKnownRoutes.config" />
     <Content Include="App_Config\Include\TrueItemRendering\TrueItemRendering.config" />

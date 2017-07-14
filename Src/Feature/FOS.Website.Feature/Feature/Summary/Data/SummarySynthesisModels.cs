@@ -11,6 +11,12 @@
 namespace FOS.Website.Feature.Summary {
     
     
+    /// <summary>Represents the /sitecore/templates/Feature/Summary/SortByEventDate template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{0317181F-8344-4971-980C-5204BD16BC3B}", "UXdHsJhOjvqnskn563975Ih26bg=", "Valtech.Foundation.Synthesis")]
+    public partial interface ISortByEventDateItem : Synthesis.IStandardTemplateItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SortByFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{7BB6614D-DF23-4869-991C-26C48676AF12}", "FMt7QseXrJicNU1Pn9Kp2H7KCiY=", "Valtech.Foundation.Synthesis")]
@@ -249,6 +255,58 @@ namespace FOS.Website.Feature.Summary.SummaryListTypes {
 
 namespace FOS.Website.Concrete.Feature.Summary {
     
+    
+    /// <summary>Represents the /sitecore/templates/Feature/Summary/SortByEventDate template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class SortByEventDate : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Summary.ISortByEventDateItem {
+        
+        public SortByEventDate(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public SortByEventDate(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "SortByEventDate";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{0317181F-8344-4971-980C-5204BD16BC3B}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class SortByEventDateInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{0317181F-8344-4971-980C-5204BD16BC3B}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new SortByEventDate(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new SortByEventDate(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/SortByFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]

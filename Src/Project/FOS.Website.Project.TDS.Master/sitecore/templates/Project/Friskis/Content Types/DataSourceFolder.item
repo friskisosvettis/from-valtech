@@ -31,6 +31,13 @@ key: __icon
 content-length: 40
 
 ApplicationsV2/16x16/magazine_folder.png
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 272
+
+{E269FBB5-3750-427A-9149-7AA950B49301}|{F7B78574-8135-4A79-B5C3-C313ABA1B06E}|{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}|{976C1946-8F3F-4DDA-989D-542A239561B3}|{523342F4-95C8-4796-A0C5-28FAE1DDEF58}|{3FCDE34C-3E06-4BB6-BDC7-C2076B1DC9F3}|{5F418B66-74CF-438D-9573-E10A9FE23611}
 ----version----
 language: da
 version: 1
@@ -104,6 +111,53 @@ key: __updated
 content-length: 16
 
 20170110T114611Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----version----
+language: sv-SE
+version: 1
+revision: 27a27f56-6647-40cd-8ce9-d972e395b602
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170714T101842Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+27a27f56-6647-40cd-8ce9-d972e395b602
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170714T102057Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

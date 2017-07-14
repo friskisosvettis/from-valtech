@@ -11,6 +11,13 @@ templatekey: ArticlePage
 created: 20170306T103914Z
 
 ----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 194
+
+{4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}|{CBABDBBF-F826-4F61-AB85-2383356DACE5}|{A12E3942-932A-4398-8867-61174C2CC19E}|{916D440B-11CD-47E7-B2FD-90151D16F3C7}|{4D46261E-471A-4C6B-AF3E-E420751ACE4B}
+----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
 key: __renderings
@@ -74,7 +81,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 29ed40aa-156e-41ec-bb36-7f1650dd82d3
+revision: 89064837-8643-43b7-acfe-39a233c37bc8
 
 ----field----
 field: {BE167F68-9DE7-404D-9D10-B6E8D20D23C0}
@@ -87,9 +94,9 @@ content-length: 58
 field: {F60E9BBE-8B37-4EB3-A293-A072E18C67D5}
 name: Navigation_ShowInMenu
 key: navigation_showinmenu
-content-length: 1
+content-length: 0
 
-1
+
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -117,14 +124,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-29ed40aa-156e-41ec-bb36-7f1650dd82d3
+89064837-8643-43b7-acfe-39a233c37bc8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T082424Z
+20170714T101347Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

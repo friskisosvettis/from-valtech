@@ -20,9 +20,10 @@
         <div class="container-12">
             <ul class="list--horizontal">
                 @foreach (var childPage in Model.MenuItems)
-            {
+                {
+                    var menuLabel = childPage.Navigation_NavigationTitle.HasValue ? childPage.Navigation_NavigationTitle.RawValue : childPage.DisplayName;
                     <li class="icon--medium icon__goto-circle-red">
-                        <a href="@LinkManager.GetItemUrl(@childPage.InnerItem)">@childPage.DisplayName</a>
+                        <a href="@LinkManager.GetItemUrl(@childPage.InnerItem)">@menuLabel</a>
                     </li>
                 }
             </ul>

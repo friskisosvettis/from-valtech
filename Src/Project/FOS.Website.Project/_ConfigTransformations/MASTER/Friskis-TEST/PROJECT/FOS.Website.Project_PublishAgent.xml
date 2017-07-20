@@ -3,7 +3,7 @@
   <Website>
     <ReplaceXml>
       <File name="\App_Config\Include\Project\Friskis\PublishAgent.config">
-        <Item path="/configuration/sitecore/scheduling/agent[@type='Sitecore.Tasks.PublishAgent']" action="Replace" name="interval" value="00:30:00" />
+        <Item path="/configuration/sitecore/scheduling/agent[@type='Sitecore.Tasks.PublishAgent']" action="Replace" key="interval" value="00:30:00" />
       </File>
     </ReplaceXml>
   </Website>

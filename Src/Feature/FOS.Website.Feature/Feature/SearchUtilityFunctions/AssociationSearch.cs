@@ -6,6 +6,7 @@ using FOS.Website.Concrete.Feature.Content.Data;
 using FOS.Website.Concrete.Feature.Content.ListWidgets;
 using FOS.Website.Feature.Content.Data;
 using FOS.Website.Feature.Content.ListWidgets;
+using Sitecore.Buckets.Extensions;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.SearchTypes;
@@ -16,6 +17,12 @@ using Sitecore.ContentSearch.Linq.Utilities;
 
 namespace FOS.Website.Feature.SearchUtilityFunctions
 {
+    public class AssociationRegionSearchResultItem : SearchResultItem
+    {
+        [IndexField("region")]
+        public string Region { get; set; }
+    }
+
     public static class AssociationSearch
     {
         public static IEnumerable<IAssociationFlagTemplateItem> GetAllAssociations(string dbName)
@@ -63,18 +70,18 @@ namespace FOS.Website.Feature.SearchUtilityFunctions
             using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
             {
                 string regionFieldId = Regions.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
-                var query = context.GetQueryable<SearchResultItem>()
+                var query = context.GetQueryable<AssociationRegionSearchResultItem>()
                     .Where(i => i["_latestversion"].Equals("1"))
                     .Where(i => i.Language.Equals(startItem.Language.Name))
                     .Where(i => i.Paths.Contains(startItem.ID))
-                    .Where(i => i["_templates"].Contains(regionFieldId));
+                    .Where(i => i["_templates"].Contains(regionFieldId))
+                    .Where(i => i.Region.Equals(regionQuery));
 
 
                 var result = query.GetResults();
 
                 return result.Hits
-                    .Select(i => i.Document.GetItem().As<IRegionsItem>())
-                    .Where(n => n != null && n.Region.RawValue.Equals(regionQuery));
+                    .Select(i => i.Document.GetItem().As<IRegionsItem>());
             }
         }
     }

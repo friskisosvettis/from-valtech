@@ -55,6 +55,7 @@
               <field fieldName="extension"            returnType="text" />
               <field fieldName="title"                returnType="text" />
               <field fieldName="taxonomy"                returnType="text" />
+              <field fieldName="region"                returnType="text" />
             </fieldNames>
 
             <!-- FIELD TYPE MAPPING

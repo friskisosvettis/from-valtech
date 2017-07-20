@@ -62,11 +62,11 @@ namespace FOS.Website.Feature.AutoComplete
             var regionTest = RegionSearch.GetAllRegionsStartingWith(searchQuery, homePage);
             foreach (var regionObj in regionTest)
             {
-                var associations = AssociationSearch.GetAllAssociationsWithRegionName(regionObj.DisplayName, homePage);
+                var associations = AssociationSearch.GetAllAssociationsWithRegionName(regionObj.Name, homePage);
                 foreach (var assocition in associations)
                 {
                     var associationItem = assocition.InnerItem;
-                    AddRegionsToAutocomplete(regions, associationItem);
+                    AddRegionsToAutocomplete(regions, associationItem, regionObj.DisplayName);
                 }
             }
             return regions.Select(r => new AutoCompleteSearchModel(r));
@@ -95,21 +95,21 @@ namespace FOS.Website.Feature.AutoComplete
             return trainingCenters.Select(t => new AutoCompleteSearchModel(t));
         }
 
-        private void AddRegionsToAutocomplete(List<RegionModel> regions, Item assocition)
+        private void AddRegionsToAutocomplete(List<RegionModel> regions, Item assocition, string regionName)
         {
             var region = assocition.As<IRegionsItem>();
             if (region != null && region.Region != null && region.Region.HasTextValue)
             {
                 var regionAssocition = new RegionAssociationModel(assocition.DisplayName,
                     LinkManager.GetItemUrl(assocition));
-                var newRegion = regions.Where(r => r.Name.Equals(region.Region.RawValue)).FirstOrDefault();
+                var newRegion = regions.Where(r => r.Name.Equals(regionName)).FirstOrDefault();
                 if (newRegion != null)
                 {
                     newRegion.Associations.Add(regionAssocition);
                 }
                 else
                 {
-                    newRegion = new RegionModel(region.Region.RawValue);
+                    newRegion = new RegionModel(regionName);
                     newRegion.Associations.Add(regionAssocition);
                     regions.Add(newRegion);
                 }

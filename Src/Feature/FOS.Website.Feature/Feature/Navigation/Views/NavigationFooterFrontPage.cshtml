@@ -13,9 +13,27 @@
 {
     return;
 }
-@helper AddLinkLine(Item linkItem)
+@helper AddLinkLine(INavigationDataItem linkItem)
 {
-    <li><a href="@LinkManager.GetItemUrl(linkItem)">@linkItem.DisplayName</a></li>
+    var pageItem = linkItem.InnerItem;
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        var displayName = ((linkItem.Navigation_NavigationTitle.RawValue.IsEmpty() || linkItem.Navigation_NavigationTitle.RawValue.Equals("$name")) ? "(" + pageItem.DisplayName + ")" : "");
+        if (displayName.IsEmpty())
+        {
+                <li><a href="@LinkManager.GetItemUrl(pageItem)"> @linkItem.Navigation_NavigationTitle.Render()</a></li>
+        }
+        else
+        {
+                <li> @displayName <br /> <a href="@LinkManager.GetItemUrl(pageItem)"> @linkItem.Navigation_NavigationTitle.Render() </a></li>
+        }
+
+    }
+    else
+    {
+        var menuLabel = linkItem.Navigation_NavigationTitle.HasValue ? linkItem.Navigation_NavigationTitle.RawValue : pageItem.DisplayName;
+        <li><a href="@LinkManager.GetItemUrl(pageItem)">@menuLabel</a></li>
+    }
 }
 <div class="footer__navigation">
     <div class="container">
@@ -23,7 +41,7 @@
             <ul class="footer__navigation--slim">
                 @foreach (var navigationDataItem in Model.PrimaryMenuItems)
                 {
-                    @AddLinkLine(navigationDataItem.InnerItem)
+                    @AddLinkLine(navigationDataItem)
                 }
             </ul>
         </div>

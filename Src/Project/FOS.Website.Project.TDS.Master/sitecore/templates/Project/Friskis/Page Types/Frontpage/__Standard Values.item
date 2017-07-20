@@ -24,6 +24,20 @@ key: __renderings
 content-length: 1030
 
 <r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{90E2A6CB-EFA9-4D60-8A39-3BC289370420}" ph="main" uid="{18B8C56B-31F8-474C-9ED3-C566E152544E}" /><r id="{3B7AC140-D428-46A5-82FF-84D1C42143EC}" ph="topcontent" uid="{CB0D3144-64C0-4BFF-AEC0-D2DB16B4F83E}" /><r id="{183E63BE-3167-4E28-8C2F-207F3158DE80}" ph="topcontent" uid="{41087EB4-74BC-4149-BBBF-135374BB243D}" /><r id="{8A61DE7F-1B45-43E8-B9BE-DAC7AE6B70F0}" ph="topcontent" uid="{0E9355F5-31B4-4E0A-8382-7B176A2EC215}" /><r id="{9388EE75-C59A-457D-A939-5F62863E0958}" ph="topcontent" uid="{2F463D16-65E4-4C00-991C-62DE4B161472}" /><r id="{09014E7C-7EE4-44AC-A45E-BFEAEBE427A7}" ph="footercontent" uid="{1E7722F1-BCCC-489C-B116-501FE92ED30E}" /><r id="{757993BF-AA51-446C-94F0-7B81B79851E6}" ph="footercontent" uid="{3A96D45D-3293-4091-B239-053458FB2384}" /><r id="{FC55B03D-FD20-452F-B284-FF53D52654F3}" ph="footercontent" uid="{969C601F-0261-4E98-845F-DFA2FE29B3EB}" /></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
 ----version----
 language: en
 version: 1
@@ -96,7 +110,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 5c70dc0f-bee9-442b-a18e-96dfe1385870
+revision: 553c5dd4-77b2-4ef4-ae55-c6ccff86a060
 
 ----field----
 field: {3B7976CB-2255-4B8D-83E3-5FBEDAC974DE}
@@ -140,18 +154,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5c70dc0f-bee9-442b-a18e-96dfe1385870
+553c5dd4-77b2-4ef4-ae55-c6ccff86a060
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170714T101101Z
+20170719T080316Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff

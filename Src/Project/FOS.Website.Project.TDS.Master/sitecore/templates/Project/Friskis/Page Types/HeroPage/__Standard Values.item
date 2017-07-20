@@ -24,6 +24,20 @@ key: __renderings
 content-length: 1374
 
 <r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{585E9829-7C71-4B47-B2EA-8C8FFDD3A43E}" ph="headermetaplaceholder" uid="{75EC758F-0B1E-4164-B5E8-65F9F5A6D8DA}" /><r id="{0F1CB627-BD47-4649-88A0-297FF1873233}" ph="main" uid="{DF5FD053-BF7E-4AC7-AA99-1DE48A6D3CE3}" /><r id="{9C5EC63F-C384-407A-B355-A771394D893E}" ph="topcontent" uid="{04312E4C-CFB2-4967-BB70-A5E54E99BD85}" /><r id="{3B7AC140-D428-46A5-82FF-84D1C42143EC}" ph="topcontent" uid="{28DC71AE-C73A-47AA-9154-67E9B9C1D7F8}" /><r id="{183E63BE-3167-4E28-8C2F-207F3158DE80}" ph="topcontent" uid="{5F329137-10B5-4811-8A35-9680E675088D}" /><r id="{E66AE016-B5EC-4EEF-809A-E1A2AE1146BA}" ph="topcontent" uid="{BB48D042-3E15-412E-8C53-CCE2BCDEB038}" /><r id="{34BCD65D-FCE6-4340-8925-904168348661}" ph="topcontent" uid="{C1470DD8-13B8-42FC-917F-FBA084DEE21B}" /><r id="{09014E7C-7EE4-44AC-A45E-BFEAEBE427A7}" ph="footercontent" uid="{A3A832CB-BE3F-4C1B-AF20-CBA3EEB4B889}" /><r id="{ECD0C4E7-F05F-4954-B625-2DE59823B8E4}" ph="footercontent" uid="{EA1653C6-6B55-40D2-B0F8-7B30B83DAC17}" /><r id="{757993BF-AA51-446C-94F0-7B81B79851E6}" ph="footercontent" uid="{2C55F3A9-345F-47F9-949B-3444FB5AD500}" /><r id="{FC55B03D-FD20-452F-B284-FF53D52654F3}" ph="footercontent" uid="{DB4EE275-9AE9-4CF5-BB88-8924CAC1866D}" /></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
 ----version----
 language: en
 version: 1
@@ -74,7 +88,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: b66a5181-65a8-40fa-a048-fd810ea260d6
+revision: 36a070e3-3899-4572-9089-9545f0820afd
 
 ----field----
 field: {F60E9BBE-8B37-4EB3-A293-A072E18C67D5}
@@ -110,18 +124,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b66a5181-65a8-40fa-a048-fd810ea260d6
+36a070e3-3899-4572-9089-9545f0820afd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170714T101318Z
+20170719T080343Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff

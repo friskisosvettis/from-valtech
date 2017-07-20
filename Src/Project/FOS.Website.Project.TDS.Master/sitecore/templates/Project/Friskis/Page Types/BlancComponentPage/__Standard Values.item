@@ -17,6 +17,20 @@ key: __renderings
 content-length: 251
 
 <r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{7CED1773-7B93-4EF1-A9D3-A27629C69280}" ph="main" uid="{0E460F7A-01C6-4F3E-8A5F-3468C4437F36}" /></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
 ----version----
 language: en
 version: 1
@@ -74,7 +88,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 6a3da5a6-90b6-414a-b14b-eca81b5faf24
+revision: 634dd6ed-100d-4955-90e3-5bb0c9fc075a
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -103,18 +117,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a3da5a6-90b6-414a-b14b-eca81b5faf24
+634dd6ed-100d-4955-90e3-5bb0c9fc075a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T142400Z
+20170719T081543Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff

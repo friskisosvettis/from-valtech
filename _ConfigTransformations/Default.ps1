@@ -21,6 +21,7 @@ param (
  . .\Common.ps1
  . .\ChangeToSolrSearch.ps1 
  . .\ConfigFileActivationSwitch.ps1
+ . .\SecurityRulesScript.ps1
  
  #Init 
  Initialize
@@ -97,7 +98,12 @@ Write-Host ""
  {
  	$SwitchMasterToWeb = join-path $webRootPath "\App_Config\Include\Z.SwitchMasterToWeb\SwitchMasterToWeb.config.example"
 	ActivateConfigureFile $SwitchMasterToWeb
- } 
+ }
+ 
+ if(!($type -eq 'local'))
+ {
+     DisableAdministrativTools -webRootPath $webRootPath
+ }
 	
  }Catch{
       Write-Host ""

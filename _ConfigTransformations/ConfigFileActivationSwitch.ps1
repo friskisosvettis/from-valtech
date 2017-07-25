@@ -46,3 +46,32 @@ function ActivateConfigureFile{
 		Write-Host "Allready DeActived" $FileName
 	}
  }
+ 
+ function ActivateAspxFile{
+	param([string]$FileName)
+
+	$newFileName = ""
+	if($FileName.EndsWith(".aspx"))
+	{
+		Write-Host "Allready Active" $FileName
+	}
+	elseif ($FileName.EndsWith(".disabled"))
+	{
+		$newFileName = $FileName.Replace(".aspx.disabled",".aspx")
+		RenameFile -FileName $FileName -newFileName $newFileName
+	}	
+ }
+ 
+function DeActivateAspxFile{
+	param([string]$FileName)
+
+	if($FileName.EndsWith(".aspx"))
+	{
+		$newFileName = $FileName.Replace(".aspx",".aspx.disabled")
+		RenameFile -FileName $FileName -newFileName $newFileName
+	}
+	else
+	{
+		Write-Host "Allready DeActived" $FileName
+	}
+ }

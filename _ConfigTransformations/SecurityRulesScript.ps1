@@ -31,7 +31,4 @@ function DisableAdministrativTools{
 	DeActivateAspxFile (join-path $adminPath "SqlShell.aspx")
 	DeActivateAspxFile (join-path $adminPath "stats.aspx")
 	DeActivateAspxFile (join-path $adminPath "unlock_admin.aspx")
-	DeActivateAspxFile (join-path $adminPath "FillDB.aspx")
-	DeActivateAspxFile (join-path $adminPath "Unlock_admin.aspx")
-	DeActivateAspxFile (join-path $adminPath "SqlShell.aspx")
 }

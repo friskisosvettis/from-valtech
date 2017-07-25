@@ -2,15 +2,22 @@ function RenameFile{
 	param([string]$FileName
 	     ,[string]$newFileName)
 	
-	if($newFileName | Test-Path)
+	if($FileName | Test-Path)
 	{
-		Remove-Item -Path $newFileName -Force
-		Write-Host "Deleting old file" $newFileName
+	   if($newFileName | Test-Path)
+		{
+			Remove-Item -Path $newFileName -Force
+			Write-Host "Deleting old file" $newFileName
+		}
+		
+		Rename-Item $FileName $newFileName
+		Write-Host $FileName "=>"
+		Write-Host "====>" $newFileName
 	}
-	
-	Rename-Item $FileName $newFileName
-	Write-Host $FileName "=>"
-	Write-Host "====>" $newFileName
+	else
+	{
+		Write-Host $FileName "Did not exist!!"
+	}
 }
 
 function ActivateConfigureFile{

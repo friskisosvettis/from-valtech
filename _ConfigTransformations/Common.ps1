@@ -20,6 +20,7 @@
         TransformFilesInFolder -folder (join-path $folder "FOUNDATION") -webRootPath $webRootPath
         TransformFilesInFolder -folder (join-path $folder "FEATURE") -webRootPath $webRootPath
         TransformFilesInFolder -folder (join-path $folder "PROJECT") -webRootPath $webRootPath
+		TransformFilesInFolder -folder (join-path $folder "SECURITY") -webRootPath $webRootPath
     }else{
       Write-Host "GetFoldersAndTransform - could not find folder "$folder
     }

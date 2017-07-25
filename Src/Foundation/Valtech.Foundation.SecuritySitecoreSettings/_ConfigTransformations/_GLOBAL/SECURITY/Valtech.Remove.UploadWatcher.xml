@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <Item path="/configuration/system.webServer/modules/add[@type='Sitecore.Resources.Media.UploadWatcher, Sitecore.Kernel']" action="Remove"/>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

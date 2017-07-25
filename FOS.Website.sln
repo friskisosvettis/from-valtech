@@ -90,6 +90,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Valtech.Foundation.Redirec
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Valtech.Foundation.RedirectModule.TDS.Master", "Src\Foundation\Valtech.Foundation.RedirectModule.TDS.Master\Valtech.Foundation.RedirectModule.TDS.Master.scproj", "{688FC534-6D85-49A1-B3D0-B4A644F1F6AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valtech.Foundation.SecuritySitecoreSettings", "Src\Foundation\Valtech.Foundation.SecuritySitecoreSettings\Valtech.Foundation.SecuritySitecoreSettings.csproj", "{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -232,6 +234,12 @@ Global
 		{688FC534-6D85-49A1-B3D0-B4A644F1F6AE}.TDS|Any CPU.ActiveCfg = TDS|Any CPU
 		{688FC534-6D85-49A1-B3D0-B4A644F1F6AE}.TDS|Any CPU.Build.0 = TDS|Any CPU
 		{688FC534-6D85-49A1-B3D0-B4A644F1F6AE}.TDS|Any CPU.Deploy.0 = TDS|Any CPU
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}.TDS|Any CPU.ActiveCfg = Release|Any CPU
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3}.TDS|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -261,5 +269,6 @@ Global
 		{0B4C4090-C25D-461B-B2E4-612ED47BBD09} = {A04C41C5-D131-43A6-B17B-0311A3B73C52}
 		{A04C41C5-D131-43A6-B17B-0311A3B73C52} = {94B39509-56FC-48B7-A664-CF9FFFC35793}
 		{688FC534-6D85-49A1-B3D0-B4A644F1F6AE} = {A04C41C5-D131-43A6-B17B-0311A3B73C52}
+		{547F3CA2-0BFC-491A-AFD3-C680547B9FA3} = {94B39509-56FC-48B7-A664-CF9FFFC35793}
 	EndGlobalSection
 EndGlobal

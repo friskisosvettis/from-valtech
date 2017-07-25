@@ -3,7 +3,10 @@
   <Website>
     <ReplaceXml>
       <File name="web.config">
-        <Item path="/configuration/system.webServer/modules/add[@type='Sitecore.Resources.Media.UploadWatcher, Sitecore.Kernel']" action="Remove"/>
+        <Item path="configuration/system.webServer/modules/add[@type='Sitecore.Resources.Media.UploadWatcher, Sitecore.Kernel']" action="InsertIfMissing">
+          <add type="Sitecore.Resources.Media.UploadWatcher, Sitecore.Kernel" name="SitecoreUploadWatcher"/>
+        </Item>
+        <Item path="configuration/system.webServer/modules/add[@type='Sitecore.Resources.Media.UploadWatcher, Sitecore.Kernel']" action="Remove"/>
       </File>
     </ReplaceXml>
   </Website>

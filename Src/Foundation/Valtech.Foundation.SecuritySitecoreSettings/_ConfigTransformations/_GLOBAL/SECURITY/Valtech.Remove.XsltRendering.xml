@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="App_Config\Sitecore.config">
+        <Item path="/sitecore/xslExtensions/extension[@type='Sitecore.Xml.Xsl.SqlHelper, Sitecore.Kernel']" action="InsertIfMissing">
+          <extension mode="on" type="Sitecore.Xml.Xsl.SqlHelper, Sitecore.Kernel" namespace="http://www.sitecore.net/sql" singleInstance="true" />
+        </Item>
+        <Item path="/sitecore/xslExtensions/extension[@type='Sitecore.Xml.Xsl.SqlHelper, Sitecore.Kernel']" action="Remove" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

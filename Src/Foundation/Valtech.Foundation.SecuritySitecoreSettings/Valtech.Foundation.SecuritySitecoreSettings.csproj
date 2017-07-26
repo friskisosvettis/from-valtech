@@ -90,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="sitecore\admin\disabled" />
+    <Content Include="_ConfigTransformations\_GLOBAL\SECURITY\Valtech.Foundation.Security_DisableLogInAutoComplete.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_ConfigTransformations\_GLOBAL\SECURITY\Valtech.Remove.XsltRendering.xml">
       <SubType>Designer</SubType>
     </Content>

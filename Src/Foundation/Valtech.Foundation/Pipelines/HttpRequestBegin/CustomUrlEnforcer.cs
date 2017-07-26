@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using Sitecore;
 using Sitecore.Configuration;
 using Sitecore.Links;
@@ -20,7 +21,10 @@ namespace Valtech.Foundation.Pipelines.HttpRequestBegin
         public override void Process(HttpRequestArgs args)
         {
             if (Context.Item == null)
+            {
+                RedirectLoginRequest();
                 return;
+            }
 
             var redirectUri = args.Context.Request.Url;
 
@@ -71,6 +75,20 @@ namespace Valtech.Foundation.Pipelines.HttpRequestBegin
 
             var secureUri = string.Concat(Uri.UriSchemeHttps, uri.AbsoluteUri.Substring(4));
             return new Uri(secureUri);
+        }
+
+        private void RedirectLoginRequest()
+        {
+            if (!UseSecureScheme)
+                return;
+
+            string absUrl = HttpContext.Current.Request.Url.AbsoluteUri;
+            string localUrl = HttpContext.Current.Request.Url.LocalPath;
+
+            if (localUrl.StartsWith("/sitecore/login") && absUrl.StartsWith("http://") && !Context.IsLoggedIn)
+            {
+                HttpContext.Current.Response.Redirect(absUrl.Replace("http://", "https://"));
+            }
         }
 
     }

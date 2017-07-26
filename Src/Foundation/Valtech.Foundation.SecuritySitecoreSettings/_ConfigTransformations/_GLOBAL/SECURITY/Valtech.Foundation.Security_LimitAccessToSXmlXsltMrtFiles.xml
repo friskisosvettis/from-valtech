@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <Item path="configuration/system.webServer/handlers/add[@name='xml allow']" action="InsertIfMissing">
+          <add path="sitemap.xml" verb="GET" type="System.Web.StaticFileHandler" name="xml allow"/>
+        </Item>
+        <Item path="configuration/system.webServer/handlers/add[@name='xml (integrated)']" action="InsertIfMissing">
+          <add path="*.xml" verb="*" type="System.Web.HttpForbiddenHandler" name="xml (integrated)" preCondition="integratedMode"/>
+        </Item>
+        <Item path="configuration/system.webServer/handlers/add[@name='xslt (integrated)']" action="InsertIfMissing">
+          <add path="*.xslt" verb="*" type="System.Web.HttpForbiddenHandler" name="xslt (integrated)" preCondition="integratedMode"/>
+        </Item>
+        <Item path="configuration/system.webServer/handlers/add[@name='config.xml (integrated)']" action="InsertIfMissing">
+          <add path="*.config.xml" verb="*" type="System.Web.HttpForbiddenHandler" name="config.xml (integrated)" preCondition="integratedMode"/>
+        </Item>
+        <Item path="configuration/system.webServer/handlers/add[@name='mrt (integrated)']" action="InsertIfMissing">
+          <add path="*.mrt" verb="*" type="System.Web.HttpForbiddenHandler" name="mrt (integrated)" preCondition="integratedMode"/>
+        </Item>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

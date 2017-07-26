@@ -103,6 +103,7 @@ Write-Host ""
  if(!($type -eq 'local'))
  {
      DisableAdministrativTools -webRootPath $webRootPath
+	 DisableWebDav -webRootPath $webRootPath
  }
 	
  }Catch{

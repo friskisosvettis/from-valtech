@@ -32,3 +32,8 @@ function DisableAdministrativTools{
 	DeActivateAspxFile (join-path $adminPath "stats.aspx")
 	DeActivateAspxFile (join-path $adminPath "unlock_admin.aspx")
 }
+
+function DisableWebDav{
+	param([string]$webRootPath)
+	DeActivateConfigureFile (join-path $webRootPath "\App_Config\Include\Sitecore.WebDAV.config")
+}

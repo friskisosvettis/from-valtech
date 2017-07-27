@@ -18,7 +18,7 @@
                 <h1 class="heading-3">
                     @Model.GeneralData.TextForNewAssociation.Render()
                 </h1>
-                <p>@Model.AssociationCheckWidget.LinkToExistingPage.Render("Go to Friskis " + @Model.AssociationCheckWidget.InnerItem.DisplayName, "btn btn--secondary btn__link btn__icon btn__icon--right btn--external-link")</p>
+                <p>@Model.AssociationCheckWidget.LinkToExistingPage.Render(@Model.label_Button, "btn btn--secondary btn__link btn__icon btn__icon--right btn--external-link")</p>
                 <a href="@LinkManager.GetItemUrl(@Model.GeneralData.InnerItem)" class="link--inverted">@Model.GeneralData.LinkToStartPageLabel.Render()</a>
             </div>
         </div>

@@ -45,10 +45,17 @@ key: __icon
 content-length: 31
 
 network/32x32/earth_network.png
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{3F5B0B85-B9DF-46D8-B493-D067441F3369}" />
 ----version----
 language: en
 version: 1
-revision: e2ebcabe-63d3-4364-a201-c15abe485e9f
+revision: 97306a0e-f996-488e-9df3-bb1bebe9e3ed
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e2ebcabe-63d3-4364-a201-c15abe485e9f
+97306a0e-f996-488e-9df3-bb1bebe9e3ed
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T122318Z
+20170727T153156Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

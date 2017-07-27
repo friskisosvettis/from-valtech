@@ -45,10 +45,17 @@ key: __icon
 content-length: 32
 
 applications/32x32/transform.png
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{54028888-2084-458B-8674-E4B025C3AA91}" />
 ----version----
 language: en
 version: 1
-revision: dc702118-5b6e-48cc-9011-4a2248352bd1
+revision: 3dc7cf4f-7569-478d-bb93-35b8360fd779
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dc702118-5b6e-48cc-9011-4a2248352bd1
+3dc7cf4f-7569-478d-bb93-35b8360fd779
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170630T133457Z
+20170727T153102Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

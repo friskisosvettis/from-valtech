@@ -45,10 +45,17 @@ key: __icon
 content-length: 34
 
 applications/16x16/preferences.png
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{0379EFE5-7643-4C56-AA63-185EA2C3F71B}" />
 ----version----
 language: en
 version: 1
-revision: c345b6f9-30e1-4a61-9195-05a5d9d5d67a
+revision: 267b6604-35c8-4580-adb0-efee9a83a103
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c345b6f9-30e1-4a61-9195-05a5d9d5d67a
+267b6604-35c8-4580-adb0-efee9a83a103
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170704T135944Z
+20170727T153550Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -62,11 +62,11 @@
                 <li>
                     @if (@Model.AssociationLinks != null)
                     {
-                        @Model.AssociationLinks.BookingLink.Render("Boka pass", "btn btn--book btn__icon btn__icon--left")
+                        @Model.AssociationLinks.BookingLink.Render(@Model.label_BookClass, "btn btn--book btn__icon btn__icon--left")
                     }
                     else
                     {
-                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--book btn__icon btn__icon--left">Träna Här</a>
+                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--book btn__icon btn__icon--left">@Model.label_TrainHere</a>
                     }
                     <button class="navigation__btn navigation__btn--open" href="#uou2" data-js-menu>
                         <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
@@ -92,8 +92,7 @@
                 @if (Model.MoreMenuItems.Any())
                 {
                     <li class="navigation__item">
-                        @* TODO: Add translatation for "Mer" *@
-                        <button class="navigation__btn" data-js-menu-more>Mer</button>
+                        <button class="navigation__btn" data-js-menu-more>@Model.label_More</button>
                         <ul data-js-menu-more-content>
                             <!--More Menu items -->
                             @foreach (var navigationDataItem in Model.MoreMenuItems)
@@ -111,13 +110,13 @@
                 @if (@Model.AssociationLinks != null)
                 {
                     <li class="navigation__item visible-large-up">
-                        @Model.AssociationLinks.BookingLink.Render("Boka pass", "btn btn--book btn__icon btn__icon--left")
+                        @Model.AssociationLinks.BookingLink.Render(@Model.label_BookClass, "btn btn--book btn__icon btn__icon--left")
                     </li>
                 }
                 else
                 {
                     <li class="navigation__item visible-large-up">
-                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--book btn__icon btn__icon--left">Träna Här</a>
+                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--book btn__icon btn__icon--left">@Model.label_TrainHere</a>
                     </li>
                 }
             </ul>

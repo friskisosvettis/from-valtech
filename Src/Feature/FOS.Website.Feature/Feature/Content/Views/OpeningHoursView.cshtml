@@ -43,8 +43,8 @@ var dayOfWeek = ((int)DateTime.Today.AddDays(1).DayOfWeek + 6) % 7;
                     <strong>Fyll i Google PlaceId!</strong><br />
                     @EncodingHelper.GetRazorViewText("För öppettider från Google, fyll i Google Place Id.")<br />
                     <a href="https://google-developers.appspot.com/maps/documentation/javascript/examples/full/places-placeid-finder">@EncodingHelper.GetRazorViewText("Sök Google Place Id")</a>
-                    <span class="color--primary">@Model.OpeningHoursItem.GooglePlaceId.Render()</span><br />
-                    <strong>@EncodingHelper.GetRazorViewText("Fyll i link til öppetider sida")</strong>
+                    <span class="color--primary">@Model.OpeningHoursItem.GooglePlaceId.Render()</span> @EncodingHelper.GetRazorViewText("(Klistra in med Shift + Ctrl + V)")<br />
+                    <strong>@EncodingHelper.GetRazorViewText("Fyll i link till öppetider sida")</strong>
                     @Model.OpeningHoursItem.Link.Render()
                 </div>
             }

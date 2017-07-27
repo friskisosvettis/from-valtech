@@ -93,7 +93,10 @@ namespace Valtech.Foundation.Dictionary
                 }
                 if (rawValue)
                 {
-                    return HttpUtility.HtmlDecode(dictionaryItem.Dictionary_Text.RawValue);
+                    var retString = HttpUtility.HtmlDecode(dictionaryItem.Dictionary_Text.RawValue);
+                    return string.IsNullOrWhiteSpace(retString)
+                        ? (string.IsNullOrWhiteSpace(defaultText) ? dictionaryKey : defaultText)
+                        : retString;
                 }
                 return dictionaryItem.Dictionary_Text.RenderedValue;
             }

@@ -16,10 +16,10 @@
                 <a href="@Model.AssociationIntroductionModuleItem"> @Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroLinkLabel) </a>
             </div>
             <div class="introduction__goto">
-                <a href="@Model.AssociationIntroductionModuleItem.TrainingSelectionLink"><span class="introduction__icon introduction__icon--training-classes"></span>Träningsutbud</a>
-                <a href="@Model.AssociationIntroductionModuleItem.GymsLink"><span class="introduction__icon introduction__icon--traning-center"></span>Anläggningar</a>
-                <a href="@Model.AssociationIntroductionModuleItem.BecomeMemberLink"><span class="introduction__icon introduction__icon--prices"></span>Priser</a>
-                <a href="@Model.AssociationIntroductionModuleItem.ScheduleLink"><span class="introduction__icon introduction__icon--schedule"></span>Schema</a>
+                <a href="@Model.AssociationIntroductionModuleItem.TrainingSelectionLink"><span class="introduction__icon introduction__icon--training-classes"></span>@Model.label_TrainingSelection</a>
+                <a href="@Model.AssociationIntroductionModuleItem.GymsLink"><span class="introduction__icon introduction__icon--traning-center"></span>@Model.label_TrainingCenter</a>
+                <a href="@Model.AssociationIntroductionModuleItem.BecomeMemberLink"><span class="introduction__icon introduction__icon--prices"></span>@Model.label_Prize</a>
+                <a href="@Model.AssociationIntroductionModuleItem.ScheduleLink"><span class="introduction__icon introduction__icon--schedule"></span>@Model.label_Schedule</a>
             </div>
             <div class="introduction__member">
                 <a href="@Model.AssociationIntroductionModuleItem.BecomeMemberLink">

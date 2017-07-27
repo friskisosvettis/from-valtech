@@ -57,6 +57,11 @@ namespace Valtech.Foundation.Dictionary
             _rootPath = rootPath;
         }
 
+        public string GetRawValueText(string folderName, string dictionaryKey, string defaultText = "")
+        {
+            return GetText(folderName, dictionaryKey, string.IsNullOrWhiteSpace(defaultText) ? dictionaryKey : defaultText, true);
+        }
+
         public string GetText(string folderName, string dictionaryKey, string defaultText = "CREATE: ", bool rawValue = false)
         {
             Item contextItem = Sitecore.Context.Item;
@@ -83,7 +88,7 @@ namespace Valtech.Foundation.Dictionary
                 if (dictionaryItem == null)
                 {
                     Sitecore.Diagnostics.Log.Info(string.Format("DictionaryItem lookup is null returning default text, folderName = {0}, fieldName = {1}, languageName = {2}, contextItem.Name = {3}, contextItem.Id = {4}", folderName, dictionaryKey, language, contextItem.Name, contextItem.ID), typeof(DictionaryRepository));
-                    string defaultTextToOutput = defaultText + " " + folderName + "/" + dictionaryKey;
+                    string defaultTextToOutput = string.IsNullOrWhiteSpace(defaultText) ? dictionaryKey : defaultText;
                     return defaultTextToOutput;
                 }
                 if (rawValue)

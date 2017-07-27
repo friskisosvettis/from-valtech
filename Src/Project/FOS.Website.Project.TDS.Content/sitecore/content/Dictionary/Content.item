@@ -2,7 +2,7 @@
 version: 1
 id: {25D223A8-620A-4C15-BAF4-2BB28237D107}
 database: master
-path: /sitecore/content/Sweden/Friskis/Dictionary/Content
+path: /sitecore/content/Dictionary/Content
 parent: {547E1225-BAA7-4277-A7EA-87B2B49A33A0}
 name: Content
 master: {00000000-0000-0000-0000-000000000000}

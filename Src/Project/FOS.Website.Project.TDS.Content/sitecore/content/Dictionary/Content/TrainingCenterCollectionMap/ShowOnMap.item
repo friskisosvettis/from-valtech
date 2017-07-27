@@ -1,27 +1,27 @@
 ----item----
 version: 1
-id: {18A9A512-9CE9-4D69-B828-5548E04BA047}
+id: {CA7C1851-99B7-4A1E-8500-AD76D22EDC75}
 database: master
-path: /sitecore/content/Sweden/Friskis/Dictionary/Content/ExpandableSection/ReadMoreText
-parent: {8610EB5E-00BC-4A2D-AB70-D6BD289D4C1E}
-name: ReadMoreText
+path: /sitecore/content/Dictionary/Content/TrainingCenterCollectionMap/ShowOnMap
+parent: {2340BA97-E3D4-4EEE-A117-0527B8F87ECA}
+name: ShowOnMap
 master: {00000000-0000-0000-0000-000000000000}
 template: {DCD7E3CE-9633-4329-981D-D485803063C3}
 templatekey: DictionaryElement
-created: 20170110T104808Z
+created: 20170726T152058Z
 
 ----version----
-language: da
+language: en
 version: 1
-revision: 845e5b90-f79a-4795-ac24-ac85b8f27a40
+revision: d4cd3ec0-0340-46d3-be87-1bdab2ef43f1
 
 ----field----
 field: {120431E7-D871-4372-8AA5-69A98BB4FBF4}
 name: Dictionary_Text
 key: dictionary_text
-content-length: 8
+content-length: 11
 
-Læs mere
+Show on map
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170110T104816Z
+20170726T152058Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,33 +49,33 @@ name: __Revision
 key: __revision
 content-length: 36
 
-845e5b90-f79a-4795-ac24-ac85b8f27a40
+d4cd3ec0-0340-46d3-be87-1bdab2ef43f1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170110T104821Z
+20170727T080839Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff
 ----version----
-language: en
+language: sv-SE
 version: 1
-revision: fe78f120-32a3-4ee6-b24f-e1d0335d85c6
+revision: 5831ae60-25fd-474b-bd5c-7f66354baac4
 
 ----field----
 field: {120431E7-D871-4372-8AA5-69A98BB4FBF4}
 name: Dictionary_Text
 key: dictionary_text
-content-length: 9
+content-length: 14
 
-Read more
+Visa på kartan
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -89,7 +89,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170110T104808Z
+20170726T152125Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -103,14 +103,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fe78f120-32a3-4ee6-b24f-e1d0335d85c6
+5831ae60-25fd-474b-bd5c-7f66354baac4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170110T104832Z
+20170726T154113Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

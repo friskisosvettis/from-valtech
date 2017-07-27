@@ -5,6 +5,9 @@
 @using Sitecore.Links
 @using Sitecore.Mvc.Presentation
 @using Synthesis.Mvc.Helpers
+
+@using Valtech.Foundation.Dictionary;
+
 @model TrainingCenterCollectionMapModel
 
 @if(!@Model.MapNodes.Any())
@@ -18,9 +21,8 @@
     </div>
     <!--TABS - VISIABLE LARGE UP -->
     <ul class="tabs" data-js-tabs="map">
-        @* TODO - remove hardcoded text for Lista & Karta *@
-        <li class="tabs__title active"><a class="icon--medium icon__list" href="#panel1">Lista</a></li>
-        <li class="tabs__title"><a class="icon--medium icon__pin-map" href="#panel2" data-js-map-show>Karta</a></li>
+        <li class="tabs__title active"><a class="icon--medium icon__list" href="#panel1">@Model.label_List</a></li>
+        <li class="tabs__title"><a class="icon--medium icon__pin-map" href="#panel2" data-js-map-show>@Model.label_Map</a></li>
     </ul>
     <!--MAP - VISIBLE ALL THE TIME -->
     <div class="tabs__content visible-medium-up--block map--overlay" id="panel2" data-js-tabs-map>
@@ -42,8 +44,8 @@
                         var classNameAddress = (i < 1) ? "icon--small icon__pin-map-filled" : "";
 
                          <li class="@className" data-js-map-i="@i" data-js-map-title="@mapNode.MapHeadline" data-js-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-js-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-js-map-lat="@mapNode.Latitude" data-js-map-lng="@mapNode.Longitude">
-                            @* TODO - remove hardcoded text for Lista & Karta *@
-                            <button class="map__list--show">Visa på karta</button>
+                            
+                            <button class="map__list--show">@Model.label_ShowOnMap</button>
                             <a href="@LinkManager.GetItemUrl(mapNode.InnerItem)">
                                 <h4>@mapNode.MapHeadline</h4>
                                 <p class="address @classNameAddress">@mapNode.Street @mapNode.StreetNr, @mapNode.City</p>

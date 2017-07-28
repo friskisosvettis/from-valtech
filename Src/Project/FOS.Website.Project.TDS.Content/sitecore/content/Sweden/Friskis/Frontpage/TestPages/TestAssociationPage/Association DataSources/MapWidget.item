@@ -1,48 +1,27 @@
 ----item----
 version: 1
-id: {64945011-6FCC-44B9-900C-B73E729D1DC2}
+id: {ACEBD61D-5BDE-46BD-9A96-4BD9419328F0}
 database: master
-path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage/HeroStuff/TestHero2
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage/Association DataSources/MapWidget
 parent: {477150E6-C31E-4EC4-83FB-6C3E1DD61EFC}
-name: TestHero2
+name: MapWidget
 master: {00000000-0000-0000-0000-000000000000}
-template: {F258FFB8-F406-43D9-B01F-4C05C9C86690}
-templatekey: HeroObjectImage
-created: 20170324T162037Z
+template: {4ED14818-306E-472F-9BE4-06FA373CC59A}
+templatekey: MapWidgetGyms
+created: 20170410T085840Z
 
 ----version----
 language: sv-SE
 version: 1
-revision: a5f2598e-8625-416f-b783-435a3efc23c9
+revision: 556b4503-c015-48a9-ad80-21826e289651
 
 ----field----
-field: {E887C4B0-9EAF-4BDC-8AEF-D968316401BB}
-name: Title
-key: title
-content-length: 4
+field: {651A385F-DC08-42C1-BA26-515D5B0D4C47}
+name: Map Title
+key: map title
+content-length: 19
 
-Glad
-----field----
-field: {81B56E2F-0405-4179-BA0C-1081DC2A58DE}
-name: Description
-key: description
-content-length: 20
-
-Finaste luren i stan
-----field----
-field: {E0A7C103-D10D-4713-A87F-29F8470E1EDC}
-name: HeroImage
-key: heroimage
-content-length: 58
-
-<image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
-----field----
-field: {32D97D63-B497-4E9E-95D6-F178DE9C7C1D}
-name: Link
-key: link
-content-length: 133
-
-<link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{E00112B8-1368-4C91-B7BF-7DAEFBF8567E}" />
+Test Map för alla??
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -56,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170324T162037Z
+20170410T085840Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -70,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a5f2598e-8625-416f-b783-435a3efc23c9
+556b4503-c015-48a9-ad80-21826e289651
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170328T072521Z
+20170410T085920Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

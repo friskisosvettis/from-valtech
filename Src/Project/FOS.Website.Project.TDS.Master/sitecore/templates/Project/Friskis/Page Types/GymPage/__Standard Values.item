@@ -14,9 +14,9 @@ created: 20170405T154822Z
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
-content-length: 155
+content-length: 116
 
-{4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}|{CBABDBBF-F826-4F61-AB85-2383356DACE5}|{916D440B-11CD-47E7-B2FD-90151D16F3C7}|{A12E3942-932A-4398-8867-61174C2CC19E}
+{A1E42205-8040-4188-9F04-84188CF64C67}|{B1575AB9-ACD3-4FC7-B2A1-EA35279C692B}|{69E8882B-E0F4-4BCB-B274-C89BD38F0570}
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
@@ -102,7 +102,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: c3820491-982b-4698-9032-b565694f11e9
+revision: 86096dc8-d7a0-4d26-ada5-715b8ccfe323
 
 ----field----
 field: {77F8111C-E439-4FCA-B3E8-320DB734D8C0}
@@ -138,14 +138,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c3820491-982b-4698-9032-b565694f11e9
+86096dc8-d7a0-4d26-ada5-715b8ccfe323
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170719T080326Z
+20170728T142701Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

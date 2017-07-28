@@ -1,0 +1,106 @@
+----item----
+version: 1
+id: {C5E85D7F-573C-4469-AFC7-94A8A8978953}
+database: master
+path: /sitecore/templates/Branches/Friskis/Page Branches/ArticlePage/$name
+parent: {A1E42205-8040-4188-9F04-84188CF64C67}
+name: $name
+master: {00000000-0000-0000-0000-000000000000}
+template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
+templatekey: ArticlePage
+created: 20170728T133045Z
+
+----version----
+language: en
+version: 1
+revision: 9b99e83e-18cd-45f4-aaec-fd61107ddace
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Fluff
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170728T133045Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Fluff
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9b99e83e-18cd-45f4-aaec-fd61107ddace
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170728T133045Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Fluff
+----version----
+language: sv-SE
+version: 1
+revision: 99875b76-cdf4-4ca7-8000-d04c056a290f
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Fluff
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170728T133537Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Fluff
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+99875b76-cdf4-4ca7-8000-d04c056a290f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170728T133537Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Fluff

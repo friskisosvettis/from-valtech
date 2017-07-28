@@ -1,48 +1,62 @@
 ----item----
 version: 1
-id: {940BD423-FE18-4B91-BF4E-DB5E6ECE331C}
+id: {ECFD5287-0B78-4236-9BD5-A5A4DB5F2D7F}
 database: master
-path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage/HeroStuff/RichTextNyaFaltet
+path: /sitecore/content/Sweden/Friskis/Frontpage/TestPages/TestAssociationPage/Association DataSources/TestHemMap
 parent: {477150E6-C31E-4EC4-83FB-6C3E1DD61EFC}
-name: RichTextNyaFaltet
+name: TestHemMap
 master: {00000000-0000-0000-0000-000000000000}
-template: {523342F4-95C8-4796-A0C5-28FAE1DDEF58}
-templatekey: RichText
-created: 20170519T134436Z
+template: {4ED14818-306E-472F-9BE4-06FA373CC59A}
+templatekey: MapWidgetGyms
+created: 20170410T083748Z
 
 ----version----
-language: sv-SE
+language: en
 version: 1
-revision: 3261fa01-2d6d-410f-be7e-9e193e4c8c40
+revision: 879987f9-a7fd-41e7-9029-7b749398d0ce
 
 ----field----
-field: {5CE761C2-6467-4D85-80DB-E9C63B538B42}
-name: Text Content
-key: text content
-content-length: 149
+field: {651A385F-DC08-42C1-BA26-515D5B0D4C47}
+name: Map Title
+key: map title
+content-length: 8
 
-fajslöjflködsaklfjwkealsjvkj fkweashjfh ksjfh vsa hgveiuyhfgiueavhdsfuogayvehskfvhsdiu vhxk vgiawhcghfihaofcua&lt;hwfzvkhwaiufyh2wqiuascyvhzszcv9x oz
+Test Hem
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170519T134436Z
+20170410T083748Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-3261fa01-2d6d-410f-be7e-9e193e4c8c40
+879987f9-a7fd-41e7-9029-7b749398d0ce
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170519T134511Z
+20170410T084006Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

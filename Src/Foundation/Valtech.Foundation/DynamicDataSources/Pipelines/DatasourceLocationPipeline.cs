@@ -21,9 +21,12 @@ namespace Valtech.Foundation.DynamicDataSources.Pipelines
             
             foreach (string path in new ListString(args.RenderingItem["Datasource Location"]))
             {
+                if (string.IsNullOrEmpty(path))
+                    continue;
+
                 string tmpPath = path;
 
-                if (!string.IsNullOrEmpty(path) && path.StartsWith(WebsiteToken))
+                if (path.StartsWith(WebsiteToken))
                 {
                     string templateId = Sitecore.Configuration.Settings.GetSetting("DynamicDataSource.WebsiteRootTemplateId");
                     if (String.IsNullOrEmpty(templateId))
@@ -35,11 +38,26 @@ namespace Valtech.Foundation.DynamicDataSources.Pipelines
                     Item websiteItem = contextItem.GetAncestorsAndSelf().FirstOrDefault(i => i.IsDerived(id));
                     tmpPath = path.Replace(WebsiteToken, websiteItem.Paths.Path);
                 }
-
-                if (path.StartsWith("./", StringComparison.InvariantCulture) && !string.IsNullOrEmpty(args.ContextItemPath))
+                else if (path.StartsWith("query:") && !string.IsNullOrEmpty(args.ContextItemPath))
                 {
-                    tmpPath = string.Concat(args.ContextItemPath, path.Remove(0, 1));
+                    string query = path.Substring("query:".Length);
+                    Item contextItem = args.ContentDatabase.GetItem(args.ContextItemPath);
+                    if (contextItem != null)
+                    {
+                        Item queryItem = contextItem.Axes.SelectSingleItem(query);
+                        if (queryItem != null)
+                        {
+                            args.DatasourceRoots.Add(queryItem);
+                        }
+                    }
+                    continue;
                 }
+                else if (path.StartsWith("./", StringComparison.InvariantCulture) && !string.IsNullOrEmpty(args.ContextItemPath))
+                {
+                    var itemPath = args.ContextItemPath;
+                    tmpPath = string.Concat(itemPath, path.Remove(0, 1));
+                }
+
                 Item item = args.ContentDatabase.GetItem(tmpPath);
                 if (item == null)
                 {

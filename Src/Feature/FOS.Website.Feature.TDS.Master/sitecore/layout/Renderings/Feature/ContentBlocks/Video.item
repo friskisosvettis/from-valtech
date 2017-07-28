@@ -45,10 +45,17 @@ key: __icon
 content-length: 22
 
 people/16x16/movie.png
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{D77939A9-F1D4-41B8-A443-A0E6DF362B1D}" />
 ----version----
 language: en
 version: 1
-revision: f7ed226b-86db-4df2-8fe2-8b21fddcddc2
+revision: 5999c98c-a915-45dd-ab36-0773b4450ee8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f7ed226b-86db-4df2-8fe2-8b21fddcddc2
+5999c98c-a915-45dd-ab36-0773b4450ee8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T150355Z
+20170728T171411Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

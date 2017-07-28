@@ -45,10 +45,17 @@ key: __icon
 content-length: 36
 
 applications/16x16/photo_scenery.png
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{E42DB5A1-928A-4C1C-B5BA-88BB0F824474}" />
 ----version----
 language: en
 version: 1
-revision: 5c943094-abbe-43cb-9d64-38930587aa2c
+revision: a2f3c4c8-c957-404f-b9ad-50b3d38e3f31
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5c943094-abbe-43cb-9d64-38930587aa2c
+a2f3c4c8-c957-404f-b9ad-50b3d38e3f31
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T150132Z
+20170728T171242Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

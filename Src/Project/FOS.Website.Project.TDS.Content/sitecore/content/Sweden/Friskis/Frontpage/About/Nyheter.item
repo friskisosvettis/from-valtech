@@ -20,7 +20,7 @@ content-length: 3
 ----version----
 language: sv-SE
 version: 1
-revision: 54253dbb-6cbb-4d73-b308-689a57f27404
+revision: 3ee2a639-94b4-46bb-866c-4c53ab0f0bfb
 
 ----field----
 field: {5735AC3D-6859-4F44-BF9E-5620237331CC}
@@ -54,9 +54,9 @@ Nyheter Rich Text
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 279
+content-length: 241
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{45AE0225-6AEA-4B91-B19E-C6053D554215}" p:before="*" s:ds="{3A61FA36-546D-4EDB-A7A0-B618C6053615}" s:id="{CCE76F2F-37CA-405E-9223-619728A3822F}" s:par="" s:ph="/main/maincontent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{45AE0225-6AEA-4B91-B19E-C6053D554215}" p:before="*" s:ds="" s:id="{CCE76F2F-37CA-405E-9223-619728A3822F}" s:par="" s:ph="/main/maincontent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -70,21 +70,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-54253dbb-6cbb-4d73-b308-689a57f27404
+3ee2a639-94b4-46bb-866c-4c53ab0f0bfb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T124753Z
+20170729T115853Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

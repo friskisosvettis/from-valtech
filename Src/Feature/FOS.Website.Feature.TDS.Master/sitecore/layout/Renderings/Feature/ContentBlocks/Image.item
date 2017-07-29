@@ -30,7 +30,7 @@ name: Datasource Location
 key: datasource location
 content-length: 176
 
-query:./ancestor-or-self::*[@@templatename='AssociationPage']/Association DataSources|./Local DataSources|/sitecore/content/Sweden/Friskis/Frontpage/National Shared DataSources
+./Local DataSources|query:./ancestor-or-self::*[@@templatename='AssociationPage']/Association DataSources|/sitecore/content/Sweden/Friskis/Frontpage/National Shared DataSources
 ----field----
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
@@ -55,7 +55,7 @@ content-length: 58
 ----version----
 language: en
 version: 1
-revision: a2f3c4c8-c957-404f-b9ad-50b3d38e3f31
+revision: 9f545cda-ec68-4d8c-b9cf-57e8566a0bb8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -84,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a2f3c4c8-c957-404f-b9ad-50b3d38e3f31
+9f545cda-ec68-4d8c-b9cf-57e8566a0bb8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T171242Z
+20170729T102716Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

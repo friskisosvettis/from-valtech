@@ -1,15 +1,29 @@
 ----item----
 version: 1
-id: {2A71A1A1-A6ED-4D4E-A1B3-6396909E067B}
+id: {018F31BC-F12F-48B0-9D42-79AF3FFC6C4A}
 database: master
-path: /sitecore/templates/Project/Friskis/Page Types/BlancComponentPage/__Standard Values
-parent: {DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}
+path: /sitecore/templates/Project/Friskis/Container Types/ComponentBlockFolder/__Standard Values
+parent: {EA04089A-D7A0-4FAA-83B9-3AE5B64FD3E9}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}
-templatekey: BlancComponentPage
-created: 20170529T143159Z
+template: {EA04089A-D7A0-4FAA-83B9-3AE5B64FD3E9}
+templatekey: ComponentBlockFolder
+created: 20170729T090853Z
 
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 31
+
+People/32x32/cubes_blue_add.png
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 77
+
+{EF929190-6E26-432E-94E0-A0A4755F826F}|{EA04089A-D7A0-4FAA-83B9-3AE5B64FD3E9}
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
@@ -21,20 +35,20 @@ content-length: 251
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
 key: __workflow
-content-length: 38
+content-length: 0
 
-{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
+
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
 name: __Default workflow
 key: __default workflow
-content-length: 38
+content-length: 0
 
-{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
+
 ----version----
 language: en
 version: 1
-revision: 673e3274-81ed-45eb-9057-748d5f1cd7a4
+revision: 64d45316-ddaf-4ceb-95ea-6beb24b8d6d7
 
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
@@ -70,25 +84,25 @@ name: __Revision
 key: __revision
 content-length: 36
 
-673e3274-81ed-45eb-9057-748d5f1cd7a4
+64d45316-ddaf-4ceb-95ea-6beb24b8d6d7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170529T143222Z
+20170729T091126Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff
 ----version----
 language: sv-SE
 version: 1
-revision: 634dd6ed-100d-4955-90e3-5bb0c9fc075a
+revision: c0691411-fc3a-4009-8dad-ed4da71f61f2
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -117,14 +131,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-634dd6ed-100d-4955-90e3-5bb0c9fc075a
+c0691411-fc3a-4009-8dad-ed4da71f61f2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170719T081543Z
+20170729T091919Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,55 +1,55 @@
 ----item----
 version: 1
-id: {607BAC1B-B8B7-4AB9-8679-FAC25A4B741A}
+id: {2A71A1A1-A6ED-4D4E-A1B3-6396909E067B}
 database: master
-path: /sitecore/layout/Renderings/Feature/Summary/SummarySpot
-parent: {6173F4CB-F105-4538-8F99-4ECAD36C1DC8}
-name: SummarySpot
+path: /sitecore/templates/Project/Friskis/Page Types/ComponentBlock/__Standard Values
+parent: {DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
-templatekey: Controller rendering
-created: 20170524T134204Z
+template: {DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}
+templatekey: ComponentBlock
+created: 20170529T143159Z
 
 ----field----
-field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
-name: Controller
-key: controller
-content-length: 78
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
 
-FOS.Website.Feature.Summary.Controllers.SummaryController, FOS.Website.Feature
+{EF929190-6E26-432E-94E0-A0A4755F826F}
 ----field----
-field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
-name: Controller Action
-key: controller action
-content-length: 18
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 251
 
-GetSummarySpotView
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{7CED1773-7B93-4EF1-A9D3-A27629C69280}" ph="main" uid="{0E460F7A-01C6-4F3E-8A5F-3468C4437F36}" /></d></r>
 ----field----
-field: {94069F66-609C-48B0-8281-521C30FB269D}
-name: Open Properties after Add
-key: open properties after add
-content-length: 1
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
 
-1
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
 ----field----
-field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
-name: Datasource Location
-key: datasource location
-content-length: 70
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
 
-/sitecore/content/Sweden/Friskis/Frontpage/National Shared DataSources
-----field----
-field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
-name: __Thumbnail
-key: __thumbnail
-content-length: 58
-
-<image mediaid="{8A8EB920-D32C-40B5-BC3E-FA9E990F890B}" />
+{A4ABDFE0-CC14-4109-9A48-CA661D922B26}
 ----version----
 language: en
 version: 1
-revision: 215946d6-f2ae-444b-abdb-c3d24dc99f12
+revision: 7e551363-ec7c-456f-af30-b75ca4a45462
 
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 145
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}" /></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -63,7 +63,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170524T134204Z
+20170529T143159Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-215946d6-f2ae-444b-abdb-c3d24dc99f12
+7e551363-ec7c-456f-af30-b75ca4a45462
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170729T095817Z
+20170729T090206Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -95,7 +95,7 @@ sitecore\Fluff
 ----version----
 language: sv-SE
 version: 1
-revision: 8697b971-0991-4d81-a2d0-a6411cceb2c0
+revision: 634dd6ed-100d-4955-90e3-5bb0c9fc075a
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -110,7 +110,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170530T095434Z
+20170529T151352Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -124,18 +124,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8697b971-0991-4d81-a2d0-a6411cceb2c0
+634dd6ed-100d-4955-90e3-5bb0c9fc075a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170530T095446Z
+20170719T081543Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\Fluff

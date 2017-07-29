@@ -11,6 +11,12 @@
 namespace FOS.Website.Project.Friskis.ContainerTypes {
     
     
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Container Types/ComponentBlockFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{EA04089A-D7A0-4FAA-83B9-3AE5B64FD3E9}", "W/1sA9zgUWA6WJwbmv/AQ5cvPzI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IComponentBlockFolderItem : global::FOS.Website.Feature.ComponentBlock.IComponentBlockContentItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    }
+    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Container Types/FacilitiesFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1C3A19B6-A734-440A-A114-8E5AD3A32390}", "ysrUmgdH8wJRmIDpthtXCu1dKHY=", "Valtech.Foundation.Synthesis")]
@@ -101,28 +107,22 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     public partial interface IArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.Taxonomy.ITaxonomyItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationListPage template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{9A435B37-877A-4B12-B9EA-6DF7540698DD}", "CZQeE12N2Oru6x9NtRkoePLyV8s=", "Valtech.Foundation.Synthesis")]
-    public partial interface IAssociationListPageItem : global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
-    }
-    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{ED6742D6-FC75-4FCF-B245-4F89EEF2824D}", "n+FL4A1wY6gfDRyJyHLp/fZYq3U=", "Valtech.Foundation.Synthesis")]
     public partial interface IAssociationPageItem : global::FOS.Website.Feature.Content.Data.IAssociationIntroductionModuleItem, global::FOS.Website.Feature.Navigation.Data.INavigationMenuLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem, global::FOS.Website.Feature.Content.ListWidgets.IRegionsItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem, global::FOS.Website.Feature.Content.Data.IFooterContactfooterItem, global::FOS.Website.Feature.Navigation.Data.INavigationFooterLinksAssociationItem, global::FOS.Website.Feature.Content.Data.IAssociationNotMigratedWidgetItem, global::FOS.Website.Feature.Navigation.Data.INavigationRootPageFlagItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/BlancComponentPage template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}", "E5HCb09sRtKbU/Sj5LBjffWhDs0=", "Valtech.Foundation.Synthesis")]
-    public partial interface IBlancComponentPageItem : global::FOS.Website.Feature.ComponentBlock.IComponentBlockContentItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
-    }
-    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/CCCHeroPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{AAC7B8A7-17FB-47C5-84A2-F54AD0E70B55}", "IOAMYSAkYVLnl710aYuc5Md6qIQ=", "Valtech.Foundation.Synthesis")]
     public partial interface ICCCHeroPageItem : global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/ComponentBlock template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}", "Ooa59bWEa9TvAs+0lXG6bm85faI=", "Valtech.Foundation.Synthesis")]
+    public partial interface IComponentBlockItem : global::FOS.Website.Feature.ComponentBlock.IComponentBlockContentItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/EventListPage template</summary>
@@ -170,7 +170,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/SharedArticlePage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{A399A1FA-2D81-4CD3-9820-0AAB3ED13A39}", "vz+Y1tEhgutdw/FTdhIPgsGJtEw=", "Valtech.Foundation.Synthesis")]
-    public partial interface ISharedArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.Taxonomy.ITaxonomyItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    public partial interface ISharedArticlePageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.Taxonomy.ITaxonomyItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/TestPage template</summary>
@@ -198,6 +198,84 @@ namespace FOS.Website.Project.Friskis.PageTypes {
 
 namespace FOS.Website.Concrete.Project.Friskis.ContainerTypes {
     
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Container Types/ComponentBlockFolder template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class ComponentBlockFolder : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContainerTypes.IComponentBlockFolderItem {
+        
+        private Synthesis.FieldTypes.TextField _customScripts;
+        
+        private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
+        
+        public ComponentBlockFolder(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public ComponentBlockFolder(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "ComponentBlockFolder";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{EA04089A-D7A0-4FAA-83B9-3AE5B64FD3E9}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the CustomScripts field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customscripts")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomScripts {
+            get {
+                if (_customScripts == null) {
+                    _customScripts = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{30627248-3125-4A7E-BF76-DECFAD8FB7AB}"], "/sitecore/templates/Project/Friskis/Container Types/ComponentBlockFolder", "CustomScripts"), this.GetSearchFieldValue("customscripts"));
+                }
+                return _customScripts;
+            }
+        }
+        
+        /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
+            get {
+                if (_scriptsInheritedOnSubpages == null) {
+                    _scriptsInheritedOnSubpages = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F64D4477-A514-4BF8-8539-B9FF7B2F9F36}"], "/sitecore/templates/Project/Friskis/Container Types/ComponentBlockFolder", "ScriptsInheritedOnSubpages"), this.GetSearchFieldValue("scriptsinheritedonsubpages"));
+                }
+                return _scriptsInheritedOnSubpages;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ComponentBlockFolderInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{EA04089A-D7A0-4FAA-83B9-3AE5B64FD3E9}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new ComponentBlockFolder(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new ComponentBlockFolder(searchFields);
+        }
+    }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Container Types/FacilitiesFolder template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -1297,84 +1375,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationListPage template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class AssociationListPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IAssociationListPageItem {
-        
-        private Synthesis.FieldTypes.TextField _customScripts;
-        
-        private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
-        
-        public AssociationListPage(Sitecore.Data.Items.Item innerItem) : 
-                base(innerItem) {
-        }
-        
-        public AssociationListPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
-                base(searchFields) {
-        }
-        
-        /// <summary>The name of the Sitecore Template that this class represents</summary>
-        public static string TemplateName {
-            get {
-                return "AssociationListPage";
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public static Sitecore.Data.ID ItemTemplateId {
-            get {
-                return new Sitecore.Data.ID("{9A435B37-877A-4B12-B9EA-6DF7540698DD}");
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public override Sitecore.Data.ID TemplateId {
-            get {
-                return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the CustomScripts field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customscripts")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomScripts {
-            get {
-                if (_customScripts == null) {
-                    _customScripts = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{30627248-3125-4A7E-BF76-DECFAD8FB7AB}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationListPage", "CustomScripts"), this.GetSearchFieldValue("customscripts"));
-                }
-                return _customScripts;
-            }
-        }
-        
-        /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
-        public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
-            get {
-                if (_scriptsInheritedOnSubpages == null) {
-                    _scriptsInheritedOnSubpages = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F64D4477-A514-4BF8-8539-B9FF7B2F9F36}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationListPage", "ScriptsInheritedOnSubpages"), this.GetSearchFieldValue("scriptsinheritedonsubpages"));
-                }
-                return _scriptsInheritedOnSubpages;
-            }
-        }
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class AssociationListPageInitializer : Synthesis.Initializers.ITemplateInitializer {
-        
-        public Sitecore.Data.ID InitializesTemplateId {
-            get {
-                return new Sitecore.Data.ID("{9A435B37-877A-4B12-B9EA-6DF7540698DD}");
-            }
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new AssociationListPage(innerItem);
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new AssociationListPage(searchFields);
-        }
-    }
-    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/AssociationPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class AssociationPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IAssociationPageItem {
@@ -1843,84 +1843,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         }
     }
     
-    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/BlancComponentPage template</summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public partial class BlancComponentPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IBlancComponentPageItem {
-        
-        private Synthesis.FieldTypes.TextField _customScripts;
-        
-        private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
-        
-        public BlancComponentPage(Sitecore.Data.Items.Item innerItem) : 
-                base(innerItem) {
-        }
-        
-        public BlancComponentPage(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
-                base(searchFields) {
-        }
-        
-        /// <summary>The name of the Sitecore Template that this class represents</summary>
-        public static string TemplateName {
-            get {
-                return "BlancComponentPage";
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public static Sitecore.Data.ID ItemTemplateId {
-            get {
-                return new Sitecore.Data.ID("{DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}");
-            }
-        }
-        
-        /// <summary>The ID of the Sitecore Template that this class represents</summary>
-        public override Sitecore.Data.ID TemplateId {
-            get {
-                return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the CustomScripts field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customscripts")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomScripts {
-            get {
-                if (_customScripts == null) {
-                    _customScripts = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{30627248-3125-4A7E-BF76-DECFAD8FB7AB}"], "/sitecore/templates/Project/Friskis/Page Types/BlancComponentPage", "CustomScripts"), this.GetSearchFieldValue("customscripts"));
-                }
-                return _customScripts;
-            }
-        }
-        
-        /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
-        public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
-            get {
-                if (_scriptsInheritedOnSubpages == null) {
-                    _scriptsInheritedOnSubpages = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F64D4477-A514-4BF8-8539-B9FF7B2F9F36}"], "/sitecore/templates/Project/Friskis/Page Types/BlancComponentPage", "ScriptsInheritedOnSubpages"), this.GetSearchFieldValue("scriptsinheritedonsubpages"));
-                }
-                return _scriptsInheritedOnSubpages;
-            }
-        }
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    public class BlancComponentPageInitializer : Synthesis.Initializers.ITemplateInitializer {
-        
-        public Sitecore.Data.ID InitializesTemplateId {
-            get {
-                return new Sitecore.Data.ID("{DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}");
-            }
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
-            return new BlancComponentPage(innerItem);
-        }
-        
-        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
-            return new BlancComponentPage(searchFields);
-        }
-    }
-    
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/CCCHeroPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class CCCHeroPage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.ICCCHeroPageItem {
@@ -2126,6 +2048,84 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
             return new CCCHeroPage(searchFields);
+        }
+    }
+    
+    /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/ComponentBlock template</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public partial class ComponentBlock : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.IComponentBlockItem {
+        
+        private Synthesis.FieldTypes.TextField _customScripts;
+        
+        private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
+        
+        public ComponentBlock(Sitecore.Data.Items.Item innerItem) : 
+                base(innerItem) {
+        }
+        
+        public ComponentBlock(global::System.Collections.Generic.IDictionary<string, string> searchFields) : 
+                base(searchFields) {
+        }
+        
+        /// <summary>The name of the Sitecore Template that this class represents</summary>
+        public static string TemplateName {
+            get {
+                return "ComponentBlock";
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public static Sitecore.Data.ID ItemTemplateId {
+            get {
+                return new Sitecore.Data.ID("{DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}");
+            }
+        }
+        
+        /// <summary>The ID of the Sitecore Template that this class represents</summary>
+        public override Sitecore.Data.ID TemplateId {
+            get {
+                return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the CustomScripts field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customscripts")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomScripts {
+            get {
+                if (_customScripts == null) {
+                    _customScripts = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{30627248-3125-4A7E-BF76-DECFAD8FB7AB}"], "/sitecore/templates/Project/Friskis/Page Types/ComponentBlock", "CustomScripts"), this.GetSearchFieldValue("customscripts"));
+                }
+                return _customScripts;
+            }
+        }
+        
+        /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
+        public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
+            get {
+                if (_scriptsInheritedOnSubpages == null) {
+                    _scriptsInheritedOnSubpages = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F64D4477-A514-4BF8-8539-B9FF7B2F9F36}"], "/sitecore/templates/Project/Friskis/Page Types/ComponentBlock", "ScriptsInheritedOnSubpages"), this.GetSearchFieldValue("scriptsinheritedonsubpages"));
+                }
+                return _scriptsInheritedOnSubpages;
+            }
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
+    public class ComponentBlockInitializer : Synthesis.Initializers.ITemplateInitializer {
+        
+        public Sitecore.Data.ID InitializesTemplateId {
+            get {
+                return new Sitecore.Data.ID("{DD8C637C-A5D8-4BF2-BC7A-CC07422F9F19}");
+            }
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstance(Sitecore.Data.Items.Item innerItem) {
+            return new ComponentBlock(innerItem);
+        }
+        
+        public Synthesis.IStandardTemplateItem CreateInstanceFromSearch(global::System.Collections.Generic.IDictionary<string, string> searchFields) {
+            return new ComponentBlock(searchFields);
         }
     }
     
@@ -4070,9 +4070,13 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class SharedArticlePage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.PageTypes.ISharedArticlePageItem {
         
+        private Synthesis.FieldTypes.ItemReferenceField _componentBlockItem;
+        
         private Synthesis.FieldTypes.TextField _customScripts;
         
         private Synthesis.FieldTypes.TextField _navigation_NavigationTitle;
+        
+        private Synthesis.FieldTypes.ItemReferenceField _originalItemLink;
         
         private Synthesis.FieldTypes.TextField _pageHeadingHeadline;
         
@@ -4129,6 +4133,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the ComponentBlockItem field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("componentblockitem")]
+        public Synthesis.FieldTypes.Interfaces.IItemReferenceField ComponentBlockItem {
+            get {
+                if (_componentBlockItem == null) {
+                    _componentBlockItem = new Synthesis.FieldTypes.ItemReferenceField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6ED9E5BF-0FCC-4AEB-ADAD-125C508AE31A}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "ComponentBlockItem"), this.GetSearchFieldValue("componentblockitem"));
+                }
+                return _componentBlockItem;
+            }
+        }
+        
         /// <summary>Represents the CustomScripts field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("customscripts")]
         public Synthesis.FieldTypes.Interfaces.ITextField CustomScripts {
@@ -4148,6 +4163,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _navigation_NavigationTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{0E12FF8A-DC4F-43F0-8D43-6C2BE8CF4021}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "Navigation_NavigationTitle"), this.GetSearchFieldValue("navigation_navigationtitle"));
                 }
                 return _navigation_NavigationTitle;
+            }
+        }
+        
+        /// <summary>Represents the OriginalItemLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("originalitemlink")]
+        public Synthesis.FieldTypes.Interfaces.IItemReferenceField OriginalItemLink {
+            get {
+                if (_originalItemLink == null) {
+                    _originalItemLink = new Synthesis.FieldTypes.ItemReferenceField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F1C13FFB-740B-4951-B4F4-393A81791013}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "OriginalItemLink"), this.GetSearchFieldValue("originalitemlink"));
+                }
+                return _originalItemLink;
             }
         }
         

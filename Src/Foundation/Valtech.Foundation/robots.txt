@@ -12,3 +12,5 @@ Disallow: /App_Data/
 Disallow: /temp/
 Disallow: /upload/
 Disallow: /xsl/
+Disallow: /ComponentBlocks
+Disallow: /componentblocks

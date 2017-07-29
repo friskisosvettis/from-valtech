@@ -2,9 +2,9 @@
 version: 1
 id: {EF929190-6E26-432E-94E0-A0A4755F826F}
 database: master
-path: /sitecore/templates/Branches/Friskis/Page Branches/BlancComponentPage
+path: /sitecore/templates/Branches/Friskis/Page Branches/ComponentBlock
 parent: {C7681066-D9E1-4146-8533-36CF0A4ABC97}
-name: BlancComponentPage
+name: ComponentBlock
 master: {00000000-0000-0000-0000-000000000000}
 template: {35E75C72-4985-4E09-88C3-0EAC6CD1E64F}
 templatekey: Branch
@@ -16,11 +16,11 @@ name: __Icon
 key: __icon
 content-length: 31
 
-applications/32x32/document.png
+people/32x32/cube_blue_edit.png
 ----version----
 language: sv-SE
 version: 1
-revision: d3b68f96-1293-468f-91db-6e57f3893379
+revision: 5d1ae1bf-0574-486b-9c29-10e099f86a51
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d3b68f96-1293-468f-91db-6e57f3893379
+5d1ae1bf-0574-486b-9c29-10e099f86a51
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T141233Z
+20170729T090139Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

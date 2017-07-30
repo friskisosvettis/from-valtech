@@ -35,9 +35,9 @@ content-length: 1
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
 key: datasource location
-content-length: 70
+content-length: 119
 
-/sitecore/content/Sweden/Friskis/Frontpage/National Shared DataSources
+query:./ancestor-or-self::*[@@templatename='AssociationPage']|query:./ancestor-or-self::*[@@templatename='WebsiteRoot']
 ----field----
 field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
 name: __Thumbnail
@@ -48,7 +48,7 @@ content-length: 58
 ----version----
 language: en
 version: 1
-revision: 215946d6-f2ae-444b-abdb-c3d24dc99f12
+revision: d494ee12-e0ab-4eaa-9e77-9d3fd09fb1f2
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -77,21 +77,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-215946d6-f2ae-444b-abdb-c3d24dc99f12
+d494ee12-e0ab-4eaa-9e77-9d3fd09fb1f2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170729T095817Z
+20170729T170116Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----version----
 language: sv-SE
 version: 1

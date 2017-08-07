@@ -36,7 +36,6 @@
     &__phone {
         background-image: url('/assets/images/icon_phone.svg');
     }
-
     &__mail {
         background-image: url('/assets/images/icon_mail.svg');
     }
@@ -185,6 +184,11 @@
     &__mail--light {
         &:before {
             background-image: url('/assets/images/icon_mail-white.svg');
+        }
+    }
+    &__info--light {
+        &:before {
+            background-image: url('/assets/images/icon_info-white.svg');
         }
     }
     &__goto-circle-red {

@@ -27,9 +27,9 @@
             @Model.ContactFooterItem.ContactEmail.Render(null ,"icon--large icon__mail--light")
             @if (Model.ContactFooterItem.ContactPhonenumber.HasValue)
             {
-                <a class="icon--large icon__phone--light" href="@Model.ContactFooterItem.ContactPhonenumber.RawValue">@Model.ContactFooterItem.ContactPhonenumber.Render()</a>
+                <a class="icon--large icon__phone--light" href="tel:@Model.ContactFooterItem.ContactPhonenumber.RawValue">@Model.ContactFooterItem.ContactPhonenumber.Render()</a>
             }
-            @Model.ContactFooterItem.ContactLink.Render(null, "icon--large icon__mail--light")
+            @Model.ContactFooterItem.ContactLink.Render(null, "icon--large icon__info--light")
         </div>
     </div>
 </div>

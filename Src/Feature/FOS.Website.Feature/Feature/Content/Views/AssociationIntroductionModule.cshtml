@@ -13,7 +13,7 @@
             <div class="introduction__pitch">
                 <h2 class="heading-3">@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroTitle)</h2>
                 <p>@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroBody)</p>
-                <a href="@Model.AssociationIntroductionModuleItem"> @Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroLinkLabel) </a>
+                <a href="@Model.AssociationIntroductionModuleItem" class="link--goto"> @Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroLinkLabel) </a>
             </div>
             <div class="introduction__goto">
                 <a href="@Model.AssociationIntroductionModuleItem.TrainingSelectionLink"><span class="introduction__icon introduction__icon--training-classes"></span>@Model.label_TrainingSelection</a>

@@ -117,6 +117,7 @@ $grid-outer: (
 
 
 .container {
+    margin: 0;
     @include layout($grid-outer);
     @include container();
     padding: 0 $space-double;

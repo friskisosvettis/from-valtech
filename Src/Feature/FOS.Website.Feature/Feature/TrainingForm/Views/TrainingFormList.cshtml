@@ -17,86 +17,88 @@
 
 @if (Model.TrainingFormList.Any())
 {
-    <ul class="container">
-        @foreach (SummarySpotModel summarySpot in Model.TrainingFormList)
-        {
-
-            if (counter == 0)
+    <div class="background--white">
+        <ul class="container">
+            @foreach (SummarySpotModel summarySpot in Model.TrainingFormList)
             {
-                containerClass = "container--6";
-            }
-            else if (counter == 2)
-            {
-                containerClass = "container--4";
-            }
-            else if (counter == 5)
-            {
-                containerClass = "container--12";
-            }
 
-            <li class="@containerClass">
-                <div class="teaser">
-                    <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                if (counter == 0)
+                {
+                    containerClass = "container--6";
+                }
+                else if (counter == 2)
+                {
+                    containerClass = "container--4";
+                }
+                else if (counter == 5)
+                {
+                    containerClass = "container--12";
+                }
 
-                        <div class="teaser--overlay">
-                            @if (summarySpot.SummaryItem.SummaryImage.HasValue)
-                            {
-                                if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                <li class="@containerClass">
+                    <div class="teaser">
+                        <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+
+                            <div class="teaser--overlay">
+                                @if (summarySpot.SummaryItem.SummaryImage.HasValue)
                                 {
-                                    @summarySpot.SummaryItem.SummaryImage.Render()
+                                    if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryImage.Render()
+                                    }
                                 }
-                            }
-                            <div class="teaser__overlay">
-                                <div class="teaser__content">
-                                    <h2 class="heading-3">
-                                        @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
-                                        {
-                                            @summarySpot.SummaryItem.SummaryHeading.Render(false)
-                                        }
-                                        else
-                                        {
-                                            @summarySpot.SummaryItem.Name
-                                        }
-                                    </h2>
-                                    @if (summarySpot.EventItem != null)
-                                    {
-                                        <p>
-                                            <small class="date icon--mini icon__event-light">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
-                                            @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                <div class="teaser__overlay">
+                                    <div class="teaser__content">
+                                        <h2 class="heading-3">
+                                            @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
                                             {
-                                                <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                @summarySpot.SummaryItem.SummaryHeading.Render(false)
                                             }
-                                            <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
-                                        </p>
-                                    }
-                                    @if (summarySpot.NewsItem != null)
-                                    {
-                                        <p>
-                                            <small class="date icon--mini icon__event-light">- @summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
-                                        </p>
-                                    }
-                                    @if (summarySpot.SummaryItem.SummaryText.HasValue)
-                                    {
-                                        <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
-                                    }
+                                            else
+                                            {
+                                                @summarySpot.SummaryItem.Name
+                                            }
+                                        </h2>
+                                        @if (summarySpot.EventItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__event-light">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                                {
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                }
+                                                <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
+                                            </p>
+                                        }
+                                        @if (summarySpot.NewsItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__event-light">- @summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                            </p>
+                                        }
+                                        @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                        {
+                                            <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                        }
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                    </a>
-                </div>
-            </li>
+                        </a>
+                    </div>
+                </li>
 
-            if (counter == 5)
-            {
-                counter = 0;
+                if (counter == 5)
+                {
+                    counter = 0;
+                }
+                else
+                {
+                    counter = counter + 1;
+                }
+
             }
-            else
-            {
-                counter = counter + 1;
-            }
-
-        }
-    </ul>
+        </ul>
+    </div>
 }

@@ -78,7 +78,7 @@ $hero-height-medium: rem(12 * $base-height);       //480px
     &--small {
         height: $hero-height-mini;
 
-        .hero_img {
+        .hero__img {
             height: $hero-height-mini;
         }
         .hero__content {
@@ -90,14 +90,14 @@ $hero-height-medium: rem(12 * $base-height);       //480px
         @include small-up {
             height: $hero-height-small;
 
-            .hero_img {
+            .hero__img {
                 height: $hero-height-small;
             }
         }
         @include xxlarge-up {
             height: $hero-height-medium;
 
-            .hero_img {
+            .hero__img {
                 height: $hero-height-medium;
             }
         }
@@ -120,66 +120,4 @@ $hero-height-medium: rem(12 * $base-height);       //480px
             background: rgba($color-black-90, 0.3)
         }
     }
-    /* USED ON TRAINING CENTER PAGE  --- possibly use for new section with opening hours*/
-    // &__infobox {
-    //     background-color: $color-white;
-    //     padding: 0 0 $space 0;
-    //     list-style-type: none;
-    //     box-shadow: 0 0 1px $color-dim-30;
-
-    //     li {
-    //         position: relative;
-
-    //         &:first-of-type {
-    //             border-bottom: 1px solid $color-black-20;
-    //             font-weight: 700;
-    //             margin-bottom: $space;
-
-    //             a:after {
-    //                 content: "";
-    //                 background-repeat: no-repeat;
-    //                 background-size: contain;
-    //                 margin: 0 $space-half 0 0;
-    //                 height: $icon-size-small;
-    //                 width: $icon-size-small;
-    //                 background-image: url('/assets/images/icon_arrow-right-red.svg');
-    //                 position: absolute;
-    //                 top: $space-double + $space-half;
-    //                 @include transition(margin-right, 0.35s);
-    //                 right: 0;
-
-    //                 @include medium-up {
-    //                     right: $space;
-    //                 }
-    //             }
-    //             a:hover {
-    //                 &:after {
-    //                     margin-right: 0;
-    //                     @include transition(margin-right, 0.35s);
-    //                 }
-    //             }
-    //         }
-
-    //         &:nth-of-type(2), &:last-of-type {
-    //             a {
-    //                 color: $color-text;
-    //                 padding-bottom: $space;
-    //                 padding-top: $space;
-    //                 word-break: break-all;
-    //             }
-    //         }
-    //         a {
-    //             text-shadow: none;
-    //             text-decoration: none;
-    //             padding: $space-double $space $space-double ($space-quad + $space);
-    //             display: block;
-    //             word-wrap:break-word;
-    //             overflow: hidden;
-
-    //             @include medium-up {
-    //                 padding-left: ($space-quad + $space-double);
-    //             }
-    //         }
-    //     }
-    // }
 }

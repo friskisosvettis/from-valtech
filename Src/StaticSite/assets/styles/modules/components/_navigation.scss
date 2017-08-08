@@ -337,8 +337,8 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         background-size: contain;
         display: inline-block;
         vertical-align: middle;
-        width: rem(16px);
-        height: rem(16px);
+        width: $icon-size-tiny;
+        height: $icon-size-tiny;
         margin-left: $space;
         @include transition(all ,0.3s);
 

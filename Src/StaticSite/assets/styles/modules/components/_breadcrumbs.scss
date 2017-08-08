@@ -19,13 +19,12 @@
         &:after {
             content: "";
             background-image: url('/assets/images/icon_arrow-right-grey.svg');
-            background-size: $icon-size-mini $icon-size-mini;
+            background-size: $icon-size-tiny $icon-size-tiny;
             background-repeat: no-repeat;
-            height: $icon-size-mini;
-            width: $icon-size-mini;
-
+            height: $icon-size-tiny;
+            width: $icon-size-tiny;
             display: inline-block;
-            margin: 0 $space-double 0 $space;
+            margin: 0 $space 0 $space-double;
             vertical-align: middle;
 
         }

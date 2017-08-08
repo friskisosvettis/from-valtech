@@ -28,6 +28,16 @@ $touch-width: 44px;
         position: fixed;
         width: 100%;
         top: 0;
+        overflow: hidden;
+        height: 30em;
+
+        @include xlarge-up {
+            height: 32em;
+        }
+        @include xxlarge-up {
+            height: 40em;
+        }
+
     }
 
     @include medium-up {

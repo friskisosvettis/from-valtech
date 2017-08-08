@@ -13,9 +13,9 @@
         width: 100%;
         background-image: url('/assets/images/icon_find.svg');
         background-repeat: no-repeat;
-        background-position: $space 50%;
+        background-position: right $space top 50%;
         background-size: $icon-size-small $icon-size-small;
-        padding-left: $space-quad;
+        padding-right: $space-quad;
         margin-top: $space-quad;
         margin-bottom: 0;
         border: none;

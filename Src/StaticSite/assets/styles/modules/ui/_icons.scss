@@ -32,15 +32,11 @@
     &--top {
         background-position: 0 0;
     }
-
     &__phone {
         background-image: url('/assets/images/icon_phone.svg');
     }
     &__mail {
         background-image: url('/assets/images/icon_mail.svg');
-    }
-    &__clock {
-        background-image: url('/assets/images/icon_clock.svg');
     }
     &__card {
         background-image: url('/assets/images/icon_card.svg');
@@ -109,24 +105,14 @@
             width: $icon-size;
         }
     }
-    &__pin {
+    &__book {
         &:before {
-            background-image: url('/assets/images/icon_map_white.svg');
+            background-image: url('/assets/images/icon_book.svg');
         }
     }
-    &__event {
+    &__book-light {
         &:before {
-            background-image: url('/assets/images/icon_event.svg');
-        }
-    }
-    &__event-light {
-        &:before {
-            background-image: url('/assets/images/icon_event-light.svg');
-        }
-    }
-    &__pin-map-light {
-        &:before {
-            background-image: url('/assets/images/icon_pin-map-light.svg');
+            background-image: url('/assets/images/icon_book-light.svg');
         }
     }
     &__play {
@@ -153,6 +139,11 @@
     &__pin-map {
         &:before {
             background-image: url('/assets/images/icon_pin-map-inactive.svg');
+        }
+    }
+    &__pin-map-light {
+        &:before {
+            background-image: url('/assets/images/icon_pin-map-light.svg');
         }
     }
     &__pin-map-filled {

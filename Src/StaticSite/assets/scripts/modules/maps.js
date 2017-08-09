@@ -515,7 +515,8 @@ var maps = {
 
         // Show more/less text on button
         $('*[data-js-alt-text]').on('click', function () {
-            // Get new and old text for button
+			// Get new and old text for button
+			$(this).toggleClass('open');
             var oldText = $(this).text();
             var newText = $(this).attr('data-js-alt-text');
 

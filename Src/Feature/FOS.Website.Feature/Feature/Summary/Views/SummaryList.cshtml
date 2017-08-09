@@ -92,7 +92,7 @@
                                             @if (summarySpot.EventItem != null)
                                             {
                                                 <p>
-                                                <small class="date icon--mini icon__event-light">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
                                                     @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                     {
                                                         <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
@@ -146,7 +146,7 @@
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p>
-                                                <small class="date--primary icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date--primary icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
                                                     <small class="date--primary"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
@@ -176,7 +176,7 @@
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p>
-                                                <small class="date icon--mini icon__event">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
                                                     <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>

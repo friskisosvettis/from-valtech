@@ -142,7 +142,6 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             outline: none;
             height: 100%;
             width: 100%;
-            font-weight: 700;
 
             &:hover {
                 text-decoration: underline;
@@ -228,17 +227,24 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             width: 7em;
             vertical-align: middle;
             display: inline-block;
-            font-weight: 700;
+            
+            a.active {
+                font-weight: 700;
+            }
 
             &:first-of-type {
                 width: $menu-height;
-                a{
+                a {
                     padding: 0;
                     text-align: left;
                 }
             }
             &:last-of-type {
-                width: 12em;
+                position: absolute;
+                top: 50%;
+                right: $space-double;
+                transform: translateY(-50%);
+                width: auto;
             }
         }
         &.hide {
@@ -256,7 +262,6 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             padding: $space;
 
             @include large-up {
-                font-weight: 700;
                 padding: 0 $space;
 
                 &:hover,
@@ -267,8 +272,10 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         }
         button {
             outline: none;
-            padding: $space;
-            width: 100%;
+            width: auto;
+            background: $color-dim-40;
+            border-radius: $space-quad;
+            padding: $space-half $space;
         }
 
         ul {

@@ -215,5 +215,9 @@ $map-height: rem($base-height*12);
         background-repeat: no-repeat;
         background-size: 46px 46px;
     }
-
+    &.open {
+        &:before {
+            background-image: url('/assets/images/icon_delete.svg');
+        }
+    }
 }

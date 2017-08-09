@@ -272,8 +272,10 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         }
         button {
             outline: none;
-            padding: $space;
-            width: 100%;
+            width: auto;
+            background: $color-dim-40;
+            border-radius: $space-quad;
+            padding: $space-half $space;
         }
 
         ul {

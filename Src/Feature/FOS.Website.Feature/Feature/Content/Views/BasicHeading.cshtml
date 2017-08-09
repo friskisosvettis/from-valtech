@@ -28,7 +28,7 @@
             @if (Model.EventItem != null)
             {
                 <p class="date--container">
-                    <span class="date--primary icon--mini icon__event">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</span>
+                    <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</span>
                     @if (Model.EventItem.EventEndDate.HasValue)
                     {
                         <span class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t"), @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>

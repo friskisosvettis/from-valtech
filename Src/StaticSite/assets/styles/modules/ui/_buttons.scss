@@ -58,16 +58,16 @@
         padding: $space + $space-half !important;
 
         &--left {
-            padding-left: rem(44px + $space-half) !important;
+            padding-left: rem(35px) !important;
         }
 
         &--right {
-            padding-right: rem(44px + $space-half) !important;
+            padding-right: rem(35px) !important;
         }
 
         &.btn--book {
-            background-image: url('/assets/images/icon_book.svg');
-            background-size: rem(30px) rem(30px);
+            background-image: url('/assets/images/icon_book-light.svg');
+            background-size: $icon-size-small $icon-size-small;
             background-position: left $space top 50%;
             text-align: left;
         }

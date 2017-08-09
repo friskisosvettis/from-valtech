@@ -32,15 +32,11 @@
     &--top {
         background-position: 0 0;
     }
-
     &__phone {
         background-image: url('/assets/images/icon_phone.svg');
     }
     &__mail {
         background-image: url('/assets/images/icon_mail.svg');
-    }
-    &__clock {
-        background-image: url('/assets/images/icon_clock.svg');
     }
     &__card {
         background-image: url('/assets/images/icon_card.svg');
@@ -109,14 +105,14 @@
             width: $icon-size;
         }
     }
-    &__event {
+    &__book {
         &:before {
-            background-image: url('/assets/images/icon_event.svg');
+            background-image: url('/assets/images/icon_book.svg');
         }
     }
-    &__event-light {
+    &__book-light {
         &:before {
-            background-image: url('/assets/images/icon_event-light.svg');
+            background-image: url('/assets/images/icon_book-light.svg');
         }
     }
     &__play {

@@ -327,7 +327,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             text-align: right;
             float: right;
 
-            .btn--book {
+            .btn--book, .btn--train {
                 margin-right: 60px;
                 vertical-align: middle;
                 display: inline-block;

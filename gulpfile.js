@@ -632,6 +632,7 @@ gulp.task('z_compile-handlebars', function () {
 
 // Assets start
 gulp.task('z_copy-assets-images', function () {
+    gulp.src(config.assetConfig.app + '/images/favicon.ico').pipe(gulp.dest(config.paths.websiteRoot));
     return gulp.src(config.assetConfig.app + '/images/**/*')
         .pipe(imagemin({
             progressive: true,

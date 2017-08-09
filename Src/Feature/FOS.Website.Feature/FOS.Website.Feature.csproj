@@ -1099,6 +1099,7 @@
     <Content Include="Feature\ContentBlocks\Views\MediaAndText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Quote.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Tickers.cshtml" />
+    <Content Include="Feature\Content\Views\HeadTitle.cshtml" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

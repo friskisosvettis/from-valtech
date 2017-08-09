@@ -24,10 +24,17 @@ key: __icon
 content-length: 37
 
 Applications/32x32/window_warning.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+9999
 ----version----
 language: en
 version: 1
-revision: 817f140f-6f5f-4776-b59f-c0410f4375a6
+revision: fac45a23-338b-4a34-af75-2a4235b5c1fc
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-817f140f-6f5f-4776-b59f-c0410f4375a6
+fac45a23-338b-4a34-af75-2a4235b5c1fc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170627T152133Z
+20170809T132138Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1158,10 +1158,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
-        
         public ArticlePage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1331,28 +1327,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
-            }
-        }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
             }
         }
     }
@@ -1867,10 +1841,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
-        
         public CCCHeroPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -2009,28 +1979,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
-            }
-        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -2158,10 +2106,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
-        
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public EventListPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2334,28 +2278,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/EventListPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/EventListPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
-            }
-        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -2409,10 +2331,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
-        
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public EventPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2605,28 +2523,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
-            }
-        }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
             }
         }
     }
@@ -3397,10 +3293,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
-        
         public HeroPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -3517,28 +3409,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/HeroPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/HeroPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
-            }
-        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -3588,10 +3458,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
-        
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public NewsListPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -3764,28 +3630,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/NewsListPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/NewsListPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
-            }
-        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -3837,10 +3681,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
-        
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public NewsPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -4024,28 +3864,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/NewsPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/NewsPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
-            }
-        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -4099,10 +3917,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
-        
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public SharedArticlePage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -4295,28 +4109,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
-            }
-        }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
             }
         }
     }
@@ -4533,10 +4325,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
-        private Synthesis.FieldTypes.TextField _customTypeText;
-        
-        private Synthesis.FieldTypes.TextField _summaryTextCards;
-        
         public TrainingFormPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -4750,28 +4538,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
-            }
-        }
-        
-        /// <summary>Represents the CustomTypeText field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
-        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
-            get {
-                if (_customTypeText == null) {
-                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
-                }
-                return _customTypeText;
-            }
-        }
-        
-        /// <summary>Represents the SummaryTextCards field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
-        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
-            get {
-                if (_summaryTextCards == null) {
-                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
-                }
-                return _summaryTextCards;
             }
         }
     }

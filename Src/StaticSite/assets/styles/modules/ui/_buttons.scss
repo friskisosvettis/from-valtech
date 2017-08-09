@@ -72,6 +72,13 @@
             text-align: left;
         }
 
+        &.btn--train {
+            background-image: url('/assets/images/icon_pin-map-light.svg');
+            background-size: $icon-size-small $icon-size-small;
+            background-position: left $space top 50%;
+            text-align: left;
+        }
+
         &.btn--external-link {
             background-image: url('/assets/images/icon_external-link.svg');
             background-size: rem(15px) rem(15px);

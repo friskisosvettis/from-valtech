@@ -1,56 +1,20 @@
 ﻿using FOS.Website.Feature.Content.Data;
-using FOS.Website.Feature.Content.PresentationData;
-using Sitecore.Mvc.Presentation;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Synthesis;
 using FOS.Website.Feature.Content.Models;
-using Sitecore.Buckets.Extensions;
-using Valtech.Foundation.SitecoreExtensions;
 using Valtech.Foundation.Synthesis;
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.InteropServices.WindowsRuntime;
 using FOS.Website.Concrete.Feature.Content.Data;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.SearchTypes;
-using Sitecore.Data;
 using Sitecore.Data.Items;
-
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Sitecore.Analytics.Rules.Conditions;
 using Sitecore.ContentSearch.Linq;
-using Sitecore.ContentSearch.Linq.Solr;
-
 
 namespace FOS.Website.Feature.Content.Controllers
 {
     public class TrainingCenterCollectionMapController : Controller
     {
-        private IEnumerable<IMapNodeItem> GetAllMapNodes(Item item)
-        {
-            string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
-            using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
-            {
-
-                string templateID = MapNode.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
-
-                var query = context.GetQueryable<SearchResultItem>()
-                    .Where(i => i["_latestversion"].Equals("1"))
-                    .Where(i => i.Language.Equals(item.Language.Name))
-                    .Where(i => i["_templates"].Contains(templateID));
-
-                var result = query.GetResults();
-
-                return result.Hits.Select(i => i.Document.GetItem().As<IMapNodeItem>()).Where(n => n != null);
-
-            }
-        }
-
         private IEnumerable<IMapNodeItem> GetAllDecendentMapNodes(Item item)
         {
             string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
@@ -65,7 +29,11 @@ namespace FOS.Website.Feature.Content.Controllers
 
                 var result = query.GetResults();
 
-                return result.Hits.Select(i => i.Document.GetItem().As<IMapNodeItem>()).Where(n => n != null);
+                var resultItems = result.Hits.Select(i => i.Document.GetItem());
+                                
+                return resultItems.OrderBy(x => !string.IsNullOrEmpty(x["__Sortorder"])? int.Parse(x["__Sortorder"]) : 0)
+                                .Select(y => y.As<IMapNodeItem>())
+                                .Where(z => z != null);
             }
         }
 

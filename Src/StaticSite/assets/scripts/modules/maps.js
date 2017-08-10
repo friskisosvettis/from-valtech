@@ -33,7 +33,6 @@ var maps = {
             }
 
             if ($(window).width() > _mediumBreakpoint) {
-                //loadGoogleMaps();
                 //only inits maps api when maps element present
                 $(document).on("mapsApiLoader:events:loaded", function() {
                     initializeMap();
@@ -485,8 +484,11 @@ var maps = {
         $('button.map__list--show').on('click', function (e) {
             e.preventDefault();
             var index = $(this).closest('li').attr('data-js-map-i');
-            if(!_initialized) {
-                loadGoogleMaps(index);
+            if (!_initialized) {
+                $(document).on("mapsApiLoader:events:loaded", function () {
+                    initializeMap(index);
+                });
+                _mapsApi.init();
             } else {
                 showPin(index);
             }
@@ -496,7 +498,10 @@ var maps = {
         // When user clicks on "Map" tab
         $('*[data-js-map-show]').on('click', function () {
             if (!_initialized) {
-                loadGoogleMaps();
+                $(document).on("mapsApiLoader:events:loaded", function () {
+                    initializeMap();
+                });
+                _mapsApi.init();
             }
         });
 

@@ -11,7 +11,7 @@ $divider-height: rem(9 * $base-height);        //360px
 
     @include small-up {
         height: $divider-height;
-        margin-bottom: 0;
+        margin-bottom: $space-double;
     }
 
     &__content {

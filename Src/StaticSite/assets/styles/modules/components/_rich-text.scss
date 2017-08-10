@@ -13,7 +13,6 @@
 
     @include medium-up {
         padding: 0 $space-quad;
-        margin: 0 auto $space-double auto;
     }
 
     h2, h3, h4 {
@@ -42,6 +41,11 @@
             .rich-text {
                 padding-left: 20px;
             }
+        }
+    }
+    .container--12 {
+        .rich-text {
+            margin: 0 auto $space-double auto;
         }
     }
 }

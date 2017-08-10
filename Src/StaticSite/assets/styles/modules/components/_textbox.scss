@@ -5,7 +5,6 @@ $textbox-height: rem(9 * $base-height);        //360px
     display: table;
 
     &.rich-text {
-        overflow: hidden;
         height: $textbox-height;
         margin-bottom: $space-double;
         padding: $space $space-quad !important;

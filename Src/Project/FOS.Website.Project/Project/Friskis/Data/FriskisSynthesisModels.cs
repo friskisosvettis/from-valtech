@@ -134,7 +134,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/EventPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{128BB843-9606-40F4-96E3-692C189C9055}", "nKjiNhgyVoN9JpankmN+8F6cpfs=", "Valtech.Foundation.Synthesis")]
-    public partial interface IEventPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.Event.IEventItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    public partial interface IEventPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.Event.IEventItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem, global::FOS.Website.Feature.Taxonomy.ITaxonomyItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/Frontpage template</summary>
@@ -164,7 +164,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/NewsPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{32AFD867-6BC6-49CD-AABC-5244A13FD9B5}", "XYS4VxaGZ6OPPuZ5E9PfhQusABE=", "Valtech.Foundation.Synthesis")]
-    public partial interface INewsPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.News.INewsItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    public partial interface INewsPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.News.INewsItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem, global::FOS.Website.Feature.Taxonomy.ITaxonomyItem {
     }
     
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/SharedArticlePage template</summary>
@@ -182,7 +182,7 @@ namespace FOS.Website.Project.Friskis.PageTypes {
     /// <summary>Represents the /sitecore/templates/Project/Friskis/Page Types/TrainingFormPage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{4D46261E-471A-4C6B-AF3E-E420751ACE4B}", "yue/4DcIcNNyK/gkgULwqihA3zg=", "Valtech.Foundation.Synthesis")]
-    public partial interface ITrainingFormPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.TrainingForm.ITrainingFormItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem {
+    public partial interface ITrainingFormPageItem : global::FOS.Website.Feature.Content.Data.IBasicHeadingItem, global::FOS.Website.Feature.Content.Data.IRichTextContentItem, global::FOS.Website.Feature.Navigation.Data.INavigationDataItem, global::FOS.Website.Feature.Summary.ISummaryItem, global::FOS.Website.Feature.ComponentBlock.IOriginalItemItem, global::FOS.Website.Feature.ComponentBlock.IComponentBlockItem, global::FOS.Website.Feature.TrainingForm.ITrainingFormItem, global::FOS.Website.Feature.CustomScripts.Data.IPageSpecificCustomScriptsItem, global::FOS.Website.Feature.Taxonomy.ITaxonomyItem {
     }
 }
 
@@ -2324,6 +2324,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ImageField _summaryImage;
         
+        private Synthesis.FieldTypes.ItemReferenceListField _taxonomy1;
+        
         private Synthesis.FieldTypes.DateTimeField _eventEndDate;
         
         private Synthesis.FieldTypes.BooleanField _navigation_IsSecondary;
@@ -2479,6 +2481,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{93226CCC-A692-4A1F-9445-772065350708}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "SummaryImage"), this.GetSearchFieldValue("summaryimage"));
                 }
                 return _summaryImage;
+            }
+        }
+        
+        /// <summary>Represents the Taxonomy field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
+        public Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy1 {
+            get {
+                if (_taxonomy1 == null) {
+                    _taxonomy1 = new Synthesis.FieldTypes.ItemReferenceListField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "Taxonomy"), this.GetSearchFieldValue("taxonomy"));
+                }
+                return _taxonomy1;
             }
         }
         
@@ -3676,6 +3689,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ImageField _summaryImage;
         
+        private Synthesis.FieldTypes.ItemReferenceListField _taxonomy1;
+        
         private Synthesis.FieldTypes.BooleanField _navigation_IsSecondary;
         
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
@@ -3829,6 +3844,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{93226CCC-A692-4A1F-9445-772065350708}"], "/sitecore/templates/Project/Friskis/Page Types/NewsPage", "SummaryImage"), this.GetSearchFieldValue("summaryimage"));
                 }
                 return _summaryImage;
+            }
+        }
+        
+        /// <summary>Represents the Taxonomy field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
+        public Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy1 {
+            get {
+                if (_taxonomy1 == null) {
+                    _taxonomy1 = new Synthesis.FieldTypes.ItemReferenceListField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}"], "/sitecore/templates/Project/Friskis/Page Types/NewsPage", "Taxonomy"), this.GetSearchFieldValue("taxonomy"));
+                }
+                return _taxonomy1;
             }
         }
         
@@ -4317,6 +4343,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.ImageField _summaryImage;
         
+        private Synthesis.FieldTypes.ItemReferenceListField _taxonomy1;
+        
         private Synthesis.FieldTypes.BooleanField _hideThisTrainingFormFromList;
         
         private Synthesis.FieldTypes.BooleanField _navigation_IsSecondary;
@@ -4494,6 +4522,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{93226CCC-A692-4A1F-9445-772065350708}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "SummaryImage"), this.GetSearchFieldValue("summaryimage"));
                 }
                 return _summaryImage;
+            }
+        }
+        
+        /// <summary>Represents the Taxonomy field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("taxonomy")]
+        public Synthesis.FieldTypes.Interfaces.IItemReferenceListField Taxonomy1 {
+            get {
+                if (_taxonomy1 == null) {
+                    _taxonomy1 = new Synthesis.FieldTypes.ItemReferenceListField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{6A2D6A09-1D7A-48F4-80B7-3BBD2B28F623}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "Taxonomy"), this.GetSearchFieldValue("taxonomy"));
+                }
+                return _taxonomy1;
             }
         }
         

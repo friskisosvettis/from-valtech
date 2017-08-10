@@ -25,16 +25,6 @@
 
 @if (Model.SummaryListItem != null && Model.SummaryList.Any())
 {
-    // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
-    var cssClass = "teaser--small";
-    if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
-    {
-        cssClass = "teaser--full";
-    }
-    if (Model.SummaryListItem.DisplayAsHighlightedList.Value)
-    {
-        cssClass = "";
-    }
     <div class="container">
         <div class="container--12">
             <h2 class="color--primary margin-bottom--none text-align--center">@Model.SummaryListItem.Header</h2>
@@ -43,6 +33,17 @@
         <ul class="container">
             @foreach (SummarySpotModel summarySpot in Model.SummaryList)
             {
+                // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
+                var cssClass = "teaser--small";
+                if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
+                {
+                    cssClass = "teaser--full";
+                }
+                if (Model.SummaryListItem.DisplayAsHighlightedList.Value)
+                {
+                    cssClass = "";
+                }
+
                 if (Model.SummaryListItem.DisplayAsCollage.Value)
                 {
                     if (counter == 0)
@@ -145,7 +146,7 @@
                                     {
                                         if (summarySpot.EventItem != null)
                                         {
-                                            <p>
+                                            <p class="margin-bottom--none">
                                                 <small class="date--primary icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {

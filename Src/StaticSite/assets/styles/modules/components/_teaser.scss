@@ -14,10 +14,9 @@ $teaser-height-large: rem(9 * $base-height);        //360px
 $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 
 .teaser {
-    margin-bottom: $space;
     overflow: hidden;
     text-align: center;
-    padding: $space-half 0;
+    /*padding: $space-half 0;*/
     @include transform-scale(1.00);
     @include transition(opacity ,0.35s);
 
@@ -54,6 +53,7 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 
     /*--------------SMALL VERSION TEASER ARTICLE/NEWS/EVENTS--------------*/
     &--small {
+        margin-bottom: $space;
         padding: 0;
         @include box-shadow(0, 1px, 2px, 0, $color-black-20);
         height: $teaser-height-large;
@@ -80,6 +80,7 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
     /*----------------- Full width teaser -----------------*/
 
     &--full {
+        margin-bottom: $space;
         transform: none;
 
         &:hover {
@@ -167,8 +168,11 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
         position: relative; // Should ot be possible to have an overlay without a link?
         overflow: hidden;
         height: $teaser-height-medium;
+        margin-bottom: $space;
 
         @include small-up {
+            margin-bottom: 0;
+
             > .teaser__overlay > .teaser__content {
                 padding: 0 $space-quad;
             }

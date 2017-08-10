@@ -18,5 +18,7 @@
 @*@Html.Sitecore().ItemRendering(Model.Item)*@
 @if(Model.Item != null)
 {
-    @Html.Sitecore().TrueItemRendering(Model.Item, null)
+    <div class="background--white">
+        @Html.Sitecore().TrueItemRendering(Model.Item, null)
+    </div>
 }

@@ -91,6 +91,9 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
         @include medium-up {
             max-height: $teaser-height-large;
         }
+        .date {
+            color: $color-text;
+        }
         img {
             @include span(12);
             height: $teaser-height-small;

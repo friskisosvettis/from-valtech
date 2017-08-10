@@ -12,10 +12,10 @@
     int counter = 0;
 
     // Different wrapping classes for different colums dependent on the editors choice
-    var containerClass = "container--12";
-    if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("2"))
+    var containerClass = "container--6";
+    if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
     {
-        containerClass = "container--6";
+        containerClass = "container--12";
     }
     else if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("3"))
     {
@@ -35,7 +35,7 @@
             {
                 // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
                 var cssClass = "teaser--small";
-                if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
+                if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1") && !Model.SummaryListItem.DisplayAsCollage.Value || counter == 5)
                 {
                     cssClass = "teaser--full";
                 }
@@ -110,9 +110,20 @@
                                                     <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                                                 </p>
                                             }
-                                            @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                            @* If it is a highlighted new/event item only show the summarytext if it is displayed in full with *@
+                                            @if (summarySpot.NewsItem != null || summarySpot.EventItem != null)
                                             {
-                                                <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                                if (containerClass == "container--12" && summarySpot.SummaryItem.SummaryText.HasValue)
+                                                 {
+                                                     <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                                 }
+                                            }
+                                            else
+                                            {
+                                                if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                                {
+                                                    <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                                }
                                             }
                                         </div>
                                     </div>
@@ -142,7 +153,7 @@
                                     </h3>
 
                                     @*Article/news/events FULL WIDTH KICKER: Render with text *@
-                                    @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
+                                    @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1") && !Model.SummaryListItem.DisplayAsCollage.Value || counter == 5)
                                     {
                                         if (summarySpot.EventItem != null)
                                         {
@@ -160,7 +171,7 @@
                                         if (summarySpot.NewsItem != null)
                                         {
                                             <p>
-                                                <small class="date--primary">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                                <small class="date--primary">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                                             </p>
                                         }
                                         if (summarySpot.SummaryItem.SummaryText.HasValue)
@@ -187,7 +198,7 @@
                                         if (summarySpot.NewsItem != null)
                                         {
                                             <p>
-                                                <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                                             </p>
                                         }
                                     }

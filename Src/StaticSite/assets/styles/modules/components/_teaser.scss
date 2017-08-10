@@ -16,7 +16,6 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
 .teaser {
     overflow: hidden;
     text-align: center;
-    /*padding: $space-half 0;*/
     @include transform-scale(1.00);
     @include transition(opacity ,0.35s);
 

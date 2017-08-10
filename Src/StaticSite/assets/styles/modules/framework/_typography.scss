@@ -196,12 +196,11 @@ ol {
         list-style-type: none;
         counter-increment: item;
         margin: 0 0 $space 0;
-        line-height: 1;
+        padding-left: $space-double + $space;
 
         &:before {
-            display: inline-block;
-            width: 1em;
-            padding-right: $space-double;
+            position: absolute;
+            margin-left: -($space-double+ $space);
             font-weight: bold;
             text-align: right;
             content: counter(item) ".";

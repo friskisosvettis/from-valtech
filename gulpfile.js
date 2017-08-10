@@ -642,6 +642,8 @@ gulp.task('z_copy-assets-images', function () {
 });
 
 gulp.task('z_copy-assets-fonts', function () {
+    //makes sure to copy .htaccess file as well
+    gulp.src(config.assetConfig.app + '/fonts/.*').pipe(gulp.dest(config.paths.websiteRoot + '/assets/fonts'));
     return gulp.src(config.assetConfig.app + '/fonts/**/*')
         .pipe(gulp.dest(config.paths.websiteRoot + '/assets/fonts'));
 });

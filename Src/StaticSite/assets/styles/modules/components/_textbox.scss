@@ -3,6 +3,7 @@ $textbox-height: rem(9 * $base-height);        //360px
 
 .textbox {
     display: table;
+    width: 100%;
 
     &.rich-text {
         height: $textbox-height;

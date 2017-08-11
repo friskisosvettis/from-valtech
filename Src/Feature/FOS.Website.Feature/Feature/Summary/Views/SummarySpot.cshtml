@@ -102,12 +102,12 @@
                                 </p>
                             }
                         }
-                        @if (Model.NewsItem != null)
+                        @if (Model.NewsItem != null && Model.NewsItem.DisableDate.Value == false)
                         {
                             <p>
                                 <small class="date--primary">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                             </p>
-                        }-
+                        }
                         @if (Model.SummaryItem.SummaryText.HasValue)
                         {
                             <p>

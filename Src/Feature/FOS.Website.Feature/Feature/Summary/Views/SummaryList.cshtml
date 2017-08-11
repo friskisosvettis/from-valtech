@@ -104,7 +104,7 @@
                                                     }
                                                 </p>
                                             }
-                                            @if (summarySpot.NewsItem != null)
+                                            @if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                             {
                                                 <p>
                                                     <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
@@ -168,7 +168,7 @@
                                                 <small class="date--primary icon--mini  icon__pin-map">@summarySpot.EventItem.EventLocation</small>
                                             </p>
                                         }
-                                        if (summarySpot.NewsItem != null)
+                                        if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                         {
                                             <p>
                                                 <small class="date--primary">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
@@ -195,7 +195,7 @@
                                                 }
                                             </p>
                                         }
-                                        if (summarySpot.NewsItem != null)
+                                        if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                         {
                                             <p>
                                                 <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>

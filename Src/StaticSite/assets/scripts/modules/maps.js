@@ -436,12 +436,9 @@ var maps = {
 
             // Center map in the right half of the map if shown in a bigger breakpoint than medium
             if ($(window).width() > _mediumBreakpoint) {
-                var width = ($(window).width() / 2);
-                map.panBy(-width, 0);
+                var width = ($(window).width() / 4 );
                 google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
-                    if (this.getZoom()){
-                        this.setZoom(this.getZoom() -1);
-                    }
+                    map.panBy(-width, 0);
                 });
             }
             _initialized = true;

@@ -186,29 +186,30 @@ a {
 /*------------------ L I S T S --------------------*/
 /*-------------------------------------------------*/
 
-ol {
-    padding: 0;
-    margin: 0 0 $base-height*1.5 0;
+.rich-text {
+    ol {
+        padding: 0;
+        margin: 0 0 $base-height*1.5 0;
 
-    counter-reset: item;
+        counter-reset: item;
     
-    li {
-        list-style-type: none;
-        counter-increment: item;
-        margin: 0 0 $space 0;
-        padding-left: $space-double + $space;
+        li {
+            list-style-type: none;
+            counter-increment: item;
+            margin: 0 0 $space 0;
+            padding-left: $space-double + $space;
 
-        &:before {
-            position: absolute;
-            margin-left: -($space-double+ $space);
-            font-weight: bold;
-            text-align: right;
-            content: counter(item) ".";
-            vertical-align: middle;
+            &:before {
+                position: absolute;
+                margin-left: -($space-double+ $space);
+                font-weight: bold;
+                text-align: right;
+                content: counter(item) ".";
+                vertical-align: middle;
+            }
         }
     }
 }
-
 
 .rich-text ul {
     padding: 0;

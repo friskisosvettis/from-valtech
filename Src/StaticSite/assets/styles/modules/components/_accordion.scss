@@ -15,11 +15,14 @@
 
     table {
         width: 100%;
-        max-width: $text-max-width;
+        max-width: $text-max-width/2;
         margin: 0 auto $space-double auto;
 
+        tr > td {
+            text-transform: capitalize;
+        }
+
         td, th {
-            width: 50%;
             text-align: left;
             padding: $space 0;
         }

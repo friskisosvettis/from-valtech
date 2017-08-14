@@ -528,9 +528,16 @@ var maps = {
         });
 
         function showPin(index) {
-            $('*[data-js-map-show]').trigger('click');
-            google.maps.event.trigger(markers[index], 'click');
-        }
+			$('*[data-js-map-show]').trigger('click');
+			
+			if ($(window).width() < _mediumBreakpoint) {
+				google.maps.event.addListener(markers[index], "click", function () {
+					$('html,body')
+					.animate({ scrollTop: $('#map').offset().top - $('.navigation__container').height() }, 800);
+				});
+			}
+			google.maps.event.trigger(markers[index], 'click');			
+		}
     }
 }
 

@@ -312,7 +312,6 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         z-index: 2;
         display: block;
         width: 100%;
-        height: $menu-height;
         top: 0;
         left: 0;
         @include container();

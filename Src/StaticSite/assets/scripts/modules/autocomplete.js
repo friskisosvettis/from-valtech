@@ -17,7 +17,18 @@ var autocompleteModule = {
 	// Initialize script and bind events
     init: function () {
 
-		$(document).ready(function() {
+		$(document).ready(function() {           
+            // Variables for translations
+            var errorMessage = $('.autocomplete--content').attr('data-js-autocomplete-error');
+            var categoryTrainingcenter = $('.autocomplete--content').attr('data-js-autocomplete-trainingcenter');
+            var categoryArea = $('.autocomplete--content').attr('data-js-autocomplete-area');
+            var categoryAssociation = $('.autocomplete--content').attr('data-js-autocomplete-association');
+            var categoryTraingcenterOne = $('.autocomplete--content').attr('data-js-autocomplete-trainingcenter-one');
+            var categoryTraingcenterMore = $('.autocomplete--content').attr('data-js-autocomplete-trainingcenter-more');
+            var categoryShowAll = $('.autocomplete--content').attr('data-js-autocomplete-show-all');
+            console.log('error', errorMessage, 'categoryTrainingcenter', categoryTrainingcenter,
+                'one', categoryTraingcenterOne, 'more', categoryTraingcenterMore,
+            'showall', categoryShowAll, 'area', categoryArea, 'assoc', categoryAssociation);
 
 		    $('.autocomplete__input')
 		        .on('click',
@@ -31,7 +42,7 @@ var autocompleteModule = {
 				minChars: 3,
                 lookupLimit: 10,
 				groupBy: 'sortBy',
-                noSuggestionNotice: 'Vi kan inte hitta det du letar efter tyvärr!',
+                noSuggestionNotice: errorMessage,
                 showNoSuggestionNotice: true,
                 appendTo: '.autocomplete--content',
                 maxHeight: 1400,
@@ -90,8 +101,7 @@ var autocompleteModule = {
 
                         //------ AREA ------//
                         // If it's an area add the associations
-                        if ($(suggestion).closest('.autocomplete-container').data('autocomplete-category') == "Område"
-                        ) {
+                        if ($(suggestion).closest('.autocomplete-container').data('autocomplete-category') == "Område") {
                             var associations = suggestions[i].data.associations;
                             $(suggestion)
                                 .closest('.autocomplete-container')
@@ -102,11 +112,7 @@ var autocompleteModule = {
                                 $(suggestion)
                                     .closest('*[data-autocomplete-category]')
                                     .find('.autocomplete-suggestion-results')
-                                    .append('<li><a href=' +
-                                        associations[j].url +
-                                        '>' +
-                                        associations[j].name +
-                                        '</a></li>')
+                                    .append('<li><a href=' + associations[j].url + '>' + associations[j].name + '</a></li>')
                             }
                             // Find data attribute and remove data index.
                             $('*[data-autocomplete-category="Område"]')

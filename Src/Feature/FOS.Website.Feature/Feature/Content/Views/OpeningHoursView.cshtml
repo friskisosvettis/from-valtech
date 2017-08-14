@@ -15,7 +15,6 @@
 var dayOfWeek = ((int)DateTime.Today.AddDays(1).DayOfWeek + 6) % 7;
     <div class="accordion maps-api-opening-hours" data-day-of-week="@dayOfWeek" data-google-place-id="@Model.OpeningHoursItem.GooglePlaceId.RawValue">
         <!--SHOW LINK OR BUTTON WITH EXPANDING DIV-->
-        <!--<a hef="#" class="icon__goto--after icon--mini--after"><strong>Våra öppettider</strong></a>-->
         <button id="opening_hours_today" class="accordion__btn icon__expand--after icon--mini--after"></button>
         <div class="accordion--expandable">
             <table>

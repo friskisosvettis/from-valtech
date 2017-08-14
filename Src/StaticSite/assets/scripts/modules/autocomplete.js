@@ -112,7 +112,7 @@ var autocompleteModule = {
                             $(suggestion)
                                 .closest('.autocomplete-container')
                                 .append('<ul class="autocomplete-suggestion-results"></ul>');
-                            $(suggestion).closest('.autocomplete-suggestion').replace('Area', categoryArea + ' ');
+                            $(suggestion).closest('.autocomplete-suggestion').prepend(categoryArea +' ');
 
                             for (var j = 0; j < associations.length; j++) {
                                 $(suggestion)

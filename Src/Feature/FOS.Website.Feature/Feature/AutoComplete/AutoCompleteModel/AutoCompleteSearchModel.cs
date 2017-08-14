@@ -17,7 +17,7 @@ namespace FOS.Website.Feature.AutoComplete.AutoCompleteModel
             value = associationModel.Name;
             data = new {
                 sortBy = associationModel.Name + "__a",
-                category = "Förening",
+                category = "Association",
                 url = associationModel.Url,
                 centers = associationModel.Centers };
         }
@@ -27,7 +27,7 @@ namespace FOS.Website.Feature.AutoComplete.AutoCompleteModel
             value = regionModel.Name;
             data = new {
                 sortBy = regionModel.Name + "__r",
-                category = "Område",
+                category = "Area",
                 associations = regionModel.Associations
             };
         }
@@ -37,7 +37,7 @@ namespace FOS.Website.Feature.AutoComplete.AutoCompleteModel
             value = trainingCenterModel.Name;
             data = new {
                 sortBy = trainingCenterModel.Name + "__tc",
-                category = "Träningscenter",
+                category = "Trainingcenter",
                 url = trainingCenterModel.Url,
                 address = trainingCenterModel.Address,
                 association = trainingCenterModel.Association};

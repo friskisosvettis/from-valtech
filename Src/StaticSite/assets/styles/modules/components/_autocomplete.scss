@@ -48,7 +48,7 @@
         text-align: left;
         margin-top: $border-thick;
 
-        &[data-autocomplete-category="Förening"]{
+        &[data-autocomplete-category="Association"]{
             .autocomplete-group {
                 display: none; // TODO OTHER APPROACH
             }
@@ -166,7 +166,7 @@
                     }
                 }
             }
-        &[data-autocomplete-category="Område"]{
+        &[data-autocomplete-category="Area"]{
             padding: $space-double;
 
             @include small-up {
@@ -226,7 +226,7 @@
                 }
             }
         }
-        &[data-autocomplete-category="Träningscenter"]{
+        &[data-autocomplete-category="Trainingcenter"]{
             padding: $space-double;
 
             @include small-up {

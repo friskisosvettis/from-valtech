@@ -28,8 +28,8 @@ var autocompleteModule = {
             var showAll = $('.autocomplete--content').attr('data-js-autocomplete-show-all');
 
             console.log('error', errorMessage, 'categoryTrainingcenter', categoryTrainingcenter,
-                'one', categoryTraingcenterOne, 'more', categoryTraingcenterMore,
-            'showall', categoryShowAll, 'area', categoryArea, 'assoc', categoryAssociation);
+                'one', traingcenterOne, 'more', traingcenterMore,
+            'showall', showAll, 'area', categoryArea, 'assoc', categoryAssociation);
 
             $('.autocomplete__input')
                 .on('click',

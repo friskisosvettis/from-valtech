@@ -20,16 +20,10 @@ var autocompleteModule = {
         $(document).ready(function () {
             // Variables for translations
             var errorMessage = $('.autocomplete--content').attr('data-js-autocomplete-error');
-            var categoryTrainingcenter = $('.autocomplete--content').attr('data-js-autocomplete-trainingcenter');
             var categoryArea = $('.autocomplete--content').attr('data-js-autocomplete-area');
-            var categoryAssociation = $('.autocomplete--content').attr('data-js-autocomplete-association');
             var traingcenterOne = $('.autocomplete--content').attr('data-js-autocomplete-trainingcenter-one');
             var traingcenterMore = $('.autocomplete--content').attr('data-js-autocomplete-trainingcenter-more');
             var showAll = $('.autocomplete--content').attr('data-js-autocomplete-show-all');
-
-            console.log('error', errorMessage, 'categoryTrainingcenter', categoryTrainingcenter,
-                'one', traingcenterOne, 'more', traingcenterMore,
-            'showall', showAll, 'area', categoryArea, 'assoc', categoryAssociation);
 
             $('.autocomplete__input')
                 .on('click',

@@ -8,11 +8,13 @@
         height: 100px;
         border-radius: 50%;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
 
         img {
             width: auto;
             height: 100%;
-            margin-left: -50%;
         }
     }
 

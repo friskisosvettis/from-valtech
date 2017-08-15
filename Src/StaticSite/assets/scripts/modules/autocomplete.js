@@ -83,9 +83,9 @@ var autocompleteModule = {
                             var centers = suggestions[i].data.centers;
                             $(suggestion).closest('.autocomplete-container').append('<ul class="autocomplete-suggestion-results"></ul>');
 
-                            var tc = traingcenterOne;
-                            if (centers.length < 1) {
-                                tc = traingcenterMore;
+                            var tc = traingcenterMore;
+                            if (centers.length == 1) {
+                                tc = traingcenterOne;
                             }
                             $(suggestion).closest('.autocomplete-suggestion').append('<p>' + centers.length + ' ' + tc + '</p>');
                             // Add the first five centers into a list

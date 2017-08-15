@@ -21,7 +21,7 @@
     if (imageField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <div class="media-container media-container--360">
-            @imageField.Render(cssClass: "media-container__media")
+            @imageField.Render(cssClass: "media-container__media media-container__media--cover")
         </div>
     }
 }

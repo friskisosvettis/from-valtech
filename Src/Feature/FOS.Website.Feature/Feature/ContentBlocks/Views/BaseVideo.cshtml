@@ -18,7 +18,7 @@
         <div style="float: right;width: 30%">
             <strong>@EncodingHelper.GetRazorViewText("Välj bild för video")</strong><br />
             <div class="media-container" style="width: 160px;height: 90px">
-                 @Model.ImageThumbnailField.Render(cssClass: "media-container__media")
+                 @Model.ImageThumbnailField.Render(cssClass: "media-container__media media-container__media--cover")
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
         var videoUrl = Model.ImageThumbnailField.HasValue ? Model.ImageThumbnailField.Url : defaultThumbnail;
 
         <div class="media-container @mediaContainerClass media-container__youtube media-container__video" data-js-youtube="@Model.VideoIdField">
-            <img class="media-container__media" src="@videoUrl" />
+            <img class="media-container__media media-container__media--cover" src="@videoUrl" />
             <div class="icon--large icon__play media-container__control"><span class="hidden--accessible">Spela video</span></div>
         </div>
     }

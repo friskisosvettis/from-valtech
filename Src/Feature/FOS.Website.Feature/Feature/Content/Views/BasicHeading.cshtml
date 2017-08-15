@@ -4,7 +4,6 @@
 @using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model BasicHeadingModel
-
 @if (Model.BasicHeadingItem == null)
 {
     <div class="container--relative">
@@ -12,7 +11,6 @@
     </div>
     return;
 }
-
 <div class="hero hero--small">
     <div class="hero__img">
         @Model.BasicHeadingItem.PageHeadingImage.Render()
@@ -22,32 +20,34 @@
 <div class="background--white">
     @Html.Sitecore().Placeholder("breadcrumbs")
     <div class="container">
-        <div class="container--12 text-align--center">
-            <h1 class="margin-bottom--none">@Model.BasicHeadingItem.PageHeadingHeadline.Render()</h1>
-            <p class="intro">@Model.BasicHeadingItem.PageHeadingIntroduction.Render()</p>
-            @if (Model.EventItem != null)
-            {
-                <p class="date--container">
-                    <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</span>
-                    @if (Model.EventItem.EventEndDate.HasValue)
-                    {
-                        <span class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t"), @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>
-                    }
-                    else
-                    {
-                        <span class="date--primary"> @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>
-                    }
+        <div class="container--12">
+            <div class="text-align--center text-maxwidth--center">
+                <h1 class="margin-bottom--none">@Model.BasicHeadingItem.PageHeadingHeadline.Render()</h1>
+                <p class="intro">@Model.BasicHeadingItem.PageHeadingIntroduction.Render()</p>
+                @if (Model.EventItem != null)
+                {
+                    <p class="date--container">
+                        <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</span>
+                        @if (Model.EventItem.EventEndDate.HasValue)
+                        {
+                            <span class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t"), @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>
+                        }
+                        else
+                        {
+                            <span class="date--primary"> @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>
+                        }
 
-                    @if (Model.EventItem.EventLocation != null)
-                    {
-                        <span class="date--primary icon--mini icon__pin-map">@Model.EventItem.EventLocation.Render()</span>
-                    }
-            </p>
-            }
-            @if (Model.NewsItem != null)
-            {
-                <p class="date date--container">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</p>
-            }
+                        @if (Model.EventItem.EventLocation != null)
+                        {
+                            <span class="date--primary icon--mini icon__pin-map">@Model.EventItem.EventLocation.Render()</span>
+                        }
+                    </p>
+                }
+                @if (Model.NewsItem != null)
+                {
+                    <p class="date date--container">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</p>
+                }
+            </div>
         </div>
     </div>
 </div>

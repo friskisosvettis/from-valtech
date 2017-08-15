@@ -55,12 +55,12 @@ var navigationModule = {
             $(_navigationContainer).toggleClass('scroll',$(document).scrollTop() >= _scroll);
 
             var st = $(this).scrollTop();
-            if (st > lastScrollTop){
-                // hide nav when scrolling down
-                _navigationTop.addClass('hide');
-            } else {
+            if (st < lastScrollTop || st <= 0){
                 // show nav when scrolling up
                 _navigationTop.removeClass('hide');
+            } else {
+                // hide nav when scrolling down
+                _navigationTop.addClass('hide');
             }
             lastScrollTop = st;
 

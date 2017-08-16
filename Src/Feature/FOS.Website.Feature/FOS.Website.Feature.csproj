@@ -1195,6 +1195,8 @@
     <Compile Include="Feature\Navigation\Models\NavigationBarModel.cs" />
     <Compile Include="Feature\Navigation\Models\NavigationFooterFrontPage.cs" />
     <Compile Include="Feature\Navigation\NavigationDataCollector.cs" />
+    <Compile Include="Feature\SearchUtilityFunctions\SearchExtensions.cs" />
+    <Compile Include="Feature\SearchUtilityFunctions\SearchUtility.cs" />
     <Compile Include="Feature\Taxonomy\Constants.cs" />
     <Compile Include="Feature\Taxonomy\Controllers\Taxonomy.cs" />
     <Compile Include="Feature\Taxonomy\Controllers\TaxonomyController.cs" />

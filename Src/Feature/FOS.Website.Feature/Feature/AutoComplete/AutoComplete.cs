@@ -21,7 +21,7 @@ namespace FOS.Website.Feature.AutoComplete
             var autoCompleteList = new List<AutoCompleteSearchModel>();
             autoCompleteList.AddRange(GetAssocitionsStartingWith(searchQuery, homePage));
             autoCompleteList.AddRange(GetRegionsStartingWith(searchQuery, homePage));
-            autoCompleteList.AddRange(GeTrainingCenterStartingWith(searchQuery, homePage));
+            autoCompleteList.AddRange(GetTrainingCenterStartingWith(searchQuery, homePage));
             return "{ \"suggestions\":" + JsonConvert.SerializeObject(autoCompleteList) + "}";
         }
 
@@ -34,7 +34,7 @@ namespace FOS.Website.Feature.AutoComplete
                 var associationItem = assocition.InnerItem;
                 var associotionModel = new AssociationModel(associationItem.DisplayName,
                     LinkManager.GetItemUrl(associationItem));
-                var trainingCenterList = TrainingCenterSearch.GetAllTrainingCenterOnAssociation(associationItem);
+                var trainingCenterList = TrainingCenterSearch.GetAllTrainingCenterOnAssociation(associationItem).AsSitecoreOrdered();
                 foreach (var trainingCenter in trainingCenterList)
                 {
                     var trainingCenterItem = trainingCenter.InnerItem;
@@ -72,10 +72,10 @@ namespace FOS.Website.Feature.AutoComplete
             return regions.Select(r => new AutoCompleteSearchModel(r));
         }
 
-        private IEnumerable<AutoCompleteSearchModel> GeTrainingCenterStartingWith(string searchQuery, Item homePage)
+        private IEnumerable<AutoCompleteSearchModel> GetTrainingCenterStartingWith(string searchQuery, Item homePage)
         {
             var trainingCenters = new List<TrainingCenterModel>();
-            var foundTrainingCenters = TrainingCenterSearch.GetAllTrainingCenterStartingWith(searchQuery, homePage);
+            var foundTrainingCenters = TrainingCenterSearch.GetAllTrainingCenterStartingWith(searchQuery, homePage).AsSitecoreOrdered();
             foreach (var trainingCenter in foundTrainingCenters)
             {
                 var trainingCenterItem = trainingCenter.InnerItem;

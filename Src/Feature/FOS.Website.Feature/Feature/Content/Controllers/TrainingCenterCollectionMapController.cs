@@ -6,6 +6,7 @@ using Synthesis;
 using FOS.Website.Feature.Content.Models;
 using Valtech.Foundation.Synthesis;
 using FOS.Website.Concrete.Feature.Content.Data;
+using FOS.Website.Feature.SearchUtilityFunctions;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Data.Items;
@@ -15,26 +16,10 @@ namespace FOS.Website.Feature.Content.Controllers
 {
     public class TrainingCenterCollectionMapController : Controller
     {
+        private string MapNodeTemplateId => MapNode.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
         private IEnumerable<IMapNodeItem> GetAllDecendentMapNodes(Item item)
         {
-            string index = string.Format("sitecore_{0}_index", Sitecore.Context.Database.Name);
-            using (var context = ContentSearchManager.GetIndex(index).CreateSearchContext())
-            {
-                string templateID = MapNode.ItemTemplateId.ToShortID().ToString().ToLowerInvariant();
-                var query = context.GetQueryable<SearchResultItem>()
-                    .Where(i => i["_latestversion"].Equals("1"))
-                    .Where(i => i.Language.Equals(item.Language.Name))
-                    .Where(i => i.Paths.Contains(item.ID))
-                    .Where(i => i["_templates"].Contains(templateID));
-
-                var result = query.GetResults();
-
-                var resultItems = result.Hits.Select(i => i.Document.GetItem());
-                                
-                return resultItems.OrderBy(x => !string.IsNullOrEmpty(x["__Sortorder"])? int.Parse(x["__Sortorder"]) : 0)
-                                .Select(y => y.As<IMapNodeItem>())
-                                .Where(z => z != null);
-            }
+            return SearchUtility.SearchFor<IMapNodeItem>(item, MapNodeTemplateId).AsSitecoreOrdered();
         }
 
         public ActionResult GetTrainingCenterCollectionMapView()

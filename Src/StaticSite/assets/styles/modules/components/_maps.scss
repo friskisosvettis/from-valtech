@@ -166,18 +166,19 @@ $map-height: rem($base-height*12);
 */
 .trainingcenter-page {
     .map__item--large {
-        min-height: rem($base-height*4);
         position: relative;
 
+        @include small-up {
+            //TODO: Remove only add icon when needed
+            .address:before {
+                display: inline-block;
+            }
+        }
 
         @include medium-up {
             min-height: rem($base-height*6);
         }
 
-        //TODO: Remove only add icon when needed
-        .address:before {
-            display: inline-block;
-        }
         > button {
             position: absolute;
             bottom: $space-quad;

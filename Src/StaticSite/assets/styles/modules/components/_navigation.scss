@@ -5,7 +5,7 @@ $menu-height-animation: rem($base-height*2);
 $logo-height-small: rem($base-height*3);
 $topbar-height: rem($base-height);
 $total-height: rem($base-height*5); // menu-height + topbar-height
-
+$btn-small-pos: 17px;
 .navigation {
     display: none;
     list-style-type: none;
@@ -110,7 +110,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
                     top: $topbar-height;
                 }
                 .navigation__btn--close {
-                    top: rem($space + $base-height); //space + topbar
+                    top: rem($btn-small-pos + $base-height); //17px (top position of buttons in mobile menu) s+ topbar
                 }
             }
         }
@@ -157,14 +157,14 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         }
         &--open {
             position: absolute;
-            top: $space;
+            top: $btn-small-pos;
             right: 0;
         }
         &--close {
             display: none;
             z-index: 10000;
             position: fixed; //TODO Look into other solution - fixed in fixed not good
-            top: $space;
+            top: $btn-small-pos;
             right: 0;
             color: $color-white;
         }

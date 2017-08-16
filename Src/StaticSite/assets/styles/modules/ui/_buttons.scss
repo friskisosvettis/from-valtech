@@ -66,10 +66,17 @@
         }
 
         &.btn--book {
-            background-image: url('/assets/images/icon_book-light.svg');
-            background-size: $icon-size-small $icon-size-small;
-            background-position: left $space top 50%;
+            padding-left: 15px !important;
+            margin-top: 17px; //to center on mobile menu (80px - icon-size)/2
+            margin-bottom: 17px; //to center on mobile menu (80px - icon-size)/2
             text-align: left;
+
+            @include small-up {
+                padding-left: 45px !important;
+                background-image: url('/assets/images/icon_book-light.svg');
+                background-size: $icon-size-small $icon-size-small;
+                background-position: left 15px top 50%;
+            }
         }
 
         &.btn--train {

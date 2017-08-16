@@ -28,6 +28,10 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             background: $color-dim-50;
             @include transition(background ,0.5s);
 
+            .navigation__item ul.open {
+                padding-top: 0 !important;
+                @include transition(padding-top ,0.5s);
+            }
         }
 
         &.animation {
@@ -142,6 +146,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             outline: none;
             height: 100%;
             width: 100%;
+            margin: 0 $space-double;
 
             &:hover {
                 text-decoration: underline;
@@ -224,7 +229,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             }
         }
         @include large-up {
-            width: 7em;
+            width: auto;
             vertical-align: middle;
             display: inline-block;
             
@@ -262,7 +267,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             padding: $space;
 
             @include large-up {
-                padding: 0 $space;
+                padding: 0 $space-double;
 
                 &:hover,
                 &:active {
@@ -273,9 +278,14 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
         button {
             outline: none;
             width: auto;
-            background: $color-dim-40;
-            border-radius: $space-quad;
-            padding: $space-half $space;
+            margin-top: $space;
+
+            @include large-up {
+                margin-top: 0;
+                background: $color-dim-40;
+                border-radius: $space-quad;
+                padding: $space-half $space;
+            }
         }
 
         ul {
@@ -285,9 +295,12 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
             text-align: center;
             list-style-type: none;
             overflow-y: scroll;
+            top: $menu-height;
 
             @include large-up {
                 &.open {
+                    padding-top: 100px;
+                    @include transition(padding-top ,0.5s);
                     position: fixed;
                     background-color: $primary-color-dim-95;
                     top: $menu-height;
@@ -296,7 +309,7 @@ $total-height: rem($base-height*5); // menu-height + topbar-height
                     z-index: -1;
                 }
                 a {
-                    padding: $space-half 0;
+                    padding: $space-double 0;
                 }
 
             }

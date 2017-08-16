@@ -181,8 +181,11 @@ $map-height: rem($base-height*12);
 
         > button {
             position: absolute;
-            bottom: $space-quad;
             right: 0;
+
+            @include small-up {
+                bottom: $space-quad;
+            }
         }
         > a > h4 {
             color: $color-text;

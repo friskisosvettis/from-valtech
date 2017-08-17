@@ -29,7 +29,10 @@
 
     &__navigation {
         &--primary {
-            font-weight: bold;
+            font-family: $font-bold;
+        }
+        &--secondary {
+            font-family: $font;
         }
 
         &--primary, &--secondary {
@@ -39,7 +42,7 @@
         }
 
         &--slim {
-            font-weight: bold;
+            font-family: $font-bold;
 
             @include medium-up {
                 text-align: center;

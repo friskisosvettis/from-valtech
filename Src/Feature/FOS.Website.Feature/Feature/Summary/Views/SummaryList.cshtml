@@ -158,10 +158,10 @@
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p class="margin-bottom--none">
-                                                <small class="date--primary icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
-                                                    <small class="date--primary"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
                                                 }
                                             </p>
                                             <p>
@@ -171,7 +171,7 @@
                                         if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                         {
                                             <p>
-                                                <small class="date--primary">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                                             </p>
                                         }
                                         if (summarySpot.SummaryItem.SummaryText.HasValue)

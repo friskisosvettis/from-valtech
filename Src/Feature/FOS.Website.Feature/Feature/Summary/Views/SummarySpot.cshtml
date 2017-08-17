@@ -88,24 +88,24 @@
                             if (Model.EventItem.EventStartDate.HasValue)
                             {
                                 <p class="margin-bottom--none">
-                                    <small class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</small>
+                                    <small class="date icon--mini icon__book">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</small>
                                     @if (Model.EventItem.EventEndDate.HasValue)
                                     {
-                                        <small class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventEndDate.Value.ToString("t")</small>
+                                        <small class="date"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventEndDate.Value.ToString("t")</small>
                                     }
                                 </p>
                             }
                             if (Model.EventItem.EventLocation.HasValue)
                             {
                                 <p>
-                                    <small class="date--primary icon--mini  icon__pin-map">@Model.EventItem.EventLocation</small>
+                                    <small class="date icon--mini  icon__pin-map">@Model.EventItem.EventLocation</small>
                                 </p>
                             }
                         }
                         @if (Model.NewsItem != null && Model.NewsItem.DisableDate.Value == false)
                         {
                             <p>
-                                <small class="date--primary">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
+                                <small class="date">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
                             </p>
                         }
                         @if (Model.SummaryItem.SummaryText.HasValue)

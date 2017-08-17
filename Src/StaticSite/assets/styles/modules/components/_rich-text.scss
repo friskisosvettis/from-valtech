@@ -20,6 +20,7 @@
     }
 
     p {
+        font-size: rem($base-font-size);
         margin-bottom: $space !important;
     }
 }

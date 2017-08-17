@@ -12,6 +12,7 @@ using Sitecore.Links;
 using Synthesis;
 using Valtech.Foundation.Synthesis;
 
+
 namespace FOS.Website.Feature.AutoComplete
 {
     public class AutoComplete
@@ -31,17 +32,19 @@ namespace FOS.Website.Feature.AutoComplete
             var associations = AssociationSearch.GetAllAssociationsStartingWith(searchQuery, homePage);
             foreach (var assocition in associations)
             {
-                var associationItem = assocition.InnerItem;
-                var associotionModel = new AssociationModel(associationItem.DisplayName,
-                    LinkManager.GetItemUrl(associationItem));
-                var trainingCenterList = TrainingCenterSearch.GetAllTrainingCenterOnAssociation(associationItem).AsSitecoreOrdered();
+                var associationFlagTemplateItem = assocition.InnerItem.As<IAssociationFlagTemplateItem>();
+                var url = associationFlagTemplateItem.ShowAllCentersCustomUrl.HasValue
+                    ? associationFlagTemplateItem.ShowAllCentersCustomUrl.Href
+                    : LinkManager.GetItemUrl(assocition.InnerItem);
+                var associotionModel = new AssociationModel(associationFlagTemplateItem.DisplayName, url);
+
+                var trainingCenterList = TrainingCenterSearch.GetAllTrainingCenterOnAssociation(assocition.InnerItem).AsSitecoreOrdered();
                 foreach (var trainingCenter in trainingCenterList)
                 {
                     var trainingCenterItem = trainingCenter.InnerItem;
                     var mapNode = trainingCenterItem.As<IMapNodeItem>();
                     var address = (mapNode != null)
-                        ? String.Format("{0}{1}", mapNode.Street.RawValue,
-                            (mapNode.StreetNr.HasTextValue ? " " + mapNode.StreetNr.RawValue : ""))
+                        ? $"{mapNode.Street.RawValue}{(mapNode.StreetNr.HasTextValue ? " " + mapNode.StreetNr.RawValue : "")}"
                         : "";
                     var tcUrl = LinkManager.GetItemUrl(trainingCenterItem);
                     var tcCity = mapNode?.City.RawValue;

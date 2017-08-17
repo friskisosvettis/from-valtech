@@ -1369,6 +1369,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
         
+        private Synthesis.FieldTypes.HyperlinkField _showAllCentersCustomUrl;
+        
         private Synthesis.FieldTypes.TextField _summaryHeading;
         
         private Synthesis.FieldTypes.TextField _title;
@@ -1537,6 +1539,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _scriptsInheritedOnSubpages = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F64D4477-A514-4BF8-8539-B9FF7B2F9F36}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "ScriptsInheritedOnSubpages"), this.GetSearchFieldValue("scriptsinheritedonsubpages"));
                 }
                 return _scriptsInheritedOnSubpages;
+            }
+        }
+        
+        /// <summary>Represents the ShowAllCentersCustomUrl field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("showallcenterscustomurl")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ShowAllCentersCustomUrl {
+            get {
+                if (_showAllCentersCustomUrl == null) {
+                    _showAllCentersCustomUrl = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F73A4644-4274-488C-B7F5-0C1B5DF2A94C}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "ShowAllCentersCustomUrl"), this.GetSearchFieldValue("showallcenterscustomurl"));
+                }
+                return _showAllCentersCustomUrl;
             }
         }
         

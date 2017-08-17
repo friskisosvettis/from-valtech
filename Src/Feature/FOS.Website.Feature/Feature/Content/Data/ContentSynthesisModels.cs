@@ -13,8 +13,14 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationFlagTemplate template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{C31EE96F-98DD-46B1-908A-201446DFD394}", "UX7neFAarfaLP0oEz0lrLMUtykE=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{C31EE96F-98DD-46B1-908A-201446DFD394}", "4silshdnbaMmVvoJR7t3nX6bSeY=", "Valtech.Foundation.Synthesis")]
     public partial interface IAssociationFlagTemplateItem : Synthesis.IStandardTemplateItem {
+        
+        /// <summary>Represents the ShowAllCentersCustomUrl field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("showallcenterscustomurl")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField ShowAllCentersCustomUrl {
+            get;
+        }
     }
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/AssociationIntroductionModule template</summary>
@@ -812,6 +818,8 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class AssociationFlagTemplate : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IAssociationFlagTemplateItem {
         
+        private Synthesis.FieldTypes.HyperlinkField _showAllCentersCustomUrl;
+        
         public AssociationFlagTemplate(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -838,6 +846,17 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         public override Sitecore.Data.ID TemplateId {
             get {
                 return ItemTemplateId;
+            }
+        }
+        
+        /// <summary>Represents the ShowAllCentersCustomUrl field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("showallcenterscustomurl")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField ShowAllCentersCustomUrl {
+            get {
+                if (_showAllCentersCustomUrl == null) {
+                    _showAllCentersCustomUrl = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{F73A4644-4274-488C-B7F5-0C1B5DF2A94C}"], "/sitecore/templates/Feature/Content/Data/AssociationFlagTemplate", "ShowAllCentersCustomUrl"), this.GetSearchFieldValue("showallcenterscustomurl"));
+                }
+                return _showAllCentersCustomUrl;
             }
         }
     }

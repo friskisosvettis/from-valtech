@@ -21,7 +21,7 @@
 
 @helper Profile()
 {
-    <h3>@Model.QuoteItem.QuoteText.Render()</h3>
+    <h3 class="blockquote">@Model.QuoteItem.QuoteText.Render()</h3>
     <p class="margin-bottom--none">@Model.QuoteItem.QuotePersonName.Render()</p>
     <p class="color--primary">@Model.QuoteItem.QuotePersonTitle.Render()</p>
 }

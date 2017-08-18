@@ -132,17 +132,28 @@
         text-align: center;
         display: block;
 
-        .icon__twitter, .icon__instagram, .icon__facebook {
-            display: inline-block;
-        }
-
         a {
             margin: $space-half 0;
 
             @include medium-up {
-                margin-right: $space-double;
                 display: inline-block;
             }
+        }
+    }
+    .icon__twitter, .icon__instagram, .icon__facebook {
+        display: inline-block;
+        margin: 0 $space-half $space-double $space-half;
+
+        @include medium-up {
+            margin: 0 $space $space-double $space;
+        }
+    }
+    .icon__phone--light, .icon__mail--light, .icon__info--light {
+        text-align: left;
+        margin: $space-double 0 0 0;
+
+        @include medium-up {
+            margin: 0 $space 0 $space;
         }
     }
 }

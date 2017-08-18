@@ -111,6 +111,10 @@ cite {
     margin: $space 0;
     display: block;
     font-size: rem($base-font-size);
+    font-style: normal;
+    p {
+        font-size: rem($base-font-size);
+    }
 }
 
 a {

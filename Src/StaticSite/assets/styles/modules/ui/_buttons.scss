@@ -101,4 +101,8 @@
     &--on-red {
         @include button-settings($primary-color-dark, $color-white);
     }
+
+    &--wrap-text {
+      white-space: normal;
+    }
 }

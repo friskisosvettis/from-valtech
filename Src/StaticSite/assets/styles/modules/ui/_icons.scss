@@ -230,16 +230,11 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-        height: $icon-size;
-        width: $icon-size;
-        margin: 0 auto;
-        display: block;
-
-        @include medium-up {
-            display: inline-block;
-            padding: 0 $space;
-            vertical-align: middle;
-        }
+        height: $icon-size-medium;
+        width: $icon-size-medium;
+        display: inline-block;
+        padding: 0 $space;
+        vertical-align: middle;
     }
 
     &--find {

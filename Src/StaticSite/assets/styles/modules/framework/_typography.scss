@@ -3,7 +3,7 @@
 body {
     font-family: $font;
     line-height: 1.5;
-    font-size: $base-font-size;
+    font-size: rem($base-font-size);
     color: $color-text;
 
     -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@ h2, .heading-2 {
 }
 
 h3, .heading-3, .rich-text h2 {
-    font-size: rem(18px);
+    font-size: rem(20px);
 
     @include medium-up {
         font-size: rem(24px);
@@ -40,26 +40,21 @@ h3, .heading-3, .rich-text h2 {
 }
 
 h4,.heading-4, .rich-text h3 {
-    font-size: rem(16px);
-
-    @include medium-up {
-        font-size: rem(18px);
-    }
+    font-size: rem(18px);
 }
 
 h5, .heading-5, .rich-text h4 {
-    font-size: rem(14px);
-
-    @include medium-up {
-        font-size: rem(16px);
-    }
+    font-size: rem(16px);
 }
 
 p {
     margin: 0 0 $space 0;
-    font-size: rem(18px);
 }
-
+.rich-text {
+    p, ol, ul, a, strong, em {
+        font-size: rem(16px);
+    }
+}
 .date {
     color: $color-black-40;
 

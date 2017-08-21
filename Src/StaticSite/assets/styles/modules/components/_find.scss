@@ -23,18 +23,13 @@
     &__action {
         color: $color-text;
         text-decoration: none;
-        font-weight: 700;
+        text-align: left;
         display: block;
-        margin: 0 $space $space $space;
-
-        @include xsmall-up {
-            width: 40%;
-            display: inline-block;
-            vertical-align: top;
-        }
+        margin: $space;
 
         @include small-up {
             width: auto;
+            display: inline-block;
             margin-top: $space;
         }
     }

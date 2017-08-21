@@ -26,7 +26,7 @@
 
 <nav class="breadcrumbs">
     <ol>
-        var immediateParent = @Model.BreadCrumbsImmediateParents.ElementAt(1);
+        @{ var immediateParent = @Model.BreadCrumbsPages.ElementAt(1);}
         <li><a href="@LinkManager.GetItemUrl(@immediateParent)">@GetBreadCrumbLabel(immediateParent)</a></li>
         <li>@GetBreadCrumbLabel(@Model.BreadCrumbsPages.First())</li>
     </ol>

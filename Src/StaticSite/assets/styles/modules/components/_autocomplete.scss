@@ -8,7 +8,7 @@
     }
     &--content {
         @include span(12);
-        padding: $space-double $space 0 $space;
+        padding: $space-quad $space 0 $space;
         text-align: center;
     }
     &__input {
@@ -20,7 +20,7 @@
         background-position: right $space top 50%;
         background-size: $icon-size-small $icon-size-small;
         padding-right: $space-quad;
-        padding-right: $space-double;
+        padding-left: $space-double;
         margin-top: $space-double;
         margin-bottom: 0;
         border: none;

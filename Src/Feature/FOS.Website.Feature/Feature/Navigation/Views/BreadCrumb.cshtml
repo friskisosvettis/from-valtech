@@ -24,14 +24,10 @@
     }
 }
 
-@{ var pagesInBreadCrumbs = Model.BreadCrumbsPages.Count();}
 <nav class="breadcrumbs">
     <ol>
-        @for (var i = 1; i < @pagesInBreadCrumbs; i++)
-        {
-            var page = @Model.BreadCrumbsPages.ElementAt(@pagesInBreadCrumbs - @i);
-            <li><a href="@LinkManager.GetItemUrl(@page)">@GetBreadCrumbLabel(page)</a></li>
-        }
+        var immediateParent = @Model.BreadCrumbsImmediateParents.ElementAt(1);
+        <li><a href="@LinkManager.GetItemUrl(@immediateParent)">@GetBreadCrumbLabel(immediateParent)</a></li>
         <li>@GetBreadCrumbLabel(@Model.BreadCrumbsPages.First())</li>
     </ol>
 </nav>

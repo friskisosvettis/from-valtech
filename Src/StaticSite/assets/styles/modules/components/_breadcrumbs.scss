@@ -12,29 +12,26 @@
     li {
         display: inline-block;
         color: $color-black-40;
+        line-height: 0;
 
         &::before {
             display: none;
         }
         &:after {
             content: "";
-            background-image: url('/assets/images/icon_arrow-right-grey.svg');
-            background-size: $icon-size-tiny $icon-size-tiny;
+            background-image: url('/assets/images/icon_arrow-round.svg');
+            transform: rotate(180deg);
+            background-size: $icon-size-small $icon-size-small;
             background-repeat: no-repeat;
-            height: $icon-size-tiny;
-            width: $icon-size-tiny;
+            height: $icon-size-small;
+            width: $icon-size-small;
             display: inline-block;
             margin: 0 $space 0 $space-double;
             vertical-align: middle;
 
         }
-
-        &:last-of-type {
-            &:after {
-                display: none;
-            }
-        }
     }
+
     a {
         color: $color-black-40;
         text-decoration: none;

@@ -22,7 +22,7 @@
     <div class="container">
         <div class="container--12">
             <div class="text-align--center text-maxwidth--center">
-                <h1 class="margin-bottom--none">@Model.BasicHeadingItem.PageHeadingHeadline.Render()</h1>
+                <h1>@Model.BasicHeadingItem.PageHeadingHeadline.Render()</h1>
                 <p class="intro">@Model.BasicHeadingItem.PageHeadingIntroduction.Render()</p>
                 @if (Model.EventItem != null)
                 {
@@ -43,7 +43,7 @@
                         }
                     </p>
                 }
-                @if (Model.NewsItem != nulll && Model.NewsItem.DisableDate.Value == false)
+                @if (Model.NewsItem != null && Model.NewsItem.DisableDate.Value == false)
                 {
                     <p class="date date--container">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</p>
                 }

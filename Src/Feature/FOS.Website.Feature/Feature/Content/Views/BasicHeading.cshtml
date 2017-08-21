@@ -43,7 +43,7 @@
                         }
                     </p>
                 }
-                @if (Model.NewsItem != null)
+                @if (Model.NewsItem != nulll && Model.NewsItem.DisableDate.Value == false)
                 {
                     <p class="date date--container">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</p>
                 }

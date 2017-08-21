@@ -59,7 +59,16 @@
     }
     //-- MOOD PART OF FOOTER --//
     &--mood {
-        height: rem(15 * $base-height);
+        height: rem(11.5 * $base-height);
+        @include xsmall-up {
+          height: rem(10.5 * $base-height); 
+        }
+        @include small-up {
+          height: rem(9.5 * $base-height); 
+        }
+        @include medium-up {
+          height: rem(15 * $base-height);
+        }
         position: relative;
         overflow: hidden;
 
@@ -68,7 +77,6 @@
         }
 
         .footer__overlay {
-            height: rem(12.5 * $base-height);
             position: absolute;
             top: 0;
             left: 0;

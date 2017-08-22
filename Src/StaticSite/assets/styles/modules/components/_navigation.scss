@@ -1,4 +1,6 @@
 // TODO: Refactor this file
+// TODO: In Safari transitions on height and width makes elements prone to
+// stuttering. Should be refactored to use scale on transformations.
 
 $menu-height: rem($base-height*4);
 $menu-height-animation: rem($base-height*2);

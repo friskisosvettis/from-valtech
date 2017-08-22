@@ -18,13 +18,6 @@ content-length: 31
 
 people/32x32/cube_blue_edit.png
 ----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 215
-
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{D6BCC1FA-1726-408F-B1A6-DA0E6D19F533}" s:ds="" s:id="{7CED1773-7B93-4EF1-A9D3-A27629C69280}" s:par="" s:ph="main" /></d></r>
-----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
 key: __workflow
@@ -67,7 +60,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: d85ea2fc-13ba-417f-a26e-579eacd1f198
+revision: e7fa5bf7-be39-451f-be8a-a51391a1b57d
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -96,14 +89,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d85ea2fc-13ba-417f-a26e-579eacd1f198
+e7fa5bf7-be39-451f-be8a-a51391a1b57d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T141221Z
+20170822T100642Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

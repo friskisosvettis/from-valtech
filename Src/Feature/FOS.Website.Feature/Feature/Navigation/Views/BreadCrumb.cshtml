@@ -10,12 +10,13 @@
 @using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
 @model BreadCrumbModel
+
 @if (Model == null || Model.BreadCrumbsPages == null || Model.BreadCrumbsPages.Count() < 2)
 {
     return;
 }
 
-@functions 
+@functions
 {
     string GetBreadCrumbLabel(Item page)
     {
@@ -24,10 +25,31 @@
     }
 }
 
+@helper BreadcrumbsMobile()
+{
+    var immediateParent = @Model.BreadCrumbsPages.ElementAt(1);
+    <li><a href="@LinkManager.GetItemUrl(@immediateParent)">@GetBreadCrumbLabel(immediateParent)</a></li>
+    <li>@GetBreadCrumbLabel(@Model.BreadCrumbsPages.First())</li>
+}
+
+@helper BreadCrumbsDesktop()
+{
+    var breadCrumbsCount = Model.BreadCrumbsPages.Count();
+    for (var i = 1; i < breadCrumbsCount; i++)
+    {
+        var page = @Model.BreadCrumbsPages.ElementAt(breadCrumbsCount - i);
+        <li><a href="@LinkManager.GetItemUrl(@page)">@GetBreadCrumbLabel(page)</a></li>
+    }
+    <li>@GetBreadCrumbLabel(@Model.BreadCrumbsPages.First())</li>
+}
+
+
 <nav class="breadcrumbs">
-    <ol>
-        @{ var immediateParent = @Model.BreadCrumbsPages.ElementAt(1);}
-        <li><a href="@LinkManager.GetItemUrl(@immediateParent)">@GetBreadCrumbLabel(immediateParent)</a></li>
-        <li>@GetBreadCrumbLabel(@Model.BreadCrumbsPages.First())</li>
+    <ol class="medium-down">
+        @BreadcrumbsMobile()
+    </ol>
+    <ol class="medium-up">
+        @BreadCrumbsDesktop()
     </ol>
 </nav>
+

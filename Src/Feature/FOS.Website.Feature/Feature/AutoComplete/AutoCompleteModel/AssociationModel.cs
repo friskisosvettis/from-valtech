@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Lucene.Net.Support;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using Sitecore.Syndication;
 
 namespace FOS.Website.Feature.AutoComplete.AutoCompleteModel
 {
@@ -13,13 +8,16 @@ namespace FOS.Website.Feature.AutoComplete.AutoCompleteModel
         [JsonIgnore]
         public string Name { get; set; }
         public string Url { get; set; }
+        public string ShowAll { get; set; }
+
         public List<AssociationTrainingCenterModel> Centers { get; set; }
 
-        public AssociationModel(string name, string url )
+        public AssociationModel(string name, string url, string showAllCentersCustomUrl)
         {
             Centers = new List<AssociationTrainingCenterModel>();
             Name = name;
             Url = url;
+            ShowAll = showAllCentersCustomUrl;
         }
 
         public void AddCenter(AssociationTrainingCenterModel center)

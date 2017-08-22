@@ -19,6 +19,7 @@ namespace FOS.Website.Feature.AutoComplete.AutoCompleteModel
                 sortBy = associationModel.Name + "__a",
                 category = "Association",
                 url = associationModel.Url,
+                showAll = associationModel.ShowAll,
                 centers = associationModel.Centers };
         }
 

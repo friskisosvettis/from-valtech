@@ -33,10 +33,11 @@ namespace FOS.Website.Feature.AutoComplete
             foreach (var assocition in associations)
             {
                 var associationFlagTemplateItem = assocition.InnerItem.As<IAssociationFlagTemplateItem>();
-                var url = associationFlagTemplateItem.ShowAllCentersCustomUrl.HasValue
+                var url = LinkManager.GetItemUrl(assocition.InnerItem);
+                var showAllCentersCustomUrl = associationFlagTemplateItem.ShowAllCentersCustomUrl.HasValue
                     ? associationFlagTemplateItem.ShowAllCentersCustomUrl.Href
                     : LinkManager.GetItemUrl(assocition.InnerItem);
-                var associotionModel = new AssociationModel(associationFlagTemplateItem.DisplayName, url);
+                var associotionModel = new AssociationModel(associationFlagTemplateItem.DisplayName, url, showAllCentersCustomUrl);
 
                 var trainingCenterList = TrainingCenterSearch.GetAllTrainingCenterOnAssociation(assocition.InnerItem).AsSitecoreOrdered();
                 foreach (var trainingCenter in trainingCenterList)

@@ -95,7 +95,7 @@ var autocompleteModule = {
                                 $(suggestion).closest('*[data-autocomplete-category]').find('.autocomplete-suggestion-results').append( '<li><a href='+centers[j].url +'><strong>' + centers[j].name + '</strong>, ' + centers[j].address + ' ' + centers[j].city + '</a></li>')
                             }
                             if(limit >= 5) {
-                                $(suggestion).closest('*[data-autocomplete-category]').find('.autocomplete-suggestion-results').append( '<li class="autocomplete-suggestion-show-all"><a href='+ suggestions[0].data.url +'>'+ showAll + ' (' + centers.length + ')'+ '</a></li>');
+                                $(suggestion).closest('*[data-autocomplete-category]').find('.autocomplete-suggestion-results').append( '<li class="autocomplete-suggestion-show-all"><a href='+ suggestions[0].data.showAll +'>'+ showAll + ' (' + centers.length + ')'+ '</a></li>');
                             }
                         }
 

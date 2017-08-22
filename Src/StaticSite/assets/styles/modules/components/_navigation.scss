@@ -1,4 +1,6 @@
 // TODO: Refactor this file
+// TODO: In Safari transitions on height and width makes elements prone to
+// stuttering. Should be refactored to use scale on transformations.
 
 $menu-height: rem($base-height*4);
 $menu-height-animation: rem($base-height*2);
@@ -6,6 +8,7 @@ $logo-height-small: rem($base-height*3);
 $topbar-height: rem($base-height);
 $total-height: rem($base-height*5); // menu-height + topbar-height
 $btn-small-pos: 17px;
+$navigation-animation: 0.5s linear 0s;
 
 .navigation {
     display: none;
@@ -21,33 +24,29 @@ $btn-small-pos: 17px;
         width: 100%;
         position: fixed;
         z-index: 1000000;
-        top: 0;
         background: none;
-        @include transition(background ,0.5s);
 
         &.scroll {
             background: $color-dim-50;
-            @include transition(background ,0.5s);
+            max-height: $menu-height-animation !important;
 
             .navigation__item ul.open {
                 padding-top: 0 !important;
-                @include transition(padding-top ,0.5s);
-            }
-        }
+                @include transition(all 0.5s);
+              }
+          }
 
         &.animation {
-            &.navigation--bottom {
-                max-height: $menu-height-animation !important;
-                @include transition(max-height ,0.5s);
-            }
             .navigation__logo {
                 width: $menu-height-animation;
                 max-height: $menu-height-animation !important;
+                @include transition(all $navigation-animation);
+
             }
             &.open {
                 height: $menu-height !important;
                 max-height: $menu-height !important;
-                @include transition(max-height ,0s);
+                @include transition(all $navigation-animation);
             }
         }
 
@@ -56,6 +55,7 @@ $btn-small-pos: 17px;
                 height: $menu-height !important;
                 max-height: $menu-height !important;
                 background: $primary-color-dim-95 !important;
+                @include transition(all $navigation-animation);
             }
         }
     }
@@ -67,7 +67,7 @@ $btn-small-pos: 17px;
         z-index: 1000000;
         background-color: $color-black;
         opacity: 1;
-        @include transition(all, 0.25s);
+        @include transition(all $navigation-animation);
 
         a {
             color: $color-white;
@@ -94,24 +94,50 @@ $btn-small-pos: 17px;
                 }
             }
         }
+
         &.hide {
-            opacity: 0;
-            max-height: 0;
-            @include transition(all, 0.25s);
+          max-height: 0;
+          opacity: 0;
+          @include transition(all $navigation-animation);
+
+            + .navigation--bottom {
+              top: 0;
+              @include transition(top $navigation-animation, background 0.5s linear 0.2s);
+
+              .navigation--medium {
+                top: 0;
+                @include transition(all $navigation-animation);
+              }
+              .navigation__list {
+                top: 0;
+                @include transition(all $navigation-animation);
+              }
+              .navigation__btn--close {
+                top: 0;
+                @include transition(all $navigation-animation);
+              }
+            }
         }
+
         // Move navigation down if topbar exists (on association pages)
         &:not(.hide) {
+          @include transition(all $navigation-animation);
+
             + .navigation--bottom {
                 top: $topbar-height;
+                @include transition(all $navigation-animation);
 
                 .navigation--medium {
                     top: $topbar-height;
+                    @include transition(all $navigation-animation);
                 }
                 .navigation__list {
                     top: $topbar-height;
+                    @include transition(all $navigation-animation);
                 }
                 .navigation__btn--close {
                     top: rem($btn-small-pos + $base-height); //17px (top position of buttons in mobile menu) s+ topbar
+                    @include transition(all $navigation-animation);
                 }
             }
         }
@@ -120,7 +146,6 @@ $btn-small-pos: 17px;
     &--bottom {
         height: $menu-height;
         max-height: $menu-height;
-        @include transition(max-height ,0.5s);
     }
 
     &__logo {
@@ -128,7 +153,7 @@ $btn-small-pos: 17px;
         height: $logo-height-small;
         max-height: $logo-height-small;
         padding: $space 0;
-        @include transition(max-height ,0.5s);
+        @include transition(all $navigation-animation);
 
         @include medium-up {
             width: $menu-height;
@@ -297,7 +322,7 @@ $btn-small-pos: 17px;
             @include large-up {
                 &.open {
                     padding-top: 100px;
-                    @include transition(padding-top ,0.5s);
+                    @include transition(all $navigation-animation);
                     position: fixed;
                     background-color: $primary-color-dim-95;
                     top: $menu-height;
@@ -356,7 +381,7 @@ $btn-small-pos: 17px;
         width: $icon-size-tiny;
         height: $icon-size-tiny;
         margin-left: $space;
-        @include transition(all ,0.3s);
+        @include transition(all 0.3s);
 
     }
     &.open {

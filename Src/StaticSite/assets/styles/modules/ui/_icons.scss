@@ -105,6 +105,11 @@
             width: $icon-size;
         }
     }
+    &__find {
+        &:before {
+            background-image: url('/assets/images/icon_pin_find.svg');
+        }
+    }
     &__book {
         &:before {
             background-image: url('/assets/images/icon_book.svg');
@@ -221,25 +226,6 @@
             &:before {
                 background-image: url('/assets/images/icon_pin-map.svg');
             }
-        }
-    }
-}
-.icon__link {
-    &:before {
-        content: "";
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: $icon-size-medium;
-        width: $icon-size-medium;
-        display: inline-block;
-        padding: 0 $space;
-        vertical-align: middle;
-    }
-
-    &--find {
-        &:before {
-            background-image: url('/assets/images/icon_pin_find.svg');
         }
     }
 }

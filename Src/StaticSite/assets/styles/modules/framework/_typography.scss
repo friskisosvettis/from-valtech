@@ -10,9 +10,17 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, heading-1, .heading-2, .heading-3, .heading-4, .heading-5 {
+h1, h2, h3, h4, h5, heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .hero-heading {
     font-family: $font-bold;
     line-height: 1.25;
+}
+
+.hero-heading {
+    font-size: rem(46px);
+
+    @include medium-up {
+        font-size: rem(62px);
+    }
 }
 
 h1, .heading-1 {

@@ -55,6 +55,15 @@ h5, .heading-5, .rich-text h4 {
     }
 }
 
+.rich-text {
+  h4 {
+    margin-bottom: 0.75rem !important;
+  }
+  p {
+    line-height: 1.6;
+  }
+}
+
 p {
     margin: 0 0 $space 0;
     font-size: rem(18px);
@@ -149,10 +158,10 @@ a {
 .rich-text {
     ol {
         padding: 0;
-        margin: 0 0 $base-height*1.5 0;
+        margin: 0 0 1.75rem 0;
 
         counter-reset: item;
-    
+
         li {
             list-style-type: none;
             counter-increment: item;
@@ -173,16 +182,16 @@ a {
 
 .rich-text ul {
     padding: 0;
-    margin: 0 0 rem($base-height*1.5) 0;
-    
+    margin: 0 0 1.75rem 0;
+
     li {
         list-style-type: none;
         margin: 0 0 $space 0;
         background-image: url('/assets/images/icon_bullet.svg');
-        background-size: 1rem 1rem;
-        background-position: 0 50%;
+        background-size: 0.5rem 0.5rem;
+        background-position: 0 0.5rem;
         background-repeat: no-repeat;
-        padding-left: 2rem;
+        padding-left: 25px;
     }
 
     &.list--tick {

@@ -7,7 +7,7 @@
         <Item path="connectionStrings/add[@name='master']" action="Replace" key="connectionString" value="user id=fos_dbuser;password=R!ET-05q17;Data Source=10.0.0.6;Database=fos-stage_master" />
         <Item path="connectionStrings/add[@name='web']" action="Replace" key="connectionString" value="user id=fos_dbuser;password=R!ET-05q17;Data Source=10.0.0.6;Database=fos-stage_web" />
         <Item path="connectionStrings/add[@name='analytics']" action="Replace" key="connectionString" value="mongodb://10.0.0.4:27017/FOS-CM_Website_analytics" />
-        <Item path="connectionStrings/add[@name='tracking.live']" action="Replace" key="connectionString" value="mongodb:/10.0.0.4:27017/FOS-CM_Website_tracking_live" />
+        <Item path="connectionStrings/add[@name='tracking.live']" action="Replace" key="connectionString" value="mongodb://10.0.0.4:27017/FOS-CM_Website_tracking_live" />
         <Item path="connectionStrings/add[@name='tracking.history']" action="Replace" key="connectionString" value="mongodb://10.0.0.4:27017/FOS-CM_Website_tracking_history" />
         <Item path="connectionStrings/add[@name='tracking.contact']" action="Replace" key="connectionString" value="mongodb://10.0.0.4:27017/FOS-CM_Website_tracking_contact" />
         <Item path="connectionStrings/add[@name='reporting']" action="Replace" key="connectionString" value="user id=fos_dbuser;password=R!ET-05q17;Data Source=10.0.0.6;Database=fos-stage_reporting" />

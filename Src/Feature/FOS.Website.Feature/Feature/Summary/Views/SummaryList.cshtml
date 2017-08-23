@@ -6,6 +6,7 @@
 @using Sitecore.Resources.Media
 @using Sitecore.Web.UI.WebControls
 @using Synthesis.Mvc.Extensions
+@using Valtech.Foundation.SitecoreExtensions
 @model SummaryListModel
 
 @{
@@ -93,10 +94,10 @@
                                             @if (summarySpot.EventItem != null)
                                             {
                                                 <p>
-                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
                                                     @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                     {
-                                                        <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                        <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
                                                     }
                                                     @if (containerClass == "container--12")
                                                     {
@@ -107,7 +108,7 @@
                                             @if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                             {
                                                 <p>
-                                                    <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
+                                                    <small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
                                                 </p>
                                             }
                                             @* If it is a highlighted new/event item only show the summarytext if it is displayed in full with *@
@@ -158,10 +159,10 @@
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p class="margin-bottom--none">
-                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
-                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
                                                 }
                                             </p>
                                             <p>
@@ -171,7 +172,7 @@
                                         if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                         {
                                             <p>
-                                                <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
                                             </p>
                                         }
                                         if (summarySpot.SummaryItem.SummaryText.HasValue)
@@ -198,17 +199,17 @@
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p>
-                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
-                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
                                                 }
                                             </p>
                                         }
                                         if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
                                         {
                                             <p>
-                                                <small class="date">@summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</small>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
                                             </p>
                                         }
                                     }

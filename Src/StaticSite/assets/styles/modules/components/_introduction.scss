@@ -39,6 +39,7 @@
             display: none;
 
             @include large-up {
+                color: $color-text-light;
                 display: block;
             }
         }
@@ -115,8 +116,8 @@
             height: 50%;
         }
             span {
-                width: 5em;
-                height: 5em;
+                width: 6em;
+                height: 6em;
                 margin: 0 auto $space auto;
                 background-color: $color-white;
                 border-radius: 50%;

@@ -17,10 +17,17 @@ key: __icon
 content-length: 30
 
 BusinessV2/32x32/date_time.png
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 0
+
+
 ----version----
 language: sv-SE
 version: 1
-revision: 8e447d2e-f205-42db-b889-136881b93487
+revision: 24c71a9f-0bdc-4f60-a40f-b217edc2ca2d
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,7 +35,7 @@ name: __Owner
 key: __owner
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8e447d2e-f205-42db-b889-136881b93487
+24c71a9f-0bdc-4f60-a40f-b217edc2ca2d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T141257Z
+20170823T120911Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

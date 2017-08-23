@@ -43,7 +43,9 @@
 
         &--slim {
             font-family: $font-bold;
-
+            a {
+                padding: $space-half 0;
+            }
             @include medium-up {
                 text-align: center;
 
@@ -51,7 +53,7 @@
                     display: inline-block;
 
                     a {
-                        margin: $space $space-quad;
+                        margin: $space-half $space-quad;
                     }
                 }
             }

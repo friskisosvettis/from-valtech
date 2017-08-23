@@ -17,10 +17,17 @@ key: __icon
 content-length: 22
 
 Network/32x32/news.png
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 0
+
+
 ----version----
 language: sv-SE
 version: 1
-revision: c7f90145-2aec-443f-929b-1efed83b7426
+revision: cf01c5f1-7599-47e5-9ca8-5fe6c64e9a88
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,7 +35,7 @@ name: __Owner
 key: __owner
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c7f90145-2aec-443f-929b-1efed83b7426
+cf01c5f1-7599-47e5-9ca8-5fe6c64e9a88
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T141345Z
+20170823T121109Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

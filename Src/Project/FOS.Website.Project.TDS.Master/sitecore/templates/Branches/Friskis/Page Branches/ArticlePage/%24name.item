@@ -10,10 +10,17 @@ template: {4F9C60AD-22C4-4EAE-B25D-CDC59A6B136F}
 templatekey: ArticlePage
 created: 20170728T133045Z
 
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 0
+
+
 ----version----
 language: en
 version: 1
-revision: 9b99e83e-18cd-45f4-aaec-fd61107ddace
+revision: b19e2ead-53d4-44a3-a4bd-1644749f8594
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -21,7 +28,7 @@ name: __Owner
 key: __owner
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -42,25 +49,25 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9b99e83e-18cd-45f4-aaec-fd61107ddace
+b19e2ead-53d4-44a3-a4bd-1644749f8594
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T133045Z
+20170823T143347Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 99875b76-cdf4-4ca7-8000-d04c056a290f
+revision: 8a4a0f1e-aaf1-4b5c-9d41-4ffd47f4d960
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -68,7 +75,7 @@ name: __Owner
 key: __owner
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -89,14 +96,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-99875b76-cdf4-4ca7-8000-d04c056a290f
+8a4a0f1e-aaf1-4b5c-9d41-4ffd47f4d960
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T133537Z
+20170823T120355Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

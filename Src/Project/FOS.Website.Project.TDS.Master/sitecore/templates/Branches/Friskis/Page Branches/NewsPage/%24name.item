@@ -10,10 +10,17 @@ template: {32AFD867-6BC6-49CD-AABC-5244A13FD9B5}
 templatekey: NewsPage
 created: 20170728T135918Z
 
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 0
+
+
 ----version----
 language: sv-SE
 version: 1
-revision: 0f9ae3e4-2517-4b30-b117-2396e6848797
+revision: 0520318d-3ba3-44d5-b0cb-fc6d11f51342
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -21,7 +28,7 @@ name: __Owner
 key: __owner
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0f9ae3e4-2517-4b30-b117-2396e6848797
+0520318d-3ba3-44d5-b0cb-fc6d11f51342
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170728T135918Z
+20170823T121144Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

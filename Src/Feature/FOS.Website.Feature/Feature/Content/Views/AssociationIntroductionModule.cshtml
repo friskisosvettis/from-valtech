@@ -11,7 +11,7 @@
     <div class="introduction">
         <div class="introduction__container">
             <div class="introduction__pitch">
-                <h2 class="heading-3">@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroTitle)</h2>
+                <h2>@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroTitle)</h2>
                 <p>@Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroBody)</p>
                 <a href="@Model.AssociationIntroductionModuleItem" class="link--goto"> @Html.TextFor(m => m.AssociationIntroductionModuleItem.IntroLinkLabel) </a>
             </div>
@@ -23,9 +23,9 @@
             </div>
             <div class="introduction__member">
                 <a href="@Model.AssociationIntroductionModuleItem.BecomeMemberLink">
-                    <h1 class="heading-5">@Model.label_AssociationGreetingCardName</h1>
+                    <h1 class="heading-4">@Model.label_AssociationGreetingCardName</h1>
                     <img src="/assets/images/icon_card.svg" alt="image of Friskis & Svettis training card" />
-                    <h2 class="heading-4">@Html.TextFor(m => m.AssociationIntroductionModuleItem.BecomeMemberKickerBody)</h2>
+                    <h2 class="heading-2">@Html.TextFor(m => m.AssociationIntroductionModuleItem.BecomeMemberKickerBody)</h2>
                 </a>
             </div>
         </div>

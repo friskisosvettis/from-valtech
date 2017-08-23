@@ -16,7 +16,7 @@ name: __Masters
 key: __masters
 content-length: 233
 
-{A1E42205-8040-4188-9F04-84188CF64C67}|{0243DB5E-CCC9-4883-A43C-9543B4E45C5B}|{69E8882B-E0F4-4BCB-B274-C89BD38F0570}|{B1575AB9-ACD3-4FC7-B2A1-EA35279C692B}|{4D46261E-471A-4C6B-AF3E-E420751ACE4B}|{A399A1FA-2D81-4CD3-9820-0AAB3ED13A39}
+{A1E42205-8040-4188-9F04-84188CF64C67}|{0243DB5E-CCC9-4883-A43C-9543B4E45C5B}|{69E8882B-E0F4-4BCB-B274-C89BD38F0570}|{B1575AB9-ACD3-4FC7-B2A1-EA35279C692B}|{B034E400-8176-4433-B65B-3C5CEA032BAE}|{0658C090-5D72-47BF-A879-A13DEB5E969D}
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
@@ -110,7 +110,7 @@ sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 7739cdb8-4819-4ee9-a8d4-8c92aab40cd2
+revision: 40d90a04-bb74-4cab-ac57-4d121d2bae0a
 
 ----field----
 field: {3B7976CB-2255-4B8D-83E3-5FBEDAC974DE}
@@ -154,18 +154,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7739cdb8-4819-4ee9-a8d4-8c92aab40cd2
+40d90a04-bb74-4cab-ac57-4d121d2bae0a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170729T095237Z
+20170823T145239Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin

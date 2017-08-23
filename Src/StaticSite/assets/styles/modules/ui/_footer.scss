@@ -59,13 +59,8 @@
     }
     //-- MOOD PART OF FOOTER --//
     &--mood {
-        height: rem(11.5 * $base-height);
-        @include xsmall-up {
-          height: rem(10.5 * $base-height); 
-        }
-        @include small-up {
-          height: rem(9.5 * $base-height); 
-        }
+        min-height: 0rem;
+        height: 100%;
         @include medium-up {
           height: rem(15 * $base-height);
         }
@@ -82,10 +77,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            display: table;
             width: 100%;
             height: 100%;
             background: $primary-color-dim-80;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            @include medium-up {
+              align-items: center;
+            }
         }
 
         .footer__content {

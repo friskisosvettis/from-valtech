@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using FOS.Website.Feature.AutoComplete.AutoCompleteModel;
 using FOS.Website.Feature.Content.Data;
 using FOS.Website.Feature.Content.ListWidgets;
@@ -66,7 +65,7 @@ namespace FOS.Website.Feature.AutoComplete
             var regionTest = RegionSearch.GetAllRegionsStartingWith(searchQuery, homePage);
             foreach (var regionObj in regionTest)
             {
-                var associations = AssociationSearch.GetAllAssociationsWithRegionName(regionObj.Name, homePage);
+                var associations = AssociationSearch.GetAllAssociationsWithRegionName(regionObj.Name, homePage).AsSitecoreOrdered();
                 foreach (var assocition in associations)
                 {
                     var associationItem = assocition.InnerItem;

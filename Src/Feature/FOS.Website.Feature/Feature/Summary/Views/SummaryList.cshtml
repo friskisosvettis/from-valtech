@@ -28,7 +28,7 @@
 {
     <div class="container">
         <div class="container--12">
-            <h2 class="color--primary margin-bottom--none text-align--center">@Model.SummaryListItem.Header</h2>
+            <h2 class="color--primary text-align--center">@Model.SummaryListItem.Header</h2>
         </div>
     </div>
         <ul class="container">
@@ -142,20 +142,20 @@
                                     }
                                 }
                                 <div class="teaser__content">
-                                    <h3 class="heading-5">
-                                        @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
-                                        {
-                                            @summarySpot.SummaryItem.SummaryHeading.Render(false)
-                                        }
-                                        else
-                                        {
-                                            @summarySpot.SummaryItem.Name
-                                        }
-                                    </h3>
 
                                     @*Article/news/events FULL WIDTH KICKER: Render with text *@
                                     @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1") && !Model.SummaryListItem.DisplayAsCollage.Value || counter == 5)
                                     {
+                                        <h3 class="heading-2">
+                                            @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                            {
+                                                @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                            }
+                                            else
+                                            {
+                                                @summarySpot.SummaryItem.Name
+                                            }
+                                        </h3>
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p class="margin-bottom--none">
@@ -186,6 +186,16 @@
                                     }
                                     else
                                     {
+                                        <h3>
+                                            @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                            {
+                                                @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                            }
+                                            else
+                                            {
+                                                @summarySpot.SummaryItem.Name
+                                            }
+                                        </h3>
                                         if (summarySpot.EventItem != null)
                                         {
                                             <p>

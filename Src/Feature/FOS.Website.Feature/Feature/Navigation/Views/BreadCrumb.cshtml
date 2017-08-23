@@ -29,7 +29,6 @@
 {
     var immediateParent = @Model.BreadCrumbsPages.ElementAt(1);
     <li><a href="@LinkManager.GetItemUrl(@immediateParent)">@GetBreadCrumbLabel(immediateParent)</a></li>
-    <li>@GetBreadCrumbLabel(@Model.BreadCrumbsPages.First())</li>
 }
 
 @helper BreadCrumbsDesktop()

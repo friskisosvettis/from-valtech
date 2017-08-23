@@ -3,16 +3,24 @@
 body {
     font-family: $font;
     line-height: 1.5;
-    font-size: $base-font-size;
+    font-size: rem($base-font-size);
     color: $color-text;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, heading-1, .heading-2, .heading-3, .heading-4, .heading-5 {
+h1, h2, h3, h4, h5, heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .hero-heading {
     font-family: $font-bold;
     line-height: 1.25;
+}
+
+.hero-heading {
+    font-size: rem(46px);
+
+    @include medium-up {
+        font-size: rem(62px);
+    }
 }
 
 h1, .heading-1 {
@@ -32,7 +40,7 @@ h2, .heading-2 {
 }
 
 h3, .heading-3, .rich-text h2 {
-    font-size: rem(18px);
+    font-size: rem(20px);
 
     @include medium-up {
         font-size: rem(24px);
@@ -40,32 +48,35 @@ h3, .heading-3, .rich-text h2 {
 }
 
 h4,.heading-4, .rich-text h3 {
-    font-size: rem(16px);
-
-    @include medium-up {
-        font-size: rem(18px);
-    }
+    font-size: rem(18px);
 }
 
 h5, .heading-5, .rich-text h4 {
-    font-size: rem(14px);
+    font-size: rem(16px);
+}
 
-    @include medium-up {
-        font-size: rem(16px);
-    }
+.rich-text {
+  h4 {
+    margin-bottom: 0.75rem !important;
+  }
+  p {
+    line-height: 1.6;
+  }
 }
 
 p {
     margin: 0 0 $space 0;
-    font-size: rem(18px);
 }
-
+.rich-text {
+    p, ol, ul, a, strong, em {
+        font-size: rem(16px);
+    }
+}
 .date {
     color: $color-black-40;
 
     &--primary {
         color: $color-text;
-        margin-left: $space;
     }
 
     &--container {
@@ -149,10 +160,10 @@ a {
 .rich-text {
     ol {
         padding: 0;
-        margin: 0 0 $base-height*1.5 0;
+        margin: 0 0 1.75rem 0;
 
         counter-reset: item;
-    
+
         li {
             list-style-type: none;
             counter-increment: item;
@@ -173,16 +184,16 @@ a {
 
 .rich-text ul {
     padding: 0;
-    margin: 0 0 rem($base-height*1.5) 0;
-    
+    margin: 0 0 1.75rem 0;
+
     li {
         list-style-type: none;
         margin: 0 0 $space 0;
         background-image: url('/assets/images/icon_bullet.svg');
-        background-size: 1rem 1rem;
-        background-position: 0 50%;
+        background-size: 0.5rem 0.5rem;
+        background-position: 0 0.5rem;
         background-repeat: no-repeat;
-        padding-left: 2rem;
+        padding-left: 25px;
     }
 
     &.list--tick {

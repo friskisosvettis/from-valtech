@@ -879,6 +879,10 @@
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\Stimulsoft.Report.WebDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Synthesis, Version=8.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Synthesis.Core.8.2.6\lib\net452\Synthesis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Sitecore-8.2-rev-161115_assemblies.1.0.1\lib\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
@@ -1045,6 +1049,7 @@
     <Compile Include="Pipelines\HttpRequestBegin\CustomUrlEnforcer.cs" />
     <Compile Include="DynamicDataSources\Pipelines\DynamicDataSourceLookupSources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitecoreExtensions\DateExtensions.cs" />
     <Compile Include="SitecoreExtensions\ItemExtensions.cs" />
     <Compile Include="SitecoreExtensions\RenderingParametersExtensions.cs" />
     <Compile Include="SitecoreExtensions\SitecoreHelperExtension.cs" />

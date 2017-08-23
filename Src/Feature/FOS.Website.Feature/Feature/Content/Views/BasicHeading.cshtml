@@ -3,6 +3,7 @@
 @using Sitecore.ContentSearch.Pipelines.TranslateQuery
 @using Synthesis.Mvc.Extensions
 @using Synthesis.Mvc.Helpers
+@using Valtech.Foundation.SitecoreExtensions
 @model BasicHeadingModel
 @if (Model.BasicHeadingItem == null)
 {
@@ -27,14 +28,14 @@
                 @if (Model.EventItem != null)
                 {
                     <p class="date--container">
-                        <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t")</span>
+                        <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventStartDate.ToLocalizedString("t")</span>
                         @if (Model.EventItem.EventEndDate.HasValue)
                         {
-                            <span class="date--primary"> - @Model.EventItem.EventEndDate.Value.ToString("dd MMMM"), @Model.EventItem.EventStartDate.Value.ToString("t"), @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>
+                            <span class="date--primary"> - @Model.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventStartDate.ToLocalizedString("t"), @Model.EventItem.EventStartDate.ToLocalizedString("yyyy")</span>
                         }
                         else
                         {
-                            <span class="date--primary"> @Model.EventItem.EventStartDate.Value.ToString("yyyy")</span>
+                            <span class="date--primary"> @Model.EventItem.EventStartDate.ToLocalizedString("yyyy")</span>
                         }
 
                         @if (Model.EventItem.EventLocation != null)
@@ -45,7 +46,7 @@
                 }
                 @if (Model.NewsItem != null && Model.NewsItem.DisableDate.Value == false)
                 {
-                    <p class="date date--container">@Model.NewsItem.NewsDate.Value.ToString("dd MMMM yyyy")</p>
+                    <p class="date date--container">@Model.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</p>
                 }
             </div>
         </div>

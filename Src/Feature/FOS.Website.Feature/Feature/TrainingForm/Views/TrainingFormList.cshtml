@@ -5,6 +5,7 @@
 @using Sitecore.Web.UI.WebControls
 @using Synthesis.Mvc.Extensions
 @using FOS.Website.Feature.TrainingForm.Models
+@using Valtech.Foundation.SitecoreExtensions
 @model TrainingFormModel
 
 @{
@@ -62,10 +63,10 @@
                                         @if (summarySpot.EventItem != null)
                                         {
                                             <p>
-                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventStartDate.Value.ToString("t")</small>
+                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
                                                 @if (summarySpot.EventItem.EventEndDate.HasValue)
                                                 {
-                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.Value.ToString("dd MMMM"), @summarySpot.EventItem.EventEndDate.Value.ToString("t")</small>
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
                                                 }
                                                 <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
                                             </p>
@@ -73,7 +74,7 @@
                                         @if (summarySpot.NewsItem != null)
                                         {
                                             <p>
-                                                <small class="date icon--mini icon__book-light">- @summarySpot.NewsItem.NewsDate.Value.ToString("dd MMMM")</small>
+                                                <small class="date icon--mini icon__book-light">- @summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM")</small>
                                             </p>
                                         }
                                         @if (summarySpot.SummaryItem.SummaryText.HasValue)

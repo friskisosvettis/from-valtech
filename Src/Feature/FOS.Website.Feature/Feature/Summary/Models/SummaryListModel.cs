@@ -163,11 +163,10 @@ namespace FOS.Website.Feature.Summary.Models
             // Taxonomy Predicate
             var taxonomyPredicate = PredicateBuilder.True<SummarySearchResultItem>();
             List<Item> taxonomyList = summaryListItem.SelectedTaxonomy.TargetItems.Select(i => i.InnerItem).ToList();
-
             foreach (ID taxonomyId in taxonomyList.Select(i => i.ID))
             {
-                string taxonomyIdString = Clean(taxonomyId.ToString(), "{-}");
-                taxonomyPredicate = taxonomyPredicate.Or(s => s.Taxonomy.Contains(taxonomyIdString));
+                string taxonomyIdString = taxonomyId.ToString();
+                taxonomyPredicate = taxonomyPredicate.Or(i => i.Taxonomy.Contains(taxonomyIdString));
             }
 
             // Seasonal Predicate
@@ -188,7 +187,7 @@ namespace FOS.Website.Feature.Summary.Models
                 }
                 foreach (ID seasonId in seasons.Select(i => i.ID))
                 {
-                    string seasonIdString = Clean(seasonId.ToString(), "{-}");
+                    string seasonIdString = seasonId.ToString();
 
                     seasonalPredicate = seasonalPredicate.Or(s => s.Months.Contains(seasonIdString));
                 }
@@ -200,7 +199,7 @@ namespace FOS.Website.Feature.Summary.Models
             List<Item> resultTypes = summaryListItem.ResultTypes.TargetItems.Select(i=>i.InnerItem).ToList();
             foreach (ID typeId in resultTypes.Select(i => i.ID))
             {
-                string templateIdString = Clean(typeId.ToString());
+                string templateIdString = typeId.ToShortID().ToString().ToLowerInvariant();
                 templatePredicate = templatePredicate.Or(t => t.TemplateIdAsString.Contains(templateIdString));
             }
 
@@ -239,25 +238,5 @@ namespace FOS.Website.Feature.Summary.Models
             }
 
         }
-
-        public static string Clean(string stringToClean, string charsToRemove)
-        {
-            string cleanString = stringToClean.ToLower();
-            foreach (char chararater in charsToRemove)
-            {
-                cleanString = cleanString.Replace(chararater.ToString(CultureInfo.InvariantCulture), "");
-            }
-            return cleanString;
-        }
-
-        public static string Clean(string stringToClean)
-        {
-            string cleanString = stringToClean.ToLower();
-            cleanString = cleanString.Replace("{", "");
-            cleanString = cleanString.Replace("}", "");
-            cleanString = cleanString.Replace("-", "");
-            return cleanString;
-        }
-
     }
 }

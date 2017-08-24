@@ -17,10 +17,17 @@ key: initial state
 content-length: 38
 
 {9C798F41-DF0E-4B49-9B18-13EBDDD95104}
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 271
+
+ar|sitecore\Author|pe|!*|+workflowState:write|+workflowCommand:execute|+item:rename|+item:write|+item:read|+workflowState:delete|pd|+workflowState:write|+workflowCommand:execute|+item:rename|+item:write|+workflowState:delete|+item:read|!*|au|sitecore\newuser|pe|!*|pd|!*|
 ----version----
 language: en
 version: 1
-revision: 221fc5f0-24d1-4e76-b948-11ffee1f60d8
+revision: 89c79eac-a3ae-4f25-b21e-1c90917c12de
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,21 +56,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-221fc5f0-24d1-4e76-b948-11ffee1f60d8
+89c79eac-a3ae-4f25-b21e-1c90917c12de
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170714T124757Z
+20170824T090149Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----version----
 language: sv-SE
 version: 1

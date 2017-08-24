@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {94B5CC21-2C65-49C0-9A29-0D5C746FD7A4}
+id: {B034E400-8176-4433-B65B-3C5CEA032BAE}
 database: master
-path: /sitecore/templates/Branches/Friskis/Page Branches/NewsPage/$name
-parent: {75874B3C-B050-40CD-A07D-821D2F461BC9}
-name: $name
+path: /sitecore/templates/Branches/Friskis/Page Branches/SharedArticlePage
+parent: {C7681066-D9E1-4146-8533-36CF0A4ABC97}
+name: SharedArticlePage
 master: {00000000-0000-0000-0000-000000000000}
-template: {32AFD867-6BC6-49CD-AABC-5244A13FD9B5}
-templatekey: NewsPage
-created: 20170728T135918Z
+template: {35E75C72-4985-4E09-88C3-0EAC6CD1E64F}
+templatekey: Branch
+created: 20170823T144500Z
 
 ----field----
-field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
-name: __Workflow
-key: __workflow
-content-length: 0
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 26
 
-
+Business/32x32/note_ok.png
 ----version----
 language: sv-SE
 version: 1
-revision: 0520318d-3ba3-44d5-b0cb-fc6d11f51342
+revision: 42ce4203-770c-476a-96cb-d334313f72c3
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,32 +35,32 @@ name: __Created
 key: __created
 content-length: 16
 
-20170728T135918Z
+20170823T144500Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
 key: __created by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-0520318d-3ba3-44d5-b0cb-fc6d11f51342
+42ce4203-770c-476a-96cb-d334313f72c3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T121144Z
+20170823T144618Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin

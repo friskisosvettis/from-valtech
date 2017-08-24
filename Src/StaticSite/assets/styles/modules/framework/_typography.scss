@@ -190,6 +190,9 @@ a {
     &.list--tick {
         li {
             background-image: url('/assets/images/icon_tick.svg');
+            background-size: 1rem 1rem;
+            padding-left: 2rem;
+            background-position: 0 50%;
         }
     }
     &.list--goto {
@@ -202,6 +205,9 @@ a {
         }
         li {
             background-image: url('/assets/images/icon_arrow-right-red.svg');
+            background-size: 1rem 1rem;
+            padding-left: 2rem;
+            background-position: 0 50%;
         }
     }
 }

@@ -31,14 +31,14 @@ var openingHoursModule = {
 
         var service = new google.maps.places.PlacesService(_serviceHelper.get(0));
 
-        var dayOfWeek = _openingHoursObject.data("day-of-week");
+        var dayOfWeek = _openingHoursObject.data("day-of-week"); 
         var placeId = _openingHoursObject.data("google-place-id");
 
         service.getDetails({ placeId: placeId },
             function(place, status) {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
 
-                    var dayOfWeekInt = dayOfWeek;
+                    var dayOfWeekInt = dayOfWeek - 1; 
                     var today = document.getElementById('opening_hours_today');
                     var todayOpeningHours = place.opening_hours.weekday_text[dayOfWeekInt];
                     var todayTime = todayOpeningHours.substring(todayOpeningHours.indexOf(':') + 2,

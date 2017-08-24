@@ -18,21 +18,21 @@ $facility-height: $base-height*6.5;
 
         @include medium-up {
             width: $base-height*4;
-            height: $facility-height;
         }
     }
     &:before {
         background-image: linear-gradient(to right, $color-black-05 0%, $color-dim-00 100%);
         left: 0;
+        min-height: $facility-height-small;
     }
     &:after {
         background-image: linear-gradient(to left, $color-black-05 0%, $color-dim-00 100%);
         right: 0;
+        min-height: $facility-height-small;
     }
 
     @include medium-up {
         padding: 0 $base-height*3;
-        height: $facility-height;
     }
 
     li {
@@ -44,7 +44,7 @@ $facility-height: $base-height*6.5;
         white-space: normal;
 
         @include medium-up {
-            margin: $space-quad $space;
+            margin: $space;
         }
     }
     .img__container {
@@ -59,8 +59,8 @@ $facility-height: $base-height*6.5;
         height: $base-height*1.5;
 
         @include medium-up {
-            width: $base-height*2.5;
-            height: $base-height*2.5;
+            width: 90px;
+            height: 90px;
         }
     }
      img {
@@ -69,8 +69,9 @@ $facility-height: $base-height*6.5;
         height: $base-height;
 
         @include medium-up {
-            width: $base-height*2;
-            height: $base-height*2;
+            margin: $space auto;
+            width: 52px;
+            height: 52px;
         }
     }
     p {

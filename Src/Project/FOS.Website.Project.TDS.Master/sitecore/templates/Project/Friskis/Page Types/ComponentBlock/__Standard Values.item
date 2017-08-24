@@ -23,7 +23,7 @@ name: __Renderings
 key: __renderings
 content-length: 251
 
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{7CED1773-7B93-4EF1-A9D3-A27629C69280}" ph="main" uid="{0E460F7A-01C6-4F3E-8A5F-3468C4437F36}" /></d></r>
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}"><r id="{7CED1773-7B93-4EF1-A9D3-A27629C69280}" ph="main" uid="{0EC9601C-BD90-4B25-93CD-B1B82705C021}" /></d></r>
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
@@ -41,15 +41,8 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 7e551363-ec7c-456f-af30-b75ca4a45462
+revision: e89cc80f-5c16-4de6-a00e-cc3fee5124a3
 
-----field----
-field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
-name: __Final Renderings
-key: __final renderings
-content-length: 145
-
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{131A9FD6-95E7-4D19-A1BE-76F02D53C7E3}" /></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -77,25 +70,25 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7e551363-ec7c-456f-af30-b75ca4a45462
+e89cc80f-5c16-4de6-a00e-cc3fee5124a3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170729T090206Z
+20170824T145159Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin
 ----version----
 language: sv-SE
 version: 1
-revision: 634dd6ed-100d-4955-90e3-5bb0c9fc075a
+revision: 5c50a014-d146-4152-95aa-272748fd8fea
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -124,18 +117,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-634dd6ed-100d-4955-90e3-5bb0c9fc075a
+5c50a014-d146-4152-95aa-272748fd8fea
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170719T081543Z
+20170824T145245Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Fluff
+sitecore\Admin

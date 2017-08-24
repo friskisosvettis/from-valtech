@@ -59,13 +59,11 @@
             }
         }
     }
+
     //-- MOOD PART OF FOOTER --//
     &--mood {
         min-height: 0rem;
-        height: 100%;
-        @include medium-up {
-          height: rem(15 * $base-height);
-        }
+        height: rem(15 * $base-height);
         position: relative;
         overflow: hidden;
 
@@ -74,20 +72,16 @@
         }
 
         .footer__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background: $primary-color-dim-80;
-            display: flex;
-            align-items: start;
-            justify-content: center;
-            @include medium-up {
-              align-items: center;
-            }
+          height: rem(12.5 * $base-height);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: table;
+          width: 100%;
+          height: 100%;
+          background: $primary-color-dim-80;
         }
 
         .footer__content {

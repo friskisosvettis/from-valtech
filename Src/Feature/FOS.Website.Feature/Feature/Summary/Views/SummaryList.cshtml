@@ -26,12 +26,15 @@
 
 @if (Model.SummaryListItem != null && Model.SummaryList.Any())
 {
-    <div class="container">
-        <div class="container--12">
-            <h2 class="color--primary text-align--center">@Model.SummaryListItem.Header</h2>
+    if (Model.SummaryListItem.Header.HasTextValue)
+    {
+        <div class="container">
+            <div class="container--12">
+                <h2 class="color--primary text-align--center">@Model.SummaryListItem.Header</h2>
+            </div>
         </div>
-    </div>
-        <ul class="container">
+    }
+        <ul class="container teaser__container">
             @foreach (SummarySpotModel summarySpot in Model.SummaryList)
             {
                 // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
@@ -230,15 +233,15 @@
                     }
                 }
             }
+            @if (Model.SummaryListItem != null && Model.SummaryListItem.ReadMoreLink.HasValue)
+            {
+            <li class="container--12">
+                <div class="text-align--right margin-bottom--space">
+                    @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto teaser__link")
+                </div>
+            </li>
+            }
         </ul>
-    if (Model.SummaryListItem != null && Model.SummaryListItem.ReadMoreLink.HasValue)
-    {
-        <div class="container">
-            <div class="container--12 text-align--right margin-bottom--space">
-                @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto teaser__link")
-            </div>
-        </div>
-    }
 }
 else
 {

@@ -81,7 +81,7 @@
                                     }
                                     <div class="teaser__overlay">
                                         <div class="teaser__content">
-                                            <h2 class="heading-3">
+                                            <h2>
                                                 @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
                                                 {
                                                     @summarySpot.SummaryItem.SummaryHeading.Render(false)
@@ -235,7 +235,7 @@
     {
         <div class="container">
             <div class="container--12 text-align--right margin-bottom--space">
-                @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto")
+                @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto teaser__link")
             </div>
         </div>
     }

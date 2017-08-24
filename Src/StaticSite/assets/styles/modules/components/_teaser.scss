@@ -24,6 +24,11 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
         text-align: center;
         margin-bottom: $space;
     }
+    @include small-up {
+        &__link {
+            margin-right: $space;
+        }
+    }
 
     &:hover {
         @include transform-scale(1.05);
@@ -72,7 +77,10 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
             height: 80%;
         }
         h3 {
-            margin: $space 0 0 0;
+            margin: $space-half 0 0 0;
+            @include medium-up {
+                margin-top: $space;
+            }
         }
     }
 

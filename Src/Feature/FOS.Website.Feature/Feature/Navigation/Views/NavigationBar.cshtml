@@ -92,8 +92,8 @@
                 @if (Model.MoreMenuItems.Any())
                 {
                     var cssClass = "";
-                    @if (@Model.AssociationLinks != null)
-                     {
+                    if (Model.AssociationLinks != null)
+                    {
                         cssClass = "navigation__item--separated";
                     }
                     <li class="navigation__item @cssClass">

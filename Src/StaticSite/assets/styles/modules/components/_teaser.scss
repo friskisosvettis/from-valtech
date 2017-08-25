@@ -82,9 +82,6 @@ $teaser-height-xlarge: rem(12.5 * $base-height);    //500px
         }
         h3 {
             margin: $space-half 0 0 0;
-            @include medium-up {
-                margin-top: $space;
-            }
         }
     }
 

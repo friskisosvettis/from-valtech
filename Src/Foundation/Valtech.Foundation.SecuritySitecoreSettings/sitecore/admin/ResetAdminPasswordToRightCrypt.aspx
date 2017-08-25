@@ -4,7 +4,9 @@
 <script runat="server">
     protected void Page_Load(object sender, EventArgs e)
     {
-			// Set ThisIsChangedFromServer = true; to work
+			/*
+                Set ThisIsChangedFromServer = true; to work
+            */
 			bool ThisIsChangedFromServer = false;
 			if(!ThisIsChangedFromServer)
 			{

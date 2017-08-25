@@ -253,10 +253,10 @@ $navigation-animation: 0.5s linear 0s;
         text-align: center;
         width: 100%;
 
-        &:nth-last-child(3) {
-            margin-bottom: 150px; //in order to not be hidden below top nav buttons
+        &--separated {
+            padding-bottom: 200px; //in order to not be hidden below top nav buttons
             @include medium-up {
-                margin-bottom: 0;
+                padding-bottom: 0;
             }
         }
 

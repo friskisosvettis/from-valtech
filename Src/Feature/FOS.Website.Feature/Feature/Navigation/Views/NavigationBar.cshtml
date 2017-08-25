@@ -91,7 +91,12 @@
                 }
                 @if (Model.MoreMenuItems.Any())
                 {
-                    <li class="navigation__item">
+                    var cssClass = "";
+                    @if (@Model.AssociationLinks != null)
+                     {
+                        cssClass = "navigation__item--separated";
+                    }
+                    <li class="navigation__item @cssClass">
                         <button class="navigation__btn" data-js-menu-more>@Model.label_More</button>
                         <ul data-js-menu-more-content>
                             <!--More Menu items -->

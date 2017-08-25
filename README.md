@@ -2,7 +2,7 @@
 
 ## How to set up the environment
 
-###The solution is based on the following technologies:
+### The solution is based on the following technologies:
 - Sitecore 8.2 rev. 161115
 - ASP.NET 4.6.1
 - SQL Server 2012 (or later)
@@ -15,14 +15,14 @@
 - Git
  
  
-###LICENSES
+### LICENSES
 You need to get a couple of licenses, if you don’t already have them.
  
 - Sitecore developer license.
 - TDS license.
  
  
-###MongoDB installation
+### MongoDB installation
 Download the correct version of MongoDB and run the installer.
  
 After that has finished, you need to install MongoDB as a windows service.
@@ -45,7 +45,7 @@ Find the MongoDB service and start it.
 If you installed RoboMongo, you can now use it to connect to localhost:27017.
  
 
-##INITIAL LOCAL SETUP
+## INITIAL LOCAL SETUP
 These are the steps to create a full local environment. See sections below for detailed info on each step.
  
 Install the URL-Rewrite module from Microsoft (if not installed already): http://www.iis.net/downloads/microsoft/url-rewrite
@@ -71,7 +71,7 @@ Open Visual Studio, open the “Task Runner” window and double-click "Initial-
 Login to the Sitecore interface (using admin : b ) and do a full publish of the website
 Check that your local environment is running by browsing to http://fos.website.local/
 
-####RUN THE STYLEGUIDE LOCALLY
+#### RUN THE STYLEGUIDE LOCALLY
 In order to run the styleguide locally: 
 Use the command line and run "gulp--staticsite"
 
@@ -93,30 +93,30 @@ For scss, the naming convention BEM (https://en.bem.info/methodology/quick-start
 .btn--big {}
 ```
 
-###SITECORE DATABASE SERIALISATION
+### SITECORE DATABASE SERIALISATION
 Sitecore Items are synchronised via Hedgehog TDS. Use version 5.5.
 
 Use Gulp task to automatically batch sync everything in the solution to Sitecore.
 Use normal (manual) sync or Sitecore Rocks to sync individual Sitecore items with TDS projects during development.
 
 
-###DEPLOYMENT URLS
+### DEPLOYMENT URLS
 
-####Teamcity
+#### Teamcity
 https://bob.valtech.se/project.html?projectId=FriskisSitecore
 
-####Octopus
+#### Octopus
 https://octopus.valtech.se/app#/projects/friskis-website
 
 
-####SIM SETUP
+#### SIM SETUP
 Download
 The SIM application (https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx)
 Zipped webroot of the correct Sitecore version (See below) from dev.sitecore.net and place in a folder on your machine that you wish to use for installing Sitecore instances using SIM (do not unzip). (eg. C:\Solutions\BuildLibrary\Sitecore )
 Valtech Sitecore license (license.xml) and place in your SIM folder as well. (eg. C:\Solutions\BuildLibrary\Licenses )
 
 
-###DEVELOPMENT
+### DEVELOPMENT
 
 We use Gulp to automate. A lot.
 
@@ -137,7 +137,7 @@ Some tasks will produce more diagnostic output when called with the —verbose f
 
 
 
-###SITECORE ASSEMBLIES
+### SITECORE ASSEMBLIES
 Sitecore DLLs are located on an internal NuGet feed:
 http://nuget.valtech.dk/
 
@@ -146,7 +146,7 @@ It is not possible to read from this feed unless you are on the Valtech network 
 Due to an issue with NuGet, you may experience infinite NuGet restore hangs, if you are not on the network.
 
 
-###DEPLOYING PROJECTS
+### DEPLOYING PROJECTS
 As mentioned, Gulp handles a lot of our automated tasks.
 
 On local and build environments:
@@ -159,11 +159,11 @@ Fonts
 Compiled CSS
 Compiled JS
 
-####Only on local environment:
+#### Only on local environment:
 Transform config files in webroot (using the config transformation powershell script included in the solution)
 Sync the contents of all TDS projects to Sitecore.
 
-####Only on build environment:
+#### Only on build environment:
 Clean the “dist” directory used for NuGet packaging, so old files will not be deployed
 Build TDS update packages with consecutive prefixes (ie. 001_, 002_, etc.), to ensure correct installation order in Octopus
 Copy TDS update packages in a flattened structure to NuGet source directory

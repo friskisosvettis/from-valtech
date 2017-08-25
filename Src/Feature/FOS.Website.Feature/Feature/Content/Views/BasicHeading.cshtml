@@ -12,12 +12,35 @@
     </div>
     return;
 }
-<div class="hero hero--small">
-    <div class="hero__img">
-        @Model.BasicHeadingItem.PageHeadingImage.Render()
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <style>
+        /* Class added inorder to make images clickable and selectable in the experience editor*/
+        .SITECORE-image {
+            width: 100%;
+            height: auto;
+            pointer-events: auto;
+        }
+        .SITECORE-parent {
+            max-height: 360px;
+            pointer-events: none;
+            overflow: hidden;
+        }
+    </style>
+    <div class="SITECORE-parent">
+        @Model.BasicHeadingItem.PageHeadingImage.Render("SITECORE-image")
     </div>
-    <div class="hero__container"></div>
-</div>
+}
+else
+{
+    <div class="hero hero--small">
+        <div class="hero__img">
+            @Model.BasicHeadingItem.PageHeadingImage.Render()
+        </div>
+        <div class="hero__container"></div>
+    </div>
+
+}
 <div class="background--white">
     @Html.Sitecore().Placeholder("breadcrumbs")
     <div class="container">

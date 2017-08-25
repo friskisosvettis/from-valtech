@@ -9,14 +9,27 @@
 {
     @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
 }
+@{
+    var cssClass = "";
+}
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <style>
+        /* Class added inorder to make images clickable and selectable in the experience editor*/
+        .SITECORE-height-0 {
+            height: 0;
+        }
+    </style>
+    cssClass = "SITECORE-height-0";
+}
 
 <div class="image-divider">
     @Model.ImageItem.Picture.Render()
     @if (Model.SimpleTextBox.BoxTitle.HasTextValue || Model.SimpleTextBox.BoxTitle.HasTextValue || Sitecore.Context.PageMode.IsExperienceEditor)
     {
-        <div class="image-divider__content">
-            <div class="container">
-                <div class="container--12">
+        <div class="image-divider__content @cssClass">
+            <div class="container @cssClass">
+                <div class="container--12 @cssClass">
                     <div class="image-divider__infobox">
                         <div class="text-align--center">
                             <h3 class="¨heading-2 color--primary">@Model.SimpleTextBox.BoxTitle.Render()</h3>
@@ -28,5 +41,3 @@
         </div>
     }
 </div>
-
-@* Fluff Talk to Veronika**@

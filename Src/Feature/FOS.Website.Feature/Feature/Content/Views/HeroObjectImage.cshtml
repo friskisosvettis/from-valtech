@@ -9,9 +9,37 @@
 {
     return;
 }
-
-@helper GetHeroObjectMarkup()
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
+    <style>
+        /* Class added inorder to make images clickable and selectable in the experience editor*/
+        .SITECORE-parent {
+            pointer-events: none;
+        }
+
+        .SITECORE-child {
+            pointer-events: auto;
+        }
+    </style>
+}
+
+@helper EditorMode()
+{
+    @Html.ImageFor(m => m.HeroObjectImageItem.HeroImage)
+    <div class="hero__container SITECORE-parent">
+        <div class="hero__content hero__content--effect SITECORE-child">
+            <div class="container">
+                <div class="container--12">
+                    <h2 class="hero-heading">@Html.TextFor(m => m.HeroObjectImageItem.Title)</h2>
+                    <p>@Html.TextFor(m => m.HeroObjectImageItem.Description)</p>
+                </div>
+            </div>
+        </div>
+    </div>}
+
+@helper VisualMode()
+{
+
     @Html.ImageFor(m => m.HeroObjectImageItem.HeroImage)
     <div class="hero__container">
         <div class="hero__content hero__content--effect">
@@ -27,16 +55,16 @@
 
 <div>
     <div class="hero">
-        @if(Sitecore.Context.PageMode.IsExperienceEditor || Model.HeroObjectImageItem.Link.HasValue)
+        @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.HeroObjectImageItem.Link.HasValue)
         {
             using (Html.BeginHyperlinkFor(m => m.HeroObjectImageItem.Link, "hero__link"))
             {
-                @GetHeroObjectMarkup()
+                @EditorMode()
             }
         }
         else
         {
-            @GetHeroObjectMarkup()
+            @VisualMode()
         }
     </div>
 </div>

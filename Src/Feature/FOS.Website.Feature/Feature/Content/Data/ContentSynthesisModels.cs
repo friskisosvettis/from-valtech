@@ -403,17 +403,17 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeroObjectImage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F258FFB8-F406-43D9-B01F-4C05C9C86690}", "Orj6wL3BG6ZfG1dmpcddrvWK+lo=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F258FFB8-F406-43D9-B01F-4C05C9C86690}", "trGmTiVgkoo2vi3/SX0J3vyWw4E=", "Valtech.Foundation.Synthesis")]
     public partial interface IHeroObjectImageItem : Synthesis.IStandardTemplateItem {
         
-        /// <summary>Represents the Hero Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("hero_title")]
+        /// <summary>Represents the HeroTitle field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herotitle")]
         Synthesis.FieldTypes.Interfaces.ITextField HeroTitle {
             get;
         }
         
-        /// <summary>Represents the Hero Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("hero_description")]
+        /// <summary>Represents the HeroDescription field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herodescription")]
         Synthesis.FieldTypes.Interfaces.ITextField HeroDescription {
             get;
         }
@@ -2480,23 +2480,23 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
             }
         }
         
-        /// <summary>Represents the Hero Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("hero_title")]
+        /// <summary>Represents the HeroTitle field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herotitle")]
         public Synthesis.FieldTypes.Interfaces.ITextField HeroTitle {
             get {
                 if (_heroTitle == null) {
-                    _heroTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Hero Title"), this.GetSearchFieldValue("hero_title"));
+                    _heroTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "HeroTitle"), this.GetSearchFieldValue("herotitle"));
                 }
                 return _heroTitle;
             }
         }
         
-        /// <summary>Represents the Hero Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("hero_description")]
+        /// <summary>Represents the HeroDescription field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herodescription")]
         public Synthesis.FieldTypes.Interfaces.ITextField HeroDescription {
             get {
                 if (_heroDescription == null) {
-                    _heroDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Hero Description"), this.GetSearchFieldValue("hero_description"));
+                    _heroDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "HeroDescription"), this.GetSearchFieldValue("herodescription"));
                 }
                 return _heroDescription;
             }

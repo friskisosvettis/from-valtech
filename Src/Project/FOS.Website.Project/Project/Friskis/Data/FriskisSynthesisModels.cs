@@ -737,23 +737,23 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
             }
         }
         
-        /// <summary>Represents the Hero Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("hero_title")]
+        /// <summary>Represents the HeroTitle field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herotitle")]
         public Synthesis.FieldTypes.Interfaces.ITextField HeroTitle {
             get {
                 if (_heroTitle == null) {
-                    _heroTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Hero Title"), this.GetSearchFieldValue("hero_title"));
+                    _heroTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "HeroTitle"), this.GetSearchFieldValue("herotitle"));
                 }
                 return _heroTitle;
             }
         }
         
-        /// <summary>Represents the Hero Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("hero_description")]
+        /// <summary>Represents the HeroDescription field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herodescription")]
         public Synthesis.FieldTypes.Interfaces.ITextField HeroDescription {
             get {
                 if (_heroDescription == null) {
-                    _heroDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Hero Description"), this.GetSearchFieldValue("hero_description"));
+                    _heroDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "HeroDescription"), this.GetSearchFieldValue("herodescription"));
                 }
                 return _heroDescription;
             }

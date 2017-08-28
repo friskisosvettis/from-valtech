@@ -3141,8 +3141,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _street;
         
-        private Synthesis.FieldTypes.TextField _contactEmail;
-        
         private Synthesis.FieldTypes.ImageField _moodBackgroundImage;
         
         private Synthesis.FieldTypes.TextField _streetNr;
@@ -3150,8 +3148,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.HyperlinkField _email;
         
         private Synthesis.FieldTypes.HyperlinkField _moodLink;
-        
-        private Synthesis.FieldTypes.TextField _phoneNumber;
         
         private Synthesis.FieldTypes.TextField _zipCode;
         
@@ -3306,17 +3302,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Contact Email field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
-        public Synthesis.FieldTypes.Interfaces.ITextField ContactEmail {
-            get {
-                if (_contactEmail == null) {
-                    _contactEmail = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Contact Email"), this.GetSearchFieldValue("contact_email"));
-                }
-                return _contactEmail;
-            }
-        }
-        
         /// <summary>Represents the Mood Background Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("mood_background_image")]
         public Synthesis.FieldTypes.Interfaces.IImageField MoodBackgroundImage {
@@ -3358,17 +3343,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _moodLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "MoodLink"), this.GetSearchFieldValue("moodlink"));
                 }
                 return _moodLink;
-            }
-        }
-        
-        /// <summary>Represents the Phone Number field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("phone_number")]
-        public Synthesis.FieldTypes.Interfaces.ITextField PhoneNumber {
-            get {
-                if (_phoneNumber == null) {
-                    _phoneNumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{40A4F97B-6312-4034-955D-E05E9BB1E844}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Phone Number"), this.GetSearchFieldValue("phone_number"));
-                }
-                return _phoneNumber;
             }
         }
         

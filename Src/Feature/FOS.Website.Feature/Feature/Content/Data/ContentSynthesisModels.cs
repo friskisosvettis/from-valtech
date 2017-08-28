@@ -367,24 +367,12 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeadingTrainingCenter template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "9CKVtc86kZrPfEdBgz9mqyHpdgM=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{D3E46F15-94D9-44C8-BF0B-70D0094FF66A}", "R5eIlq+U6a6Y/CgyoHaupz+c0Xs=", "Valtech.Foundation.Synthesis")]
     public partial interface IHeadingTrainingCenterItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the Image field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("image")]
         Synthesis.FieldTypes.Interfaces.IImageField Image {
-            get;
-        }
-        
-        /// <summary>Represents the Contact Email field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
-        Synthesis.FieldTypes.Interfaces.ITextField ContactEmail {
-            get;
-        }
-        
-        /// <summary>Represents the Phone Number field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("phone_number")]
-        Synthesis.FieldTypes.Interfaces.ITextField PhoneNumber {
             get;
         }
     }
@@ -2289,10 +2277,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.ImageField _image;
         
-        private Synthesis.FieldTypes.TextField _contactEmail;
-        
-        private Synthesis.FieldTypes.TextField _phoneNumber;
-        
         public HeadingTrainingCenter(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -2330,28 +2314,6 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
                     _image = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{77F8111C-E439-4FCA-B3E8-320DB734D8C0}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Image"), this.GetSearchFieldValue("image"));
                 }
                 return _image;
-            }
-        }
-        
-        /// <summary>Represents the Contact Email field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
-        public Synthesis.FieldTypes.Interfaces.ITextField ContactEmail {
-            get {
-                if (_contactEmail == null) {
-                    _contactEmail = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Contact Email"), this.GetSearchFieldValue("contact_email"));
-                }
-                return _contactEmail;
-            }
-        }
-        
-        /// <summary>Represents the Phone Number field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("phone_number")]
-        public Synthesis.FieldTypes.Interfaces.ITextField PhoneNumber {
-            get {
-                if (_phoneNumber == null) {
-                    _phoneNumber = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{40A4F97B-6312-4034-955D-E05E9BB1E844}"], "/sitecore/templates/Feature/Content/Data/HeadingTrainingCenter", "Phone Number"), this.GetSearchFieldValue("phone_number"));
-                }
-                return _phoneNumber;
             }
         }
     }

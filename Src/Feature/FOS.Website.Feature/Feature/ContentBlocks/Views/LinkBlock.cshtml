@@ -42,18 +42,19 @@
 
 @helper VisualMode()
 {
-    <a href="@Model.LinkBlock.LinkTarget.Href">
-        <div class="teaser--overlay">
-            @Model.ImageItem.Picture.Render()
-            <div class="teaser__overlay">
-                <div class="teaser__content">
-                    <h2>@Model.LinkBlock.LinkHeading.Render()</h2>
-                    <p>@Model.LinkBlock.LinkIntro.Render()</p>
-                    <span class="btn btn__link btn--secondary">@Model.LinkBlock.LinkTarget.Text</span>
+    using (Html.BeginHyperlinkFor(m => m.LinkBlock.LinkTarget))
+    {
+            <div class="teaser--overlay">
+                @Model.ImageItem.Picture.Render()
+                <div class="teaser__overlay">
+                    <div class="teaser__content">
+                        <h2>@Model.LinkBlock.LinkHeading.Render()</h2>
+                        <p>@Model.LinkBlock.LinkIntro.Render()</p>
+                        <span class="btn btn__link btn--secondary">@Model.LinkBlock.LinkTarget.Text</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
+    }
 }
 
 

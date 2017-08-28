@@ -1112,7 +1112,6 @@
     <Content Include="Project\Friskis\Views\ContentRegion.cshtml" />
     <Content Include="Project\Friskis\Views\Web.config" />
     <Content Include="Project\Friskis\Views\ArticlePage.cshtml" />
-    <Content Include="Project\Friskis\Views\HeroPage.cshtml" />
     <Content Include="Project\Friskis\Views\StaticContentRow\Static_one.cshtml" />
     <Content Include="Project\Friskis\Views\AssociationPage.cshtml" />
     <Content Include="Project\Friskis\Views\TrainingCenterPage.cshtml" />

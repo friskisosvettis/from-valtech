@@ -13,14 +13,8 @@ namespace FOS.Website.Feature.TrainingForm {
     
     /// <summary>Represents the /sitecore/templates/Feature/TrainingForm/TrainingForm template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{32880F2C-C747-4F42-BEE8-790218014D70}", "kg7EhajE/VDJoHHMSPDhkhP+ClI=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{32880F2C-C747-4F42-BEE8-790218014D70}", "Diz/8Nqz8nUaGlfk8kiglzxH0jU=", "Valtech.Foundation.Synthesis")]
     public partial interface ITrainingFormItem : Synthesis.IStandardTemplateItem {
-        
-        /// <summary>Represents the TrainingFormName field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("trainingformname")]
-        Synthesis.FieldTypes.Interfaces.ITextField TrainingFormName {
-            get;
-        }
         
         /// <summary>Represents the HideChildTrainingFormsFromList field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("hidechildtrainingformsfromlist")]
@@ -53,8 +47,6 @@ namespace FOS.Website.Concrete.Feature.TrainingForm {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class TrainingForm : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.TrainingForm.ITrainingFormItem {
         
-        private Synthesis.FieldTypes.TextField _trainingFormName;
-        
         private Synthesis.FieldTypes.BooleanField _hideChildTrainingFormsFromList;
         
         private Synthesis.FieldTypes.BooleanField _hideThisTrainingFormFromList;
@@ -85,17 +77,6 @@ namespace FOS.Website.Concrete.Feature.TrainingForm {
         public override Sitecore.Data.ID TemplateId {
             get {
                 return ItemTemplateId;
-            }
-        }
-        
-        /// <summary>Represents the TrainingFormName field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("trainingformname")]
-        public Synthesis.FieldTypes.Interfaces.ITextField TrainingFormName {
-            get {
-                if (_trainingFormName == null) {
-                    _trainingFormName = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{98FF996F-FD0E-4024-B550-C2CF0ADBB0EB}"], "/sitecore/templates/Feature/TrainingForm/TrainingForm", "TrainingFormName"), this.GetSearchFieldValue("trainingformname"));
-                }
-                return _trainingFormName;
             }
         }
         

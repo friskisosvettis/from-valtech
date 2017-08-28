@@ -30,8 +30,8 @@
         <div class="hero__content hero__content--effect SITECORE-child">
             <div class="container">
                 <div class="container--12">
-                    <h2 class="hero-heading">@Html.TextFor(m => m.HeroObjectImageItem.Title)</h2>
-                    <p>@Html.TextFor(m => m.HeroObjectImageItem.Description)</p>
+                    <h2 class="hero-heading">@Html.TextFor(m => m.HeroObjectImageItem.HeroTitle)</h2>
+                    <p>@Html.TextFor(m => m.HeroObjectImageItem.HeroDescription)</p>
                 </div>
             </div>
         </div>
@@ -45,8 +45,8 @@
         <div class="hero__content hero__content--effect">
             <div class="container">
                 <div class="container--12">
-                    <h2 class="hero-heading">@Html.TextFor(m => m.HeroObjectImageItem.Title)</h2>
-                    <p>@Html.TextFor(m => m.HeroObjectImageItem.Description)</p>
+                    <h2 class="hero-heading">@Html.TextFor(m => m.HeroObjectImageItem.HeroTitle)</h2>
+                    <p>@Html.TextFor(m => m.HeroObjectImageItem.HeroDescription)</p>
                 </div>
             </div>
         </div>
@@ -55,9 +55,9 @@
 
 <div>
     <div class="hero">
-        @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.HeroObjectImageItem.Link.HasValue)
+        @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.HeroObjectImageItem.HeroLink.HasValue)
         {
-            using (Html.BeginHyperlinkFor(m => m.HeroObjectImageItem.Link, "hero__link"))
+            using (Html.BeginHyperlinkFor(m => m.HeroObjectImageItem.HeroLink, "hero__link"))
             {
                 @EditorMode()
             }

@@ -700,13 +700,13 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class HeroObjectImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Project.Friskis.ContentTypes.IHeroObjectImageItem {
         
-        private Synthesis.FieldTypes.TextField _title;
+        private Synthesis.FieldTypes.TextField _heroTitle;
         
-        private Synthesis.FieldTypes.TextField _description;
+        private Synthesis.FieldTypes.TextField _heroDescription;
         
         private Synthesis.FieldTypes.ImageField _heroImage;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _heroLink;
         
         public HeroObjectImage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -737,25 +737,25 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
             }
         }
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Title {
+        /// <summary>Represents the Hero Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hero_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField HeroTitle {
             get {
-                if (_title == null) {
-                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Title"), this.GetSearchFieldValue("title"));
+                if (_heroTitle == null) {
+                    _heroTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Hero Title"), this.GetSearchFieldValue("hero_title"));
                 }
-                return _title;
+                return _heroTitle;
             }
         }
         
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Description {
+        /// <summary>Represents the Hero Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hero_description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField HeroDescription {
             get {
-                if (_description == null) {
-                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Description"), this.GetSearchFieldValue("description"));
+                if (_heroDescription == null) {
+                    _heroDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Hero Description"), this.GetSearchFieldValue("hero_description"));
                 }
-                return _description;
+                return _heroDescription;
             }
         }
         
@@ -770,14 +770,14 @@ namespace FOS.Website.Concrete.Project.Friskis.ContentTypes {
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the HeroLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herolink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField HeroLink {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{32D97D63-B497-4E9E-95D6-F178DE9C7C1D}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "Link"), this.GetSearchFieldValue("link"));
+                if (_heroLink == null) {
+                    _heroLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{32D97D63-B497-4E9E-95D6-F178DE9C7C1D}"], "/sitecore/templates/Project/Friskis/Content Types/Hero Object Image", "HeroLink"), this.GetSearchFieldValue("herolink"));
                 }
-                return _link;
+                return _heroLink;
             }
         }
     }
@@ -1158,6 +1158,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
+        
         public ArticlePage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -1329,6 +1333,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/ArticlePage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -1365,6 +1391,8 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _introTitle;
         
+        private Synthesis.FieldTypes.TextField _moodTitle;
+        
         private Synthesis.FieldTypes.TextField _region;
         
         private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
@@ -1373,11 +1401,7 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryHeading;
         
-        private Synthesis.FieldTypes.TextField _title;
-        
         private Synthesis.FieldTypes.TextField _becomeAMemberText;
-        
-        private Synthesis.FieldTypes.TextField _description;
         
         private Synthesis.FieldTypes.HyperlinkField _instagramLink;
         
@@ -1385,13 +1409,15 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _linkToExistingPage;
         
-        private Synthesis.FieldTypes.ImageField _summaryImage;
+        private Synthesis.FieldTypes.TextField _moodDescription;
         
-        private Synthesis.FieldTypes.ImageField _backgroundImage;
+        private Synthesis.FieldTypes.ImageField _summaryImage;
         
         private Synthesis.FieldTypes.HyperlinkField _becomeAMemberLink;
         
         private Synthesis.FieldTypes.HyperlinkField _introLink;
+        
+        private Synthesis.FieldTypes.ImageField _moodBackgroundImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
@@ -1401,15 +1427,19 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _contactEmail;
         
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
         private Synthesis.FieldTypes.TextField _introLinkLabel;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _moodLink;
         
         private Synthesis.FieldTypes.TextField _becomeAFunkisText;
         
         private Synthesis.FieldTypes.TextField _contactPhonenumber;
         
         private Synthesis.FieldTypes.FileField _moodMovie;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         private Synthesis.FieldTypes.HyperlinkField _trainingSelectionLink;
         
@@ -1520,6 +1550,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Mood Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodTitle {
+            get {
+                if (_moodTitle == null) {
+                    _moodTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Mood Title"), this.GetSearchFieldValue("mood_title"));
+                }
+                return _moodTitle;
+            }
+        }
+        
         /// <summary>Represents the Region field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("region")]
         public Synthesis.FieldTypes.Interfaces.ITextField Region {
@@ -1564,17 +1605,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Title {
-            get {
-                if (_title == null) {
-                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Title"), this.GetSearchFieldValue("title"));
-                }
-                return _title;
-            }
-        }
-        
         /// <summary>Represents the Become A Member Text field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("become_a_member_text")]
         public Synthesis.FieldTypes.Interfaces.ITextField BecomeAMemberText {
@@ -1583,17 +1613,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _becomeAMemberText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{EBC14A33-8C87-4597-B1ED-31478BB0E15B}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Become A Member Text"), this.GetSearchFieldValue("become_a_member_text"));
                 }
                 return _becomeAMemberText;
-            }
-        }
-        
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Description {
-            get {
-                if (_description == null) {
-                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Description"), this.GetSearchFieldValue("description"));
-                }
-                return _description;
             }
         }
         
@@ -1630,6 +1649,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Mood Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodDescription {
+            get {
+                if (_moodDescription == null) {
+                    _moodDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Mood Description"), this.GetSearchFieldValue("mood_description"));
+                }
+                return _moodDescription;
+            }
+        }
+        
         /// <summary>Represents the SummaryImage field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("summaryimage")]
         public Synthesis.FieldTypes.Interfaces.IImageField SummaryImage {
@@ -1638,17 +1668,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{93226CCC-A692-4A1F-9445-772065350708}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "SummaryImage"), this.GetSearchFieldValue("summaryimage"));
                 }
                 return _summaryImage;
-            }
-        }
-        
-        /// <summary>Represents the Background Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
-            get {
-                if (_backgroundImage == null) {
-                    _backgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Background Image"), this.GetSearchFieldValue("background_image"));
-                }
-                return _backgroundImage;
             }
         }
         
@@ -1671,6 +1690,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _introLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{85CE7C75-699A-418E-9437-BCA9F2CABA14}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "IntroLink"), this.GetSearchFieldValue("introlink"));
                 }
                 return _introLink;
+            }
+        }
+        
+        /// <summary>Represents the Mood Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_background_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField MoodBackgroundImage {
+            get {
+                if (_moodBackgroundImage == null) {
+                    _moodBackgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Mood Background Image"), this.GetSearchFieldValue("mood_background_image"));
+                }
+                return _moodBackgroundImage;
             }
         }
         
@@ -1718,6 +1748,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
         /// <summary>Represents the IntroLinkLabel field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("introlinklabel")]
         public Synthesis.FieldTypes.Interfaces.ITextField IntroLinkLabel {
@@ -1729,14 +1770,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the MoodLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("moodlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField MoodLink {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "Link"), this.GetSearchFieldValue("link"));
+                if (_moodLink == null) {
+                    _moodLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "MoodLink"), this.GetSearchFieldValue("moodlink"));
                 }
-                return _link;
+                return _moodLink;
             }
         }
         
@@ -1770,6 +1811,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _moodMovie = new Synthesis.FieldTypes.FileField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{57064A9F-2D0F-4BFB-B73C-30583A26A348}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "MoodMovie"), this.GetSearchFieldValue("moodmovie"));
                 }
                 return _moodMovie;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/AssociationPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
             }
         }
         
@@ -1892,6 +1944,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.BooleanField _navigation_IsSecondary;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public CCCHeroPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2031,6 +2087,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/CCCHeroPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -2158,6 +2236,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public EventListPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2330,6 +2412,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/EventListPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/EventListPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -2385,6 +2489,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public EventPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2590,6 +2698,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/EventPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -2622,15 +2752,13 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _headline;
         
+        private Synthesis.FieldTypes.TextField _moodTitle;
+        
         private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
         
         private Synthesis.FieldTypes.TextField _textForNewAssociation;
         
-        private Synthesis.FieldTypes.TextField _title;
-        
         private Synthesis.FieldTypes.HyperlinkField _topbarLink1;
-        
-        private Synthesis.FieldTypes.TextField _description;
         
         private Synthesis.FieldTypes.HyperlinkField _instagramLink;
         
@@ -2638,11 +2766,13 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _linkToStartPageLabel;
         
+        private Synthesis.FieldTypes.TextField _moodDescription;
+        
         private Synthesis.FieldTypes.TextField _showAllAssociationLabel;
         
         private Synthesis.FieldTypes.HyperlinkField _topbarLink2;
         
-        private Synthesis.FieldTypes.ImageField _backgroundImage;
+        private Synthesis.FieldTypes.ImageField _moodBackgroundImage;
         
         private Synthesis.FieldTypes.HyperlinkField _showAllButtonLink;
         
@@ -2652,7 +2782,7 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.HyperlinkField _contactEmail;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _moodLink;
         
         private Synthesis.FieldTypes.HyperlinkField _topbarLink4;
         
@@ -2737,6 +2867,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Mood Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodTitle {
+            get {
+                if (_moodTitle == null) {
+                    _moodTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Mood Title"), this.GetSearchFieldValue("mood_title"));
+                }
+                return _moodTitle;
+            }
+        }
+        
         /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
         public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
@@ -2759,17 +2900,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Title {
-            get {
-                if (_title == null) {
-                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Title"), this.GetSearchFieldValue("title"));
-                }
-                return _title;
-            }
-        }
-        
         /// <summary>Represents the Topbar Link1 field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("topbar_link1")]
         public Synthesis.FieldTypes.Interfaces.IHyperlinkField TopbarLink1 {
@@ -2778,17 +2908,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _topbarLink1 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E01387D9-C723-4108-84ED-342E3CAFA9B7}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Topbar Link1"), this.GetSearchFieldValue("topbar_link1"));
                 }
                 return _topbarLink1;
-            }
-        }
-        
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Description {
-            get {
-                if (_description == null) {
-                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Description"), this.GetSearchFieldValue("description"));
-                }
-                return _description;
             }
         }
         
@@ -2825,6 +2944,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Mood Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodDescription {
+            get {
+                if (_moodDescription == null) {
+                    _moodDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Mood Description"), this.GetSearchFieldValue("mood_description"));
+                }
+                return _moodDescription;
+            }
+        }
+        
         /// <summary>Represents the Show All Association Label field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("show_all_association_label")]
         public Synthesis.FieldTypes.Interfaces.ITextField ShowAllAssociationLabel {
@@ -2847,14 +2977,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Background Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
+        /// <summary>Represents the Mood Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_background_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField MoodBackgroundImage {
             get {
-                if (_backgroundImage == null) {
-                    _backgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Background Image"), this.GetSearchFieldValue("background_image"));
+                if (_moodBackgroundImage == null) {
+                    _moodBackgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Mood Background Image"), this.GetSearchFieldValue("mood_background_image"));
                 }
-                return _backgroundImage;
+                return _moodBackgroundImage;
             }
         }
         
@@ -2902,14 +3032,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the MoodLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("moodlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField MoodLink {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "Link"), this.GetSearchFieldValue("link"));
+                if (_moodLink == null) {
+                    _moodLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/Frontpage", "MoodLink"), this.GetSearchFieldValue("moodlink"));
                 }
-                return _link;
+                return _moodLink;
             }
         }
         
@@ -3001,25 +3131,25 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _mapHeadline;
         
+        private Synthesis.FieldTypes.TextField _moodTitle;
+        
         private Synthesis.FieldTypes.TextField _scriptsInheritedOnSubpages;
         
-        private Synthesis.FieldTypes.TextField _title;
+        private Synthesis.FieldTypes.TextField _moodDescription;
         
-        private Synthesis.FieldTypes.TextField _description;
-        
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _openingHoursLink;
         
         private Synthesis.FieldTypes.TextField _street;
         
-        private Synthesis.FieldTypes.ImageField _backgroundImage;
-        
         private Synthesis.FieldTypes.TextField _contactEmail;
+        
+        private Synthesis.FieldTypes.ImageField _moodBackgroundImage;
         
         private Synthesis.FieldTypes.TextField _streetNr;
         
         private Synthesis.FieldTypes.HyperlinkField _email;
         
-        private Synthesis.FieldTypes.HyperlinkField _link1;
+        private Synthesis.FieldTypes.HyperlinkField _moodLink;
         
         private Synthesis.FieldTypes.TextField _phoneNumber;
         
@@ -3121,6 +3251,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
+        /// <summary>Represents the Mood Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodTitle {
+            get {
+                if (_moodTitle == null) {
+                    _moodTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Mood Title"), this.GetSearchFieldValue("mood_title"));
+                }
+                return _moodTitle;
+            }
+        }
+        
         /// <summary>Represents the ScriptsInheritedOnSubpages field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("scriptsinheritedonsubpages")]
         public Synthesis.FieldTypes.Interfaces.ITextField ScriptsInheritedOnSubpages {
@@ -3132,36 +3273,25 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Title {
+        /// <summary>Represents the Mood Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodDescription {
             get {
-                if (_title == null) {
-                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Title"), this.GetSearchFieldValue("title"));
+                if (_moodDescription == null) {
+                    _moodDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Mood Description"), this.GetSearchFieldValue("mood_description"));
                 }
-                return _title;
+                return _moodDescription;
             }
         }
         
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Description {
+        /// <summary>Represents the Opening Hours Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHoursLink {
             get {
-                if (_description == null) {
-                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Description"), this.GetSearchFieldValue("description"));
+                if (_openingHoursLink == null) {
+                    _openingHoursLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{19534E43-1EF1-4D7C-924B-D7E0A9343AA6}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Opening Hours Link"), this.GetSearchFieldValue("opening_hours_link"));
                 }
-                return _description;
-            }
-        }
-        
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
-            get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{19534E43-1EF1-4D7C-924B-D7E0A9343AA6}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Link"), this.GetSearchFieldValue("link"));
-                }
-                return _link;
+                return _openingHoursLink;
             }
         }
         
@@ -3176,17 +3306,6 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Background Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
-            get {
-                if (_backgroundImage == null) {
-                    _backgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Background Image"), this.GetSearchFieldValue("background_image"));
-                }
-                return _backgroundImage;
-            }
-        }
-        
         /// <summary>Represents the Contact Email field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("contact_email")]
         public Synthesis.FieldTypes.Interfaces.ITextField ContactEmail {
@@ -3195,6 +3314,17 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _contactEmail = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D6F8C16B-00B0-4D31-BF86-C84B5734E8E5}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Contact Email"), this.GetSearchFieldValue("contact_email"));
                 }
                 return _contactEmail;
+            }
+        }
+        
+        /// <summary>Represents the Mood Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_background_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField MoodBackgroundImage {
+            get {
+                if (_moodBackgroundImage == null) {
+                    _moodBackgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Mood Background Image"), this.GetSearchFieldValue("mood_background_image"));
+                }
+                return _moodBackgroundImage;
             }
         }
         
@@ -3220,14 +3350,14 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link1 {
+        /// <summary>Represents the MoodLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("moodlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField MoodLink {
             get {
-                if (_link1 == null) {
-                    _link1 = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "Link"), this.GetSearchFieldValue("link"));
+                if (_moodLink == null) {
+                    _moodLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Project/Friskis/Page Types/GymPage", "MoodLink"), this.GetSearchFieldValue("moodlink"));
                 }
-                return _link1;
+                return _moodLink;
             }
         }
         
@@ -3358,6 +3488,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
+        
         public HeroPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -3474,6 +3608,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/HeroPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/HeroPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -3523,6 +3679,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public NewsListPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -3695,6 +3855,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/NewsListPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/NewsListPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -3748,6 +3930,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public NewsPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -3942,6 +4128,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                 return _summaryText;
             }
         }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/NewsPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/NewsPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
+            }
+        }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
@@ -3995,6 +4203,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public SharedArticlePage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -4187,6 +4399,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
+            }
+        }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/SharedArticlePage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
             }
         }
     }
@@ -4404,6 +4638,10 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
         private Synthesis.FieldTypes.ImageField _pageHeadingImage;
         
         private Synthesis.FieldTypes.TextField _summaryText;
+        
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
         
         public TrainingFormPage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -4629,6 +4867,28 @@ namespace FOS.Website.Concrete.Project.Friskis.PageTypes {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
+            }
+        }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Project/Friskis/Page Types/TrainingFormPage", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
             }
         }
     }

@@ -313,30 +313,30 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/Footer - Mood Footer template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1FF9FE30-7F13-452E-AAB9-A218EAB62730}", "xObMIcD1dlPLlRo05vfr6YIbHMI=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{1FF9FE30-7F13-452E-AAB9-A218EAB62730}", "arfUkKeuo0WErGABNs7xsoYn+wY=", "Valtech.Foundation.Synthesis")]
     public partial interface IFooterMoodFooterItem : Synthesis.IStandardTemplateItem {
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        Synthesis.FieldTypes.Interfaces.ITextField Title {
+        /// <summary>Represents the Mood Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField MoodTitle {
             get;
         }
         
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        Synthesis.FieldTypes.Interfaces.ITextField Description {
+        /// <summary>Represents the Mood Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_description")]
+        Synthesis.FieldTypes.Interfaces.ITextField MoodDescription {
             get;
         }
         
-        /// <summary>Represents the Background Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
-        Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
+        /// <summary>Represents the Mood Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_background_image")]
+        Synthesis.FieldTypes.Interfaces.IImageField MoodBackgroundImage {
             get;
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the MoodLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("moodlink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField MoodLink {
             get;
         }
         
@@ -403,18 +403,18 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/HeroObjectImage template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F258FFB8-F406-43D9-B01F-4C05C9C86690}", "b2GPN97kJoh/9+6bruM7eqZ1XMk=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{F258FFB8-F406-43D9-B01F-4C05C9C86690}", "Orj6wL3BG6ZfG1dmpcddrvWK+lo=", "Valtech.Foundation.Synthesis")]
     public partial interface IHeroObjectImageItem : Synthesis.IStandardTemplateItem {
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        Synthesis.FieldTypes.Interfaces.ITextField Title {
+        /// <summary>Represents the Hero Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hero_title")]
+        Synthesis.FieldTypes.Interfaces.ITextField HeroTitle {
             get;
         }
         
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        Synthesis.FieldTypes.Interfaces.ITextField Description {
+        /// <summary>Represents the Hero Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hero_description")]
+        Synthesis.FieldTypes.Interfaces.ITextField HeroDescription {
             get;
         }
         
@@ -424,9 +424,9 @@ namespace FOS.Website.Feature.Content.Data {
             get;
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the HeroLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herolink")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField HeroLink {
             get;
         }
     }
@@ -547,7 +547,7 @@ namespace FOS.Website.Feature.Content.Data {
     
     /// <summary>Represents the /sitecore/templates/Feature/Content/Data/OpeningHours template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{131D4D4C-1DFF-40F0-A035-07397889579A}", "gdveJ2neVLhOjOiQZvAs17BkCtw=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{131D4D4C-1DFF-40F0-A035-07397889579A}", "UtkuYPSbV+mXSAQk4IxM7UkU7h4=", "Valtech.Foundation.Synthesis")]
     public partial interface IOpeningHoursItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the GooglePlaceId field</summary>
@@ -556,9 +556,9 @@ namespace FOS.Website.Feature.Content.Data {
             get;
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the Opening Hours Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours_link")]
+        Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHoursLink {
             get;
         }
     }
@@ -2092,13 +2092,13 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class FooterMoodFooter : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IFooterMoodFooterItem {
         
-        private Synthesis.FieldTypes.TextField _title;
+        private Synthesis.FieldTypes.TextField _moodTitle;
         
-        private Synthesis.FieldTypes.TextField _description;
+        private Synthesis.FieldTypes.TextField _moodDescription;
         
-        private Synthesis.FieldTypes.ImageField _backgroundImage;
+        private Synthesis.FieldTypes.ImageField _moodBackgroundImage;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _moodLink;
         
         private Synthesis.FieldTypes.FileField _moodMovie;
         
@@ -2131,47 +2131,47 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
             }
         }
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Title {
+        /// <summary>Represents the Mood Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodTitle {
             get {
-                if (_title == null) {
-                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Title"), this.GetSearchFieldValue("title"));
+                if (_moodTitle == null) {
+                    _moodTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{D79E1157-28CB-46C6-92E4-67043C9D4B11}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Mood Title"), this.GetSearchFieldValue("mood_title"));
                 }
-                return _title;
+                return _moodTitle;
             }
         }
         
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Description {
+        /// <summary>Represents the Mood Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField MoodDescription {
             get {
-                if (_description == null) {
-                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Description"), this.GetSearchFieldValue("description"));
+                if (_moodDescription == null) {
+                    _moodDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{17AAEC3D-7316-44F1-A6AE-C334E6115746}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Mood Description"), this.GetSearchFieldValue("mood_description"));
                 }
-                return _description;
+                return _moodDescription;
             }
         }
         
-        /// <summary>Represents the Background Image field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("background_image")]
-        public Synthesis.FieldTypes.Interfaces.IImageField BackgroundImage {
+        /// <summary>Represents the Mood Background Image field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("mood_background_image")]
+        public Synthesis.FieldTypes.Interfaces.IImageField MoodBackgroundImage {
             get {
-                if (_backgroundImage == null) {
-                    _backgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Background Image"), this.GetSearchFieldValue("background_image"));
+                if (_moodBackgroundImage == null) {
+                    _moodBackgroundImage = new Synthesis.FieldTypes.ImageField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{06BAE32C-663B-4DB5-A497-EB818B987B25}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Mood Background Image"), this.GetSearchFieldValue("mood_background_image"));
                 }
-                return _backgroundImage;
+                return _moodBackgroundImage;
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the MoodLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("moodlink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField MoodLink {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "Link"), this.GetSearchFieldValue("link"));
+                if (_moodLink == null) {
+                    _moodLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{BC51E53F-21CE-408F-90FC-8B3F92A4ACB1}"], "/sitecore/templates/Feature/Content/Data/Footer - Mood Footer", "MoodLink"), this.GetSearchFieldValue("moodlink"));
                 }
-                return _link;
+                return _moodLink;
             }
         }
         
@@ -2443,13 +2443,13 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
     public partial class HeroObjectImage : global::Synthesis.StandardTemplateItem, global::FOS.Website.Feature.Content.Data.IHeroObjectImageItem {
         
-        private Synthesis.FieldTypes.TextField _title;
+        private Synthesis.FieldTypes.TextField _heroTitle;
         
-        private Synthesis.FieldTypes.TextField _description;
+        private Synthesis.FieldTypes.TextField _heroDescription;
         
         private Synthesis.FieldTypes.ImageField _heroImage;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _heroLink;
         
         public HeroObjectImage(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2480,25 +2480,25 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
             }
         }
         
-        /// <summary>Represents the Title field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("title")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Title {
+        /// <summary>Represents the Hero Title field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hero_title")]
+        public Synthesis.FieldTypes.Interfaces.ITextField HeroTitle {
             get {
-                if (_title == null) {
-                    _title = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Title"), this.GetSearchFieldValue("title"));
+                if (_heroTitle == null) {
+                    _heroTitle = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{E887C4B0-9EAF-4BDC-8AEF-D968316401BB}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Hero Title"), this.GetSearchFieldValue("hero_title"));
                 }
-                return _title;
+                return _heroTitle;
             }
         }
         
-        /// <summary>Represents the Description field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("description")]
-        public Synthesis.FieldTypes.Interfaces.ITextField Description {
+        /// <summary>Represents the Hero Description field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("hero_description")]
+        public Synthesis.FieldTypes.Interfaces.ITextField HeroDescription {
             get {
-                if (_description == null) {
-                    _description = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Description"), this.GetSearchFieldValue("description"));
+                if (_heroDescription == null) {
+                    _heroDescription = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{81B56E2F-0405-4179-BA0C-1081DC2A58DE}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Hero Description"), this.GetSearchFieldValue("hero_description"));
                 }
-                return _description;
+                return _heroDescription;
             }
         }
         
@@ -2513,14 +2513,14 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the HeroLink field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("herolink")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField HeroLink {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{32D97D63-B497-4E9E-95D6-F178DE9C7C1D}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "Link"), this.GetSearchFieldValue("link"));
+                if (_heroLink == null) {
+                    _heroLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{32D97D63-B497-4E9E-95D6-F178DE9C7C1D}"], "/sitecore/templates/Feature/Content/Data/HeroObjectImage", "HeroLink"), this.GetSearchFieldValue("herolink"));
                 }
-                return _link;
+                return _heroLink;
             }
         }
     }
@@ -2952,7 +2952,7 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
         
         private Synthesis.FieldTypes.TextField _googlePlaceId;
         
-        private Synthesis.FieldTypes.HyperlinkField _link;
+        private Synthesis.FieldTypes.HyperlinkField _openingHoursLink;
         
         public OpeningHours(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
@@ -2994,14 +2994,14 @@ namespace FOS.Website.Concrete.Feature.Content.Data {
             }
         }
         
-        /// <summary>Represents the Link field</summary>
-        [Sitecore.ContentSearch.IndexFieldAttribute("link")]
-        public Synthesis.FieldTypes.Interfaces.IHyperlinkField Link {
+        /// <summary>Represents the Opening Hours Link field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("opening_hours_link")]
+        public Synthesis.FieldTypes.Interfaces.IHyperlinkField OpeningHoursLink {
             get {
-                if (_link == null) {
-                    _link = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{19534E43-1EF1-4D7C-924B-D7E0A9343AA6}"], "/sitecore/templates/Feature/Content/Data/OpeningHours", "Link"), this.GetSearchFieldValue("link"));
+                if (_openingHoursLink == null) {
+                    _openingHoursLink = new Synthesis.FieldTypes.HyperlinkField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{19534E43-1EF1-4D7C-924B-D7E0A9343AA6}"], "/sitecore/templates/Feature/Content/Data/OpeningHours", "Opening Hours Link"), this.GetSearchFieldValue("opening_hours_link"));
                 }
-                return _link;
+                return _openingHoursLink;
             }
         }
     }

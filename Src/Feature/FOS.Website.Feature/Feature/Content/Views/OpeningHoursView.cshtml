@@ -6,7 +6,7 @@
 @helper RenderOpeningHoursNoGoogle()
 {
     <div class="accordion">
-        @Model.OpeningHoursItem.Link.Render(cssClass: "icon__goto--after icon--mini--after")
+        @Model.OpeningHoursItem.OpeningHoursLink.Render(cssClass: "icon__goto--after icon--mini--after")
     </div>
 }
 
@@ -26,7 +26,7 @@ var dayOfWeek = ((int)DateTime.Today.AddDays(1).DayOfWeek + 6) % 7;
                 </thead>
                 <tbody id="opening_hours_week"></tbody>
             </table>
-            @Model.OpeningHoursItem.Link.Render(cssClass: "icon__goto--after icon--mini--after")
+            @Model.OpeningHoursItem.OpeningHoursLink.Render(cssClass: "icon__goto--after icon--mini--after")
         </div>
     </div>
 
@@ -44,7 +44,7 @@ var dayOfWeek = ((int)DateTime.Today.AddDays(1).DayOfWeek + 6) % 7;
                     <a href="https://google-developers.appspot.com/maps/documentation/javascript/examples/full/places-placeid-finder">@EncodingHelper.GetRazorViewText("Google Place ID")</a>
                     @EncodingHelper.GetRazorViewText("och klistra in här: ")<span class="color--primary">@Model.OpeningHoursItem.GooglePlaceId.Render()</span><br />
                     <strong>@EncodingHelper.GetRazorViewText("Fyll i länk till ev sida med öppettider här ")</strong>
-                    @Model.OpeningHoursItem.Link.Render()
+                    @Model.OpeningHoursItem.OpeningHoursLink.Render()
                 </div>
             }
 
@@ -55,7 +55,7 @@ var dayOfWeek = ((int)DateTime.Today.AddDays(1).DayOfWeek + 6) % 7;
                 {
                     @RenderOpeningHoursWithGoogle()
                 }
-                else if (Model.OpeningHoursItem.Link.HasValue)
+                else if (Model.OpeningHoursItem.OpeningHoursLink.HasValue)
                 {
                     @RenderOpeningHoursNoGoogle()
                 }

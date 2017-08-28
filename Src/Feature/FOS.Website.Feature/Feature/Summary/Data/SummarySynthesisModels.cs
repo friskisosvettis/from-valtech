@@ -43,7 +43,7 @@ namespace FOS.Website.Feature.Summary {
     
     /// <summary>Represents the /sitecore/templates/Feature/Summary/Summary template</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Synthesis", "8.2")]
-    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{44414EDF-4AB3-4DB5-9D08-D51DBED630BD}", "vf5xdpJwOr+yD8Z4ir5+UylUu7I=", "Valtech.Foundation.Synthesis")]
+    [Synthesis.Synchronization.RepresentsSitecoreTemplateAttribute("{44414EDF-4AB3-4DB5-9D08-D51DBED630BD}", "yizA/v1h6q/VnjtRv3YmFT1h6tE=", "Valtech.Foundation.Synthesis")]
     public partial interface ISummaryItem : Synthesis.IStandardTemplateItem {
         
         /// <summary>Represents the SummaryHeading field</summary>
@@ -61,6 +61,18 @@ namespace FOS.Website.Feature.Summary {
         /// <summary>Represents the SummaryText field</summary>
         [Sitecore.ContentSearch.IndexFieldAttribute("summarytext")]
         Synthesis.FieldTypes.Interfaces.ITextField SummaryText {
+            get;
+        }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get;
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
             get;
         }
     }
@@ -514,6 +526,10 @@ namespace FOS.Website.Concrete.Feature.Summary {
         
         private Synthesis.FieldTypes.TextField _summaryText;
         
+        private Synthesis.FieldTypes.TextField _customTypeText;
+        
+        private Synthesis.FieldTypes.TextField _summaryTextCards;
+        
         public Summary(Sitecore.Data.Items.Item innerItem) : 
                 base(innerItem) {
         }
@@ -573,6 +589,28 @@ namespace FOS.Website.Concrete.Feature.Summary {
                     _summaryText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{76DE3755-E119-4719-9F7C-B8918667520C}"], "/sitecore/templates/Feature/Summary/Summary", "SummaryText"), this.GetSearchFieldValue("summarytext"));
                 }
                 return _summaryText;
+            }
+        }
+        
+        /// <summary>Represents the CustomTypeText field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("customtypetext")]
+        public Synthesis.FieldTypes.Interfaces.ITextField CustomTypeText {
+            get {
+                if (_customTypeText == null) {
+                    _customTypeText = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{11736E18-1EB1-4FAE-9216-44E4AF819309}"], "/sitecore/templates/Feature/Summary/Summary", "CustomTypeText"), this.GetSearchFieldValue("customtypetext"));
+                }
+                return _customTypeText;
+            }
+        }
+        
+        /// <summary>Represents the SummaryTextCards field</summary>
+        [Sitecore.ContentSearch.IndexFieldAttribute("summarytextcards")]
+        public Synthesis.FieldTypes.Interfaces.ITextField SummaryTextCards {
+            get {
+                if (_summaryTextCards == null) {
+                    _summaryTextCards = new Synthesis.FieldTypes.TextField(new global::Synthesis.FieldTypes.LazyField(() => InnerItem.Fields["{4711E10F-1ABC-4C6B-8888-A1B2443D1396}"], "/sitecore/templates/Feature/Summary/Summary", "SummaryTextCards"), this.GetSearchFieldValue("summarytextcards"));
+                }
+                return _summaryTextCards;
             }
         }
     }

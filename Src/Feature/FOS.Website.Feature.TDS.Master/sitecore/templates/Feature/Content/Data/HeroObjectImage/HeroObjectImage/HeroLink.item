@@ -2,9 +2,9 @@
 version: 1
 id: {32D97D63-B497-4E9E-95D6-F178DE9C7C1D}
 database: master
-path: /sitecore/templates/Feature/Content/Data/HeroObjectImage/HeroObjectImage/Link
+path: /sitecore/templates/Feature/Content/Data/HeroObjectImage/HeroObjectImage/HeroLink
 parent: {5A835CA1-D70E-4FAF-9107-97900B446E67}
-name: Link
+name: HeroLink
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -27,7 +27,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 8a52c784-6991-4e2a-a333-f3c474c0038a
+revision: b8b32d8d-ade9-45e5-be0c-76c18db66556
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8a52c784-6991-4e2a-a333-f3c474c0038a
+b8b32d8d-ade9-45e5-be0c-76c18db66556
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170324T102159Z
+20170828T101812Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

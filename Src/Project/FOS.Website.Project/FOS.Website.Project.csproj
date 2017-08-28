@@ -1113,13 +1113,6 @@
     <Content Include="Project\Friskis\Views\Web.config" />
     <Content Include="Project\Friskis\Views\ArticlePage.cshtml" />
     <Content Include="Project\Friskis\Views\HeroPage.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Layout_half.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Layout_one_two.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Layout_two_one.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Layout_one.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Layout_full_width.cshtml" />
-    <Content Include="Project\Friskis\Views\ContentRow\Layout_thirds.cshtml" />
-    <Content Include="Project\Friskis\Views\StaticContentRow\Static_full_width.cshtml" />
     <Content Include="Project\Friskis\Views\StaticContentRow\Static_one.cshtml" />
     <Content Include="Project\Friskis\Views\AssociationPage.cshtml" />
     <Content Include="Project\Friskis\Views\TrainingCenterPage.cshtml" />
@@ -1130,7 +1123,6 @@
   <ItemGroup>
     <Compile Include="Project\Friskis\Constants.cs" />
     <Compile Include="Project\Friskis\Controllers\StaticRowPlaceholderController.cs" />
-    <Compile Include="Project\Friskis\Controllers\RowPlaceholderController.cs" />
     <Compile Include="Project\Friskis\Controllers\BasicPageController.cs" />
     <Compile Include="Project\Friskis\Controllers\RegionController.cs" />
     <Compile Include="Project\Friskis\Data\FriskisSynthesisModels.cs" />

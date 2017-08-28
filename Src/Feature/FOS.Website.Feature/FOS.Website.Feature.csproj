@@ -1071,15 +1071,12 @@
     <Content Include="Feature\ContentBlocks\Views\RichText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Web.config" />
     <Content Include="Feature\ContentBlocks\Views\Heading.cshtml" />
-    <Content Include="Feature\ContentBlocks\Views\ImageAndText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\Video.cshtml" />
     <Content Include="Feature\Content\Views\EditorInfo.cshtml" />
-    <Content Include="Feature\ContentBlocks\Views\VideoAndText.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\BaseVideo.cshtml" />
     <Content Include="Feature\TrainingForm\Views\TrainingFormList.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\LinkBlock.cshtml" />
     <Content Include="Feature\ContentBlocks\Views\WideImageSeparator.cshtml" />
-    <Content Include="Feature\ContentBlocks\Views\ImageAndVideo.cshtml" />
     <Content Include="Feature\TrainingForm\Views\Web.config" />
     <Content Include="Feature\ComponentBlock\Views\ComponentBlockGrid.cshtml" />
     <Content Include="Feature\Content\Views\OpeningHoursView.cshtml" />
@@ -1123,9 +1120,7 @@
     <Compile Include="Feature\ContentBlocks\Models\MediaBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\LinkBlockModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\FiftyFiftyMediaModel.cs" />
-    <Compile Include="Feature\ContentBlocks\Models\VideoImageAndTextModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\RichTextModel.cs" />
-    <Compile Include="Feature\ContentBlocks\Models\ImageAndVideoModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\ImageModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\VideoModel.cs" />
     <Compile Include="Feature\ContentBlocks\Models\WideImageSeparatorModel.cs" />

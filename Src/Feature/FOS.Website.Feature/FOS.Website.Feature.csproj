@@ -1016,16 +1016,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.css" />
-    <Content Include="Feature\Content\Views\ImageCollage.cshtml" />
-    <Content Include="Feature\Content\Views\Quote.cshtml" />
-    <Content Include="Feature\Content\Views\Headline.cshtml" />
-    <Content Include="Feature\Content\Views\Collage.cshtml" />
-    <Content Include="Feature\Content\Views\Teaser.cshtml" />
-    <Content Include="Feature\Content\Views\Media.cshtml" />
     <Content Include="Feature\Content\Views\BasicHeading.cshtml" />
     <Content Include="Feature\Content\Views\RichTextContent.cshtml" />
     <Content Include="Feature\Content\Views\BasicImage.cshtml" />
-    <Content Include="Feature\Content\Views\WideImage.cshtml" />
     <Content Include="Feature\Content\Views\HeroObjectImage.cshtml" />
     <Content Include="Feature\Content\Views\HeroArea.cshtml" />
     <Content Include="Feature\Content\Views\TrainingCenterCollectionMap.cshtml" />
@@ -1104,7 +1097,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\PublishProfiles\FOS.Website.pubxml" />
-    <Content Include="Feature\Content\Views\TestPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\AutoComplete\AutoComplete.cs" />
@@ -1146,7 +1138,6 @@
     <Compile Include="Feature\Content\Controllers\TrainingCenterCollectionMapController.cs" />
     <Compile Include="Feature\Content\Controllers\HeroAreaController.cs" />
     <Compile Include="Feature\Content\Controllers\RowContentController.cs" />
-    <Compile Include="Feature\Content\Controllers\TestPageController.cs" />
     <Compile Include="Feature\Content\Controllers\ContentController.cs" />
     <Compile Include="Feature\Content\Data\ContentSynthesisModels.cs" />
     <Compile Include="Feature\Content\Models\AssociationNotMigratedModel.cs" />
@@ -1162,14 +1153,9 @@
     <Compile Include="Feature\Content\Models\HeroAreaModel.cs" />
     <Compile Include="Feature\Content\Models\HeroObjectImageModel.cs" />
     <Compile Include="Feature\Content\Models\TrainingCenterContactFooterModel.cs" />
-    <Compile Include="Feature\Content\Models\WideImageModel.cs" />
-    <Compile Include="Feature\Content\Models\BasicImageModel.cs" />
     <Compile Include="Feature\Content\Models\BasicHeadingModel.cs" />
     <Compile Include="Feature\Content\Models\ExpandableSectionModel.cs" />
-    <Compile Include="Feature\Content\Models\ImageCollageModel.cs" />
     <Compile Include="Feature\Content\Models\RichTextContentModel.cs" />
-    <Compile Include="Feature\Content\Models\TestPageModel.cs" />
-    <Compile Include="Feature\Content\Models\QuoteModel.cs" />
     <Compile Include="Feature\CustomScripts\Constants.cs" />
     <Compile Include="Feature\CustomScripts\Services\CustomScriptsService.cs" />
     <Compile Include="Feature\CustomScripts\Data\CustomScriptsSynthesisModels.cs" />

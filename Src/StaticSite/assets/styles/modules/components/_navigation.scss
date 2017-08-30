@@ -255,7 +255,7 @@ $navigation-animation: 0.5s linear 0s;
 
         &--separated {
             padding-bottom: 200px; //in order to not be hidden below top nav buttons
-            @include medium-up {
+            @include large-up {
                 padding-bottom: 0;
             }
         }
@@ -344,7 +344,6 @@ $navigation-animation: 0.5s linear 0s;
             padding: 0;
             text-align: center;
             list-style-type: none;
-            overflow-y: scroll;
             top: $menu-height;
 
             @include large-up {

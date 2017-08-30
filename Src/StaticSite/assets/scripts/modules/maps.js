@@ -15,6 +15,7 @@ var _mapsApi = require('../modules/mapsApiLoader');
 var _mediumBreakpoint = 768;
 var _initialized = false;
 var _mapObject = $('#map');
+var _openingHoursLoaded = $('#opening_hours_week');
 
 // maps object contains the public variable/functions that is exported (module.export = maps)
 var maps = {
@@ -454,7 +455,7 @@ var maps = {
                     infowindow.open(map, marker);
                     // Make sure the marker property is cleared if the infowindow is closed.
                     infowindow.addListener('closeclick',function(){
-                        infowindow.setMarker = null;
+                        infowindow.close();
                     });
                 }
             }
@@ -482,10 +483,14 @@ var maps = {
             e.preventDefault();
             var index = $(this).closest('li').attr('data-js-map-i');
             if (!_initialized) {
-                $(document).on("mapsApiLoader:events:loaded", function () {
-                    initializeMap(index);
-                });
-                _mapsApi.init();
+				if(_openingHoursLoaded.length > 0) {
+					initializeMap(index);
+				} else {
+					$(document).on("mapsApiLoader:events:loaded", function () {
+						initializeMap(index);
+					});
+					_mapsApi.init();
+				}
             } else {
                 showPin(index);
             }
@@ -495,10 +500,14 @@ var maps = {
         // When user clicks on "Map" tab
         $('*[data-js-map-show]').on('click', function () {
             if (!_initialized) {
-                $(document).on("mapsApiLoader:events:loaded", function () {
-                    initializeMap();
-                });
-                _mapsApi.init();
+				if(_openingHoursLoaded.length > 0) {
+					initializeMap();
+				} else {
+					$(document).on("mapsApiLoader:events:loaded", function () {
+						initializeMap();
+					});
+					_mapsApi.init();
+				}
             }
         });
 

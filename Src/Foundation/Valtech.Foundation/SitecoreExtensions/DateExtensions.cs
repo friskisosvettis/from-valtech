@@ -1,4 +1,6 @@
-﻿using Synthesis.FieldTypes.Interfaces;
+﻿using System;
+using Sitecore.Social.Infrastructure.Utils;
+using Synthesis.FieldTypes.Interfaces;
 
 namespace Valtech.Foundation.SitecoreExtensions
 {
@@ -11,7 +13,10 @@ namespace Valtech.Foundation.SitecoreExtensions
                 return string.Empty;
             }
 
-            return dateTimeField.Value.ToString(dateTimeFormat, Sitecore.Context.Site.ContentLanguage.CultureInfo);
+            var dateShow = Sitecore.DateUtil.IsoDateToDateTime(dateTimeField.Value.ToIso());
+            var localDate = TimeZone.CurrentTimeZone.ToLocalTime(dateShow);
+
+            return localDate.ToString(dateTimeFormat, Sitecore.Context.Site.ContentLanguage.CultureInfo);
         }
     }
 }

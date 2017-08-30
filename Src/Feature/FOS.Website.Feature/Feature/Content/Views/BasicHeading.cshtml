@@ -54,7 +54,7 @@ else
                         <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventStartDate.ToLocalizedString("t")</span>
                         @if (Model.EventItem.EventEndDate.HasValue)
                         {
-                            <span class="date--primary"> - @Model.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventStartDate.ToLocalizedString("t"), @Model.EventItem.EventStartDate.ToLocalizedString("yyyy")</span>
+                            <span class="date--primary"> - @Model.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventEndDate.ToLocalizedString("t"), @Model.EventItem.EventStartDate.ToLocalizedString("yyyy")</span>
                         }
                         else
                         {

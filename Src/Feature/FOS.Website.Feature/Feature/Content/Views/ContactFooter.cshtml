@@ -14,15 +14,24 @@
         <div class="container--12">
             @if (Model.ContactFooterItem.FacebookLink.HasValue)
             {
-                <a class="icon--large icon__facebook" href="@Model.ContactFooterItem.FacebookLink.Href"><span class="hidden--accessible">Facebook</span></a>
+                using (Html.BeginHyperlinkFor(m => m.ContactFooterItem.FacebookLink, "icon--large icon__facebook"))
+                {
+                    <span class="hidden--accessible">Facebook</span>
+                }
             }
             @if (Model.ContactFooterItem.InstagramLink.HasValue)
             {
-                <a class="icon--large icon__instagram" href="@Model.ContactFooterItem.InstagramLink.Href"><span class="hidden--accessible">Instagram</span></a>
+                using (Html.BeginHyperlinkFor(m => m.ContactFooterItem.InstagramLink, "icon--large icon__instagram"))
+                {
+                    <span class="hidden--accessible">Instagram</span>
+                }
             }
             @if (Model.ContactFooterItem.TwitterLink.HasValue)
             {
-                <a class="icon--large icon__twitter" href="@Model.ContactFooterItem.TwitterLink.Href"><span class="hidden--accessible">Twitter</span></a>
+                using (Html.BeginHyperlinkFor(m => m.ContactFooterItem.TwitterLink, "icon--large icon__twitter"))
+                {
+                    <span class="hidden--accessible">Twitter</span>
+                }
             }
             @Model.ContactFooterItem.ContactEmail.Render(null ,"icon--large icon__mail--light")
             @if (Model.ContactFooterItem.ContactPhonenumber.HasValue)

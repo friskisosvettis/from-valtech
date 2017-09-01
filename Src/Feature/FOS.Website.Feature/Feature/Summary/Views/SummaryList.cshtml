@@ -69,7 +69,7 @@
                 }
                 <li class="@containerClass">
                     <div class="teaser @cssClass">
-                        <a href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                        <a href="@LinkManager.GetItemUrl(summarySpot.LinkItem ?? summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
 
                             @* Only render this section (with teaser--overlay/teaser__overlay) if highlight or traing form kicker*@
                             @if (Model.SummaryListItem.DisplayAsHighlightedList.Value || (summarySpot.TrainingFormItem != null))
@@ -183,7 +183,7 @@
                                             <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
                                         }
                                         // TODO: Remove hard coded "Läs mer" text and make it translatable
-                                        <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                        <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.LinkItem ?? summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
                                             Läs mer
                                         </a>
                                     }

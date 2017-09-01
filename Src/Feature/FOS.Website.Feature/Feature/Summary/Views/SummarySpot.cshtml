@@ -30,7 +30,7 @@
     @if (Model.TrainingFormItem != null)
     {
         <div class="teaser">
-            <a href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+            <a href="@LinkManager.GetItemUrl(Model.LinkItem ?? Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
                 <div class="teaser--overlay">
                     @if (Model.SummaryItem.SummaryImage.HasValue)
                     {
@@ -115,7 +115,7 @@
                                 @Model.SummaryItem.SummaryText.Render()
                             </p>
                             // TODO: Remove hard coded "Läs mer" text and make it translatable
-                            <a class="link--goto" href="@LinkManager.GetItemUrl(Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                            <a class="link--goto" href="@LinkManager.GetItemUrl(Model.LinkItem ?? Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
                                 Läs mer
                             </a>
                         }

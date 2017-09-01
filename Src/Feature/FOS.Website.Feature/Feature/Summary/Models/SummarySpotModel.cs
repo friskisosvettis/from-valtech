@@ -6,6 +6,7 @@ using System.Linq;
 //using Core.Site;
 using Sitecore.Data.Items;
 using System;
+using FOS.Website.Feature.ComponentBlock;
 using FOS.Website.Feature.Event;
 using FOS.Website.Feature.News;
 using FOS.Website.Feature.Summary.Controllers;
@@ -36,6 +37,8 @@ namespace FOS.Website.Feature.Summary.Models
         public ITrainingFormItem TrainingFormItem { get; set; }
 
         public Item Item { get; set; }
+
+        public Item LinkItem { get; set; }
         
         public bool HideNewsDate { get; set; }
 
@@ -47,32 +50,36 @@ namespace FOS.Website.Feature.Summary.Models
             EventStartDate = DateTime.MaxValue;
             EventEndDate = DateTime.MinValue;
             Item = null;
+            LinkItem = null;
             HideNewsDate = false;
         }
 
         public SummarySpotModel(Item item) : this()
         {
-            SummaryItem = item.As<ISummaryItem>();
+            LinkItem = item;
+            var originalSummeryItem = item.GetOriginalItem<ISummaryItem>() ?? item;
+
+            SummaryItem = originalSummeryItem.As<ISummaryItem>();
             if (SummaryItem != null && string.IsNullOrEmpty(SummaryHeadingString))
             {
                 SummaryHeadingString = SummaryItem.SummaryHeading.RawValue;
             }
 
-            NewsItem = item.As<INewsItem>();
+            NewsItem = originalSummeryItem.As<INewsItem>();
 
             if (NewsItem != null)
             {
                 NewsPublishDate = NewsItem.NewsDate.Value;
             }
 
-            EventItem = item.As<IEventItem>();
+            EventItem = originalSummeryItem.As<IEventItem>();
             if (EventItem != null)
             {
                 EventStartDate = EventItem.EventStartDate.Value;
                 EventEndDate = EventItem.EventEndDate.HasValue ? EventItem.EventEndDate.Value : DateTime.MinValue;
             }
 
-            TrainingFormItem = item.As<ITrainingFormItem>();
+            TrainingFormItem = originalSummeryItem.As<ITrainingFormItem>();
         }
 
         // Used for generic items

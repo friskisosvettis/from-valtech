@@ -80,7 +80,7 @@ namespace FOS.Website.Feature.Summary.Models
                 ISortByEventDateItem sortByEventDateItem = sortByItem.As<ISortByEventDateItem>();
                 if (sortByEventDateItem != null)
                 {
-                    SummaryList = SummaryList.Where(t=>t.EventStartDate >= DateTime.Now).OrderBy(t => t.EventStartDate).ToList();
+                    SummaryList = SummaryList.Where(t => t.EventEndDate >= DateTime.Now || t.EventStartDate >= DateTime.Now).OrderBy(t => t.EventStartDate).ToList();
                 }
 
                 SummaryList = SummaryList.Take(maxResults).ToList();   
@@ -205,7 +205,7 @@ namespace FOS.Website.Feature.Summary.Models
 
             // Search Root Predicate
             var searchRootPredicate = PredicateBuilder.True<SummarySearchResultItem>();
-            Item searchRootItem = summaryListItem.SourceRootItem.Target.InnerItem;
+            Item searchRootItem = summaryListItem.SourceRootItem?.Target?.InnerItem;
             if (searchRootItem != null)
             {
                 ID searchRootItemId = searchRootItem.ID;

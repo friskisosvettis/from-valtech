@@ -15,12 +15,5 @@ namespace FOS.Website.Feature.Content.Models
     public class RichTextContentModel
     {
         public IRichTextContentItem RichTextContentItem { get; set; }
-        public RichTextContentModel()
-        {
-            var contextItem = RenderingContext.Current.Rendering.Item.As<IRichTextContentItem>();
-            RichTextContentItem = (contextItem == null)
-                ? Sitecore.Context.Item.As<IRichTextContentItem>()
-                : contextItem;
-        }
     }
 }

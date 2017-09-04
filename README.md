@@ -3,7 +3,7 @@
 ## How to set up the environment
 
 ### The solution is based on the following technologies:
-- Sitecore 8.2 rev. 161115
+- Sitecore 8.2 rev. 161115 (In SIM Version 8.2 and Revision 161115 - Update1 )
 - ASP.NET 4.6.1
 - SQL Server 2012 (or later)
 - Visual Studio 2015
@@ -43,7 +43,6 @@ services.msc
 Find the MongoDB service and start it.
  
 If you installed RoboMongo, you can now use it to connect to localhost:27017.
- 
 
 ## INITIAL LOCAL SETUP
 These are the steps to create a full local environment. See sections below for detailed info on each step.
@@ -59,17 +58,44 @@ Use SIM to install a raw Sitecore website
 Install Node.js v. 6 - https://nodejs.org/en/download/
 Install command line dependencies using the command line. Run the following commands:
 
+```
 npm install --global gulp-cli
 npm install --global bower
+```
 Still using the command line, navigate to your solution directory. Now run the following commands:
- 
+
+```
 npm install
+```
 Run the Gulp task “Full-Publish”. Either
 
 Run “gulp Full-Publish" on the command line, or
 Open Visual Studio, open the “Task Runner” window and double-click "Initial-Setup”
 Login to the Sitecore interface (using admin : b ) and do a full publish of the website
 Check that your local environment is running by browsing to http://fos.website.local/
+
+### Encryption Changed
+After full publish has run the HashAlgoritm for the encryption of local Users passwords has changed to SHA512. This includes Admin Password so this needs to be reset.
+- Open file C:\Websites\FOS.Website\Website\sitecore\admin\ResetAdminPasswordToRightCrypt.aspx
+- Change bool ThisIsChangedFromServer = false; to true
+- Save
+- Go to https://fos.website.local/sitecore/admin/ResetAdminPasswordToRightCrypt.aspx
+- Copy the Password and Log in with Admin and newPassword on https://fos.website.local/sitecore
+- Change back ThisIsChangedFromServer to false in file and save after you have changed your admin Password.
+
+### Solr installation
+1. Go to https://bitnami.com/stack/solr/installer and Download Installer (When Writing it was bitnami-solr-6.5.1)
+2. Install Bitnami ( Uncheck Bitnami cloud Hosting )
+3. Verify that it works on http://localhost:8983/
+4. Unpack Project Indexes to C:\Bitnami\solr-6.5.0-0\apache-solr\server\solr (Make sure that the Indexes are in the *\solr directory and not a subfolder)
+5. Run Program Bitnami Apache Solr Stack Manager Tool
+6. Go to Tab Manage Servers
+7. Restart All
+8. Got to http://localhost:8983/solr/#/~cores/sitecore_analytics_index verify that all indexes are there.
+10. Go to visual studio
+11. Rebuild Solution
+12. Run Full-Publish in Gulp Task
+	(The Magic is in z-apply-config-transformation)
 
 #### RUN THE STYLEGUIDE LOCALLY
 In order to run the styleguide locally: 
@@ -100,15 +126,6 @@ Use Gulp task to automatically batch sync everything in the solution to Sitecore
 Use normal (manual) sync or Sitecore Rocks to sync individual Sitecore items with TDS projects during development.
 
 
-### DEPLOYMENT URLS
-
-#### Teamcity
-https://bob.valtech.se/project.html?projectId=FriskisSitecore
-
-#### Octopus
-https://octopus.valtech.se/app#/projects/friskis-website
-
-
 #### SIM SETUP
 Download
 The SIM application (https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx)
@@ -122,12 +139,13 @@ We use Gulp to automate. A lot.
 
 Gulp tasks are used locally to:
 
-Restore NuGet packages from NuGet
-Deploy C# code from the solution directory to the webroot
-Apply config transformations to .config files
-Add TDS items to Sitecore databases
-Build and deploy assets (scss, js, images, fonts)
-Build a styleguide (ie. a static, local website, representing the front-end code produced so far)
+- Restore NuGet packages from NuGet
+- Deploy C# code from the solution directory to the webroot
+- Apply config transformations to .config files
+- Add TDS items to Sitecore databases
+- Build and deploy assets (scss, js, images, fonts)
+- Build a styleguide (ie. a static, local website, representing the front-end code produced so far)
+- Set up Sitecore to use Solr
 
 On build server, a tailored gulp task is called, which will produce the necessary NuGet packages for deployment to any environment.
 
@@ -136,28 +154,18 @@ Gulp commands can be run using the “Task Runner” window in Visual Studio or 
 Some tasks will produce more diagnostic output when called with the —verbose flag. This is possible on the command line - but not in Visual Studio’s Task Runner
 
 
-
-### SITECORE ASSEMBLIES
-Sitecore DLLs are located on an internal NuGet feed:
-http://nuget.valtech.dk/
-
-This feed setting will be discovered automatically by NuGet via nuget.config in the solution root.
-It is not possible to read from this feed unless you are on the Valtech network (or VPN).
-Due to an issue with NuGet, you may experience infinite NuGet restore hangs, if you are not on the network.
-
-
 ### DEPLOYING PROJECTS
 As mentioned, Gulp handles a lot of our automated tasks.
 
 On local and build environments:
-Restore NuGet packages
-Compile, obfuscate and minify SASS files to one big style.css
-Compile, obfuscate and minify javascript files to one big bundle.js
-Copy files (with an optional “watch” local feature for local development) to webroot
-C# files, using MSBuild deployment
-Fonts
-Compiled CSS
-Compiled JS
+- Restore NuGet packages
+- Compile, obfuscate and minify SASS files to one big style.css
+- Compile, obfuscate and minify javascript files to one big bundle.js
+- Copy files (with an optional “watch” local feature for local development) to webroot
+- C# files, using MSBuild deployment
+- Fonts
+- Compiled CSS
+- Compiled JS
 
 #### Only on local environment:
 Transform config files in webroot (using the config transformation powershell script included in the solution)

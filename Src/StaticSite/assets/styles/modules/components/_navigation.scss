@@ -345,6 +345,7 @@ $navigation-animation: 0.5s linear 0s;
             text-align: center;
             list-style-type: none;
             top: $menu-height;
+            overflow-y: scroll;
 
             @include large-up {
                 &.open {

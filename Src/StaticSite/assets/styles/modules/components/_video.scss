@@ -14,7 +14,7 @@ $media-container-height: rem(9 * $base-height);        //360px
 
     &.media-container--360 {
         height: $media-container-height !important;
-        padding-bottom: $media-container-height; /* 16:9 ratio */
+        padding-bottom: $media-container-height; /* 360px height */
         overflow: hidden;
     }
 
@@ -63,3 +63,9 @@ $media-container-height: rem(9 * $base-height);        //360px
         border-radius: 50%;
    }
 }
+.image--wide {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+

@@ -51,9 +51,9 @@ Install the URL-Rewrite module from Microsoft (if not installed already): http:/
 Checkout GIT repository locally from: https://github.com/valtech/friskis_sitecore
 Install Sitecore Instance Manager (SIM) if you do not already have it installed, and set it up
 
-Local solution path (git checkout root): C:\Solutions\FOS\FOS.Website
-Default Website root path: C:\Websites\FOS.website
-Default IIS binding: http://fos.website.local/
+Local solution path (git checkout root)(must, NOT just a recommendation): C:\Solutions\FOS\FOS.Website
+Default Website root path(must, NOT just a recommendation): C:\Websites\FOS.website
+Default IIS binding(must, NOT just a recommendation): http://fos.website.local/
 Use SIM to install a raw Sitecore website
 Install Node.js v. 6 - https://nodejs.org/en/download/
 Install command line dependencies using the command line. Run the following commands:

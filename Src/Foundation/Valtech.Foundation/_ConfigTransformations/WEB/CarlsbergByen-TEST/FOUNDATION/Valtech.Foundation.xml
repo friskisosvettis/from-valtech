@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <Item path="/configuration/system.web/customErrors" action="Replace" key="mode" value="Off" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

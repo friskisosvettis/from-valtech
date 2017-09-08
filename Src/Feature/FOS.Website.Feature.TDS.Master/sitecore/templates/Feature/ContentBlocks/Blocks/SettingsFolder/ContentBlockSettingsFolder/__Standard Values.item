@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {316C6983-E166-4680-9812-2B62D7D55000}
+database: master
+path: /sitecore/templates/Feature/ContentBlocks/Blocks/SettingsFolder/ContentBlockSettingsFolder/__Standard Values
+parent: {2826C395-1FAD-4323-807C-646DEF0C7E58}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {2826C395-1FAD-4323-807C-646DEF0C7E58}
+templatekey: ContentBlockSettingsFolder
+created: 20170629T124652Z
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 77
+
+{F4A5273B-B7BF-4A00-8769-B2FA33068590}|{49F3FDBD-2480-4415-82A1-A755169782D3}
+----version----
+language: en
+version: 1
+revision: 41c7bb02-cd01-4687-8694-a46f7df82d45
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170619T191216Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+41c7bb02-cd01-4687-8694-a46f7df82d45
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170629T133358Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

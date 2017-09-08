@@ -1,0 +1,16 @@
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <circle id="path-1" cx="42" cy="30" r="20"></circle>
+  </defs>
+  <g id="Design-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="kicker_event_03_list" transform="translate(-20.000000, -8.000000)">
+      <g id="Oval-3-Copy-2">
+        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <circle stroke="#E7E7E7" stroke-width="2" cx="42" cy="30" r="21"></circle>
+      </g>
+      <polygon id="Path-2-Copy-3" fill="#E75460" fill-rule="nonzero" transform="translate(43.421555, 28.754381) rotate(-90.000000) translate(-43.421555, -28.754381) " points="36.1855544 23.3435916 34.4215545 25.1075914 43.4791338 34.1651707 52.4215545 25.2227499 50.6575547 23.4587501 43.4791338 30.637171"></polygon>
+    </g>
+  </g>
+</svg>

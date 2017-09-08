@@ -1,0 +1,43 @@
+﻿@using Sitecore.Mvc
+@using FOS.Website.Feature.Content.Models
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Configuration
+@using Sitecore.Links
+@using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model ProximityModel
+
+@if (@Model == null || @Model.ProximityItem == null || !@Model.AssociationsItems.Any())
+{
+    return;
+}
+
+<div class="find container--relative">
+    <div class="find__content">
+        <div class="find__introduction">
+            <h2 class="heading-3">@Html.TextFor(m => m.ProximityItem.CloseToYouLabel)</h2>
+            @{
+                var nrVisibleInMobile = 2;
+                var associationsAdded = 0;
+                foreach (var asscociation in Model.AssociationsItems)
+                {
+                    if (associationsAdded++ < nrVisibleInMobile)
+                    {
+                        <a class="find__action icon--medium icon__find" href="@LinkManager.GetItemUrl(asscociation)">@asscociation.DisplayName</a>
+                    }
+                    else
+                    {
+                        <a class="find__action icon__find icon--medium visible-small-up" href="@LinkManager.GetItemUrl(asscociation)">@asscociation.DisplayName</a>
+                    }
+                }
+            }
+            
+            @if(Model.ProximityItem.ShowAllButtonLink.HasValue)
+            {
+                <a class="btn btn__link" href="@Model.ProximityItem.ShowAllButtonLink">@Html.TextFor(m => m.ProximityItem.ShowAllAssociationLabel)</a>
+            }
+        </div>
+    </div>
+</div>
+

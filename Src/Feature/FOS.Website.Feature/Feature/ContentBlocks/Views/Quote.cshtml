@@ -1,0 +1,38 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Sitecore.ExperienceAnalytics.Client
+@using Synthesis.Mvc
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model QuoteModel
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@helper Quote()
+{
+    <blockquote>
+        @Model.QuoteItem.QuoteText.Render()
+        <cite>@Model.QuoteItem.QuotePersonName.Render() <p class="color--primary">@Model.QuoteItem.QuotePersonTitle.Render()</p></cite>
+    </blockquote>
+}
+
+
+@helper Profile()
+{
+    <h3 class="blockquote">@Model.QuoteItem.QuoteText.Render()</h3>
+    <p class="margin-bottom--none">@Model.QuoteItem.QuotePersonName.Render()</p>
+    <p class="color--primary">@Model.QuoteItem.QuotePersonTitle.Render()</p>
+}
+
+<div class="container">
+    <div class="container--12">
+        <div class="quote text-align--center">
+            <div class="quote__image">
+                @Model.QuoteItem.QuoteImage.Render()
+            </div>
+            @(@Model.QuoteItem.QuoteFont.Value ? Quote() : Profile())
+        </div>
+    </div>
+</div>

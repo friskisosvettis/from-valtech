@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {8065258E-FC17-45C9-B441-73AF409307E2}
+database: master
+path: /sitecore/templates/Redirect Module/Redirect Folder/Redirects
+parent: {8BEF76F0-DEAA-4939-B9C1-F357E1875D5D}
+name: Redirects
+master: {00000000-0000-0000-0000-000000000000}
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20120827T143707Z
+
+----version----
+language: en
+version: 1
+revision: 9064bbf3-d04d-41a0-8ea4-11d1c9357e93
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 15
+
+sitecore\cadams
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20120827T163707
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 15
+
+sitecore\cadams
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9064bbf3-d04d-41a0-8ea4-11d1c9357e93
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20141110T132905:635512229458198902
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 17
+
+sitecore\wallacew

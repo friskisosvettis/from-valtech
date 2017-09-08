@@ -1,0 +1,282 @@
+/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+// TODO: Refactor this module //
+
+$teaser-height: rem(3 * $base-height);              //120px
+$teaser-height-small: rem(5 * $base-height);        //240px
+$teaser-height-medium: rem(6 * $base-height);       //240px
+$teaser-height-large: rem(9 * $base-height);        //360px
+$teaser-height-xlarge: rem(12.5 * $base-height);    //500px
+
+.teaser {
+    overflow: hidden;
+    text-align: center;
+    @include transform-scale(1.00);
+    @include transition(opacity, 0.35s);
+
+    &__container {
+        padding-bottom: $space-double;
+    }
+
+    &__header {
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: $space;
+    }
+    @include small-up {
+        &__link {
+            margin-right: $space;
+        }
+    }
+
+    &:hover {
+        @include transform-scale(1.05);
+        @include transition(opacity, 0.35s);
+    }
+
+    @include small-up {
+        padding: $space;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h3 {
+        color: $color-text;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        // This is in order to make object-fit cover work in IE
+        font-family: "object-fit: cover; object-position: center";
+    }
+
+    /*--------------SMALL VERSION TEASER ARTICLE/NEWS/EVENTS--------------*/
+    &--small {
+        margin-bottom: $space;
+        padding: 0;
+        @include box-shadow(0, 1px, 2px, 0, $color-black-20);
+        height: $teaser-height-large;
+
+        @include small-up {
+            margin: $space;
+        }
+        .date {
+            color: $color-text;
+        }
+        .teaser__content {
+            @include span(12);
+            text-align: center;
+        }
+        img {
+            @include span(12);
+            height: 80%;
+        }
+        h3 {
+            margin: $space-half 0 0 0;
+        }
+    }
+
+    /*----------------- Full width teaser -----------------*/
+
+    &--full {
+        margin-bottom: $space;
+        transform: none;
+
+        &:hover {
+            transform: none;
+        }
+        h3 {
+            margin-bottom: $space;
+        }
+        @include medium-up {
+            max-height: $teaser-height-large;
+        }
+        .date {
+            color: $color-text;
+        }
+        img {
+            @include span(12);
+            height: $teaser-height-small;
+
+            @include small-up {
+                @include span(6);
+                float: none;
+                margin: 0 auto;
+            }
+
+            @include medium-up {
+                @include span(6);
+            }
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
+        }
+        .teaser__content {
+            text-align: left;
+            @include span(12);
+
+            @include medium-up {
+                padding: 0 $space-double;
+                @include span(6);
+            }
+            p {
+                color: $color-text;
+            }
+        }
+    }
+
+    /*----------------- List of teaser elements -----------------*/
+    &__list {
+        text-align: left;
+        padding: 0;
+
+        &:hover {
+            transform: scale(1.00);
+        }
+
+        li {
+            padding-left: $space-quad;
+            margin-bottom: $space;
+            min-height: $base-height;
+
+            &:hover {
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .date {
+            margin-bottom: 0;
+        }
+        .teaser__content {
+            max-width: $text-max-width;
+            vertical-align: top;
+            display: inline-block;
+            color: $color-black;
+        }
+    }
+
+    /*--------------OVERLAY TEASER --------------*/
+    &--overlay {
+        position: relative; // Should ot be possible to have an overlay without a link?
+        overflow: hidden;
+        height: $teaser-height-medium;
+        margin-bottom: $space;
+
+        @include small-up {
+            margin-bottom: 0;
+
+            > .teaser__overlay > .teaser__content {
+                padding: 0 $space-quad;
+            }
+        }
+        
+        @include medium-up {
+            height: $teaser-height-large;
+        }
+
+        img {
+            height: $teaser-height-medium;
+
+            @include medium-up {
+                height: $teaser-height-large;
+            }
+        }
+
+        h2 {
+            color: $color-white;
+            margin: $space 0;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: table;
+        width: 100%;
+        height: 100%;
+        background:  $primary-color-dim-80;
+        @include transition(background, 0.35s);
+
+        .date {
+            color: $color-white;
+        }
+
+        &:hover {
+            background: $overlay-color-dim-25;
+            @include transition(background, 0.5s);
+        }
+
+        > .teaser__content {
+            display: table-cell;
+            vertical-align: middle;
+            color: $color-white;
+            padding: 0 $space-double;
+
+            @include large-up {
+                padding: 0 $space-quad;
+            }
+        }
+    }
+}
+
+
+/* CONTAINER SPECIFIC CHANGES FOR TEASER */
+
+// TEASER SMALL IN 3 columns
+.container--4 {
+    .teaser--small {
+        height: rem($base-height*2);
+
+        @include small-up {
+            height: $teaser-height-medium;
+        }
+        @include medium-up {
+            height: $teaser-height-large;
+        }
+
+        img {
+            @include span(3);
+            height: rem($base-height*2);
+
+            @include small-up {
+                @include span(12);
+                height: 65%;
+            }
+            @include medium-up {
+                height: 75%;
+            }
+        }
+        .teaser__content {
+            @include span(9);
+            text-align: left;
+            padding-left: $space;
+
+            @include small-up {
+                @include span(12);
+                text-align: center;
+                padding-left: 0;
+            }
+             @include medium-up {
+                padding: 0 $space;
+            }
+        }
+    }
+}

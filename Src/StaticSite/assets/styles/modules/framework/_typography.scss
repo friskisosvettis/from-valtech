@@ -1,0 +1,213 @@
+// Typography
+
+body {
+    font-family: $font;
+    line-height: 1.5;
+    font-size: rem($base-font-size);
+    color: $color-text;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .hero-heading {
+    font-family: $font-bold;
+    line-height: 1.25;
+}
+
+.hero-heading {
+    font-size: rem(46px);
+
+    @include medium-up {
+        font-size: rem(62px);
+    }
+}
+
+h1, .heading-1 {
+    font-size: rem(36px);
+
+    @include medium-up {
+        font-size: rem(48px);
+    }
+}
+
+h2, .heading-2 {
+    font-size: rem(27px);
+
+    @include medium-up {
+        font-size: rem(36px);
+    }
+}
+
+h3, .heading-3, .rich-text h2 {
+    font-size: rem(20px);
+
+    @include medium-up {
+        font-size: rem(24px);
+    }
+}
+
+h4,.heading-4, .rich-text h3 {
+    font-size: rem(18px);
+}
+
+h5, .heading-5, .rich-text h4 {
+    font-size: rem(16px);
+}
+
+p {
+    margin: 0 0 $space 0;
+}
+.rich-text {
+    p, ol, ul, a, strong, em {
+        font-size: rem(16px);
+    }
+}
+.date {
+    color: $color-black-40;
+
+    &--primary {
+        color: $color-text;
+    }
+
+    &--container {
+        margin-bottom: $space-quad;
+    }
+}
+
+.intro {
+    margin-bottom: $space-double;
+    font-size: rem(18px);
+    font-family: $font;
+
+    @include medium-up {
+        font-size: rem(24px);
+    }
+}
+
+.note {
+    color: $primary-color;
+    font-size: 0.9rem; // TODO CHECK THIS
+
+    &:before {
+        content:'*';
+        font-size: 1.1rem;
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+blockquote, .blockquote {
+    font-family: $font-bold;
+    font-size: rem(27px);
+    text-align: center;
+    line-height: 1.35;
+    margin: $space $space $space-double $space;
+
+    @include medium-up {
+        font-size: rem(36px);
+    }
+}
+
+cite {
+    margin: $space 0;
+    display: block;
+    font-size: rem($base-font-size);
+    font-style: normal;
+    p {
+        font-size: rem($base-font-size);
+    }
+}
+
+a {
+    color: $color-text-link;
+    cursor: pointer;
+
+    &.link--inverted {
+        color: $color-white;
+    }
+    &.link--goto {
+        text-decoration: none;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            background-repeat: no-repeat;
+            margin-right: $space;
+            vertical-align: middle;
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+            background-size: $icon-size-mini $icon-size-mini;
+            height: $icon-size-mini;
+            width: $icon-size-mini;
+        }
+
+    }
+}
+
+/*-------------------------------------------------*/
+/*------------------ L I S T S --------------------*/
+/*-------------------------------------------------*/
+
+.rich-text {
+    ol {
+        padding: 0;
+        margin: 0 0 1.75rem 0;
+
+        counter-reset: item;
+
+        li {
+            list-style-type: none;
+            counter-increment: item;
+            margin: 0 0 $space 0;
+            padding-left: $space-double + $space;
+
+            &:before {
+                position: absolute;
+                margin-left: -($space-double+ $space);
+                font-weight: bold;
+                text-align: right;
+                content: counter(item) ".";
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.rich-text ul {
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+
+    li {
+        list-style-type: none;
+        margin: 0 0 $space 0;
+        background-image: url('/assets/images/icon_bullet.svg');
+        background-size: 0.5rem 0.5rem;
+        background-position: 0 0.5rem;
+        background-repeat: no-repeat;
+        padding-left: 25px;
+    }
+
+    &.list--tick {
+        li {
+            background-image: url('/assets/images/icon_tick.svg');
+            background-size: 1rem 1rem;
+            padding-left: 2rem;
+            background-position: 0 50%;
+        }
+    }
+    &.list--goto {
+        background-color: $primary-color-light;
+        padding: rem($base-height*1.5);
+        margin-bottom: rem($base-height);
+
+        a {
+            color: $color-text;
+        }
+        li {
+            background-image: url('/assets/images/icon_arrow-right-red.svg');
+            background-size: 1rem 1rem;
+            padding-left: 2rem;
+            background-position: 0 50%;
+        }
+    }
+}

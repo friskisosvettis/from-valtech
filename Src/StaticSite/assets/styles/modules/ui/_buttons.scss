@@ -1,0 +1,108 @@
+/**
+* UI
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+// TODO: Refactor this file
+
+@mixin button-settings($color, $color-text) {
+    background-color: $color;
+    color: $color-text !important;
+    text-decoration: none;
+    border: none;
+    border-radius: rem(44px);
+    padding: $space $space-double;
+    margin: $space $space-double;
+
+    &:focus {
+        // TODO: Remove this and add focus mixin
+        color: $color-text !important;
+        outline: none;
+        background-color: lighten($color, 20%);
+    }
+
+    &:hover {
+        color: $color-text !important;
+        background-color: darken($color, 10%);
+    }
+
+    &:active {
+        color: $color-text !important;
+        background-color: darken($color, 30%);
+    }
+
+    &:disabled {
+        cursor: default;
+        background-color: $color-black-20;
+    }
+}
+
+.btn {
+    @include button-settings($primary-color, $color-white);
+
+    &__link {
+        // This is a class added to an a tag in order for make it behave as a btn
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    &--block {
+        display: block;
+    }
+
+    &__icon {
+        line-height: 1;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: $space + $space-half !important;
+
+        &--left {
+            padding-left: rem(35px) !important;
+        }
+
+        &--right {
+            padding-right: rem(45px) !important;
+        }
+
+        &.btn--book {
+            padding: 13px !important;
+            margin-top: 17px; //to center on mobile menu (80px - icon-size)/2
+            margin-bottom: 17px; //to center on mobile menu (80px - icon-size)/2
+            text-align: left;
+
+            @include small-up {
+                padding-left: 50px !important;
+                background-image: url('/assets/images/icon_clock-light.svg');
+                background-size: $icon-size-large $icon-size-large;
+                background-position: left 8px top 50%;
+            }
+        }
+
+        &.btn--train {
+            margin-top: 17px; //to center on mobile menu (80px - icon-size)/2
+            margin-bottom: 17px; //to center on mobile menu (80px - icon-size)/2
+            background-image: url('/assets/images/icon_pin-map-light.svg');
+            background-size: $icon-size-small $icon-size-small;
+            background-position: left $space top 50%;
+            text-align: left;
+        }
+
+        &.btn--external-link {
+            background-image: url('/assets/images/icon_external-link.svg');
+            background-size: rem(15px) rem(15px);
+            background-position: right $space-double bottom 50%;
+        }
+    }
+    &--secondary {
+        font-family: $font-bold;
+        @include button-settings($primary-color-light, $color-text);
+    }
+    &--on-red {
+        @include button-settings($primary-color-dark, $color-white);
+    }
+
+    &--wrap-text {
+      white-space: normal;
+    }
+}

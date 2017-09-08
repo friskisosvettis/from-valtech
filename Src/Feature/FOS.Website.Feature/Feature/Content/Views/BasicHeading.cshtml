@@ -1,0 +1,77 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Sitecore.ContentSearch.Pipelines.TranslateQuery
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@using Valtech.Foundation.SitecoreExtensions
+@model BasicHeadingModel
+@if (Model.BasicHeadingItem == null)
+{
+    <div class="container--relative">
+        @Html.Sitecore().Placeholder("breadcrumbs")
+    </div>
+    return;
+}
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <style>
+        /* Class added inorder to make images clickable and selectable in the experience editor*/
+        .SITECORE-image {
+            width: 100%;
+            height: auto;
+            pointer-events: auto;
+        }
+        .SITECORE-parent {
+            max-height: 360px;
+            pointer-events: none;
+            overflow: hidden;
+        }
+    </style>
+    <div class="SITECORE-parent">
+        @Model.BasicHeadingItem.PageHeadingImage.Render("SITECORE-image")
+    </div>
+}
+else
+{
+    <div class="hero hero--small">
+        <div class="hero__img">
+            @Model.BasicHeadingItem.PageHeadingImage.Render()
+        </div>
+        <div class="hero__container"></div>
+    </div>
+
+}
+<div class="background--white">
+    @Html.Sitecore().Placeholder("breadcrumbs")
+    <div class="container">
+        <div class="container--12">
+            <div class="text-align--center text-maxwidth--center">
+                <h1>@Model.BasicHeadingItem.PageHeadingHeadline.Render()</h1>
+                <p class="intro">@Model.BasicHeadingItem.PageHeadingIntroduction.Render()</p>
+                @if (Model.EventItem != null)
+                {
+                    <p class="date--container">
+                        <span class="date--primary icon--mini icon__book">@Model.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventStartDate.ToLocalizedString("t")</span>
+                        @if (Model.EventItem.EventEndDate.HasValue)
+                        {
+                            <span class="date--primary"> - @Model.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventEndDate.ToLocalizedString("t"), @Model.EventItem.EventStartDate.ToLocalizedString("yyyy")</span>
+                        }
+                        else
+                        {
+                            <span class="date--primary"> @Model.EventItem.EventStartDate.ToLocalizedString("yyyy")</span>
+                        }
+
+                        @if (Model.EventItem.EventLocation != null)
+                        {
+                            <span class="date--primary icon--mini icon__pin-map">@Model.EventItem.EventLocation.Render()</span>
+                        }
+                    </p>
+                }
+                @if (Model.NewsItem != null && Model.NewsItem.DisableDate.Value == false)
+                {
+                    <p class="date date--container">@Model.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

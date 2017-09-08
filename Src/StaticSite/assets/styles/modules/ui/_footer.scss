@@ -1,0 +1,163 @@
+﻿/**
+* UI
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+.footer {
+    min-height: 10em;
+    background-color: $color-black-80;
+    color: $color-white;
+
+    a {
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+
+        @include medium-up {
+            display: inline-block;
+        }
+    }
+
+    ul {
+        margin: 0 0 $space-double 0;
+        padding: 0;
+        list-style: none;
+        padding: 0 $space 0 0;
+    }
+
+    &__navigation {
+        &--primary {
+            font-family: $font-bold;
+        }
+        &--secondary {
+            font-family: $font;
+        }
+
+        &--primary, &--secondary {
+            a {
+                padding: $space-half 0;
+            }
+        }
+
+        &--slim {
+            font-family: $font-bold;
+            a {
+                padding: $space-half 0;
+            }
+            @include medium-up {
+                text-align: center;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        margin: $space-half $space-quad;
+                    }
+                }
+            }
+        }
+    }
+
+    //-- MOOD PART OF FOOTER --//
+    &--mood {
+        min-height: 0rem;
+        height: rem(15 * $base-height);
+        position: relative;
+        overflow: hidden;
+
+        .btn__link {
+            display: inline-block;
+        }
+
+        .footer__overlay {
+          height: rem(12.5 * $base-height);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: table;
+          width: 100%;
+          height: 100%;
+          background: $primary-color-dim-80;
+        }
+
+        .footer__content {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+
+            > h2, p, a {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: $text-max-width;
+            }
+
+            > h2, p {
+                padding: 0 $space;
+            }
+        }
+       
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // This is in order to make object-fit cover work in IE
+            font-family: "object-fit: cover;";
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            // This is in order to make object-fit cover work in IE
+            font-family: "object-fit: cover; object-position: top";
+        }
+    }
+
+    &__navigation {
+        padding-top: $space-quad;
+        padding-bottom: $space-quad;
+    }
+    //-- CONTACT PART OF FOOTER --//
+    &__contact {
+        padding: $space;
+        height: rem(5*$base-height);
+        background: $primary-color;
+        text-align: center;
+    }
+    //-- BOTTOM PART OF FOOTER --//
+    &__bottom {
+        padding: $space-quad 0;
+        background-color: $color-black-90;
+        text-align: center;
+        display: block;
+
+        a {
+            margin: $space-half 0;
+
+            @include medium-up {
+                display: inline-block;
+            }
+        }
+    }
+    .icon__twitter, .icon__instagram, .icon__facebook {
+        display: inline-block;
+        margin: 0 $space-half $space-double $space-half;
+
+        @include medium-up {
+            margin: 0 $space $space-double $space;
+        }
+    }
+    .icon__phone--light, .icon__mail--light, .icon__info--light {
+        text-align: left;
+        margin: $space-double 0 0 0;
+
+        @include medium-up {
+            margin: 0 $space 0 $space;
+        }
+    }
+}

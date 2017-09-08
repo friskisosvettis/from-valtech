@@ -1,0 +1,12 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.Content.Models.RichTextContentModel
+
+@if (Model.RichTextContentItem.TextContent.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div class="rich-text">
+        @Model.RichTextContentItem.TextContent.Render()
+    </div>
+}

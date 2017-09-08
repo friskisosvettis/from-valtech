@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <Item path="/configuration/system.web/compilation" action="Replace" key="targetFramework" value="4.6.1" />
+        <Item path="/configuration/system.web/httpRuntime" action="Replace" key="targetFramework" value="4.6" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {D5EE2BE6-D41E-4C76-AF9B-86093E11CEB9}
+database: master
+path: /sitecore/templates/Feature/Summary/SummaryList/Seasonal And Taxonomy/SelectedMonths
+parent: {E980FF6E-EC1C-4D7F-9743-78CD2055A818}
+name: SelectedMonths
+master: {00000000-0000-0000-0000-000000000000}
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20140225T141440Z
+
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 17
+
+QueryableTreelist
+----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 143
+
+query:/sitecore/content/*[@@templatename='TaxonomyFolder']/*[@@templatename='TaxonomyMonthsGroup']&IncludeTemplatesForSelection=TaxonomyKeyword
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+850
+----version----
+language: en
+version: 1
+revision: 01c9813e-2792-4b9b-a445-4d87310b2749
+
+----field----
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
+name: Title
+key: title
+content-length: 101
+
+Show only items with relevancy in these months. If no months are selected, current month will be used
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140225T151440
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+01c9813e-2792-4b9b-a445-4d87310b2749
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170707T122725Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

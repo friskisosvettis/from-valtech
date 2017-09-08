@@ -1,0 +1,120 @@
+----item----
+version: 1
+id: {E0FFBDC2-3F11-419B-B811-BDE0D4D3AEF1}
+database: master
+path: /sitecore/content/Dictionary/Content/AssociationNotMigrated/LabelGoToButton
+parent: {FCC09EAC-C2E3-45B2-BC64-69CDB7F5CB61}
+name: LabelGoToButton
+master: {00000000-0000-0000-0000-000000000000}
+template: {DCD7E3CE-9633-4329-981D-D485803063C3}
+templatekey: DictionaryElement
+created: 20170727T122755Z
+
+----version----
+language: en
+version: 1
+revision: 9faa6eb0-6d8b-4543-b319-0cc762554e19
+
+----field----
+field: {120431E7-D871-4372-8AA5-69A98BB4FBF4}
+name: Dictionary_Text
+key: dictionary_text
+content-length: 20
+
+Go to Friskis {name}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170727T122755Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9faa6eb0-6d8b-4543-b319-0cc762554e19
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170727T122854Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----version----
+language: sv-SE
+version: 1
+revision: 0b90a900-cba0-4d36-a4ae-27832dea77ab
+
+----field----
+field: {120431E7-D871-4372-8AA5-69A98BB4FBF4}
+name: Dictionary_Text
+key: dictionary_text
+content-length: 30
+
+Gå till Friskis&Svettis {name}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170727T122904Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0b90a900-cba0-4d36-a4ae-27832dea77ab
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170727T123110Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

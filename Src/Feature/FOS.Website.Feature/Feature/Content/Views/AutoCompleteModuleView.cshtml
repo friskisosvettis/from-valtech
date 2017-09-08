@@ -1,0 +1,32 @@
+﻿@using Sitecore.Mvc
+@using FOS.Website.Feature.Content.Models
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Configuration
+@using Sitecore.Links
+@using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model AutoCompleteModuleModel
+
+@if (@Model == null)
+{
+    
+    return;
+}
+
+<div class="autocomplete container--relative" id="autocomplete">
+    <div class="autocomplete--container">
+        @*TODO: Add labels for messages for autocomplete*@
+        <div class="autocomplete--content"
+             data-js-autocomplete-error="@Model.label_NoMatch"
+             data-js-autocomplete-area="@Model.label_Area"
+             data-js-autocomplete-trainingcenter-one="@Model.label_TrainingcenterOne"
+             data-js-autocomplete-trainingcenter-more="@Model.label_TrainingcenterMore"
+             data-js-autocomplete-show-all="@Model.label_ShowAll">
+            <h2 class="color--primary heading-1 margin-bottom--space">@Model.AutoCompleteModuleItem.Headline.Render()</h2>
+            <p>@Model.AutoCompleteModuleItem.Introduction.Render()</p>
+            <label class="hidden--accessible" for="find-association">@Model.label_InputFieldBackground</label>
+            <input class="autocomplete__input" type="text" id="find-association" name="find-association" placeholder="@Model.label_InputFieldBackground" data-js-autocomplete/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {CAD49EF2-5986-4A21-ADB0-42EF039F6468}
+database: master
+path: /sitecore/templates/Project/Friskis/Content Types/DataSourceFolder/__Standard Values
+parent: {F7B78574-8135-4A79-B5C3-C313ABA1B06E}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {F7B78574-8135-4A79-B5C3-C313ABA1B06E}
+templatekey: DataSourceFolder
+created: 20170110T115633Z
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 506
+
+{F7B78574-8135-4A79-B5C3-C313ABA1B06E}|{D622CC13-7257-46CD-A670-8741BD41C74E}|{1B7E8ED4-2D93-49BD-811D-B39D030DDE7F}|{16532899-6EB4-4B83-BD83-FA54143A9578}|{6C565D34-975F-4586-BB3A-A07DB5CFEA87}|{B5A2F964-5714-4761-8DB9-0CA676809493}|{C9FABED6-FCA3-4B63-B0EF-298F7E2A814C}|{2AD44F8D-C7E3-44D9-80B8-7EBDC4614BBB}|{AF5A8490-F600-4B4C-BC8B-B710461769BF}|{AB4BCE34-FFF4-4045-AB94-6D05A7E95468}|{F89CEE2A-4DAB-4922-8587-AD0658EF5D52}|{93BCB0F5-8DDD-4DE6-A3C1-066E154BF14A}|{4E7CED41-68AC-4A40-8DD9-D0CDC4187579}
+----version----
+language: en
+version: 1
+revision: 72e7e074-e42b-45b8-a9e2-79177ce547e8
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170110T115633Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+72e7e074-e42b-45b8-a9e2-79177ce547e8
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170728T151325Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Fluff

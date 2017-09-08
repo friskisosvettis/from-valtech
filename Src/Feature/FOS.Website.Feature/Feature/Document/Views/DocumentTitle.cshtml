@@ -1,0 +1,14 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Helpers
+
+@model FOS.Website.Feature.Document.Data.IDocumentTitleItem
+@{
+    Layout = null;
+}
+<div class="wrapper">
+    @if(Model != null)
+    {
+    <h1>@Html.TextFor(m => m.Document_Title)</h1>
+    }
+</div>  

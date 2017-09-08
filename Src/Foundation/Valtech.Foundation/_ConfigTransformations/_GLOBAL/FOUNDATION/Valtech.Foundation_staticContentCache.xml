@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <!--- Rewrite rules for asset cachebusting -->
+        <Item path="configuration/system.webServer/rewrite" action="InsertIfMissing">
+          <rewrite>
+            <rules/>
+          </rewrite>
+        </Item>
+        <Item path="configuration/system.webServer/rewrite/rules//rule[@name='fingerprint']" action="InsertIfMissing">
+          <rule name="fingerprint">
+            <match url="([\S]+)(/assets-version-[0-9]+/)([\S]+)" />
+            <action type="Rewrite" url="{R:1}/{R:3}" />
+          </rule>
+        </Item>
+
+        <!-- Static Content setup - cache -->
+        <Item path="configuration/system.webServer/staticContent" action="InsertIfMissing">
+          <staticContent/>
+        </Item>
+        <Item path="configuration/system.webServer/staticContent/clientCache" action="InsertIfMissing">
+          <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="365.00:00:00"/>
+        </Item>
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

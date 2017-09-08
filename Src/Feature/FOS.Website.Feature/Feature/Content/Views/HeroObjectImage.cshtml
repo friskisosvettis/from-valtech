@@ -1,0 +1,72 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Sitecore.ContentSearch.Linq.Extensions
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model HeroObjectImageModel
+    
+@if (Model.HeroObjectImageItem == null)
+{
+    return;
+}
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <style>
+        /* Class added inorder to make images clickable and selectable in the experience editor*/
+        .SITECORE-parent {
+            pointer-events: none;
+        }
+
+        .SITECORE-child {
+            pointer-events: auto;
+        }
+    </style>
+}
+
+@helper EditorMode()
+{
+    @Model.HeroObjectImageItem.HeroImage.Render()
+    <div class="hero__container SITECORE-parent">
+        <div class="hero__content hero__content--effect SITECORE-child">
+            <div class="container">
+                <div class="container--12">
+                    <h2 class="hero-heading">@Model.HeroObjectImageItem.HeroTitle.Render()</h2>
+                    <p>@Model.HeroObjectImageItem.HeroDescription.Render()</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@helper VisualMode()
+{
+
+    @Model.HeroObjectImageItem.HeroImage.Render()
+    <div class="hero__container">
+        <div class="hero__content hero__content--effect">
+            <div class="container">
+                <div class="container--12">
+                    <h2 class="hero-heading">@Model.HeroObjectImageItem.HeroTitle.Render()</h2>
+                    <p>@Model.HeroObjectImageItem.HeroDescription.Render()</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <div class="hero">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor || Model.HeroObjectImageItem.HeroLink.HasValue)
+        {
+            using (Html.BeginHyperlinkFor(m => m.HeroObjectImageItem.HeroLink, "hero__link"))
+            {
+                @EditorMode()
+            }
+        }
+        else
+        {
+            @VisualMode()
+        }
+    </div>
+</div>

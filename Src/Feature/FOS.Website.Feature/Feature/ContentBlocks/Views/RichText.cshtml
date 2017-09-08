@@ -1,0 +1,24 @@
+﻿@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model FOS.Website.Feature.ContentBlocks.Models.RichTextModel
+
+@if (Model == null || Model.RichTextItem == null)
+{
+    return;
+}
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@if (Model.RichTextItem.Text.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div class="container">
+        <div class="container--12">
+            <div class="rich-text">
+                @Model.RichTextItem.Text.Render()
+            </div>
+        </div>
+    </div>
+}

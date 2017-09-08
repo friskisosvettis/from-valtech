@@ -1,0 +1,256 @@
+﻿@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@using FOS.Website.Feature.Summary
+@using FOS.Website.Feature.Summary.Models
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using Sitecore.Web.UI.WebControls
+@using Synthesis.Mvc.Extensions
+@using Valtech.Foundation.SitecoreExtensions
+@model SummaryListModel
+
+@{
+    int counter = 0;
+
+    // Different wrapping classes for different colums dependent on the editors choice
+    var containerClass = "container--6";
+    if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1"))
+    {
+        containerClass = "container--12";
+    }
+    else if (Model.SummaryListItem != null && Model.SummaryListItem.ItemsPerRow.RawValue.Equals("3"))
+    {
+        containerClass = "container--4";
+    }
+}
+
+@if (Model.SummaryListItem != null && Model.SummaryList.Any())
+{
+    if (Model.SummaryListItem.Header.HasTextValue)
+    {
+        <div class="container">
+            <div class="container--12">
+                <h2 class="color--primary text-align--center">@Model.SummaryListItem.Header</h2>
+            </div>
+        </div>
+    }
+        <ul class="container teaser__container">
+            @foreach (SummarySpotModel summarySpot in Model.SummaryList)
+            {
+                // Alternative one - COMPACT LIST - if checked this is displayed instead of page specific teaser list
+                var cssClass = "teaser--small";
+                if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1") && !Model.SummaryListItem.DisplayAsCollage.Value || counter == 5)
+                {
+                    cssClass = "teaser--full";
+                }
+                if (Model.SummaryListItem.DisplayAsHighlightedList.Value)
+                {
+                    cssClass = "";
+                }
+
+                if (Model.SummaryListItem.DisplayAsCollage.Value)
+                {
+                    if (counter == 0)
+                    {
+                        containerClass = "container--6";
+                    }
+                    else if (counter == 2)
+                    {
+                        containerClass = "container--4";
+                    }
+                    else if (counter == 5)
+                    {
+                        containerClass = "container--12";
+                    }
+                }
+                if (summarySpot.TrainingFormItem != null)
+                {
+                    cssClass = "";
+                }
+                <li class="@containerClass">
+                    <div class="teaser @cssClass">
+                        <a href="@LinkManager.GetItemUrl(summarySpot.LinkItem ?? summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+
+                            @* Only render this section (with teaser--overlay/teaser__overlay) if highlight or traing form kicker*@
+                            @if (Model.SummaryListItem.DisplayAsHighlightedList.Value || (summarySpot.TrainingFormItem != null))
+                            {
+                                <div class="teaser--overlay">
+                                    @if (summarySpot.SummaryItem.SummaryImage.HasValue)
+                                    {
+                                        if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                        {
+                                            @summarySpot.SummaryItem.SummaryImage.Render()
+                                        }
+                                    }
+                                    <div class="teaser__overlay">
+                                        <div class="teaser__content">
+                                            <h2>
+                                                @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                                {
+                                                    @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                                }
+                                                else
+                                                {
+                                                    @summarySpot.SummaryItem.Name
+                                                }
+                                            </h2>
+                                            @if (summarySpot.EventItem != null)
+                                            {
+                                                <p>
+                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
+                                                    @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                                    {
+                                                        <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
+                                                    }
+                                                    @if (containerClass == "container--12")
+                                                    {
+                                                        <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
+                                                    }
+                                                </p>
+                                            }
+                                            @if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
+                                            {
+                                                <p>
+                                                    <small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
+                                                </p>
+                                            }
+                                            @* If it is a highlighted new/event item only show the summarytext if it is displayed in full with *@
+                                            @if (summarySpot.NewsItem != null || summarySpot.EventItem != null)
+                                            {
+                                                if (containerClass == "container--12" && summarySpot.SummaryItem.SummaryText.HasValue)
+                                                 {
+                                                     <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                                 }
+                                            }
+                                            else
+                                            {
+                                                if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                                {
+                                                    <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                @* Render this section if not highlight or traing form kicker*@
+
+                                if (summarySpot.SummaryItem.SummaryImage.HasValue)
+                                {
+                                    if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryImage.Render()
+                                    }
+                                }
+                                <div class="teaser__content">
+
+                                    @*Article/news/events FULL WIDTH KICKER: Render with text *@
+                                    @if (Model.SummaryListItem.ItemsPerRow.RawValue.Equals("1") && !Model.SummaryListItem.DisplayAsCollage.Value || counter == 5)
+                                    {
+                                        <h3 class="heading-2">
+                                            @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                            {
+                                                @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                            }
+                                            else
+                                            {
+                                                @summarySpot.SummaryItem.Name
+                                            }
+                                        </h3>
+                                        if (summarySpot.EventItem != null)
+                                        {
+                                            <p class="margin-bottom--none">
+                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
+                                                @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                                {
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
+                                                }
+                                            </p>
+                                            <p>
+                                                <small class="date--primary icon--mini  icon__pin-map">@summarySpot.EventItem.EventLocation</small>
+                                            </p>
+                                        }
+                                        if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
+                                        {
+                                            <p>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
+                                            </p>
+                                        }
+                                        if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                        {
+                                            <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                        }
+                                        // TODO: Remove hard coded "Läs mer" text and make it translatable
+                                        <a class="link--goto" href="@LinkManager.GetItemUrl(summarySpot.LinkItem ?? summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                            Läs mer
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <h3>
+                                            @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                            {
+                                                @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                            }
+                                            else
+                                            {
+                                                @summarySpot.SummaryItem.Name
+                                            }
+                                        </h3>
+                                        if (summarySpot.EventItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__book">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
+                                                @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                                {
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
+                                                }
+                                            </p>
+                                        }
+                                        if (summarySpot.NewsItem != null && summarySpot.NewsItem.DisableDate.Value == false)
+                                        {
+                                            <p>
+                                                <small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
+                                            </p>
+                                        }
+                                    }
+                                </div>
+                            }
+                        </a>
+                    </div>
+                </li>
+                if (Model.SummaryListItem.DisplayAsCollage.Value)
+                {
+                    if (counter == 5)
+                    {
+                        counter = 0;
+                    }
+                    else
+                    {
+                        counter = counter + 1;
+                    }
+                }
+            }
+            @if (Model.SummaryListItem != null && Model.SummaryListItem.ReadMoreLink.HasValue)
+            {
+            <li class="container--12">
+                <div class="text-align--right margin-bottom--space">
+                    @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto teaser__link")
+                </div>
+            </li>
+            }
+        </ul>
+}
+else
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="container">
+            <div class="container--12">
+                <h2 class="color--primary margin-bottom--none text-align--center">@Model.SummaryListItem.Header</h2>
+            </div>
+        </div>
+    }
+}

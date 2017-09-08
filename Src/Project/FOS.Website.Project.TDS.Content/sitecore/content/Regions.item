@@ -1,0 +1,52 @@
+----item----
+version: 1
+id: {96EB3761-8355-4182-80C2-A0017C01B85F}
+database: master
+path: /sitecore/content/Regions
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Regions
+master: {00000000-0000-0000-0000-000000000000}
+template: {BDFA971B-1CF9-46FB-B387-DF1BA632BFFB}
+templatekey: RegionsFolder
+created: 20170613T124234Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+300
+----version----
+language: sv-SE
+version: 1
+revision: df9fffac-189e-49ef-9a5a-9a40ea261419
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T124234Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+df9fffac-189e-49ef-9a5a-9a40ea261419
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170613T124726Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

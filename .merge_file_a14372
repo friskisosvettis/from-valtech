@@ -1,0 +1,414 @@
+﻿/// <binding AfterBuild='Publish-Files' />
+/*
+This file in the main entry point for defining Gulp tasks and using Gulp plugins.
+Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
+*/
+
+var gulp = require('gulp')
+    , argv = require("yargs").argv
+    , changed = require("gulp-changed")
+    , clean = require("gulp-clean")
+    , config = require("./gulp-config.js")(userConfig)
+    , debug = require("gulp-debug")
+    , foreach = require("gulp-foreach")
+    , glob = require("glob")
+    , gutil = require("gulp-util")
+    , msbuild = require("gulp-msbuild")
+    , nugetRestore = require("gulp-nuget-restore")
+    , optional = require('optional')
+    , path = require("path")
+    , rename = require("gulp-rename")
+    , runSequence = require("run-sequence")
+    , userConfig = optional("./gulp-user-config.js")
+    , watch = require("gulp-watch")
+;
+
+
+
+
+
+
+/*****************************
+  CONFIG
+*****************************/
+
+// Set production flag in gulp command
+config.isProduction = !!(argv.production);
+config.styleguide = !!(argv.styleguide);
+config.verbose = !!(argv.verbose);
+
+
+// Set build folders to config object
+gulp.task("z_config-set-build-folders", function (done) {
+    if (config.hasSetBuildFolders) {
+        return done();
+    }
+    // Deploy to production if --production parameter is set
+    if (config.isProduction) {
+        config.paths.websiteRoot = config.paths.distRoot;
+    }
+
+    if (typeof argv.dist == "string") {
+        config.paths.websiteRoot = argv.dist;
+    }
+
+    var i;
+
+    // Concat and apply folders containing code to config object
+    config.paths.build.folders.code = config.paths.build.folders.code
+                                        .concat(
+                                            objToArray(glob.sync(config.paths.foundation + "/!(" + config.paths.ignore + ")"))
+                                            , objToArray(glob.sync(config.paths.feature + "/!(" + config.paths.ignore + ")"))
+                                            , objToArray(glob.sync(config.paths.project + "/!(" + config.paths.ignore + ")")));
+
+    // Concat and apply folders containing TDS items to config object
+    config.paths.build.folders.tds = config.paths.build.folders.tds
+                                        .concat(
+                                        objToArray(glob.sync(config.paths.foundation + "/*.TDS.Core/"))
+                                        , objToArray(glob.sync(config.paths.foundation + "/*.TDS.Master/"))
+                                        , objToArray(glob.sync(config.paths.foundation + "/*.TDS.Content/"))
+
+                                        , objToArray(glob.sync(config.paths.feature + "/*.TDS.Core/"))
+                                        , objToArray(glob.sync(config.paths.feature + "/*.TDS.Master/"))
+                                        , objToArray(glob.sync(config.paths.feature + "/*.TDS.Content/"))
+
+                                        , objToArray(glob.sync(config.paths.project + "/*.TDS.Core/"))
+                                        , objToArray(glob.sync(config.paths.project + "/*.TDS.Master/"))
+                                        , objToArray(glob.sync(config.paths.project + "/*.TDS.Content/"))
+                                        );
+    
+    if (config.verbose)
+    {
+        gutil.log("********** Building from code folders:");
+        gutil.log(config.paths.build.folders.code);
+
+        gutil.log("********** Building from tds folders:");
+        gutil.log(config.paths.build.folders.tds);
+    }
+
+    //// Assets
+    //// Collect all scripts from Feature and Foundation
+    //var scripts = [];
+    //for (i = 0; i < config.paths.build.folders.code.length; i++) {
+    //    scripts.push.apply(scripts, objToArray(glob.sync(config.paths.build.folders.code[i] + "/code/Assets/scripts/modules/**/*.js")));
+    //    scripts.push.apply(scripts, objToArray(glob.sync(config.paths.build.folders.code[i] + "/code/Assets/scripts/main.js")));
+    //}
+    //config.paths.build.files.scripts = scripts;
+
+    //if (config.verbose) {
+    //    gutil.log("********** Script files found:");
+    //    gutil.log(config.paths.build.files.scripts);
+    //}
+
+    //// Collect all main.scss from Feature and Foundation
+    //var scssFiles = [];
+    //for (i = 0; i < config.paths.build.folders.code.length; i++) {
+    //    scssFiles.push.apply(scssFiles, objToArray(glob.sync(config.paths.build.folders.code[i] + "/code/Assets/styles/**/main.scss")));
+    //}
+    //config.paths.build.files.scss = scssFiles;
+    
+    //// Collect all styles from Feature and Foundation
+    //var watchScssFiles = [];
+    //for (i = 0; i < config.paths.build.folders.code.length; i++) {
+    //    watchScssFiles.push.apply(watchScssFiles, objToArray(glob.sync(config.paths.build.folders.code[i] + "/code/Assets/styles/**/*.scss")));
+    //}
+    //config.paths.build.files.watchScss = watchScssFiles;
+
+    //if (config.verbose) {
+    //    gutil.log("********** Style files found:");
+    //    gutil.log(config.paths.build.files.scss);
+    //}
+
+    // Set config.hasSetBuildFolders to true when all folders has been set
+    config.hasSetBuildFolders = true;
+
+    return done();
+});
+// End - Set build folders to config object
+
+
+
+
+
+
+/*****************************
+  HELPERS
+*****************************/
+// Converts object to array
+var objToArray = function (obj) {
+    var arr = [];
+    for (var i in obj) {
+        if (obj.hasOwnProperty(i)) {
+            arr.push(obj[i]);
+        }
+    }
+    return arr;
+};
+// End - Converts object to array
+
+// Pad number with leading zeroes
+function padDigits(number, digits) {
+    return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
+}
+// End - Pad number with leading zeroes
+
+
+
+
+
+
+/*****************************
+  INITIAL SETUP
+*****************************/
+
+gulp.task("Full-Publish", function () {
+    config.runCleanBuilds = true;
+    runSequence("Nuget-Restore", "Publish-Csharp", "Publish-Tds");
+});
+
+gulp.task("Nuget-Restore", function () {
+    var solution = "./" + config.solutionName + ".sln";
+    return gulp.src(solution).pipe(nugetRestore());
+});
+
+
+
+
+
+
+
+
+
+/*****************************
+ WATCHERS
+*****************************/
+
+// watch assemblies
+gulp.task("Auto-Publish-Assemblies", ["z_config-set-build-folders"], function () {
+    var locations = config.paths.build.folders.code;
+    var files = "/bin/{Valtech," + config.paths.solutionName + "}.*.{dll,pdb}";
+    var destination = config.paths.websiteRoot;
+
+    watchThis(locations, files, destination);
+
+});
+// End watch assemblies
+
+// watch views
+gulp.task("Auto-Publish-Views", ["z_config-set-build-folders"], function () {
+    var locations = config.paths.build.folders.code;
+    var files = "/**/*.cshtml";
+    var destination = config.paths.websiteRoot;
+
+    watchThis(locations, files, destination);
+});
+// End watch views
+
+// Watch Assets
+gulp.task("Auto-Publish-Assets", ["z_config-set-build-folders"], function () {
+    gutil.log("********** Auto-Publish-Assets not implemented yet.");
+});
+// End watch Assets
+
+// Watch Everything
+gulp.task("default", ["Auto-Publish-Assets", "Auto-Publish-Views", "Auto-Publish-Assemblies"], function (done) {
+    return done();
+});
+// End watch Everything
+
+function watchThis(locations, files, destination) {
+    for (var i = 0; i < locations.length; i++) {
+        if (config.verbose) {
+            console.log("********** Watching this pattern:");
+            console.log(locations[i] + files);
+        }
+        gulp.src(locations[i] + files, {
+            base: locations[i]
+        }).pipe(
+            watch(locations[i] + files)
+          )
+          .pipe(changed(destination))
+            .pipe(debug({ title: "[" + new Date(Date.now()).toLocaleTimeString() + "] published " }))
+          .pipe(gulp.dest(destination)); //Do an initial publish of everything found
+    }
+}
+
+
+
+
+
+
+/*****************************
+  PUBLISH
+*****************************/
+// Publish C#
+
+var publishCsharp = function (folders) {
+    var dest = path.resolve(config.paths.websiteRoot),
+      locations = [],
+      buildConfiguration = (config.isProduction ? config.buildConfiguration.release : config.buildConfiguration.debug),
+      verbosity = (config.verbose ? "normal" : "minimal")
+
+    for (var i = 0; i < folders.length; i++) {
+        locations.push(folders[i] + "/*.csproj");
+    };
+
+    if (config.isProduction) {
+        dest = dest + "\\webroot";
+    }
+
+    gutil.log("********** publish C# projects to " + dest + " folder for " + buildConfiguration);
+    if (config.verbose) {
+        gutil.log("Verbosity: " + verbosity);
+        gutil.log("Locations:");
+        gutil.log(locations);
+    }
+
+    return gulp.src(locations)
+      .pipe(foreach(function (stream, file) {
+          return stream
+            .pipe(debug({ title: "Building project:" }))
+            .pipe(msbuild({
+                targets: ["Build"],
+                configuration: buildConfiguration,
+                logCommand: false,
+                errorOnFail: true,
+                stdout: true,
+                verbosity: verbosity,
+                maxcpucount: 0,
+                toolsVersion: 14.0,
+                nodeReuse: !config.isProduction,
+                properties: {
+                    DeployOnBuild: "true",
+                    DeployDefaultTarget: "WebPublish",
+                    WebPublishMethod: "FileSystem",
+                    DeleteExistingFiles: "false",
+                    publishUrl: dest,
+                    _FindDependencies: "false",
+                    maxBuffer: 100000 * 1024
+                }
+            }));
+      }));
+};
+
+gulp.task("Publish-Csharp", ["z_config-set-build-folders"], function () {
+    return publishCsharp(config.paths.build.folders.code);
+});
+// END Publish C#
+
+
+// Publish TDS items
+var publishTds = function (folders) {
+    var locations = []
+    , buildConfiguration = (config.isProduction ? config.buildConfiguration.tds : config.buildConfiguration.debug)
+    , verbosity = (config.verbose ? "normal" : "minimal")
+    , i;
+
+    var buildProperties = {
+    };
+
+    if (config.isProduction) {
+        buildProperties.OutputPath = path.resolve(config.paths.websiteRoot); //TODO: Set output path to something we can use on CI server
+        buildProperties.SolutionDir = path.resolve("./");
+
+        gutil.log("Creating TDS packages.");
+        gutil.log("Using build configuration: " + buildConfiguration);
+        gutil.log("Outputting in folder: " + buildProperties.OutputPath);
+    } else {
+        buildProperties.DeployOnBuild = true;
+        buildProperties.SitecoreWebUrl = config.paths.websiteUrl;
+        buildProperties.SitecoreDeployFolder = config.paths.websiteRoot;
+
+
+        gutil.log("Publishing TDS projects.");
+        gutil.log("Using build configuration: " + buildConfiguration);
+        gutil.log("Publishing to: " + buildProperties.SitecoreWebUrl);
+    }
+
+    for (i = 0; i < folders.length; i++) {
+        locations.push(folders[i] + "*.scproj");
+    };
+
+    if (config.verbose) {
+        gutil.log("Verbosity: " + verbosity);
+        gutil.log("Locations:");
+        gutil.log(locations);
+    }
+
+    i = 0;
+
+    return gulp.src(locations)
+      .pipe(foreach(function (stream, file) {
+          if (config.isProduction) {
+              i++;
+              buildProperties.PackageName = padDigits(i, 3) + "_" + path.basename(file.path, ".scproj");
+          }
+          return stream
+            .pipe(debug({ title: "Building TDS:" }))
+            .pipe(msbuild({
+                targets: ["Build"],
+                configuration: buildConfiguration,
+                logCommand: false,
+                errorOnFail: true,
+                stdout: true,
+                verbosity: verbosity,
+                maxcpucount: 0,
+                toolsVersion: 14.0,
+                nodeReuse: !config.isProduction,
+                properties: buildProperties,
+                maxBuffer: 100000 * 1024
+            }));
+      }));
+};
+
+gulp.task("Publish-Tds", ["z_config-set-build-folders"], function () {
+    return publishTds(config.paths.build.folders.tds);
+});
+// END Publish TDS items
+
+
+
+
+
+
+
+/*****************************
+  CLEANUP
+*****************************/
+// Delete the "dist" folder specified in manifest
+gulp.task("z_clean-distroot", function () {
+    return gulp.src(config.paths.distRoot).pipe(clean());
+});
+// Delete the "dist" folder specified in manifest
+
+
+
+
+
+
+
+
+
+/*****************************
+  DEPLOYMENT
+*****************************/
+
+
+// Run complete build setup for CI server
+gulp.task("Build-Deployment-Files", function () {
+    config.runCleanBuilds = true;
+    config.isProduction = true;
+
+    runSequence("z_config-set-build-folders", "z_clean-distroot", "Full-Publish", "z_deploy-tds-update-packages");
+});
+// END - Run complete build setup for CI server
+
+// Copy Tds Update Packages to NuGet Directory
+gulp.task("z_deploy-tds-update-packages", ["z_config-set-build-folders"], function () {
+    var folders = glob.sync(config.paths.distRoot + "\\_packages\\**\\*.update");
+
+    return gulp.src(folders)
+        .pipe(debug({ title: "copying file: " }))
+        .pipe(gulp.dest(config.paths.distRoot + "\\TDS"));
+});
+// End - Copy Tds Update Packages to NuGet Directory

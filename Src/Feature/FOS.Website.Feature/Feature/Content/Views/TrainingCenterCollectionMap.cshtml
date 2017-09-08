@@ -1,0 +1,61 @@
+﻿@using Sitecore.Mvc
+@using FOS.Website.Feature.Content.Models
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Configuration
+@using Sitecore.Links
+@using Sitecore.Mvc.Presentation
+@using Synthesis.Mvc.Helpers
+
+@using Valtech.Foundation.Dictionary;
+
+@model TrainingCenterCollectionMapModel
+
+@if(!@Model.MapNodes.Any())
+{
+    return;
+}
+
+<div class="map__container">
+    <div class="map--intro hidden-medium-up">
+        <h3 class="hidden-medium-up heading-4">@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
+    </div>
+    <!--TABS - VISIABLE LARGE UP -->
+    <ul class="tabs" data-js-tabs="map">
+        <li class="tabs__title active"><a class="icon--medium icon__list" href="#panel1">@Model.label_List</a></li>
+        <li class="tabs__title"><a class="icon--medium icon__pin-map" href="#panel2" data-js-map-show>@Model.label_Map</a></li>
+    </ul>
+    <!--MAP - VISIBLE ALL THE TIME -->
+    <div class="tabs__content visible-medium-up--block map--overlay" id="panel2" data-js-tabs-map>
+        <div id="map"></div>
+    </div>
+    <!--MAP-LIST - VISIBLE ALL THE TIME -->
+    <div class="tabs__content map__content" id="panel1" data-js-tabs-map>
+        <div class="map__list">
+
+            <h3 class="visible-medium-up">@Html.TextFor(m => m.MapWidgetItem.MapTitle)</h3>
+            <ul>
+                @{
+                    int i = 0;
+
+
+                    foreach (var mapNode in Model.MapNodes)
+                    {
+                        var className = (i < 1) ? "map__item--large" : "";
+                        var classNameAddress = (i < 1) ? "icon--small icon__pin-map-filled" : "";
+
+                         <li class="@className" data-js-map-i="@i" data-js-map-title="@mapNode.MapHeadline" data-js-map-address="@mapNode.Street @mapNode.StreetNr, @mapNode.City" data-js-map-url="@LinkManager.GetItemUrl(mapNode.InnerItem)" data-js-map-lat="@mapNode.Latitude" data-js-map-lng="@mapNode.Longitude">
+                            
+                            <button class="map__list--show">@Model.label_ShowOnMap</button>
+                            <a href="@LinkManager.GetItemUrl(mapNode.InnerItem)">
+                                <h4>@mapNode.MapHeadline</h4>
+                                <p class="address @classNameAddress">@mapNode.Street @mapNode.StreetNr, @mapNode.City</p>
+                            </a>
+                        </li>
+                        i = i + 1;
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+

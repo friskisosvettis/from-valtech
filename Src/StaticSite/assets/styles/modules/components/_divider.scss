@@ -1,0 +1,64 @@
+$infobox-margin-small: rem(4 * $base-height);  //240px
+$infobox-height-small: rem(6 * $base-height);  //240px
+$divider-height-small: rem(5 * $base-height);  //280px
+$infobox-height: rem(8 * $base-height);        //320px
+$divider-height: rem(9 * $base-height);        //360px
+
+.image-divider {
+    height: $divider-height-small;
+    position: relative;
+    margin-bottom: $infobox-height-small;
+
+    @include small-up {
+        height: $divider-height;
+        margin-bottom: $space-double;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__infobox {
+        display: table;
+        @include span(12);
+        height: $infobox-height-small;
+        margin-top: $infobox-margin-small;
+        box-shadow: 0 0 1px $color-dim-30;
+
+        @include small-up {
+            height: $infobox-height;
+            margin: $space-double $space;
+            @include span(6);
+            overflow: hidden;
+            float: right;
+            box-shadow: none;
+        }
+        @include medium-up {
+            @include span(4);
+            float: right;
+        }
+
+        div {
+            padding: $space-double;
+            background-color: $color-white;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    h3 {
+        margin: $space 0;;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        // This is in order to make object-fit cover work in IE
+        font-family: "object-fit: cover; object-position: top";
+    }
+}

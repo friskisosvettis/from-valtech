@@ -1,0 +1,30 @@
+
+$textbox-height: rem(9 * $base-height);        //360px
+
+.textbox {
+    display: table;
+    width: 100%;
+
+    &.rich-text {
+        height: $textbox-height;
+        margin-bottom: $space-double;
+        padding: $space $space-quad !important;
+    }
+
+    &--red {
+        background: $primary-color-light;
+    }
+    &--yellow {
+        background: $cta-color;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: $space;
+    }
+
+    &__content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

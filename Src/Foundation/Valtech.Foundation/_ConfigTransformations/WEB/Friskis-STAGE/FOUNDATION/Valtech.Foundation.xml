@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <Item path="/configuration/system.web/customErrors" action="Replace" key="mode" value="Off" />
+      </File>
+      <File name="/App_Config/Include/Foundation/Valtech.Foundation/CustomUrlEnforcer.config">
+        <Item path="/configuration/sitecore/settings/setting[@name='CustomUrlEnforcer.EnforceSecureScheme']" action="Replace" key="value" value="true" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

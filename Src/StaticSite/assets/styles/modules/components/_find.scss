@@ -1,0 +1,35 @@
+.find {
+	background-image: url('/assets/images/bg_blurred_map.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: -$space-double;
+
+    @include box-shadow-inset(0, $space-quad, $space-quad, -$space-quad, $color-dim-40);
+
+    &__content {
+        @include container;
+    }
+    &__introduction {
+        @include span(12);
+        padding: $space-quad $space;
+        min-height: 200px;
+
+        @include medium-up {
+            padding-bottom: $space-quad*2;
+        }
+    }
+    &__action {
+        color: $color-text;
+        text-decoration: none;
+        display: block;
+        margin: $space;
+
+        @include small-up {
+            width: auto;
+            display: inline-block;
+            margin-top: $space;
+        }
+    }
+}

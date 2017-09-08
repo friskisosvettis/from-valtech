@@ -1,0 +1,20 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model FacilitiesModel
+
+@if (Model == null || Model.Facilities == null || !Model.Facilities.Any())
+{
+    return;
+}
+
+<ul class="facilities">
+    @foreach (var facility in Model.Facilities)
+    {
+        <li>
+            <div class="img__container">@facility.FacilityIcon.Render()</div>
+            <p><small>@facility.FacilityName.RawValue</small></p>
+        </li>
+    }
+</ul>

@@ -1,0 +1,120 @@
+----item----
+version: 1
+id: {CA7C1851-99B7-4A1E-8500-AD76D22EDC75}
+database: master
+path: /sitecore/content/Dictionary/Content/TrainingCenterCollectionMap/ShowOnMap
+parent: {2340BA97-E3D4-4EEE-A117-0527B8F87ECA}
+name: ShowOnMap
+master: {00000000-0000-0000-0000-000000000000}
+template: {DCD7E3CE-9633-4329-981D-D485803063C3}
+templatekey: DictionaryElement
+created: 20170726T152058Z
+
+----version----
+language: en
+version: 1
+revision: d4cd3ec0-0340-46d3-be87-1bdab2ef43f1
+
+----field----
+field: {120431E7-D871-4372-8AA5-69A98BB4FBF4}
+name: Dictionary_Text
+key: dictionary_text
+content-length: 11
+
+Show on map
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170726T152058Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d4cd3ec0-0340-46d3-be87-1bdab2ef43f1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170727T080839Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Fluff
+----version----
+language: sv-SE
+version: 1
+revision: 5831ae60-25fd-474b-bd5c-7f66354baac4
+
+----field----
+field: {120431E7-D871-4372-8AA5-69A98BB4FBF4}
+name: Dictionary_Text
+key: dictionary_text
+content-length: 14
+
+Visa på kartan
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170726T152125Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+5831ae60-25fd-474b-bd5c-7f66354baac4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170726T154113Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

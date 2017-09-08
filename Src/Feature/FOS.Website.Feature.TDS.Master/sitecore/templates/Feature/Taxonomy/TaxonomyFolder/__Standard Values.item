@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {5F99940A-4C9F-423F-BF56-E2DB0A2403E0}
+database: master
+path: /sitecore/templates/Feature/Taxonomy/TaxonomyFolder/__Standard Values
+parent: {2B50C834-0F76-4415-8991-C41F7A0FFEFE}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {2B50C834-0F76-4415-8991-C41F7A0FFEFE}
+templatekey: TaxonomyFolder
+created: 20130918T142729Z
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{18A7C9E9-B16C-47FC-A14F-0CE9B01E55C4}
+----version----
+language: en
+version: 1
+revision: b4a271dd-74ec-45fb-bf83-0107d04e535e
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20130918T162729
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b4a271dd-74ec-45fb-bf83-0107d04e535e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20130918T162753:635151184732771279
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

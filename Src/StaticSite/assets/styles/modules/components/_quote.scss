@@ -1,0 +1,27 @@
+.quote {
+    max-width: $text-max-width;
+    margin: 0 auto;
+
+    &__image {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img {
+            z-index: 0;
+            width: auto;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    h3 {
+        margin: $space 0;
+    }
+}

@@ -1,0 +1,19 @@
+
+<svg width="117px" height="83px" viewBox="0 0 117 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 82.1487147 0 0 117 0 117 82.1487147"></polygon>
+    </defs>
+    <g id="Design-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="object_icon_tick" transform="translate(-1.000000, -1.000000)">
+            <g id="Page-1" transform="translate(1.000000, 1.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M41.9910119,82.1487147 C40.1720093,82.1487147 38.3530067,81.4568263 36.9650698,80.0683106 L2.08190532,45.1705973 C-0.69396844,42.3935658 -0.69396844,37.8962912 2.08190532,35.1192597 C4.85777908,32.3422282 9.35317874,32.3422282 12.1290525,35.1192597 L41.9910119,64.9889347 L104.869763,2.0792194 C107.645637,-0.693073135 112.145774,-0.693073135 114.921647,2.0792194 C117.692784,4.85625091 117.692784,9.35826443 114.921647,12.1352959 L47.016954,80.0683106 C45.6290171,81.4568263 43.8100145,82.1487147 41.9910119,82.1487147" id="Fill-1" fill="#E31937" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

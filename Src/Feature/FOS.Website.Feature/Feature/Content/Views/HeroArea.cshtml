@@ -1,0 +1,25 @@
+﻿@using Sitecore.Mvc
+@using FOS.Website.Feature.Content.Models
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@model HeroAreaModel
+
+@if (Model.NrOfHeroObjects < 1 && !Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor || Model.NrOfHeroObjects == 1)
+{
+    @Html.Sitecore().Placeholder(@Model.PlaceholderName)
+}
+else
+{
+    <div class="carousel">
+        <div class="carousel--fixed">
+            <div class="carousel__slider" data-js-slider>
+                @Html.Sitecore().Placeholder(@Model.PlaceholderName)
+            </div>
+        </div>
+    </div>
+}

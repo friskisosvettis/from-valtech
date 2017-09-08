@@ -1,0 +1,45 @@
+﻿
+@using FOS.Website.Feature.Navigation.Models
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model AssociationTopBarModel
+
+@if (Model.TopBarData == null || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    return;
+}
+
+@if (@Model.IsForMobile)
+{
+    if (Model.TopBarData.TopbarLink1.HasValue ||
+        Model.TopBarData.TopbarLink2.HasValue ||
+        Model.TopBarData.TopbarLink3.HasValue ||
+        Model.TopBarData.TopbarLink4.HasValue)
+    {
+        <li class="navigation__item--top hidden-large-up">
+            @Model.TopBarData.TopbarLink1.Render(null, "btn btn__link btn--on-red")
+            @Model.TopBarData.TopbarLink2.Render(null, "btn btn__link btn--on-red")
+            @Model.TopBarData.TopbarLink3.Render(null, "btn btn__link btn--on-red")
+            @Model.TopBarData.TopbarLink4.Render(null, "btn btn__link btn--on-red")
+        </li>
+    }
+}
+else
+{
+    <div class="navigation--top">
+        <div class="container">
+            <div class="container--4">
+                <a href="@LinkManager.GetItemUrl(@Model.AssociationItem)">@Model.label_AssociationTopbarName</a>
+                <a href="@LinkManager.GetItemUrl(@Model.TopBarData.InnerItem)" class="hidden-small-up navigation__link--border-left">@Model.TopBarData.HomeLinkLabel.Render()</a>
+            </div>
+            <div class="container--8 text-align--right">
+                @Model.TopBarData.TopbarLink1.Render(null, "visible-medium-up")
+                @Model.TopBarData.TopbarLink2.Render(null, "visible-medium-up")
+                @Model.TopBarData.TopbarLink3.Render(null, "visible-medium-up")
+                @Model.TopBarData.TopbarLink4.Render(null, "visible-medium-up")
+                <a href="@LinkManager.GetItemUrl(@Model.TopBarData.InnerItem)" class="visible-small-up navigation__link--border-left">@Model.TopBarData.HomeLinkLabel.Render()</a>
+            </div>
+        </div>
+    </div>
+}

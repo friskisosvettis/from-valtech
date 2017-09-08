@@ -1,0 +1,33 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model MoodFooterModel
+
+@if (Model.MoodFooterItem == null)
+{
+    return;
+}
+
+<div class="footer--mood">
+    @if (Model.MoodFooterItem.MoodMovie.HasValue)
+    {
+        <video autoplay loop="loop" preload="none">
+            <source src="@Model.MoodFooterItem.MoodMovie.Url" type="video/webm">
+            <source src="@Model.MoodFooterItem.MoodMovie.Url" type="video/mp4"/>
+            <source src="@Model.MoodFooterItem.MoodMovie.Url" type="video/ogg">
+            @Model.MoodFooterItem.MoodBackgroundImage.Render()
+        </video>
+    }
+    else
+    {
+        @Model.MoodFooterItem.MoodBackgroundImage.Render()
+    }
+    <div class="footer__overlay">
+        <div class="footer__content">
+            <h2>@Model.MoodFooterItem.MoodTitle.Render()</h2>
+            <p class="intro">@Model.MoodFooterItem.MoodDescription.Render()</p>
+            @Model.MoodFooterItem.MoodLink.Render(null, "btn btn__link btn--secondary")
+        </div>
+    </div>
+</div>

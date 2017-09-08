@@ -1,0 +1,116 @@
+/**
+* Base variables and function definitions
+*
+* @section layout
+*/
+
+main {
+    background-color: $color-white;
+}
+
+// In order to be able to have a fixed image in the hero area that
+// is possible to scroll over this class needs to be added to all the sections below the hero area.
+.container--relative {
+    position: relative;
+}
+
+// ------------ VISABILITY - modifiers ----------- //
+
+.visible-small-up {
+    display: none !important;
+
+    @include small-up {
+        display: inline-block !important;
+    }
+}
+
+.visible-medium-up {
+    display: none !important;
+
+    @include medium-up {
+        display: inline-block !important;
+    }
+}
+
+.visible-large-up {
+    display: none !important;
+
+    @include large-up {
+        display: inline-block !important;
+    }
+}
+
+.visible-medium-up--block {
+    display: none !important;
+
+    @include medium-up {
+        display: block !important;
+    }
+}
+.hidden {
+    display: none;
+
+    &--accessible {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+}
+.hidden-small-up {
+    @include small-up {
+        display: none !important;
+    }
+}
+
+.hidden-medium-up {
+    @include medium-up {
+        display: none !important;
+    }
+}
+
+.hidden-large-up {
+    @include large-up {
+        display: none !important;
+    }
+}
+
+// ----------- MARGINS ----------- //
+.margin-bottom--none {
+    margin-bottom: 0;
+}
+
+.margin-bottom--space {
+    margin-bottom: $space-double;
+}
+
+// ----------- COLORS ----------- //
+.color--primary {
+    color: $primary-color;
+}
+
+// ----------- TEXT ALIGN ----------- //
+.text-align--center {
+    text-align: center;
+}
+.text-align--right {
+    text-align: right;
+}
+.text-maxwidth--center {
+    max-width: $text-max-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include medium-up {
+        padding: 0 $space-quad;
+    }
+}
+
+// ------ BACKGROUND COLORS ------- //
+.background--white {
+    background: $color-white;
+}

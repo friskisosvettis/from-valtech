@@ -1,0 +1,65 @@
+﻿@using Valtech.Foundation.Helpers
+@using Synthesis.Mvc.Extensions
+
+@model FOS.Website.Feature.Content.Models.OpeningHoursModel
+
+@helper RenderOpeningHoursNoGoogle()
+{
+    <div class="accordion">
+        @Model.OpeningHoursItem.OpeningHoursLink.Render(cssClass: "icon__goto--after icon--mini--after")
+    </div>
+}
+
+@helper RenderOpeningHoursWithGoogle()
+{
+var dayOfWeek = ((int)DateTime.Today.AddDays(1).DayOfWeek + 6) % 7;
+    <div class="accordion maps-api-opening-hours" data-day-of-week="@dayOfWeek" data-google-place-id="@Model.OpeningHoursItem.GooglePlaceId.RawValue">
+        <!--SHOW LINK OR BUTTON WITH EXPANDING DIV-->
+        <button id="opening_hours_today" class="accordion__btn icon__expand--after icon--mini--after"></button>
+        <div class="accordion--expandable">
+            <table>
+                <thead>
+                    <tr class="hidden--accessible">
+                        <th>Veckodag</th>
+                        <th>&Ouml;ppettider</th>
+                    </tr>
+                </thead>
+                <tbody id="opening_hours_week"></tbody>
+            </table>
+            @Model.OpeningHoursItem.OpeningHoursLink.Render(cssClass: "icon__goto--after icon--mini--after")
+        </div>
+    </div>
+
+    <div id="opening-hours-service-helper" style="display:none"></div>
+}
+
+<div class="opening-hours">
+    <div class="container">
+        <div class="container--12">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                <div class="editor-info">
+                    <strong>Öppettider</strong><br />
+                    @EncodingHelper.GetRazorViewText("För öppettider från Google, fyll i Google Place ID. Sök efter föreningens")<br />
+                    <a href="https://google-developers.appspot.com/maps/documentation/javascript/examples/full/places-placeid-finder">@EncodingHelper.GetRazorViewText("Google Place ID")</a>
+                    @EncodingHelper.GetRazorViewText("och klistra in här: ")<span class="color--primary">@Model.OpeningHoursItem.GooglePlaceId.Render()</span><br />
+                    <strong>@EncodingHelper.GetRazorViewText("Fyll i länk till ev sida med öppettider här ")</strong>
+                    @Model.OpeningHoursItem.OpeningHoursLink.Render()
+                </div>
+            }
+
+
+            @if (Model.OpeningHoursItem != null)
+            {
+                if (Model.OpeningHoursItem.GooglePlaceId.HasValue)
+                {
+                    @RenderOpeningHoursWithGoogle()
+                }
+                else if (Model.OpeningHoursItem.OpeningHoursLink.HasValue)
+                {
+                    @RenderOpeningHoursNoGoogle()
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="App_Config\connectionstrings.config">
+        <Item path="connectionStrings/add[@name='core']" action="Replace" key="connectionString" value="Data Source=SDEV-FSWEB01\;Initial Catalog=FOS-CM.Website_core;Integrated Security=False;User ID=sa;Password=FOie3hfoa2y3892y!#)yga1ofjla" />
+        <Item path="connectionStrings/add[@name='master']" action="Replace" key="connectionString" value="Data Source=SDEV-FSWEB01\;Initial Catalog=FOS-CM.Website_master;Integrated Security=False;User ID=sa;Password=FOie3hfoa2y3892y!#)yga1ofjla" />
+        <Item path="connectionStrings/add[@name='web']" action="Replace" key="connectionString" value="Data Source=SDEV-FSWEB01\;Initial Catalog=FOS-CM.Website_web;Integrated Security=False;User ID=sa;Password=FOie3hfoa2y3892y!#)yga1ofjla" />
+        <Item path="connectionStrings/add[@name='analytics']" action="Replace" key="connectionString" value="mongodb://SDEV-FSWEB01:27017/FOS-CM_Website_analytics" />
+        <Item path="connectionStrings/add[@name='tracking.live']" action="Replace" key="connectionString" value="mongodb://SDEV-FSWEB01:27017/FOS-CM_Website_tracking_live" />
+        <Item path="connectionStrings/add[@name='tracking.history']" action="Replace" key="connectionString" value="mongodb://SDEV-FSWEB01:27017/FOS-CM_Website_tracking_history" />
+        <Item path="connectionStrings/add[@name='tracking.contact']" action="Replace" key="connectionString" value="mongodb://SDEV-FSWEB01:27017/FOS-CM_Website_tracking_contact" />
+        <Item path="connectionStrings/add[@name='reporting']" action="Replace" key="connectionString" value="Data Source=SDEV-FSWEB01\;Initial Catalog=FOS-CM.Website_reporting;Integrated Security=False;User ID=sa;Password=FOie3hfoa2y3892y!#)yga1ofjla" />
+        <Item path="connectionStrings/add[@name='reporting.apikey']" action="Replace" key="connectionString" value="Data Source=SDEV-FSWEB01\;Initial Catalog=FOS-CM.Website_reporting.apikey;Integrated Security=False;User ID=sa;Password=FOie3hfoa2y3892y!#)yga1ofjla" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

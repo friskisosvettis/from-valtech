@@ -1,0 +1,130 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using FOS.Website.Feature.Navigation.Data
+@using Sitecore.Mvc.Presentation
+@using FOS.Website.Feature.Navigation.Models
+@using Sitecore.Data.Items
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model NavigationBarModel
+
+@if (Model == null)
+{
+    return;
+}
+
+@helper AddLinkLine(INavigationDataItem linkItem)
+{
+    var pageItem = linkItem.InnerItem;
+@* TODO: Add styling for this class - It does not exist currently *@
+    var activeClassString = (pageItem.ID == Model.ActiveItemID) ? "class=active" : "";
+    var linkClassString = (linkItem.Navigation_IsSecondary.Value) ? "" : "class=navigation__item";
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <li @linkClassString><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@Html.TextFor(model => linkItem.Navigation_NavigationTitle) </a></li>
+    }
+    else
+    {
+        var menuLabel = linkItem.Navigation_NavigationTitle.HasValue ? linkItem.Navigation_NavigationTitle.RawValue : pageItem.DisplayName;
+        <li @linkClassString><a href="@LinkManager.GetItemUrl(pageItem)" @activeClassString>@menuLabel</a></li>
+    }
+}
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+<style>
+    .navigation__SITECORE {
+        position: static !important;
+        height: 6em !important;
+    }
+</style>
+}
+
+@if (@Model.AssociationTopBlackBarModel != null)
+{
+    Model.AssociationTopBlackBarModel.IsForMobile = false;
+    @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
+}
+
+<!--TODO: Hide text close for accessibility -->
+<div class="navigation__container navigation--bottom navigation__SITECORE" data-js-menu-container>
+    <div class="container">
+        <div class="container--12">
+            <ul class="navigation navigation--medium hidden-large-up navigation__SITECORE">
+                <!--TODO: ADD hidden text logo for accessibility -->
+                <li>
+                    <a href="@LinkManager.GetItemUrl(@Model.HomeItem)">
+                        <img class="navigation__logo" src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo">
+                    </a>
+                </li>
+                <!--TODO: ADD hidden text boka for accessibility on click -->
+                <li>
+                    @if (@Model.AssociationLinks != null)
+                    {
+                        @Model.AssociationLinks.BookingLink.Render(@Model.label_BookClass, "btn btn--book btn__icon btn__icon--left")
+                    }
+                    else
+                    {
+                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--train btn__icon btn__icon--left">@Model.label_TrainHere</a>
+                    }
+                    <button class="navigation__btn navigation__btn--open" href="#uou2" data-js-menu>
+                        <img class="icon" src="/assets/images/icon_menu.svg" alt="Open menu"/>
+                    </button>
+                </li>
+            </ul>
+            <!--TODO: Add hidden accessibility text for close icon -->
+            <button class="navigation__btn navigation__btn--close hidden-large-up" data-js-menu-close>
+                <img class="icon" src="/assets/images/icon_close.svg" alt="Close icon" />
+            </button>
+            <ul class="navigation navigation__list navigation__SITECORE" data-js-menu-content>
+                <!--TODO: Add hidden accessibility text for logo -->
+                <li class="navigation__item visible-large-up">
+                    <a href="@LinkManager.GetItemUrl(@Model.HomeItem)">
+                        <img class="navigation__logo" src="/assets/images/friskis_logo.svg" alt="Friskis & Svettis logo">
+                    </a>
+                </li>
+                <!--Primary menu items -->
+                @foreach (var navigationDataItem in Model.PrimaryMenuItems)
+                {
+                    @AddLinkLine(navigationDataItem)
+                }
+                @if (Model.MoreMenuItems.Any())
+                {
+                    var cssClass = "";
+                    if (Model.AssociationLinks != null)
+                    {
+                        cssClass = "navigation__item--separated";
+                    }
+                    <li class="navigation__item @cssClass">
+                        <button class="navigation__btn" data-js-menu-more>@Model.label_More</button>
+                        <ul data-js-menu-more-content>
+                            <!--More Menu items -->
+                            @foreach (var navigationDataItem in Model.MoreMenuItems)
+                            {
+                                @AddLinkLine(navigationDataItem)
+                            }
+                        </ul>
+                    </li>
+                }
+                @if (@Model.AssociationTopBlackBarModel != null)
+                {
+                    Model.AssociationTopBlackBarModel.IsForMobile = true;
+                    @Html.Partial("~/Feature/Navigation/Views/Partial/AssociationTopBar.cshtml", @Model.AssociationTopBlackBarModel)
+                }
+                @if (@Model.AssociationLinks != null)
+                {
+                    <li class="navigation__item visible-large-up">
+                        @Model.AssociationLinks.BookingLink.Render(@Model.label_BookClass, "btn btn--book btn__icon btn__icon--left")
+                    </li>
+                }
+                else
+                {
+                    <li class="navigation__item visible-large-up">
+                        <a href="@LinkManager.GetItemUrl(@Model.HomeItem)#autocomplete" class="btn btn--train btn__icon btn__icon--left">@Model.label_TrainHere</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

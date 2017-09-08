@@ -1,0 +1,19 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model TrainingCenterContactFooterModel
+
+@if (Model.ContactFooterItem == null)
+{
+    return;
+}
+
+<div class="footer__contact">
+    <h3>Kontakta @Model.ContactFooterItem.DisplayName</h3>
+    @Model.ContactFooterItem.Email.Render(null, "icon--large icon__mail--light")
+    @if (Model.ContactFooterItem.Phonenumber.HasValue)
+    {
+        <a class="icon--large icon__phone--light" href="tel:@Model.ContactFooterItem.Phonenumber.RawValue">@Model.ContactFooterItem.Phonenumber.Render()</a>
+    }
+</div>

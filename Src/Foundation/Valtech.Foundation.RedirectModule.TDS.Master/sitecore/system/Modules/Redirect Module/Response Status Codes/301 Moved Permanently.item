@@ -1,0 +1,99 @@
+----item----
+version: 1
+id: {3184B308-C050-4A16-9F82-D77190A28F0F}
+database: master
+path: /sitecore/system/Modules/Redirect Module/Response Status Codes/301 Moved Permanently
+parent: {38D38E3B-0A34-4F16-A91F-967F8519E14A}
+name: 301 Moved Permanently
+master: {00000000-0000-0000-0000-000000000000}
+template: {C29988A3-65F3-4DF9-8C07-369B51E85020}
+templatekey: Response Status Code
+created: 20150824T132501Z
+
+----field----
+field: {BB323299-BA89-41B0-91D8-163E6D2F2E87}
+name: Status Code
+key: status code
+content-length: 3
+
+301
+----version----
+language: en
+version: 1
+revision: c3a0eb4f-7ef0-4164-a4ca-563d5c34b74f
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20150824T152501
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c3a0eb4f-7ef0-4164-a4ca-563d5c34b74f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20150824T152501:635760267010688542
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: fr-CA
+version: 1
+revision: 37757837-7972-4fae-a3d5-b66c462a1c98
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20150824T152208
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+37757837-7972-4fae-a3d5-b66c462a1c98
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20150824T152304:635760265846742159
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,46 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Synthesis.FieldTypes.Interfaces
+@using Synthesis.Mvc.Extensions
+@using Valtech.Foundation.Helpers
+@model MediaBlockModel
+
+@if (@Model == null)
+{
+    return;
+}
+
+@helper RenderImage(IImageField imageField)
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+            <div class="editor-info">
+                <p>@EncodingHelper.GetRazorViewText("Klicka på bildikonen nedanför för att lägga till en bild")</p>
+            </div>
+    }
+
+    if (imageField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+            <div class="media-container media-container--360">
+                @imageField.Render(cssClass: "media-container__media media-container__media--cover")
+            </div>
+    }
+}
+
+@helper RenderVideo(ITextField videoIdField, IImageField imageField)
+{
+    if (videoIdField.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+            <div class="media-container media-container--360">
+                @Html.Partial("~/Feature/ContentBlocks/Views/BaseVideo.cshtml", new VideoModel(videoIdField, imageField) { IsFullSize = false })
+            </div>
+    }
+}
+
+@if (@Model.MediaIsImage)
+{
+    @RenderImage(@Model.BlockImage)
+}
+else
+{
+    @RenderVideo(@Model.BlockYoutubeId, @Model.YoutubeStartImage)
+}

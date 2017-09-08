@@ -1,0 +1,56 @@
+﻿/**
+* Components
+*
+* @section Setup
+* @author Veronika Jeppsson
+*/
+
+.rich-text {
+    overflow: hidden;
+    min-height: $space-quad;
+    max-width: $text-max-width;
+    margin: 0 0 $space-double 0;
+
+    @include medium-up {
+        padding: 0 $space-quad;
+    }
+
+    h2, h3 {
+        margin-bottom: 0.25em !important;
+    }
+
+    h4 {
+      margin-bottom: 0.75rem !important;
+    }
+    p {
+        line-height: 1.6;
+        font-size: rem($base-font-size);
+        margin-bottom: $space !important;
+    }
+}
+
+// container specific styling for the rich text component
+.container--6 {
+    .rich-text {
+        padding: 0;
+    }
+}
+@include medium-up {
+    .container {
+        :first-child:not(.container--12) {
+            .rich-text {
+                padding-right: $space-double;
+            }
+        }
+       :last-child:not(.container--12) {
+            .rich-text {
+                padding-left: $space-double;
+            }
+        }
+    }
+    .container--12 {
+        .rich-text {
+            margin: 0 auto $space-double auto;
+        }
+    }
+}

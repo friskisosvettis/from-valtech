@@ -1,0 +1,12 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@model EditorInfoModel
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div style="background-color: #E31836; padding: 20px; color: white;">
+        <h2>@Model.Heading</h2>
+        <p>@Model.Message</p>
+    </div>
+}

@@ -1,0 +1,319 @@
+.autocomplete {
+    background: $color-black-05;
+
+    &--container {
+        @include container;
+        position: relative;
+        z-index: 1;
+    }
+    &--content {
+        @include span(12);
+        padding: $space-double $space 0 $space;
+        text-align: center;
+    }
+    &__input {
+        width: 100%;
+        max-width: 920px;
+        height: 70px;
+        background-image: url('/assets/images/icon_find.svg');
+        background-repeat: no-repeat;
+        background-position: right $space top 50%;
+        background-size: $icon-size-small $icon-size-small;
+        padding-right: $space-quad;
+        padding-left: $space-double;
+        margin-top: $space-double;
+        margin-bottom: 0;
+        border: none;
+        @include box-shadow(1px, -1px, 74px, 0, rgba(0,0,0,0.10));
+        outline: none; // OBS Add focus visible
+    }
+    &-suggestions {
+        position: static !important;
+        margin: 0 auto;
+        overflow: auto;
+        strong {
+            color: $primary-color;
+        }
+    }
+    &-no-suggestion {
+        padding: $space-double;
+        @include container;
+        background: $color-white;
+        border-radius: $border-med;
+        text-align: left;
+        margin-top: $border-thick;
+    }
+    &-container {
+        $section-height: 250px;
+        @include container;
+        background: $color-white;
+        border-radius: $border-med;
+        text-align: left;
+        margin-top: $border-thick;
+
+        &[data-autocomplete-category="Association"]{
+            .autocomplete-group {
+                display: none; // TODO OTHER APPROACH
+            }
+            .autocomplete-suggestion {
+                font-weight: bold;
+                font-size: 2em;
+                line-height: 1.25;
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+                &:before {
+                    content: "F&S";
+                    background: url('/assets/images/icon_goto-circle-red.svg');
+                    background-size: 40px 40px;
+                    background-repeat: no-repeat;
+                    height: 40px;
+                    padding-left: $space + 40px;
+                    margin-right: $space;
+                    width: 40px;
+                    display: block;
+                }
+            }
+            .autocomplete-suggestion-container {
+                padding: 30px $space-double $space-double $space-double;
+
+                @include span(12);
+                background: url('/assets/images/icon_card_shadow.svg');
+                background-position: 95% top;
+                background-size: 70px 70px;
+                background-repeat: no-repeat;
+                position: relative;
+
+                @include small-up {
+                    padding: $space-quad;
+                }
+                @include medium-up {
+                    height: $section-height;
+                    background-size: 150px 150px;
+                    background-position: 90% top;
+                    @include span(6);
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: -$space;
+                        width: 0px;
+                        height: 0px;
+                        z-index: 1;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid $color-white;
+                    }
+                }
+            }
+            .autocomplete-suggestion-results {
+                display: none;
+                list-style: none;
+                margin: 0;
+
+
+                @include medium-up {
+                    display: inline-block;
+                    position: relative;
+
+                    @include span(6);
+                        background: $primary-color;
+                        color: $color-white;
+                        padding: $space-quad;
+                        height: $section-height;
+                        border-radius: 0 $border-med $border-med 0;
+                    }
+                    > li {
+                        margin: $space-half 0;
+                        &.autocomplete-suggestion-show-all {
+                            position: absolute;
+                            right : $space-double;
+                            bottom: $space-double;
+
+                            > a:before {
+                                background: url('/assets/images/icon_arrow-right.svg');
+                                background-repeat: no-repeat;
+                                margin-right: 0;
+                            }
+                        }
+                        > a {
+                            color: $color-white;
+                            text-decoration: none;
+                            margin-right: $space;
+                            display: inline-block;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                            &:before{
+                                //TODO Move to icon file and don't repeat the same code
+                                content: "";
+                                background: url('/assets/images/icon_map_white.svg');
+                                background-size: 20px 20px;
+                                background-repeat: no-repeat;
+                                height: 20px;
+                                margin-right: 10px;
+                                width: 20px;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            > strong {
+                                color: $color-white;
+                            }
+                        }
+
+                    }
+                }
+            }
+        &[data-autocomplete-category="Area"]{
+            padding: $space-double;
+
+            @include small-up {
+                padding: $space-double $space-quad;
+            }
+
+            .autocomplete-group {
+                display: none; // TODO HIDE IN ANOTHER WAY
+            }
+
+            .autocomplete-suggestion {
+                margin: 0;
+                &.autocomplete-selected {
+                    background: none;
+                    font-weight: 500;
+                    cursor: auto;
+                }
+            }
+            .autocomplete-suggestion-results {
+                @include span(12);
+                border-top: 1px solid $color-black-05;
+                border-radius: 0 $border-med $border-med 0;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                > li {
+                    @include medium-up {
+                        @include span(3);
+                    }
+
+                    > a {
+                        color: $color-text;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        @include medium-up {
+                            display: inline-block;
+                            padding-left: $space;
+                        }
+                        &:before{
+                            //TODO Move to icon file and don't repeat the same code
+                            content: "";
+                            padding-right: $space;
+                            background: url('/assets/images/icon_card.svg');
+                            background-repeat: no-repeat;
+                            background-size: 42px 42px; // TODO USE ICON SIZE VARIABLE
+                            height: 42px;
+                            width: 42px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+        &[data-autocomplete-category="Trainingcenter"]{
+            padding: $space-double;
+
+            @include small-up {
+                padding: $space-double $space-quad;
+            }
+            @include medium-up {
+                padding: $space-double $space-quad $space $space-quad;
+            }
+
+            .autocomplete-group {
+                display: none; //TODO HIDE IN ANOTHER WAY
+            }
+            .autocomplete-suggestion-container {
+                @include span(12);
+            }
+            .autocomplete-suggestion {
+                display: block;
+                padding: $space 0;
+                border-bottom: 1px solid $color-black-05;
+                @include container;
+
+                &:last-child {
+                    border: none;
+                }
+
+                address {
+                    display: inline-block;
+                }
+                &__name {
+                    @include span(12);
+                    @include medium-up {
+                        @include span(6);
+                    }
+
+                    &:before{
+                        //TODO Move to icon file and don't repeat the same code
+                        content: "";
+                        background: url('/assets/images/icon_map.svg');
+                        background-size: 20px 20px;
+                        background-repeat: no-repeat;
+                        height: 20px;
+                        margin-right: 10px;
+                        width: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                &__address {
+                    @include span(12);
+                    font-size: smaller;
+
+                    @include medium-up {
+                        font-size: normal;
+                        text-align: right;
+                        @include span(6);
+
+                        span {
+                           padding-left: $space;
+                        }
+                    }
+                }
+                &__association {
+                    font-weight: 700;
+                    display: block;
+                    text-align: left;
+
+                    @include medium-up {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    &-suggestion {
+        cursor: pointer;
+        padding: $space-half;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+    }
+    &-selected {
+        @include transform-scale(1.05);
+        @include transition(scale, 0.35s);
+        text-shadow: 2px 2px 2px $color-black-20;
+    }
+}

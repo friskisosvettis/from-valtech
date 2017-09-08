@@ -1,0 +1,44 @@
+.accordion {
+
+    a {
+        display: block;
+        text-align: center;
+        padding: $space-double;
+    }
+
+    button {
+        border: none;
+        background: none;
+        width: 100%;
+        padding: $space-double;
+    }
+
+    table {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto $space-double auto;
+
+        tr > td {
+            text-transform: capitalize;
+        }
+
+        td, th {
+            text-align: left;
+            padding: $space 0;
+        }
+        td + td, th + th {
+            text-align: right;
+        }
+    }
+    &--expandable {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in;
+
+        &.open {
+            // max-hight set in order to be able to animate height
+            max-height: 1000px;
+            transition: max-height 0.5s ease-out;
+        }
+    }
+}

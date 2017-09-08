@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FOS.Website_Webroot</id>
+    <title>Sitecore web deploy package</title>
+    <version>1.0.0.0</version>
+    <authors>Valtech</authors>
+    <owners>Valtech</owners>
+    <licenseUrl>https://valtech.se</licenseUrl>
+    <projectUrl>https://valtech.se</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sitecore web project</description>
+    <releaseNotes>Web root to be patched on top of default Sitecore webroot</releaseNotes>
+  </metadata>
+  <files>
+    <file src="dist\webroot\**" target="" />
+    <file src="_ConfigTransformations\**" target="_ConfigTransformations" />
+  </files>
+</package>

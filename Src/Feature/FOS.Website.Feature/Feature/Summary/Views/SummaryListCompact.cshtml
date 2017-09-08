@@ -1,0 +1,66 @@
+﻿@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@using FOS.Website.Feature.Summary
+@using FOS.Website.Feature.Summary.Models
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using Sitecore.Web.UI.WebControls
+@using Synthesis.Mvc.Extensions
+@using Valtech.Foundation.SitecoreExtensions
+@model SummaryListModel
+
+<div class="container teaser__container">
+    <div class="container--12 margin-bottom--space">
+        <h2 class="color--primary margin-bottom--none">@Model.SummaryListItem.Header</h2>
+        <ul class="teaser teaser__list">
+            @foreach (SummarySpotModel summarySpot in Model.SummaryList)
+            {
+                <li class="icon__background icon__background--medium icon--top icon__goto-circle">
+                    <a href="@LinkManager.GetItemUrl(summarySpot.LinkItem ?? summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                        <div class="teaser__content">
+                            <h3 class="heading-4">
+                                @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                {
+                                    @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                }
+                                else
+                                {
+                                    @summarySpot.SummaryItem.Name
+                                }
+                            </h3>
+                            @if (summarySpot.EventItem != null)
+                            {
+                                <p class="margin-bottom--none">
+                                    <small class="date">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
+                                    @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                    {
+                                        <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
+
+                                    }
+                                    @if (summarySpot.EventItem.EventLocation.HasValue)
+                                    {
+                                        <small class="date"> | @summarySpot.EventItem.EventLocation</small>
+
+                                    }
+                                </p>
+
+                            }
+                            @if (summarySpot.NewsItem != null)
+                            {
+                                <p class="margin-bottom--none"><small class="date">@summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small></p>
+                            }
+                            @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                            {
+                                <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                            }
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+        @if (Model.SummaryListItem.ReadMoreLink.HasValue)
+        {
+            @Model.SummaryListItem.ReadMoreLink.Render(null, "link--goto")
+        }
+    </div>
+</div>

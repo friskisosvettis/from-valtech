@@ -1,0 +1,34 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Sitecore.ExperienceAnalytics.Client
+@using Synthesis.FieldTypes.Interfaces
+@using Synthesis.Mvc
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model TickersModel
+
+@{var isExperienceEditor = Sitecore.Context.PageMode.IsExperienceEditor;}
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || @isExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@if (!@isExperienceEditor && Model.NrTickers == 0)
+{
+    return;
+}
+
+<div class="container">
+    <div class="container--12">
+        <ul class="list--horizontal list--small">
+            @foreach (var tickerField in Model.TickerList)
+            {
+                if (@isExperienceEditor || @tickerField.HasTextValue)
+                {
+                    <li class="icon--medium icon__tick">@tickerField.Render()</li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,160 @@
+// Import Susy
+@import "../../../../node_modules/susy/sass/susy";
+/*
+* Base variables and function definitions
+*
+* @section layout
+*/
+
+/*
+* Define breakpoints.
+*	They can be used elsewhere, but must be defined here for
+*	the sake of layout.
+*
+* Do not use the layout argument elsewhere.
+*/
+
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/*
+ * Spacing Defaults
+ */
+$space : 10px;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+
+
+/*------------------------------------*\
+    #CONTAINER WIDTHS
+\*------------------------------------*/
+$xl-max-width: 1140px;
+$text-max-width: 760px; // 8 columns wide
+
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+
+// XXS	[0 <= x < 380px]
+// XS	[381px <= x < 576px]
+// S	[577 <= x < 769]
+// M	[770 <= x < 992]
+// L	[993px <= x < 1200px]
+// XL	[1201px <= x < 1500px]
+// XL	[1500px <= x < 999999]
+
+// MAX WIDTH [1140px]
+
+
+$bp-xsmall : 380px;
+$bp-small : 576px;
+$bp-medium : 769px;
+$bp-large : 992px;
+$bp-xlarge : 1200px;
+$bp-xxlarge : 1500px;
+
+
+// For xsmall and up
+@mixin xsmall-up {
+    @media screen and (min-width: $bp-xsmall) {
+      @content;
+  }
+}
+
+// For small and up
+@mixin small-up {
+  @media screen and (min-width: $bp-small) {
+    @content;
+  }
+}
+
+// For medium and up
+@mixin medium-up {
+  @media screen and (min-width: $bp-medium) {
+    @content;
+  }
+}
+
+// For large and up
+@mixin large-up {
+  @media screen and (min-width: $bp-large) {
+    @content;
+  }
+}
+
+// For xlarge and up
+@mixin xlarge-up {
+    @media screen and (min-width: $bp-xlarge) {
+        @content;
+    }
+}
+
+
+// For xxlarge and up
+@mixin xxlarge-up {
+    @media screen and (min-width: $bp-xxlarge) {
+        @content;
+    }
+}
+
+/* Outer grid used for dividing into columns */
+$grid-outer: (
+    container: $xl-max-width,
+    columns: 12,
+    gutters: 0,
+    math: fluid,
+    last-flow: to,
+    gutter-position: inside-static,
+    global-box-sizing: border-box, // content-box | border-box (affects inside/inside-static)
+    debug: (
+        image: hide,
+    ),
+);
+
+
+.container {
+    margin: 0;
+    @include layout($grid-outer);
+    @include container();
+    padding: 0 $space-double;
+    list-style-type: none;
+}
+
+.container--12 {
+    @include span(12);
+}
+
+.container--6 {
+    @include span(12);
+
+    @include medium-up {
+        @include span(6);
+    }
+}
+
+.container--8 {
+    @include span(12);
+
+    @include small-up {
+        @include span(8);
+    }
+}
+
+.container--4 {
+    @include span(12);
+
+    @include small-up {
+        @include span(4);
+    }
+}
+.container--3 {
+    @include span(12);
+
+    @include medium-up {
+        @include span(3);
+    }
+}

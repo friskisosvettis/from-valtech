@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {5C5548E6-2E30-4BBE-AB0E-654A91B9C807}
+database: master
+path: /sitecore/templates/Feature/Taxonomy/TaxonomySpotParameters/__Standard Values
+parent: {05E2D62E-60B2-4049-8F55-C9AAC2B050B6}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {05E2D62E-60B2-4049-8F55-C9AAC2B050B6}
+templatekey: TaxonomySpotParameters
+created: 20130926T215106Z
+
+----version----
+language: en
+version: 1
+revision: 79f1973b-7a01-4855-81c8-acba58ee8e77
+
+----field----
+field: {550DAF21-E5EE-4DEC-A754-3AB2EFC58234}
+name: Variation
+key: variation
+content-length: 38
+
+{C7272679-93B9-4FA0-8B01-7A4AB945707F}
+----field----
+field: {C2701480-8285-43DD-A5A1-36E9B8C82537}
+name: ResultTypes
+key: resulttypes
+content-length: 77
+
+{09545571-38F4-48CF-B148-BAFF7FD993D1}|{553C2361-EAC2-445B-AEFB-CC785E650165}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20130926T235106
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+79f1973b-7a01-4855-81c8-acba58ee8e77
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20131002T004430:635162714703966877
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

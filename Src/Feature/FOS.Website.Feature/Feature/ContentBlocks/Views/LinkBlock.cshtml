@@ -1,0 +1,74 @@
+﻿@using FOS.Website.Feature.ContentBlocks.Models
+@using Sitecore.ExperienceAnalytics.Client
+@using Synthesis.Mvc
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model LinkBlockModel
+
+@if (Model.HeadingItem != null && Model.HeadingItem.Heading.HasValue || Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    @Html.Partial("~/Feature/ContentBlocks/Views/Heading.cshtml", Model)
+}
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <style>
+        /* Class added inorder to make images clickable and selectable in the experience editor*/
+        .SITECORE-parent {
+            pointer-events: none;
+        }
+        .SITECORE-child {
+            pointer-events: auto;
+            margin: 10px 200px !important;
+            display: inline-block;
+        }
+    </style>
+}
+
+@helper EditorMode()
+{
+        <div class="teaser--overlay">
+            @Model.ImageItem.Picture.Render()
+            <div class="teaser__overlay SITECORE-parent">
+                <div class="teaser__content">
+                    <h2 class="SITECORE-child">@Model.LinkBlock.LinkHeading.Render()</h2>
+                    <p class="SITECORE-child">@Model.LinkBlock.LinkIntro.Render()</p>
+                    @Model.LinkBlock.LinkTarget.Render(null, "btn btn__link btn--secondary SITECORE-child")
+                </div>
+            </div>
+        </div>
+}
+
+
+@helper VisualMode()
+{
+    using (Html.BeginHyperlinkFor(m => m.LinkBlock.LinkTarget))
+    {
+            <div class="teaser--overlay">
+                @Model.ImageItem.Picture.Render()
+                <div class="teaser__overlay">
+                    <div class="teaser__content">
+                        <h2>@Model.LinkBlock.LinkHeading.Render()</h2>
+                        <p>@Model.LinkBlock.LinkIntro.Render()</p>
+                        <span class="btn btn__link btn--secondary">@Model.LinkBlock.LinkTarget.Text</span>
+                    </div>
+                </div>
+            </div>
+    }
+}
+
+
+<div class="container">
+    <div class="container--12">
+        <div class="teaser">
+            @if (Sitecore.Context.PageMode.IsExperienceEditor)
+            {
+                @EditorMode()
+            }
+            else
+            {
+                @VisualMode()
+            }
+        </div>
+    </div>
+</div>

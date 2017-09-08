@@ -1,0 +1,105 @@
+﻿@using Synthesis.Mvc.Helpers
+@using FOS.Website.Feature.Summary.Models
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using Sitecore.Web.UI.WebControls
+@using Synthesis.Mvc.Extensions
+@using FOS.Website.Feature.TrainingForm.Models
+@using Valtech.Foundation.SitecoreExtensions
+@model TrainingFormModel
+
+@{
+    int counter = 0;
+
+    // Different wrapping classes for different colums dependent on the editors choice
+    var containerClass = "container--12";
+
+}
+
+@if (Model.TrainingFormList.Any())
+{
+    <div class="background--white">
+        <ul class="container">
+            @foreach (SummarySpotModel summarySpot in Model.TrainingFormList)
+            {
+
+                if (counter == 0)
+                {
+                    containerClass = "container--6";
+                }
+                else if (counter == 2)
+                {
+                    containerClass = "container--4";
+                }
+                else if (counter == 5)
+                {
+                    containerClass = "container--12";
+                }
+
+                <li class="@containerClass">
+                    <div class="teaser">
+                        <a href="@LinkManager.GetItemUrl(summarySpot.LinkItem ?? summarySpot.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+
+                            <div class="teaser--overlay">
+                                @if (summarySpot.SummaryItem.SummaryImage.HasValue)
+                                {
+                                    if (summarySpot.SummaryItem.SummaryImage.MediaItem != null)
+                                    {
+                                        @summarySpot.SummaryItem.SummaryImage.Render()
+                                    }
+                                }
+                                <div class="teaser__overlay">
+                                    <div class="teaser__content">
+                                        <h2 class="heading-3">
+                                            @if (summarySpot.SummaryItem.SummaryHeading.HasValue)
+                                            {
+                                                @summarySpot.SummaryItem.SummaryHeading.Render(false)
+                                            }
+                                            else
+                                            {
+                                                @summarySpot.SummaryItem.Name
+                                            }
+                                        </h2>
+                                        @if (summarySpot.EventItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__book-light">@summarySpot.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventStartDate.ToLocalizedString("t")</small>
+                                                @if (summarySpot.EventItem.EventEndDate.HasValue)
+                                                {
+                                                    <small class="date"> - @summarySpot.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @summarySpot.EventItem.EventEndDate.ToLocalizedString("t")</small>
+                                                }
+                                                <small class="date icon--mini icon__pin-map-light">@summarySpot.EventItem.EventLocation</small>
+                                            </p>
+                                        }
+                                        @if (summarySpot.NewsItem != null)
+                                        {
+                                            <p>
+                                                <small class="date icon--mini icon__book-light">- @summarySpot.NewsItem.NewsDate.ToLocalizedString("dd MMMM")</small>
+                                            </p>
+                                        }
+                                        @if (summarySpot.SummaryItem.SummaryText.HasValue)
+                                        {
+                                            <p>@summarySpot.SummaryItem.SummaryText.Render(false)</p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </a>
+                    </div>
+                </li>
+
+                if (counter == 5)
+                {
+                    counter = 0;
+                }
+                else
+                {
+                    counter = counter + 1;
+                }
+
+            }
+        </ul>
+    </div>
+}

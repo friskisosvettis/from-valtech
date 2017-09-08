@@ -1,0 +1,44 @@
+﻿
+@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model ContactFooterModel
+
+@if (Model.ContactFooterItem == null)
+{
+    return;
+}
+
+<div class="footer__bottom">
+    <div class="container">
+        <div class="container--12">
+            @if (Model.ContactFooterItem.FacebookLink.HasValue)
+            {
+                using (Html.BeginHyperlinkFor(m => m.ContactFooterItem.FacebookLink, "icon--large icon__facebook"))
+                {
+                    <span class="hidden--accessible">Facebook</span>
+                }
+            }
+            @if (Model.ContactFooterItem.InstagramLink.HasValue)
+            {
+                using (Html.BeginHyperlinkFor(m => m.ContactFooterItem.InstagramLink, "icon--large icon__instagram"))
+                {
+                    <span class="hidden--accessible">Instagram</span>
+                }
+            }
+            @if (Model.ContactFooterItem.TwitterLink.HasValue)
+            {
+                using (Html.BeginHyperlinkFor(m => m.ContactFooterItem.TwitterLink, "icon--large icon__twitter"))
+                {
+                    <span class="hidden--accessible">Twitter</span>
+                }
+            }
+            @Model.ContactFooterItem.ContactEmail.Render(null ,"icon--large icon__mail--light")
+            @if (Model.ContactFooterItem.ContactPhonenumber.HasValue)
+            {
+                <a class="icon--large icon__phone--light" href="tel:@Model.ContactFooterItem.ContactPhonenumber.RawValue">@Model.ContactFooterItem.ContactPhonenumber.Render()</a>
+            }
+            @Model.ContactFooterItem.ContactLink.Render(null, "icon--large icon__info--light")
+        </div>
+    </div>
+</div>

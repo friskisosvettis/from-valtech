@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using Sitecore.Mvc.Presentation
+@model FOS.Website.Feature.Content.Models.ExpandableSectionModel
+@{
+    Layout = null;
+    if (Model == null)
+    {
+        <div>Please configure this.</div>
+        return;
+    }
+}
+
+<div class="wrapper js-fold-expand">
+    <div class="fold-expand">
+        @Html.Sitecore().DynamicPlaceholder("expandable-content")
+    </div>
+    <div class="fold-expand__toggle">
+        <a class="js-fold-expand-toggle">
+            <span class="fold-expand__toggle__text">
+                @Model.ReadMoreText
+            </span>
+            <span class="btn btn__icon btn__icon--left"></span>
+        </a>
+    </div>
+</div>

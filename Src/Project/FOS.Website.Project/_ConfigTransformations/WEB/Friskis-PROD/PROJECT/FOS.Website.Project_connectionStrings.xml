@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="App_Config\connectionstrings.config">
+        <Item path="connectionStrings/add[@name='core']" action="Replace" key="connectionString" value="user id=fosprdsqlusr;password=CiZ43i1czj]T;Data Source=10.1.1.6;Database=fos-prod_core" />
+        <Item path="connectionStrings/add[@name='master']" action="Replace" key="connectionString" value="user id=fosprdsqlusr;password=CiZ43i1czj]T;Data Source=10.1.1.6;Database=fos-prod_master" />
+        <Item path="connectionStrings/add[@name='web']" action="Replace" key="connectionString" value="user id=fosprdsqlusr;password=CiZ43i1czj]T;Data Source=10.1.1.6;Database=fos-prod_web" />
+        <Item path="connectionStrings/add[@name='analytics']" action="Replace" key="connectionString" value="mongodb://10.1.1.4:27017/fos-prod_Website_analytics" />
+        <Item path="connectionStrings/add[@name='tracking.live']" action="Replace" key="connectionString" value="mongodb://10.1.1.4:27017/fos-prod_Website_tracking_live" />
+        <Item path="connectionStrings/add[@name='tracking.history']" action="Replace" key="connectionString" value="mongodb://10.1.1.4:27017/fos-prod_Website_tracking_history" />
+        <Item path="connectionStrings/add[@name='tracking.contact']" action="Replace" key="connectionString" value="mongodb://10.1.1.4:27017/fos-prod_Website_tracking_contact" />
+        <Item path="connectionStrings/add[@name='reporting']" action="Replace" key="connectionString" value="user id=fosprdsqlusr;password=CiZ43i1czj]T;Data Source=10.1.1.6;Database=fos-prod_reporting" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

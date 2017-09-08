@@ -1,0 +1,39 @@
+/**
+* Main project stylesheet combiner
+*
+* @section Setup
+* @author <fill-me>
+*/
+
+// ---------------------------------------------------------------------------
+// Vendor
+@import "../../../../node_modules/slick-browserify-js/slick/slick.scss";
+
+// ---------------------------------------------------------------------------
+// Fonts
+@import "../fonts/apercu";
+@import "../fonts/raleway";
+@import "../fonts/ministry";
+
+// ---------------------------------------------------------------------------
+// Imports
+
+// Framework
+@import "modules/base";
+@import "modules/framework/framework";
+@import "modules/framework/grid";
+@import "modules/framework/normalize";
+
+// UI
+
+// // Default typography for the site
+@import "modules/framework/typography";
+
+// // Modules
+@import "modules/generic";
+
+// // Basic layout and default typography for the site
+@import "modules/layout/layout";
+@import "modules/components";
+@import "modules/pages";
+@import "modules/ui/ui";

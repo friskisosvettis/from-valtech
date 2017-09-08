@@ -1,0 +1,154 @@
+.introduction {
+    background-color: $color-black-05;
+
+    &__container {
+        @include container();
+
+        @include medium-up {
+            height: 25em;
+            padding: $space-quad $space;
+        }
+
+        > div {
+            padding: $space-double;
+            @include span(12);
+            height: 100%;
+
+            @include small-up {
+                padding: $space-quad $space-double;
+            }
+
+            @include medium-up {
+                @include span(4);
+            }
+
+            @include large-up {
+                padding: $space-double $space-quad;
+            }
+        }
+    }
+
+    &__pitch {
+        text-align: center;
+
+        h2 {
+            margin: 0 0 $space 0;
+        }
+
+        p {
+            display: none;
+
+            @include large-up {
+                color: $color-text-light;
+                display: block;
+            }
+        }
+    }
+
+    &__member {
+        background: url('/assets/images/bg_pattern.jpg') repeat;;
+        background-size: cover;
+        color: $color-white;
+        text-align: center;
+
+        @include medium-up {
+            transition: scale 0.3s ease-in-out;
+        }
+
+
+        &:hover {
+            background: url('/assets/images/bg_pattern_hover.jpg') repeat;
+            background-size: cover;
+
+            @include medium-up {
+                transition: 0.3s ease-in-out;
+                transform: scale(1.02);
+                text-align: center;
+                img {
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+
+        img {
+            margin: $space 0;
+            width: 35%;
+            height: auto;
+            transition: 0.3s ease-in-out;
+
+            @include small-up {
+                width: 25%;
+            }
+            @include medium-up {
+                width: 60%;
+            }
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        a {
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+
+    &__goto {
+        text-align: center;
+
+        a {
+            @include span(6);
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            text-decoration: none;
+            color: $color-black-90;
+            margin-bottom: $space;
+
+        @include small-up {
+            @include span(3);
+            width: 25%;
+            height: 25%;
+        }
+        @include medium-up {
+            @include span(6);
+            width: 50%;
+            height: 50%;
+        }
+            span {
+                width: 6em;
+                height: 6em;
+                margin: 0 auto $space auto;
+                background-color: $color-white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-right: $space;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 46px 46px;
+
+        &--training-classes {
+            background-image: url('/assets/images/icon_heart.svg');
+        }
+
+        &--traning-center {
+            background-image: url('/assets/images/icon_location.svg');
+        }
+
+        &--prices {
+            background-image: url('/assets/images/icon_prices.svg');
+        }
+
+        &--schedule {
+            background-image: url('/assets/images/icon_schedule.svg');
+        }
+    }
+}

@@ -1,0 +1,32 @@
+﻿@using Sitecore.Mvc
+@using DynamicPlaceholders.Mvc.Extensions
+@using FOS.Website.Feature.Navigation.Data
+@using Sitecore.Mvc.Presentation
+@using FOS.Website.Feature.Navigation.Models
+@using Google.Apis.Util
+@using Sitecore.Data.Items
+@using Sitecore.Links
+@using Synthesis.Mvc.Extensions
+@using Synthesis.Mvc.Helpers
+@model SecondaryNavigationModel
+
+@if (Model == null || Model.MenuItems == null || !Model.MenuItems.Any())
+{
+    return;
+}
+
+<div class="background--white">
+    <div class="container">
+        <div class="container-12">
+            <ul class="list--horizontal">
+                @foreach (var childPage in Model.MenuItems)
+                {
+                    var menuLabel = childPage.Navigation_NavigationTitle.HasValue ? childPage.Navigation_NavigationTitle.RawValue : childPage.DisplayName;
+                    <li class="icon--medium icon__goto-circle-red">
+                        <a href="@LinkManager.GetItemUrl(@childPage.InnerItem)">@menuLabel</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="web.config">
+        <Item path="/configuration/system.web/compilation" action="Replace" key="debug" value="true" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

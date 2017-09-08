@@ -1,0 +1,20 @@
+﻿@model FOS.Website.Feature.CustomScripts.Models.CustomScriptsModel
+
+@* TODO: awaiting global settings structure
+@foreach (var script in Model.GlobalCustomScripts)
+{
+    @Html.Raw(new MvcHtmlString(script.Script.RawValue))
+}
+*@
+ 
+@foreach (var script in Model.SiteSpecificScripts)
+{
+    @Html.Raw(new MvcHtmlString(script.CustomScripts.RawValue))
+}
+
+@foreach (var script in Model.PageSpecificAndInheritedScripts)
+{
+    @Html.Raw(new MvcHtmlString(script.RawValue)) 
+}
+
+

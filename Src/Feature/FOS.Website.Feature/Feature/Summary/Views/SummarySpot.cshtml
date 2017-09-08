@@ -1,0 +1,126 @@
+﻿@using FOS.Website.Feature.Content.Models
+@using Synthesis.Mvc.Helpers
+@using FOS.Website.Feature.Summary
+@using FOS.Website.Feature.Summary.Models
+@using Sitecore.ExperienceContentManagement.Administration.Helpers.SupportPackage.Diagnostics.Base
+@using Sitecore.Links
+@using Sitecore.Resources.Media
+@using Synthesis.Mvc.Extensions
+@using Valtech.Foundation.SitecoreExtensions
+
+@model SummarySpotModel
+
+
+@if (Model == null || Model.SummaryItem == null)
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="container">
+            <div class="container--12">
+                <p>Du skulle valt sida att länka till</p>
+            </div>
+        </div>
+    }
+    return;
+}
+
+<div class="container">
+    <div class="container--12">
+    @* SUMMARY&/TEASER/KICKER - FOR TRAINING FORM*@
+    @if (Model.TrainingFormItem != null)
+    {
+        <div class="teaser">
+            <a href="@LinkManager.GetItemUrl(Model.LinkItem ?? Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                <div class="teaser--overlay">
+                    @if (Model.SummaryItem.SummaryImage.HasValue)
+                    {
+                        if (Model.SummaryItem.SummaryImage.MediaItem != null)
+                        {
+                            @Model.SummaryItem.SummaryImage.Render()
+                        }
+                    }
+                    <div class="teaser__overlay">
+                        <div class="teaser__content">
+                            <h2 lass="heading-3">
+                                @if (Model.SummaryItem.SummaryHeading.HasValue)
+                                {
+                                    @Model.SummaryItem.SummaryHeading.Render(false)
+                                }
+                                else
+                                {
+                                    @Model.SummaryItem.Name
+                                }
+                            </h2>
+                            @if (Model.SummaryItem.SummaryText.HasValue)
+                            {
+                                <p>@Model.SummaryItem.SummaryText.Render(false)</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+            }
+            else
+            {
+                @* SUMMARY&/TEASER/KICKER - FOR ARTICLE / HERO PAGE / EVENT / NEWS PAGE*@
+                <div class="teaser teaser--full">
+                    @if (Model.SummaryItem.SummaryImage.HasValue)
+                    {
+
+                        if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null && Model.SummaryItem.SummaryHeading.HasValue)
+                        {
+                            <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)" alt="@Model.SummaryItem.SummaryHeading.Render(false)">
+                        }
+                        else if (Model.SummaryItem.SummaryImage.HasValue && Model.SummaryItem.SummaryImage.MediaItem != null)
+                        {
+                            <img src="@MediaManager.GetMediaUrl(Model.SummaryItem.SummaryImage.MediaItem)">
+                        }
+                    }
+                    <div class="teaser__content">
+                        @if (Model.SummaryItem.SummaryHeading.HasValue)
+                        {
+                            <h3 class="heading-2">
+                                @Model.SummaryItem.SummaryHeading.Render()
+                            </h3>
+                        }
+                        @if (Model.EventItem != null)
+                        {
+                            if (Model.EventItem.EventStartDate.HasValue)
+                            {
+                                <p class="margin-bottom--none">
+                                    <small class="date icon--mini icon__book">@Model.EventItem.EventStartDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventStartDate.ToLocalizedString("t")</small>
+                                    @if (Model.EventItem.EventEndDate.HasValue)
+                                    {
+                                        <small class="date"> - @Model.EventItem.EventEndDate.ToLocalizedString("dd MMMM"), @Model.EventItem.EventEndDate.ToLocalizedString("t")</small>
+                                    }
+                                </p>
+                            }
+                            if (Model.EventItem.EventLocation.HasValue)
+                            {
+                                <p>
+                                    <small class="date icon--mini  icon__pin-map">@Model.EventItem.EventLocation</small>
+                                </p>
+                            }
+                        }
+                        @if (Model.NewsItem != null && Model.NewsItem.DisableDate.Value == false)
+                        {
+                            <p>
+                                <small class="date">@Model.NewsItem.NewsDate.ToLocalizedString("dd MMMM yyyy")</small>
+                            </p>
+                        }
+                        @if (Model.SummaryItem.SummaryText.HasValue)
+                        {
+                            <p>
+                                @Model.SummaryItem.SummaryText.Render()
+                            </p>
+                            // TODO: Remove hard coded "Läs mer" text and make it translatable
+                            <a class="link--goto" href="@LinkManager.GetItemUrl(Model.LinkItem ?? Model.SummaryItem.InnerItem, new UrlOptions() {LanguageEmbedding = LanguageEmbedding.Never})">
+                                Läs mer
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

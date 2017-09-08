@@ -1,0 +1,420 @@
+// TODO: Refactor this file
+// TODO: In Safari transitions on height and width makes elements prone to
+// stuttering. Should be refactored to use scale on transformations.
+
+$menu-height: rem($base-height*4);
+$menu-height-animation: rem($base-height*2);
+$logo-height-small: rem($base-height*3);
+$logo-height-large: 7rem;
+$topbar-height: rem($base-height);
+$total-height: rem($base-height*5); // menu-height + topbar-height
+$btn-small-pos: 17px;
+$navigation-animation: 0.5s linear 0s;
+
+.navigation {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @include large-up {
+        display: block;
+    }
+
+    &__container {
+        width: 100%;
+        position: fixed;
+        z-index: 1000000;
+        background: none;
+        @include medium-up {
+            height: $menu-height;
+            max-height: $menu-height;
+        }
+
+        &.scroll {
+            background: $color-dim-50;
+            height: 100%;
+            max-height: $menu-height-animation !important;
+
+            .navigation__item ul.open {
+                padding-top: 0 !important;
+                @include transition(all 0.5s);
+            }
+            @include large-up {
+                .navigation__list{
+                    height: $menu-height-animation;
+                    @include transition(all $navigation-animation);
+                }
+            }
+        }
+
+        &.animation {
+            .navigation__logo {
+                width: $menu-height-animation;
+                max-height: $menu-height-animation !important;
+                @include transition(all $navigation-animation);
+            }
+
+            &.open {
+                height: 100% !important;
+                max-height: 100% !important;
+                @include transition(all $navigation-animation);
+            }
+
+            @include large-up {
+                .navigation__list .navigation__item:last-of-type {
+                    top: -5px;
+                    @include transition(all $navigation-animation);
+                }
+            }
+        }
+
+        @include large-up {
+            &.open {
+                height: 100% !important;
+                max-height: 100% !important;
+                background: $primary-color-dim-95 !important;
+                @include transition(all $navigation-animation);
+
+                .navigation__list {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &--top {
+        height: $topbar-height;
+        max-height: $topbar-height;
+        width: 100%;
+        position: fixed;
+        z-index: 1000000;
+        background-color: $color-black;
+        opacity: 1;
+        @include transition(all $navigation-animation);
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+            display: inline-block;
+            padding-top: 8px;// TODO - vertical align in a better way   
+
+            @include xsmall-up {
+                padding: 8px $space; // TODO - vertical align in a better way            
+            }
+
+            &.navigation__link--border-left {
+                float: right;
+                margin-top: 8px; // TODO - vertical align in a better way
+                padding: 0 0 0 $space-double;
+
+                @include small-up {
+                    float: none;
+                }
+
+                @include medium-up {
+                    margin-left: $space;
+                    border-left: 1px dashed $color-white;
+                }
+            }
+        }
+
+        &.hide {
+          max-height: 0;
+          opacity: 0;
+          @include transition(all $navigation-animation);
+
+            + .navigation--bottom {
+                top: 0;
+                @include transition(top $navigation-animation, background 0.5s linear 0.2s);
+
+                .navigation--medium {
+                    top: 0;
+                    @include transition(all $navigation-animation);
+                }
+                .navigation__list {
+                    top: 0;
+                    @include transition(all $navigation-animation);
+                }
+                .navigation__btn--close {
+                    @include transition(all $navigation-animation);
+                }
+            }
+        }
+
+        // Move navigation down if topbar exists (on association pages)
+        &:not(.hide) {
+          @include transition(all $navigation-animation);
+
+            + .navigation--bottom {
+                top: $topbar-height;
+                @include transition(all $navigation-animation);
+
+                .navigation--medium {
+                    top: $topbar-height;
+                    @include transition(all $navigation-animation);
+                }
+                .navigation__list {
+                    top: $topbar-height;
+                    @include transition(all $navigation-animation);
+                }
+                .navigation__btn--close {
+                    top: rem($btn-small-pos + $base-height); //17px (top position of buttons in mobile menu) s+ topbar
+                    @include transition(all $navigation-animation);
+                }
+                @include large-up {
+                    .navigation__list .navigaion__item:last-of-type  {
+                        top: $topbar-height;
+                        @include transition(all $navigation-animation);
+                    }
+                }
+            }
+        }
+    }
+
+    &--bottom {
+        @include medium-up {
+            height: $menu-height;
+            max-height: $menu-height;
+        }
+    }
+
+    &__logo {
+        width: $logo-height-small;
+        height: $logo-height-small;
+        max-height: $logo-height-small;
+        padding: $space 0;
+        @include transition(all $navigation-animation);
+
+        @include medium-up {
+            width: $logo-height-large;
+            height: $logo-height-large;
+            max-height: $menu-height;
+
+        }
+    }
+    &__btn {
+        color: $color-white;
+        padding-top: 0;
+        border: none;
+        background: transparent;
+
+        @include large-up {
+            outline: none;
+            height: 100%;
+            width: 100%;
+            margin: 0 $space-double;
+
+            &:hover {
+                text-decoration: underline;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+        }
+        &--open {
+            position: absolute;
+            top: $btn-small-pos;
+            right: 0;
+        }
+        &--close {
+            display: none;
+            z-index: 10000;
+            position: fixed; //TODO Look into other solution - fixed in fixed not good
+            top: $btn-small-pos;
+            right: 0;
+            color: $color-white;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color-dim-95;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        overflow-y: scroll;
+        padding-top: $space-quad;
+
+        @include large-up {
+            height: $menu-height;
+            padding-top: 0;
+            display: block !important;
+            left: auto;
+            max-width: $xl-max-width;
+            overflow: hidden;
+            background-color: transparent;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        width: 100%;
+
+        &--separated {
+            padding-bottom: 200px; //in order to not be hidden below top nav buttons
+            @include large-up {
+                padding-bottom: 0;
+            }
+        }
+
+        // Top navigation
+        &--top {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient($primary-color-dim-80, $primary-color-dim-95);   
+
+            &:before {
+                position: absolute;
+                content: "";
+                background: linear-gradient($primary-color-dim-10,$primary-color-dim-80);
+                height: 50px;
+                top: -50px;
+                width: 100%;
+            }
+
+            a {
+                display: inline-block;
+                margin: $space-half;
+            }
+        }
+        @include large-up {
+            width: auto;
+            vertical-align: middle;
+            display: inline-block;
+
+            &:first-of-type {
+                width: $menu-height;
+                a {
+                    padding: 0;
+                    text-align: left;
+                }
+            }
+            &:last-of-type {
+                position: absolute;
+                top: 15px;
+                right: $space-double;
+                width: auto;
+            }
+        }
+        &.hide {
+            display: none;
+
+            @include large-up {
+                display: inline-block;
+            }
+        }
+        a {
+            display: block;
+            color: $color-white;
+            text-decoration: none;
+            height: 100%;
+            padding: $space;
+
+            @include large-up {
+                padding: 0 $space-double;
+
+                &:hover,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+        }
+        button {
+            outline: none;
+            width: auto;
+            margin-top: $space;
+
+            @include large-up {
+                margin-top: 0;
+                background: $color-dim-40;
+                border-radius: $space-quad;
+                padding: $space-half $space;
+            }
+        }
+
+        ul {
+            display: none;
+            height: 100%;
+            padding: 0;
+            text-align: center;
+            list-style-type: none;
+            top: $menu-height;
+            overflow-y: scroll;
+
+            @include large-up {
+                &.open {
+                    padding-top: 100px;
+                    @include transition(all $navigation-animation);
+                    position: fixed;
+                    top: $menu-height;
+                    width: 100%;
+                    left: 0;
+                    z-index: -1;
+                }
+                a {
+                    padding: $space-double 0;
+                }
+
+            }
+            a {
+                color: $color-white;
+            }
+        }
+    }
+
+    // This version is only visible on smaller screens than large
+    &--medium {
+        position: fixed;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        @include container();
+
+        > li:first-of-type {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        > li:last-of-type {
+            width: 75%;
+            text-align: right;
+            float: right;
+
+            .btn--book, .btn--train {
+                margin-right: 60px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+    }
+}
+[data-js-menu-more] {
+    &:after {
+        content: "";
+        background-image: url('/assets/images/icon_arrow.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+        width: $icon-size-tiny;
+        height: $icon-size-tiny;
+        margin-left: $space;
+        @include transition(all 0.3s);
+
+    }
+    &.open {
+
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+}

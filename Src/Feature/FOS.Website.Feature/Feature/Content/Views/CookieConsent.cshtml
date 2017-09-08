@@ -1,0 +1,30 @@
+﻿@model FOS.Website.Feature.Content.Data.ICookieConsentItem
+    
+@if (Model == null)
+{
+    return;
+}
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#ffffff",
+      "text": "#352b2b"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "message": "@Model.Text",
+    "dismiss": "@Model.ButtonText",
+    "href": "@Model.ReadMoreLink.Href",
+    "link": "@Model.ReadMoreLink.Text"
+  }
+})});
+</script>

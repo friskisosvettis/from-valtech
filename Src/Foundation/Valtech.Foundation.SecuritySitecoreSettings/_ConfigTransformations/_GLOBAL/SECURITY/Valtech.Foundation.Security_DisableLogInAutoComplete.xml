@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<Deployment>
+  <Website>
+    <ReplaceXml>
+      <File name="App_Config\Sitecore.config">
+        <Item path="/sitecore/settings/setting[@name='Login.DisableAutoComplete']" action="Replace" key="value" value="true" />
+        <Item path="/sitecore/settings/setting[@name='Login.DisableRememberMe']" action="Replace" key="value" value="true" />
+        <Item path="/sitecore/settings/setting[@name='Login.RememberLastLoggedInUserName']" action="Replace" key="value" value="false" />
+      </File>
+    </ReplaceXml>
+  </Website>
+</Deployment>

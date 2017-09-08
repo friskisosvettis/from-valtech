@@ -1,0 +1,85 @@
+$facility-height-small: $base-height*3;
+$facility-height: $base-height*6.5;
+
+.facilities {
+    text-align: center;
+    background: $color-black-05;
+    padding: 0 $base-height*1;
+    margin: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    &:before, &:after {
+        position: absolute;
+        content: "";
+        min-height: $facility-height-small;
+        width: $base-height*2.5;
+
+        @include medium-up {
+            width: $base-height*4;
+        }
+    }
+    &:before {
+        background-image: linear-gradient(to right, $color-black-05 0%, $color-dim-00 100%);
+        left: 0;
+        min-height: $facility-height-small;
+    }
+    &:after {
+        background-image: linear-gradient(to left, $color-black-05 0%, $color-dim-00 100%);
+        right: 0;
+        min-height: $facility-height-small;
+    }
+
+    @include medium-up {
+        padding: 0 $base-height*3;
+    }
+
+    li {
+        text-align: center;
+        display: inline-block;
+        margin: $space-double 0 $space 0;
+        width: $base-height*3;
+        vertical-align: top;
+        white-space: normal;
+
+        @include medium-up {
+            margin: $space;
+        }
+    }
+    .img__container {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background: $color-white;
+        border-radius: 50%;
+        padding: $space;
+        margin-bottom: $space;
+        width: $base-height*1.5;
+        height: $base-height*1.5;
+
+        @include medium-up {
+            width: 90px;
+            height: 90px;
+        }
+    }
+     img {
+        margin: 0 auto;
+        width: $base-height;
+        height: $base-height;
+
+        @include medium-up {
+            margin: $space auto;
+            width: 52px;
+            height: 52px;
+        }
+    }
+    p {
+        word-wrap: break-word;
+
+        @include medium-up {
+            word-wrap: normal;
+        }
+
+    }
+}
